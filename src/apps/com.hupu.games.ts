@@ -7,9 +7,28 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: 'com.hupu.games.main.MainActivity',
+      desc: '开屏广告,任意界面切回APP广告',
       rules: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12509060',
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/12509060',
+        'https://gkd-kit.gitee.io/import/12510962',
+      ],
+    },
+    {
+      key: 1,
+      activityIds: 'com.hupu.games.main.MainActivity',
+      name: '推荐流广告',
+      desc: '点击卡片右上角广告文字,出现广告反馈,点击屏蔽该广告',
+      rules: [
+        {
+          matches: '[id="com.hupu.games:id/tv_title"][text="屏蔽该广告"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12511010',
+        },
+        {
+          matches: '[id="com.hupu.games:id/tv_tag"][text="广告"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12511005',
+        },
+      ],
     },
   ],
 });
