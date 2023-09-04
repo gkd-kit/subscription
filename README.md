@@ -2,7 +2,7 @@
 
 搞快点 APP 默认订阅规则
 
-当前订阅文件已适配 87 个 APP, 共有 151 规则组
+当前订阅文件已适配 89 个 APP, 共有 156 规则组
 
 如何编写订阅/贡献此项目 -> [CONTRIBUTING.md](./CONTRIBUTING.md)
 
@@ -147,6 +147,9 @@
 ### [com.ct.client](/src/apps/com.ct.client.ts) - 中国电信
 
 - 开屏广告
+  - [快照-0](https://gkd-kit.songe.li/import/12508958)
+- 用户引导
+  - [快照-0](https://gkd-kit.songe.li/import/12508971)
 
 ### [com.daimajia.gold](/src/apps/com.daimajia.gold.ts) - 稀土掘金
 
@@ -162,6 +165,8 @@
   - [快照-0](https://gkd-kit.gitee.io/import/12505151)
   - [快照-1](https://gkd-kit.gitee.io/import/12505152)
   - [快照-2](https://gkd-kit.gitee.io/import/12506164)
+- 不同步到我的动态 - 标记看过时，不同步到我的动态
+  - [快照-0](https://gkd-kit.gitee.io/import/12508777)
 
 ### [com.dragon.read](/src/apps/com.dragon.read.ts) - 番茄免费小说
 
@@ -206,6 +211,11 @@
 - 首页推荐流-卡片广告
   - [快照-0](https://gkd-kit.gitee.io/import/38517192/40fb71ad-01a5-4420-9150-88172ff8a3bf)
   - [快照-1](https://gkd-kit.gitee.io/import/38517192/b74150b5-8e9f-4cbb-86a7-722fc739a1b8)
+
+### [com.hupu.games](/src/apps/com.hupu.games.ts) - 虎扑
+
+- 开屏广告
+  - [快照-0](https://gkd-kit.gitee.io/import/12509060)
 
 ### [com.hupu.shihuo](/src/apps/com.hupu.shihuo.ts) - 识货
 
@@ -254,6 +264,11 @@
 - 开屏广告
   - [快照-0](https://gkd-kit.gitee.io/import/38517192/d12c3b08-8233-4584-b2b9-595ebb4ce665)
 
+### [com.lucky.luckyclient](/src/apps/com.lucky.luckyclient.ts) - 瑞幸咖啡
+
+- 开屏广告
+  - [快照-0](https://gkd-kit.songe.li/import/12508764)
+
 ### [com.mihoyo.hyperion](/src/apps/com.mihoyo.hyperion.ts) - 米游社
 
 - 开屏广告
@@ -284,6 +299,7 @@
 ### [com.qidian.QDReader](/src/apps/com.qidian.QDReader.ts) - 起点读书
 
 - 开屏广告
+  - [快照-0](https://gkd-kit.gitee.io/import/12508836)
 
 ### [com.qiyi.video](/src/apps/com.qiyi.video.ts) - 爱奇艺
 
@@ -389,6 +405,8 @@
 
 ### [com.weico.international](/src/apps/com.weico.international.ts) - 微博轻享版
 
+- 开屏广告
+  - [快照-0](https://gkd-kit.gitee.io/import/12509123)
 - 主页-推荐流广告
   - [示例-0](https://github.com/gkd-kit/subscription/assets/38517192/e713a2ca-5048-486a-874f-dd876d53c49b)
   - [快照-0](https://gkd-kit.gitee.io/import/12505755)

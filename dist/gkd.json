@@ -1,7 +1,7 @@
 {
   "id": 0,
   "name": "默认订阅",
-  "version": 48,
+  "version": 54,
   "author": "lisonge",
   "supportUri": "https://github.com/gkd-kit/subscription",
   "apps": [
@@ -556,7 +556,20 @@
             "com.ct.client.activity.MainActivity",
             "com.ct.client.activity.SplashActivity"
           ],
-          "rules": "[id=`com.ct.client:id/tvSkip`]"
+          "rules": "[id=\"com.ct.client:id/tvSkip\"||id=\"com.ct.client:id/btSkip\"]",
+          "snapshotUrls": [
+            "https://gkd-kit.songe.li/import/12508958"
+          ]
+        },
+        {
+          "key": 1,
+          "name": "用户引导",
+          "enable": false,
+          "activityIds": "com.ct.client.activity.UserGuideActivity",
+          "rules": "[id=\"com.ct.client:id/tvSkip\"]",
+          "snapshotUrls": [
+            "https://gkd-kit.songe.li/import/12508971"
+          ]
         }
       ]
     },
@@ -600,6 +613,17 @@
             "https://gkd-kit.gitee.io/import/12505151",
             "https://gkd-kit.gitee.io/import/12505152",
             "https://gkd-kit.gitee.io/import/12506164"
+          ]
+        },
+        {
+          "key": 1,
+          "name": "不同步到我的动态",
+          "desc": "标记看过时，不同步到我的动态",
+          "enable": false,
+          "activityIds": "com.douban.frodo.subject.activity.RatingActivity",
+          "rules": "[id=\"com.douban.frodo:id/check_status\"][checked=true]",
+          "snapshotUrls": [
+            "https://gkd-kit.gitee.io/import/12508777"
           ]
         }
       ]
@@ -769,6 +793,19 @@
       ]
     },
     {
+      "id": "com.hupu.games",
+      "name": "虎扑",
+      "groups": [
+        {
+          "key": 0,
+          "name": "开屏广告",
+          "activityIds": "com.hupu.games.main.MainActivity",
+          "rules": "[id=\"com.byted.pangle:id/tt_splash_skip_btn\"]",
+          "snapshotUrls": "https://gkd-kit.gitee.io/import/12509060"
+        }
+      ]
+    },
+    {
       "id": "com.hupu.shihuo",
       "name": "识货",
       "groups": [
@@ -905,6 +942,19 @@
       ]
     },
     {
+      "id": "com.lucky.luckyclient",
+      "name": "瑞幸咖啡",
+      "groups": [
+        {
+          "key": 0,
+          "name": "开屏广告",
+          "activityIds": "com.luckin.client.main.FirstActivity",
+          "rules": "[id=\"com.lucky.luckyclient:id/tv_skip\"]",
+          "snapshotUrls": "https://gkd-kit.songe.li/import/12508764"
+        }
+      ]
+    },
+    {
       "id": "com.mihoyo.hyperion",
       "name": "米游社",
       "groups": [
@@ -1006,8 +1056,14 @@
         {
           "key": 0,
           "name": "开屏广告",
-          "activityIds": "com.qidian.QDReader.ui.activity.SplashADActivity",
-          "rules": "Button[text^=`跳过`]"
+          "activityIds": [
+            "com.qidian.QDReader.ui.activity.SplashADActivity",
+            "com.qidian.QDReader.ui.activity.SplashImageActivity"
+          ],
+          "rules": "Button[text^=`跳过`]",
+          "snapshotUrls": [
+            "https://gkd-kit.gitee.io/import/12508836"
+          ]
         }
       ]
     },
@@ -1433,6 +1489,13 @@
       "id": "com.weico.international",
       "name": "微博轻享版",
       "groups": [
+        {
+          "key": -1,
+          "name": "开屏广告",
+          "activityIds": "com.weico.international.ui.ad.AdActivity",
+          "rules": "TextView[text=\"跳过\"]",
+          "snapshotUrls": "https://gkd-kit.gitee.io/import/12509123"
+        },
         {
           "key": 0,
           "name": "主页-推荐流广告",
