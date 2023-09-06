@@ -8,7 +8,7 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       activityIds: 'com.jdcloud.mt.smartrouter.nwelcome.WelcomeActivity',
-      rules: '@LinearLayout > @TextView[text^="跳过"]',
+      rules: 'LinearLayout > TextView[text^="跳过"]',
       snapshotUrls: 'https://gkd-kit.songe.li/import/12535237',
     },
   ],
