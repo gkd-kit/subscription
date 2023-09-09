@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.1](https://github.com/gkd-kit/subscription/compare/v1.15.0...v1.15.1) (2023-09-09)
+
+
+### Performance Improvements
+
+* **youtube:** 视频播放-跳过广告-增加快照 ([9a9f008](https://github.com/gkd-kit/subscription/commit/9a9f008d8af8516a87462aac16109fdde0a2e456))
+
 ## [1.15.0](https://github.com/gkd-kit/subscription/compare/v1.14.0...v1.15.0) (2023-09-07)
 
 
