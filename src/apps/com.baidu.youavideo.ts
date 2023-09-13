@@ -16,7 +16,7 @@ export default defineAppConfig({
       ],
     },
     {
-      key: 2,
+      key: 3,
       name: '开屏广告2',
       activityIds: ['com.baidu.youavideo.app.ui.SplashActivity'],
       rules: [
@@ -27,7 +27,7 @@ export default defineAppConfig({
       ],
     },
     {
-      key: 3,
+      key: 2,
       name: '软件升级提醒',
       activityIds: ['com.baidu.youavideo.home.view.HomeActivity'],
       rules: [
