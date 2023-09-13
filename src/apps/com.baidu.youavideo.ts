@@ -24,7 +24,7 @@ export default defineAppConfig({
       activityIds: ['com.baidu.youavideo.home.view.HomeActivity'],
       rules: [
         {
-          matches: '[id="com.baidu.youavideo:id/img_close"]',
+          matches: '[id="com.baidu.youavideo:id/tv_description"] +3 [id="com.baidu.youavideo:id/img_close"]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12597916',
           ],
