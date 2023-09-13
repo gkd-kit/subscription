@@ -7,12 +7,14 @@ export default defineAppConfig({
     {
       key: 1,
       name: '开屏广告',
-      activityIds: ['li.songe.gkd.MainActivity'],
       rules: [
         {
           matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
-          snapshotUrls:
+          snapshotUrls: [
             'https://gkd-kit.gitee.io/import/22029832/5aa3f016-d33c-4821-91bd-f23235b04ad3',
+            'https://gkd-kit.gitee.io/import/12594568',
+            'https://gkd-kit.gitee.io/import/12594574',
+          ],
         },
       ],
     },
