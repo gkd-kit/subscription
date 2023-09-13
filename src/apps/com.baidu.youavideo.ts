@@ -13,7 +13,7 @@ export default defineAppConfig({
         {
           matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
           snapshotUrls: [
-            'https://gkd-kit.gitee.io/snapshot/1694594083094',
+            'https://gkd-kit.gitee.io/import/12597925',
           ],
         },
       ],
@@ -26,7 +26,7 @@ export default defineAppConfig({
         {
           matches: '[id="com.baidu.youavideo:id/img_close"]',
           snapshotUrls: [
-            'https://gkd-kit.gitee.io/snapshot/1694599941204',
+            'https://gkd-kit.gitee.io/import/12597916',
           ],
         },
       ],
