@@ -7,7 +7,6 @@ export default defineAppConfig({
     {
       key: 1,
       name: '开屏广告',
-      activityIds: ['com.ai.obc.cbn.app.ui.other.activity.SplashActivity'],
       rules: [
         {
           matches: '[text*="跳过"]',
