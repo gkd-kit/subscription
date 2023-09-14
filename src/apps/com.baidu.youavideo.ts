@@ -6,23 +6,15 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '开屏广告1',
+      name: '开屏广告',
       activityIds: ['com.baidu.youavideo.app.ui.SplashActivity'],
       rules: [
         {
-          matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12597925'],
-        },
-      ],
-    },
-    {
-      key: 3,
-      name: '开屏广告2',
-      activityIds: ['com.baidu.youavideo.app.ui.SplashActivity'],
-      rules: [
-        {
-          matches: '[text="跳过"]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12598507'],
+          matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"||text="跳过"]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12597925',
+            'https://gkd-kit.gitee.io/import/12598507',
+          ],
         },
       ],
     },
