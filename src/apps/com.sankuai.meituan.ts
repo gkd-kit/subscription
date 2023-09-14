@@ -14,7 +14,7 @@ export default defineAppConfig({
       key: 1,
       name: '版本更新弹窗',
       activityIds: 'com.meituan.android.upgrade.ui.fy',
-      rules: '@Button + TextView[text^=`新版本`]',
+      rules: 'TextView[text^=`新版本`] - Button[id=`com.sankuai.meituan:id/btn_close`]',
       snapshotUrls: 'https://gkd-kit.gitee.io/snapshot/1694708883305',
     },
   ],
