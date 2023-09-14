@@ -10,5 +10,12 @@ export default defineAppConfig({
       activityIds: 'com.meituan.android.pt.homepage.activity.MainActivity',
       rules: 'TextView[id=`com.sankuai.meituan:id/close_btn`][text^=`跳过`]',
     },
+    {
+      key: 1,
+      name: '版本更新弹窗',
+      activityIds: 'com.meituan.android.upgrade.ui.fy',
+      rules: '@Button + TextView[text^=`新版本`]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/snapshot/1694708883305',
+    },
   ],
 });
