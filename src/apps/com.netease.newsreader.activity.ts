@@ -7,8 +7,7 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds:
-        'com.netease.nr.biz.ad.newAd.AdActivity',
+      activityIds: 'com.netease.nr.biz.ad.newAd.AdActivity',
       rules: '[text="广告"] < LinearLayout - LinearLayout > [text="跳过"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12639864',
     },
@@ -34,8 +33,7 @@ export default defineAppConfig({
       name: '开启系统推送提示信息',
       activityIds:
         'com.netease.newsreader.common.base.activity.SingleFragmentActivity',
-      rules:
-        '[text^="打开推送"] +(2) RelativeLayout > ImageView',
+      rules: '[text^="打开推送"] +(2) RelativeLayout > ImageView',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12639869',
     },
     {
@@ -53,7 +51,7 @@ export default defineAppConfig({
         },
         {
           key: 1,
-          matches: 
+          matches:
             'FrameLayout[childCount=1] >5 TextView[text="广告"] +2 ImageView[clickable=true]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12639751',
         },
