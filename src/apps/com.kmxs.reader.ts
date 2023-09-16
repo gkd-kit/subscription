@@ -5,14 +5,14 @@ export default defineAppConfig({
   name: '七猫免费小说',
   groups: [
     {
-      key: 0,
+      key: -1,
       name: '开屏广告',
       activityIds: 'com.kmxs.reader.home.ui.HomeActivity',
       rules: ['[id="com.kmxs.reader:id/tv_count_down_text"][text^="跳过"]'],
       snapshotUrls: ['https://gkd-kit.gitee.io/import/12640282'],
     },
     {
-      key: 1,
+      key: 0,
       name: '青少年模式弹窗',
       activityIds: 'com.kmxs.reader.home.ui.HomeActivity',
       rules: '[id="com.kmxs.reader:id/young_dialog_close"]',
