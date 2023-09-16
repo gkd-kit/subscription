@@ -10,11 +10,8 @@ export default defineAppConfig({
       activityIds: 'com.xiaomi.smarthome.SmartHomeMainActivity',
       rules: [
         {
-          matches:
-            'RelativeLayout[id=null] > ImageView + ImageView',
-          snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/12639658',
-          ],
+          matches: 'RelativeLayout[id=null] > ImageView + ImageView',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12639658'],
         },
       ],
     },
@@ -24,7 +21,8 @@ export default defineAppConfig({
       name: '设备固件升级提示弹窗',
       activityIds: 'com.xiaomi.smarthome.framework.plugin.rn.PluginRNActivity',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12639671',
-      rules: '[text*="检测到"&&text*="升级"] < ViewGroup + ViewGroup > Button > [text = "取消"]',
+      rules:
+        '[text*="检测到"&&text*="升级"] < ViewGroup + ViewGroup > Button > [text = "取消"]',
     },
   ],
 });
