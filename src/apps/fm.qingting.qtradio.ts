@@ -21,8 +21,14 @@ export default defineAppConfig({
       key: 1,
       name: '播放界面的广告',
       activityIds: ['fm.qingting.qtradio.QTRadioActivity'],
-      rules: '[id="fm.qingting.qtradio:id/view_ad_close"]',
-      snapshotUrls: ['https://gkd-kit.gitee.io/import/12640438'],
+      rules: [
+        '[id="fm.qingting.qtradio:id/view_ad_close"]',
+        '@[id="fm.qingting.qtradio:id/iv_close"] + RelativeLayout > LinearLayout > TextView[text="广告"]',
+      ],
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/12640438',
+        'https://gkd-kit.gitee.io/import/12640981',
+      ],
     },
   ],
 });
