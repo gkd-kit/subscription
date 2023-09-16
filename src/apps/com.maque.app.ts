@@ -15,7 +15,8 @@ export default defineAppConfig({
       key: 1,
       name: '首页活动弹窗',
       activityIds: 'com.uzmap.pkg.EntranceActivity',
-      rules: 'ImageView + ViewGroup > ImageView[id=null]',
+      rules:
+        'ViewGroup[childCount=2] > ImageView[clickable=true] + ViewGroup[clickable=true][childCount=1] > ImageView[id=null][clickable=false]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12640100',
     },
   ],
