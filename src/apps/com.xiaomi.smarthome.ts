@@ -10,7 +10,8 @@ export default defineAppConfig({
       activityIds: 'com.xiaomi.smarthome.SmartHomeMainActivity',
       rules: [
         {
-          matches: 'RelativeLayout[id=null] > ImageView + ImageView',
+          matches:
+            'RelativeLayout[id=null] > ImageView[id!=null] + ImageView[clickable=true][id!=null]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12639658'],
         },
       ],
