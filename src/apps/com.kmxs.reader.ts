@@ -18,6 +18,12 @@ export default defineAppConfig({
       rules: '[id="com.kmxs.reader:id/young_dialog_close"]',
     },
     {
+      key: -2,
+      name: '更新弹窗',
+      activityIds: 'com.km.app.update.UpdateVersionV2Activity',
+      rules: '[id="com.kmxs.reader:id/tv_update_cancel"]',
+    },
+    {
       key: 2,
       name: '阅读页面底部广告',
       activityIds: 'org.geometerplus.android.fbreader.FBReader',
