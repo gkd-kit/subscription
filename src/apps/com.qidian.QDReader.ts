@@ -20,7 +20,7 @@ export default defineAppConfig({
       activityIds: ['com.qidian.QDReader.framework.widget.dialog.judian'],
       rules:
         'TextView[text$="新版本"] +(2) RelativeLayout >(4) TextView[text="以后再说"]',
-      snapshotUrls: ['https://gkd-kit.gitee.io/import/12640254'],
+      snapshotUrls: ['https://gkd-kit.gitee.io/import/12641026'],
     },
     {
       key: 2,
