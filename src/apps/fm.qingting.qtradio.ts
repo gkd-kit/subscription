@@ -9,8 +9,7 @@ export default defineAppConfig({
       name: '开屏广告',
       activityIds: ['fm.qingting.qtradio.QTRadioActivity'],
       rules: [
-        '[id="fm.qingting.qtradio:id/third_skip_layout"]',
-        '[id="fm.qingting.qtradio:id/skip_ad"]',
+        '[id="fm.qingting.qtradio:id/third_skip_layout"||id="fm.qingting.qtradio:id/skip_ad"]',
       ],
       snapshotUrls: [
         'https://gkd-kit.gitee.io/import/12640433',
