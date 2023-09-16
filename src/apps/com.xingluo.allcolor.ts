@@ -8,8 +8,7 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       activityIds: ['com.cccgame.android.MainActivity'],
-      rules:
-        '[id="com.byted.pangle:id/tt_ad_logo"] - [id="com.byted.pangle:id/tt_splash_skip_btn"]',
+      rules: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
       snapshotUrls: ['https://gkd-kit.gitee.io/import/12640349'],
     },
     {
@@ -25,7 +24,7 @@ export default defineAppConfig({
         {
           preKeys: [1, 2, 3, 4],
           name: '穿山甲广告-反馈理由',
-          matches: '[text="不感兴趣"]',
+          matches: '[id="com.byted.pangle:id/tt_item_tv"][text="不感兴趣"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12640358',
         },
         {
@@ -35,7 +34,9 @@ export default defineAppConfig({
         },
         {
           key: 2,
-          matches: ['Image[id=null] < View +(2) View > Image[id=null]'],
+          matches: [
+            '@Image[id=null] < View -(2) View > View > View > TextView[text="广告"]',
+          ],
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12640362'],
         },
         {
