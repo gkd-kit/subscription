@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.30.0](https://github.com/gkd-kit/subscription/compare/v1.29.0...v1.30.0) (2023-09-16)
+
+
+### Features
+
+* **起点读书:** 更新弹窗, ([#95](https://github.com/gkd-kit/subscription/issues/95)) ([2d4091d](https://github.com/gkd-kit/subscription/commit/2d4091df660c50c56d970962e789d8d011326d5e))
+
 ## [1.29.0](https://github.com/gkd-kit/subscription/compare/v1.28.0...v1.29.0) (2023-09-16)
 
 
