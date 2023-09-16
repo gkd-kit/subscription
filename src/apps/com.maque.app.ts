@@ -10,12 +10,14 @@ export default defineAppConfig({
       activityIds: 'com.uzmap.pkg.EntranceActivity',
       rules:
         'TextView[id="com.maque.app:id/ksad_logo_text"] - ImageView < * < * -(2) LinearLayout >(3) TextView[text="跳过"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12641032',
     },
     {
       key: 1,
       name: '首页活动弹窗',
       activityIds: 'com.uzmap.pkg.EntranceActivity',
       rules: 'ImageView + ViewGroup > ImageView[id=null]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12640100',
     },
   ],
 });
