@@ -45,6 +45,7 @@ export default defineAppConfig({
       ],
     },
     {
+      enable: false,
       key: 4,
       name: '系统推送提示信息',
       desc: '点击顶部提醒左侧x按钮',
