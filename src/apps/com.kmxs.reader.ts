@@ -8,14 +8,8 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       activityIds: 'com.kmxs.reader.home.ui.HomeActivity',
-      rules: [
-        'ImageView[id=null] < * < * + RelativeLayout >(2) TextView[text^="跳过"]',
-        'TextView[text$="广告"] < * -(2) RelativeLayout >(3) TextView[text^="跳过"]',
-      ],
-      snapshotUrls: [
-        'https://gkd-kit.gitee.io/import/12640282',
-        'https://gkd-kit.gitee.io/import/12640332',
-      ],
+      rules: ['[id="com.kmxs.reader:id/tv_count_down_text"][text^="跳过"]'],
+      snapshotUrls: ['https://gkd-kit.gitee.io/import/12640282'],
     },
     {
       key: 1,
