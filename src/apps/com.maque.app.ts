@@ -8,8 +8,7 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       activityIds: 'com.uzmap.pkg.EntranceActivity',
-      rules:
-        'TextView[id="com.maque.app:id/ksad_logo_text"] - ImageView < * < * -(2) LinearLayout >(3) TextView[text="跳过"]',
+      rules: '[id="com.maque.app:id/ksad_splash_circle_skip_view"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12641032',
     },
     {
