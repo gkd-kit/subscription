@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.29.0](https://github.com/gkd-kit/subscription/compare/v1.28.0...v1.29.0) (2023-09-16)
+
+
+### Features
+
+* 懂球帝-广告弹窗 ([#85](https://github.com/gkd-kit/subscription/issues/85)) ([9724631](https://github.com/gkd-kit/subscription/commit/9724631c2c824925452a257263db92cf8e05d106))
+* **米家:** 米家智惠广告, 设备固件升级提示弹窗 ([#88](https://github.com/gkd-kit/subscription/issues/88)) ([7d9b2c5](https://github.com/gkd-kit/subscription/commit/7d9b2c5ef69a73facf71467f98e8ebd02a6b8136))
+
 ## [1.28.0](https://github.com/gkd-kit/subscription/compare/v1.27.0...v1.28.0) (2023-09-15)
 
 
