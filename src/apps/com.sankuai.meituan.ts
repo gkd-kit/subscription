@@ -36,8 +36,10 @@ export default defineAppConfig({
     {
       key: 4,
       name: '首页右侧抽奖小广告',
-      activityIds: 
-        ['com.meituan.android.pt.homepage.activity.MainActivity', 'com.miui.home.launcher.Launcher'],
+      activityIds: [
+        'com.meituan.android.pt.homepage.activity.MainActivity',
+        'com.miui.home.launcher.Launcher'
+      ],
       rules: 'FrameLayout > @ImageView + ImageView[desc="资质与规则"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12639815',
     },
