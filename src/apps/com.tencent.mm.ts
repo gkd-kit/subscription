@@ -15,6 +15,11 @@ export default defineAppConfig({
       rules: [
         'TextView[text*="广告"] + TextView[text="关闭该广告"]',
         'ImageView - TextView[text="广告"][id!=null][index=0]',
+        '[text^="你觉得这条广告怎么样"] + FrameLayout >(2) LinearLayout > [text="关闭该广告"]',
+      ],
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/12642588',
+        'https://gkd-kit.gitee.io/import/12642584',
       ],
     },
     {
@@ -93,6 +98,36 @@ export default defineAppConfig({
           matches:
             'LinearLayout[childCount=1] >5 LinearLayout[childCount=1] - ImageView < LinearLayout + View + RelativeLayout > TextView[text="微信红包"][id!=null]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12567637',
+        },
+      ],
+    },
+    {
+      enable: false,
+      key: 6,
+      name: '订阅号底部广告',
+      desc: '自动点击-广告反馈按钮-不感兴趣-与我无关',
+      activityIds:
+        'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebViewMMUI',
+      rules: [
+        {
+          key: 1,
+          name: '点击广告反馈按钮',
+          matches: '[text="广告"] + [text="feedback_icon"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12642232',
+        },
+        {
+          key: 2,
+          preKeys: [1],
+          name: '点击不感兴趣',
+          matches: '[id^="menu"] > [id="dislike"][text="不感兴趣"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12642234'],
+        },
+        {
+          key: 3,
+          preKeys: [2],
+          name: '点击与我无关',
+          matches: '[id^="menu"] > [id="isdismatch"][text="与我无关"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12642238'],
         },
       ],
     },
