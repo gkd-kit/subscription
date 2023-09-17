@@ -36,15 +36,11 @@ export default defineAppConfig({
         {
           key: 1,
           matches:
-            'TextView[id=null][text="跳过视频"] < View +(2) View > Button[clickable=true]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12642913',
-        },
-        {
-          key: 2,
-          matches: [
-            'Button[id=null][clickable=true] < @View -(2) View < View - View >(n) View[desc="安装"]', // 点中间的View才会关闭广告，最后两个 View 之间的距离不确定
+            'TextView[id=null][text="跳过视频"] < View +(2) @View > Button[clickable=true]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12642913',
+            'https://gkd-kit.gitee.io/import/12642932',
           ],
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12642932'],
         },
         {
           key: 3,
@@ -56,28 +52,27 @@ export default defineAppConfig({
         {
           key: 4,
           cd: 2500,
-          activityIds: ['com.google.android.gms.ads.AdActivity'],
           matches: ['[desc="了解详情"] - View > [text="关闭"]'],
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12642983'],
         },
       ],
     },
     {
-      enable: false, // 底部广告难以去除，原因未知
-      key: 99,
+      key: 3,
       name: '谷歌广告-页面底部广告',
       activityIds: 'com.daysko.safp.MainActivity',
       rules: [
         {
-          key: 1,
-          matches: [
-            'View[id="mys-wrapper"] + View >(2) Button[clickable=true]',
-            'View[desc="Advertisement"] + View >(2) Button',
-          ],
+          matches:
+            '[id!="why_this_ad_btn"] -2 View[id="mys-wrapper"] + View >2 Button[clickable=true]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12642993',
-            'https://gkd-kit.gitee.io/import/12643001',
+            'https://gkd-kit.gitee.io/import/12643229',
           ],
+        },
+        {
+          matches: 'View[desc="Advertisement"] + View >(2) Button',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12643001'],
         },
       ],
     },
