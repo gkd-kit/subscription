@@ -21,9 +21,13 @@ export default defineAppConfig({
         },
         {
           key: 3,
+          name: '右上角白色圆形背景黑色x关闭按钮',
           matches:
-            '@Button[id=null][clickable=true] < View - TextView < View + View >(7) [text="安装"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12643039',
+            'View[clickable=false][childCount=2] > TextView[clickable=true] + View[clickable=true][childCount=1] > Button[clickable=true]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12643039',
+            'https://gkd-kit.gitee.io/import/12643246',
+          ],
         },
       ],
     },
