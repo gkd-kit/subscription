@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.32.0](https://github.com/gkd-kit/subscription/compare/v1.31.0...v1.32.0) (2023-09-17)
+
+
+### Features
+
+* **哔哩哔哩:** 视频底部广告-增加适配 ([e53030c](https://github.com/gkd-kit/subscription/commit/e53030cc566581583dc058677fb539aea236382c))
+
 ## [1.31.0](https://github.com/gkd-kit/subscription/compare/v1.30.0...v1.31.0) (2023-09-16)
 
 
