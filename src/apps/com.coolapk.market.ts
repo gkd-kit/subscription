@@ -35,10 +35,7 @@ export default defineAppConfig({
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/38517192/9badc07c-4da2-4066-8af5-d96a86a28315',
           ],
-          matches: [
-            '[id="com.byted.pangle.m:id/tt_item_tv"][text=`不感兴趣`]',
-            '',
-          ],
+          matches: ['[id="com.byted.pangle.m:id/tt_item_tv"][text=`不感兴趣`]'],
         },
         'Button[text$="免广告"] + Button[text="不感兴趣"]', // 1692148279610
         'Button[text$=`去广告`] - Button[text=`不感兴趣`]',
