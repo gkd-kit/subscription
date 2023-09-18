@@ -57,7 +57,7 @@ export default defineAppConfig({
     },
     {
       key: 5,
-      name: '相册-激活无限空间弹窗',
+      name: '相册页面-激活无限空间弹窗',
       activityIds:
         'com.baidu.netdisk.cloudimage.ui.album.AlbumGuideOneImageDialog',
       rules:
