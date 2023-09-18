@@ -22,7 +22,7 @@ export default defineAppConfig({
       rules: [
         {
           matches:
-            '[text*="确定要退出"] < LinearLayout +n LinearLayout > TextView[text="确定"]',
+            '[text*="确定要退出"] < LinearLayout +n LinearLayout > TextView[id$="tv_exit_sure"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12645513'],
         },
       ],
