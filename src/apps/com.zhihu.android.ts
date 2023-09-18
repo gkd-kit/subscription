@@ -51,7 +51,7 @@ export default defineAppConfig({
       desc: '赚稿费广告卡片,盐选推荐广告,知乎学课堂,汽车广告',
       activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
       rules: [
-        '[id=\'com.zhihu.android:id/content\'] >2 TextView[text=\'不感兴趣\'][id=\'com.zhihu.android:id/title\']', // 1686989681860
+        '[id="com.zhihu.android:id/content"] >2 TextView[text="不感兴趣"][id="com.zhihu.android:id/title"]', // 1686989681860
         'TextView[text=`内容质量差`][id=`com.zhihu.android:id/tv_content`]',
         '@ImageView[id=`com.zhihu.android:id/menu`] < FrameLayout - * > TextView[text^=`广告`]', // 1687913210243 1686989714786
         '@ImageView[id=null][clickable=true] -n TextView[text*=`广告`][index=0]', // 1687418944396 1686924015259
@@ -83,7 +83,7 @@ export default defineAppConfig({
         'TextView[text$=`的广告`] - Image[id=null]',
         'TextView[text*=`广告`] +2 Image[id=null]', // 1687338556331
         'TextView[text*=`点赞`][text*=`的回答`] +2 Image[id=null]', // 1687076663768 1686969672948
-        'TextView[text=\'\'] + Image[text=\'\'] + TextView[text=\'\u200b\'] + Image[id=null][clickable=true]', // 1687234636980
+        'TextView[text=""] + Image[text=""] + TextView[text="\u200b"] + Image[id=null][clickable=true]', // 1687234636980
       ],
     },
     {
@@ -97,8 +97,18 @@ export default defineAppConfig({
       name: '推荐页-顶部广告',
       activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
       rules: [
-        '[id=\'com.zhihu.android:id/tv_ad_tag\'] + [id=\'com.zhihu.android:id/img_close_focus\']', // 1686911063850
+        '[id="com.zhihu.android:id/tv_ad_tag"] + [id="com.zhihu.android:id/img_close_focus"]', // 1686911063850
       ],
+    },
+    {
+      enable: false,
+      key: 10,
+      name: '盐选会员-月卡红包',
+      activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
+      rules: [
+        'ImageView[id="com.zhihu.android:id/floating_img"] + ImageView[id="com.zhihu.android:id/floating_close_btn"][clickable=true]',
+      ],
+      snapshotUrls: ['https://gkd-kit.gitee.io/import/12647421'],
     },
   ],
 });
