@@ -10,7 +10,7 @@ export default defineAppConfig({
       activityIds: ['com.zgnet.eClass.ui.SplashActivity'],
       rules: [
         {
-          matches: 'TextView[id$="tv_close_time"][text^="关闭"]',
+          matches: 'TextView[id$="tv_close_time"&&text^="关闭"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12644260'],
         },
       ],
