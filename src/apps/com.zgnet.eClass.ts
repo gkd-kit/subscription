@@ -15,5 +15,17 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 2,
+      enable: false,
+      name: '退出确认弹窗（默认关闭）',
+      rules: [
+        {
+          matches:
+            '[text*="确定要退出"] < LinearLayout +n LinearLayout > TextView[text="确定"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12645513'],
+        },
+      ],
+    },
   ],
 });
