@@ -10,8 +10,11 @@ export default defineAppConfig({
       activityIds: ['cn.thepaper.paper.ui.splash.welcome.LaunchActivity'],
       rules: [
         {
-          matches: '[id="android:id/text1"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12644536',
+          matches: '[id="com.wondertek.paper:id/count_down" || id="com.wondertek.paper:id/count_miss"]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12644536', 
+            'https://gkd-kit.gitee.io/import/12645559',
+          ]
         },
       ],
     },
