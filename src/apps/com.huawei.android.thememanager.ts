@@ -107,16 +107,17 @@ export default defineAppConfig({
     },
     {
       key: 6,
-      name: '精选页信息流广告',
+      name: '主页面（推荐、分类、我的）广告',
       activityIds: ['com.huawei.android.thememanager.HwThemeManagerActivity'],
       rules: [
         {
           matches:
-            '[id="com.huawei.android.thememanager:id/announce_ad_close_btn"||id="com.huawei.android.thememanager:id/pps_lable_top"||id="com.huawei.android.thememanager:id/pps_img_video_close"]',
+            '[id="com.huawei.android.thememanager:id/announce_ad_close_btn"||id="com.huawei.android.thememanager:id/pps_lable_top"||id="com.huawei.android.thememanager:id/pps_img_video_close"||id="com.huawei.android.thememanager:id/pps_label_ll"]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12647614',
             'https://gkd-kit.gitee.io/import/12647653',
             'https://gkd-kit.gitee.io/import/12647650',
+            'https://gkd-kit.gitee.io/import/12657822',
           ],
         },
         {
