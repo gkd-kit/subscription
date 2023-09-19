@@ -5,6 +5,20 @@ export default defineAppConfig({
   name: '华为主题',
   groups: [
     {
+      key: 0,
+      name: '开屏广告',
+      activityIds: [
+        'com.huawei.android.thememanager.mvp.view.activity.onlinebase.PageActivity',
+      ],
+      rules: [
+        {
+          matches: '[id="com.huawei.hms.ads.uiengine:id/hiad_skip_text"]',
+          action: 'clickCenter',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12657379',
+        },
+      ],
+    },
+    {
       key: 1,
       name: '主题详情页“下应用领主题”横幅',
       activityIds: [
