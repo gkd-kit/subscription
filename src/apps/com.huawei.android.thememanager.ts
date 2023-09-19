@@ -127,5 +127,17 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 7,
+      name: '首页弹窗广告',
+      activityIds: ['com.huawei.android.thememanager.HwThemeManagerActivity'],
+      rules: [
+        {
+          matches:
+            '[id="com.huawei.android.thememanager:id/campaign_dialog_close_image"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12657939',
+        },
+      ],
+    },
   ],
 });
