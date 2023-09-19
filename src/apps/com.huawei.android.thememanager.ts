@@ -129,7 +129,8 @@ export default defineAppConfig({
     },
     {
       key: 7,
-      name: '首页弹窗广告',
+      name: '首页活动弹窗-默认禁用',
+      enable: false,
       activityIds: ['com.huawei.android.thememanager.HwThemeManagerActivity'],
       rules: [
         {
