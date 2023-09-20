@@ -6,7 +6,7 @@ export default defineAppConfig({
     groups: [
         {
             key: 1,
-            name: '首页广告',
+            name: '开屏广告',
             activityIds: [
                 'com.sec.android.app.samsungapps.notipopup.WebViewPopup'
             ],
