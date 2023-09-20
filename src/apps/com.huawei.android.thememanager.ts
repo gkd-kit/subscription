@@ -139,7 +139,10 @@ export default defineAppConfig({
         {
           matches:
             '[id="com.huawei.android.thememanager:id/campaign_dialog_close_image"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12657939',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12657939',
+            'https://gkd-kit.gitee.io/import/12667815',
+          ],
         },
       ],
     },
