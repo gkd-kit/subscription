@@ -69,7 +69,7 @@ export default defineAppConfig({
       enable: false,
       key: 10,
       name: '请求开启通知提示信息',
-      desc: '指定点击“暂不”',
+      desc: '自动点击“暂不”',
       activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
       rules:
         '@[text="暂不"][focusable=true] < LinearLayout - LinearLayout >(2) [text="开启朋友通知"]',
