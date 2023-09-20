@@ -72,5 +72,24 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 6,
+      name: '评论区博主内容推荐',
+      desc: '评论区同一博主其他博文推荐',
+      activityIds: [
+        'com.sina.weibo.feed.DetailWeiboActivity',
+        'com.sina.weibo.utils.WeiboDialog$CustomDialog',
+      ],
+      rules: [
+        {
+          matches: 'TextView[text="不感兴趣"]',
+          snapshotsUrls: 'https://gkd-kit.gitee.io/import/12674511',
+        },
+        {
+          matches: '@LinearLayout[id="com.sina.weibo:id/ll_close"][clickable=true]',
+          snapshotsUrls: 'https://gkd-kit.gitee.io/import/12674498',
+        },
+      ],
+    },
   ],
 });
