@@ -1,20 +1,17 @@
 import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
-  id: 'com.tiqiaa.icontrol',
-  name: '遥控精灵',
+  id: 'com.weaver.emobile7',
+  name: 'EMobile7',
   groups: [
     {
-      key: 0,
-      name: '开屏广告',
-      activityIds: 'com.tiqiaa.icontrol.WelcomeActivity',
+      key: 1,
+      name: '更新弹窗',
+      activityIds: 'weaver.fw.com.MainActivity',
       rules: [
         {
-          matches: '@[id=null][text^="跳过"] < LinearLayout +(n) ImageView',
-          snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/12642183',
-            'https://gkd-kit.gitee.io/import/12642185',
-          ],
+          matches: '@[text="取消"] +(2) [text="更新"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12673154'],
         },
       ],
     },
