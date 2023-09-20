@@ -131,7 +131,10 @@ export default defineAppConfig({
       key: 7,
       name: '首页活动弹窗-默认禁用',
       enable: false,
-      activityIds: ['com.huawei.android.thememanager.HwThemeManagerActivity'],
+      activityIds: [
+        'com.huawei.android.thememanager.HwThemeManagerActivity',
+        'com.huawei.android.launcher.unihome.UniHomeLauncher',
+      ],
       rules: [
         {
           matches:
