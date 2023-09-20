@@ -16,8 +16,7 @@ export default defineAppConfig({
       name: '广告卡片',
       rules: [
         {
-          activityIds:
-            'com.netease.mail.biz.main.MainITabActivity',
+          activityIds: 'com.netease.mail.biz.main.MainITabActivity',
           matches: '@LinearLayout > TextView[text="广告"]',
           // need snapshot
         },

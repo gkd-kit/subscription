@@ -18,7 +18,8 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          matches: 'TextView[text="广告"] + @ImageView[id*="more"][clickable=true]',
+          matches:
+            'TextView[text="广告"] + @ImageView[id*="more"][clickable=true]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12668903',
         },
         {

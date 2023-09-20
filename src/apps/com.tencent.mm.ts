@@ -49,8 +49,7 @@ export default defineAppConfig({
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12642584'], // snapshot loading failed
         },
         {
-          matches:
-            '[text="直接关闭"]',
+          matches: '[text="直接关闭"]',
           // need snapshot
         },
         {
