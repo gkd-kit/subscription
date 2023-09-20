@@ -20,5 +20,11 @@ export default defineAppConfig({
       desc: '关闭青少年模式提醒弹窗',
       rules: 'TextView[id=`com.mihoyo.hyperion:id/tv_dialog_i_know`]',
     },
+    {
+      key: 2,
+      name: '版本更新提示',
+      desc: '关闭版本更新提示弹窗',
+      rules: 'TextView[id=`com.mihoyo.hyperion:id/mUpgradeDialogCancel`]',
+    },
   ],
 });
