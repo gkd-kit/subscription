@@ -11,21 +11,23 @@ export default defineAppConfig({
         'com.hihonor.android.launcher.unihome.UniHomeLauncher',
       rules: 
         '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
+        snapshotUrls: 'https://gkd-kit.gitee.io/import/12667534',
     },
     {
-      name: '新闻页面摇一摇广告',
+      name: '新闻页面摇一摇广告', 
       key: 1,
+      enable: false,
       activityIds: 
         'com.romielf.mrsc.MainActivity',
+      desc: '点击准确率灵敏度不太高',
       rules: [
         {
-          matches: '[width=33][height=33]',
-          delay: 500,
-          snapshotUrls: 'https://gkd-kit.gitee.io/snapshot/1695111432334',
+          matches: '@Image < View -n View >2 View[text="广告"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12667539',
         },
         {
           matches: '[text="不感兴趣"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/snapshot/1695116516651',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12667549',
         },
       ],
     },

@@ -24,7 +24,34 @@ export default defineAppConfig({
         {
           matches:
             '[text^="你觉得这条广告怎么样"] + FrameLayout >2 @LinearLayout[clickable=true] > [text="关闭该广告"]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12642584'],
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12642584'], // snapshot loading failed
+        },
+      ],
+    },
+    {
+      key: 7,
+      enable: false,
+      name: '关闭朋友圈广告',
+      desc: '朋友圈信息流广告,不用点击关闭按钮,直接关闭',
+      activityIds: 'com.tencent.mm.plugin.sns.ui.SnsTimeLineUI',
+      rules: [
+        {
+          matches: 'TextView[text*="广告"] + TextView[text="关闭该广告"]',
+          // 需要快照
+        },
+        {
+          matches: 'ImageView - TextView[text="广告"][id!=null][index=0]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12642588'],
+        },
+        {
+          matches:
+            '[text^="你觉得这条广告怎么样"] + FrameLayout >2 @LinearLayout[clickable=true] > [text="关闭该广告"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12642584'], // snapshot loading failed
+        },
+        {
+          matches:
+            '[text="直接关闭"]',
+          // need snapshot
         },
       ],
     },
