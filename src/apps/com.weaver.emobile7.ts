@@ -10,7 +10,8 @@ export default defineAppConfig({
       activityIds: 'weaver.fw.com.MainActivity',
       rules: [
         {
-          matches: '@[text="取消"] +(2) [text="更新"]',
+          matches:
+            '@[id="com.weaver.emobile7:id/sdl__negative_button"][text="取消"] +(2) [id="com.weaver.emobile7:id/sdl__positive_button"][text="更新"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12673154'],
         },
       ],
