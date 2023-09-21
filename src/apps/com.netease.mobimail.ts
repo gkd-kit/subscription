@@ -1,6 +1,4 @@
-import { validSnapshotUrl } from '../file';
 import { defineAppConfig } from '../types';
-import comSndaWifilocating from './com.snda.wifilocating';
 
 export default defineAppConfig({
   id: 'com.netease.mobimail',
@@ -20,7 +18,8 @@ export default defineAppConfig({
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12686093',
         },
         {
-          matches: '@LinearLayout > TextView[text^="跳过"]',
+          matches:
+            '[id="com.netease.mobimail:id/ad_placeholder"] >5 TextView[text^="跳过"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12686132',
         },
       ],
