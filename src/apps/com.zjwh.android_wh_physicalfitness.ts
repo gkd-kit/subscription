@@ -11,13 +11,11 @@ export default defineAppConfig({
       rules: [
         {
           matches:
-            'ImageView - RelativeLayout >(2) [id="com.zjwh.android_wh_physicalfitness:id/iv_close"][clickable=true]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12673231'],
-        },
-        {
-          matches:
-            'ImageView - RelativeLayout > [id="com.zjwh.android_wh_physicalfitness:id/iv_close"][clickable=true]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12673523'],
+            'ImageView - RelativeLayout >(3-n) [id="com.zjwh.android_wh_physicalfitness:id/iv_close"][clickable=true]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12673231',
+            'https://gkd-kit.gitee.io/import/12673523',
+          ],
         },
       ],
     },
