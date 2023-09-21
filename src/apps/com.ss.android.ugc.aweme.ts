@@ -22,14 +22,16 @@ export default defineAppConfig({
         },
         {
           activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
-          matches: [
+          matches:
             '[text="换一个"] - FrameLayout[clickable=true] > ImageView[clickable=true]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12520943'],
+        },
+
+        {
+          activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
+          matches:
             '[text="你可能感兴趣"] < LinearLayout + [text="隐藏"][clickable=true]',
-          ],
-          snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/12520943',
-            'https://gkd-kit.gitee.io/import/12675396',
-          ],
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12675396'],
         },
         {
           activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
