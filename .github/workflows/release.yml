@@ -16,6 +16,13 @@ jobs:
 
       - uses: volta-cli/action@v3
 
+      - name: download node
+        uses: nick-fields/retry@v2
+        with:
+          timeout_minutes: 10
+          max_attempts: 3
+          command: node -v
+
       - uses: pnpm/action-setup@v2
 
       - run: pnpm install
