@@ -10,8 +10,7 @@ export default defineAppConfig({
       activityIds: 'net.csdn.csdnplus.activity.SplashActivity',
       rules: [
         {
-          matches:
-            '[id="net.csdn.csdnplus:id/tv_skip_splashimage"][text$="跳过"][clickable=true]',
+          matches: '[id="net.csdn.csdnplus:id/tv_skip_splashimage"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12673680'],
         },
       ],
@@ -59,13 +58,11 @@ export default defineAppConfig({
       key: 10,
       name: '请求推送通知弹窗',
       activityIds: 'net.csdn.csdnplus.activity.MainActivity',
-      rules: [
-        {
-          matches:
-            '@[id="net.csdn.csdnplus:id/iv_close"][clickable=true] + LinearLayout > [text="开启推送通知"]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12673638'],
-        },
-      ],
+      rules: {
+        matches:
+          '@[id="net.csdn.csdnplus:id/iv_close"][clickable=true] + LinearLayout > [text="开启推送通知"]',
+        snapshotUrls: ['https://gkd-kit.gitee.io/import/12673638'],
+      },
     },
   ],
 });
