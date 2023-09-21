@@ -9,6 +9,7 @@ export default defineAppConfig({
       name: '开屏广告',
       activityIds: 'com.gtgj.view.LaunchActivity',
       rules: 'FrameLayout > TextView[text=`跳过`]',
+      snapshotUrls: ['https://gkd-kit.gitee.io/import/12684583'],
     },
   ],
 });
