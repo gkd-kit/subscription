@@ -35,12 +35,18 @@ export default defineAppConfig({
     {
       key: 2,
       name: '首页弹窗广告',
-      activityIds: ['com.jingdong.app.reader.main.ui.JdMainActivity'],
+      activityIds: [
+        'com.jingdong.app.reader.main.ui.JdMainActivity',
+        'com.miui.home.launcher.Launcher',
+      ],
       rules: [
         {
           matches:
             '[id="com.jd.app.reader:id/mCardView"] + [id="com.jd.app.reader:id/mCloseBtn"]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12686577'],
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12686577',
+            'https://gkd-kit.gitee.io/import/12686664', // activityId: 'com.miui.home.launcher.Launcher'
+          ],
         },
       ],
     },
