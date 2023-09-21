@@ -10,8 +10,7 @@ export default defineAppConfig({
       activityIds: ['com.tbc.android.defaults.MainActivity'],
       rules: [
         {
-          matches:
-            '[id="com.tbc.android.defaults:id/ivLoginAdImg"] + [id="com.tbc.android.defaults:id/tvLoginAdSkip"][text="跳过"]',
+          matches: '[id="com.tbc.android.defaults:id/tvLoginAdSkip"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12685253'],
         },
       ],
