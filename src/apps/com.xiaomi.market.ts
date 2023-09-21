@@ -15,7 +15,8 @@ export default defineAppConfig({
       key: 10,
       name: '忽略升级',
       desc: '应用升级界面-自动点击忽略',
-      exampleUrls: '', // 如何上传 gif?
+      exampleUrls:
+        'https://github.com/gkd-kit/subscription/assets/45487685/a3a61df9-7757-428e-b4fe-a960e09a0bbe',
       activityIds: 'com.xiaomi.market.ui.UpdateListActivity',
       rules: [
         {
