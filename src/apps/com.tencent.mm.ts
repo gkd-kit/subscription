@@ -148,5 +148,20 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      enable: false,
+      key: 7,
+      name: '发送原图',
+      desc: '图片和视频-发送原图',
+      activityIds: 'com.tencent.mm.plugin.gallery.ui.AlbumPreviewUI',
+      rules: [
+        {
+          key: 1,
+          name: '发送原图',
+          matches: '[id="com.tencent.mm:id/km5"][desc="未选中,原图,复选框"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12686153'],
+        },
+      ],
+    },
   ],
 });
