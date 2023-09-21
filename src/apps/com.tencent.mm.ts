@@ -7,50 +7,30 @@ export default defineAppConfig({
     {
       key: 0,
       name: '朋友圈广告',
-      desc: '朋友圈信息流广告,点击关闭按钮,确认关闭',
+      desc: '点击广告卡片右上角关闭按钮出现菜单,确认关闭',
       activityIds: 'com.tencent.mm.plugin.sns.ui.SnsTimeLineUI',
       exampleUrls: [
         'https://github.com/gkd-kit/subscription/assets/38517192/c9ae4bba-a748-4755-b5e4-c7ad3d489a79',
       ],
       rules: [
         {
-          matches: 'TextView[text*="广告"] + TextView[text="关闭该广告"]',
-          // 需要快照
-        },
-        {
+          name: '点击广告卡片右上角',
           matches: 'ImageView - TextView[text="广告"][id!=null][index=0]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12642588'],
         },
-        {
-          matches:
-            '[text^="你觉得这条广告怎么样"] + FrameLayout >2 @LinearLayout[clickable=true] > [text="关闭该广告"]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12642584'], // snapshot loading failed
-        },
-      ],
-    },
-    {
-      key: 7,
-      enable: false,
-      name: '关闭朋友圈广告',
-      desc: '朋友圈信息流广告,不用点击关闭按钮,直接关闭',
-      activityIds: 'com.tencent.mm.plugin.sns.ui.SnsTimeLineUI',
-      rules: [
-        {
-          matches: 'TextView[text*="广告"] + TextView[text="关闭该广告"]',
-          // 需要快照
-        },
-        {
-          matches: 'ImageView - TextView[text="广告"][id!=null][index=0]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12642588'],
-        },
-        {
-          matches:
-            '[text^="你觉得这条广告怎么样"] + FrameLayout >2 @LinearLayout[clickable=true] > [text="关闭该广告"]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12642584'], // snapshot loading failed
-        },
+        // 以下是[确认关闭按钮]出现的情况
         {
           matches: '[text="关闭该广告的原因"] +(2) [text="直接关闭"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12663984'],
+        },
+        {
+          matches:
+            '[text^="你觉得这条广告怎么样"] + FrameLayout >2 @LinearLayout[clickable=true] > [text="关闭该广告"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12642584'],
+        },
+        {
+          matches: 'TextView[text*="广告"] + TextView[text="关闭该广告"]',
+          // 需要快照
         },
       ],
     },

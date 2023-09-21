@@ -18,7 +18,7 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          matches: '[id="com.youdao.dict:id/close"]',
+          matches: '[text="广告"] - [id="com.youdao.dict:id/close"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12668574',
         },
         {
