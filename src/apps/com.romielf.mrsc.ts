@@ -7,7 +7,6 @@ export default defineAppConfig({
     {
       name: '开屏广告',
       key: 0,
-      activityIds: 'com.hihonor.android.launcher.unihome.UniHomeLauncher',
       rules: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12667534',
     },
@@ -23,7 +22,7 @@ export default defineAppConfig({
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12667539',
         },
         {
-          matches: '[text="不感兴趣"]',
+          matches: '[id="com.byted.pangle:id/tt_item_tv"][text="不感兴趣"]', // 字节SDK广告
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12667549',
         },
       ],

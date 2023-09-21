@@ -8,7 +8,7 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       activityIds: 'net.csdn.csdnplus.activity.SplashActivity',
-      rules: 'TextView[text*="跳过"]',
+      rules: '[id="net.csdn.csdnplus:id/tv_skip_splashimage"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12668884',
     },
     {
@@ -19,12 +19,13 @@ export default defineAppConfig({
         {
           key: 0,
           matches:
-            'TextView[text="广告"] + @ImageView[id*="more"][clickable=true]',
+            'TextView[text="广告"] + ImageView[id="net.csdn.csdnplus:id/iv_more"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12668903',
         },
         {
           key: 1,
-          matches: 'TextView[text="内容素材质量较低"]',
+          matches:
+            '[id="net.csdn.csdnplus:id/img_feedback_title"][text="虚假广告"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12668923',
         },
       ],

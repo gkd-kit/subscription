@@ -8,7 +8,7 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       activityIds: 'com.youdao.dict.activity.DictSplashActivity',
-      rules: '@RelativeLayout >2 [text$="跳过"]',
+      rules: '[id="com.youdao.dict:id/skin_text"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12668545',
     },
     {
@@ -23,7 +23,7 @@ export default defineAppConfig({
         },
         {
           key: 1,
-          matches: 'TextView[text="收起广告"]',
+          matches: '[id="com.youdao.dict:id/close_pop"][text="收起广告"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12668583',
         },
       ],

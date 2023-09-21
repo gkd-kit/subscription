@@ -49,10 +49,6 @@ export default defineAppConfig({
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12642584'], // snapshot loading failed
         },
         {
-          matches: '[text="直接关闭"]',
-          // need snapshot
-        },
-        {
           matches: '[text="关闭该广告的原因"] +(2) [text="直接关闭"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12663984'],
         },

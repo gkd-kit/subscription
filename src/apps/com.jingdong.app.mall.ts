@@ -8,10 +8,7 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       activityIds: 'com.jingdong.app.mall.MainFrameActivity',
-      // old version, already ineffective
-      // rules: '[desc$="广告"] +2 [desc="跳过"] > [text="跳过"]',
-      // snapshotUrls: 'https://gkd-kit.gitee.io/import/12519430',
-      rules: 'TextView[text="跳过"]',
+      rules: '[id="com.netease.mobimail:id/ad_skip"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12668289',
     },
     {

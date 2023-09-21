@@ -15,14 +15,15 @@ export default defineAppConfig({
       key: 1,
       name: '开屏广告',
       activityIds: 'com.intsig.camscanner.mainmenu.mainactivity.MainActivity',
-      rules: 'TextView[text*="跳过"]',
+      rules: '[id="com.intsig.camscanner:id/tv_skip_ad"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12668795',
     },
     {
       key: 2,
       name: '主页面上方广告',
       activityIds: 'com.intsig.camscanner.mainmenu.mainactivity.MainActivity',
-      rules: 'TextView[text="广告"] + @ImageView[clickable=true]',
+      rules:
+        '[id="com.intsig.camscanner:id/card_ad_tag"] + [id="com.intsig.camscanner:id/card_close"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12668813',
     },
   ],

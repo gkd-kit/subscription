@@ -11,7 +11,7 @@ export default defineAppConfig({
         'com.gspace.android.ui.activity.SplashActivity',
         'com.gspace.android.util.ShortcutHandleActivity',
       ],
-      rules: 'FrameLayout[clickable=true] > TextView[text*="跳过"]',
+      rules: '[id="com.gspace.android:id/hiad_skip_text"]',
       snapshotUrls: [
         'https://gkd-kit.gitee.io/import/12668986',
         'https://gkd-kit.gitee.io/import/12668985',
