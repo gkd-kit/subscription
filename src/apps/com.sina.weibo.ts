@@ -19,10 +19,17 @@ export default defineAppConfig({
     {
       key: 2,
       name: '关闭不感兴趣广告弹窗',
-      activityIds: 'com.sina.weibo.view.bottomsheet.dialog.',
+      activityIds: [
+        'com.sina.weibo.view.bottomsheet.dialog.',
+        'com.sina.weibo.VisitorMainTabActivity',
+      ],
       rules: {
-        matches: ['[text="为何会看到此广告"]', '[text="不感兴趣"]'],
-      }, // 1688889362832
+        matches: [
+          '[id="com.sina.weibo:id/tv_name"][text="为何会看到此广告"]',
+          '[id="com.sina.weibo:id/tv_name"][text="不感兴趣"]',
+        ],
+        snapshotUrls: 'https://gkd-kit.gitee.io/import/12672985',
+      },
     },
     {
       key: 3,
@@ -45,6 +52,41 @@ export default defineAppConfig({
       snapshotUrls: [
         'https://gkd-kit.songe.li/import/12531433',
         'https://gkd-kit.songe.li/import/12531434',
+      ],
+    },
+    {
+      key: 5,
+      name: '帖子详情底部评论区顶部广告',
+      desc: '点击右上角x',
+      activityIds: 'com.sina.weibo.feed.DetailWeiboActivity',
+      rules: [
+        {
+          matches:
+            '[id="com.sina.weibo:id/left_img_container"] + LinearLayout >2 [id="com.sina.weibo:id/close"][clickable=true]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12673043',
+        },
+        {
+          matches:
+            '[id="com.sina.weibo:id/corner_marker_view"] >2 [id="com.sina.weibo:id/right_top_tag"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12673051',
+        },
+      ],
+    },
+    {
+      key: 6,
+      name: '评论区博主内容推荐',
+      desc: '评论区同一博主其他博文推荐',
+      rules: [
+        {
+          activityIds: ['com.sina.weibo.utils.WeiboDialog$CustomDialog'],
+          matches: 'TextView[text="不感兴趣"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12674511',
+        },
+        {
+          activityIds: ['com.sina.weibo.feed.DetailWeiboActivity'],
+          matches: '[text="推荐"] < [id="com.sina.weibo:id/ll_close"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12674498',
+        },
       ],
     },
   ],
