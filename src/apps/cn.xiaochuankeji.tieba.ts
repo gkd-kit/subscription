@@ -22,6 +22,10 @@ export default defineAppConfig({
             '[text="广告"] - ImageView < ViewGroup - ViewGroup >(2) [text="跳过"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12660984'],
         },
+        {
+          matches: ['[text$="广告"]', '[text^="跳过"]'],
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12699405'],
+        },
       ],
     },
     {
