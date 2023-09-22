@@ -54,7 +54,7 @@ export default defineAppConfig({
             '[id="com.ximalaya.ting.android:id/main_mark_text"] + [id="com.ximalaya.ting.android:id/main_close"][visibleToUser=true]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12506225',
-            'https://gkd-kit.gitee.io/import/12701414',
+            'https://gkd-kit.gitee.io/import/12701414', // 关闭广告后，控件仍然存在但不可见，使用 visibleToUser=true 进行限定，防止关闭之后继续触发规则
           ],
         },
       ],
