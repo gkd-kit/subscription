@@ -122,6 +122,7 @@ export default defineAppConfig({
       ],
     },
     {
+      enable: false,
       key: 20,
       name: '请求开启推送通知弹窗',
       desc: '自动点击“以后再说”',
