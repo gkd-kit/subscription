@@ -5,19 +5,6 @@ export default defineAppConfig({
   name: '云闪付',
   groups: [
     {
-      key: 0,
-      enable: false,
-      name: '开屏广告',
-      desc: '占用KEY。只发生了一次，未截取到快照。后续升级',
-      activityIds: [''],
-      rules: [
-        {
-          matches: '',
-          snapshotUrls: '',
-        },
-      ],
-    },
-    {
       key: 1,
       name: '定位权限悬浮弹窗',
       activityIds: ['com.unionpay.activity.UPActivityMain'],
