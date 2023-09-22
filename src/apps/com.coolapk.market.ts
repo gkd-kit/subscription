@@ -72,7 +72,9 @@ export default defineAppConfig({
         },
         {
           key: 1,
-          matches: ['[id="com.coolapk.market:id/close_view"][desc="关闭"]'],
+          matches: [
+            '[id="com.coolapk.market:id/top_text_view"] + [id="com.coolapk.market:id/close_view"][desc="关闭"]',
+          ],
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12642094',
             'https://gkd-kit.gitee.io/import/12642148',
