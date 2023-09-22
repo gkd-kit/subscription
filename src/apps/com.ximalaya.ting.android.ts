@@ -50,8 +50,12 @@ export default defineAppConfig({
         },
         {
           activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
-          matches: '[id="com.ximalaya.ting.android:id/main_close"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12506225',
+          matches:
+            '[id="com.ximalaya.ting.android:id/main_mark_text"] + [id="com.ximalaya.ting.android:id/main_close"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12506225',
+            'https://gkd-kit.gitee.io/import/12701414',
+          ],
         },
       ],
     },
@@ -84,6 +88,12 @@ export default defineAppConfig({
           activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
           matches: '[id="com.ximalaya.ting.android:id/xm_ad_close_real"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12506253',
+        },
+        {
+          activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
+          matches:
+            '[id="com.ximalaya.ting.android:id/main_ad_dynamic_lay"] >(4) ImageView + ImageView',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12701374',
         },
       ],
     },
