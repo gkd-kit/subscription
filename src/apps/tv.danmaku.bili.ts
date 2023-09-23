@@ -8,7 +8,6 @@ export default defineAppConfig({
       key: -1,
       name: '开屏广告',
       desc: '开屏广告,切回APP开屏广告',
-      activityIds: 'tv.danmaku.bili.MainActivityV2',
       rules: '[id="tv.danmaku.bili:id/count_down"][text^="跳过"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12705270',
     },
