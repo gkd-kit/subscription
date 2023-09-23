@@ -14,6 +14,14 @@ export default defineAppConfig({
     },
     {
       key: 1,
+      name: '更新弹窗',
+      activityIds: 'com.zhaopin.social',
+      rules:
+        '[id="com.zhaopin.social:id/update"] + [id="com.zhaopin.social:id/ignore"]',
+      snapshotUrls: ['https://gkd-kit.gitee.io/import/12706186'],
+    },
+    {
+      key: 2,
       name: '我的页面-banner广告',
       activityIds: 'com.zhaopin.social.homepage.ZSC_MainTabActivity',
       rules: '[id="com.zhaopin.social:id/rl_banner_close"][clickable=true]',
