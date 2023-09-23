@@ -15,7 +15,7 @@ export default defineAppConfig({
     {
       key: 1,
       name: '更新弹窗',
-      activityIds: 'com.zhaopin.social',
+      activityIds: 'com.zhaopin.social.my.setting.AboutUsActivity',
       rules:
         '[id="com.zhaopin.social:id/update"] + [id="com.zhaopin.social:id/ignore"]',
       snapshotUrls: ['https://gkd-kit.gitee.io/import/12706186'],
