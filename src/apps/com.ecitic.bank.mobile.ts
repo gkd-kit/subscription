@@ -8,8 +8,7 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       activityIds: ['com.ecitic.bank.mobile.ui.SplashActivity'],
-      rules:
-        '@[text="跳过"] + [id="com.ecitic.bank.mobile:id/tv_countdownTime"]',
+      rules: '[id="com.ecitic.bank.mobile:id/skip_adv_layout"]',
       snapshotUrls: ['https://gkd-kit.gitee.io/import/12701203'],
     },
     {
