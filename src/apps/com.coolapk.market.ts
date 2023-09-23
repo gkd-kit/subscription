@@ -34,9 +34,9 @@ export default defineAppConfig({
             'com.coolapk.market.view.node.DynamicNodePageActivity',
           ],
           snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/38517192/9badc07c-4da2-4066-8af5-d96a86a28315', // github.com/Network request onerror failed，链接似乎失效了？
+            'https://gkd-kit.gitee.io/import/38517192/9badc07c-4da2-4066-8af5-d96a86a28315',
             'https://gkd-kit.gitee.io/import/12655713',
-            'https://gkd-kit.gitee.io/import/12660759', // github.com/Network request onerror failed，链接似乎失效了？
+            'https://gkd-kit.gitee.io/import/12660759',
           ],
           matches: ['[id$="id/tt_item_tv"][text=`不感兴趣`]'],
         },
