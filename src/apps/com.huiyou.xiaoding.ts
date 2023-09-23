@@ -10,15 +10,16 @@ export default defineAppConfig({
       activityIds: ['com.huiyou.xiaoding.launcher.LauncherActivity'],
       rules: [
         {
-          matches: '[id$="ksad_splash_circle_skip_view"]',
+          matches: '[id="com.huiyou.xiaoding:id/ksad_splash_circle_skip_view"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12699825'],
         },
         {
-          matches: '[id$="skip_parent_view"]',
+          matches: '[id="com.huiyou.xiaoding:id/skip_parent_view"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12699822'],
         },
         {
-          matches: '[name="android.widget.TextView"]',
+          matches:
+            '[id="com.huiyou.xiaoding:id/id_splash_container"] TextView[text^="跳过"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12699790'],
         },
       ],
