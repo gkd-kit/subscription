@@ -12,8 +12,8 @@ devDependencies:
     specifier: ^17.7.0
     version: 17.7.0
   '@gkd-kit/selector':
-    specifier: 0.0.12
-    version: 0.0.12
+    specifier: 0.0.13
+    version: 0.0.13
   '@types/lodash':
     specifier: ^4.14.195
     version: 4.14.195
@@ -50,6 +50,9 @@ devDependencies:
   picocolors:
     specifier: ^1.0.0
     version: 1.0.0
+  pinyin-pro:
+    specifier: 3.16.6
+    version: 3.16.6
   prettier:
     specifier: ^3.0.1
     version: 3.0.1
@@ -523,8 +526,8 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@gkd-kit/selector@0.0.12:
-    resolution: {integrity: sha512-gxA1uMBpbppLAcAng2g/GQwAud3tJFB/osYDYlrpQ2LwgBF7EkxfD0mDtgdHhfoQZpciA4XcdR+RXrYs9BacZw==}
+  /@gkd-kit/selector@0.0.13:
+    resolution: {integrity: sha512-68N9nZYz6clHaYFazJUip5Hvgb77FDiT7ZHxMhnOcjeyIWeBLmKVqxHQADbOAU+KErvpogtLCX6hDWZpEzY6LQ==}
     dev: true
 
   /@humanwhocodes/config-array@0.11.11:
@@ -2107,6 +2110,10 @@ packages:
     resolution: {integrity: sha512-eG2dWTVw5bzqGRztnHExczNxt5VGsE6OwTeCG3fdUf9KBsZzO3R5OIIIzWR+iZA0NtZ+RDVdaoE2dK1cn6jH4g==}
     engines: {node: '>=0.10'}
     hasBin: true
+    dev: true
+
+  /pinyin-pro@3.16.6:
+    resolution: {integrity: sha512-l4W4c/K49kj33P5JwpAHkkN/rlxeOwQ07bLhMg8kJVIsdxD3Cpa3aIBF1PKUPt3rxbebawmBoeR1x8VgZmFO5w==}
     dev: true
 
   /prelude-ls@1.2.1:
