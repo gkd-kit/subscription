@@ -67,7 +67,7 @@ export default defineAppConfig({
         {
           name: '点击屏蔽广告原因',
           matches:
-            '[id="tv.danmaku.bili:id/dislike_reasons"] >2 [id="tv.danmaku.bili:id/reason1_layout"]',
+            '[id="tv.danmaku.bili:id/menu_text"][text="屏蔽广告"] < [id="tv.danmaku.bili:id/title"] + [id="tv.danmaku.bili:id/dislike_reasons"] >2 [id="tv.danmaku.bili:id/reason1_layout"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12642261',
         },
         {
