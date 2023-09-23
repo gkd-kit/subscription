@@ -36,7 +36,8 @@ export default defineAppConfig({
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12655805'],
         },
         {
-          matches: 'LinearLayout + FrameLayout > ImageView[id=null]',
+          matches:
+            'TextView[text!=null] - ImageView < LinearLayout[childCount=2] + FrameLayout[childCount=1] > ImageView[id=null]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12706140'],
         },
       ],
