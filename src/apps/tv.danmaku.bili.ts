@@ -26,11 +26,19 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      name: '动态推荐卡片',
+      name: '动态推荐广告卡片',
+      desc: '点击卡片右上角[广告]按钮-点击不感兴趣',
+      activityIds: 'tv.danmaku.bili.MainActivityV2',
       rules: [
         {
-          activityIds: 'tv.danmaku.bili.MainActivityV2',
+          key: 1,
           matches: '[id=`tv.danmaku.bili:id/ad_goods_mark_big`]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12700222',
+        },
+        {
+          preKeys: 1,
+          matches: '[id^="tv.danmaku.bili:id/reason"][text="不感兴趣"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12700243',
         },
       ],
     },
@@ -73,6 +81,15 @@ export default defineAppConfig({
       name: '推荐页-可跳过广告',
       activityIds: 'tv.danmaku.bili.MainActivityV2',
       rules: ['[id=`tv.danmaku.bili:id/click_skip`]'],
+    },
+    {
+      key: 6,
+      name: '更新弹窗',
+      activityIds: 'com.bilibili.app.preferences.BiliPreferencesActivity',
+      rules: [
+        '[id="tv.danmaku.bili:id/update_btn_confirm"] + [id="tv.danmaku.bili:id/update_btn_cancel"]',
+      ],
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12649689',
     },
   ],
 });
