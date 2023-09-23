@@ -11,7 +11,7 @@ export default defineAppConfig({
         'com.netease.cloudmusic.activity.MainActivity',
         'com.netease.cloudmusic.activity.LoadingActivity',
       ],
-      rules: 'TextView[text^="跳过"][id="com.netease.cloudmusic:id/skipBtn"]',
+      rules: '[id="com.netease.cloudmusic:id/skipBtn"]',
       snapshotUrls: ['https://gkd-kit.gitee.io/import/12700920'],
     },
     {
