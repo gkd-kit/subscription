@@ -117,7 +117,7 @@ export default defineAppConfig({
     },
     {
       enable: false,
-      key: 9,
+      key: 10,
       name: '请求开启通知提示信息',
       desc: '自动点击x按钮',
       activityIds: ['com.sina.weibo.MainTabActivity'],
