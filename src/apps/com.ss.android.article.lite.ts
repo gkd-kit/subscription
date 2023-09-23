@@ -13,11 +13,11 @@ export default defineAppConfig({
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12705414',
     },
     {
-      enable: true,
       key: 11,
       name: '首页-右侧悬浮广告',
       activityIds: 'com.ss.android.article.lite.activity.SplashActivity',
-      rules: 'FrameLayout > @ImageView[clickable=true] + ImageView',
+      rules:
+        'FrameLayout[id!=null] > @ImageView[id!=null][clickable=true] + ImageView[id!=null]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12705452',
     },
     {
