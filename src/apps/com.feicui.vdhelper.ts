@@ -34,11 +34,6 @@ export default defineAppConfig({
         },
         {
           activityIds: ['com.sigmob.sdk.base.common.TransparentAdActivity'],
-          matches: '[id="close_btn"][text="跳过"]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12700837'],
-        },
-        {
-          activityIds: ['com.sigmob.sdk.base.common.TransparentAdActivity'],
           matches: '[id="close_btn"][clickable=true]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12700837',
