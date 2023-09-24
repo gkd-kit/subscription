@@ -1,7 +1,7 @@
 {
   "name": "@gkd-kit/subscription",
   "type": "module",
-  "version": "1.37.0",
+  "version": "1.40.2",
   "main": "./dist/gkd.json",
   "unpkg": "./dist/gkd.json",
   "jsdelivr": "./dist/gkd.json",
@@ -22,7 +22,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
-    "@gkd-kit/selector": "0.0.12",
+    "@gkd-kit/selector": "0.0.13",
     "@types/lodash": "^4.14.195",
     "@types/node": "^20.4.2",
     "@typescript-eslint/eslint-plugin": "6.5.0",
@@ -35,6 +35,7 @@
     "lint-staged": "^14.0.1",
     "lodash": "^4.17.21",
     "picocolors": "^1.0.0",
+    "pinyin-pro": "3.16.6",
     "prettier": "^3.0.1",
     "tsx": "^3.12.7",
     "typescript": "^5.1.6",
