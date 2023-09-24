@@ -191,9 +191,12 @@ export default defineAppConfig({
       activityIds:
         'com.zhihu.android.mixshortcontainer.MixShortContainerActivity',
       rules: [
-        'ImageView[id="com.zhihu.android:id/iv_expand"] - TextView[id="com.zhihu.android:id/tv_expand"][text="展开"]',
+        'ImageView[id="com.zhihu.android:id/iv_expand"] - TextView[id="com.zhihu.android:id/tv_expand"][text="展开"][visibleToUser=true]',
       ],
-      snapshotUrls: ['https://gkd-kit.gitee.io/import/12647688'],
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/12647688',
+        'https://gkd-kit.gitee.io/import/12707687', // 使用 [visibleToUser=true] 进行限定，防止在控件不可见时提前触发规则
+      ],
     },
   ],
 });
