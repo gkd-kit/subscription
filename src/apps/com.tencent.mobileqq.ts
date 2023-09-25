@@ -52,7 +52,8 @@ export default defineAppConfig({
         {
           name: '右侧悬浮广告',
           activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
-          matches: '@View[id!=null] - FrameLayout[id!=null] >n FrameLayout',
+          matches:
+            'FrameLayout[desc="发表帖子"] - LinearLayout[id!=null] >3 ImageView[id!=null][clickable=false] - View[id!=null][clickable=true]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12708844',
         },
       ],
