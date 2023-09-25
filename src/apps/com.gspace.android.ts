@@ -28,7 +28,7 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      name: 'Youtube跳过广告按钮',
+      name: 'Youtube播放视频跳过广告',
       // activityIds: 'com.huawei.openalliance.ad.ppskit.activity.InnerPPSInterstitialAdActivity',
       // 我不清楚，上面的activityIds是否与系统有关
       rules: '[id="com.google.android.youtube:id/skip_ad_button"]',
