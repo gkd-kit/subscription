@@ -116,7 +116,7 @@ export default defineAppConfig({
     {
       key: 6,
       name: '订阅号文章广告',
-      desc: '自动点击反馈按钮->不感兴趣，必须同时启用【订阅号文章广告反馈】规则',
+      desc: '自动点击关闭按钮，必须同时启用【订阅号文章广告反馈】规则',
       activityIds:
         'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebViewMMUI',
       rules: [
@@ -164,7 +164,7 @@ export default defineAppConfig({
     {
       key: 8,
       name: '订阅号文章广告反馈',
-      desc: '自动点击反馈理由',
+      desc: '自动点击反馈理由，配合【订阅号文章广告】规则使用',
       activityIds:
         'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebViewMMUI',
       rules: [
