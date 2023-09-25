@@ -39,11 +39,46 @@ export default defineAppConfig({
     },
     {
       key: 3,
-      name: '频道页面-广告弹窗',
-      activityIds:
-        'com.tencent.qqlive.module.videoreport.inject.dialog.ReportDialog',
-      rules: ['ImageView[id="com.tencent.mobileqq:id/close"][clickable=true]'],
-      snapshotUrls: ['https://gkd-kit.gitee.io/import/12642081'],
+      name: '频道页面广告',
+      rules: [
+        {
+          name: '弹窗广告',
+          activityIds:
+            'com.tencent.qqlive.module.videoreport.inject.dialog.ReportDialog',
+          matches:
+            'ImageView[id="com.tencent.mobileqq:id/close"][clickable=true]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12642081',
+        },
+        {
+          name: '右侧悬浮广告',
+          activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
+          matches:
+            'FrameLayout[desc="发表帖子"] - LinearLayout[id!=null] >3 ImageView[id!=null][clickable=false] - View[id!=null][clickable=true]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12708844',
+        },
+      ],
+    },
+    {
+      enable: false,
+      key: 4,
+      name: '新人专享1元购SVIP',
+      desc: '消息界面-搜索框和消息记录直接的广告卡片,点击关闭右侧x',
+      activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
+      rules:
+        '@ImageView[id!=null][clickable=true] -2 TextView[id!=null][text^="新人专享1元购SVIP"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12706907',
+    },
+    {
+      enable: false,
+      key: 10,
+      name: '自动勾选原图',
+      desc: '发送图片时自动勾选原图',
+      activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
+      rules: ['@CheckBox[checked=false] + [text="原图"]'],
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/12705556', // 未勾选原图
+        'https://gkd-kit.gitee.io/import/12705559', // 已勾选原图
+      ],
     },
   ],
 });

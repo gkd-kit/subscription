@@ -125,7 +125,7 @@ export default defineAppConfig({
           key: 1,
           name: '点击广告反馈按钮',
           matches:
-            'View[childCount=1] >(5) [text="广告"] + [text="feedback_icon"][visibleToUser=true]',
+            'View[childCount=1] >(4) @[id="feedbackTagContainer"][visibleToUser=true] > [id=null][text="广告"]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12642232',
             'https://gkd-kit.gitee.io/import/12646837', // key: 3 事件完成后，反馈按钮仍然存在，使用 View[childCount=1] 进行限定，防止频繁触发规则
@@ -164,6 +164,38 @@ export default defineAppConfig({
           ],
         },
       ],
+    },
+    {
+      key: 8,
+      name: '订阅号文章中间广告',
+      desc: '自动点击-关闭此广告',
+      activityIds:
+        'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebViewMMUI',
+      rules: [
+        {
+          key: 1,
+          matches:
+            'View[childCount=1] > @[id="feedbackTagContainer"][visibleToUser=true] > [id="feedbackTag"]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12700183',
+            'https://gkd-kit.gitee.io/import/12701503', // 事件完成后，采用[childCount=1]进行限定，防止频繁触发规则
+          ],
+        },
+        {
+          key: 2,
+          matches: 'TextView[id="closeBtn"][text="关闭此广告"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12700191',
+        },
+      ],
+    },
+    {
+      enable: false,
+      key: 9,
+      name: '自动查看原图',
+      desc: '自动点击底部左侧[查看原图（*M）]按钮',
+      activityIds: 'com.tencent.mm.ui.chatting.gallery.ImageGalleryUI',
+      rules: 'Button[text^="查看原图"][clickable=true]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12706944',
     },
   ],
 });
