@@ -70,6 +70,25 @@ export default defineAppConfig({
     },
     {
       enable: false,
+      key: 5,
+      name: '好友热播',
+      desc: '好友动态中的好友热播，自动选择“减少好友热播” - 默认关闭',
+      activityIds: 'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
+      rules: [
+        {
+          matches:
+            'TextView[text="好友热播"] + Button[id="com.tencent.mobileqq.qzone_df_impl:id/jcw"][clickable=true]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12721427',
+        },
+        {
+          matches:
+            'TextView[text="减少好友热播"] <2 LinearLayout < LinearLayout[id="com.tencent.mobileqq.qzone_df_impl:id/gwl"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12721433',
+        },
+      ],
+    },
+    {
+      enable: false,
       key: 10,
       name: '自动勾选原图',
       desc: '发送图片时自动勾选原图',
