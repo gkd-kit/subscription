@@ -38,7 +38,7 @@ export default defineAppConfig({
     },
     {
       key: 4,
-      name: '开屏广告弹窗',
+      name: '首页活动弹窗',
       activityIds: 'me.ele.component.pops2.Pops2MistDialog',
       rules:
         '[id="me.ele:id/id_magex_mistview"] > ImageView + ImageView[id=null][clickable=true]',
