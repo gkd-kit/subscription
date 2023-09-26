@@ -13,10 +13,16 @@ export default defineAppConfig({
     {
       key: 1,
       name: '版本更新弹窗',
-      activityIds: 'com.meituan.android.upgrade.ui.',
+      activityIds: [
+        'com.meituan.android.upgrade.ui.',
+        'com.meituan.android.upgrade.UpgradeDialogActivity',
+      ],
       rules:
         'TextView[text^=`新版本`] - Button[id=`com.sankuai.meituan:id/btn_close`]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12614559',
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/12614559',
+        'https://gkd-kit.gitee.io/import/12673132',
+      ],
     },
     {
       enable: false,
@@ -45,6 +51,14 @@ export default defineAppConfig({
         'https://gkd-kit.gitee.io/import/12639815',
         'https://gkd-kit.gitee.io/import/12639734',
       ],
+    },
+    {
+      key: 5,
+      name: '美团买菜-支付成功后-红包弹窗',
+      desc: '美团买菜-支付成功后-关闭红包弹窗',
+      activityIds: 'com.meituan.retail.c.android.mrn.mrn.MallMrnModal',
+      rules: 'TextView[text="恭喜你获得以下权益"] + ViewGroup > ImageView',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12646768',
     },
   ],
 });
