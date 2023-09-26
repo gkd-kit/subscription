@@ -124,7 +124,7 @@ export default defineAppConfig({
           key: 1,
           name: '广告类型1',
           matches:
-            'View[id="ad_container"] > View[childCount=1] >n [id=null][text^="广告"][visibleToUser=true]',
+            'View[id="ad_container"] > View[childCount=1] >n @View > [id=null][text^="广告"][visibleToUser=true]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12642232',
             'https://gkd-kit.gitee.io/import/12646837', // 事件完成后，反馈按钮仍然存在，使用 View[childCount=1] 进行限定，防止频繁触发规则
