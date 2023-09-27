@@ -2,7 +2,7 @@ import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
   id: 'com.jingyao.easybike',
-  name: '哈啰出行',
+  name: '哈啰',
   groups: [
     // 预留 key 0-9
     {
