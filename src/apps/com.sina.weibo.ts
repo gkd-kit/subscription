@@ -145,7 +145,7 @@ export default defineAppConfig({
     },
     {
       enable: false,
-      key: 12,
+      key: 13,
       name: '右下角刷微博领现金悬浮广告',
       desc: '自动点击x按钮',
       activityIds: ['com.sina.weibo.MainTabActivity'],
