@@ -13,6 +13,21 @@ export default defineAppConfig({
           matches: '[text^="跳过"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12648511',
         },
+        {
+          matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12747314',
+        },
+      ],
+    },
+    {
+      key: 2,
+      name: '开屏广告-跳过按钮',
+      activityIds: 'make.more.r2d2.cellular_z.activity.SplashGMActivity',
+      rules: [
+        {
+          matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12747314',
+        },
       ],
     },
   ],
