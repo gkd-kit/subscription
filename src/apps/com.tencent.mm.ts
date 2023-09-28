@@ -180,6 +180,7 @@ export default defineAppConfig({
             'https://gkd-kit.gitee.io/import/12722301',
             'https://gkd-kit.gitee.io/import/12722331', // 使用 [id="feedbackTagContainer"][visibleToUser=true] 进行限定，防止反馈界面未出现就触发规则
           ],
+          action: 'clickCenter', // 使用 clickCenter 事件点击，期望在快照 https://gkd-kit.gitee.io/import/12745280 中成功点击 [与我无关]
         },
         {
           key: 2,
