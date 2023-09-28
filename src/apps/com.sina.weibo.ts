@@ -135,5 +135,13 @@ export default defineAppConfig({
         '[id="com.sina.weibo:id/ll_check_in_container"] < FrameLayout - FrameLayout > TextView + [id="com.sina.weibo:id/v_close"]',
       snapshotUrls: ['https://gkd-kit.songe.li/import/12749876'],
     },
+    {
+      key: 12,
+      name: '首页广告弹窗',
+      activityIds: ['com.sina.weibo.business'],
+      rules:
+        '@[id="com.sina.weibo:id/btn_close"] - FrameLayout > [id="com.sina.weibo:id/ad_tag"]',
+      snapshotUrls: ['https://gkd-kit.songe.li/import/12750090'],
+    },
   ],
 });
