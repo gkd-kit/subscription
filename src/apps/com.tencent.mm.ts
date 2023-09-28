@@ -114,37 +114,34 @@ export default defineAppConfig({
       ],
     },
     {
-      enable: false,
       key: 6,
-      name: '订阅号文章底部广告',
-      desc: '自动点击-广告反馈按钮-不感兴趣-与我无关',
+      name: '订阅号文章广告',
+      desc: '自动点击关闭按钮，必须同时启用【订阅号文章广告反馈】规则',
       activityIds:
         'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebViewMMUI',
       rules: [
         {
           key: 1,
-          name: '点击广告反馈按钮',
+          name: '广告类型1',
           matches:
-            'View[childCount=1] >(5) [text="广告"] + [text="feedback_icon"][visibleToUser=true]',
+            'View[id="ad_container"] > View[childCount=1] >n @View > [id=null][text^="广告"][visibleToUser=true]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12642232',
-            'https://gkd-kit.gitee.io/import/12646837', // key: 3 事件完成后，反馈按钮仍然存在，使用 View[childCount=1] 进行限定，防止频繁触发规则
+            'https://gkd-kit.gitee.io/import/12646837', // 事件完成后，反馈按钮仍然存在，使用 View[childCount=1] 进行限定，防止频繁触发规则
             'https://gkd-kit.gitee.io/import/12678937', // 文章未浏览至页面底部，广告反馈按钮不可见，使用 [visibleToUser=true] 进行限定，防止打开文章就频繁触发规则
+            'https://gkd-kit.gitee.io/import/12714427', // 优化规则，使用 View[id="ad_container"] 作为特征节点
           ],
         },
         {
           key: 2,
-          preKeys: [1],
-          name: '点击不感兴趣',
-          matches: '[id^="menu"] > [id="dislike"][text="不感兴趣"]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12642234'],
-        },
-        {
-          key: 3,
-          preKeys: [2],
-          name: '点击与我无关',
-          matches: '[id^="menu"] > [id="isdismatch"][text="与我无关"]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12642238'],
+          name: '广告类型2',
+          matches:
+            'View[childCount=1] > @[id="feedbackTagContainer"][visibleToUser=true] > [id="feedbackTag"]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12700183',
+            'https://gkd-kit.gitee.io/import/12701503', // 事件完成后，采用[childCount=1]进行限定，防止频繁触发规则
+            'https://gkd-kit.gitee.io/import/12714424',
+          ],
         },
       ],
     },
@@ -164,6 +161,49 @@ export default defineAppConfig({
           ],
         },
       ],
+    },
+    {
+      key: 8,
+      name: '订阅号文章广告反馈',
+      desc: '自动点击反馈理由，配合【订阅号文章广告】规则使用',
+      activityIds:
+        'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebViewMMUI',
+      rules: [
+        {
+          key: 1,
+          // preKeys: [1], 取消 preKeys 提高点击成功率
+          name: '点击不感兴趣',
+          matches:
+            '[id="feedbackTagContainer"][visibleToUser=true] + [id^="menu"] > [id="dislike"][text="不感兴趣"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12642234',
+            'https://gkd-kit.gitee.io/import/12722301',
+            'https://gkd-kit.gitee.io/import/12722331', // 使用 [id="feedbackTagContainer"][visibleToUser=true] 进行限定，防止反馈界面未出现就触发规则
+          ],
+        },
+        {
+          key: 2,
+          // preKeys: [2], 取消 preKeys 提高点击成功率
+          name: '点击与我无关',
+          matches: '[id^="menu"] > [id="isdismatch"][text="与我无关"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12642238'],
+        },
+        {
+          key: 3,
+          name: '点击关闭此广告',
+          matches: 'TextView[id="closeBtn"][text="关闭此广告"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12700191',
+        },
+      ],
+    },
+    {
+      enable: false,
+      key: 9,
+      name: '自动查看原图',
+      desc: '自动点击底部左侧[查看原图（*M）]按钮',
+      activityIds: 'com.tencent.mm.ui.chatting.gallery.ImageGalleryUI',
+      rules: 'Button[text^="查看原图"][clickable=true]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12706944',
     },
   ],
 });
