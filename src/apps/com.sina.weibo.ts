@@ -143,5 +143,15 @@ export default defineAppConfig({
         '@[id="com.sina.weibo:id/btn_close"] - FrameLayout > [id="com.sina.weibo:id/ad_tag"]',
       snapshotUrls: ['https://gkd-kit.songe.li/import/12750090'],
     },
+    {
+      enable: false,
+      key: 12,
+      name: '右下角刷微博领现金悬浮广告',
+      desc: '自动点击x按钮',
+      activityIds: ['com.sina.weibo.MainTabActivity'],
+      rules:
+        '[id="com.sina.weibo:id/floating_window"] >2 [id="com.sina.weibo:id/close"]',
+      snapshotUrls: ['https://gkd-kit.songe.li/import/12750118'],
+    },
   ],
 });
