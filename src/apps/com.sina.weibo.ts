@@ -125,5 +125,15 @@ export default defineAppConfig({
         '[text^="打开通知"] < LinearLayout + ImageView[id="com.sina.weibo:id/right_icon"]',
       snapshotUrls: ['https://gkd-kit.gitee.io/import/12705986'],
     },
+    {
+      enable: false,
+      key: 11,
+      name: '首页顶部签到卡片',
+      desc: '自动点击x按钮',
+      activityIds: ['com.sina.weibo.MainTabActivity'],
+      rules:
+        '[id="com.sina.weibo:id/ll_check_in_container"] < FrameLayout - FrameLayout > TextView + [id="com.sina.weibo:id/v_close"]',
+      snapshotUrls: ['https://gkd-kit.songe.li/import/12749876'],
+    },
   ],
 });
