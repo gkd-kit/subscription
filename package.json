@@ -1,7 +1,7 @@
 {
   "name": "@gkd-kit/subscription",
   "type": "module",
-  "version": "1.47.0",
+  "version": "1.50.0",
   "main": "./dist/gkd.json",
   "unpkg": "./dist/gkd.json",
   "jsdelivr": "./dist/gkd.json",
@@ -17,7 +17,8 @@
     "format": "prettier --cache --write .",
     "lint": "eslint --cache --fix ./**/*.{js,ts,jsx,tsx}",
     "build": "tsc --noEmit && tsx ./scripts/build.ts",
-    "check": "tsc --noEmit && tsx ./scripts/check.ts"
+    "check": "tsc --noEmit && tsx ./scripts/check.ts",
+    "updateSubs": "tsx ./scripts/updateSubs.ts"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
