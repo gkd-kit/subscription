@@ -49,17 +49,19 @@ export default defineAppConfig({
       enable: false,
       key: 11,
       name: '竖屏视频广告',
-      desc: '点击右上角[更多]图标按钮,出现菜单,点击不感兴趣',
+      desc: '检测到广告时，点击右上角[更多]图标按钮,出现菜单,点击不感兴趣',
       activityIds: 'com.ss.android.ugc.detail.activity.TikTokActivity',
       rules: [
         {
           key: 0,
           name: '点击右上角[更多]图标按钮',
           matches:
-            '@ImageView[clickable=true][desc="更多"] <3 RelativeLayout -2 RelativeLayout >4 LynxFlattenUI[text="头条优惠券无门槛全平台通用"]',
+            '@ImageView[clickable=true][desc="更多"] <n RelativeLayout -2 RelativeLayout >4 LynxFlattenUI[text*="头条优惠券"]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12679280',
             'https://gkd-kit.gitee.io/import/12733282',
+            'https://gkd-kit.gitee.io/import/12763251',
+            'https://gkd-kit.gitee.io/import/12763252',
           ],
         },
         {
