@@ -14,6 +14,12 @@ export default defineAppConfig({
             '[id="android:id/tabhost"] >(3) [text="跳过广告"][clickable=true]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12684954'],
         },
+        {
+          key: 1,
+          name: '开屏广告',
+          matches: 'FrameLayout[desc*=\'广告\']',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12754759'],
+        },
       ],
     },
     {
