@@ -101,5 +101,30 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      enable: false,
+      key: 13,
+      name: '信息流-抖音直播广告',
+      desc: '点击右上角x按钮,点击不感兴趣',
+      activityIds: 'com.ss.android.article.news.activity.MainActivity',
+      rules: [
+        {
+          name: '点击右上角x按钮',
+          key: 0,
+          matches:
+            'LynxFlattenUI[text*="来自抖音"][text.length=6] -n UIView[desc="不感兴趣"][clickable=true]',
+          action: 'clickCenter',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12755264',
+        },
+        {
+          name: '点击不感兴趣',
+          preKeys: 0,
+          matches:
+            '@ViewGroup[clickable=true] > ImageView + TextView[text="不感兴趣"]',
+          action: 'clickCenter',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12755265',
+        },
+      ],
+    },
   ],
 });
