@@ -13,10 +13,16 @@ export default defineAppConfig({
     {
       key: 1,
       name: '版本更新弹窗',
-      activityIds: 'com.meituan.android.upgrade.ui.',
+      activityIds: [
+        'com.meituan.android.upgrade.ui.',
+        'com.meituan.android.upgrade.UpgradeDialogActivity',
+      ],
       rules:
         'TextView[text^=`新版本`] - Button[id=`com.sankuai.meituan:id/btn_close`]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12614559',
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/12614559',
+        'https://gkd-kit.gitee.io/import/12673132',
+      ],
     },
     {
       enable: false,
@@ -53,6 +59,20 @@ export default defineAppConfig({
       activityIds: 'com.meituan.retail.c.android.mrn.mrn.MallMrnModal',
       rules: 'TextView[text="恭喜你获得以下权益"] + ViewGroup > ImageView',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12646768',
+    },
+    {
+      key: 6,
+      name: '美团骑行-广告、优惠券弹窗',
+      rules: [
+        {
+          key: 0,
+          name: '骑行卡福利大派送弹窗',
+          activityIds: 'com.meituan.mmp.lib.HeraActivity',
+          matches:
+            'View[childCount=3] > View + TextView + TextView[text=""][visibleToUser=true]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12739204',
+        },
+      ],
     },
   ],
 });

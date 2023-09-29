@@ -8,8 +8,12 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       activityIds: 'com.jingdong.app.mall.MainFrameActivity',
-      rules: '[desc$="广告"] +2 [desc="跳过"] > [text="跳过"]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12519430',
+      rules:
+        'RelativeLayout[desc="跳过"][id!=null] > TextView[text="跳过"][id!=null]',
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/12668289',
+        'https://gkd-kit.gitee.io/import/12519430',
+      ],
     },
     {
       enable: false,
@@ -25,7 +29,7 @@ export default defineAppConfig({
       name: '我的界面-参与调研',
       activityIds: 'com.jingdong.app.mall.MainFrameActivity',
       rules:
-        'RelativeLayout > ImageView[text=null][id^="com.jd.lib.personal.feature:id"] + ImageView[text=null][id^="com.jd.lib.personal.feature:id"]',
+        'FrameLayout + RelativeLayout > RelativeLayout > ImageView + ImageView[visibleToUser=true]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12642270',
     },
   ],
