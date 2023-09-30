@@ -188,12 +188,8 @@ export default defineAppConfig({
           key: 2,
           // preKeys: [2], 取消 preKeys 提高点击成功率
           name: '点击与我无关',
-          matches:
-            'View[clickable=true] > [id^="menu"] > [id="isdismatch"][text="与我无关"]',
-          snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/12642238',
-            'https://gkd-kit.gitee.io/import/12745169', // 使用 View[clickable=true] 进行限定，防止点击之后继续触发规则
-          ],
+          matches: 'View > [id^="menu"] > [id="isdismatch"][text="与我无关"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12642238'],
         },
         {
           key: 3,
