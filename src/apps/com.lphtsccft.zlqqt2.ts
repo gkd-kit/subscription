@@ -2,7 +2,7 @@ import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
   id: 'com.lphtsccft.zlqqt2',
-  name: '漲樂全球通',
+  name: '涨乐全球通',
   groups: [
     {
       key: 0,
