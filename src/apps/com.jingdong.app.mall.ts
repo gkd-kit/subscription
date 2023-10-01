@@ -35,5 +35,18 @@ export default defineAppConfig({
         'https://gkd-kit.songe.li/import/12774910', // 使用 [desc!="返回"] 进行限定，防止在进入商品详情页时点击返回按钮
       ],
     },
+    {
+      enable: false,
+      key: 3,
+      name: '浮层广告',
+      activityIds: 'com.jingdong.app.mall.MainFrameActivity',
+      rules: [
+        {
+          key: 0,
+          matches: '@[desc^="关闭浮层"] + [desc="浮层活动"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12740073',
+        },
+      ],
+    },
   ],
 });
