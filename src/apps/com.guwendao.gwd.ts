@@ -22,6 +22,14 @@ export default defineAppConfig({
           matches: 'ImageView - FrameLayout > FrameLayout > ImageView[id=null]',
           snapshotUrls: 'https://gkd-kit.songe.li/import/12776607',
         },
+        {
+          activityIds:
+            'com.android.systemui.media.MediaProjectionPermissionActivity', // 疑似设置权限后activityId更新不及时产生的bug
+          key: 1,
+          matches:
+            'ImageView - LinearLayout - FrameLayout > FrameLayout > ImageView[id=null]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12777151',
+        },
       ],
     },
   ],
