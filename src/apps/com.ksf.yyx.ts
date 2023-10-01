@@ -1,3 +1,11 @@
+/*
+ * @Author: shjdgwj 1018996814@qq.com
+ * @Date: 2023-09-30 23:00:38
+ * @LastEditors: shjdgwj 1018996814@qq.com
+ * @LastEditTime: 2023-10-01 17:24:13
+ * @FilePath: \gkd_subscription\src\apps\com.ksf.yyx.ts
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
@@ -18,6 +26,10 @@ export default defineAppConfig({
           matches: '[text="|"] + ImageView',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12775919'],
         },
+        {
+          matches: '[text *= "跳过"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12775926',
+        },
       ],
     },
     {
@@ -33,8 +45,11 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      name: '插屏广告1',
-      activityIds: ['com.ksf.yyx.MainActivity'],
+      name: '插屏广告',
+      activityIds: [
+        'com.ksf.yyx.MainActivity',
+        'com.sigmob.sdk.base.common.TransparentAdActivity',
+      ],
       rules: [
         {
           action: 'clickCenter',
@@ -42,61 +57,21 @@ export default defineAppConfig({
             'FrameLayout[childCount=5] > FrameLayout[childCount=1] > ImageView',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12775921',
         },
-      ],
-    },
-    {
-      key: 3,
-      name: '插屏广告2',
-      activityIds: ['com.ksf.yyx.MainActivity'],
-      rules: [
         {
           matches: '@ViewGroup [text="跳过"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12775922',
         },
-      ],
-    },
-    {
-      key: 4,
-      name: '插屏广告3',
-      activityIds: ['com.ksf.yyx.MainActivity'],
-      rules: [
         {
-          action: 'clickCenter',
           matches: '@ViewGroup[clickable=true][childCount=1] ImageView',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12775923',
         },
-      ],
-    },
-    {
-      key: 5,
-      name: '插屏广告4',
-      activityIds: ['com.sigmob.sdk.base.common.TransparentAdActivity'],
-      rules: [
         {
           matches: '[text="跳过"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12775924',
         },
-      ],
-    },
-    {
-      key: 6,
-      name: '插屏广告5',
-      activityIds: ['com.sigmob.sdk.base.common.TransparentAdActivity'],
-      rules: [
         {
           matches: '[id="close_btn"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12775925',
-        },
-      ],
-    },
-    {
-      key: 7,
-      name: '开屏广告2',
-      activityIds: ['com.ksf.yyx.MainActivity'],
-      rules: [
-        {
-          matches: '[text *= "跳过"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12775926',
         },
       ],
     },
