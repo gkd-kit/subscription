@@ -1,17 +1,8 @@
-/*
- * @Author: shjdgwj 1018996814@qq.com
- * @Date: 2023-09-30 23:00:38
- * @LastEditors: shjdgwj 1018996814@qq.com
- * @LastEditTime: 2023-10-01 18:11:00
- * @FilePath: \gkd_subscription\src\apps\com.ksf.yyx.ts
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- */
 import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
   id: 'com.ksf.yyx',
   name: 'OMOFUN',
-
   groups: [
     {
       key: 0,
@@ -23,11 +14,13 @@ export default defineAppConfig({
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12775918',
         },
         {
-          matches: '[text="|"] + ImageView',
+          matches:
+            '[id="com.ksf.yyx:id/ksad_splash_root_container"] [childCount=3] > @ImageView[clickable=true] - [text="|"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12775919'],
         },
         {
-          matches: '[text *= "跳过"]',
+          matches:
+            'FrameLayout > FrameLayout > [text^="跳过 "][text.length<=4][clickable=true]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12775926',
         },
       ],
@@ -38,7 +31,7 @@ export default defineAppConfig({
       activityIds: ['com.ksf.yyx.MainActivity'],
       rules: [
         {
-          matches: '[desc="我知道了"]',
+          matches: '[desc="了解更多"] - [desc="我知道了"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12775920',
         },
       ],
@@ -52,32 +45,29 @@ export default defineAppConfig({
       ],
       rules: [
         {
-          action: 'clickCenter',
-          matches:
-            'FrameLayout[childCount=5] > FrameLayout[childCount=1] > ImageView',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12775921',
-        },
-        {
-          matches: '@ViewGroup [text="跳过"]',
+          matches: '[id="com.ksf.yyx:id/ksad_container"] [text="跳过"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12775922',
         },
         {
-          matches: '@ViewGroup[clickable=true][childCount=1] ImageView',
+          matches:
+            '[id="com.ksf.yyx:id/ksad_container"] [text="广告"] <2 ViewGroup -2 ViewGroup > @ViewGroup[clickable=true][childCount=1] ImageView',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12775923',
         },
         {
-          matches: '[text="跳过"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12775924',
-        },
-        {
-          matches: '[id="close_btn"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12775925',
+          matches: '[id="ad_area"] [id="close_btn"][clickable=true]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12775925',
+            'https://gkd-kit.gitee.io/import/12775924',
+          ],
         },
         {
           action: 'clickCenter',
           matches:
-            'FrameLayout[childCount = 1] > @ImageView < FrameLayout[index!=0]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12776903',
+            '[text^="去"][text$="看看"] < FrameLayout <2 FrameLayout[childCount=2] -n FrameLayout[childCount=1] > ImageView',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12775921',
+            'https://gkd-kit.gitee.io/import/12776903',
+          ],
         },
       ],
     },
