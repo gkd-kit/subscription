@@ -30,6 +30,19 @@ export default defineAppConfig({
             'ImageView - LinearLayout - FrameLayout > FrameLayout > ImageView[id=null]',
           snapshotUrls: 'https://gkd-kit.songe.li/import/12777151',
         },
+        {
+          activityIds:
+            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
+          key: 2,
+          matches: '@Image[id=null] < View + View + TextView[text="反馈"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12781327',
+        },
+        {
+          key: 3,
+          matches:
+            '[id="com.byted.pangle.m:id/tt_reward_full_count_down_after"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12781344',
+        },
       ],
     },
   ],
