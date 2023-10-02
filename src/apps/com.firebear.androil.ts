@@ -7,15 +7,23 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: 'com.firebear.androil.app.splash.SplashActivity',
+      activityIds: [
+        'com.firebear.androil.app.splash.SplashActivity',
+        'com.miui.home.launcher.Launcher',
+      ],
       rules: [
         {
           matches: '[id="com.firebear.androil:id/adContainerLay"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12712742'],
         },
         {
+          name: '这个广告是com.miui.home.launcher.Launcher启动的',
           matches: '[id="com.byted.pangle.m:id/tt_splash_skip_btn"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12780668'],
+        },
+        {
+          matches: 'TextView[text*="跳过"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12780814'],
         },
       ],
     },
