@@ -81,6 +81,7 @@ export default defineAppConfig({
         },
         {
           preKeys: 0,
+          key: 1,
           name: '点击屏蔽广告',
           matches:
             '[id="tv.danmaku.bili:id/menu_text"][text="屏蔽广告"] < [id="tv.danmaku.bili:id/title"] + [id="tv.danmaku.bili:id/dislike_reasons"] >2 [id="tv.danmaku.bili:id/reason1_layout"]',
