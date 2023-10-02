@@ -64,14 +64,7 @@ export default defineAppConfig({
       rules:
         'TextView[text=`广告`] <n FrameLayout <n LinearLayout - RelativeLayout @FrameLayout > ImageView', // 需要补充快照
     },
-    {
-      enable: false,
-      key: 4,
-      name: '空规则',
-      desc: '合并后遗留的空规则组，后续新增广告类型可以使用这个 key',
-      activityIds: [],
-      rules: [],
-    },
+    // key=4 的规则组已经删除, 后续不可添加 key=4 的规则组
     {
       key: 5,
       name: '帖子评论区广告卡片',
