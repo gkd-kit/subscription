@@ -1,16 +1,22 @@
 import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
-  id: 'com.gtgj.view',
-  name: '高铁管家',
+  id: 'com.onethingcloud.android',
+  name: '网心云',
   groups: [
     {
       key: 0,
       name: '开屏广告',
-      activityIds: 'com.gtgj.view.LaunchActivity',
-      rules:
-        '[id="com.gtgj.view:id/logo_img_container"] >2 FrameLayout[clickable=true] > TextView[text=`跳过`]',
-      snapshotUrls: ['https://gkd-kit.gitee.io/import/12684583'],
+      activityIds: 'com.onethingcloud.android.MainActivity',
+      rules: 'View[desc*="跳过"]',
+      snapshotUrls: ['https://gkd-kit.gitee.io/import/12788073'],
+    },
+    {
+      key: 1,
+      name: '弹窗广告',
+      activityIds: 'com.miui.home.launcher.Launcher',
+      rules: 'View > ImageView + ImageView + ImageView',
+      snapshotUrls: ['https://gkd-kit.gitee.io/import/12788086'],
     },
   ],
 });
