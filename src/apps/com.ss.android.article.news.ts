@@ -91,8 +91,11 @@ export default defineAppConfig({
           name: '点击右上角x按钮',
           key: 0,
           matches:
-            'FlattenUIText[text^="广告"][text.length=4] -n UIView[desc="不感兴趣"][clickable=true]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12733098',
+            'FlattenUIText[text^="广告"][text.length=4] -n UIView[desc*="不感兴趣"][clickable=true]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12733098',
+            'https://gkd-kit.gitee.io/import/12790324',
+          ],
         },
         {
           name: '点击不感兴趣',
