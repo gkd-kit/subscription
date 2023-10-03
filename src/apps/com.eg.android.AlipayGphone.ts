@@ -13,5 +13,13 @@ export default defineAppConfig({
       rules: 'View[childCount=3] > @Image - View[text="花呗服务升级"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12737055',
     },
+    {
+      enable: false,
+      key: 1,
+      name: '支付宝开启定位提示',
+      activityIds: 'com.eg.android.AlipayGphone.AlipayLogin',
+      rules: '@FrameLayout[desc="关闭"]',
+      snapshotUrls: 'https://gkd-kit.songe.li/import/12792688',
+    },
   ],
 });
