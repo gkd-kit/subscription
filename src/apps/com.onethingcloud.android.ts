@@ -13,7 +13,7 @@ export default defineAppConfig({
     },
     {
       key: 1,
-      name: '弹窗广告',
+      name: '软件内弹窗广告',
       activityIds: 'com.miui.home.launcher.Launcher',
       rules: 'View > ImageView + ImageView + ImageView',
       snapshotUrls: ['https://gkd-kit.gitee.io/import/12788086'],
