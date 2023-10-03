@@ -5,8 +5,7 @@ export default defineAppConfig({
   name: '大麦',
   groups: [
     {
-      key: 0,
-      name: '开屏广告',
+      key: 0,name: '开屏广告',
       activityIds: 'cn.damai.launcher.splash.SplashMainActivity',
       rules: '[id="cn.damai:id/homepage_advert_pb"]',
       snapshotUrls:
