@@ -8,15 +8,22 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       activityIds: 'com.meituan.android.pt.homepage.activity.MainActivity',
-      rules: 'TextView[id=`com.sankuai.meituan:id/close_btn`][text^=`跳过`]',
+      rules: 'TextView[id="com.sankuai.meituan:id/close_btn"][text^="跳过"]',
+      snapshotUrls: 'https://gkd-kit.songe.li/import/12749811',
     },
     {
       key: 1,
-      name: '版本更新弹窗',
-      activityIds: 'com.meituan.android.upgrade.ui.',
+      name: '更新弹窗',
+      activityIds: [
+        'com.meituan.android.upgrade.ui.',
+        'com.meituan.android.upgrade.UpgradeDialogActivity',
+      ],
       rules:
-        'TextView[text^=`新版本`] - Button[id=`com.sankuai.meituan:id/btn_close`]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12614559',
+        'TextView[text^="新版本"] - Button[id="com.sankuai.meituan:id/btn_close"]',
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/12614559',
+        'https://gkd-kit.gitee.io/import/12673132',
+      ],
     },
     {
       enable: false,
@@ -44,6 +51,28 @@ export default defineAppConfig({
       snapshotUrls: [
         'https://gkd-kit.gitee.io/import/12639815',
         'https://gkd-kit.gitee.io/import/12639734',
+      ],
+    },
+    {
+      key: 5,
+      name: '美团买菜-支付成功后-红包弹窗',
+      desc: '美团买菜-支付成功后-关闭红包弹窗',
+      activityIds: 'com.meituan.retail.c.android.mrn.mrn.MallMrnModal',
+      rules: 'TextView[text="恭喜你获得以下权益"] + ViewGroup > ImageView',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12646768',
+    },
+    {
+      key: 6,
+      name: '美团骑行-广告、优惠券弹窗',
+      rules: [
+        {
+          key: 0,
+          name: '骑行卡福利大派送弹窗',
+          activityIds: 'com.meituan.mmp.lib.HeraActivity',
+          matches:
+            'View[childCount=3] > View + TextView + TextView[text=""][visibleToUser=true]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12739204',
+        },
       ],
     },
   ],
