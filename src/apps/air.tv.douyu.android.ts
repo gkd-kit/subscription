@@ -6,15 +6,12 @@ export default defineAppConfig({
   groups: [
     {
       key: 0,
-      name: '开屏广告',
-      activityIds: [
-        'com.douyu.module.home.pages.main.MainActivity',
+      name: '开屏广告',   activityIds: [
+'com.douyu.module.home.pages.main.MainActivity',
         'com.douyu.module.ad.launch.HotStartSplashActivity',
       ],
       rules: [
-        {
-          matches:
-            '@TextView[text^=\'跳过\'] + LinearLayout TextView[text*="跳转"]',
+        {matches:'@TextView[text^=\'跳过\'] + LinearLayout TextView[text*="跳转"]',
           snapshotUrls:
             'https://gkd-kit.gitee.io/import/38517192/50c858ee-d331-4d5a-b5db-5eb17323c5ff',
         },
