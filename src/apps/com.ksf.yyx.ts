@@ -1,11 +1,3 @@
-/*
- * @Author: shjdgwj 1018996814@qq.com
- * @Date: 2023-09-30 23:00:38
- * @LastEditors: shjdgwj 1018996814@qq.com
- * @LastEditTime: 2023-10-01 18:11:00
- * @FilePath: \gkd_subscription\src\apps\com.ksf.yyx.ts
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- */
 import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
@@ -80,8 +72,8 @@ export default defineAppConfig({
         {
           action: 'clickCenter',
           matches:
-            'FrameLayout[childCount = 1] > @ImageView < FrameLayout[index!=0]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12776903',
+            'TextView[text="查看详情"] < FrameLayout <2 FrameLayout[childCount=2] - FrameLayout > FrameLayout > ImageView',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12789196'],
         },
       ],
     },
