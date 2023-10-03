@@ -208,5 +208,13 @@ export default defineAppConfig({
       rules: 'Button[text^="查看原图"][clickable=true]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12706944',
     },
+    {
+      enable: true,
+      key: 10,
+      name: '网页版文件传输助手扫码自动授权',
+      activityIds: 'com.tencent.mm.ui.LauncherUI',
+      rules: '@Button[text="打开"] + TextView[text="取消打开"]',
+      snapshotUrls: 'https://gkd-kit.songe.li/import/12793745',
+    },
   ],
 });
