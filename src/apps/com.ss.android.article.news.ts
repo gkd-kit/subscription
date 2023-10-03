@@ -92,6 +92,7 @@ export default defineAppConfig({
           key: 0,
           matches:
             'FlattenUIText[text^="广告"][text.length=4] -n UIView[desc*="不感兴趣"][clickable=true]',
+          action: 'clickCenter',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12733098',
             'https://gkd-kit.gitee.io/import/12790324',
@@ -103,9 +104,10 @@ export default defineAppConfig({
         {
           name: '点击不感兴趣',
           preKeys: 0,
+          action: 'clickCenter',
           matches:
             '@ViewGroup[clickable=true] > ImageView + TextView[text="不感兴趣"]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12733152', ''],
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12733152'],
         },
       ],
     },
@@ -120,9 +122,12 @@ export default defineAppConfig({
           name: '点击右上角x按钮',
           key: 0,
           matches:
-            'LynxFlattenUI[text*="来自抖音"][text.length=6] -n UIView[desc="不感兴趣"][clickable=true]',
+            'LynxFlattenUI[text*="来自抖音"] +n LynxFlattenUI[text*="广告"] +n UIView[text*="不感兴趣"]',
           action: 'clickCenter',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12755264',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12755264',
+            'https://gkd-kit.gitee.io/import/12791021',
+          ],
         },
         {
           name: '点击不感兴趣',
@@ -130,7 +135,10 @@ export default defineAppConfig({
           matches:
             '@ViewGroup[clickable=true] > ImageView + TextView[text="不感兴趣"]',
           action: 'clickCenter',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12755265',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12755265',
+            'https://gkd-kit.gitee.io/import/12791150',
+          ],
         },
       ],
     },
