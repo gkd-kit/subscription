@@ -69,6 +69,12 @@ export default defineAppConfig({
             'https://gkd-kit.gitee.io/import/12776903',
           ],
         },
+        {
+          action: 'clickCenter',
+          matches:
+            'TextView[text="查看详情"] < FrameLayout <2 FrameLayout[childCount=2] - FrameLayout > FrameLayout > ImageView',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12789196'],
+        },
       ],
     },
   ],
