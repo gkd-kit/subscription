@@ -27,12 +27,25 @@ export default defineAppConfig({
           ],
         },
         {
-          activityIds: 'com.netease.cloudmusic.activity.MainActivity',
+          activityIds: [
+            'com.netease.cloudmusic.activity.MainActivity',
+            'com.netease.cloudmusic.music.biz.comment.activity.CommentActivity',
+          ],
           matches: '[id="com.netease.cloudmusic:id/adTagClose"]',
-          snapshotUrls:
+          snapshotUrls: [
             'https://gkd-kit.songe.li/import/38517192/a977b19d-2b3c-43df-ba01-63e7cbbb3908',
+            'https://gkd-kit.gitee.io/import/12723229',
+          ],
         },
       ],
+    },
+    {
+      key: 2,
+      name: '我的页面-中间滚动广告',
+      activityIds: ['com.netease.cloudmusic.activity.MainActivity'],
+      rules:
+        '[id="com.netease.cloudmusic:id/auto_scroll_switcher"] + [id="com.netease.cloudmusic:id/close_btn"]',
+      snapshotUrls: ['https://gkd-kit.gitee.io/import/12745666'],
     },
   ],
 });
