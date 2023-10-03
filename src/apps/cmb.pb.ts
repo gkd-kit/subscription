@@ -6,7 +6,8 @@ export default defineAppConfig({
   groups: [
     {
       key: 0,
-      name: '开屏广告',activityIds: 'cmb.pb.app.mainframe.container.PBMainActivity',
+      name: '开屏广告',
+      activityIds: 'cmb.pb.app.mainframe.container.PBMainActivity',
       rules: '[id="cmb.pb:id/ll_launch_ad_skip_hot_area"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12706015',
     },
