@@ -96,13 +96,16 @@ export default defineAppConfig({
             'https://gkd-kit.gitee.io/import/12733098',
             'https://gkd-kit.gitee.io/import/12790324',
           ],
+          exampleUrls: [
+            'https://github.com/gkd-kit/subscription/assets/44717382/1ea572a3-1fcc-49c7-a3d6-c9de4e7a1f63',
+          ],
         },
         {
           name: '点击不感兴趣',
           preKeys: 0,
           matches:
             '@ViewGroup[clickable=true] > ImageView + TextView[text="不感兴趣"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12733152',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12733152', ''],
         },
       ],
     },
