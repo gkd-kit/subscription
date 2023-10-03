@@ -72,11 +72,15 @@ export default defineAppConfig({
           matches: '[text="虚假欺诈"]',
           snapshotUrls: 'https://gkd-kit.vercel.app/import/12790551',
         },
+        {
+          matches: '[text="暂不领取"]',
+          snapshotUrls: 'https://gkd-kit.vercel.app/import/12791579',//暂不领取新版本每个大广告都会有，链接就不改了
+        },
       ],
     },
     {
       key: 22,
-      name: '首页广告_2', //字节穿山甲
+      name: '首页广告_2', //13b字节穿山甲
       activityIds: ['com.mygolbs.mybus.NewHomePageActivity'],
       rules: [
         {
@@ -91,7 +95,7 @@ export default defineAppConfig({
     },
     {
       key: 31,
-      name: '搜索广告_1', //字节穿山甲
+      name: '搜索广告_1', //13b字节穿山甲
       activityIds: ['com.mygolbs.mybus.mapsearch.poisearch.PoiSearchActivity'],
       rules: [
         {
@@ -101,6 +105,10 @@ export default defineAppConfig({
         {
           matches: '[text="虚假欺诈"]',
           snapshotUrls: 'https://gkd-kit.vercel.app/import/12790616',
+        },
+        {
+          matches: '[text="暂不领取"]',
+          snapshotUrls: 'https://gkd-kit.vercel.app/import/12791579',//暂不领取新版本每个大广告都会有，链接就不改了
         },
       ],
     },
@@ -119,6 +127,10 @@ export default defineAppConfig({
             'https://gkd-kit.vercel.app/import/12790707',
             'https://gkd-kit.vercel.app/import/12790717',
           ],
+        },
+        {
+          matches: '[text="暂不领取"]',
+          snapshotUrls: 'https://gkd-kit.vercel.app/import/12791579',//暂不领取新版本每个大广告都会有，链接就不改了
         },
       ],
     },
@@ -153,6 +165,10 @@ export default defineAppConfig({
           matches: '[id="com.mygolbs.mybus:id/img_turnup"]',
           snapshotUrls: 'https://gkd-kit.vercel.app/import/12791122',
         },
+        {
+          matches: '[text="暂不领取"]',
+          snapshotUrls: 'https://gkd-kit.vercel.app/import/12791579',//暂不领取新版本每个大广告都会有，链接就不改了
+        },
       ],
     },
     {
@@ -163,6 +179,10 @@ export default defineAppConfig({
         {
           matches: '[id="com.mygolbs.mybus:id/ad_close2"]',
           snapshotUrls: 'https://gkd-kit.vercel.app/import/12790841',
+        },
+        {
+          matches: '[text="暂不领取"]',
+          snapshotUrls: 'https://gkd-kit.vercel.app/import/12791579',//暂不领取新版本每个大广告都会有，链接就不改了
         },
       ],
     },
@@ -179,11 +199,15 @@ export default defineAppConfig({
           matches: '[text="虚假欺诈"]',
           snapshotUrls: 'https://gkd-kit.vercel.app/import/12790857',
         },
+        {
+          matches: '[text="暂不领取"]',
+          snapshotUrls: 'https://gkd-kit.vercel.app/import/12791579',//暂不领取新版本每个大广告都会有，链接就不改了
+        },
       ],
     },
     {
       key: 63,
-      name: '实时车辆_3', //底部,字节穿山甲
+      name: '实时车辆_3', //底部,13b字节穿山甲
       activityIds: ['com.mygolbs.mybus.RTimeActivity'],
       rules: [
         {
@@ -193,6 +217,10 @@ export default defineAppConfig({
         {
           matches: '[text="虚假欺诈"]',
           snapshotUrls: 'https://gkd-kit.vercel.app/import/12790972',
+        },
+        {
+          matches: '[text="暂不领取"]',
+          snapshotUrls: 'https://gkd-kit.vercel.app/import/12791579',//暂不领取新版本每个大广告都会有，链接就不改了
         },
       ],
     },
@@ -209,11 +237,15 @@ export default defineAppConfig({
           matches: '[text="虚假欺诈"]',
           snapshotUrls: 'https://gkd-kit.vercel.app/import/12790913',
         },
+        {
+          matches: '[text="暂不领取"]',
+          snapshotUrls: 'https://gkd-kit.vercel.app/import/12791579',//暂不领取新版本每个大广告都会有，链接就不改了
+        },
       ],
     },
     {
       key: 72,
-      name: '站台页面_2', //底部,字节穿山甲
+      name: '站台页面_2', //底部,13b字节穿山甲
       activityIds: ['com.mygolbs.mybus.StationsResultActivityNew'],
       rules: [
         {
@@ -223,6 +255,10 @@ export default defineAppConfig({
         {
           matches: '[text="虚假欺诈"]',
           snapshotUrls: 'https://gkd-kit.vercel.app/import/12790926',
+        },
+        {
+          matches: '[text="暂不领取"]',
+          snapshotUrls: 'https://gkd-kit.vercel.app/import/12791579',//暂不领取新版本每个大广告都会有，链接就不改了
         },
       ],
     },
