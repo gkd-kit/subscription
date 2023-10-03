@@ -9,7 +9,7 @@ export default defineAppConfig({
       name: '开屏广告',
       activityIds: ['com.cmiot.preinstall.ui.activity.SplashActivity'],
       rules: '[text*="跳过"]',
-      snapshotUrls: ['com.cmiot.preinstall.ui.activity.SplashActivity'],
+      snapshotUrls: ['https://gkd-kit.gitee.io/import/12790477'],
     },
   ],
 });
