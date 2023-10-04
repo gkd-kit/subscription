@@ -7,7 +7,10 @@ export default defineAppConfig({
     {
       key: 1,
       name: 'APP内弹窗广告',
-      activityIds: ['com.jdd.motorfans.MTMainActivity'],
+      activityIds: [
+        'com.jdd.motorfans.MTMainActivity',
+        'com.jdd.motorfans.modules.base.FragmentContainerActivity',
+      ],
       rules: [
         {
           matches: [
