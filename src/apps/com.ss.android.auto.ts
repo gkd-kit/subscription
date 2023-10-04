@@ -39,5 +39,12 @@ export default defineAppConfig({
         '@TextView[text="以后再说"] - FrameLayout >2 TextView[text="立即\n升级"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12711631',
     },
+    {
+      key: 3,
+      name: '首页直播推荐窗口',
+      activityIds: 'com.ss.android.auto.activity.SplashActivity',
+      rules: '[id="com.ss.android.auto:id/ahg"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12798338',
+    },
   ],
 });
