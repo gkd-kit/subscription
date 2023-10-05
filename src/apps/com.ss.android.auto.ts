@@ -46,5 +46,23 @@ export default defineAppConfig({
       rules: '[id="com.ss.android.auto:id/ahg"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12798338',
     },
+    {
+      key: 4,
+      name: '文章底部广告',
+      activityIds:
+        'com.ss.android.article.base.feature.detail2.view.NewDetailActivity',
+      rules:
+        'TextView[text="广告"] - ImageView[id="com.ss.android.auto:id/d4m"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12811597',
+    },
+    {
+      key: 5,
+      name: '评论区广告',
+      activityIds:
+        'com.ss.android.article.base.feature.detail2.view.NewDetailActivity',
+      rules:
+        'TextView[text="广告"] <2 LinearLayout + ImageView[id="com.ss.android.auto:id/bzq"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12811459',
+    },
   ],
 });
