@@ -26,5 +26,22 @@ export default defineAppConfig({
       rules: '[id="com.ct.client:id/tvSkip"]',
       snapshotUrls: ['https://gkd-kit.songe.li/import/12508971'],
     },
+    {
+      key: 2,
+      name: '首页-取消升级',
+      activityIds: [
+        'com.ct.client.activity.MainActivity',
+        'com.ct.client.common.ConfirmDialogActivity',
+      ],
+      rules: 'LinearLayout > TextView[text="取消升级"]',
+      snapshotUrls: ['https://gkd-kit.songe.li/import/12819594'],
+    },
+    {
+      key: 3,
+      name: '首页-弹窗广告',
+      activityIds: ['com.ct.client.common.ConfirmDialogActivity'],
+      rules: 'RelativeLayout > ImageView[desc="关闭"]',
+      snapshotUrls: ['https://gkd-kit.songe.li/import/12819676'],
+    },
   ],
 });
