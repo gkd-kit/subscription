@@ -43,7 +43,8 @@ export default defineAppConfig({
       key: 3,
       name: '首页直播推荐窗口',
       activityIds: 'com.ss.android.auto.activity.SplashActivity',
-      rules: '[id="com.ss.android.auto:id/ahg"]',
+      rules:
+        '@ImageView[clickable=true][id!=null] - RelativeLayout >4 [id="com.ss.android.auto:id/at1"][text="特价抢购"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12798338',
     },
     {
@@ -52,7 +53,7 @@ export default defineAppConfig({
       activityIds:
         'com.ss.android.article.base.feature.detail2.view.NewDetailActivity',
       rules:
-        'TextView[text="广告"] - ImageView[id="com.ss.android.auto:id/d4m"]',
+        '@ImageView[clickable=true] <2 RelativeLayout[childCount=4][id!=null] > TextView[text="广告"][id!=null]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12811597',
     },
     {
@@ -61,7 +62,7 @@ export default defineAppConfig({
       activityIds:
         'com.ss.android.article.base.feature.detail2.view.NewDetailActivity',
       rules:
-        'TextView[text="广告"] <2 LinearLayout + ImageView[id="com.ss.android.auto:id/bzq"]',
+        'RelativeLayout[childCount=5][id=null] > @ImageView[clickable=true][id!=null] - LinearLayout[childCount=2][id!=null] > TextView[text="广告"][id!=null]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12811459',
     },
   ],
