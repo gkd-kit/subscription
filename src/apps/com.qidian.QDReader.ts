@@ -25,10 +25,16 @@ export default defineAppConfig({
     {
       key: 2,
       name: '青少年模式弹窗',
-      activityIds: ['com.qidian.QDReader.bll.helper.z0'],
+      activityIds: [
+        'com.qidian.QDReader.bll.helper.z0',
+        'com.qidian.QDReader.ui.activity.MainGroupActivity',
+      ],
       rules:
-        '[text$="青少年模式"] < [id="com.qidian.QDReader:id/btnEnterTeen"] + [id="com.qidian.QDReader:id/btnCancel"] >(2) [text="我知道了"]',
-      snapshotUrls: ['https://gkd-kit.gitee.io/import/12640241'],
+        '[id="com.qidian.QDReader:id/btnEnterTeen"] + [id="com.qidian.QDReader:id/btnCancel"]',
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/12640241',
+        'https://gkd-kit.gitee.io/import/12709168',
+      ],
     },
     {
       key: 3,
@@ -52,6 +58,14 @@ export default defineAppConfig({
       activityIds: ['com.afollestad.materialdialogs.MaterialDialog'],
       rules: '@[id="com.qidian.QDReader:id/ivClose"] + [text^="开启推送"]',
       snapshotUrls: ['https://gkd-kit.gitee.io/import/12640242'],
+    },
+    {
+      key: 5,
+      name: '右侧悬浮广告',
+      activityIds: ['com.qidian.QDReader.ui.activity.MainGroupActivity'],
+      rules:
+        '[id="com.qidian.QDReader:id/ivAd"] + [id="com.qidian.QDReader:id/ivAdClose"]',
+      snapshotUrls: ['https://gkd-kit.gitee.io/import/12717032'],
     },
   ],
 });
