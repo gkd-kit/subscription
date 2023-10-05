@@ -36,6 +36,15 @@ export default defineAppConfig({
       activityIds: 'com.hunantv.imgo.activity.MainActivity',
       rules: [
         {
+          key: 0,
+          matches:
+            '@[id="com.hunantv.imgo.activity:id/layout_logo"] > [id="com.hunantv.imgo.activity:id/tv_ad_logo"]',
+          snapshotUrls:
+            'https://gkd-kit.gitee.io/import/38517192/b74150b5-8e9f-4cbb-86a7-722fc739a1b8',
+        },
+        {
+          preKeys: 0,
+          key: 1,
           matches: '[id="com.hunantv.imgo.activity:id/close_ad"]',
           snapshotUrls:
             'https://gkd-kit.gitee.io/import/38517192/40fb71ad-01a5-4420-9150-88172ff8a3bf',
