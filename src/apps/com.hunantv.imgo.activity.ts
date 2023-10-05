@@ -69,6 +69,22 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 3,
+      name: '右侧悬浮广告',
+      activityIds: 'com.hunantv.imgo.activity.MainActivity',
+      rules: [
+        {
+          key: 0,
+          matches:
+            '@[id="com.hunantv.imgo.activity:id/apperience_close"] + [id="com.hunantv.imgo.activity:id/apperience_enter"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12818430',
+        },
+        {
+          key: 1,
+          matches:
+            '@[id="com.hunantv.imgo.activity:id/iv_float_close"] + [id="com.hunantv.imgo.activity:id/iv_float_content"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12818481',
         },
       ],
     },
