@@ -34,5 +34,20 @@ export default defineAppConfig({
         '@[id="com.jingyao.easybike:id/closeFloatArea"] + [id="com.jingyao.easybike:id/floatADContainer"]',
       snapshotUrls: ['https://gkd-kit.gitee.io/import/12650071'],
     },
+    {
+      key: 13,
+      name: '骑行订单完成-广告弹窗',
+      activityIds: ['com.alipay.mobile.nebulacore.ui.H5Activity'],
+      rules:
+        '[text="订单完成"] >(2) View[childCount=2] > Image[id=null][clickable=true]',
+      snapshotUrls: ['https://gkd-kit.gitee.io/import/12684673'],
+    },
+    {
+      key: 14,
+      name: '骑行卡-优惠券弹窗',
+      activityIds: ['com.hellobike.atlas.business.portal.PortalActivity'],
+      rules: '[desc="去使用"] + Button[text=null][visibleToUser=true]',
+      snapshotUrls: ['https://gkd-kit.songe.li/import/12739316'],
+    },
   ],
 });

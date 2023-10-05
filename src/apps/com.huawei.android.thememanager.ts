@@ -131,14 +131,27 @@ export default defineAppConfig({
       key: 7,
       name: '首页活动弹窗-默认禁用',
       enable: false,
-      activityIds: ['com.huawei.android.thememanager.HwThemeManagerActivity'],
+      activityIds: [
+        'com.huawei.android.thememanager.HwThemeManagerActivity',
+        'com.huawei.android.launcher.unihome.UniHomeLauncher',
+      ],
       rules: [
         {
           matches:
             '[id="com.huawei.android.thememanager:id/campaign_dialog_close_image"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12657939',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12657939',
+            'https://gkd-kit.gitee.io/import/12667815',
+          ],
         },
       ],
+    },
+    {
+      key: 8,
+      name: '更新弹窗',
+      activityIds: 'com.huawei.android.launcher.unihome.UniHomeLauncher',
+      rules: '@[text="以后再说"] + [text="立即更新"]',
+      snapshotUrls: 'https://gkd-kit.songe.li/import/12727318',
     },
   ],
 });
