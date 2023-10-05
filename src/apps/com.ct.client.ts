@@ -9,10 +9,14 @@ export default defineAppConfig({
       name: '开屏广告',
       activityIds: [
         'com.ct.client.activity.MainActivity',
+        'com.miui.home.launcher.Launcher',
         'com.ct.client.activity.SplashActivity',
       ],
       rules: '[id="com.ct.client:id/tvSkip"||id="com.ct.client:id/btSkip"]',
-      snapshotUrls: ['https://gkd-kit.songe.li/import/12508958'],
+      snapshotUrls: [
+        'https://gkd-kit.songe.li/import/12508958',
+        'https://gkd-kit.songe.li/import/12819736',
+      ],
     },
     {
       key: 1,
