@@ -49,11 +49,26 @@ export default defineAppConfig({
           snapshotUrls:
             'https://gkd-kit.gitee.io/import/38517192/40fb71ad-01a5-4420-9150-88172ff8a3bf',
         },
+      ],
+    },
+    {
+      key: 2,
+      name: '应用内广告弹窗',
+      activityIds: 'com.hunantv.imgo.activity.MainActivity',
+      rules: [
         {
+          key: 0,
           matches:
-            '@[id="com.hunantv.imgo.activity:id/layout_logo"] > [id="com.hunantv.imgo.activity:id/tv_ad_logo"]',
-          snapshotUrls:
-            'https://gkd-kit.gitee.io/import/38517192/b74150b5-8e9f-4cbb-86a7-722fc739a1b8',
+            '[id="com.hunantv.imgo.activity:id/imgPromotion"] + [id="com.hunantv.imgo.activity:id/vClosePromotionView"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12818464',
+        },
+        {
+          key: 1,
+          matches: '@TextView[id=null][text=""] - View > Image[id="hotGif"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12818528',
+        },
+      ],
+    },
         },
       ],
     },
