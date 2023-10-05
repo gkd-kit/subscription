@@ -236,11 +236,10 @@ export default defineAppConfig({
       ],
     },
     {
-      enable: true,
       key: 11,
       name: '网页版文件传输助手扫码自动授权',
       activityIds: 'com.tencent.mm.ui.LauncherUI',
-      rules: '@Button[text="打开"] + TextView[text="取消打开"]',
+      rules: '[text="打开网页版文件传输助手"] + * > Button[text="打开"]',
       snapshotUrls: 'https://gkd-kit.songe.li/import/12793745',
     },
   ],
