@@ -52,10 +52,10 @@ export default defineAppConfig({
     {
       key: 3,
       name: '首页-顶部广告卡片',
-      desc: '自动点击“不感兴趣”',
       activityIds: ['com.tencent.qqlive.ona.activity.SplashHomeActivity'],
       rules: [
         {
+          desc: '点击右上角[广告]',
           matches:
             'FrameLayout - RelativeLayout > RelativeLayout > FrameLayout + ImageView[clickable=true]',
           snapshotUrls: [
@@ -64,8 +64,15 @@ export default defineAppConfig({
           ],
         },
         {
+          desc: '点击右上角[关闭广告]',
           matches: '[text="关闭广告"][clickable=true]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12700518'],
+        },
+        {
+          desc: '点击右上角[广告]',
+          matches:
+            'RelativeLayout[id=null] > @FrameLayout[clickable=true][id!=null] > ImageView[desc="the ad tag"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12737313',
         },
       ],
     },
@@ -88,12 +95,22 @@ export default defineAppConfig({
     },
     {
       key: 5,
-      name: '个人中心-广告卡片',
-      desc: '自动点击“不感兴趣”',
+      name: '个人中心广告',
       activityIds: ['com.tencent.qqlive.ona.activity.SplashHomeActivity'],
-      rules:
-        'ViewGroup > TextView + LinearLayout[childCount=2] + ImageView[clickable=true]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12700175',
+      rules: [
+        {
+          key: 0,
+          matches:
+            'ViewGroup > TextView + LinearLayout[childCount=2] + ImageView[clickable=true]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12700175',
+        },
+        {
+          key: 1,
+          matches:
+            'RelativeLayout > FrameLayout + @ImageView[clickable=true] + ImageView + ImageView',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12777344',
+        },
+      ],
     },
     {
       key: 19, // 配合应用内其他广告卡片使用，反馈界面的规则都是一样的
