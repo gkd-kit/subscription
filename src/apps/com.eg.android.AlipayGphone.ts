@@ -16,9 +16,10 @@ export default defineAppConfig({
     {
       enable: false,
       key: 1,
-      name: '支付宝开启定位提示',
+      name: '关闭开启定位提示',
       activityIds: 'com.eg.android.AlipayGphone.AlipayLogin',
-      rules: '@FrameLayout[desc="关闭"]',
+      rules:
+        '@[id="com.alipay.mobile.antui:id/closeButton"] - [id="com.alipay.mobile.antui:id/textAndButtonLayout"] [id="com.alipay.mobile.antui:id/tipTextView"][text^="开启定位权限"]',
       snapshotUrls: 'https://gkd-kit.songe.li/import/12792688',
     },
   ],
