@@ -12,9 +12,8 @@ export default defineAppConfig({
         {
           matches: '[id="com.example.businesshall:id/jump_layout"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12830978'],
-          }          
+        },
       ],
     },
   ],
 });
-
