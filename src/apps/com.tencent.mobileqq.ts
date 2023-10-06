@@ -64,12 +64,15 @@ export default defineAppConfig({
     {
       enable: false,
       key: 4,
-      name: '新人专享1元购SVIP',
+      name: '消息页面顶部-SVIP 广告',
       desc: '消息界面-搜索框和消息记录直接的广告卡片,点击关闭右侧x',
       activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
       rules:
-        '@ImageView[id!=null][clickable=true] -2 TextView[id!=null][text^="新人专享1元购SVIP"]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12706907',
+        'LinearLayout > TextView[text*="SVIP"] + FrameLayout + ImageView[id!=null]',
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/12706907',
+        'https://gkd-kit.songe.li/import/12793359',
+      ],
     },
     {
       enable: false,
@@ -100,6 +103,13 @@ export default defineAppConfig({
       rules:
         '@ImageView[clickable=true] - TextView[text="广告"] - [id="com.tencent.mobileqq:id/tv_name"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12749584',
+    },
+    {
+      key: 7,
+      name: '扫一扫-登录确认',
+      activityIds: 'com.tencent.biz.qrcode.activity.QRLoginAuthActivity',
+      rules: 'Button[text="拒绝"] - Button[text="登录"]',
+      snapshotUrls: 'https://gkd-kit.songe.li/import/12789287',
     },
     {
       enable: false,
