@@ -15,5 +15,16 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+    	key: 1,
+    	name: '青少年模式弹窗',
+    	activityIds: ['cn.soulapp.android.component.square.widget.dialog.d'],
+      rules: [
+        {
+          matches: '[id="cn.soulapp.android:id/btn_sure"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12834093',
+        },
+      ],
+    },
   ],
 });
