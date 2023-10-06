@@ -12,7 +12,7 @@ export default defineAppConfig({
         {
           matches: '[id="com.android.browser:id/apv"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12829403',
-          }          
+        },
       ],
     },
   ],
