@@ -1,7 +1,6 @@
 import { defineAppConfig } from '../types';
 
-export default defineAppConfig(
-{
+export default defineAppConfig({
   id: 'cn.soulapp.android',
   name: 'Soul',
   groups: [
@@ -12,8 +11,8 @@ export default defineAppConfig(
       rules: [
         {
           matches: '[id="cn.soulapp.android:id/c_ad_skip_view_btn"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12833280'
-        }
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12833280',
+        },
       ],
     },
   ],
