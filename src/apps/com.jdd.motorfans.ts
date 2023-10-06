@@ -22,6 +22,10 @@ export default defineAppConfig({
           exampleUrls:
             'https://user-images.githubusercontent.com/44717382/270852019-b0296eaa-a378-49b3-877b-acefca2a7d58.gif',
         },
+        {
+          matches: '@ImageView -n RelativeLayout > TextView[text*="广告"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12826288']
+        },
       ],
     },
   ],
