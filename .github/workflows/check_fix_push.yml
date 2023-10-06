@@ -1,27 +1,21 @@
-name: Check
+name: check_fix_push
 
 on:
   push:
     branches:
       - '**'
-  pull_request:
-    branches:
-      - main
 
 permissions: write-all
 
 jobs:
   check:
     runs-on: ubuntu-latest
-    if: ${{ !startsWith(github.event.head_commit.message, 'chore(main):') &&  !contains(github.event.head_commit.message, 'release') && !contains(github.event.head_commit.message, 'check_format_lint')  }}
     steps:
       - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
         with:
-          fetch-depth: 0
-
-      - uses: volta-cli/action@v3
-
-      - run: node -v
+          node-version: 20
 
       - uses: pnpm/action-setup@v2
 
@@ -36,19 +30,15 @@ jobs:
       - name: Git commit
         id: commit
         run: |
-          git status --porcelain
           git config --local user.email github-actions[bot]@users.noreply.github.com
           git config --local user.name github-actions[bot]
-          git config --global core.autocrlf true
-          git config --global core.safecrlf false
-          git status
-          git add .
-          git commit -m "chore(actions): check_format_lint" -a
+          git status --porcelain
+          git --no-pager diff
+          git commit -a -m "chore(actions): check_format_lint"
         continue-on-error: true
 
       - name: Git push
         uses: ad-m/github-push-action@master
         if: ${{ steps.commit.outcome == 'success' }}
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}

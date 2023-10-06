@@ -22,6 +22,11 @@ export default defineAppConfig({
           matches: '@TextView[text^="跳过"] + TextView[text="广告"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12648924',
         },
+        {
+          activityIds: 'com.baidu.netdisk.ui.DefaultMainActivity',
+          matches: '[id="com.baidu.netdisk:id/countdown"][text^="跳过"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12706553',
+        },
         '[id="com.byted.pangle:id/tt_splash_skip_btn"]', // 1687136781353
       ],
     },
@@ -38,7 +43,7 @@ export default defineAppConfig({
       name: '首页banner广告',
       activityIds: 'com.baidu.netdisk.ui.MainActivity',
       rules: '[id="com.baidu.netdisk:id/banner_item_close"]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12642514', // 节点过多，选择器无法查询
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12706544',
     },
     {
       key: 3,
@@ -46,14 +51,14 @@ export default defineAppConfig({
       activityIds: 'com.baidu.netdisk.ui.MainActivity',
       rules:
         '[id="com.baidu.netdisk:id/vf_content"] + [id="com.baidu.netdisk:id/close"]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12642514', // 节点过多，选择器无法查询
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12706544',
     },
     {
       key: 4,
       name: '我的页面-限时福利',
       activityIds: 'com.baidu.netdisk.ui.MainActivity',
       rules: '@TextView + [text="专属福利"]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12642558', // 节点过多，选择器无法查询
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12706549',
     },
     {
       key: 5,
@@ -63,6 +68,16 @@ export default defineAppConfig({
       rules:
         '@ImageView[id="com.baidu.netdisk:id/close_btn"] + ImageView[id="com.baidu.netdisk:id/bg_image"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12648987',
+    },
+    {
+      enable: false,
+      key: 10,
+      name: '看视频免费享极速下载弹窗',
+      desc: '自动点击x按钮',
+      activityIds: 'com.baidu.netdisk.ui.MainActivity',
+      rules:
+        'ViewGroup > [id="com.baidu.netdisk:id/background_image"] +n [id="com.baidu.netdisk:id/iv_close"]',
+      snapshotUrls: 'https://gkd-kit.songe.li/import/12783106',
     },
   ],
 });
