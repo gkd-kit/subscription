@@ -13,14 +13,22 @@ export default defineAppConfig({
       ],
       rules: [
         {
-          matches: '@ImageView -n RelativeLayout > TextView[text*="广告"]',
+          matches:
+            '[id="com.jdd.motorfans:id/ad_content"] >n [id="com.jdd.motorfans:id/iv_close"]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12733646',
             'https://gkd-kit.songe.li/import/12798654',
-            'https://gkd-kit.gitee.io/import/12826288',
           ],
           exampleUrls:
             'https://user-images.githubusercontent.com/44717382/270852019-b0296eaa-a378-49b3-877b-acefca2a7d58.gif',
+        },
+        {
+          matches: '@ImageView -n RelativeLayout > TextView[text*="广告"]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12826288',
+          ],
+          exampleUrls:
+            '',
         },
       ],
     },
