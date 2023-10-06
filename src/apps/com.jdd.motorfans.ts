@@ -31,16 +31,11 @@ export default defineAppConfig({
     {
       key: 2,
       name: '信息流广告',
-      activityIds: [
-        'com.jdd.motorfans.MTMainActivity',
-      ],
+      activityIds: ['com.jdd.motorfans.MTMainActivity'],
       rules: [
         {
-          matches:
-            '@ImageView <2 FrameLayout > LinearLayout > FrameLayout',//虽然在审查页面能匹配上，但是在“执行选择器”功能下一直处于搜索中，先添加后到真机测试
-          snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/12826382',
-          ],
+          matches: '@ImageView <2 FrameLayout > LinearLayout > FrameLayout', //虽然在审查页面能匹配上，但是在“执行选择器”功能下一直处于搜索中，先添加后到真机测试
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12826382'],
         },
       ],
     },
