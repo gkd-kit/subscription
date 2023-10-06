@@ -24,7 +24,7 @@ export default defineAppConfig({
         },
         {
           matches: '@ImageView -n RelativeLayout > TextView[text*="广告"]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12826288']
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12826288'],
         },
       ],
     },
