@@ -12,14 +12,12 @@ export default defineAppConfig({
         {
           matches: '[id="com.jsmcc:id/wel_jump_btn"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12830488'],
-          },
-          {
-          	matches: '[id="com.jsmcc:id/head_message"]',
+        },
+        {
+          matches: '[id="com.jsmcc:id/head_message"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12830580'],
-          }
-          
+        },
       ],
     },
   ],
 });
-
