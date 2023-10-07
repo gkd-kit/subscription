@@ -10,7 +10,8 @@ export default defineAppConfig({
       activityIds: ['com.lbe.security.ui.CountdownDialogActivity'],
       rules: [
         {
-          matches: '[id="com.jf.my:id/btn_ok"][text="更新"] - [id="com.jf.my:id/btn_cancel"][text="关闭"]',
+          matches:
+            '[id="com.jf.my:id/btn_ok"][text="更新"] - [id="com.jf.my:id/btn_cancel"][text="关闭"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12838034',
         },
       ],
