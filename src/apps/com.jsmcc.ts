@@ -10,12 +10,12 @@ export default defineAppConfig({
       activityIds: ['com.jsmcc.ui.MainActivityGroupNew'],
       rules: [
         {
-          matches: '[id="com.jsmcc:id/wel_jump_btn"]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12830488'],
-        },
-        {
-          matches: '[id="com.jsmcc:id/head_message"]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12830580'],
+          matches:
+            '[id="com.jsmcc:id/ad_content"] [text^="跳过"][text.length<=3]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12830488',
+            'https://gkd-kit.gitee.io/import/12830580',
+          ],
         },
       ],
     },
