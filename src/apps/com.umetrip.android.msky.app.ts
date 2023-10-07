@@ -18,10 +18,11 @@ export default defineAppConfig({
         'com.miui.home.launcher.Launcher',
         'com.umetrip.android.msky.homepage.activity.UmeHomeActivity',
       ],
-      rules: '@ImageView[id$="cancel"]',
+      rules:
+        '@[id="com.umetrip.android.msky.app:id/iv_cancel"] - * > [id="com.umetrip.android.msky.app:id/btn_upgrade"]',
       snapshotUrls: [
-        'https://gkd-kit.songe.li/import/12783264',
-        'https://gkd-kit.songe.li/import/12783264',
+        'https://gkd-kit.gitee.io/import/12838294',
+        'https://gkd-kit.gitee.io/import/12838293',
       ],
     },
     {
