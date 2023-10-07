@@ -10,8 +10,11 @@ export default defineAppConfig({
       activityIds: 'net.csdn.csdnplus.activity.SplashActivity',
       rules: [
         {
-          matches: '[id="net.csdn.csdnplus:id/tv_skip_splashimage"]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12673680'],
+          matches: '[id != null && clickable=true && left > 800 && top < 300]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12673680',
+            'https://gkd-kit.gitee.io/import/12838461',
+          ],
         },
       ],
     },
