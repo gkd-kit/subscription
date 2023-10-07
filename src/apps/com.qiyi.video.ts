@@ -32,8 +32,8 @@ export default defineAppConfig({
       activityIds: 'org.qiyi.android.video.MainActivity',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12838152',
       rules: [
-      	'[id="com.qiyi.video:id/title" && text="开启推送通知"]',
-      	'[id="com.qiyi.video:id/cancel_btn" && text="暂时不要"]',
+        '[id="com.qiyi.video:id/title" && text="开启推送通知"]',
+        '[id="com.qiyi.video:id/cancel_btn" && text="暂时不要"]',
       ],
     },
     {
@@ -42,8 +42,8 @@ export default defineAppConfig({
       activityIds: 'org.qiyi.android.video.MainActivity',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12838158',
       rules: [
-      	'[id="com.qiyi.video:id/title" && text="有新版本更新啦！"]',
-      	'[id="com.qiyi.video:id/cancel_btn" && text="暂不升级"]',
+        '[id="com.qiyi.video:id/title" && text="有新版本更新啦！"]',
+        '[id="com.qiyi.video:id/cancel_btn" && text="暂不升级"]',
       ],
     },
   ],
