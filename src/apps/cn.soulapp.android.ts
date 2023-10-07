@@ -26,5 +26,16 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+    	key: 2,
+    	name: '广场页卡片广告',
+    	activityIds: ['cn.soulapp.android.component.startup.main.MainActivity'],
+      rules: [
+        {
+          matches: '[id="cn.soulapp.android:id/sl_ad_root"] >n [id="cn.soulapp.android:id/fl_tag_container"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12838000',
+        },
+      ],
+    },
   ],
 });
