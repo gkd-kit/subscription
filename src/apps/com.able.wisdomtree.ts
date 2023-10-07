@@ -11,9 +11,7 @@ export default defineAppConfig({
         'com.example.advertisement_business.advertisement.AdvertisementActivity',
       rules: [
         {
-          matches: [
-            'FrameLayout > @TextView[id="com.able.wisdomtree:id/tv_skip"][text^="跳过"]',
-          ],
+          matches: ['[id="com.able.wisdomtree:id/tv_skip"]'],
           snapshotUrls: 'https://gkd-kit.songe.li/import/12838048',
         },
       ],
