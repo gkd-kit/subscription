@@ -170,7 +170,7 @@ export default defineAppConfig({
     {
       key: 9,
       name: '个性化内容推荐弹窗',
-      desc: '首页底部-开启个性化内容推荐-点击卡片右下角x直接关闭',
+      desc: '首页底部-个性化内容推荐弹窗-点击卡片右上角x直接关闭',
       rules: {
         activityIds: ['com.douban.frodo.activity.SplashActivity'],
         matches: '[id="com.douban.frodo:id/close"]',
