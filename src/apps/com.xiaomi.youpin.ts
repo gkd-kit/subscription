@@ -23,7 +23,8 @@ export default defineAppConfig({
       ],
       rules: [
         {
-          matches: 'Image[index= 0]',
+          matches:
+            '@Image <2 View[childCount=2] < [id="app"] < [text="有品"] < * < [id="android:id/content"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12836727'],
         },
       ],
