@@ -18,7 +18,9 @@ export default defineAppConfig({
     {
       key: 1,
       name: '广告弹窗',
-      activityIds: ['com.xiaomi.youpin.globalpopwindow.popwindow.PopWindowActivity'],
+      activityIds: [
+        'com.xiaomi.youpin.globalpopwindow.popwindow.PopWindowActivity',
+      ],
       rules: [
         {
           matches: 'Image[index= 0]',
@@ -29,7 +31,9 @@ export default defineAppConfig({
     {
       key: 2,
       name: '版本升级弹窗',
-      activityIds: ['com.xiaomi.youpin.globalpopwindow.popwindow.PopWindowActivity'],
+      activityIds: [
+        'com.xiaomi.youpin.globalpopwindow.popwindow.PopWindowActivity',
+      ],
       rules: [
         {
           matches: '[id="com.xiaomi.youpin:id/ypd_alert_close_area"]',
