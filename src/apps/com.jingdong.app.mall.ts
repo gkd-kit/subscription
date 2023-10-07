@@ -42,11 +42,8 @@ export default defineAppConfig({
       activityIds: 'com.jingdong.app.mall.MainFrameActivity',
       rules: [
         {
-          matches: '@[desc^="关闭浮层"] + [desc="浮层活动"]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12837870',
-        },
-        {
-          matches: '@[desc^="关闭浮层"] - [desc="浮层活动"]',
+          matches:
+            '@[desc^="关闭浮层"] <n * < [id="com.jingdong.app.mall:id/home_float_layout"]',
           snapshotUrls: 'https://gkd-kit.songe.li/import/12837870',
         },
       ],
