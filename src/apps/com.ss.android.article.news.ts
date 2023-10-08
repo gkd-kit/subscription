@@ -50,7 +50,8 @@ export default defineAppConfig({
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12706699'],
         },
         {
-          matches: '[text^="开启通知"] < LinearLayout +2 ImageView[desc="关闭"]',
+          matches:
+            '[text^="开启通知"] < LinearLayout +2 ImageView[desc="关闭"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12840217'],
         },
       ],
