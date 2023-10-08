@@ -105,7 +105,7 @@ export default defineAppConfig({
     //     'ImageView[clickable=true] - RelativeLayout[clickable=false][childCount=1] > ImageView[clickable=true]',
     //   ],
     // },
-    
+
     {
       key: 7,
       name: '升级弹窗',
