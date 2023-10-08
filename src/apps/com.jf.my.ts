@@ -22,5 +22,12 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 1,
+      name: '首页-广告弹窗',
+      activityIds: 'com.jf.my.main.ui.dialog.HomeRedPackageDialog',
+      rules: '[id="com.jf.my:id/iv_back"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12840619',
+    },
   ],
 });
