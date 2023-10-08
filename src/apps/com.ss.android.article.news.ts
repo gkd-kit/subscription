@@ -21,11 +21,17 @@ export default defineAppConfig({
     {
       key: 1,
       name: '更新弹窗',
-      activityIds: ['com.ss.android.mine.BaseSettingActivity'],
+      activityIds: [
+        'com.ss.android.mine.BaseSettingActivity',
+        'com.miui.home.launcher.Launcher',
+      ],
       rules: [
         {
-          matches: '[text="升级版本"] + [desc="关闭"][clickable=true]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12685000'],
+          matches: '[text="升级版本"] +n [desc="关闭"][clickable=true]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12685000',
+            'https://gkd-kit.gitee.io/import/12840104',
+          ],
         },
       ],
     },
