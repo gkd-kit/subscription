@@ -75,7 +75,7 @@ export default defineAppConfig({
       name: '请求推送通知弹窗',
       activityIds: 'com.ss.android.auto.activity.SplashActivity',
       rules:
-        '[text ^="打开推送通知"] - TextView[clickable=true && text.length =1]',
+        '@TextView[clickable=true && text.length =1] + [text ^="打开推送通知"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12840664',
     },
   ],
