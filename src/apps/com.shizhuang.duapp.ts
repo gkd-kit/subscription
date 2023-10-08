@@ -8,12 +8,8 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       activityIds: 'com.shizhuang.duapp.modules.home.ui.SplashActivity',
-      rules: [
-        {
-          matches: '[id="com.shizhuang.duapp:id/tv_countdown_bottom"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12841026',
-        },
-      ],
+      rules: '[id="com.shizhuang.duapp:id/tv_countdown_bottom"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12841026',
     },
   ],
 });
