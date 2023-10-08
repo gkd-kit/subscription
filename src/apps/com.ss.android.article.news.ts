@@ -98,8 +98,10 @@ export default defineAppConfig({
             'https://gkd-kit.gitee.io/import/12733098',
             'https://gkd-kit.gitee.io/import/12755264',
             'https://gkd-kit.gitee.io/import/12836272',
-            'https://gkd-kit.gitee.io/import/12840162', //别的‘广告’是单独的一个组件，它是和标题一起
-            'https://user-images.githubusercontent.com/44717382/273436460-cf007525-81ce-418b-ac05-3bfd75a627fe.gif', //和上面一起的动图
+            'https://gkd-kit.gitee.io/import/12840162', //别的‘广告’是单独的一个组件，它是和标题一起 动图：https://user-images.githubusercontent.com/44717382/273436460-cf007525-81ce-418b-ac05-3bfd75a627fe.gif
+          ],
+          exampleUrls: [
+            'https://user-images.githubusercontent.com/44717382/273436460-cf007525-81ce-418b-ac05-3bfd75a627fe.gif',
           ],
         },
         {
