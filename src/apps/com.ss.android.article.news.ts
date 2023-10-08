@@ -7,13 +7,17 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: ['com.ss.android.article.news.activity.MainActivity'],
+      activityIds: [
+        'com.ss.android.article.news.activity.MainActivity',
+        'com.bytedance.ugc.UgcDetailInfoActivity',
+      ],
       rules: [
         {
           matches: '[childCount=1] > [text="跳过广告"]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12684954',
             'https://gkd-kit.gitee.io/import/12754759',
+            'https://gkd-kit.gitee.io/import/12840189',
           ],
         },
       ],
@@ -44,6 +48,10 @@ export default defineAppConfig({
         {
           matches: '[text^="开启通知"] + LinearLayout > [text="暂不开启"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12706699'],
+        },
+        {
+          matches: '[text^="开启通知"] < LinearLayout +2 ImageView[desc="关闭"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12840217'],
         },
       ],
     },
