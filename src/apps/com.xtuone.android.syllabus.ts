@@ -7,14 +7,18 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: ['com.xtuone.android.friday.InitActivity', 'com.xtuone.android.friday.AdvertisementWallActivity'],
+      activityIds: [
+        'com.xtuone.android.friday.InitActivity',
+        'com.xtuone.android.friday.AdvertisementWallActivity',
+      ],
       rules: [
         {
-          matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"||id="com.xtuone.android.syllabus:id/ignore_top"||text^="跳过"]',
+          matches:
+            '[id="com.byted.pangle:id/tt_splash_skip_btn"||id="com.xtuone.android.syllabus:id/ignore_top"||text^="跳过"]',
           snapshotUrls: [
-            'https://gkd-kit.gitee.io/snapshot/1696766469907',
-            'https://gkd-kit.gitee.io/snapshot/1696766026660',
-            'https://gkd-kit.gitee.io/snapshot/1696766213612'
+            'https://gkd-kit.gitee.io/import/12840730',
+            'https://gkd-kit.gitee.io/import/12840736',
+            'https://gkd-kit.gitee.io/import/12840737',
           ],
         },
       ],
@@ -25,12 +29,11 @@ export default defineAppConfig({
       activityIds: ['com.xtuone.android.friday.MainFragmentActivity'],
       rules: [
         {
-          matches: '[id="com.xtuone.android.syllabus:id/treehole_banner_close"]',
-          snapshotUrls: [
-            'https://gkd-kit.gitee.io/snapshot/1696767713727',
-          ],
+          matches:
+            '[id="com.xtuone.android.syllabus:id/treehole_banner_close"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12840733'],
         },
       ],
-    }
+    },
   ],
 });
