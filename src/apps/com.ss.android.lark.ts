@@ -15,4 +15,16 @@ export default defineAppConfig({
       rules: '[id="com.ss.android.lark:id/look_origin_icon"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12840528',
     },
+    {
+      enable: false,
+      key: 11,
+      name: '自动发送原图',
+      desc: '发送图片时自动勾选【原图】',
+      activityIds: 'com.ss.android.lark.chatwindow.ChatWindowActivity',
+      quickFind: true,
+      rules:
+        '@View[id$="original_photo"][checked=false] + [id="com.ss.android.lark:id/original_label"][text="原图"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12840551',
+    },
+  ],
 });
