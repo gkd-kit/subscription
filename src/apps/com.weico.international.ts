@@ -11,7 +11,10 @@ export default defineAppConfig({
         'com.weico.international.ui.ad.AdActivity',
         'com.sina.weibo.ad',
       ],
-      rules: 'TextView[text*="跳过"]',
+      matchLauncher: true,
+      quickFind: true,
+      rules:
+        '[id="com.weico.international:id/splash_ad_contianer_tqt_gdt"] >n TextView[text*="跳过"]',
       snapshotUrls: [
         'https://gkd-kit.gitee.io/import/12509123',
         'https://gkd-kit.gitee.io/import/12510132',
