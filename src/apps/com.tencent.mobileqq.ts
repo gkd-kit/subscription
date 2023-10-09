@@ -145,8 +145,8 @@ export default defineAppConfig({
       name: 'QQ小世界评论区广告',
       desc: '点击广告-弹出原因框-关闭此条广告',
       activityIds: [
-      	'com.tencent.mobileqq.activity.SplashActivity',
-      	'com.tencent.biz.qqcircle.activity.QCircleFolderActivity',
+        'com.tencent.mobileqq.activity.SplashActivity',
+        'com.tencent.biz.qqcircle.activity.QCircleFolderActivity',
       ],
       rules: [
         {
