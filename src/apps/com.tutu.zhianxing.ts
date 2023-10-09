@@ -8,7 +8,7 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       activityIds: ['com.xlxapp.MainActivity'],
-      rules: '[id='com.tutu.zhianxing:id/skip_title']',
+      rules: '[id="com.tutu.zhianxing:id/skip_title"]',
       snapshotUrls: 'https://gkd-kit.songe.li/import/12847474',
     },
   ],
