@@ -140,15 +140,25 @@ export default defineAppConfig({
       ],
     },
     {
-      enable: false,
+      enable: true,
       key: 12,
       name: 'QQ小世界评论区广告',
       desc: '点击广告-弹出原因框-关闭此条广告',
-      activityIds: ['com.tencent.mobileqq.activity.SplashActivity'],
-      rules: '@LinearLayout[clickable = true] > TextView[text *= "广告"]',
-      snapshotUrls: [
-        'https://gkd-kit.songe.li/import/12847819',
-        'https://gkd-kit.songe.li/import/12847821',
+      activityIds: [
+      	'com.tencent.mobileqq.activity.SplashActivity',
+      	'com.tencent.biz.qqcircle.activity.QCircleFolderActivity',
+      ],
+      rules: [
+        {
+          key: 0,
+          matches: '@LinearLayout[clickable = true] > TextView[text *= "广告"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12847819',
+        },
+        {
+          preKeys: 0,
+          matches: '@LinearLayout[clickable = true] > TextView[text *= "广告"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12847821',
+        },
       ],
     },
   ],
