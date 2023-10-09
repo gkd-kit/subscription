@@ -1,6 +1,6 @@
 # 懂车帝
 
-存在 6 规则组 - [com.ss.android.auto](/src/apps/com.ss.android.auto.ts)
+存在 7 规则组 - [com.ss.android.auto](/src/apps/com.ss.android.auto.ts)
 
 ## 开屏广告
 
@@ -26,3 +26,8 @@
 ## 评论区广告
 
 - [快照-0](https://gkd-kit.gitee.io/import/12811459)
+- [快照-1](https://gkd-kit.gitee.io/import/12825865)
+
+## 请求推送通知弹窗
+
+- [快照-0](https://gkd-kit.gitee.io/import/12840664)
