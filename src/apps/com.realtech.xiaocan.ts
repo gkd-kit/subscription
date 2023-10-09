@@ -9,7 +9,7 @@ export default defineAppConfig({
       name: '开屏广告',
       activityIds: 'com.realtech.adscope.SplashActivity',
       rules:
-        '[id="com.realtech.xiaocan:id/splash_ad_container"] [text ^="跳过"]',
+        '[id = "com.realtech.xiaocan:id/splash_ad_container"] [text ^= "跳过"]',
       snapshotUrls: 'https://gkd-kit.songe.li/import/12843368',
     },
   ],
