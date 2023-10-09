@@ -26,7 +26,10 @@ export default defineAppConfig({
     {
       key: 2,
       name: '好友动态-广告卡片',
-      activityIds: 'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
+      activityIds: [
+        'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
+        'com.tencent.mobileqq.activity.SplashActivity',
+      ],
       rules: [
         {
           key: 0,
