@@ -11,9 +11,9 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          activityIds: 'com.android.launcher3.Launcher',
+          activityIds: 'com.taptap.other.basic.impl.TapMainActivity',
           matches: '[id="com.taptap.app.game:id/app_menu"][visibleToUser=true]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12840903',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12842279',
         },
         {
           key: 1,
