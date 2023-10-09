@@ -13,4 +13,14 @@ export default defineAppConfig({
       rules: '[text$="跳过"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12847303',
     },
+    {
+      key: 1,
+      name: '悬浮广告',
+      activityIds: 'com.tencent.mocmna.activity.MainActivity',
+      rules: 'ViewGroup[childCount=2] > @ImageView[id!=null] + ImageView',
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/12847323',
+        'https://gkd-kit.gitee.io/import/12847336',
+      ],
+    },
 });
