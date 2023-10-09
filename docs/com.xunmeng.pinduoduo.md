@@ -1,10 +1,10 @@
 # 拼多多
 
-存在 7 规则组 - [com.xunmeng.pinduoduo](/src/apps/com.xunmeng.pinduoduo.ts)
+存在 8 规则组 - [com.xunmeng.pinduoduo](/src/apps/com.xunmeng.pinduoduo.ts)
 
 ## 开屏广告
 
-默认禁用 - 占位，暂时不起作用
+- [快照-0](https://gkd-kit.songe.li/import/12799632)
 
 ## 更新弹窗
 
@@ -39,3 +39,9 @@
 ## 多多视频悬浮窗广告
 
 - [快照-0](https://gkd-kit.gitee.io/import/12642058)
+
+## 多多视频每日签到弹窗
+
+默认禁用
+
+- [快照-0](https://gkd-kit.gitee.io/import/12700615)
