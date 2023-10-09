@@ -114,9 +114,10 @@ export default defineAppConfig({
       ],
     },
     {
+      enable: false,
       key: 6,
       name: '订阅号文章广告',
-      desc: '自动点击关闭按钮，必须同时启用【订阅号文章广告反馈】规则',
+      desc: '⚠ 此规则有概率误触。自动点击关闭按钮，必须同时启用【订阅号文章广告反馈】规则',
       activityIds:
         'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebViewMMUI',
       rules: [
@@ -150,22 +151,27 @@ export default defineAppConfig({
       key: 7,
       name: '自动选中发送原图',
       desc: '图片和视频选择器-自动选中底部中间的发送原图',
-      activityIds: 'com.tencent.mm.plugin.gallery.ui.AlbumPreviewUI',
+      activityIds: [
+        'com.tencent.mm.plugin.gallery.ui.AlbumPreviewUI',
+        'com.tencent.mm.plugin.gallery.ui.ImagePreviewUI',
+      ],
       rules: [
         {
           key: 1,
           matches: '[text="原图"] - ImageButton[desc="未选中,原图,复选框"]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12686641', // 未选中
+            'https://gkd-kit.songe.li/import/12840865', // 未选中
             'https://gkd-kit.gitee.io/import/12686640', // 已选中
           ],
         },
       ],
     },
     {
+      enable: false,
       key: 8,
       name: '订阅号文章广告反馈',
-      desc: '自动点击反馈理由，配合【订阅号文章广告】规则使用',
+      desc: '⚠ 此规则有概率误触。自动点击反馈理由，配合【订阅号文章广告】规则使用',
       activityIds:
         'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebViewMMUI',
       rules: [
@@ -174,18 +180,19 @@ export default defineAppConfig({
           // preKeys: [1], 取消 preKeys 提高点击成功率
           name: '点击不感兴趣',
           matches:
-            '[id="feedbackTagContainer"][visibleToUser=true] + [id^="menu"] > [id="dislike"][text="不感兴趣"][visibleToUser=true]',
+            'View > [id="feedbackTagContainer"][visibleToUser=true] + [id^="menu"] > [id="dislike"][text="不感兴趣"][visibleToUser=true]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12642234',
             'https://gkd-kit.gitee.io/import/12722301',
             'https://gkd-kit.gitee.io/import/12722331', // 使用 [id="feedbackTagContainer"][visibleToUser=true] 进行限定，防止反馈界面未出现就触发规则
           ],
+          action: 'clickCenter', // 使用 clickCenter 事件点击，期望在快照 https://gkd-kit.gitee.io/import/12745280 中成功点击 [与我无关]
         },
         {
           key: 2,
           // preKeys: [2], 取消 preKeys 提高点击成功率
           name: '点击与我无关',
-          matches: '[id^="menu"] > [id="isdismatch"][text="与我无关"]',
+          matches: 'View > [id^="menu"] > [id="isdismatch"][text="与我无关"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12642238'],
         },
         {
@@ -204,6 +211,40 @@ export default defineAppConfig({
       activityIds: 'com.tencent.mm.ui.chatting.gallery.ImageGalleryUI',
       rules: 'Button[text^="查看原图"][clickable=true]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12706944',
+    },
+    {
+      enable: false,
+      key: 10,
+      name: '微信小程序-开屏广告',
+      activityIds: [
+        'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
+        'com.tencent.mm.plugin.appbrand.launching.AppBrandLaunchProxyUI',
+      ],
+      quickFind: true,
+      rules: [
+        {
+          matches:
+            '[text="广告"] < FrameLayout[childCount=1] <2 FrameLayout[childCount=3] <2 FrameLayout[childCount=2] - FrameLayout[childCount=3] > FrameLayout[childCount=2] >  FrameLayout[childCount=1] > [text="跳过"]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12701979',
+            'https://gkd-kit.gitee.io/import/12777076',
+            'https://gkd-kit.gitee.io/import/12785012',
+            'https://gkd-kit.gitee.io/import/12785183',
+          ],
+        },
+        {
+          matches:
+            '[text="广告"] < * <2 * <2 * <2 FrameLayout[childCount=2] - FrameLayout[childCount=2] >  FrameLayout[childCount=1] > [text="跳过"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12785246'],
+        },
+      ],
+    },
+    {
+      key: 11,
+      name: '网页版文件传输助手扫码自动授权',
+      activityIds: 'com.tencent.mm.ui.LauncherUI',
+      rules: '[text="打开网页版文件传输助手"] + * > Button[text="打开"]',
+      snapshotUrls: 'https://gkd-kit.songe.li/import/12793745',
     },
   ],
 });

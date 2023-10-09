@@ -10,6 +10,9 @@
 
 ## 评论区顶部公告横幅
 
+- [快照-0](https://gkd-kit.gitee.io/import/12785461)
+- [快照-1](https://gkd-kit.gitee.io/import/12775156)
+
 ## 青少年模式弹窗
 
 ## 动态推荐广告卡片
@@ -27,9 +30,10 @@
 
 - [快照-0](https://gkd-kit.gitee.io/import/12642260)
 - [快照-1](https://gkd-kit.gitee.io/import/12705266)
-- [快照-2](https://gkd-kit.gitee.io/import/12707070)
-- [快照-3](https://gkd-kit.gitee.io/import/12642261)
-- [快照-4](https://gkd-kit.gitee.io/import/12706768)
+- [快照-2](https://gkd-kit.songe.li/import/12776568)
+- [快照-3](https://gkd-kit.gitee.io/import/12707070)
+- [快照-4](https://gkd-kit.gitee.io/import/12642261)
+- [快照-5](https://gkd-kit.gitee.io/import/12706768)
 
 ## 推荐页-可跳过广告
 

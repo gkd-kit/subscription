@@ -5,6 +5,7 @@
 ## 开屏广告
 
 - [快照-0](https://gkd-kit.gitee.io/import/12667556)
+- [快照-1](https://gkd-kit.songe.li/import/12750045)
 
 ## 首页-地图页面上方消息提醒
 
@@ -16,6 +17,7 @@
 
 - [快照-0](https://gkd-kit.gitee.io/import/12642842)
 - [快照-1](https://gkd-kit.gitee.io/import/12642845)
+- [快照-2](https://gkd-kit.songe.li/import/12818770)
 
 ## 加油页面-优惠券弹窗
 
