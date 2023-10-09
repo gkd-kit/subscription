@@ -34,6 +34,7 @@ export default defineAppConfig({
         {
           key: 0,
           matches: 'View[desc="广告"] + ImageView[clickable=true]', // 1689050226722
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12847842',
         },
         {
           preKeys: 0,
