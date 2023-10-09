@@ -11,7 +11,9 @@ export default defineAppConfig({
         'com.sina.weibo.MainTabActivity',
         'com.sina.weibo.mobileads.view.', // 需要补充快照
       ],
-      rules: ['@RelativeLayout > TextView[text="跳过"]'],
+      matchLauncher: true,
+      quickFind: true,
+      rules: '@RelativeLayout > TextView[text="跳过"]',
       snapshotUrls: 'https://gkd-kit.songe.li/import/12782355',
     },
     {
