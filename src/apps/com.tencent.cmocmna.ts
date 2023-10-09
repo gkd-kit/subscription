@@ -23,4 +23,15 @@ export default defineAppConfig({
         'https://gkd-kit.gitee.io/import/12847336',
       ],
     },
+    {
+      key: 2,
+      name: '信息流内嵌广告',
+      activityIds: 'com.tencent.mocmna.activity.MainActivity',
+      rules: 'ImageView - ViewGroup > ImageView + ImageView + ImageView',
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/12847340',
+        'https://gkd-kit.gitee.io/import/12847364',
+      ],
+    },
+  ],
 });
