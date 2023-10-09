@@ -58,4 +58,15 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      enable: false,
+      key: 10,
+      name: '必读公告弹窗',
+      desc: '自动点击【我知道了】',
+      activityIds: 'com.zhiyin.qingdan.dashixiong.MainActivity',
+      quickFind: true,
+      rules: '[desc^="必读通告"] +n [desc="我知道了"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12843280',
+    },
+  ],
 });
