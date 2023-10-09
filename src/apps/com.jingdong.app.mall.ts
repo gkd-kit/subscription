@@ -9,7 +9,7 @@ export default defineAppConfig({
       name: '开屏广告',
       activityIds: 'com.jingdong.app.mall.MainFrameActivity',
       rules:
-        'RelativeLayout[desc="跳过"][id!=null] > TextView[text="跳过"][id!=null]',
+        '@RelativeLayout[desc="跳过"][id!=null] > TextView[text="跳过"][id!=null]',
       snapshotUrls: [
         'https://gkd-kit.gitee.io/import/12668289',
         'https://gkd-kit.gitee.io/import/12519430',
@@ -33,6 +33,37 @@ export default defineAppConfig({
       snapshotUrls: [
         'https://gkd-kit.gitee.io/import/12642270',
         'https://gkd-kit.songe.li/import/12774910', // 使用 [desc!="返回"] 进行限定，防止在进入商品详情页时点击返回按钮
+      ],
+    },
+    {
+      enable: false,
+      key: 3,
+      name: '首页-浮层广告',
+      activityIds: 'com.jingdong.app.mall.MainFrameActivity',
+      rules: [
+        {
+          matches:
+            '@[desc^="关闭浮层"] <n * < [id="com.jingdong.app.mall:id/home_float_layout"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12837870',
+        },
+      ],
+    },
+    {
+      enable: false,
+      key: 4,
+      name: '消息-打开通知',
+      activityIds:
+        'com.jd.lib.message.messagecenter.view.activity.MessageCenterMainActivityNew',
+      rules: [
+        {
+          matches: 'TextView[text="开启消息通知"] +n ImageView[clickable=true]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12839864',
+        },
+        {
+          matches:
+            'TextView[text ^="打开系统通知"] - FrameLayout[clickable=true]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12839865',
+        },
       ],
     },
   ],

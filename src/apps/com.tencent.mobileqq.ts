@@ -26,17 +26,17 @@ export default defineAppConfig({
     {
       key: 2,
       name: '好友动态-广告卡片',
+      activityIds: 'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
       rules: [
         {
-          activityIds:
-            'com.tencent.qqlive.module.videoreport.inject.dialog.ReportDialog',
-          matches:
-            '[clickable=true] > ImageView + TextView[text="关闭此条广告"]', // 1689050230463
+          key: 0,
+          matches: 'View[desc="广告"] + ImageView[clickable=true]', // 1689050226722
         },
         {
-          activityIds:
-            'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
-          matches: 'View[desc="广告"] + ImageView[clickable=true]', // 1689050226722
+          preKeys: 0,
+          matches:
+            '[clickable=true] > ImageView + TextView[text="关闭此条广告"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12840889',
         },
       ],
     },
@@ -64,12 +64,15 @@ export default defineAppConfig({
     {
       enable: false,
       key: 4,
-      name: '新人专享1元购SVIP',
+      name: '消息页面顶部-SVIP 广告',
       desc: '消息界面-搜索框和消息记录直接的广告卡片,点击关闭右侧x',
       activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
       rules:
-        '@ImageView[id!=null][clickable=true] -2 TextView[id!=null][text^="新人专享1元购SVIP"]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12706907',
+        'LinearLayout > TextView[text*="SVIP"] + FrameLayout + ImageView[id!=null]',
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/12706907',
+        'https://gkd-kit.songe.li/import/12793359',
+      ],
     },
     {
       enable: false,
@@ -102,15 +105,34 @@ export default defineAppConfig({
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12749584',
     },
     {
+      key: 7,
+      name: '扫一扫-登录确认',
+      activityIds: 'com.tencent.biz.qrcode.activity.QRLoginAuthActivity',
+      rules: 'Button[text="拒绝"] - Button[text="登录"]',
+      snapshotUrls: 'https://gkd-kit.songe.li/import/12789287',
+    },
+    {
       enable: false,
       key: 10,
       name: '自动勾选原图',
       desc: '发送图片时自动勾选原图',
       activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
-      rules: ['@CheckBox[checked=false] + [text="原图"]'],
+      rules: '@CheckBox[checked=false] + [text="原图"]',
       snapshotUrls: [
         'https://gkd-kit.gitee.io/import/12705556', // 未勾选原图
         'https://gkd-kit.gitee.io/import/12705559', // 已勾选原图
+      ],
+    },
+    {
+      enable: false,
+      key: 11,
+      name: '自动查看原图',
+      desc: '查看图片时自动点击原图',
+      activityIds: 'com.tencent.richframework.gallery.QQGalleryActivity',
+      rules: '[desc="查看原图"][checked=false]',
+      snapshotUrls: [
+        'https://gkd-kit.songe.li/import/12840632', // 点击原图前
+        'https://gkd-kit.songe.li/import/12840633', // 点击原图后
       ],
     },
   ],

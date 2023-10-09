@@ -5,6 +5,7 @@ export default defineAppConfig({
   name: '哔哩哔哩',
   groups: [
     {
+      quickFind: true,
       key: -1,
       name: '开屏广告',
       desc: '开屏广告,切回APP开屏广告',
@@ -12,22 +13,28 @@ export default defineAppConfig({
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12705270',
     },
     {
+      quickFind: true,
       key: 0,
       name: '评论区顶部公告横幅',
       rules:
-        'LinearLayout[id=`tv.danmaku.bili:id/ad_tint_frame`] > ImageView[id="tv.danmaku.bili:id/close"]',
+        'LinearLayout[id=`tv.danmaku.bili:id/ad_tint_frame`] > ImageView[id="tv.danmaku.bili:id/close"][desc=`关闭`]',
       excludeActivityIds: [
         'com.bilibili.bililive.room.ui.roomv3.LiveRoomActivityV3',
         'tv.danmaku.bili.MainActivityV2',
       ],
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12775156',
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/12785461',
+        'https://gkd-kit.gitee.io/import/12775156',
+      ],
     },
     {
+      quickFind: true,
       key: 1,
       name: '青少年模式弹窗',
       rules: 'TextView[text*=`青少年模式`] + TextView[text=`我知道了`]',
     },
     {
+      quickFind: true,
       key: 2,
       name: '动态推荐广告卡片',
       desc: '点击卡片右上角[广告]按钮-点击不感兴趣',
@@ -63,21 +70,25 @@ export default defineAppConfig({
       activityIds: [
         'com.bilibili.video.videodetail.VideoDetailsActivity',
         'com.bilibili.ship.theseus.all.UnitedBizDetailsActivity',
+        'com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity',
       ],
       rules: [
         {
           key: 0,
           name: '点击广告卡片右侧菜单图标',
           matches:
-            'FrameLayout[id="tv.danmaku.bili:id/ad_tint_frame"] >n [id="tv.danmaku.bili:id/more"]',
+            'FrameLayout[id="tv.danmaku.bili:id/ad_tint_frame"] >n [id^="tv.danmaku.bili:id/more"]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12642260', // n = 2
             'https://gkd-kit.gitee.io/import/12705266', // n = 3
+            'https://gkd-kit.songe.li/import/12776568', // id="tv.danmaku.bili:id/more_layout"
             'https://gkd-kit.gitee.io/import/12707070', // 由于 activityId 切换延迟导致规则仍然运行, 使用 FrameLayout 避免误触
           ],
         },
         {
+          quickFind: true,
           preKeys: 0,
+          key: 1,
           name: '点击屏蔽广告',
           matches:
             '[id="tv.danmaku.bili:id/menu_text"][text="屏蔽广告"] < [id="tv.danmaku.bili:id/title"] + [id="tv.danmaku.bili:id/dislike_reasons"] >2 [id="tv.danmaku.bili:id/reason1_layout"]',
@@ -89,12 +100,14 @@ export default defineAppConfig({
       ],
     },
     {
+      quickFind: true,
       key: 5,
       name: '推荐页-可跳过广告',
       activityIds: 'tv.danmaku.bili.MainActivityV2',
       rules: ['[id=`tv.danmaku.bili:id/click_skip`]'],
     },
     {
+      quickFind: true,
       key: 6,
       name: '更新弹窗',
       activityIds: 'com.bilibili.app.preferences.BiliPreferencesActivity',
