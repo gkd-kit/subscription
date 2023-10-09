@@ -1,6 +1,6 @@
 # 微信
 
-存在 10 规则组 - [com.tencent.mm](/src/apps/com.tencent.mm.ts)
+存在 12 规则组 - [com.tencent.mm](/src/apps/com.tencent.mm.ts)
 
 ## 朋友圈广告
 
@@ -38,33 +38,52 @@
 - [快照-2](https://gkd-kit.gitee.io/import/12567698)
 - [快照-3](https://gkd-kit.gitee.io/import/12567637)
 
-## 订阅号文章底部广告
+## 订阅号文章广告
 
-默认禁用 - 自动点击-广告反馈按钮-不感兴趣-与我无关
+默认禁用 - ⚠ 此规则有概率误触。自动点击关闭按钮，必须同时启用【订阅号文章广告反馈】规则
 
 - [快照-0](https://gkd-kit.gitee.io/import/12642232)
 - [快照-1](https://gkd-kit.gitee.io/import/12646837)
 - [快照-2](https://gkd-kit.gitee.io/import/12678937)
-- [快照-3](https://gkd-kit.gitee.io/import/12642234)
-- [快照-4](https://gkd-kit.gitee.io/import/12642238)
+- [快照-3](https://gkd-kit.gitee.io/import/12714427)
+- [快照-4](https://gkd-kit.gitee.io/import/12700183)
+- [快照-5](https://gkd-kit.gitee.io/import/12701503)
+- [快照-6](https://gkd-kit.gitee.io/import/12714424)
 
 ## 自动选中发送原图
 
 默认禁用 - 图片和视频选择器-自动选中底部中间的发送原图
 
 - [快照-0](https://gkd-kit.gitee.io/import/12686641)
-- [快照-1](https://gkd-kit.gitee.io/import/12686640)
+- [快照-1](https://gkd-kit.songe.li/import/12840865)
+- [快照-2](https://gkd-kit.gitee.io/import/12686640)
 
-## 订阅号文章中间广告
+## 订阅号文章广告反馈
 
-自动点击-关闭此广告
+默认禁用 - ⚠ 此规则有概率误触。自动点击反馈理由，配合【订阅号文章广告】规则使用
 
-- [快照-0](https://gkd-kit.gitee.io/import/12700183)
-- [快照-1](https://gkd-kit.gitee.io/import/12701503)
-- [快照-2](https://gkd-kit.gitee.io/import/12700191)
+- [快照-0](https://gkd-kit.gitee.io/import/12642234)
+- [快照-1](https://gkd-kit.gitee.io/import/12722301)
+- [快照-2](https://gkd-kit.gitee.io/import/12722331)
+- [快照-3](https://gkd-kit.gitee.io/import/12642238)
+- [快照-4](https://gkd-kit.gitee.io/import/12700191)
 
 ## 自动查看原图
 
 默认禁用 - 自动点击底部左侧[查看原图（*M）]按钮
 
 - [快照-0](https://gkd-kit.gitee.io/import/12706944)
+
+## 微信小程序-开屏广告
+
+默认禁用
+
+- [快照-0](https://gkd-kit.gitee.io/import/12701979)
+- [快照-1](https://gkd-kit.gitee.io/import/12777076)
+- [快照-2](https://gkd-kit.gitee.io/import/12785012)
+- [快照-3](https://gkd-kit.gitee.io/import/12785183)
+- [快照-4](https://gkd-kit.gitee.io/import/12785246)
+
+## 网页版文件传输助手扫码自动授权
+
+- [快照-0](https://gkd-kit.songe.li/import/12793745)

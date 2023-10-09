@@ -1,6 +1,6 @@
 # 网易云音乐
 
-存在 2 规则组 - [com.netease.cloudmusic](/src/apps/com.netease.cloudmusic.ts)
+存在 3 规则组 - [com.netease.cloudmusic](/src/apps/com.netease.cloudmusic.ts)
 
 ## 开屏广告
 
@@ -8,5 +8,13 @@
 
 ## 广告卡片
 
-- [快照-0](https://gkd-kit.songe.li/import/38517192/fea3449b-d642-4d75-929f-490421cc9080)
-- [快照-1](https://gkd-kit.songe.li/import/38517192/a977b19d-2b3c-43df-ba01-63e7cbbb3908)
+- [快照-0](https://gkd-kit.songe.li/import/12829967)
+- [快照-1](https://gkd-kit.songe.li/import/12829944)
+- [快照-2](https://gkd-kit.gitee.io/import/12723229)
+- [快照-3](https://gkd-kit.gitee.io/import/12829938)
+- [快照-4](https://gkd-kit.gitee.io/import/12829964)
+- [快照-5](https://gkd-kit.gitee.io/import/12829953)
+
+## 我的页面-中间滚动广告
+
+- [快照-0](https://gkd-kit.gitee.io/import/12745666)
