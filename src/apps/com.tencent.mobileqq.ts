@@ -143,9 +143,9 @@ export default defineAppConfig({
       activityIds: ['com.tencent.mobileqq.activity.SplashActivity'],
       rules: '@LinearLayout[clickable = true] > TextView[text *= "广告"]',
       snapshotUrls: [
-      	'https://gkd-kit.songe.li/import/12847819',
-      	'https://gkd-kit.songe.li/import/12847821',
-      ]
+        'https://gkd-kit.songe.li/import/12847819',
+        'https://gkd-kit.songe.li/import/12847821',
+      ],
     },
   ],
 });
