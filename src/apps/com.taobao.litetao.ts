@@ -19,8 +19,7 @@ export default defineAppConfig({
         'com.taobao.ltao.maintab.MainFrameActivity',
         'com.taobao.litetao.launcher.ALiFlutterActivityCompat',
       ],
-      rules:
-        '[id = "com.taobao.litetao:id/update_imageview_cancel_v2"]',
+      rules: '[id = "com.taobao.litetao:id/update_imageview_cancel_v2"]',
       snapshotUrls: [
         'https://gkd-kit.songe.li/import/12843615',
         'https://gkd-kit.songe.li/import/12843614',
