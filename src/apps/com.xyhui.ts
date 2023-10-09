@@ -52,7 +52,7 @@ export default defineAppConfig({
       key: 2,
       name: '首页-浮窗广告',
       activityIds: 'com.xyhui.start.PUMainActivity',
-      rules: 'ImageView[id*="id/delete"]',
+      rules: 'ImageView[id="com.xyhui:id/deleteIv"]',
       snapshotUrls: 'https://gkd-kit.songe.li/import/12846543',
     },
   ],
