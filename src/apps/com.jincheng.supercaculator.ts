@@ -12,7 +12,7 @@ export default defineAppConfig({
       snapshotUrls: [
         'https://gkd-kit.songe.li/import/12859523',
         'https://gkd-kit.songe.li/import/12859545',
-       ],
+      ],
     },
   ],
 });
