@@ -17,6 +17,7 @@ export default defineAppConfig({
           matches: '[id="com.mangshe.tvdown:id/skip_view2"]',
           snapshotUrls: 'https://gkd-kit.songe.li/import/12855707',
         },
+      ],
     },
     {
       key: 1,
