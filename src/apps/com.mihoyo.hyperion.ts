@@ -40,5 +40,13 @@ export default defineAppConfig({
       rules: 'TextView[id="com.mihoyo.hyperion:id/mUpgradeDialogCancel"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12675513',
     },
+    {
+      key: 3,
+      name: '自动签到',
+      desc: '切换板块自动签到',
+      rules:
+        'TextView[id="com.mihoyo.hyperion:id/mTvText" && visibleToUser=true]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12857503',
+    },
   ],
 });
