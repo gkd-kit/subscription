@@ -6,7 +6,8 @@ export default defineAppConfig({
   groups: [
     {
       key: 0,
-      name: '开屏广告',
+      name: '弹窗广告',
+      desc: '点击右上角x',
       activityIds: 'com.jincheng.supercaculator.activity.MainActivity',
       rules: '@Image < View < View TextView[text = "反馈"]',
       snapshotUrls: [
