@@ -10,7 +10,8 @@ export default defineAppConfig({
       activityIds: 'com.realtech.adscope.SplashActivity',
       rules: [
         {
-          matches: '[id = "com.realtech.xiaocan:id/splash_ad_container"] [text ^= "跳过"]',
+          matches:
+            '[id = "com.realtech.xiaocan:id/splash_ad_container"] [text ^= "跳过"]',
           snapshotUrls: 'https://gkd-kit.songe.li/import/12843368',
         },
         {
