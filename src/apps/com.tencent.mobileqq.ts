@@ -67,10 +67,8 @@ export default defineAppConfig({
       name: '消息页面顶部-SVIP 广告',
       desc: '消息界面-搜索框和消息记录之间的广告卡片,点击关闭右侧x',
       activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
-      rules: [
-        'LinearLayout > TextView[text*="SVIP"] + FrameLayout + ImageView[id!=null]',
-        'LinearLayout > TextView[text*="SVIP"] + FrameLayout + Button[id!=null]',
-      ],
+      rules:
+        'LinearLayout > TextView[text*="SVIP"] + FrameLayout + [name$="ImageView"||name$="Button"][id!=null]',
       snapshotUrls: [
         'https://gkd-kit.gitee.io/import/12706907',
         'https://gkd-kit.songe.li/import/12793359',
