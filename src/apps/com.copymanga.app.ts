@@ -57,6 +57,14 @@ export default defineAppConfig({
             'https://gkd-kit.gitee.io/import/12661019',
           ],
         },
+        {
+          matches: '[width=65 && name="android.widget.ImageView"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/snapshot/1693678286939',
+        },
+        {
+          matches: '[desc="就这样吧"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/snapshot/1696844030087',
+        },
       ],
     },
     {
