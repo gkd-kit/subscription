@@ -10,7 +10,8 @@ export default defineAppConfig({
       activityIds: 'com.firebear.androil.app.splash.SplashActivity',
       rules: [
         {
-          matches: '[id="com.firebear.androil:id/adContainerLay"] [text="跳过"]',
+          matches:
+            '[id="com.firebear.androil:id/adContainerLay"] [text="跳过"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12712742',
         },
         {
