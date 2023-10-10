@@ -151,12 +151,14 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          matches: '@LinearLayout[clickable = true] > TextView[text *= "广告"]',
+          matches:
+            'RelativeLayout[childCount=5] > @LinearLayout[clickable=true][childCount=2][id!=null] > TextView[text="广告"][id!=null]',
           snapshotUrls: 'https://gkd-kit.songe.li/import/12847819',
         },
         {
           preKeys: 0,
-          matches: '@LinearLayout[clickable = true] > TextView[text *= "广告"]',
+          matches:
+            '@LinearLayout[clickable=true] > TextView[text="关闭此条广告"]',
           snapshotUrls: 'https://gkd-kit.songe.li/import/12847821',
         },
       ],
