@@ -10,7 +10,7 @@ export default defineAppConfig({
       activityIds: 'net.dxzq.jgzx.activity.LoginPage',
       rules: [
         {
-          matches: '[text *= "跳过" && text.length <7]',
+          matches: 'TextView[text *= "跳过" && text.length <7]',
           snapshotUrls: 'https://gkd-kit.songe.li/import/12852136',
         },
       ],
