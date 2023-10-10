@@ -7,10 +7,13 @@ export default defineAppConfig({
     {
       key: 1,
       name: '开屏广告',
-      activityIds: ['com.miui.home.launcher.Launcher', 'com.flyersoft.seekbooks.ActivityMain'],
+      matchLauncher: true,
+      quickFind: true,
+      activityIds: ['com.flyersoft.seekbooks.ActivityMain'],
       rules: [
         {
-          matches: '[text="跳过" || text="跳过 "]',
+          matches:
+            '[id="com.flyersoft.seekbooks:id/splash_container1"] >5 [text^="跳过"][text.length<=3]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12857275',
         },
       ],
