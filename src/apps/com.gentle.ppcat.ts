@@ -11,8 +11,7 @@ export default defineAppConfig({
         {
           key: 0,
           activityIds: 'com.qq.e.ads.PortraitADActivity',
-          matches:
-            '@FrameLayout - LinearLayout [text$="惊喜奖励"]',
+          matches: '@FrameLayout - LinearLayout [text$="惊喜奖励"]',
           snapshotUrls: [
             'https://gkd-kit.songe.li/import/12777048',
             'https://gkd-kit.songe.li/import/12858015',
