@@ -10,7 +10,7 @@ export default defineAppConfig({
       activityIds: 'com.android.maya.activity.SplashActivity',
       rules: [
         {
-          matches: '[id *= "id/tt_splash_skip_btn"]',
+          matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
           snapshotUrls: 'https://gkd-kit.songe.li/import/12855897',
         },
       ],
