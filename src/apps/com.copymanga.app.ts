@@ -72,15 +72,15 @@ export default defineAppConfig({
       name: '加入书架按钮下面的广告',
       activityIds: 'com.copymanga.app.MainActivity',
       rules: [
-      {
-        matches: 'ImageView[id="com.copymanga.app:id/close"]',
-        snapshotUrls: 'https://gkd-kit.gitee.io/import/12504525',
-      },
-      {
-        matches: 'ImageView[width=36]',
-        snapshotUrls: 'https://gkd-kit.gitee.io/import/12851671',
-      },
-    ]
+        {
+          matches: 'ImageView[id="com.copymanga.app:id/close"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12504525',
+        },
+        {
+          matches: 'ImageView[width=36]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12851671',
+        },
+      ],
     },
   ],
 });
