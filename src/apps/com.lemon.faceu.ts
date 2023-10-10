@@ -9,10 +9,10 @@ export default defineAppConfig({
       name: '开屏广告',
       activityIds: 'com.android.maya.activity.SplashActivity',
       rules: [
-	      {
-	      	matches: '[id *= "id/tt_splash_skip_btn"]',
-	      	snapshotUrls: 'https://gkd-kit.songe.li/import/12855897',
-	      },
+        {
+          matches: '[id *= "id/tt_splash_skip_btn"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12855897',
+        },
       ],
     },
   ],
