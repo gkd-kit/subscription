@@ -19,10 +19,7 @@ export default defineAppConfig({
         {
           key: 0,
           desc: '英文版邮箱广告',
-          matches: [
-            '[id="com.tencent.androidqqmail:id/advertise_view_ad"]',
-            'LinearLayout > TextView + @LinearLayout[id!=null][clickable=true] > [text="Ads"]',
-          ],
+          matches: ['[id="com.tencent.androidqqmail:id/advertise_view_ad"]'],
           snapshotUrls: 'https://gkd-kit.songe.li/import/12842757',
         },
         {
