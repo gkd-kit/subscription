@@ -8,8 +8,7 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       activityIds: 'cmccwm.mobilemusic.ui.SplashActivity',
-      rules:
-        '[id = "cmccwm.mobilemusic.base_runtime:id/bt_skip_ad"] [text *= "跳过"]',
+      rules: '[id = "cmccwm.mobilemusic.base_runtime:id/bt_skip_ad"]',
       snapshotUrls: 'https://gkd-kit.songe.li/import/12852498',
     },
   ],
