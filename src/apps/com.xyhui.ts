@@ -43,10 +43,11 @@ export default defineAppConfig({
         {
           key: 2,
           matches:
-            '[text="查看详情"||text="立即打开"||text="立即抢购"||text="立即下载"] - View < FrameLayout -(4) FrameLayout > ImageView[id=null]',
+            'TextView - View < FrameLayout -(4) FrameLayout > ImageView[id=null]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12643276', // 查看详情
             'https://gkd-kit.songe.li/import/12793180', // 立即下载
+            'https://gkd-kit.songe.li/import/12868503', // 去微信看看
             'https://gkd-kit.gitee.io/import/12646420', // 华为手机的快照，activityId = 'com.huawei.android.launcher.unihome.UniHomeLauncher'
           ],
         },
