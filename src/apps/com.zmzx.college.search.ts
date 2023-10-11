@@ -7,8 +7,10 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
+      quickFind: true,
       activityIds: 'com.zmzx.college.search.activity.init.InitActivity',
-      rules: '[name$="ViewGroup"||name$="FrameLayout"] > TextView[text="跳过"]',
+      rules:
+        '[id="com.zmzx.college.search:id/ksad_splash_root_container"] [text="跳过"]',
       snapshotUrls: [
         'https://gkd-kit.songe.li/import/12867875',
         'https://gkd-kit.songe.li/import/12867970',
