@@ -29,19 +29,27 @@ export default defineAppConfig({
           name: '穿山甲',
           activityIds:
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
-          matches: [
-            '@Image < View + View >2 TextView[text="广告"]',
-            'TextView[text$="跳过"]',
-          ],
-          snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/12754919',
-            'https://gkd-kit.gitee.io/import/12864214',
-          ],
+          matches: '@Image < View + View >2 TextView[text="广告"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12754919'],
         },
       ],
     },
     {
       key: 2,
+      name: '第三方 SDK 广告',
+      rules: [
+        {
+          key: 0,
+          name: '穿山甲',
+          activityIds:
+            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
+          matches: 'TextView[text$="跳过"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12864214'],
+        },
+      ],
+    },
+    {
+      key: 3,
       name: '升级弹窗',
       activityIds: 'com.firebear.androil.app.home.MainActivity',
       rules:
