@@ -22,17 +22,40 @@ export default defineAppConfig({
           activityIds:
             'com.netease.cloudmusic.module.ad.feedback.AdFeedbackBottomSheet',
           matches: '[text="直接关闭"]',
-          snapshotUrls: [
-            'https://gkd-kit.songe.li/import/38517192/fea3449b-d642-4d75-929f-490421cc9080',
-          ],
+          snapshotUrls: ['https://gkd-kit.songe.li/import/12829967'],
         },
         {
-          activityIds: 'com.netease.cloudmusic.activity.MainActivity',
+          activityIds: [
+            'com.netease.cloudmusic.activity.MainActivity',
+            'com.netease.cloudmusic.music.biz.comment.activity.CommentActivity',
+            'com.netease.cloudmusic.music.biz.comment.activity.ReplyCommentActivity2',
+            'com.netease.cloudmusic.music.biz.search.activity.SearchActivity',
+          ],
           matches: '[id="com.netease.cloudmusic:id/adTagClose"]',
-          snapshotUrls:
-            'https://gkd-kit.songe.li/import/38517192/a977b19d-2b3c-43df-ba01-63e7cbbb3908',
+          snapshotUrls: [
+            'https://gkd-kit.songe.li/import/12829944',
+            'https://gkd-kit.gitee.io/import/12723229',
+            'https://gkd-kit.gitee.io/import/12829938',
+            'https://gkd-kit.gitee.io/import/12829964',
+            'https://gkd-kit.gitee.io/import/12829953',
+          ],
         },
       ],
+    },
+    {
+      key: 2,
+      name: '我的页面-中间滚动广告',
+      activityIds: ['com.netease.cloudmusic.activity.MainActivity'],
+      rules:
+        '[id="com.netease.cloudmusic:id/auto_scroll_switcher"] + [id="com.netease.cloudmusic:id/close_btn"]',
+      snapshotUrls: ['https://gkd-kit.gitee.io/import/12745666'],
+    },
+    {
+      key: 3,
+      name: '主页-免费听歌',
+      activityIds: ['com.netease.cloudmusic.activity.MainActivity'],
+      rules: ['@ImageView + ViewGroup > TextView[text="VIP歌曲免费听30分钟"]'],
+      snapshotUrls: ['https://gkd-kit.songe.li/import/12843383'],
     },
   ],
 });
