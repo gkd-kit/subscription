@@ -8,20 +8,35 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       activityIds: 'com.firebear.androil.app.splash.SplashActivity',
-      rules: '[id="com.firebear.androil:id/adContainerLay"] [text="跳过"]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12712742',
+      rules: [
+        {
+          matches:
+            '[id="com.firebear.androil:id/adContainerLay"] [text="跳过"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12712742',
+        },
+        {
+          matches: '[id="com.mangshe.tvdown:id/skip_view2"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12855707',
+        },
+      ],
     },
     {
       key: 1,
-      name: '第三方 SDK 广告',
+      name: '广告弹窗',
+      activityIds:
+        'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
       rules: [
         {
           key: 0,
-          name: '穿山甲',
-          activityIds:
-            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
+          name: '点击右上角x',
           matches: '@Image < View + View >2 TextView[text="广告"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12754919',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12754919'],
+        },
+        {
+          key: 1,
+          name: '点击右上角[数字s|跳过]',
+          matches: '[text="广告"] + View >4 [text="| 跳过"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12864214'],
         },
       ],
     },
