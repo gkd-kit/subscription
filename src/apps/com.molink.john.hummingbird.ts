@@ -7,8 +7,9 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
+      quickFind: true,
       activityIds: 'com.molink.john.hummingbird.activity.WellComeActivity',
-      rules: 'RelativeLayout > TextView[text*="跳过"]',
+      rules: '[id="com.molink.john.hummingbird:id/rl_timer"]',
       snapshotUrls: 'https://gkd-kit.songe.li/import/12867595',
     },
   ],
