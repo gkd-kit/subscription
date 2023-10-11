@@ -5,6 +5,7 @@ export default defineAppConfig({
   name: '必剪',
   groups: [
     {
+      enable: false,
       key: 0,
       name: '首页-开启通知权限请求',
       activityIds: 'com.bcut.homepage.widget.MainActivity',
