@@ -104,10 +104,8 @@ export default defineAppConfig({
         {
           name: '点击右上角x按钮',
           key: 0,
-          matches: [
-            'FlattenUIText[text^="广告"||text^="来自"] -n UIView[text^="不感兴趣"][clickable=true]',
-            'LynxFlattenUI[text$="广告"] +n UIView[text^="不感兴趣"][clickable=true]',
-          ],
+          matches:
+            '[text^="广告"|| text$="广告" ||text^="来自"] <n FrameLayout > UIView[text^="不感兴趣"][clickable=true]',
           action: 'clickCenter',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12733098',
