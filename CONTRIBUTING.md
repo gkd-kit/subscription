@@ -15,7 +15,7 @@
 
 ## 开始
 
-首先我们需要给需要添加规则的APP打快照, 也就是把APP的广告截图节点信息给保存下来 <https://gkd-kit.gitee.io/import/12505276>
+首先我们需要给需要添加规则的APP打快照, 也就是把APP的广告截图节点信息给保存下来 <https://gkd-kit.gitee.io/import/12505276> (如何获取这个链接将在审查快照这一步说明)
 
 首先打开APP-主页 -允许无障碍授权
 
@@ -86,6 +86,7 @@ Android>=11 的无障碍可以自己截屏, 所以如果你的设备不满足 An
 了解完了之后, 编写的选择器也很简单 `[id="com.mopub.ad.xiaomi:id/nativeclose"]`
 
 接下来测试这个选择器能否选中这个图标按钮, 点击审查工具的 选择器查询, 输入刚刚这个规则, 然后点击查询
+`这里点击右侧的分享-生成链接-zip才能获取快照链接（以/import/开头）`
 
 ![image](https://github.com/gkd-kit/subscription/assets/38517192/3aea04fd-da91-4f43-a79e-e40fdad4a5d4)
 
@@ -132,7 +133,7 @@ Android>=11 的无障碍可以自己截屏, 所以如果你的设备不满足 An
       rules: [
         {
           matches: '[text="关闭当前广告"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12505365',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12505365',//获取链接的方法在上一步有说明
         },
         {
           matches: '[id$="/nativeclose"]',
@@ -215,3 +216,21 @@ export default defineAppConfig({
 然后运行校验命令 `npm run check`, 它会检测你的规则是否书写正确, 也会检测每个选择器语法是否正确
 
 然后提交这个文件发起 pr 即可
+
+此外如果你想提交多个 APP 的规则, 你应该每个 APP 分别基于 main 分支新起分支 commit 然后每个 APP 的分支分别发起各自的 pr
+
+也就是你想提交 N 个 APP, 你应该分别发起 N 个 pr
+
+## 检测修复代码
+
+有些人可能没有配置 nodejs 环境或者直接在 github 网页上提交了
+
+而提交的代码可能存在 选择器语法不正确, 文件格式(如缩进换行)不正确 等问题, 这些问题就不能被自动检测和修复
+
+因此你需要在你 fork 后生成的新仓库启用 github actions, 操作也很简单
+
+只需要打开你的新仓库的 Actions 页面, 然后点击下方出现的按钮即可
+
+![img](https://github.com/gkd-kit/subscription/assets/38517192/d31f6afc-bf84-4a63-8800-698ed8d3a756)
+
+开启后, 当你提交并推送代码时, 它会自动帮你检测代码里的问题, 同时自动修复和提交修复后的代码
