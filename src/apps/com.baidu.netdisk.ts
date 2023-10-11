@@ -73,8 +73,7 @@ export default defineAppConfig({
       enable: false,
       key: 6,
       name: '更新提醒',
-      activityIds:
-        'com.baidu.netdisk.ui.MainActivity',
+      activityIds: 'com.baidu.netdisk.ui.MainActivity',
       rules:
         '[id="com.baidu.netdisk:id/dialog_button_cancel" && text="下次再说"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12863984',
