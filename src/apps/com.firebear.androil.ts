@@ -29,8 +29,14 @@ export default defineAppConfig({
           name: '穿山甲',
           activityIds:
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
-          matches: '@Image < View + View >2 TextView[text="广告"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12754919',
+          matches: [
+            '@Image < View + View >2 TextView[text="广告"]',
+            'TextView[text$="跳过"]',
+          ],
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12754919',
+            'https://gkd-kit.gitee.io/import/12864214',
+          ],
         },
       ],
     },
