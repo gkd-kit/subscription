@@ -13,7 +13,8 @@ export default defineAppConfig({
           key: 0,
           activityIds: 'com.taptap.other.basic.impl.TapMainActivity',
           matchLauncher: true,
-          matches: '[id="com.taptap.app.middle:id/decision_layout_mask"] + @[id="com.taptap.app.game:id/app_menu"][visibleToUser=true]',
+          matches:
+            '[id="com.taptap.app.middle:id/decision_layout_mask"] + @[id="com.taptap.app.game:id/app_menu"][visibleToUser=true]',
           snapshotUrls: [
             'https://gkd-kit.songe.li/import/12840903',
             'https://gkd-kit.songe.li/import/12842279',
