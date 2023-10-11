@@ -8,8 +8,11 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       activityIds: 'com.zmzx.college.search.activity.init.InitActivity',
-      rules: 'FrameLayout > TextView[text="跳过"]',
-      snapshotUrls: 'https://gkd-kit.songe.li/import/12867875',
+      rules: '[name$="ViewGroup"||name$="FrameLayout"] > TextView[text="跳过"]',
+      snapshotUrls: [
+        'https://gkd-kit.songe.li/import/12867875',
+        'https://gkd-kit.songe.li/import/12867970',
+      ],
     },
     {
       enable: false,
