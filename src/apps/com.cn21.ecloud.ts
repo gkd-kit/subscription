@@ -7,9 +7,9 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: ['com.cn21.ecloud.activity.login.StartActivity'],
+      activityIds: 'com.cn21.ecloud.activity.login.StartActivity',
       rules: '[id="com.cn21.ecloud:id/tv_ad_skip"]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12865476',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12865351',
     },
     {
       key: 1,
