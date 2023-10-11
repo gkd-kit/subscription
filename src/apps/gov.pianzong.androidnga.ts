@@ -11,7 +11,9 @@ export default defineAppConfig({
         'gov.pianzong.androidnga.activity.LoadingActivity',
         'com.miui.home.launcher.Launcher',
       ],
-      rules: ['[id="gov.pianzong.androidnga:id/iv_tg_ad"]'],
+      rules: ['[id="gov.pianzong.androidnga:id/iv_tg_ad"]',
+              '[id="gov.pianzong.androidnga:id/ksad_splash_circle_skip_view"]'
+             ],
       snapshotUrls: [
         'https://gkd-kit.gitee.io/import/12476484',
         'https://gkd-kit.gitee.io/import/12706127', // activityId: 'com.miui.home.launcher.Launcher'
