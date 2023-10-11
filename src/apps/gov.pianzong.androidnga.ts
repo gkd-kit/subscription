@@ -18,7 +18,7 @@ export default defineAppConfig({
       snapshotUrls: [
         'https://gkd-kit.gitee.io/import/12476484',
         'https://gkd-kit.gitee.io/import/12706127', // activityId: 'com.miui.home.launcher.Launcher',
-        'https://gkd-kit.gitee.io/import/12864707'// activityIds: 'gov.pianzong.androidnga.activity.LoadingActivity',
+        'https://gkd-kit.gitee.io/import/12864707', // activityIds: 'gov.pianzong.androidnga.activity.LoadingActivity',
       ],
     },
     {
