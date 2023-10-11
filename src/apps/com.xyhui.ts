@@ -28,7 +28,7 @@ export default defineAppConfig({
         {
           key: 1,
           matches:
-            '[text="查看详情"||text="立即打开"||text="立即抢购"||text="立即安装"||text="立即下载"] - View < FrameLayout - FrameLayout >(2) ImageView[id=null]',
+            'TextView - View < FrameLayout - FrameLayout >(2) ImageView[id=null]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12642482', // 查看详情
             'https://gkd-kit.gitee.io/import/12646347', // 立即打开
@@ -36,6 +36,7 @@ export default defineAppConfig({
             'https://gkd-kit.songe.li/import/12793157', // 立即安装
             'https://gkd-kit.songe.li/import/12793177', // 立即下载
             'https://gkd-kit.songe.li/import/12868157', // 立即下载, activityId = 'com.xyhui.start.LoadingActivity'
+            'https://gkd-kit.songe.li/import/12868369', // 去微信看看
             'https://gkd-kit.gitee.io/import/12646541', // 华为手机的快照，activityId = 'com.huawei.permissioncontroller.hwcust.appjump.AppJumpActivity'
           ],
         },
