@@ -71,16 +71,86 @@ export default defineAppConfig({
         {
           key: 0,
           activityIds: 'com.xunlei.downloadprovider.frame.MainTabActivity',
-          matches: '@[text="关闭"] +n LinearLayout > [text*="广告"]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12868648',
+          matches: '@[text="关闭"] +n * >n [text*="广告"]',
+          snapshotUrls: [
+            'https://gkd-kit.songe.li/import/12868648',
+            'https://gkd-kit.songe.li/import/12882366',
+          ],
         },
+
+        // 字节广告
         {
-          key: 1,
+          key: 10,
           activityIds:
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
           matches:
-            '@Image[text=""] < View +n View > View > TextView[text="广告"]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12868667',
+            '@Image[text=""] < View + View +n View > View > TextView[text="广告"]',
+          snapshotUrls: [
+            'https://gkd-kit.songe.li/import/12868667',
+            'https://gkd-kit.songe.li/import/12881946',
+          ],
+        },
+
+        // 腾讯广告
+        {
+          key: 20,
+          activityIds: 'com.xunlei.downloadprovider.frame.MainTabActivity',
+          matches: 'ImageView - FrameLayout > FrameLayout > ImageView',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12882132',
+        },
+        {
+          key: 21,
+          activityIds: 'com.xunlei.downloadprovider.frame.MainTabActivity',
+          matches:
+            'ImageView < FrameLayout - FrameLayout > FrameLayout > ImageView',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12882166',
+        },
+        {
+          key: 22,
+          activityIds: 'com.xunlei.downloadprovider.frame.MainTabActivity',
+          matches:
+            'ImageView - LinearLayout - FrameLayout > FrameLayout > ImageView',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12882237',
+        },
+
+        // 快手广告
+        {
+          key: 30,
+          activityIds: 'com.xunlei.downloadprovider.frame.MainTabActivity',
+          matchLauncher: true,
+          matches:
+            '@ImageView[visibleToUser=true] < ViewGroup < ViewGroup +n ViewGroup > [text="广告"]',
+          snapshotUrls: [
+            'https://gkd-kit.songe.li/import/12882199', // n = 1
+            'https://gkd-kit.songe.li/import/12881911', // n = 2
+            'https://gkd-kit.songe.li/import/12881976', // 限定 visibleToUser=true，防止在这个快照中误触
+          ],
+        },
+        {
+          key: 31,
+          activityIds: 'com.xunlei.downloadprovider.frame.MainTabActivity',
+          matches:
+            '[text="广告"] <2 ViewGroup -2 ViewGroup >n [text="跳过"] + ImageView',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12881976',
+        },
+      ],
+    },
+    {
+      key: 4,
+      name: '下载页面-广告卡片',
+      rules: [
+        {
+          key: 0,
+          activityIds: 'com.xunlei.downloadprovider.frame.MainTabActivity',
+          matches: '[id="com.xunlei.downloadprovider:id/ad_more"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12881865',
+        },
+        {
+          preKeys: [0],
+          key: 1,
+          activityIds: 'com.xunlei.downloadprovider.download.center.newcenter',
+          matches: '[id="com.xunlei.downloadprovider:id/close_ad"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/128818775',
         },
       ],
     },
