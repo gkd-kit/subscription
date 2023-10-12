@@ -21,5 +21,18 @@ export default defineAppConfig({
         '@[id="com.netease.gl:id/iv_close"] +2 LinearLayout >n [id="com.netease.gl:id/btn_update"]',
       snapshotUrls: 'https://gkd-kit.songe.li/import/12883135',
     },
+    {
+      key: 2,
+      name: '应用内广告弹窗',
+      rules: [
+        {
+          key: 0,
+          activityIds: 'com.netease.gl.ui.activity.welcome.WelcomeActivity',
+          matches:
+            '@[id="com.netease.gl:id/iv_close"] + [id="com.netease.gl:id/iv_cover"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12883277',
+        },
+      ],
+    },
   ],
 });
