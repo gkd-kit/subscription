@@ -13,11 +13,27 @@ export default defineAppConfig({
     },
     {
       key: 0,
-      name: '推荐页广告',
+      name: '信息流广告',
       activityIds: 'com.uc.browser.InnerUCMobile',
       rules: [
-        'TextView[text=`屏蔽此条广告`]',
-        'TextView[text=`广告`] +n ImageView[desc=`不感兴趣`]',
+        {
+          key: 0,
+          matches:
+            'TextView[text="广告"] +n ImageView[desc="不感兴趣"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://gkd-kit.songe.li/import/12880737',
+            'https://gkd-kit.songe.li/import/12881751', // 限定 visibleToUser=true，尽量减少对正常浏览信息的干扰
+          ],
+        },
+        {
+          preKeys: [0],
+          key: 1,
+          matches: '[text^="屏蔽"][text$="广告"]',
+          snapshotUrls: [
+            'https://gkd-kit.songe.li/import/12880772',
+            'https://gkd-kit.songe.li/import/12881307',
+          ],
+        },
       ],
     },
   ],
