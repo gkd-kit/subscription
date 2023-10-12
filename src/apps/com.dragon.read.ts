@@ -52,10 +52,11 @@ export default defineAppConfig({
     {
       key: 11,
       name: '广告弹窗',
-      desc: '自动点击【X】',
+      desc: '点击底部圆形x图标',
+      quickFind: true,
       activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
       rules:
-        'FrameLayout > LinearLayout > ImageView[id !=null &&clickable =true ]',
+        '@ImageView[clickable=true] <2 LinearLayout[childCount=2] < [id="android:id/content"][childCount=1]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12878266',
     },
   ],
