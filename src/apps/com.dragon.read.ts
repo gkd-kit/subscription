@@ -49,5 +49,14 @@ export default defineAppConfig({
         '@[text="取消"] < LinearLayout -2 LinearLayout > [text="开启推送提醒"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12716592',
     },
+    {
+      key: 11,
+      name: '广告弹窗',
+      desc: '自动点击【X】',
+      activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
+      rules:
+        'FrameLayout > LinearLayout > ImageView[id !=null &&clickable =true ]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12878266',
+    },
   ],
 });
