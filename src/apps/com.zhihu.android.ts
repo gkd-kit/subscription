@@ -7,10 +7,11 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
+      quickFind: true,
+      matchLauncher: true,
       activityIds: [
         'com.zhihu.android.app.ui.activity.LauncherActivity',
         'com.zhihu.android.app.feed.AdTransparentHostActivity',
-        'com.miui.home.launcher.Launcher',
         'com.zhihu.android.ContentActivity',
         'com.zhihu.android.mixshortcontainer.MixShortContainerActivity',
       ],
