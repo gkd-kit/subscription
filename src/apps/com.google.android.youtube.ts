@@ -26,7 +26,8 @@ export default defineAppConfig({
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12877357',
       activityIds:
         'com.google.android.apps.youtube.app.watchwhile.WatchWhileActivity',
-      rules: 'ImageView < @Button < ViewGroup +3 Button[desc*="YouTube Premium"]',
+      rules:
+        'ImageView < @Button < ViewGroup +3 Button[desc*="YouTube Premium"]',
     },
   ],
 });
