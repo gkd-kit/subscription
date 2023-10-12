@@ -119,7 +119,6 @@ export default defineAppConfig({
       ],
     },
     {
-      enable: true,
       key: 11,
       name: '传输界面-广告弹窗',
       desc: '自动点击 右上角x 关闭',
