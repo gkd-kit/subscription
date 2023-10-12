@@ -47,5 +47,12 @@ export default defineAppConfig({
         'https://gkd-kit.songe.li/import/12880802',
       ],
     },
+    {
+      key: 11,
+      name: '请求添加桌面快捷方式权限弹窗',
+      activityIds: 'com.uc.browser.InnerUCMobile',
+      rules: '@ImageView + [text^="添加"][text$="到桌面"]',
+      snapshotUrls: 'https://gkd-kit.songe.li/import/12880983',
+    },
   ],
 });
