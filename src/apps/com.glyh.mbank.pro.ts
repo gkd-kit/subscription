@@ -7,10 +7,9 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: 'com.miui.home.launcher.Launcher',
       matchLauncher: true,
-      rules:
-        'TextView[id="com.glyh.mbank.pro:id/tv_countdown" && text*="跳过"]',
+      quickFind: true,
+      rules: 'TextView[id="com.glyh.mbank.pro:id/tv_countdown"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12876201',
     },
   ],
