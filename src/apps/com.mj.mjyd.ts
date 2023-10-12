@@ -7,8 +7,9 @@ export default defineAppConfig({
     {
       key: 1,
       name: '广告弹窗',
-      activityIds: 'li.songe.gkd.MainActivity',
-      rules: 'ImageView -2 FrameLayout > ImageView[depth=7 && index =0]',
+      quickFind: true,
+      rules:
+        '@ImageView < FrameLayout[childCount=1] <2 FrameLayout[childCount=6] >3 [text="立即下载"]',
       snapshotUrls: 'https://gkd-kit.songe.li/import/12877729',
     },
   ],
