@@ -22,8 +22,11 @@ export default defineAppConfig({
       ],
       rules: [
         {
-          matches: '[text="关闭当前广告"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12505365',
+          matches: '[text="关闭当前广告"||text="不喜欢此广告"]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12505365',
+            'https://gkd-kit.songe.li/import/12882277',
+          ],
         },
         {
           matches: '[id$="/nativeclose"]',
@@ -33,6 +36,16 @@ export default defineAppConfig({
           ],
         },
       ],
+    },
+    {
+      enable: false,
+      key: 2,
+      name: '升级提示',
+      activityIds:
+        'com.android.packageinstaller.permission.ui.GrantPermissionsActivity',
+      rules:
+        '[id="cn.wps.moffice_eng:id/close_new_func_guide_dialog_imageView"]',
+      snapshotUrls: 'https://gkd-kit.songe.li/import/12882371',
     },
   ],
 });
