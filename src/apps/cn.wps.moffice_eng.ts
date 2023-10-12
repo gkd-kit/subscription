@@ -38,14 +38,55 @@ export default defineAppConfig({
       ],
     },
     {
-      enable: false,
       key: 2,
-      name: '升级提示',
-      activityIds:
+      name: '首页-弹窗广告',
+      activityIds: [
+        'cn.wps.moffice.main.AfterLoginActivity',
         'com.android.packageinstaller.permission.ui.GrantPermissionsActivity',
+      ],
+      rules: '[id="cn.wps.moffice_eng:id/afterlogin_cancel"]',
+      snapshotUrls: [
+        'https://gkd-kit.songe.li/import/12882589',
+        'https://gkd-kit.songe.li/import/12882712',
+      ],
+    },
+    {
+      enable: false,
+      key: 3,
+      name: '升级提示',
+      activityIds: [
+        'com.android.packageinstaller.permission.ui.GrantPermissionsActivity',
+        'cn.wps.moffice.main.local.HomeRootActivity',
+      ],
       rules:
         '[id="cn.wps.moffice_eng:id/close_new_func_guide_dialog_imageView"]',
       snapshotUrls: 'https://gkd-kit.songe.li/import/12882371',
+    },
+    {
+      enable: false,
+      key: 4,
+      name: '开启WPS云服务',
+      desc: '自动点击不开启',
+      activityIds: [
+        'cn.wps.moffice.main.cloud.roaming.login.core.QingLoginActivity',
+        'com.tencent.mm.plugin.webview.ui.tools.SDKOAuthUI',
+        'com.tencent.mm.ui.base.w',
+      ],
+      rules: [
+        {
+          matches:
+            '[id="cn.wps.moffice_eng:id/cloud_protocol_dialog_not_start_btn"]',
+          snapshotUrls: [
+            'https://gkd-kit.songe.li/import/12882536',
+            'https://gkd-kit.songe.li/import/12882610',
+            'https://gkd-kit.songe.li/import/12882678',
+          ],
+        },
+        {
+          matches: '[id="cn.wps.moffice_eng:id/dialog_button_positive"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12882554',
+        },
+      ],
     },
   ],
 });
