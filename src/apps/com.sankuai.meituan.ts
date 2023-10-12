@@ -81,8 +81,7 @@ export default defineAppConfig({
       name: '请求定位弹窗',
       desc: '首页-顶部-打开位置开关，点击右侧x关闭',
       activityIds: 'com.meituan.android.pt.homepage.activity.MainActivity',
-      rules:
-        '@[id ="com.sankuai.meituan:id/location_close"] -2 [text ^= "打开位置开关"]',
+      rules: '[id ="com.sankuai.meituan:id/location_close"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12874657',
     },
   ],
