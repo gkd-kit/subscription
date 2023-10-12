@@ -164,7 +164,7 @@ export default defineAppConfig({
       ],
     },
     {
-      key: 4,
+      key: 5,
       name: '搜索页面-顶部banner广告',
       activityIds:
         'com.xunlei.downloadprovider.search.ui.search.SearchOperateActivity',
