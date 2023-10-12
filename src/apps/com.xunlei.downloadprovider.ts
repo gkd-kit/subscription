@@ -94,10 +94,29 @@ export default defineAppConfig({
     },
     {
       key: 10,
-      name: '会员续费弹窗',
-      activityIds: 'com.xunlei.downloadprovider.homepage.member',
-      rules: '[id="com.xunlei.downloadprovider:id/close_btn"]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12707698',
+      name: '会员续费广告',
+      rules: [
+        {
+          key: 0,
+          activityIds: 'com.xunlei.downloadprovider.homepage.member',
+          matches: '[id="com.xunlei.downloadprovider:id/close_btn"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12707698',
+        },
+        {
+          key: 1,
+          activityIds: 'com.xunlei.downloadprovider.frame.MainTabActivity',
+          matches:
+            '[id="com.xunlei.downloadprovider:id/all_picture_image"] + [id="com.xunlei.downloadprovider:id/close_btn"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12882928',
+        },
+        {
+          key: 2,
+          activityIds: 'com.xunlei.downloadprovider.frame.MainTabActivity',
+          matches:
+            '[text="立即开通"] + [id="com.xunlei.downloadprovider:id/close"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12882939',
+        },
+      ],
     },
     {
       enable: true,
