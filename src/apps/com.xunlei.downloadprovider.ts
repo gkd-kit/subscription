@@ -13,8 +13,7 @@ export default defineAppConfig({
     },
     {
       key: 1,
-      name: '视频详情-广告卡片',
-      desc: '自动点击【不感兴趣】',
+      name: '视频详情页广告',
       activityIds:
         'com.xunlei.downloadprovider.download.taskdetails.newui.DownloadDetailsActivity',
       rules: [
@@ -34,6 +33,12 @@ export default defineAppConfig({
             'https://gkd-kit.gitee.io/import/12707717', // activityId: 'com.xunlei.downloadprovider.download.taskdetails.newui.DownloadDetailsActivity',
             'https://gkd-kit.gitee.io/import/12707702', // activityId: 'com.xunlei.downloadprovider.feedback.view'
           ],
+        },
+        {
+          key: 2,
+          activityIds: 'com.xunlei.downloadprovider.feedback.view',
+          matches: '[id="com.xunlei.downloadprovider:id/ad_ima_skip"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12882988',
         },
       ],
     },
