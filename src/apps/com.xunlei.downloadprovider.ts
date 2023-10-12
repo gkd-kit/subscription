@@ -85,7 +85,14 @@ export default defineAppConfig({
       ],
     },
     {
-      enable: true,
+      key: 4,
+      name: '搜索页面-顶部banner广告',
+      activityIds:
+        'com.xunlei.downloadprovider.search.ui.search.SearchOperateActivity',
+      rules: '[id="com.xunlei.downloadprovider:id/search_banner_ad_close"]',
+      snapshotUrls: 'https://gkd-kit.songe.li/import/12882892',
+    },
+    {
       key: 10,
       name: '会员续费弹窗',
       activityIds: 'com.xunlei.downloadprovider.homepage.member',
