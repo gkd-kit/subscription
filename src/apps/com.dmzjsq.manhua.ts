@@ -7,9 +7,11 @@ export default defineAppConfig({
     {
       key: 1,
       name: '广告弹窗',
-      activityIds: 'com.miui.home.launcher.Launcher',
-      rules: 'ImageView - FrameLayout ImageView[depth=7 && index =0]',
-      snapshotUrls: 'https://gkd-kit.songe.li/import/2878085',
+      matchLauncher: true,
+      quickFind: true,
+      rules:
+        '@ImageView < FrameLayout[childCount=1] <3 FrameLayout[childCount=5] <2 FrameLayout[childCount=3] < FrameLayout[childCount=1] < [id="android:id/content"][childCount=1]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12885087',
     },
   ],
 });
