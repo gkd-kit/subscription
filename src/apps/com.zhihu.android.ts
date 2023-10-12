@@ -11,9 +11,13 @@ export default defineAppConfig({
         'com.zhihu.android.app.ui.activity.LauncherActivity',
         'com.zhihu.android.app.feed.AdTransparentHostActivity',
         'com.miui.home.launcher.Launcher',
+        'com.zhihu.android.ContentActivity',
       ],
       rules: 'TextView[id="com.zhihu.android:id/btn_skip"]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12707641',
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/12707641',
+        'https://gkd-kit.songe.li/import/12841423',
+      ],
     },
     {
       key: 1,
@@ -80,7 +84,9 @@ export default defineAppConfig({
         },
         {
           key: 1,
-          matches: 'TextView[text$=`的广告`] +n TextView[text=`×`]',
+          matches:
+            'TextView[text$=`的广告`] +n TextView[text=`×`][visibleToUser=true]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12864109',
         },
         {
           key: 2,
