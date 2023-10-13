@@ -11,12 +11,16 @@ export default defineAppConfig({
       activityIds:
         'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Activity_T',
       rules: [
-        '@ImageView < FrameLayout[childCount=1] <2 FrameLayout[childCount=6] >3 [text="立即下载"]',
-        'ImageView -2 FrameLayout ImageView[depth=8 && index =0]',
-      ],
-      snapshotUrls: [
-        'https://gkd-kit.songe.li/import/12877729',
-        'https://gkd-kit.songe.li/import/12895086',
+        {
+          matches:
+            '@ImageView < FrameLayout[childCount=1] <2 FrameLayout[childCount=6] >3 [text="立即下载"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12877729',
+        },
+        {
+          matches:
+            '@ImageView < FrameLayout[childCount=1] <3 FrameLayout[childCount=5] <3 FrameLayout[childCount=5] >3 [text="立即下载"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12895086',
+        },
       ],
     },
   ],
