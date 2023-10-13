@@ -11,7 +11,7 @@ export default defineAppConfig({
       activityIds:
         'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Activity_T',
       rules: [
-        '@ImageView < FrameLayout[childCount=1] <2 FrameLayout >3 [text="立即下载"]',
+        '@ImageView < FrameLayout[childCount=1] <2 FrameLayout[childCount=6] >3 [text="立即下载"]',
         'ImageView -2 FrameLayout ImageView[depth=8 && index =0]',
       ],
       snapshotUrls: [
