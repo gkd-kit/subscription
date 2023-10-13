@@ -36,5 +36,13 @@ export default defineAppConfig({
       quickFind: true,
       snapshotUrls: 'https://gkd-kit.songe.li/import/12893419',
     },
+    {
+      key: 3,
+      name: '学习-弹窗',
+      activityIds: 'com.youdao.dict.edu.main.MainPopDialog',
+      rules: '@ImageView[id="com.youdao.dict:id/iv_close"]',
+      quickFind: true,
+      snapshotUrls: 'https://gkd-kit.songe.li/import/12893450',
+    },
   ],
 });
