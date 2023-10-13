@@ -51,7 +51,7 @@ export default defineAppConfig({
       activityIds: [
         'com.sigmob.sdk.base.common.TransparentAdActivity',
         'com.baidu.mobads.sdk.api.MobRewardVideoActivity',
-    ],
+      ],
       matchLauncher: true,
       rules: [
         {
