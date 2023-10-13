@@ -8,7 +8,7 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       activityIds: ['com.miui.home.launcher.Launcher'],
-      matchlauncher: true, 
+      matchLauncher: true, 
       rules: [
         {//这里应该有简单的定位写法, 请指教
           matches: 'TextView[text="滑动屏幕"] <3 ViewGroup <2 ViewGroup < ViewGroup +3 ViewGroup > ViewGroup > @TextView[text="跳过"]',
@@ -23,7 +23,7 @@ export default defineAppConfig({
             'com.baidu.mobads.sdk.api.MobRewardVideoActivity',
             'com.maoyun.guoguo.MainActivity', 
         ],
-        matchlauncher: true, 
+        matchLauncher: true, 
         rules: [
           {
             matches: '@Button[desc="关闭"] + Button[desc="不再显示"]',
