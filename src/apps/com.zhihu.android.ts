@@ -11,11 +11,10 @@ export default defineAppConfig({
       matchLauncher: true,
       activityIds: [
         'com.zhihu.android.app.ui.activity.LauncherActivity',
-        'com.zhihu.android.app.ui.activity.LaunchAdActivity', 
+        'com.zhihu.android.app.ui.activity.LaunchAdActivity',
         'com.zhihu.android.app.feed.AdTransparentHostActivity',
         'com.zhihu.android.ContentActivity',
         'com.zhihu.android.mixshortcontainer.MixShortContainerActivity',
-        
       ],
       rules: 'TextView[id="com.zhihu.android:id/btn_skip"]',
       snapshotUrls: [
