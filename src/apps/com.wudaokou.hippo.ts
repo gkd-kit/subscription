@@ -9,10 +9,10 @@ export default defineAppConfig({
       name: '开屏广告',
       activityIds: 'com.wudaokou.hippo.launcher.splash.SplashActivity',
       matchLauncher: true,
+      quickFind: true,
       rules: [
         {
-          matches:
-            'ImageView + TextView[id="com.wudaokou.hippo:id/splash_skip"]',
+          matches: '[id="com.wudaokou.hippo:id/splash_skip"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12891918',
         },
       ],
