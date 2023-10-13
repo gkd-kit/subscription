@@ -84,19 +84,28 @@ export default defineAppConfig({
       key: 5,
       name: '好友热播',
       desc: '好友动态中的好友热播，自动选择“减少好友热播” - 默认关闭',
-      activityIds: 'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
+      activityIds: [
+        'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
+        'com.tencent.mobileqq.activity.SplashActivity',
+      ],
       rules: [
         {
           name: '点击[好友热播]卡片右上角菜单按钮',
           matches:
             'TextView[text="好友热播"] + Button[id^="com.tencent.mobileqq.qzone_df_impl:id/"][clickable=true]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12721427',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12721427', // com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity
+            'https://gkd-kit.songe.li/import/12894359', // com.tencent.mobileqq.activity.SplashActivity
+          ],
         },
         {
           name: '点击[减少好友热播]',
           matches:
             'TextView[text="减少好友热播"] <2 LinearLayout < LinearLayout[id^="com.tencent.mobileqq.qzone_df_impl:id/"][clickable=true]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12721433',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12721433', // com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity
+            'https://gkd-kit.songe.li/import/12894375', // com.tencent.mobileqq.activity.SplashActivity
+          ],
         },
       ],
     },
