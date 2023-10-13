@@ -38,13 +38,31 @@ export default defineAppConfig({
     {
       enable: false,
       key: 3,
-      name: '浮层广告',
+      name: '首页-浮层广告',
       activityIds: 'com.jingdong.app.mall.MainFrameActivity',
       rules: [
         {
-          key: 0,
-          matches: '@[desc^="关闭浮层"] + [desc="浮层活动"]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12740073',
+          matches:
+            '@[desc^="关闭浮层"] <n * < [id="com.jingdong.app.mall:id/home_float_layout"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12837870',
+        },
+      ],
+    },
+    {
+      enable: false,
+      key: 4,
+      name: '消息-打开通知',
+      activityIds:
+        'com.jd.lib.message.messagecenter.view.activity.MessageCenterMainActivityNew',
+      rules: [
+        {
+          matches: 'TextView[text="开启消息通知"] +n ImageView[clickable=true]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12839864',
+        },
+        {
+          matches:
+            'TextView[text ^="打开系统通知"] - FrameLayout[clickable=true]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12839865',
         },
       ],
     },

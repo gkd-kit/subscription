@@ -59,11 +59,24 @@ export default defineAppConfig({
     {
       key: 5,
       name: '评论区广告',
-      activityIds:
+      activityIds: [
         'com.ss.android.article.base.feature.detail2.view.NewDetailActivity',
+        'com.ss.android.auto.ugc.video.activity.UgcLongPostActivity',
+      ],
       rules:
         'RelativeLayout[childCount=5][id=null] > @ImageView[clickable=true][id!=null] - LinearLayout[childCount=2][id!=null] > TextView[text="广告"][id!=null]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12811459',
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/12811459',
+        'https://gkd-kit.gitee.io/import/12825865',
+      ],
+    },
+    {
+      key: 6,
+      name: '请求推送通知弹窗',
+      activityIds: 'com.ss.android.auto.activity.SplashActivity',
+      rules:
+        '@TextView[clickable=true && text.length =1] + [text ^="打开推送通知"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12840664',
     },
   ],
 });

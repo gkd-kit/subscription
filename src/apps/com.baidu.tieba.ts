@@ -8,6 +8,7 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       desc: '数字倒计时广告,圆形倒计时广告',
+      quickFind: true,
       activityIds: [
         'com.baidu.tieba.tblauncher.MainTabActivity',
         'com.baidu.tieba.pb.pb.main.PbActivity',
@@ -21,13 +22,18 @@ export default defineAppConfig({
         { key: 1, matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]' }, // 需要补充快照
         {
           key: 2,
-          matches: 'TextView[text*="广告"] - TextView[text^="跳过"]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12775906',
+          matches:
+            'TextView[text*="广告"||text.length=1] - TextView[text^="跳过"][text.length=5||text.length=2]',
+          snapshotUrls: [
+            'https://gkd-kit.songe.li/import/12775906',
+            'https://gkd-kit.gitee.io/import/12566191',
+          ],
         },
         {
           key: 3,
-          matches: '@TextView[text="跳过"] + TextView[text.length=1]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12566191'],
+          matches:
+            '@FrameLayout[childCount=1][clickable=true][id!=null] > TextView[text="跳过"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12870916',
         },
       ],
     },
@@ -39,7 +45,7 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      name: '首页/贴吧帖子列表-推荐列表-长得像帖子的广告卡片',
+      name: '首页/吧内-帖子列表-推荐列表-长得像帖子的广告卡片',
       activityIds: [
         'com.baidu.tieba.tblauncher.MainTabActivity',
         'com.baidu.tieba.frs.FrsActivity',
@@ -48,8 +54,11 @@ export default defineAppConfig({
         {
           key: 0,
           matches:
-            'TextView[text$="广告"] < RelativeLayout <n LinearLayout - RelativeLayout > LinearLayout > FrameLayout +n RelativeLayout > LinearLayout',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12775930',
+            'TextView[text$="广告"] <n RelativeLayout <n LinearLayout - RelativeLayout > LinearLayout > FrameLayout +n RelativeLayout > LinearLayout',
+          snapshotUrls: [
+            'https://gkd-kit.songe.li/import/12775930',
+            'https://gkd-kit.gitee.io/import/12840951',
+          ],
         },
       ],
     },
@@ -95,14 +104,17 @@ export default defineAppConfig({
         },
       ],
     },
-    {
-      key: 6,
-      name: '首页左侧游戏广告小图标',
-      activityIds: 'com.baidu.tieba.tblauncher.MainTabActivity',
-      rules: [
-        'ImageView[clickable=true] - RelativeLayout[clickable=false][childCount=1] > ImageView[clickable=true]',
-      ],
-    },
+    // 在"我的"界面中出现不停点击，问题快照: https://gkd-kit.gitee.io/import/12839905
+    // 且现有规则缺少快照核实问题所在,故暂时移除规则
+    // {
+    //   key: 6,
+    //   name: '首页左侧游戏广告小图标',
+    //   activityIds: 'com.baidu.tieba.tblauncher.MainTabActivity',
+    //   rules: [
+    //     'ImageView[clickable=true] - RelativeLayout[clickable=false][childCount=1] > ImageView[clickable=true]',
+    //   ],
+    // },
+
     {
       key: 7,
       name: '升级弹窗',
