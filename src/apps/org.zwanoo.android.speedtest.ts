@@ -13,7 +13,7 @@ export default defineAppConfig({
           activityIds: 'com.ookla.mobile4.screens.main.MainViewActivity',
           quickFind: true,
           matches:
-            '@View + ImageView[id="org.zwanoo.android.speedtest:id/suite_completed_close_ad_button"]',
+            '[id="org.zwanoo.android.speedtest:id/suite_completed_close_ad_button"]',
           snapshotUrls: 'https://gkd-kit.songe.li/import/12893175',
         },
       ],
