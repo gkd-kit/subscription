@@ -19,9 +19,9 @@ export default defineAppConfig({
       desc: '规则误触,待修复,需要快照准确定位',
       activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
       rules: [
-        'ImageView[id!=null][desc="关闭"][clickable=true]', // 1687669217838
+        '@[desc="关闭"][clickable=true] - LinearLayout > TextView[text!=null] + TextView[text!=null]', // 1687669217838
       ],
-      snapshotUrls: 'https://gkd-kit.songe.li/import/12774870',
+      snapshotUrls: 'https://gkd-kit.songe.li/import/12892726',
     },
     {
       key: 2,
