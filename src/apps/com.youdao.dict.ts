@@ -28,5 +28,13 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 2,
+      name: '主页弹窗',
+      activityIds: 'com.youdao.dict.activity.MainActivity',
+      rules: '@ImageView[id="com.youdao.dict:id/iv_close_bt"]',
+      quickFind: true,
+      snapshotUrls: 'https://gkd-kit.songe.li/import/12893419',
+    },
   ],
 });
