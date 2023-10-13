@@ -7,23 +7,16 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: ['com.miui.home.launcher.Launcher'],
+      quickFind: true,
       matchLauncher: true,
       rules: [
         {
-          //这里应该有简单的定位写法, 请指教
-          matches:
-            'TextView[text="滑动屏幕"] <3 ViewGroup <2 ViewGroup < ViewGroup +3 ViewGroup > ViewGroup > @TextView[text="跳过"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12888429',
-        },
-        {
-          matches:
-            'TextView[text^="点击跳转"] < LinearLayout < RelativeLayout -3 @TextView[text="跳过"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12888730',
-        },
-        {
-          matches: 'FrameLayout[childCount=4] > TextView[text^="跳过"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12888762',
+          matches: 'TextView[text^="跳过"][text.length<=4]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12888429',
+            'https://gkd-kit.gitee.io/import/12888730',
+            'https://gkd-kit.gitee.io/import/12888762',
+          ],
         },
       ],
     },
@@ -37,7 +30,8 @@ export default defineAppConfig({
       matchLauncher: true,
       rules: [
         {
-          matches: '@Button[desc="关闭"] + Button[desc="不再显示"]',
+          matches:
+            'View[desc^="APP最新版本"] > Button[desc="关闭"][clickable=true]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12888361',
             'https://gkd-kit.gitee.io/import/12888389',
@@ -55,26 +49,17 @@ export default defineAppConfig({
       matchLauncher: true,
       rules: [
         {
-          matches:
-            '@TextView[text="跳过"] < View <4 View +3 TextView[text="广告"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12888388',
+          matches: '[id="ad_area"] [id="close_btn"]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12888388',
+            'https://gkd-kit.gitee.io/import/12888419',
+            'https://gkd-kit.gitee.io/import/12888578',
+            'https://gkd-kit.gitee.io/import/12888647',
+          ],
         },
         {
           matches:
-            'TextView[text="广告"] + View > TextView[text="反馈"] + @TextView',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12888419',
-        },
-        {
-          matches:
-            'TextView[text="广告"] <3 View -2 View > @TextView[text="跳过"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12888578',
-        },
-        {
-          matches: 'TextView[text="反馈"] + @TextView +3 TextView[text="广告"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12888647',
-        },
-        {
-          matches: 'TextView[text="反馈"] + @ImageView + TextView',
+            'TextView[text="反馈"] + @ImageView[clickable=true] + TextView',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12888945',
         },
       ],
