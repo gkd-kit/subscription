@@ -7,23 +7,35 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: ['com.ss.android.article.news.activity.MainActivity'],
+      activityIds: [
+        'com.ss.android.article.news.activity.MainActivity',
+        'com.bytedance.ugc.UgcDetailInfoActivity',
+      ],
       rules: [
         {
-          matches:
-            '[id="android:id/tabhost"] >(3) [text="跳过广告"][clickable=true]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12684954'],
+          matches: '[childCount=1] > [text="跳过广告"]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12684954',
+            'https://gkd-kit.gitee.io/import/12754759',
+            'https://gkd-kit.gitee.io/import/12840189',
+          ],
         },
       ],
     },
     {
       key: 1,
       name: '更新弹窗',
-      activityIds: ['com.ss.android.mine.BaseSettingActivity'],
+      activityIds: [
+        'com.ss.android.mine.BaseSettingActivity',
+        'com.miui.home.launcher.Launcher',
+      ],
       rules: [
         {
-          matches: '[text="升级版本"] + [desc="关闭"][clickable=true]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12685000'],
+          matches: '[text="升级版本"] +n [desc="关闭"][clickable=true]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12685000',
+            'https://gkd-kit.gitee.io/import/12840104',
+          ],
         },
       ],
     },
@@ -37,23 +49,30 @@ export default defineAppConfig({
           matches: '[text^="开启通知"] + LinearLayout > [text="暂不开启"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12706699'],
         },
+        {
+          matches:
+            '[text^="开启通知"] < LinearLayout +2 ImageView[desc="关闭"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12840217'],
+        },
       ],
     },
     {
       enable: false,
       key: 11,
       name: '竖屏视频广告',
-      desc: '点击右上角[更多]图标按钮,出现菜单,点击不感兴趣',
+      desc: '检测到广告时,点击右上角[更多]图标按钮,出现菜单,点击不感兴趣',
       activityIds: 'com.ss.android.ugc.detail.activity.TikTokActivity',
       rules: [
         {
           key: 0,
           name: '点击右上角[更多]图标按钮',
           matches:
-            '@ImageView[clickable=true][desc="更多"] <3 RelativeLayout -2 RelativeLayout >4 LynxFlattenUI[text="头条优惠券无门槛全平台通用"]',
+            '@ImageView[clickable=true][desc="更多"] <n RelativeLayout -2 RelativeLayout >4 LynxFlattenUI[text="头条优惠券无门槛全平台通用"]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12679280',
             'https://gkd-kit.gitee.io/import/12733282',
+            'https://gkd-kit.gitee.io/import/12763251',
+            'https://gkd-kit.gitee.io/import/12763252',
           ],
         },
         {
@@ -77,21 +96,37 @@ export default defineAppConfig({
       key: 12,
       name: '信息流广告',
       desc: '点击右上角x按钮,点击不感兴趣',
-      activityIds: 'com.bytedance.ugc.innerfeed.impl.PostInnerFeedActivity',
+      activityIds: [
+        'com.bytedance.ugc.innerfeed.impl.PostInnerFeedActivity',
+        'com.ss.android.article.news.activity.MainActivity',
+      ],
       rules: [
         {
           name: '点击右上角x按钮',
           key: 0,
           matches:
-            'FlattenUIText[text^="广告"][text.length=4] -n UIView[desc="不感兴趣 按钮"][clickable=true]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12733098',
+            '[text^="广告"|| text$="广告" ||text^="来自"] <n FrameLayout > UIView[text^="不感兴趣"][clickable=true]',
+          action: 'clickCenter',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12733098',
+            'https://gkd-kit.gitee.io/import/12755264',
+            'https://gkd-kit.gitee.io/import/12836272',
+            'https://gkd-kit.gitee.io/import/12840162', //别的‘广告’是单独的一个组件，它是和标题一起
+          ],
+          exampleUrls: [
+            'https://user-images.githubusercontent.com/44717382/273436460-cf007525-81ce-418b-ac05-3bfd75a627fe.gif', //这是 https://gkd-kit.gitee.io/import/12840162
+          ],
         },
         {
           name: '点击不感兴趣',
           preKeys: 0,
           matches:
             '@ViewGroup[clickable=true] > ImageView + TextView[text="不感兴趣"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12733152',
+          action: 'clickCenter',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12733152',
+            'https://gkd-kit.gitee.io/import/12755265',
+          ],
         },
       ],
     },

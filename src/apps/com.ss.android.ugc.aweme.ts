@@ -76,6 +76,13 @@ export default defineAppConfig({
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12749276',
     },
     {
+      key: 5,
+      name: '广告弹窗',
+      rules:
+        '[id="android:id/content"] >2 RelativeLayout[childCount<=5] > @ImageView[clickable=true][id!=null] - TextView[text="广告"][id!=null]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12769137',
+    },
+    {
       enable: false,
       key: 10,
       name: '请求开启通知提示信息',
@@ -84,6 +91,19 @@ export default defineAppConfig({
       rules:
         '@[text="暂不"][focusable=true] < LinearLayout - LinearLayout >(2) [text="开启朋友通知"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12675129',
+    },
+    {
+      enable: false,
+      key: 11,
+      name: '自动勾选原图',
+      desc: '聊天发送图片时自动勾选原图',
+      activityIds:
+        'com.ss.android.ugc.aweme.im.sdk.media.choose.MediaChooseActivity',
+      rules: '[text="原图"][desc="未选中/复选框 原图"]',
+      snapshotUrls: [
+        'https://gkd-kit.songe.li/import/12846036', // 未选中
+        'https://gkd-kit.songe.li/import/12846040', // 已选中
+      ],
     },
   ],
 });
