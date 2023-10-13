@@ -20,6 +20,11 @@ export default defineAppConfig({
             'https://gkd-kit.gitee.io/import/12506273',
           ],
         },
+        {
+          matches:
+            'TextView[text^="跳过"] < @LinearLayout +3 TextView[text^="跳转详情"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12877937'],
+        },
       ],
     },
     {
@@ -50,8 +55,12 @@ export default defineAppConfig({
         },
         {
           activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
-          matches: '[id="com.ximalaya.ting.android:id/main_close"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12506225',
+          matches:
+            '[id="com.ximalaya.ting.android:id/main_mark_text"] + [id="com.ximalaya.ting.android:id/main_close"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12506225',
+            'https://gkd-kit.gitee.io/import/12701414', // 关闭广告后，控件仍然存在但不可见，使用 visibleToUser=true 进行限定，防止关闭之后继续触发规则
+          ],
         },
       ],
     },
@@ -85,6 +94,12 @@ export default defineAppConfig({
           matches: '[id="com.ximalaya.ting.android:id/xm_ad_close_real"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12506253',
         },
+        {
+          activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
+          matches:
+            '[id="com.ximalaya.ting.android:id/main_ad_dynamic_lay"] >(4) ImageView + ImageView',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12701374',
+        },
       ],
     },
     {
@@ -116,6 +131,15 @@ export default defineAppConfig({
           '[id="com.ximalaya.ting.android:id/host_dialog_close"]',
         ],
       },
+    },
+    {
+      key: 8,
+      name: '评论区广告',
+      activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
+      quickFind: true,
+      rules:
+        '[id="com.ximalaya.ting.android:id/main_ad_close_real"][visibleToUser=true]',
+      snapshotUrls: 'https://gkd-kit.songe.li/import/12869426',
     },
   ],
 });
