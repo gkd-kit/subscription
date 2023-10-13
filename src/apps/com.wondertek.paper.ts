@@ -7,9 +7,7 @@ export default defineAppConfig({
     {
       key: 1,
       name: '开屏广告',
-      activityIds: [
-        'cn.thepaper.paper.ui.splash.welcome.LaunchActivity',
-      ],
+      activityIds: ['cn.thepaper.paper.ui.splash.welcome.LaunchActivity'],
       rules: [
         {
           matches:
@@ -24,16 +22,12 @@ export default defineAppConfig({
     {
       key: 2,
       name: '应用内弹窗',
-      activityIds: [
-        'cn.thepaper.paper.ui.main.MainActivity',
-      ],
+      activityIds: ['cn.thepaper.paper.ui.main.MainActivity'],
       rules: [
         {
-        matches:
-          '[id="com.wondertek.paper:id/second_num"] <2 [id="com.wondertek.paper:id/relative_layout"] + [id="com.wondertek.paper:id/close_photo"]',
-        snapshotUrls: [
-          'https://gkd-kit.gitee.io/import/12899226',
-        ],
+          matches:
+            '[id="com.wondertek.paper:id/second_num"] <2 [id="com.wondertek.paper:id/relative_layout"] + [id="com.wondertek.paper:id/close_photo"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12899226'],
         },
       ],
     },
