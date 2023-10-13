@@ -48,7 +48,10 @@ export default defineAppConfig({
     {
       key: 2,
       name: '应用内弹窗',
-      activityIds: ['com.sigmob.sdk.base.common.TransparentAdActivity'],
+      activityIds: [
+        'com.sigmob.sdk.base.common.TransparentAdActivity',
+        'com.baidu.mobads.sdk.api.MobRewardVideoActivity',
+    ],
       matchLauncher: true,
       rules: [
         {
@@ -69,6 +72,10 @@ export default defineAppConfig({
         {
           matches: 'TextView[text="反馈"] + @TextView +3 TextView[text="广告"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12888647',
+        },
+        {
+          matches: 'TextView[text="反馈"] + @ImageView + TextView',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12888945',
         },
       ],
     },
