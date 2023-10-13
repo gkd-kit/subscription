@@ -10,7 +10,7 @@ export default defineAppConfig({
       activityIds: [
         'com.didi.sdk.app.launch.splash.SplashActivity',
         'com.didi.sdk.app.MainActivity', 
-      ]
+      ],
       matchLauncher: true, 
       rules: [
         {
