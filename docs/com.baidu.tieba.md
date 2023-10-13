@@ -1,6 +1,6 @@
 # 百度贴吧
 
-存在 8 规则组 - [com.baidu.tieba](/src/apps/com.baidu.tieba.ts)
+存在 7 规则组 - [com.baidu.tieba](/src/apps/com.baidu.tieba.ts)
 
 ## 开屏广告
 
@@ -8,14 +8,16 @@
 
 - [快照-0](https://gkd-kit.songe.li/import/12775906)
 - [快照-1](https://gkd-kit.gitee.io/import/12566191)
+- [快照-2](https://gkd-kit.gitee.io/import/12870916)
 
 ## 任意界面-选择不喜欢理由-不感兴趣
 
 - [快照-0](https://gkd-kit.songe.li/import/12775914)
 
-## 首页/贴吧帖子列表-推荐列表-长得像帖子的广告卡片
+## 首页/吧内-帖子列表-推荐列表-长得像帖子的广告卡片
 
 - [快照-0](https://gkd-kit.songe.li/import/12775930)
+- [快照-1](https://gkd-kit.gitee.io/import/12840951)
 
 ## 某个广告卡片
 
@@ -26,8 +28,6 @@
 - [快照-0](https://gkd-kit.songe.li/import/12775913)
 - [快照-1](https://gkd-kit.songe.li/import/12775916)
 - [快照-2](https://gkd-kit.songe.li/import/12775892)
-
-## 首页左侧游戏广告小图标
 
 ## 升级弹窗
 

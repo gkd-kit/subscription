@@ -5,6 +5,7 @@ export default defineAppConfig({
   name: '哔哩哔哩',
   groups: [
     {
+      quickFind: true,
       key: -1,
       name: '开屏广告',
       desc: '开屏广告,切回APP开屏广告',
@@ -12,22 +13,28 @@ export default defineAppConfig({
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12705270',
     },
     {
+      quickFind: true,
       key: 0,
       name: '评论区顶部公告横幅',
       rules:
-        'LinearLayout[id=`tv.danmaku.bili:id/ad_tint_frame`] > ImageView[id="tv.danmaku.bili:id/close"]',
+        'LinearLayout[id=`tv.danmaku.bili:id/ad_tint_frame`] > ImageView[id="tv.danmaku.bili:id/close"][desc=`关闭`]',
       excludeActivityIds: [
         'com.bilibili.bililive.room.ui.roomv3.LiveRoomActivityV3',
         'tv.danmaku.bili.MainActivityV2',
       ],
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12775156',
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/12785461',
+        'https://gkd-kit.gitee.io/import/12775156',
+      ],
     },
     {
+      quickFind: true,
       key: 1,
       name: '青少年模式弹窗',
       rules: 'TextView[text*=`青少年模式`] + TextView[text=`我知道了`]',
     },
     {
+      quickFind: true,
       key: 2,
       name: '动态推荐广告卡片',
       desc: '点击卡片右上角[广告]按钮-点击不感兴趣',
@@ -64,7 +71,6 @@ export default defineAppConfig({
         'com.bilibili.video.videodetail.VideoDetailsActivity',
         'com.bilibili.ship.theseus.all.UnitedBizDetailsActivity',
         'com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity',
-        'tv.danmaku.bili.MainActivityV2',
       ],
       rules: [
         {
@@ -80,6 +86,7 @@ export default defineAppConfig({
           ],
         },
         {
+          quickFind: true,
           preKeys: 0,
           key: 1,
           name: '点击屏蔽广告',
@@ -93,12 +100,14 @@ export default defineAppConfig({
       ],
     },
     {
+      quickFind: true,
       key: 5,
       name: '推荐页-可跳过广告',
       activityIds: 'tv.danmaku.bili.MainActivityV2',
       rules: ['[id=`tv.danmaku.bili:id/click_skip`]'],
     },
     {
+      quickFind: true,
       key: 6,
       name: '更新弹窗',
       activityIds: 'com.bilibili.app.preferences.BiliPreferencesActivity',

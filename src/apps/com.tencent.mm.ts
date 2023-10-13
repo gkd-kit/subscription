@@ -151,13 +151,17 @@ export default defineAppConfig({
       key: 7,
       name: '自动选中发送原图',
       desc: '图片和视频选择器-自动选中底部中间的发送原图',
-      activityIds: 'com.tencent.mm.plugin.gallery.ui.AlbumPreviewUI',
+      activityIds: [
+        'com.tencent.mm.plugin.gallery.ui.AlbumPreviewUI',
+        'com.tencent.mm.plugin.gallery.ui.ImagePreviewUI',
+      ],
       rules: [
         {
           key: 1,
           matches: '[text="原图"] - ImageButton[desc="未选中,原图,复选框"]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12686641', // 未选中
+            'https://gkd-kit.songe.li/import/12840865', // 未选中
             'https://gkd-kit.gitee.io/import/12686640', // 已选中
           ],
         },
@@ -207,6 +211,40 @@ export default defineAppConfig({
       activityIds: 'com.tencent.mm.ui.chatting.gallery.ImageGalleryUI',
       rules: 'Button[text^="查看原图"][clickable=true]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12706944',
+    },
+    {
+      enable: false,
+      key: 10,
+      name: '微信小程序-开屏广告',
+      activityIds: [
+        'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
+        'com.tencent.mm.plugin.appbrand.launching.AppBrandLaunchProxyUI',
+      ],
+      quickFind: true,
+      rules: [
+        {
+          matches:
+            '[text="广告"] < FrameLayout[childCount=1] <2 FrameLayout[childCount=3] <2 FrameLayout[childCount=2] - FrameLayout[childCount=3] > FrameLayout[childCount=2] >  FrameLayout[childCount=1] > [text="跳过"]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12701979',
+            'https://gkd-kit.gitee.io/import/12777076',
+            'https://gkd-kit.gitee.io/import/12785012',
+            'https://gkd-kit.gitee.io/import/12785183',
+          ],
+        },
+        {
+          matches:
+            '[text="广告"] < * <2 * <2 * <2 FrameLayout[childCount=2] - FrameLayout[childCount=2] >  FrameLayout[childCount=1] > [text="跳过"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12785246'],
+        },
+      ],
+    },
+    {
+      key: 11,
+      name: '网页版文件传输助手扫码自动授权',
+      activityIds: 'com.tencent.mm.ui.LauncherUI',
+      rules: '[text="打开网页版文件传输助手"] + * > Button[text="打开"]',
+      snapshotUrls: 'https://gkd-kit.songe.li/import/12793745',
     },
   ],
 });
