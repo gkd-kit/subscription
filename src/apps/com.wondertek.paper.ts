@@ -20,7 +20,7 @@ export default defineAppConfig({
           ],
         },
       ],
-    }
+    },
     {
       key: 2,
       name: '应用内弹窗',
