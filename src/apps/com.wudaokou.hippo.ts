@@ -11,7 +11,8 @@ export default defineAppConfig({
       matchLauncher: true,
       rules: [
         {
-          matches: 'ImageView + TextView[id="com.wudaokou.hippo:id/splash_skip"]',
+          matches:
+            'ImageView + TextView[id="com.wudaokou.hippo:id/splash_skip"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12891918',
         },
       ],
