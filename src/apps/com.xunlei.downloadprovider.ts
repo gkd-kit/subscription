@@ -157,8 +157,14 @@ export default defineAppConfig({
           snapshotUrls: 'https://gkd-kit.songe.li/import/12881865',
         },
         {
-          preKeys: [0],
           key: 1,
+          activityIds: 'com.xunlei.downloadprovider.frame.MainTabActivity',
+          matches: '[id="com.xunlei.downloadprovider:id/btn_ad_feedback"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12892893',
+        },
+        {
+          preKeys: [0, 1],
+          key: 2,
           activityIds: 'com.xunlei.downloadprovider.download.center.newcenter',
           matches: '[id="com.xunlei.downloadprovider:id/close_ad"]',
           snapshotUrls: 'https://gkd-kit.songe.li/import/128818775',
