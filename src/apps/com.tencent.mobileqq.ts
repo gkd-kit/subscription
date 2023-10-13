@@ -16,12 +16,15 @@ export default defineAppConfig({
       enable: false,
       key: 1,
       name: '消息页面-顶部广告',
-      desc: '规则误触,待修复,需要快照准确定位',
+      desc: '规则误触,待修复,需要快照准确定位', // 当从聊天界面点击链接进入网页时会误触
       activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
       rules: [
         '@[desc="关闭"][clickable=true] - LinearLayout > TextView[text!=null] + TextView[text!=null]', // 1687669217838
       ],
-      snapshotUrls: 'https://gkd-kit.songe.li/import/12892726',
+      snapshotUrls: [
+        'https://gkd-kit.songe.li/import/12892726',
+        'https://gkd-kit.songe.li/import/12774870',
+      ],
     },
     {
       key: 2,
