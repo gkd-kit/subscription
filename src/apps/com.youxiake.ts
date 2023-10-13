@@ -9,10 +9,10 @@ export default defineAppConfig({
       name: '开屏广告',
       activityIds: 'com.youxiake.ui.main.MainActivity',
       matchLauncher: true,
+      quickFind: true,
       rules: [
         {
-          matches:
-            'LinearLayout > TextView[id="com.youxiake:id/start_skip_txt"]',
+          matches: '[id="com.youxiake:id/start_skip_txt"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12891979',
         },
       ],
