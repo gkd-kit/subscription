@@ -7,11 +7,12 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
+      matchLauncher: true,
+      quickFind: true,
       activityIds: [
         'com.didi.sdk.app.launch.splash.SplashActivity',
         'com.didi.sdk.app.MainActivity',
       ],
-      matchLauncher: true,
       rules: [
         {
           matches: '[id=`com.sdu.didi.psnger:id/skip_ad_ll`]',
