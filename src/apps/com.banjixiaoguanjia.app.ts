@@ -13,5 +13,23 @@ export default defineAppConfig({
       rules: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12904614',
     },
+    {
+      key: 1,
+      name: '应用内广告卡片',
+      activityIds: 'com.banjixiaoguanjia.app.MainActivity',
+      rules: [
+        {
+          key: 0,
+          matches: '[id="com.byted.pangle:id/tt_bu_close"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12904612',
+        },
+        {
+          preKeys: 0,
+          key: 1,
+          matches: '@LinearLayout > [text="不感兴趣"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12906196',
+        },
+      ],
+    },
   ],
 });
