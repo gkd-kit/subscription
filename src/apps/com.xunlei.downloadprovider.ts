@@ -164,9 +164,15 @@ export default defineAppConfig({
         },
         {
           key: 1,
-          activityIds: 'com.xunlei.downloadprovider.frame.MainTabActivity',
+          activityIds: [
+            'com.xunlei.downloadprovider.frame.MainTabActivity',
+            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
+          ],
           matches: '[id="com.xunlei.downloadprovider:id/btn_ad_feedback"]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12892893',
+          snapshotUrls: [
+            'https://gkd-kit.songe.li/import/12892893',
+            'https://gkd-kit.songe.li/import/12901395',
+          ],
         },
         {
           preKeys: [0, 1],
