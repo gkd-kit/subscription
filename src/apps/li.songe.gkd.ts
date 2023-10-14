@@ -27,8 +27,11 @@ export default defineAppConfig({
         {
           preKeys: [1],
           key: 2,
-          matches: 'View[childCount=3] > [text="删除"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12706723',
+          matches: 'View[childCount=6] > [text="删除"]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12904946',
+            'https://gkd-kit.gitee.io/import/12706723',
+          ],
         },
       ],
     },
