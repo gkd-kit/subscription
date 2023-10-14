@@ -29,6 +29,7 @@ export default defineAppConfig({
     {
       key: 2,
       name: '首页-取消升级',
+      quickFind: true,
       activityIds: [
         'com.ct.client.activity.MainActivity',
         'com.ct.client.common.ConfirmDialogActivity',

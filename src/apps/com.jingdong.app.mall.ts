@@ -39,6 +39,7 @@ export default defineAppConfig({
       enable: false,
       key: 3,
       name: '首页-浮层广告',
+      quickFind: true,
       activityIds: 'com.jingdong.app.mall.MainFrameActivity',
       rules: [
         {

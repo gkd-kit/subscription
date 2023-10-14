@@ -13,6 +13,7 @@ export default defineAppConfig({
     {
       key: 1,
       name: '首页-文档列表广告',
+      quickFind: true,
       exampleUrls: [
         'https://github.com/gkd-kit/subscription/assets/38517192/57787554-0443-4bc0-9f29-1759aae07b9b',
       ],
@@ -40,6 +41,7 @@ export default defineAppConfig({
     {
       key: 2,
       name: '首页-弹窗广告',
+      quickFind: true,
       activityIds: [
         'cn.wps.moffice.main.AfterLoginActivity',
         'com.android.packageinstaller.permission.ui.GrantPermissionsActivity',
@@ -54,6 +56,7 @@ export default defineAppConfig({
       enable: false,
       key: 3,
       name: '升级提示',
+      quickFind: true,
       activityIds: [
         'com.android.packageinstaller.permission.ui.GrantPermissionsActivity',
         'cn.wps.moffice.main.local.HomeRootActivity',
@@ -67,6 +70,7 @@ export default defineAppConfig({
       key: 4,
       name: '开启WPS云服务',
       desc: '自动点击不开启',
+      quickFind: true,
       activityIds: [
         'cn.wps.moffice.main.cloud.roaming.login.core.QingLoginActivity',
         'com.tencent.mm.plugin.webview.ui.tools.SDKOAuthUI',

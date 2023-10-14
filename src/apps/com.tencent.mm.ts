@@ -41,6 +41,7 @@ export default defineAppConfig({
     {
       key: 1,
       name: '电脑微信快捷自动登录',
+      quickFind: true,
       activityIds: '.plugin.webwx.ui.ExtDeviceWXLoginUI',
       rules: 'TextView[text="取消登录"] - Button[text="登录"]',
     },
@@ -247,6 +248,7 @@ export default defineAppConfig({
       key: 11,
       name: '网页版文件传输助手扫码自动授权',
       activityIds: 'com.tencent.mm.ui.LauncherUI',
+      quickFind: true,
       rules: '[text="打开网页版文件传输助手"] + * > Button[text="打开"]',
       snapshotUrls: 'https://gkd-kit.songe.li/import/12793745',
     },

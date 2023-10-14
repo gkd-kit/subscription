@@ -124,6 +124,7 @@ export default defineAppConfig({
     {
       key: 7,
       name: '扫一扫-登录确认',
+      quickFind: true,
       activityIds: 'com.tencent.biz.qrcode.activity.QRLoginAuthActivity',
       rules: 'Button[text="拒绝"] - Button[text="登录"]',
       snapshotUrls: 'https://gkd-kit.songe.li/import/12789287',

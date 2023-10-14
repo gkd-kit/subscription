@@ -14,8 +14,9 @@ export default defineAppConfig({
     {
       key: 9,
       name: '首页-升级提示',
+      matchLauncher: true,
+      quickFind: true,
       activityIds: [
-        'com.miui.home.launcher.Launcher',
         'com.umetrip.android.msky.homepage.activity.UmeHomeActivity',
       ],
       rules:
