@@ -97,15 +97,9 @@ export default defineAppConfig({
         // 腾讯广告
         {
           key: 20,
-          activityIds: [
-            'com.xunlei.downloadprovider.frame.MainTabActivity',
-            'com.xunlei.downloadprovider.launch.LaunchActivity',
-          ],
+          activityIds: 'com.xunlei.downloadprovider.frame.MainTabActivity',
           matches: 'ImageView - FrameLayout > FrameLayout > ImageView',
-          snapshotUrls: [
-            'https://gkd-kit.songe.li/import/12882132',
-            'https://gkd-kit.songe.li/import/12901374',
-          ],
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12882132',
         },
         {
           key: 21,
