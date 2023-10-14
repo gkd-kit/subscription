@@ -65,8 +65,10 @@ export default defineAppConfig({
       ],
     },
     {
+      enable: false,
       key: 3,
       name: '应用内广告弹窗',
+      desc: '⚠ 此规则容易误触，因此默认关闭。',
       rules: [
         {
           key: 0,
@@ -87,7 +89,8 @@ export default defineAppConfig({
           activityIds:
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
           matches:
-            '@Image[text=""] < View + View +n View > View > TextView[text="广告"]',
+            'Image[text=""] < @View + View +n View > View > TextView[text="广告"]',
+          delay: 1000,
           snapshotUrls: [
             'https://gkd-kit.songe.li/import/12868667',
             'https://gkd-kit.songe.li/import/12881946',
