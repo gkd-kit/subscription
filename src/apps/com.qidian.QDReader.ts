@@ -28,12 +28,16 @@ export default defineAppConfig({
       activityIds: [
         'com.qidian.QDReader.bll.helper.z0',
         'com.qidian.QDReader.ui.activity.MainGroupActivity',
+        'com.qidian.QDReader.framework.widget.dialog.judian',
       ],
-      rules:
+      rules: [
         '[id="com.qidian.QDReader:id/btnEnterTeen"] + [id="com.qidian.QDReader:id/btnCancel"]',
+        '[id="com.qidian.QDReader:id/button_text_id"]',
+      ],
       snapshotUrls: [
         'https://gkd-kit.gitee.io/import/12640241',
         'https://gkd-kit.gitee.io/import/12709168',
+        'https://gkd-kit.songe.li/import/12905817',
       ],
     },
     {
