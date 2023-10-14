@@ -1,15 +1,16 @@
 # 喜马拉雅
 
-存在 9 规则组 - [com.ximalaya.ting.android](/src/apps/com.ximalaya.ting.android.ts)
+存在 10 规则组 - [com.ximalaya.ting.android](/src/apps/com.ximalaya.ting.android.ts)
 
 ## 开屏广告
 
 - [快照-0](https://gkd-kit.gitee.io/import/12506207)
 - [快照-1](https://gkd-kit.gitee.io/import/12506273)
+- [快照-2](https://gkd-kit.gitee.io/import/12877937)
 
 ## 首页右侧浮动广告
 
-- [快照-0](https://gkd-kit.gitee.io/import/38517192/45664dfb-b8e6-4bdb-b5bb-9852c7a86a2f)
+- [快照-0](https://gkd-kit.gitee.io/import/12472620)
 
 ## 播放页面-暂停按钮下面的广告
 
@@ -47,3 +48,7 @@
 ## 关闭青少年模式弹窗
 
 - [快照-0](https://gkd-kit.gitee.io/import/12506209)
+
+## 评论区广告
+
+- [快照-0](https://gkd-kit.songe.li/import/12869426)
