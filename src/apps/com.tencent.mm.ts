@@ -14,6 +14,7 @@ export default defineAppConfig({
       ],
       rules: [
         {
+          key: 1,
           name: '点击广告卡片右上角',
           matches:
             'ImageView - TextView[text="广告"][clickable=true][id!=null]',
@@ -24,17 +25,38 @@ export default defineAppConfig({
         },
         // 以下是[确认关闭按钮]出现的情况
         {
+          key: 2,
           matches: '[text="关闭该广告的原因"] +(2) [text="直接关闭"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12663984'],
         },
         {
+          key: 3,
           matches:
             '[text^="你觉得这条广告怎么样"] + FrameLayout >2 @LinearLayout[clickable=true] > [text="关闭该广告"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12642584'],
         },
         {
+          key: 4,
           matches: 'TextView[text*="广告"] + TextView[text="关闭该广告"]',
           // 需要快照
+        },
+        {
+          key: 5,
+          desc: '朋友圈英文版的广告',
+          matches: '[id="com.tencent.mm:id/jx"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12905837',
+        },
+        {
+          key: 6,
+          preKeys: [5],
+          matches: '@LinearLayout > TextView[id="com.tencent.mm:id/n2r"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12905838',
+        },
+        {
+          key: 7,
+          preKeys: [6],
+          matches: '[id="com.tencent.mm:id/n2m"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12905846',
         },
       ],
     },
