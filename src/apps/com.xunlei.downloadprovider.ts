@@ -220,14 +220,6 @@ export default defineAppConfig({
         },
       ],
     },
-    {
-      key: 11,
-      name: '传输界面-广告弹窗',
-      desc: '自动点击 右上角x 关闭',
-      activityIds:
-        'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
-      rules: '@View +4 TextView[text="反馈"] + View TextView[text="广告"]',
-      snapshotUrls: 'https://gkd-kit.songe.li/import/12865892',
-    },
+    // key = 11 已被使用，后续不可再使用
   ],
 });
