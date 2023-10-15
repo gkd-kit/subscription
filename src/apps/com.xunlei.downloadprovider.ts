@@ -65,18 +65,21 @@ export default defineAppConfig({
       ],
     },
     {
+      enable: false,
       key: 3,
       name: '应用内广告弹窗',
+      desc: '⚠ 此规则容易误触，因此默认关闭。',
       rules: [
         {
           key: 0,
           activityIds: 'com.xunlei.downloadprovider.frame.MainTabActivity',
           matchLauncher: true,
-          matches: '@[text="关闭"] +n * > [text*="广告"]',
+          matches: '@[text="关闭"] +n * >n [text*="广告"]',
           snapshotUrls: [
             'https://gkd-kit.songe.li/import/12868648',
             'https://gkd-kit.gitee.io/import/12879372',
             'https://gkd-kit.songe.li/import/12882366',
+            'https://gkd-kit.songe.li/import/12892871',
           ],
         },
 
@@ -86,7 +89,8 @@ export default defineAppConfig({
           activityIds:
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
           matches:
-            '@Image[text=""] < View + View +n View > View > TextView[text="广告"]',
+            'Image[text=""] < @View + View +n View > View > TextView[text="广告"]',
+          delay: 1000,
           snapshotUrls: [
             'https://gkd-kit.songe.li/import/12868667',
             'https://gkd-kit.songe.li/import/12881946',
@@ -96,9 +100,15 @@ export default defineAppConfig({
         // 腾讯广告
         {
           key: 20,
-          activityIds: 'com.xunlei.downloadprovider.frame.MainTabActivity',
+          activityIds: [
+            'com.xunlei.downloadprovider.frame.MainTabActivity',
+            'com.xunlei.downloadprovider.launch.LaunchActivity',
+          ],
           matches: 'ImageView - FrameLayout > FrameLayout > ImageView',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12882132',
+          snapshotUrls: [
+            'https://gkd-kit.songe.li/import/12882132',
+            'https://gkd-kit.songe.li/import/12901374',
+          ],
         },
         {
           key: 21,
@@ -121,10 +131,11 @@ export default defineAppConfig({
           activityIds: 'com.xunlei.downloadprovider.frame.MainTabActivity',
           matchLauncher: true,
           matches:
-            '@ImageView[visibleToUser=true] < ViewGroup < ViewGroup +n ViewGroup > [text="广告"]',
+            'ImageView < @ViewGroup[visibleToUser=true] < ViewGroup +n ViewGroup > [text="广告"]',
           snapshotUrls: [
             'https://gkd-kit.songe.li/import/12882199', // n = 1
             'https://gkd-kit.songe.li/import/12881911', // n = 2
+            'https://gkd-kit.songe.li/import/12892912', // 点击目标为具备 clickable=true 的 ViewGroup，防止在这个快照中点击到下落的礼物
             'https://gkd-kit.songe.li/import/12881976', // 限定 visibleToUser=true，防止在这个快照中误触
           ],
         },
@@ -155,8 +166,20 @@ export default defineAppConfig({
           snapshotUrls: 'https://gkd-kit.songe.li/import/12881865',
         },
         {
-          preKeys: [0],
           key: 1,
+          activityIds: [
+            'com.xunlei.downloadprovider.frame.MainTabActivity',
+            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
+          ],
+          matches: '[id="com.xunlei.downloadprovider:id/btn_ad_feedback"]',
+          snapshotUrls: [
+            'https://gkd-kit.songe.li/import/12892893',
+            'https://gkd-kit.songe.li/import/12901395',
+          ],
+        },
+        {
+          preKeys: [0, 1],
+          key: 2,
           activityIds: 'com.xunlei.downloadprovider.download.center.newcenter',
           matches: '[id="com.xunlei.downloadprovider:id/close_ad"]',
           snapshotUrls: 'https://gkd-kit.songe.li/import/128818775',
@@ -197,14 +220,6 @@ export default defineAppConfig({
         },
       ],
     },
-    {
-      key: 11,
-      name: '传输界面-广告弹窗',
-      desc: '自动点击 右上角x 关闭',
-      activityIds:
-        'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
-      rules: '@View +4 TextView[text="反馈"] + View TextView[text="广告"]',
-      snapshotUrls: 'https://gkd-kit.songe.li/import/12865892',
-    },
+    // key = 11 已被使用，后续不可再使用
   ],
 });
