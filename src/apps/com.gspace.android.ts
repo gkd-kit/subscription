@@ -46,7 +46,7 @@ export default defineAppConfig({
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12910419',
         },
         {
-          prekey: 1,
+          preKeys: 1,
           matches: '[id="com.byted.pangle:id/tt_item_tv" && text= "不感兴趣"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12910420',
         },
