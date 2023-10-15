@@ -37,17 +37,17 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          matches :'[id="com.gspace.android:id/hiad_banner_close_button"]',
+          matches: '[id="com.gspace.android:id/hiad_banner_close_button"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12705339',
         },
         {
           key: 1,
-          matches :'[id="com.gspace.android:id/tv_remove_ad"]',
+          matches: '[id="com.gspace.android:id/tv_remove_ad"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12910419',
         },
         {
           prekey: 1,
-          matches :'[id="com.byted.pangle:id/tt_item_tv" && text= "不感兴趣"]',
+          matches: '[id="com.byted.pangle:id/tt_item_tv" && text= "不感兴趣"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12910420',
         },
       ],
