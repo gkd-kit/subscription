@@ -8,10 +8,10 @@ export default defineAppConfig({
       key: 0,
       name: '阅读页面底部广告',
       activityIds: [
-            'com.dragon.read.ad.banner.ui',
-            'com.dragon.read.reader.ReaderActivity',
-            'com.dragon.read.reader.ui.ReaderActivity',
-          ],
+        'com.dragon.read.ad.banner.ui',
+        'com.dragon.read.reader.ReaderActivity',
+        'com.dragon.read.reader.ui.ReaderActivity',
+      ],
       rules: [
         {
           matches: '@[clickable=true] TextView[text="关闭此条广告"]',
