@@ -110,11 +110,16 @@ export default defineAppConfig({
         {
           key: 0,
           desc: '点击【继续更新】',
-          activityIds:
+          activityIds: [
             'com.miui.packageInstaller.ui.InstallPrepareAlertActivity',
+            'com.miui.packageInstaller.NewInstallerPrepareActivity',
+          ],
           matches:
             '[text="取消更新"] < LinearLayout - @FrameLayout > LinearLayout > [text="继续更新"]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12817988',
+          snapshotUrls: [
+            'https://gkd-kit.songe.li/import/12817988',
+            'https://gkd-kit.songe.li/import/12910080',
+          ],
         },
         {
           preKeys: 0,
