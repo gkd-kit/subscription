@@ -13,8 +13,12 @@ export default defineAppConfig({
           matches: '@[clickable=true] TextView[text="关闭此条广告"]',
         },
         {
-          activityIds: 'com.dragon.read.reader.ReaderActivity',
+          activityIds: [
+            'com.dragon.read.reader.ReaderActivity',
+            'com.dragon.read.reader.ui.ReaderActivity',
+          ],
           matches: '@ImageView - LinearLayout TextView[text="广告"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12908734',
         },
         {
           activityIds: 'com.dragon.read.reader.ui.ReaderActivity',
