@@ -18,7 +18,7 @@ export default defineAppConfig({
     },
     {
       key: 10,
-      name: '小说阅读页面广告',
+      name: '小说阅读页面-卡片广告',
       activityIds: 'com.tencent.mtt.MainActivity',
       rules: [
         {
@@ -46,6 +46,24 @@ export default defineAppConfig({
             'https://gkd-kit.gitee.io/import/12907655',
             'https://gkd-kit.gitee.io/import/12907653',
           ],
+        },
+      ],
+    },
+    {
+      key: 11,
+      name: '小说阅读页面-视频广告',
+      activityIds: 'com.qq.e.tg.RewardvideoPortraitADActivity',
+      rules: [
+        {
+          key: 0,
+          matches: '[text="腾讯广告"] >n [id^="button_close"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12909822',
+        },
+        {
+          preKeys: 0,
+          key: 1,
+          matches: '[id="com.tencent.mtt:id/reward_dialog_close"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12908955',
         },
       ],
     },
