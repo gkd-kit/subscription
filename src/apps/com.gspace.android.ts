@@ -24,10 +24,10 @@ export default defineAppConfig({
         {
           matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
           snapshotUrls: [
-             'https://gkd-kit.gitee.io/import/12910422',
-             'https://gkd-kit.gitee.io/import/12910417',
+            'https://gkd-kit.gitee.io/import/12910422',
+            'https://gkd-kit.gitee.io/import/12910417',
           ],
-        }
+        },
       ],
     },
     {
