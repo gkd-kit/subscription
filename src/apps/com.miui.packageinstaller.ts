@@ -58,6 +58,7 @@ export default defineAppConfig({
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12889135',
         },
         {
+          preKeys: 2,
           key: 3,
           desc: '勾选【已了解此应用存在高风险】',
           activityIds: 'com.miui.packageInstaller.NewInstallerPrepareActivity',
