@@ -50,5 +50,15 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 3,
+      name: '阅读页面广告弹窗',
+      activityIds: 'com.jd.read.engine.activity.EngineReaderActivity',
+      rules: '[id$="ad_read_close"]',
+      snapshotUrls: [
+        'https://gkd-kit.songe.li/import/12881810',
+        'https://gkd-kit.songe.li/import/12893631',
+      ],
+    },
   ],
 });
