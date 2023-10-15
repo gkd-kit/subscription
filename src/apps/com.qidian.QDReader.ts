@@ -28,12 +28,14 @@ export default defineAppConfig({
       activityIds: [
         'com.qidian.QDReader.bll.helper.z0',
         'com.qidian.QDReader.ui.activity.MainGroupActivity',
+        'com.qidian.QDReader.framework.widget.dialog.judian',
       ],
       rules:
         '[id="com.qidian.QDReader:id/btnEnterTeen"] + [id="com.qidian.QDReader:id/btnCancel"]',
       snapshotUrls: [
         'https://gkd-kit.gitee.io/import/12640241',
         'https://gkd-kit.gitee.io/import/12709168',
+        'https://gkd-kit.songe.li/import/12905817',
       ],
     },
     {
@@ -68,6 +70,15 @@ export default defineAppConfig({
       rules:
         '[id="com.qidian.QDReader:id/ivAd"] + [id="com.qidian.QDReader:id/ivAdClose"]',
       snapshotUrls: ['https://gkd-kit.gitee.io/import/12717032'],
+    },
+    {
+      enable: false,
+      key: 10,
+      name: '起点中文网登录自动确认',
+      desc: '自动点击【登录】',
+      activityIds: 'com.qidian.QDReader.ui.activity.QDBrowserActivity',
+      rules: '[id="scanLogin"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12903081',
     },
   ],
 });
