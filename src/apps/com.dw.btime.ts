@@ -33,7 +33,8 @@ export default defineAppConfig({
       name: '更新提示',
       quickFind: true,
       activityIds: 'com.dw.btime.base_library.dialog.DWBaseDialog',
-      rules: 'TextView[text="立即更新"] -3 [id="com.dw.btime:id/iv_upgrade_close"]',
+      rules:
+        'TextView[text="立即更新"] -3 [id="com.dw.btime:id/iv_upgrade_close"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12911011',
     },
   ],
