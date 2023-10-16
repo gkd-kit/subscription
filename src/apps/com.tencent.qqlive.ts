@@ -15,14 +15,15 @@ export default defineAppConfig({
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12700227',
         },
         {
-          matches: 'TextView[text^="广告"] LinearLayout + TextView[text="跳过"]',
+          matches:
+            'TextView[text^="广告"] LinearLayout + TextView[text="跳过"]',
         },
         {
           matches: '@[text="跳过"] - LinearLayout > [text^="广告"]',
           snapshotUrls: [
-          'https://gkd-kit.gitee.io/import/12700122',
-          'https://gkd-kit.gitee.io/import/12910953',
-        ]
+            'https://gkd-kit.gitee.io/import/12700122',
+            'https://gkd-kit.gitee.io/import/12910953',
+          ],
         },
         {
           matches:
