@@ -13,7 +13,8 @@ export default defineAppConfig({
       activityIds: 'com.vega.export.edit.view.ExportActivity',
       rules: [
         {
-          matches: '[id="com.byted.pangle:id/tt_native_video_frame"] < FrameLayout < FrameLayout -2 FlattenUIImage',
+          matches:
+            '[id="com.byted.pangle:id/tt_native_video_frame"] < FrameLayout < FrameLayout -2 FlattenUIImage',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12911010',
         },
       ],
