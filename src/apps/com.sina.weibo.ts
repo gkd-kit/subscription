@@ -7,8 +7,12 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: 'com.sina.weibo.mobileads.view.',
-      rules: ['@RelativeLayout > TextView[text=`跳过`]'],
+      activityIds: [
+        'com.sina.weibo.MainTabActivity',
+        'com.sina.weibo.mobileads.view.', // 需要补充快照
+      ],
+      rules: ['@RelativeLayout > TextView[text="跳过"]'],
+      snapshotUrls: 'https://gkd-kit.songe.li/import/12782355',
     },
     {
       key: 1,
@@ -124,6 +128,34 @@ export default defineAppConfig({
       rules:
         '[text^="打开通知"] < LinearLayout + ImageView[id="com.sina.weibo:id/right_icon"]',
       snapshotUrls: ['https://gkd-kit.gitee.io/import/12705986'],
+    },
+    {
+      enable: false,
+      key: 11,
+      name: '首页顶部签到卡片',
+      desc: '自动点击x按钮',
+      activityIds: ['com.sina.weibo.MainTabActivity'],
+      rules:
+        '[id="com.sina.weibo:id/ll_check_in_container"] < FrameLayout - FrameLayout > TextView + [id="com.sina.weibo:id/v_close"]',
+      snapshotUrls: ['https://gkd-kit.songe.li/import/12749876'],
+    },
+    {
+      key: 12,
+      name: '首页广告弹窗',
+      activityIds: ['com.sina.weibo.business'],
+      rules:
+        '@[id="com.sina.weibo:id/btn_close"] - FrameLayout > [id="com.sina.weibo:id/ad_tag"]',
+      snapshotUrls: ['https://gkd-kit.songe.li/import/12750090'],
+    },
+    {
+      enable: false,
+      key: 13,
+      name: '右下角刷微博领现金悬浮广告',
+      desc: '自动点击x按钮',
+      activityIds: ['com.sina.weibo.MainTabActivity'],
+      rules:
+        '[id="com.sina.weibo:id/floating_window"] >2 [id="com.sina.weibo:id/close"]',
+      snapshotUrls: ['https://gkd-kit.songe.li/import/12750118'],
     },
   ],
 });
