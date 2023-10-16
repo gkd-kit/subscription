@@ -10,7 +10,7 @@ export default defineAppConfig({
       name: '关闭花呗升级弹窗',
       activityIds:
         'com.alipay.mobile.nebulax.integration.mpaas.activity.NebulaActivity$Main',
-      matchLauncher= true,
+      matchLauncher: true,
       rules: [
         {
           key: 0,
