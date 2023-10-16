@@ -20,6 +20,7 @@ export default defineAppConfig({
       key: 10,
       name: '小说阅读页面-卡片广告',
       activityIds: 'com.tencent.mtt.MainActivity',
+      cd: 3000,
       rules: [
         {
           key: 0,
