@@ -70,5 +70,20 @@ export default defineAppConfig({
         'https://gkd-kit.songe.li/import/12868119',
       ],
     },
+    {
+      enable: false,
+      key: 3,
+      name: '升级提示',
+      quickFind: true,
+      activityIds: [
+        'com.xyhui.start.PUMainActivity',
+        'com.xyhui.start.LoadingActivity',
+      ],
+      rules: 'ImageView[id="com.xyhui:id/closeIv"]',
+      snapshotUrls: [
+        'https://gkd-kit.songe.li/import/12908853',
+        'https://gkd-kit.songe.li/import/12908865',
+      ],
+    },
   ],
 });
