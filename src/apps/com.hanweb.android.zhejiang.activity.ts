@@ -10,7 +10,7 @@ export default defineAppConfig({
       activityIds:
         'com.alibaba.gov.android.welcome.activity.DefaultWelcomeActivity',
       rules:
-        '[id="com.hanweb.android.zhejiang.activity:id/gov_splash_tv_count_down"]',
+        '[id="com.hanweb.android.zhejiang.activity:id/gov_splash_tv_count_down"][text ^= "跳过"]',
       snapshotUrls: 'https://gkd-kit.songe.li/import/12913138',
     },
   ],
