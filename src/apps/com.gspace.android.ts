@@ -33,7 +33,7 @@ export default defineAppConfig({
     {
       key: 1,
       name: '主页面上方广告',
-      matchLauncher: true,  //核实matchLauncher:true, 是否可替代activityIds: 'com.huawei.android.launcher.unihome.UniHomeLauncher',
+      matchLauncher: true, //核实matchLauncher:true, 是否可替代activityIds: 'com.huawei.android.launcher.unihome.UniHomeLauncher',
       activityIds: [
         'com.gspace.android.ui.activity.main.MainActivity',
         'com.huawei.android.launcher.unihome.UniHomeLauncher',
@@ -48,8 +48,8 @@ export default defineAppConfig({
           key: 1,
           matches: '@Image < View -2 View > View > View TextView[text="广告"]',
           snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/12910419',  //activityIds: 'com.gspace.android.ui.activity.main.MainActivity',
-            'https://gkd-kit.gitee.io/import/12910935',  //activityIds: 'com.huawei.android.launcher.unihome.UniHomeLauncher',
+            'https://gkd-kit.gitee.io/import/12910419', //activityIds: 'com.gspace.android.ui.activity.main.MainActivity',
+            'https://gkd-kit.gitee.io/import/12910935', //activityIds: 'com.huawei.android.launcher.unihome.UniHomeLauncher',
           ],
         },
         {
