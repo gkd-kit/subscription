@@ -2,7 +2,7 @@ import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
   id: 'me.zhouzhuo810.zznote',
-  name: '上海交警',
+  name: '小周便签',
   groups: [
     {
       key: 0,
