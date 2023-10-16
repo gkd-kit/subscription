@@ -7,24 +7,18 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
+      matchLauncher: true,
+      quickFind: true,
       activityIds: 'com.tencent.qqlive.ona.activity.SplashHomeActivity',
       rules: [
         {
-          matches:
-            'TextView[text*="互动广告"] < LinearLayout < FrameLayout + FrameLayout > TextView[text="跳过"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12700227',
-        },
-        {
-          matches: 'TextView[text="广告"] LinearLayout + TextView[text="跳过"]',
-        },
-        {
-          matches: '@[text="跳过"] - LinearLayout > [text="广告"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12700122',
-        },
-        {
-          matches:
-            '@[text="跳过"] < FrameLayout - FrameLayout >(2) [text="广告"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12700541',
+          matches: 'FrameLayout[id=null] > TextView[text="跳过"][id=null]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12700227',
+            'https://gkd-kit.gitee.io/import/12700122',
+            'https://gkd-kit.gitee.io/import/12700541',
+            'https://gkd-kit.gitee.io/import/12910953',
+          ],
         },
       ],
     },
@@ -116,22 +110,23 @@ export default defineAppConfig({
       key: 19, // 配合应用内其他广告卡片使用，反馈界面的规则都是一样的
       name: '广告反馈卡片',
       desc: '自动点击 不感兴趣 -> 确定',
+      activityIds: [
+        'com.tencent.qqlive.ona.activity.SplashHomeActivity',
+        'com.tencent.qqlive.qaduikit.common.dialog.feedback.variable.QAdFeedbackVariableDislikeItemDialog',
+      ],
       rules: [
         {
           key: 1,
-          activityIds: [
-            'com.tencent.qqlive.qaduikit.common.dialog.feedback.variable.QAdFeedbackVariableDislikeItemDialog',
-          ],
           matches:
             '[text="关闭这条广告的原因"] +(2) RecyclerView > [text="不感兴趣"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12700303',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12700303',
+            'https://gkd-kit.gitee.io/import/12829866',
+          ],
         },
         {
           preKeys: [1],
           key: 2,
-          activityIds: [
-            'com.tencent.qqlive.qaduikit.common.dialog.feedback.variable.QAdFeedbackVariableDislikeItemDialog',
-          ],
           matches:
             '[text="关闭这条广告的原因"] + [text="确认"][clickable=true]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12700210',
