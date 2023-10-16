@@ -9,8 +9,9 @@ export default defineAppConfig({
       name: '开屏广告',
       activityIds: 'com.youloft.icloser.splash.AdSplashActivity',
       matchLauncher: true,
-      rules: '[id="com.youloft.icloser:id/sdk_container"] >n [text="跳过"]',
-      snapshotUrls: 'https://gkd-kit.songe.li/import/12918018',
+      rules:
+        '[id="com.youloft.icloser:id/sdk_container"] TextView[text="跳过"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12910405',
     },
   ],
 });
