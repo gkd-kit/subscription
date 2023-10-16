@@ -57,6 +57,11 @@ export default defineAppConfig({
             '@ImageView < FrameLayout[childCount=1] +2 FrameLayout[childCount=2] >2 TextView[text$="看看"][text^="去"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12504501',
         },
+        {
+          matches:
+            'TextView[text="立即申请"] < FrameLayout <2 FrameLayout -2 FrameLayout',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12892156',
+        },
       ],
     },
     {
@@ -72,8 +77,11 @@ export default defineAppConfig({
         {
           name: '点击右下角x',
           matches:
-            'FrameLayout[childCount=3] > LinearLayout[childCount=1] + FrameLayout[childCount=1] > ImageView[id=null]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12851671',
+            'FrameLayout[childCount=3] > LinearLayout + FrameLayout[childCount=1] > ImageView[id=null]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12851671',
+            'https://gkd-kit.gitee.io/import/12909005',
+          ],
         },
       ],
     },

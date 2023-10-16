@@ -9,11 +9,11 @@ export default defineAppConfig({
       name: '开屏广告',
       quickFind: true,
       activityIds: 'com.zmzx.college.search.activity.init.InitActivity',
-      rules:
-        '[id="com.zmzx.college.search:id/ksad_splash_root_container"] [text="跳过"]',
+      rules: ['TextView[text^="跳过"][text.length<=3]'],
       snapshotUrls: [
         'https://gkd-kit.songe.li/import/12867875',
         'https://gkd-kit.songe.li/import/12867970',
+        'https://gkd-kit.songe.li/import/12881929',
       ],
     },
     {
@@ -27,11 +27,29 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      name: '我的-弹窗广告',
-      activityIds:
+      name: '弹窗广告',
+      desc: '会出现在搜题页面与我的页面',
+      quickFind: true,
+      activityIds: [
         'com.zmzx.college.search.activity.main.activity.MainActivity',
+        'com.zmzx.college.search.activity.questionsearch.camera.activity.PicSearchResultActivity',
+      ],
       rules: 'ImageView[id="com.zmzx.college.search:id/iv_close"]',
-      snapshotUrls: 'https://gkd-kit.songe.li/import/12867751',
+      snapshotUrls: [
+        'https://gkd-kit.songe.li/import/12867751',
+        'https://gkd-kit.songe.li/import/12894813',
+      ],
+    },
+    {
+      key: 3,
+      name: '资料库-弹窗广告',
+      activityIds: [
+        'com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity',
+      ],
+      rules:
+        '@LinearLayout > ImageView[id="com.zmzx.college.search:id/tt_reward_full_count_down_after_close"]',
+      quickFind: true,
+      snapshotUrls: 'https://gkd-kit.songe.li/import/12893408',
     },
   ],
 });
