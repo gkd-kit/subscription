@@ -7,7 +7,6 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      desc: '点击跳过',
       matchLauncher: true,
       quickFind: true,
       activityIds: 'com.gkid.crazyrope.ui.splash.StartPageActivity',
@@ -19,7 +18,7 @@ export default defineAppConfig({
       ],
     },
     {
-      key: 0,
+      key: 1,
       name: '会员提示',
       desc: '点击不需要',
       quickFind: true,
