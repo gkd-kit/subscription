@@ -28,6 +28,7 @@ export default defineAppConfig({
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12907446',
             'https://gkd-kit.gitee.io/import/12907445', // 限定 visibleToUser=true，防止在节点不可见时触发规则
+            'https://gkd-kit.gitee.io/import/12911647', // 加入cd冷却 避免广告未完成后续关闭时，反复点击其它广告按钮，催发不停弹窗【关闭原因】
           ],
         },
         {
