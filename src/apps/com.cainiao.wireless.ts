@@ -36,7 +36,7 @@ export default defineAppConfig({
         'com.taobao.cainiao.logistic.ui.view.LogisticDetailActivity',
       ],
       rules: 'View[desc="立即查看"] +2 ImageView[id=null]',
-      snapshotUrls: ['https://gkd-kit.songe.li/import/12914371'],
+      snapshotUrls: ['https://gkd-kit.songe.li/import/12914450'],
     },
   ],
 });
