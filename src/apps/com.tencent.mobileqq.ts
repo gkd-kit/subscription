@@ -124,6 +124,7 @@ export default defineAppConfig({
     {
       key: 7,
       name: '扫一扫-登录确认',
+      quickFind: true,
       activityIds: 'com.tencent.biz.qrcode.activity.QRLoginAuthActivity',
       rules: 'Button[text="拒绝"] - Button[text="登录"]',
       snapshotUrls: 'https://gkd-kit.songe.li/import/12789287',
@@ -136,6 +137,14 @@ export default defineAppConfig({
       activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
       rules: 'RelativeLayout > [text^="当前无法接收"] + ImageView',
       snapshotUrls: 'https://gkd-kit.songe.li/import/12855441',
+    },
+    {
+      key: 9,
+      name: '我的等级-浮窗广告',
+      activityIds: 'com.tencent.mobileqq.activity.QQBrowserActivity',
+      rules:
+        'TextView[text="QQ等级规则"] + View > TextView[id=null&&text.length=0]',
+      snapshotUrls: 'https://gkd-kit.songe.li/import/12914734',
     },
     {
       enable: false,
@@ -189,13 +198,30 @@ export default defineAppConfig({
       key: 13,
       name: 'QQ小程序开屏广告',
       desc: '点击右下角跳过',
-      activityIds: 'com.tencent.mobileqq.mini.appbrand.ui.AppBrandUI',
+      activityIds: [
+        'com.tencent.mobileqq.mini.appbrand.ui.AppBrandUI',
+        'com.tencent.mobileqq.activity.miniaio.MiniChatActivity',
+      ],
       rules: [
         {
           matches:
             'TextView[text = "广告"] < RelativeLayout + RelativeLayout TextView[text = "跳过"]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12877215',
+          snapshotUrls: [
+            'https://gkd-kit.songe.li/import/12877215',
+            'https://gkd-kit.songe.li/import/12919195',
+          ],
         },
+      ],
+    },
+    {
+      key: 14,
+      name: '黄钻-弹窗广告',
+      activityIds: 'com.tencent.mobileqq.activity.QQBrowserActivity',
+      rules:
+        'TextView[text.length=0&&clickable=true&&visibleToUser=true] + View > Button[text.length=0&&focusable=true]',
+      snapshotUrls: [
+        'https://gkd-kit.songe.li/import/12914978',
+        'https://gkd-kit.songe.li/import/12914886',
       ],
     },
   ],
