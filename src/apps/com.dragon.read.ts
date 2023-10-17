@@ -39,8 +39,22 @@ export default defineAppConfig({
       name: '右侧悬浮红包',
       activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
       rules:
-        '[id="com.dragon.read:id/action_bar_root"] >n RelativeLayout > ImageView[id!=null][clickable=true]',
+        '[id="android:id/content"] > FrameLayout > RelativeLayout[childCount=1][clickable=true] > RelativeLayout[childCount=3] > ImageView[id!=null][clickable=true]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12716506',
+    },
+    {
+      key: 3,
+      name: '优惠券弹窗',
+      rules: [
+        {
+          key: 0,
+          name: '电商惊喜券',
+          activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
+          matches:
+            '@LynxFlattenUI[id=null][text=""][clickable=true] - [text="去逛商城"] -4 [text$="电商惊喜券"] ',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12910159',
+        },
+      ],
     },
     {
       enable: false,
