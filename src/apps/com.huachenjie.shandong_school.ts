@@ -13,7 +13,7 @@ export default defineAppConfig({
       activityIds: 'com.huachenjie.shandong_school.splash.SplashActivity',
       rules: [
         {
-          matches: '[text="跳过 "][clickable=false]',
+          matches: '[text^="跳过"][clickable=false]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12922866',
         },
       ],
