@@ -26,7 +26,7 @@ export default defineAppConfig({
         {
           matches:
             'FrameLayout > View > View > View[index=0] > View > ImageView[childCount=1] + View[clickable=true && desc=null]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12836854',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12836891',
         },
       ],
     },
@@ -37,7 +37,7 @@ export default defineAppConfig({
       rules: [
         {
           matches: '@[desc="取消"][clickable=true] + [desc="确定"]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12836891',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12836854',
         },
       ],
     },
