@@ -235,6 +235,7 @@ export default defineAppConfig({
           snapshotUrls: 'https://gkd-kit.songe.li/import/12929620',
         },
         {
+          preKeys: 0,
           key: 1,
           matches:
             '@LinearLayout[id!=null][clickable=true] > LinearLayout > [text="减少此类推荐"]',
