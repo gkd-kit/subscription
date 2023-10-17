@@ -8,7 +8,7 @@ export default defineAppConfig({
       key: 0,
       name: '朋友圈广告',
       desc: '点击广告卡片右上角广告,直接关闭/出现菜单,确认关闭',
-      // quickFind: true, 情况1不符合
+      quickFind: true,
       activityIds: 'com.tencent.mm.plugin.sns.ui.SnsTimeLineUI',
       exampleUrls: [
         'https://github.com/gkd-kit/subscription/assets/38517192/c9ae4bba-a748-4755-b5e4-c7ad3d489a79',
@@ -17,31 +17,30 @@ export default defineAppConfig({
         {
           key: 0,
           name: '点击广告卡片右上角',
-          matches: [
-            'TextView[text.length!=null] +1 LinearLayout[text.length=null&&clickable=true&&focusable=true]',
-          ],
+          matches:
+            'ImageView - TextView[text="广告"][clickable=true][id!=null]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12642588',
-            'https://gkd-kit.gitee.io/import/12888129', // ImageView - TextView[text="广告"][id!=null][index=0]这个规则无法匹配该广告，需要删除[index=0]
+            'https://gkd-kit.gitee.io/import/12888129', //ImageView - TextView[text="广告"][id!=null][index=0]这个规则无法匹配该广告，需要删除[index=0]
             'https://gkd-kit.gitee.io/import/12907641',
-            'https://gkd-kit.songe.li/import/12915258', // TextView[text.length!=null] +1 LinearLayout[text.length=null&&clickable=true&&focusable=true]
           ],
         },
         // 以下是[确认关闭按钮]出现的情况
-        // 情况1 - 选择关闭该广告的原因->直接关闭
+        // 情况1 - 你觉得这条广告怎么样->直接关闭
         {
+          preKeys: 0,
           key: 1,
+          name: '你觉得这条广告怎么样-点击[关闭该广告]',
+          matches:
+            '@LinearLayout[clickable=true][childCount=2] > [text="关闭该广告"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12642584'],
+        },
+        {
+          preKeys: 1,
+          key: 2,
           name: '关闭该广告的原因-点击[直接关闭]',
-          matches: [
-            '[(name="LinearLayout"||name$=".LinearLayout")||((name="TextView"||name$=".TextView")&&text.length>3)] + [(name="LinearLayout"||name$=".LinearLayout")||((name="TextView"||name$=".TextView")&&text="直接关闭")]',
-          ],
-          snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/12642584',
-            'https://gkd-kit.songe.li/import/12915776', // @LinearLayout[clickable=true][childCount=2] > [text="关闭该广告"]无法匹配
-            'https://gkd-kit.songe.li/import/12917780', // 选择后将减少该类推荐
-            'https://gkd-kit.gitee.io/import/12663984',
-            'https://gkd-kit.songe.li/import/12915841',
-          ],
+          matches: '[text="关闭该广告的原因"] +(2) [text="直接关闭"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12663984'],
         },
         // 情况2 - 关闭该广告
         {
@@ -51,14 +50,6 @@ export default defineAppConfig({
           matches:
             'TextView[text="你可以这样优化广告推荐"] + TextView[text="关闭该广告"][clickable=true]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12907642',
-        },
-        // 情况3 - 点击[确认]关闭该广告
-        {
-          preKeys: 1,
-          key: 4,
-          name: '不感兴趣原因-点击[确认]',
-          matches: '[text^="不感兴趣"] +2 [text="确认"]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12916790',
         },
       ],
     },
