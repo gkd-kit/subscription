@@ -5,6 +5,13 @@ export default defineAppConfig({
   name: '书旗小说',
   groups: [
     {
+      key: -1,
+      name: '开屏广告',
+      activityIds: 'com.shuqi.home.MainActivity',
+      rules: '[id="com.shuqi.controller:id/splash_container"] [text="跳过"]',
+      snapshotUrls: 'https://gkd-kit.songe.li/import/12854869',
+    },
+    {
       key: 0,
       name: '内部右侧浮动广告',
       activityIds: 'com.shuqi.home.MainActivity',
@@ -24,11 +31,13 @@ export default defineAppConfig({
       desc: '点击关闭x图标-关闭优惠券弹窗-关闭当前广告',
       rules: [
         {
+          key: 0,
           activityIds: 'com.shuqi.android.ui.dialog',
           matches: '[id="com.shuqi.controller:id/right_close_ad_text"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12513893',
         },
         {
+          key: 1,
           activityIds: 'com.shuqi.monthlypay.view',
           matches: [
             '[text*="优惠券"]',
@@ -37,10 +46,18 @@ export default defineAppConfig({
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12513908',
         },
         {
+          key: 2,
           activityIds: 'com.shuqi.reader.ShuqiReaderActivity',
           matches:
             '@ImageView[clickable=true] - RelativeLayout [id="com.shuqi.controller:id/noah_tv_stencil_native_source"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12513860',
+        },
+        {
+          key: 3,
+          activityIds: 'com.shuqi.reader.ShuqiReaderActivity',
+          matches:
+            '[id="com.shuqi.controller:id/banner_container_ad"] >n RelativeLayout + ImageView',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12901429',
         },
       ],
     },
