@@ -45,7 +45,7 @@ export default defineAppConfig({
       quickFind: true,
       activityIds: 'com.sina.weibo.account.interest.InterestActivity',
       rules:
-        '[id="com.sina.weibo:id/rl_account_title_bar"] > [id="com.sina.weibo:id/tv_title_bar_skip"&&text="跳过"]',
+        '[id="com.sina.weibo:id/rl_account_title_bar"] > [id="com.sina.weibo:id/tv_title_bar_skip"][text="跳过"]',
       snapshotUrls: 'https://gkd-kit.songe.li/import/12531405',
     },
     {
