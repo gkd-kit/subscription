@@ -14,8 +14,11 @@ export default defineAppConfig({
       ],
       rules: [
         {
-          matches: 'TextView[text="跳过"][clickable=true]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12472597',
+          matches: 'TextView[text^="跳过"][clickable=true]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12472597',
+            'https://gkd-kit.songe.li/import/12877626',
+          ],
         },
         {
           matches: '@TextView[text^="跳过"] + TextView[text="广告"]',
@@ -69,6 +72,15 @@ export default defineAppConfig({
       rules:
         '@ImageView[id="com.baidu.netdisk:id/close_btn"] + ImageView[id="com.baidu.netdisk:id/bg_image"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12648987',
+    },
+    {
+      enable: false,
+      key: 6,
+      name: '更新提醒',
+      activityIds: 'com.baidu.netdisk.ui.MainActivity',
+      rules:
+        '[id="com.baidu.netdisk:id/dialog_button_cancel" && text="下次再说"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12863984',
     },
     {
       enable: false,

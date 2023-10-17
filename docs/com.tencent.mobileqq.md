@@ -1,6 +1,6 @@
 # QQ
 
-存在 12 规则组 - [com.tencent.mobileqq](/src/apps/com.tencent.mobileqq.ts)
+存在 13 规则组 - [com.tencent.mobileqq](/src/apps/com.tencent.mobileqq.ts)
 
 ## 开屏广告
 
@@ -10,7 +10,8 @@
 
 默认禁用 - 规则误触,待修复,需要快照准确定位
 
-- [快照-0](https://gkd-kit.songe.li/import/12774870)
+- [快照-0](https://gkd-kit.songe.li/import/12892726)
+- [快照-1](https://gkd-kit.songe.li/import/12774870)
 
 ## 好友动态-广告卡片
 
@@ -35,7 +36,9 @@
 默认禁用 - 好友动态中的好友热播，自动选择“减少好友热播” - 默认关闭
 
 - [快照-0](https://gkd-kit.gitee.io/import/12721427)
-- [快照-1](https://gkd-kit.gitee.io/import/12721433)
+- [快照-1](https://gkd-kit.songe.li/import/12894359)
+- [快照-2](https://gkd-kit.gitee.io/import/12721433)
+- [快照-3](https://gkd-kit.songe.li/import/12894375)
 
 ## 动态广告卡片
 
@@ -73,3 +76,9 @@
 
 - [快照-0](https://gkd-kit.songe.li/import/12847819)
 - [快照-1](https://gkd-kit.songe.li/import/12847821)
+
+## QQ小程序开屏广告
+
+点击右下角跳过
+
+- [快照-0](https://gkd-kit.songe.li/import/12877215)

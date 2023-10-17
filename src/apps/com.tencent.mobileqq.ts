@@ -16,12 +16,15 @@ export default defineAppConfig({
       enable: false,
       key: 1,
       name: '消息页面-顶部广告',
-      desc: '规则误触,待修复,需要快照准确定位',
+      desc: '规则误触,待修复,需要快照准确定位', // 当从聊天界面点击链接进入网页时会误触
       activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
       rules: [
-        'ImageView[id!=null][desc="关闭"][clickable=true]', // 1687669217838
+        '@[desc="关闭"][clickable=true] - LinearLayout > TextView[text!=null] + TextView[text!=null]', // 1687669217838
       ],
-      snapshotUrls: 'https://gkd-kit.songe.li/import/12774870',
+      snapshotUrls: [
+        'https://gkd-kit.songe.li/import/12892726',
+        'https://gkd-kit.songe.li/import/12774870',
+      ],
     },
     {
       key: 2,
@@ -84,19 +87,28 @@ export default defineAppConfig({
       key: 5,
       name: '好友热播',
       desc: '好友动态中的好友热播，自动选择“减少好友热播” - 默认关闭',
-      activityIds: 'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
+      activityIds: [
+        'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
+        'com.tencent.mobileqq.activity.SplashActivity',
+      ],
       rules: [
         {
           name: '点击[好友热播]卡片右上角菜单按钮',
           matches:
             'TextView[text="好友热播"] + Button[id^="com.tencent.mobileqq.qzone_df_impl:id/"][clickable=true]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12721427',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12721427', // com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity
+            'https://gkd-kit.songe.li/import/12894359', // com.tencent.mobileqq.activity.SplashActivity
+          ],
         },
         {
           name: '点击[减少好友热播]',
           matches:
             'TextView[text="减少好友热播"] <2 LinearLayout < LinearLayout[id^="com.tencent.mobileqq.qzone_df_impl:id/"][clickable=true]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12721433',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12721433', // com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity
+            'https://gkd-kit.songe.li/import/12894375', // com.tencent.mobileqq.activity.SplashActivity
+          ],
         },
       ],
     },
@@ -112,6 +124,7 @@ export default defineAppConfig({
     {
       key: 7,
       name: '扫一扫-登录确认',
+      quickFind: true,
       activityIds: 'com.tencent.biz.qrcode.activity.QRLoginAuthActivity',
       rules: 'Button[text="拒绝"] - Button[text="登录"]',
       snapshotUrls: 'https://gkd-kit.songe.li/import/12789287',
@@ -124,6 +137,14 @@ export default defineAppConfig({
       activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
       rules: 'RelativeLayout > [text^="当前无法接收"] + ImageView',
       snapshotUrls: 'https://gkd-kit.songe.li/import/12855441',
+    },
+    {
+      key: 9,
+      name: '我的等级-浮窗广告',
+      activityIds: 'com.tencent.mobileqq.activity.QQBrowserActivity',
+      rules:
+        'TextView[text="QQ等级规则"] + View > TextView[id=null&&text.length=0]',
+      snapshotUrls: 'https://gkd-kit.songe.li/import/12914734',
     },
     {
       enable: false,
@@ -171,6 +192,36 @@ export default defineAppConfig({
             '@LinearLayout[clickable=true] > TextView[text="关闭此条广告"]',
           snapshotUrls: 'https://gkd-kit.songe.li/import/12847821',
         },
+      ],
+    },
+    {
+      key: 13,
+      name: 'QQ小程序开屏广告',
+      desc: '点击右下角跳过',
+      activityIds: [
+        'com.tencent.mobileqq.mini.appbrand.ui.AppBrandUI',
+        'com.tencent.mobileqq.activity.miniaio.MiniChatActivity',
+      ],
+      rules: [
+        {
+          matches:
+            'TextView[text = "广告"] < RelativeLayout + RelativeLayout TextView[text = "跳过"]',
+          snapshotUrls: [
+            'https://gkd-kit.songe.li/import/12877215',
+            'https://gkd-kit.songe.li/import/12919195',
+          ],
+        },
+      ],
+    },
+    {
+      key: 14,
+      name: '黄钻-弹窗广告',
+      activityIds: 'com.tencent.mobileqq.activity.QQBrowserActivity',
+      rules:
+        'TextView[text.length=0&&clickable=true&&visibleToUser=true] + View > Button[text.length=0&&focusable=true]',
+      snapshotUrls: [
+        'https://gkd-kit.songe.li/import/12914978',
+        'https://gkd-kit.songe.li/import/12914886',
       ],
     },
   ],
