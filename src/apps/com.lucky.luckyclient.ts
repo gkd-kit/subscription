@@ -8,6 +8,8 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       activityIds: 'com.luckin.client.main.FirstActivity',
+      matchLauncher: true,
+      quickFind: true,
       rules: '[id="com.lucky.luckyclient:id/tv_skip"]',
       snapshotUrls: 'https://gkd-kit.songe.li/import/12508764',
     },
