@@ -14,8 +14,7 @@ export default defineAppConfig({
         'com.iflytek.inputmethod.settingsnew.splash.activity.NewSplashActivity',
       rules: [
         {
-          matches:
-            '[text="跳过广告"] < [id="com.iflytek.inputmethod.settingsnew:id/ll_skip"]',
+          matches: '[id="com.iflytek.inputmethod.settingsnew:id/ll_skip"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12906597',
         },
       ],
