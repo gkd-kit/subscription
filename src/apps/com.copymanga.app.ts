@@ -57,11 +57,11 @@ export default defineAppConfig({
             '@ImageView < FrameLayout[childCount=1] +2 FrameLayout[childCount=2] >2 TextView[text$="看看"][text^="去"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12504501',
         },
-        {
-          matches:
-            'TextView[text="立即申请"] < FrameLayout <2 FrameLayout -2 FrameLayout',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12892156',
-        },
+        // { 有程序崩溃的问题, 解决前先注释掉
+        //   matches:
+        //     'TextView[text="立即申请"] < FrameLayout <2 FrameLayout -2 FrameLayout',
+        //   snapshotUrls: 'https://gkd-kit.gitee.io/import/12892156',
+        // },
       ],
     },
     {
