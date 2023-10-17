@@ -20,6 +20,11 @@ export default defineAppConfig({
             'https://gkd-kit.gitee.io/import/12506273',
           ],
         },
+        {
+          matches:
+            'TextView[text^="跳过"] < @LinearLayout +3 TextView[text^="跳转详情"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12877937'],
+        },
       ],
     },
     {
@@ -27,9 +32,7 @@ export default defineAppConfig({
       name: '首页右侧浮动广告',
       activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
       rules: '[id="com.ximalaya.ting.android:id/main_ad_broadside_close_real"]',
-      snapshotUrls: [
-        'https://gkd-kit.gitee.io/import/38517192/45664dfb-b8e6-4bdb-b5bb-9852c7a86a2f',
-      ],
+      snapshotUrls: ['https://gkd-kit.gitee.io/import/12472620'],
     },
     {
       key: 1,
@@ -126,6 +129,15 @@ export default defineAppConfig({
           '[id="com.ximalaya.ting.android:id/host_dialog_close"]',
         ],
       },
+    },
+    {
+      key: 8,
+      name: '评论区广告',
+      activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
+      quickFind: true,
+      rules:
+        '[id="com.ximalaya.ting.android:id/main_ad_close_real"][visibleToUser=true]',
+      snapshotUrls: 'https://gkd-kit.songe.li/import/12869426',
     },
   ],
 });
