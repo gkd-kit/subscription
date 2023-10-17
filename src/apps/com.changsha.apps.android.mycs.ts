@@ -10,7 +10,7 @@ export default defineAppConfig({
       activityIds: ['com.wondersgroup.eshimin.login.activity.WelcomeActivity'],
       rules: [
         {
-          matches: '[text^="跳过"]',
+          matches: '[id="com.changsha.apps.android.mycs:id/tv_countdown"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12926529',
         },
       ],
