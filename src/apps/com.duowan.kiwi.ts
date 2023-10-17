@@ -15,13 +15,30 @@ export default defineAppConfig({
     },
     {
       key: 1,
-      name: '青少年弹窗',
+      name: '青少年模式弹窗',
       activityIds: [
-        'com.duowan.kiwi.homepage.Homepage',
-        'com.miui.home.launcher.Launcher',
+        'com.duowan.kiwi.homepage.Homepage', // 缺少快照
+        'com.duowan.kiwi.immersepage.impl.ImmersePageActivity',
       ],
+      matchLauncher: true,
       rules:
-        '[id=`com.duowan.kiwi:id/hyui_dialog_button_positive`][text=`我知道了`]',
+        '[id="com.duowan.kiwi:id/hyui_dialog_button_positive"][text="我知道了"]',
+      snapshotUrls: 'https://gkd-kit.songe.li/import/12908790',
+    },
+    {
+      key: 2,
+      name: '直播间悬浮广告',
+      activityIds: 'com.duowan.kiwi.liveroom.ChannelPage',
+      rules: [
+        {
+          key: 0,
+          matches: '[id="com.duowan.kiwi:id/ad_close"]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12901045',
+            'https://gkd-kit.gitee.io/import/12901044',
+          ],
+        },
+      ],
     },
   ],
 });

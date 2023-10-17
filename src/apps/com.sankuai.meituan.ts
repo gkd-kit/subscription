@@ -26,12 +26,22 @@ export default defineAppConfig({
       ],
     },
     {
-      enable: false,
       key: 2,
       name: '美团买菜活动弹窗',
       activityIds: 'com.meituan.retail.c.android.mrn.mrn.MallMrnModal',
-      rules: 'ViewGroup > ViewGroup +(5) ViewGroup > ImageView',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12639717',
+      rules: [
+        {
+          key: 0,
+          matches: 'ViewGroup > ViewGroup +(5) ViewGroup > ImageView',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12639717',
+        },
+        {
+          key: 1,
+          matches:
+            '@ImageView < ViewGroup +3 ViewGroup > ViewGroup > TextView[text^="红包已到账"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12892626',
+        },
+      ],
     },
     {
       key: 3,
@@ -73,6 +83,25 @@ export default defineAppConfig({
             'View[childCount=3] > View + TextView + TextView[text=""][visibleToUser=true]',
           snapshotUrls: 'https://gkd-kit.songe.li/import/12739204',
         },
+      ],
+    },
+    {
+      enable: false,
+      key: 7,
+      name: '请求定位弹窗',
+      desc: '首页/外卖界面-【打开位置开关弹窗】-点击右侧x关闭',
+      activityIds: [
+        'com.meituan.android.pt.homepage.activity.MainActivity',
+        'com.sankuai.waimai.business.page.homepage.TakeoutActivity',
+      ],
+      rules: [
+        '[id ="com.sankuai.meituan:id/location_close"]',
+        '[id ="com.sankuai.meituan:id/location_layer_close"]',
+      ],
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/12874657',
+        'https://gkd-kit.gitee.io/import/12910210',
+        'https://gkd-kit.gitee.io/import/12910211',
       ],
     },
   ],

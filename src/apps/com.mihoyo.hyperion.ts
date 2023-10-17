@@ -22,10 +22,16 @@ export default defineAppConfig({
       key: 1,
       name: '青少年模式',
       desc: '关闭青少年模式提醒弹窗',
-      activityIds: 'com.mihoyo.hyperion.main.HyperionMainActivity',
+      activityIds: [
+        'com.mihoyo.hyperion.main.HyperionMainActivity',
+        'com.mihoyo.hyperion.splash.SplashActivity',
+      ],
       rules:
         'TextView[id="com.mihoyo.hyperion:id/tv_dialog_go_to_teenage_mode"] + TextView[id="com.mihoyo.hyperion:id/tv_dialog_i_know"]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12675547',
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/12675547',
+        'https://gkd-kit.songe.li/import/12775850', // activityId: 'com.mihoyo.hyperion.splash.SplashActivity'
+      ],
     },
     {
       key: 2,
@@ -33,6 +39,18 @@ export default defineAppConfig({
       desc: '关闭版本更新提示弹窗',
       rules: 'TextView[id="com.mihoyo.hyperion:id/mUpgradeDialogCancel"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12675513',
+    },
+    {
+      key: 3,
+      name: '自动打卡',
+      desc: '点击顶部搜索框右侧[打卡],切换板块自动签到',
+      activityIds: 'com.mihoyo.hyperion.main.HyperionMainActivity',
+      rules:
+        'TextView[id="com.mihoyo.hyperion:id/mTvText"][text="打卡"][visibleToUser=true]',
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/12857503', // 未打卡
+        'https://gkd-kit.gitee.io/import/12859518', // 已打卡
+      ],
     },
   ],
 });
