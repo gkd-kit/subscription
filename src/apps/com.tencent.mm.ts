@@ -9,7 +9,7 @@ export default defineAppConfig({
       name: '朋友圈广告',
       desc: '点击广告卡片右上角广告,直接关闭/出现菜单,确认关闭',
       quickFind: true,
-      activityIds: 'com.tencent.mm.plugin.sns.ui.SnsTimeLineUI',
+      activityIds: ['com.tencent.mm.plugin.sns.ui.SnsTimeLineUI','com.tencent.mm.plugin.sns.ui.improve.ImproveSnsTimelineUI'],
       exampleUrls: [
         'https://github.com/gkd-kit/subscription/assets/38517192/c9ae4bba-a748-4755-b5e4-c7ad3d489a79',
       ],
