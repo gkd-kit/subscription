@@ -12,6 +12,7 @@ export default defineAppConfig({
       activityIds: [
         'com.netease.mail.biz.main.MainITabActivity',
         'com.netease.mail.biz.main.SplashActivity',
+        'com.netease.mail.ad.launch.ui.SplashAdActivity',
       ],
       rules: [
         {
@@ -27,6 +28,11 @@ export default defineAppConfig({
             'https://gkd-kit.songe.li/import/12893573',
             'https://gkd-kit.songe.li/import/12923776', // com.netease.mail.biz.main.SplashActivity
           ],
+        },
+        {
+          key: 2,
+          matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12999739',
         },
       ],
     },
