@@ -10,7 +10,8 @@ export default defineAppConfig({
       desc: '点击右上角跳过',
       rules: [
         {
-          activityIds: 'com.aster.comic.app.ad.view.mediation.MediationSplashAdActivity',
+          activityIds:
+            'com.aster.comic.app.ad.view.mediation.MediationSplashAdActivity',
           matches: '[id="com.byted.pangle.m:id/tt_splash_skip_btn"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12981243',
         },
@@ -39,8 +40,7 @@ export default defineAppConfig({
         {
           key: 2,
           activityIds: 'com.aster.comic.app.view.MainActivity',
-          matches:
-            'ImageView - FrameLayout > FrameLayout > ImageView',
+          matches: 'ImageView - FrameLayout > FrameLayout > ImageView',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12984767',
         },
 
