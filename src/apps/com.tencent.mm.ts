@@ -272,6 +272,7 @@ export default defineAppConfig({
       activityIds: [
         'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
         'com.tencent.mm.plugin.appbrand.launching.AppBrandLaunchProxyUI',
+        'com.tencent.mm.plugin.appbrand.ui.AppBrandUI00',
       ],
       quickFind: true,
       rules: [
@@ -283,6 +284,7 @@ export default defineAppConfig({
             'https://gkd-kit.gitee.io/import/12777076',
             'https://gkd-kit.gitee.io/import/12785012',
             'https://gkd-kit.gitee.io/import/12785183',
+            'https://gkd-kit.gitee.io/import/12993260', // com.tencent.mm.plugin.appbrand.ui.AppBrandUI00
           ],
         },
         {
