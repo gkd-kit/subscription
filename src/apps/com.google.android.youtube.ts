@@ -15,7 +15,7 @@ export default defineAppConfig({
       snapshotUrls: [
         'https://gkd-kit.gitee.io/import/12565261',
         'https://gkd-kit.gitee.io/import/13024980', // matchLauncher
-      ]
+      ],
     },
     {
       key: 1,
