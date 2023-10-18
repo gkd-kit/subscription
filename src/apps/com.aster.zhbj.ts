@@ -10,11 +10,15 @@ export default defineAppConfig({
       desc: '点击右上角跳过',
       rules: [
         {
-          activityIds:
-            ['com.aster.comic.app.ad.view.mediation.MediationSplashAdActivity',
-            'com.aster.comic.app.ad.view.mediation.MediationAppResumeSplashAdActivity'],
+          activityIds: [
+            'com.aster.comic.app.ad.view.mediation.MediationSplashAdActivity',
+            'com.aster.comic.app.ad.view.mediation.MediationAppResumeSplashAdActivity',
+          ],
           matches: '[id="com.byted.pangle.m:id/tt_splash_skip_btn"]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12981243','https://gkd-kit.gitee.io/import/13029855'],
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12981243',
+            'https://gkd-kit.gitee.io/import/13029855',
+          ],
         },
       ],
     },
