@@ -22,6 +22,10 @@ export default defineAppConfig({
           matches: '[id="com.gkid.crazyrope:id/splash_tv_skip"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12985488',
         },
+        {
+          matches: 'LinearLayout[childCount=2] > [text^="跳过"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13028151',
+        },
       ],
     },
     {
