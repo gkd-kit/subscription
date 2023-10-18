@@ -62,7 +62,7 @@ export default defineAppConfig({
         // 百度广告
         {
           key: 20,
-          activityIds: 'com.aster.comic.app.view.MainActivity',
+          activityIds: ['com.aster.comic.app.view.MainActivity','ImageView - FrameLayout > FrameLayout > ImageView'],
           matches: 'ImageView - FrameLayout > FrameLayout > ImageView',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12984767',
         },
