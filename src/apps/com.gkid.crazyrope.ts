@@ -7,13 +7,21 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
+      desc: '点击跳过',
       matchLauncher: true,
       quickFind: true,
-      activityIds: 'com.gkid.crazyrope.ui.splash.StartPageActivity',
+      activityIds: [
+        'com.gkid.crazyrope.ui.splash.StartPageActivity',
+        'com.gkid.crazyrope.ui.splash.SplashActivity',
+      ],
       rules: [
         {
           matches: '[id="com.byted.pangle.m:id/tt_splash_skip_btn"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12916417',
+        },
+        {
+          matches: '[id="com.gkid.crazyrope:id/splash_tv_skip"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12985488',
         },
       ],
     },
