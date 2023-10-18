@@ -7,9 +7,10 @@ export 默认 defineAppConfig({
     {
       密钥: 0,
       名字: '开屏广告',
-      activityIds: 'com.aster.comic.app.ad.view.mediation.MediationSplashAdActivity',
+      desc: '点击右上角x',
       rules: [
         {
+          activityIds: 'com.aster.comic.app.ad.view.mediation.MediationSplashAdActivity',
           matches: '[id="com.byted.pangle.m:id/tt_splash_skip_btn"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12981243',
         },
@@ -39,8 +40,8 @@ export 默认 defineAppConfig({
           密钥: 2,
           activityIds: 'com.aster.comic.app.view.MainActivity',
           matches:
-            'ImageView - LinearLayout - FrameLayout > FrameLayout > ImageView',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12872249',
+            'ImageView - FrameLayout > FrameLayout > ImageView',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12984767',
         },
 
         // 字节广告
