@@ -46,22 +46,13 @@ export default defineAppConfig({
         },
         // 字节广告
         {
-          key: 10,
+          key: 3,
           activityIds: 'com.aster.comic.app.view.MainActivity',
           matches: '[desc^="webview-close"] > View',
           snapshotUrls: 'https://gkd-kit.songe.li/import/12903062',
         },
         {
-          key: 11,
-          activityIds:
-            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
-          matches:
-            '@Image < View + View + View + View +n View > View > TextView[text="广告"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12996953',
-        },
-        // 百度广告
-        {
-          key: 20,
+          key: 4,
           activityIds: [
             'com.aster.comic.app.view.MainActivity',
             'ImageView - FrameLayout > FrameLayout > ImageView',
@@ -71,6 +62,21 @@ export default defineAppConfig({
             'https://gkd-kit.gitee.io/import/12984767',
             'https://gkd-kit.gitee.io/import/12998908',
           ],
+        },
+        {
+          key: 11,
+          activityIds:
+            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
+          matches:
+            '@Image < View + View + View + View +n View > View > TextView[text="广告"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12996953',
+        },
+        {
+          key: 12,
+          activityIds:
+            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
+          matches: '@Image < View + View +n View > View > TextView[text="广告"]',
+          snapshotUrls:'https://gkd-kit.gitee.io/import/13003644',
         },
       ],
     },
