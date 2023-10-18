@@ -30,5 +30,16 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 2,
+      name: '右侧悬浮广告',
+      activityIds: 'com.xinhang.mobileclient.home.activity.HomeActivity',
+      rules:
+        '@[id="com.xinhang.mobileclient:id/iv_close"] + [id="com.xinhang.mobileclient:id/iv_advert"]',
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/13024863',
+        'https://gkd-kit.gitee.io/import/13024872',
+      ],
+    },
   ],
 });
