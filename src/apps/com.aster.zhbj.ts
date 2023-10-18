@@ -5,6 +5,18 @@ export default defineAppConfig({
   name: '喵上漫画',
   groups: [
     {
+      key: 0,
+      name: '开屏广告',
+      desc: '点击右上角跳过',
+      rules: [
+        {
+          activityIds: 'com.aster.comic.app.ad.view.mediation.MediationSplashAdActivity',
+          matches: '[id="com.byted.pangle.m:id/tt_splash_skip_btn"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12981243',
+        },
+      ],
+    },
+    {
       key: 1,
       name: '应用内广告弹窗',
       desc: '点击右上角x',
@@ -27,11 +39,9 @@ export default defineAppConfig({
         {
           key: 2,
           activityIds: 'com.aster.comic.app.view.MainActivity',
-          matches:
-            'ImageView - LinearLayout - FrameLayout > FrameLayout > ImageView',
+          matches: 'ImageView - LinearLayout - FrameLayout > FrameLayout > ImageView',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12872249',
         },
-
         // 字节广告
         {
           key: 10,
@@ -46,6 +56,13 @@ export default defineAppConfig({
           matches:
             '@Image < View + View +n View > View > TextView[text="广告"]',
           snapshotUrls: 'https://gkd-kit.songe.li/import/12903072',
+        },
+        // 百度广告
+        {
+          key: 20,
+          activityIds: 'com.aster.comic.app.view.MainActivity',
+          matches: 'ImageView - FrameLayout > FrameLayout > ImageView',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12984767',
         },
       ],
     },
