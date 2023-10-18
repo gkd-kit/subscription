@@ -7,20 +7,30 @@ export default defineAppConfig({
     {
       key: -1,
       name: '开屏广告',
+      quickFind: true,
       activityIds: [
         'com.coolapk.market.view.splash.SplashActivity',
         'com.coolapk.market.view.main.MainActivity',
       ],
-      rules: '[id$=":id/tt_splash_skip_btn"]',
-      snapshotUrls: [
-        'https://gkd-kit.gitee.io/import/12472612',
-        'https://gkd-kit.gitee.io/import/12503773',
+      rules: [
+        {
+          key: 0,
+          matches: '[id$=":id/tt_splash_skip_btn"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12503773',
+        },
+        {
+          key: 1,
+          matches:
+            '[id="com.coolapk.market:id/ad_container"] >n [text^="跳过"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12917990',
+        },
       ],
     },
     {
       key: 0,
       name: '卡片广告',
       desc: '点击卡片右上角按钮->免广告-点击不感兴趣->选择关闭原因-点击不感兴趣',
+      quickFind: true,
       activityIds: [
         'com.coolapk.market.view.main.MainActivity', // 缺少快照
         'com.coolapk.market.view.base.SimpleAlphaActivity', // 缺少快照
@@ -70,6 +80,7 @@ export default defineAppConfig({
     },
     {
       key: 1,
+      quickFind: true,
       name: '关闭升级弹窗',
       activityIds: 'com.coolapk.market.view.main.MainActivity',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12503762',
