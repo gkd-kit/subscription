@@ -11,9 +11,10 @@ export default defineAppConfig({
       rules: [
         {
           activityIds:
-            'com.aster.comic.app.ad.view.mediation.MediationSplashAdActivity',
+            ['com.aster.comic.app.ad.view.mediation.MediationSplashAdActivity',
+            'com.aster.comic.app.ad.view.mediation.MediationAppResumeSplashAdActivity'],
           matches: '[id="com.byted.pangle.m:id/tt_splash_skip_btn"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12981243',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12981243','https://gkd-kit.gitee.io/import/13029855'],
         },
       ],
     },
@@ -34,8 +35,8 @@ export default defineAppConfig({
           activityIds:
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Activity_T',
           matches:
-            'ImageView - FrameLayout > FrameLayout > FrameLayout > ImageView',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12777329',
+            'FrameLayout[childCount=5] > FrameLayout[childCount=1] > ImageView',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13029880',
         },
         {
           key: 2,
