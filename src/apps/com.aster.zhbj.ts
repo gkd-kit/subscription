@@ -69,7 +69,10 @@ export default defineAppConfig({
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
           matches:
             '@Image[text=""] < View + View +n View > View > TextView[text="广告"]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12996953','https://gkd-kit.gitee.io/import/13003644'],
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12996953',
+            'https://gkd-kit.gitee.io/import/13003644',
+          ],
         },
       ],
     },
