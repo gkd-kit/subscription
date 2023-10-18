@@ -13,6 +13,7 @@ export default defineAppConfig({
         'com.netease.mail.biz.main.MainITabActivity',
         'com.netease.mail.biz.main.SplashActivity',
         'com.netease.mail.ad.launch.ui.SplashAdActivity',
+        'com.netease.mail.biz.main.MainITabActivity',
       ],
       rules: [
         {
@@ -44,6 +45,24 @@ export default defineAppConfig({
       ],
       rules:
         '[id="com.netease.mail:id/tv_ignore_this_version"][text="暂不更新"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12664070',
+    },
+    {
+      key: 2,
+      name: '邮件列表广告',
+      activityIds: ['com.netease.mail.biz.main.MainITabActivity'],
+      rules: [
+        {
+          key: 0,
+          matches: '[id="com.netease.mail:id/ad_arrow"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12999833',
+        },
+        {
+          key: 1,
+          matches: '[id="com.netease.mail:id/ll_delete"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12999841',
+        },
+      ],
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12664070',
     },
   ],
