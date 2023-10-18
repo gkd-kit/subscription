@@ -12,7 +12,10 @@ export default defineAppConfig({
       matchLauncher: true,
       quickFind: true,
       rules: '[id=`com.google.android.youtube:id/skip_ad_button`]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12565261',
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/12565261',
+        'https://gkd-kit.gitee.io/import/13024980', // matchLauncher
+      ]
     },
     {
       key: 1,
