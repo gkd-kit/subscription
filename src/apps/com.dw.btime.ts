@@ -9,7 +9,10 @@ export default defineAppConfig({
       name: '开屏广告',
       quickFind: true,
       activityIds: 'com.dw.btime.MainHomeTabActivity',
-      rules: '[id="com.dw.btime:id/ad_screen_skip_btn_v1"]',
+      rules: [
+        '[id="com.dw.btime:id/ad_screen_skip_btn_v1"]',
+        '[id="com.dw.btime:id/ad_screen_skip_btn"]',
+      ],
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12889257',
     },
     {
