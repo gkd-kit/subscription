@@ -30,10 +30,8 @@ export default defineAppConfig({
         },
         {
           key: 1,
-          activityIds:
-            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Activity_T',
-          matches:
-            'ImageView - FrameLayout > FrameLayout > FrameLayout > ImageView',
+          activityIds: 'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Activity_T',
+          matches: 'ImageView - FrameLayout > FrameLayout > FrameLayout > ImageView',
           snapshotUrls: 'https://gkd-kit.songe.li/import/12777329',
         },
         {
@@ -51,10 +49,8 @@ export default defineAppConfig({
         },
         {
           key: 11,
-          activityIds:
-            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
-          matches:
-            '@Image < View + View +n View > View > TextView[text="广告"]',
+          activityIds: 'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
+          matches: '@Image < View + View +n View > View > TextView[text="广告"]',
           snapshotUrls: 'https://gkd-kit.songe.li/import/12903072',
         },
         // 百度广告
