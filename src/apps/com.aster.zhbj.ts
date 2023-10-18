@@ -1,13 +1,13 @@
 import { defineAppConfig } from '../types';
 
-export 默认 defineAppConfig({
+export default defineAppConfig({
   id: 'com.aster.zhbj',
-  名字: '喵上漫画',
+  name: '喵上漫画',
   groups: [
     {
-      密钥: 0,
-      名字: '开屏广告',
-      desc: '点击右上角x',
+      key: 0,
+      name: '开屏广告',
+      desc: '点击右上角跳过',
       rules: [
         {
           activityIds: 'com.aster.comic.app.ad.view.mediation.MediationSplashAdActivity',
@@ -17,19 +17,19 @@ export 默认 defineAppConfig({
       ],
     },
     {
-      密钥: 1,
-      名字: '应用内广告弹窗',
+      key: 1,
+      name: '应用内广告弹窗',
       desc: '点击右上角x',
       rules: [
         // 腾讯广告
         {
-          密钥: 0,
+          key: 0,
           activityIds: 'com.bbk.launcher2.Launcher',
           matches: 'ImageView - FrameLayout > FrameLayout > ImageView',
           snapshotUrls: 'https://gkd-kit.songe.li/import/12777325',
         },
         {
-          密钥: 1,
+          key: 1,
           activityIds:
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Activity_T',
           matches:
@@ -37,7 +37,7 @@ export 默认 defineAppConfig({
           snapshotUrls: 'https://gkd-kit.songe.li/import/12777329',
         },
         {
-          密钥: 2,
+          key: 2,
           activityIds: 'com.aster.comic.app.view.MainActivity',
           matches:
             'ImageView - FrameLayout > FrameLayout > ImageView',
@@ -46,13 +46,13 @@ export 默认 defineAppConfig({
 
         // 字节广告
         {
-          密钥: 10,
+          key: 10,
           activityIds: 'com.aster.comic.app.view.MainActivity',
           matches: '[desc^="webview-close"] > View',
           snapshotUrls: 'https://gkd-kit.songe.li/import/12903062',
         },
         {
-          密钥: 11,
+          key: 11,
           activityIds:
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
           matches:
