@@ -15,6 +15,7 @@ export default defineAppConfig({
         'com.zhihu.android.app.feed.AdTransparentHostActivity',
         'com.zhihu.android.ContentActivity',
         'com.zhihu.android.mixshortcontainer.MixShortContainerActivity',
+        'com.zhihu.android.mix.activity.ContentMixProfileActivity',
       ],
       rules: 'TextView[id="com.zhihu.android:id/btn_skip"]',
       snapshotUrls: [
