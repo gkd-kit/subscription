@@ -11,9 +11,9 @@ export 默认 defineAppConfig({
       rules: [
         {
           matches: '[id="com.byted.pangle.m:id/tt_splash_skip_btn"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12981243'
-        }
-      ]
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12981243',
+        },
+      ],
     },
     {
       密钥: 1,
