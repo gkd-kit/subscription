@@ -14,7 +14,8 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"||id="com.xtuone.android.syllabus:id/ignore_top"||text^="跳过"]',
+          matches:
+            '[id="com.byted.pangle:id/tt_splash_skip_btn"||id="com.xtuone.android.syllabus:id/ignore_top"||text^="跳过"]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12840730',
             'https://gkd-kit.gitee.io/import/12840736',
