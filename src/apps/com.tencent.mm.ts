@@ -23,6 +23,7 @@ export default defineAppConfig({
             'https://gkd-kit.gitee.io/import/12642588',
             'https://gkd-kit.gitee.io/import/12888129', //ImageView - TextView[text="广告"][id!=null][index=0]这个规则无法匹配该广告，需要删除[index=0]
             'https://gkd-kit.gitee.io/import/12907641',
+            'https://gkd-kit.gitee.io/import/13000395',
           ],
         },
         // 以下是[确认关闭按钮]出现的情况
