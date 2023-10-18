@@ -56,8 +56,8 @@ export default defineAppConfig({
           activityIds:
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
           matches:
-            '@Image < View + View +n View > View > TextView[text="广告"]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12903072',
+            '@Image < View + View + View + View +n View > View > TextView[text="广告"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12996953',
         },
         // 百度广告
         {
