@@ -9,8 +9,16 @@ export default defineAppConfig({
       name: '开屏广告',
       quickFind: true,
       activityIds: 'com.dw.btime.MainHomeTabActivity',
-      rules: '[id="com.dw.btime:id/ad_screen_skip_btn_v1"]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12889257',
+      rules: [
+        {
+          matches: '[id="com.dw.btime:id/ad_screen_skip_btn_v1"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12889257',
+        },
+        {
+          matches: '[id="com.dw.btime:id/ad_screen_skip_btn"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12972209',
+        },
+      ],
     },
     {
       key: 1,
@@ -27,6 +35,15 @@ export default defineAppConfig({
       activityIds: 'com.dw.btime.MainHomeTabActivity',
       rules: '[id="com.dw.btime:id/old_baby_close"][clickable=true]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12889450',
+    },
+    {
+      key: 3,
+      name: '更新提示',
+      quickFind: true,
+      activityIds: 'com.dw.btime.base_library.dialog.DWBaseDialog',
+      rules:
+        'TextView[text="立即更新"] -3 [id="com.dw.btime:id/iv_upgrade_close"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12911011',
     },
   ],
 });
