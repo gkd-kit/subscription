@@ -83,6 +83,14 @@ export default defineAppConfig({
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12769137',
     },
     {
+      key: 6,
+      name: '取消去商品评分',
+      activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
+      rules: '@[text="取消"] +2 [text="五星好评"]',
+      exampleUrls:
+        'https://github.com/gkd-kit/selector/assets/44717382/7fd9aa26-f56e-4e42-b2b2-d2a826d42e5a',
+    },
+    {
       enable: false,
       key: 10,
       name: '请求开启通知提示信息',
