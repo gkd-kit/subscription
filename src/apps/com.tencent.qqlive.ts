@@ -72,18 +72,26 @@ export default defineAppConfig({
     },
     {
       key: 4,
-      name: '片头广告',
+      name: '视频播放时的广告',
       desc: '自动点击 跳过广告',
       activityIds: ['com.tencent.qqlive.ona.activity.VideoDetailActivity'],
       rules: [
         {
+          key: 0,
           matches: '[text="跳过广告"][clickable=true]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12700407'],
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12700407',
         },
         {
+          key: 1,
           matches:
             '@ImageView < FrameLayout < FrameLayout +(2) LinearLayout >(3) [text$="跳过广告"]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12700433'],
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12700433',
+        },
+        {
+          key: 2,
+          matches:
+            'FrameLayout[childCount=2] > FrameLayout > RelativeLayout > View[id!=null][clickable=true]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/13043079',
         },
       ],
     },
