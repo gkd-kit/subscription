@@ -293,7 +293,20 @@ export default defineAppConfig({
       ],
     },
     {
+      enable: false,
       key: 11,
+      name: '微信小程序-弹窗广告',
+      activityIds: ['com.tencent.mm.plugin.appbrand.ui.AppBrandUI'],
+      rules: [
+        {
+          matches:
+            'FrameLayout[childCount=5] + FrameLayout[childCount=2] >2 FrameLayout[childCount=1]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12926021'],
+        },
+      ],
+    },
+    {
+      key: 12,
       name: '网页版文件传输助手扫码自动授权',
       quickFind: true,
       activityIds: 'com.tencent.mm.ui.LauncherUI',
