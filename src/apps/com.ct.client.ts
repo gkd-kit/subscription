@@ -13,10 +13,17 @@ export default defineAppConfig({
         'com.ct.client.activity.MainActivity',
         'com.ct.client.activity.SplashActivity',
       ],
-      rules: '[id="com.ct.client:id/tvSkip"||id="com.ct.client:id/btSkip"]',
-      snapshotUrls: [
-        'https://gkd-kit.songe.li/import/12508958',
-        'https://gkd-kit.songe.li/import/12819736',
+      rules: [
+        {
+          matches: '[id="com.ct.client:id/tvSkip"]',
+        },
+        {
+          matches: '[id="com.ct.client:id/btSkip"]',
+          snapshotUrls: [
+            'https://gkd-kit.songe.li/import/12508958',
+            'https://gkd-kit.songe.li/import/12819736',
+          ],
+        },
       ],
     },
     {
@@ -50,12 +57,17 @@ export default defineAppConfig({
         'com.ct.client.activity.MainActivity',
       ],
       rules: [
-        'ImageView[id="com.ct.client:id/close"||id="com.ct.client:id/ivFloatClose"]',
-      ],
-      snapshotUrls: [
-        'https://gkd-kit.songe.li/import/12819676',
-        'https://gkd-kit.songe.li/import/12913735',
-        'https://gkd-kit.songe.li/import/13043345',
+        {
+          matches: 'ImageView[id="com.ct.client:id/close"]',
+          snapshotUrls: [
+            'https://gkd-kit.songe.li/import/12819676',
+            'https://gkd-kit.songe.li/import/12913735',
+          ],
+        },
+        {
+          matches: 'ImageView[id="com.ct.client:id/ivFloatClose"]',
+          snapshotUrls: ['https://gkd-kit.songe.li/import/13043345'],
+        },
       ],
     },
     {
