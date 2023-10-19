@@ -4,16 +4,16 @@ export default defineAppConfig({
   id: 'com.tencent.mm',
   name: '微信',
   groups: [
-    //keys 1-9基本功能, 10-19 朋友圈, 20-29 订阅号, 30-39 小程序
+    //keys 0-9基本功能, 10-19 朋友圈, 20-29 订阅号, 30-39 小程序
     {
-      key: 1,
+      key: 0,
       name: '电脑微信快捷自动登录',
       quickFind: true,
       activityIds: '.plugin.webwx.ui.ExtDeviceWXLoginUI',
       rules: 'TextView[text="取消登录"] - Button[text="登录"]',
     },
     {
-      key: 2,
+      key: 1,
       name: '扫码登录自动授权',
       desc: '通过微信扫码网页后,自动确认允许/登录',
       activityIds: ['com.tencent.mm.plugin.webview.ui.tools'], //不同的扫码对象在tools后面会由不同的后缀, 但前面的startwith是相同的
@@ -37,7 +37,7 @@ export default defineAppConfig({
     },
     {
       enable: false,
-      key: 3,
+      key: 2,
       name: '第三方APP申请使用授权弹窗',
       desc: '自动点击允许,但由于此界面可以额外新建昵称头像,默认不启用',
       quickFind: true,
@@ -47,7 +47,7 @@ export default defineAppConfig({
     },
 
     {
-      key: 4,
+      key: 3,
       name: '网页版文件传输助手扫码自动授权',
       quickFind: true,
       activityIds: 'com.tencent.mm.ui.LauncherUI',
@@ -56,7 +56,7 @@ export default defineAppConfig({
     },
     {
       enable: false,
-      key: 5,
+      key: 4,
       name: '微信红包自动领取',
       desc: '自动领取私聊红包,群聊红包',
       exampleUrls:
@@ -96,7 +96,7 @@ export default defineAppConfig({
     },
     {
       enable: false,
-      key: 6,
+      key: 5,
       name: '自动选中发送原图',
       desc: '图片和视频选择器-自动选中底部中间的发送原图',
       activityIds: [
@@ -117,7 +117,7 @@ export default defineAppConfig({
     },
     {
       enable: false,
-      key: 7,
+      key: 6,
       name: '自动查看原图',
       desc: '自动点击底部左侧[查看原图(*M)]按钮',
       activityIds: 'com.tencent.mm.ui.chatting.gallery.ImageGalleryUI',
