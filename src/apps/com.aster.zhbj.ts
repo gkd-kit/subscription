@@ -13,11 +13,15 @@ export default defineAppConfig({
           activityIds: [
             'com.aster.comic.app.ad.view.mediation.MediationSplashAdActivity',
             'com.aster.comic.app.ad.view.mediation.MediationAppResumeSplashAdActivity',
+            'com.aster.comic.app.view.reader.ReaderActivity',
+            'com.huawei.android.launcher.unihome.UniHomeLauncher',
           ],
           matches: '[id="com.byted.pangle.m:id/tt_splash_skip_btn"]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12981243',
             'https://gkd-kit.gitee.io/import/13029855',
+            'https://gkd-kit.gitee.io/import/13043320',
+            'https://gkd-kit.gitee.io/import/13043344',
           ],
         },
       ],
