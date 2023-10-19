@@ -78,17 +78,17 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          matches: '[text="跳过广告"][clickable=true]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12700407',
+          name: '点击[跳过广告]',
+          matches:
+            '@[text$="跳过广告"][clickable=true] < LinearLayout > [text="VIP可关闭该广告"]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12700407',
+            'https://gkd-kit.gitee.io/import/12700433',
+          ],
         },
         {
           key: 1,
-          matches:
-            '@ImageView < FrameLayout < FrameLayout +(2) LinearLayout >(3) [text$="跳过广告"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12700433',
-        },
-        {
-          key: 2,
+          name: '点击左下角广告横幅右上角x',
           matches:
             'FrameLayout[childCount=2] > FrameLayout > RelativeLayout > View[id!=null][clickable=true]',
           snapshotUrls: 'https://gkd-kit.songe.li/import/13043079',
