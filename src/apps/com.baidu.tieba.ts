@@ -91,10 +91,11 @@ export default defineAppConfig({
         {
           key: 1,
           matches:
-            'TextView[text$="广告"] +n FrameLayout[id="com.baidu.tieba:id/obfuscated"] >n ImageView[id=null]',
+            'TextView[text$="广告"] +n FrameLayout[id="com.baidu.tieba:id/obfuscated"] >n @FrameLayout[clickable=true] > ImageView[id=null]',
           snapshotUrls: [
             'https://gkd-kit.songe.li/import/12775913', // com.baidu.tieba.pb.pb.main.PbActivity
             'https://gkd-kit.songe.li/import/13043133', // com.baidu.tieba.tblauncher.MainTabActivity
+            'https://gkd-kit.songe.li/import/13054256',
           ],
         },
         {
