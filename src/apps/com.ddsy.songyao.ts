@@ -18,7 +18,7 @@ export default defineAppConfig({
       ],
     },
     {
-      key: 0,
+      key: 1,
       name: '优惠卷提示',
       quickFind: true,
       activityIds: 'com.ddsy.songyao.activity.SplashActivity',
