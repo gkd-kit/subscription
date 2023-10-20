@@ -24,5 +24,34 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 1,
+      name: '广告弹窗',
+      activityIds: [
+        'com.citiccard.mobilebank.card.activity.BillDetailHomeActivity',
+      ],
+      quickFind: true,
+      rules: [
+        {
+          matches: '[id="com.citiccard.mobilebank:id/iv_bill_home_cancel"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/13049284'],
+        },
+      ],
+    },
+    {
+      key: 2,
+      name: '通知权限弹窗',
+      activityIds: [
+        'com.citiccard.mobilebank.card.activity.BillDetailHomeActivity',
+      ],
+      quickFind: true,
+      rules: [
+        {
+          matches:
+            '[id="com.citiccard.mobilebank:id/ll_app_upgrade_content"] + [id="com.citiccard.mobilebank:id/iv_close"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/13049283'],
+        },
+      ],
+    },
   ],
 });
