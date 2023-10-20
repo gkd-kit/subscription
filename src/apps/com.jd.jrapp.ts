@@ -10,12 +10,13 @@ export default defineAppConfig({
       matchLauncher: true,
       quickFind: true,
       activityIds: 'com.jd.jrapp.bm.mainbox.main.MainActivity',
-          rules: [
-            {
-              matches: '[id="com.jd.jrapp:id/iv_ad_banner"] + [id="com.jd.jrapp:id/btn_jump"]',
-              snapshotUrls: 'https://gkd-kit.gitee.io/import/13054174',
-            },
-          ],
+      rules: [
+        {
+          matches:
+            '[id="com.jd.jrapp:id/iv_ad_banner"] + [id="com.jd.jrapp:id/btn_jump"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13054174',
+        },
+      ],
     },
   ],
 });
