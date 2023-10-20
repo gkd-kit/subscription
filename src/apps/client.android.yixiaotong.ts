@@ -38,5 +38,13 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 2,
+      name: '应用内广告卡片',
+      activityIds:
+        'client.android.yixiaotong.v3.ui.appcontrol.bath.BathDetailActivity',
+      rules: 'ImageView - FrameLayout - FrameLayout > ImageView',
+      snapshotUrls: 'https://gkd-kit.songe.li/import/13055542',
+    },
   ],
 });
