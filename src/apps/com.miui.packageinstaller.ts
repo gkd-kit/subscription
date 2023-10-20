@@ -47,10 +47,17 @@ export default defineAppConfig({
             'https://gkd-kit.songe.li/import/12818054',
           ],
         },
+        {
+          key: 1,
+          desc: '点击【继续安装】',
+          activityIds: 'com.miui.packageInstaller.NewInstallerPrepareActivity',
+          matches: '@[text="继续安装"] + [text="取消安装"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12889120',
+        },
 
         // 需勾选【已了解此应用未经安全检测】才能继续安装
         {
-          key: 1,
+          key: 2,
           desc: '勾选【已了解此应用未经安全检测】',
           activityIds: 'com.miui.packageInstaller.NewInstallerPrepareActivity',
           matches:
@@ -63,15 +70,15 @@ export default defineAppConfig({
 
         // 需勾选【已了解此应用存在高风险】才能继续安装
         {
-          key: 2,
+          key: 3,
           desc: '点击【了解风险】',
           activityIds: 'com.miui.packageInstaller.NewInstallerPrepareActivity',
           matches: '@[text="了解风险"] + [text="取消安装"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12889135',
         },
         {
-          preKeys: 2,
-          key: 3,
+          preKeys: 3,
+          key: 4,
           desc: '勾选【已了解此应用存在高风险】',
           activityIds: 'com.miui.packageInstaller.NewInstallerPrepareActivity',
           matches:
@@ -81,21 +88,9 @@ export default defineAppConfig({
             'https://gkd-kit.gitee.io/import/12889148', // 已勾选
           ],
         },
-
-        // 普通应用安装，提示文本为【继续安装】
         {
-          preKeys: [0, 1],
-          key: 10,
-          desc: '点击【继续安装】',
-          activityIds: 'com.miui.packageInstaller.NewInstallerPrepareActivity',
-          matches: '@[text="继续安装"] + [text="取消安装"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12889120',
-        },
-
-        // 高风险应用安装，提示文本为【仍然安装】
-        {
-          preKeys: 3,
-          key: 11,
+          preKeys: 4,
+          key: 5,
           desc: '点击【仍然安装】',
           activityIds: 'com.miui.packageInstaller.NewInstallerPrepareActivity',
           matches: '@[text="仍然安装"] + [text="取消安装"]',
@@ -104,8 +99,8 @@ export default defineAppConfig({
 
         // 安装完成
         {
-          preKeys: [10, 11],
-          key: 12,
+          preKeys: [0, 1, 5],
+          key: 6,
           desc: '点击【完成】',
           activityIds:
             'com.miui.packageInstaller.ui.normalmode.InstallProgressActivity',
