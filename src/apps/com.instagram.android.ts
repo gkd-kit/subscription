@@ -7,14 +7,20 @@ export default defineAppConfig({
     {
       key: 1,
       name: '信息流广告',
-      activityIds: 'com.instagram.mainactivity.InstagramMainActivity',
+      activityIds: [
+        'com.instagram.mainactivity.InstagramMainActivity',
+        'com.wrongchao.v2vpn.MainActivity',
+      ],
       rules: [
         {
           key: 0,
           name: '点击【更多】按钮',
           matches:
             '[text="赞助内容"] + [id="com.instagram.android:id/feed_more_button_stub"]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12798562',
+          snapshotUrls: [
+            'https://gkd-kit.songe.li/import/12798562',
+            'https://gkd-kit.gitee.io/import/13060896',
+          ],
         },
         {
           preKeys: 0,
@@ -25,6 +31,7 @@ export default defineAppConfig({
           snapshotUrls: [
             'https://gkd-kit.songe.li/import/12798571',
             'https://gkd-kit.gitee.io/import/12829448',
+            'https://gkd-kit.gitee.io/import/13060900',
           ],
         },
         {
@@ -36,6 +43,7 @@ export default defineAppConfig({
           snapshotUrls: [
             'https://gkd-kit.songe.li/import/12798590',
             'https://gkd-kit.gitee.io/import/12829464',
+            'https://gkd-kit.gitee.io/import/13060902',
           ],
         },
         {
