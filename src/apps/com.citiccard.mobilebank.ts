@@ -7,15 +7,11 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: [
-        'com.citiccard.mobilebankapp.WelcomeActivity',
-        'com.android.packageinstaller.permission.ui.GrantPermissionsActivity',
-      ],
+      activityIds: ['com.citiccard.mobilebankapp.WelcomeActivity'],
       quickFind: true,
       rules: [
         {
-          matches:
-            '[id="com.citiccard.mobilebank:id/iv_popAdv"] + [id="com.citiccard.mobilebank:id/btn_skip"][text$="跳过"]',
+          matches: '[id="com.citiccard.mobilebank:id/btn_skip"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12684908'],
         },
         {
