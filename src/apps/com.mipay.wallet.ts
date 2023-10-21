@@ -9,7 +9,7 @@ export default defineAppConfig({
       name: '开屏广告',
       activityIds: 'com.xiaomi.jr.app.MiFinanceActivity',
       matchLauncher: true,
-      rules: '[id="com.mipay.wallet:id/ad"] >n [id="com.mipay.wallet:id/skip"]',
+      rules: '[id="com.mipay.wallet:id/skip"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13059351',
     },
   ],
