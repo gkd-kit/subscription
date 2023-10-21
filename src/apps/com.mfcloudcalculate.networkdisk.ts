@@ -9,7 +9,6 @@ export default defineAppConfig({
       name: '开屏广告',
       activityIds: 'com.mfcloudcalculate.networkdisk.activity.SplashActivity',
       matchLauncher: true,
-      quickFind: true,
       rules: [
         {
           key: 0,
