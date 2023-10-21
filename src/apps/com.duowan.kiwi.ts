@@ -11,7 +11,19 @@ export default defineAppConfig({
         'com.duowan.kiwi.homepage.Homepage',
         'com.duowan.kiwi.adsplash.view.AdSplashActivity',
       ],
-      rules: ['[id=`com.duowan.kiwi:id/skip_time`]'],
+      rules: [
+        {
+          key: 0,
+          matches: '[id=`com.duowan.kiwi:id/skip_time`]',
+          snapshotUrls: [], // 缺少快照
+        },
+        {
+          key: 1,
+          matches:
+            '[id="com.duowan.kiwi:id/ams_splash_ad_container"] >n [text^="跳过"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/13059822',
+        },
+      ],
     },
     {
       key: 1,
