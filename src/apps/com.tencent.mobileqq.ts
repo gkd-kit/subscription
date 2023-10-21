@@ -248,8 +248,8 @@ export default defineAppConfig({
       name: '第三方应用授权登录自动确认',
       desc: '第三方软件使用QQ登录时，自动点击确认，以及之后的权限确认界面，自动点击确认。',
       activityIds: [
-        'com.tencent.mobileqq.widget.QQProgressDialog', 
-        'com.tencent.open.agent.PublicFragmentActivityForOpenSDK'
+        'com.tencent.mobileqq.widget.QQProgressDialog',
+        'com.tencent.open.agent.PublicFragmentActivityForOpenSDK',
       ],
       rules: [
         {
