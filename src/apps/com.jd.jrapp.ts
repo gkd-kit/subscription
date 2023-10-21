@@ -12,8 +12,7 @@ export default defineAppConfig({
       activityIds: 'com.jd.jrapp.bm.mainbox.main.MainActivity',
       rules: [
         {
-          matches:
-            '[id="com.jd.jrapp:id/iv_ad_banner"] + [id="com.jd.jrapp:id/btn_jump"]',
+          matches: '[id="com.jd.jrapp:id/btn_jump"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13054174',
         },
       ],
