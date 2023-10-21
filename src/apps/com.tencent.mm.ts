@@ -6,15 +6,85 @@ export default defineAppConfig({
   groups: [
     {
       key: 0,
-      name: '关闭朋友圈广告',
-      desc: '朋友圈信息流广告,点击关闭按钮,确认关闭',
+      name: '朋友圈广告',
+      desc: '点击广告卡片右上角广告,直接关闭/出现菜单,确认关闭',
+      quickFind: true,
       activityIds: 'com.tencent.mm.plugin.sns.ui.SnsTimeLineUI',
       exampleUrls: [
         'https://github.com/gkd-kit/subscription/assets/38517192/c9ae4bba-a748-4755-b5e4-c7ad3d489a79',
       ],
       rules: [
-        'TextView[text*="广告"] + TextView[text="关闭该广告"]',
-        'ImageView - TextView[text="广告"][id!=null][index=0]',
+        {
+          key: 0,
+          name: '点击广告卡片右上角',
+          matches:
+            'ImageView - TextView[text="广告"][clickable=true][id!=null]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12642588',
+            'https://gkd-kit.gitee.io/import/12888129', //ImageView - TextView[text="广告"][id!=null][index=0]这个规则无法匹配该广告，需要删除[index=0]
+            'https://gkd-kit.gitee.io/import/12907641',
+          ],
+        },
+        // 以下是[确认关闭按钮]出现的情况
+        // 情况1 - 你觉得这条广告怎么样->直接关闭
+        {
+          preKeys: 0,
+          key: 1,
+          name: '你觉得这条广告怎么样-点击[关闭该广告]',
+          matches:
+            '@LinearLayout[clickable=true][childCount=2] > [text="关闭该广告"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12642584'],
+        },
+        {
+          preKeys: 1,
+          key: 2,
+          name: '关闭该广告的原因-点击[直接关闭]',
+          matches: '[text="关闭该广告的原因"] +(2) [text="直接关闭"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12663984'],
+        },
+        // 情况2 - 关闭该广告
+        {
+          preKeys: 0,
+          key: 3,
+          name: '对这条广告不感兴趣-点击[关闭该广告]',
+          matches:
+            'TextView[text="你可以这样优化广告推荐"] + TextView[text="关闭该广告"][clickable=true]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12907642',
+        },
+      ],
+    },
+    {
+      enable: false,
+      key: 12,
+      name: '朋友圈广告-英文版',
+      desc: '点击广告卡片右上角[Sponsored],直接关闭/出现菜单点击[Close the ad],确认关闭',
+      activityIds: 'com.tencent.mm.plugin.sns.ui.SnsTimeLineUI',
+      quickFind: true,
+      rules: [
+        {
+          key: 0,
+          name: '点击广告卡片右上角[Sponsored]',
+          matches:
+            'ImageView - TextView[text="Sponsored"][clickable=true][id!=null]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12905837',
+        },
+        // 以下是[确认关闭按钮]出现的情况
+        // 情况1 - 你觉得这条广告怎么样->直接关闭
+        {
+          preKeys: 0,
+          key: 1,
+          name: 'Sponsored story-点击[Close the ad]',
+          matches:
+            '@LinearLayout[clickable=true][childCount=2] > TextView[text="Close the ad"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12905838',
+        },
+        {
+          preKeys: 1,
+          key: 2,
+          name: 'Reason for closing the ad - 点击[Close]',
+          matches: '[text="Reason for closing the ad"] +(2) [text="Close"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12905846',
+        },
       ],
     },
     {
@@ -30,13 +100,13 @@ export default defineAppConfig({
       rules: 'Button[text="拒绝"] - Button[text="允许"]',
     },
     {
+      enable: false,
       key: 3,
-      name: '微信手机第三方APP申请使用',
-      desc: '自动点击同意',
-      rules: [
-        'TextView + TextView[text="申请使用"]',
-        'Button[text="拒绝"] - Button[text="允许"]',
-      ],
+      name: '第三方APP申请使用授权弹窗',
+      desc: '自动点击允许,但由于此界面可以额外新建昵称头像,默认不启用',
+      activityIds: ['com.tencent.mm.plugin.base.stub.UIEntryStub'],
+      rules: 'Button[text="拒绝"] - Button[text="允许"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12663602',
     },
     {
       key: 4,
@@ -95,6 +165,140 @@ export default defineAppConfig({
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12567637',
         },
       ],
+    },
+    {
+      enable: false,
+      key: 6,
+      name: '订阅号文章广告',
+      desc: '⚠ 此规则有概率误触。自动点击关闭按钮，必须同时启用【订阅号文章广告反馈】规则',
+      activityIds:
+        'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebViewMMUI',
+      rules: [
+        {
+          key: 1,
+          name: '广告类型1',
+          matches:
+            'View[id="ad_container"] > View[childCount=1] >n @View > [id=null][text^="广告"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12642232',
+            'https://gkd-kit.gitee.io/import/12646837', // 事件完成后，反馈按钮仍然存在，使用 View[childCount=1] 进行限定，防止频繁触发规则
+            'https://gkd-kit.gitee.io/import/12678937', // 文章未浏览至页面底部，广告反馈按钮不可见，使用 [visibleToUser=true] 进行限定，防止打开文章就频繁触发规则
+            'https://gkd-kit.gitee.io/import/12714427', // 优化规则，使用 View[id="ad_container"] 作为特征节点
+          ],
+        },
+        {
+          key: 2,
+          name: '广告类型2',
+          matches:
+            'View[childCount=1] > @[id="feedbackTagContainer"][visibleToUser=true] > [id="feedbackTag"]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12700183',
+            'https://gkd-kit.gitee.io/import/12701503', // 事件完成后，采用[childCount=1]进行限定，防止频繁触发规则
+            'https://gkd-kit.gitee.io/import/12714424',
+          ],
+        },
+      ],
+    },
+    {
+      enable: false,
+      key: 7,
+      name: '自动选中发送原图',
+      desc: '图片和视频选择器-自动选中底部中间的发送原图',
+      activityIds: [
+        'com.tencent.mm.plugin.gallery.ui.AlbumPreviewUI',
+        'com.tencent.mm.plugin.gallery.ui.ImagePreviewUI',
+      ],
+      rules: [
+        {
+          key: 1,
+          matches: '[text="原图"] - ImageButton[desc="未选中,原图,复选框"]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12686641', // 未选中
+            'https://gkd-kit.songe.li/import/12840865', // 未选中
+            'https://gkd-kit.gitee.io/import/12686640', // 已选中
+          ],
+        },
+      ],
+    },
+    {
+      enable: false,
+      key: 8,
+      name: '订阅号文章广告反馈',
+      desc: '⚠ 此规则有概率误触。自动点击反馈理由，配合【订阅号文章广告】规则使用',
+      activityIds:
+        'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebViewMMUI',
+      rules: [
+        {
+          key: 1,
+          // preKeys: [1], 取消 preKeys 提高点击成功率
+          name: '点击不感兴趣',
+          matches:
+            'View > [id="feedbackTagContainer"][visibleToUser=true] + [id^="menu"] > [id="dislike"][text="不感兴趣"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12642234',
+            'https://gkd-kit.gitee.io/import/12722301',
+            'https://gkd-kit.gitee.io/import/12722331', // 使用 [id="feedbackTagContainer"][visibleToUser=true] 进行限定，防止反馈界面未出现就触发规则
+          ],
+          action: 'clickCenter', // 使用 clickCenter 事件点击，期望在快照 https://gkd-kit.gitee.io/import/12745280 中成功点击 [与我无关]
+        },
+        {
+          key: 2,
+          // preKeys: [2], 取消 preKeys 提高点击成功率
+          name: '点击与我无关',
+          matches: 'View > [id^="menu"] > [id="isdismatch"][text="与我无关"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12642238'],
+        },
+        {
+          key: 3,
+          name: '点击关闭此广告',
+          matches: 'TextView[id="closeBtn"][text="关闭此广告"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12700191',
+        },
+      ],
+    },
+    {
+      enable: false,
+      key: 9,
+      name: '自动查看原图',
+      desc: '自动点击底部左侧[查看原图（*M）]按钮',
+      activityIds: 'com.tencent.mm.ui.chatting.gallery.ImageGalleryUI',
+      rules: 'Button[text^="查看原图"][clickable=true]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12706944',
+    },
+    {
+      enable: false,
+      key: 10,
+      name: '微信小程序-开屏广告',
+      activityIds: [
+        'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
+        'com.tencent.mm.plugin.appbrand.launching.AppBrandLaunchProxyUI',
+      ],
+      quickFind: true,
+      rules: [
+        {
+          matches:
+            '[text="广告"] < FrameLayout[childCount=1] <2 FrameLayout[childCount=3] <2 FrameLayout[childCount=2] - FrameLayout[childCount=3] > FrameLayout[childCount=2] >  FrameLayout[childCount=1] > [text="跳过"]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12701979',
+            'https://gkd-kit.gitee.io/import/12777076',
+            'https://gkd-kit.gitee.io/import/12785012',
+            'https://gkd-kit.gitee.io/import/12785183',
+          ],
+        },
+        {
+          matches:
+            '[text="广告"] < * <2 * <2 * <2 FrameLayout[childCount=2] - FrameLayout[childCount=2] >  FrameLayout[childCount=1] > [text="跳过"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12785246'],
+        },
+      ],
+    },
+    {
+      key: 11,
+      name: '网页版文件传输助手扫码自动授权',
+      quickFind: true,
+      activityIds: 'com.tencent.mm.ui.LauncherUI',
+      rules: '[text="打开网页版文件传输助手"] + * > Button[text="打开"]',
+      snapshotUrls: 'https://gkd-kit.songe.li/import/12793745',
     },
   ],
 });

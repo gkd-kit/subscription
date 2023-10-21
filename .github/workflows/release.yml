@@ -7,14 +7,17 @@ on:
 
 jobs:
   release:
-    if: ${{ startsWith(github.event.head_commit.message, 'chore(main):') && contains(github.event.head_commit.message, 'release') }}
+    # prevent run on fork
+    if: ${{ github.repository == 'gkd-kit/subscription' && startsWith(github.event.head_commit.message, 'chore(main):') && contains(github.event.head_commit.message, 'release') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      - uses: volta-cli/action@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
 
       - uses: pnpm/action-setup@v2
 
@@ -48,4 +51,4 @@ jobs:
           pnpm publish
 
       - name: sync npmmirror
-        run: curl -X PUT 'https://registry-direct.npmmirror.com/@gkd-kit/app/sync'
+        run: curl -X PUT 'https://registry-direct.npmmirror.com/@gkd-kit/subscription/sync'

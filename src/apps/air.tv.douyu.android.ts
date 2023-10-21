@@ -15,10 +15,9 @@ export default defineAppConfig({
         {
           matches:
             '@TextView[text^=\'跳过\'] + LinearLayout TextView[text*="跳转"]',
-          snapshotUrls:
-            'https://gkd-kit.gitee.io/import/38517192/50c858ee-d331-4d5a-b5db-5eb17323c5ff',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12893916',
         },
-        '[text^=\'跳过\'] + * >2 TextView[text*=\'跳转\']', // 1686970245243, 1686970188866
+        '[text^="跳过"] + * >2 TextView[text*=\'跳转\']', // 1686970245243, 1686970188866
       ],
     },
     {
@@ -29,10 +28,9 @@ export default defineAppConfig({
         'com.douyu.module.young.view.YoungModeGuideDialog',
         'com.douyu.module.home.pages.main.MainActivity',
       ],
-      snapshotUrls:
-        'https://gkd-kit.gitee.io/import/38517192/1c081a65-688a-406b-b67b-9bfb9aba0fad',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/12472598',
       rules: [
-        '[text=\'开启青少年模式\'] + [text=\'我知道了\']', // 1686970236642
+        '[text="开启青少年模式"] + [text=\'我知道了\']', // 1686970236642
       ],
     },
     {
@@ -43,6 +41,27 @@ export default defineAppConfig({
         'com.douyu.module.home.pages.main.MainActivity',
       ],
       rules: '[text="立即升级"] - [text="忽略"][clickable=true]',
+    },
+    {
+      key: 3,
+      name: '直播间悬浮广告',
+      activityIds: 'tv.douyu.view.activity.PlayerActivity',
+      rules: [
+        {
+          key: 0,
+          matches:
+            'ImageView < ViewGroup + @ViewGroup[childCount=1] > ImageView', //添加childCount=1避免【全屏播放-设置】误触
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12892825',
+            'https://gkd-kit.gitee.io/import/13037239',
+          ],
+        },
+        {
+          key: 1,
+          matches: 'ViewPager + @View + ImageView + View',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12892825',
+        },
+      ],
     },
   ],
 });

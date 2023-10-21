@@ -8,34 +8,58 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       desc: '数字倒计时广告,圆形倒计时广告',
+      quickFind: true,
       activityIds: [
         'com.baidu.tieba.tblauncher.MainTabActivity',
         'com.baidu.tieba.pb.pb.main.PbActivity',
       ],
       rules: [
-        'TextView[text*=`广告`] - TextView[text^=`跳过`]',
-        '[id=`com.kwad.dy.sdk:id/ksad_splash_circle_skip_view`] TextView[text=`跳过`]',
-        '[id=`com.byted.pangle:id/tt_splash_skip_btn`]',
         {
-          matches: '@TextView[text="跳过"] + TextView[text.length=1]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12566191',
+          key: 0,
+          matches:
+            '[id="com.kwad.dy.sdk:id/ksad_splash_circle_skip_view"] TextView[text="跳过"]', // 需要补充快照
+        },
+        { key: 1, matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]' }, // 需要补充快照
+        {
+          key: 2,
+          matches:
+            'TextView[text*="广告"||text.length=1] - TextView[text^="跳过"][text.length=5||text.length=2]',
+          snapshotUrls: [
+            'https://gkd-kit.songe.li/import/12775906',
+            'https://gkd-kit.gitee.io/import/12566191',
+          ],
+        },
+        {
+          key: 3,
+          matches:
+            '@FrameLayout[childCount=1][clickable=true][id!=null] > TextView[text="跳过"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12870916',
         },
       ],
     },
     {
       key: 1,
       name: '任意界面-选择不喜欢理由-不感兴趣',
-      rules: '@View[text=null] - TextView[text=`选择不喜欢理由`][index=0]',
+      rules: '@View[text=null] - TextView[text="选择不喜欢理由"][index=0]',
+      snapshotUrls: 'https://gkd-kit.songe.li/import/12775914',
     },
     {
       key: 2,
-      name: '首页/贴吧帖子列表-推荐列表-长得像帖子的广告卡片',
+      name: '首页/吧内-帖子列表-推荐列表-长得像帖子的广告卡片',
       activityIds: [
         'com.baidu.tieba.tblauncher.MainTabActivity',
         'com.baidu.tieba.frs.FrsActivity',
       ],
       rules: [
-        'ImageView < @FrameLayout < LinearLayout < RelativeLayout <n LinearLayout < RelativeLayout + LinearLayout > RelativeLayout > TextView[text$=`广告`]',
+        {
+          key: 0,
+          matches:
+            'TextView[text$="广告"] <n RelativeLayout <n LinearLayout - RelativeLayout > LinearLayout > FrameLayout +n RelativeLayout > LinearLayout',
+          snapshotUrls: [
+            'https://gkd-kit.songe.li/import/12775930',
+            'https://gkd-kit.gitee.io/import/12840951',
+          ],
+        },
       ],
     },
     {
@@ -47,39 +71,68 @@ export default defineAppConfig({
         'com.baidu.tieba.pb.pb.main.PbActivity',
       ],
       rules:
-        'TextView[text=`广告`] <n FrameLayout <n LinearLayout - RelativeLayout @FrameLayout > ImageView',
+        'TextView[text=`广告`] <n FrameLayout <n LinearLayout - RelativeLayout @FrameLayout > ImageView', // 需要补充快照
     },
-    {
-      key: 4,
-      name: '帖子评论区内部广告卡片',
-      activityIds: 'com.baidu.tieba.frs.FrsActivity',
-      rules:
-        'ImageView < @FrameLayout < LinearLayout < RelativeLayout <n LinearLayout < RelativeLayout + LinearLayout[id=`com.baidu.tieba:id/obfuscated`] TextView[text=`广告`]',
-    },
+    // key=4 的规则组已经删除, 后续不可添加 key=4 的规则组
     {
       key: 5,
       name: '帖子评论区广告卡片',
-      activityIds: 'com.baidu.tieba.pb.pb.main.PbActivity',
+      activityIds: [
+        'com.baidu.tieba.pb.pb.main.PbActivity',
+        'com.baidu.tieba.frs.FrsActivity',
+        'com.baidu.tieba.tblauncher.MainTabActivity',
+      ],
       rules: [
-        'TextView[text=`广告`] <n FrameLayout +n RelativeLayout[id=`com.baidu.tieba:id/obfuscated`] ImageView',
-        'TextView[text$=`广告`] +n FrameLayout[id=`com.baidu.tieba:id/obfuscated`] ImageView[id=null]',
-        'TextView[text$=`广告`] < RelativeLayout <n LinearLayout - RelativeLayout ImageView[id=null][desc=null]',
+        {
+          key: 0,
+          matches:
+            'TextView[text="广告"] <n FrameLayout +n RelativeLayout[id="com.baidu.tieba:id/obfuscated"] >n ImageView',
+        },
+        {
+          key: 1,
+          matches:
+            'TextView[text$="广告"] +n FrameLayout[id="com.baidu.tieba:id/obfuscated"] >n ImageView[id=null]',
+          snapshotUrls: [
+            'https://gkd-kit.songe.li/import/12775913', // com.baidu.tieba.pb.pb.main.PbActivity
+            'https://gkd-kit.songe.li/import/13043133', // com.baidu.tieba.tblauncher.MainTabActivity
+          ],
+        },
+        {
+          key: 2,
+          matches:
+            'TextView[text$="广告"] < RelativeLayout <n LinearLayout - RelativeLayout >n @FrameLayout > ImageView[id=null][desc=null]',
+          snapshotUrls: [
+            'https://gkd-kit.songe.li/import/12775916',
+            'https://gkd-kit.songe.li/import/12775892', // 指定点击目标为具备 clickable=true 属性的 @FrameLayout，防止在这个快照误触点击收藏
+          ],
+        },
       ],
     },
-    {
-      key: 6,
-      name: '首页左侧游戏广告小图标',
-      activityIds: 'com.baidu.tieba.tblauncher.MainTabActivity',
-      rules: [
-        'ImageView[clickable=true] - RelativeLayout[clickable=false][childCount=1] > ImageView[clickable=true]',
-      ],
-    },
+    // 在"我的"界面中出现不停点击，问题快照: https://gkd-kit.gitee.io/import/12839905
+    // 且现有规则缺少快照核实问题所在,故暂时移除规则
+    // {
+    //   key: 6,
+    //   name: '首页左侧游戏广告小图标',
+    //   activityIds: 'com.baidu.tieba.tblauncher.MainTabActivity',
+    //   rules: [
+    //     'ImageView[clickable=true] - RelativeLayout[clickable=false][childCount=1] > ImageView[clickable=true]',
+    //   ],
+    // },
+
     {
       key: 7,
       name: '升级弹窗',
       activityIds: 'com.baidu.tieba.UpdateDialog',
       rules: '[text="稍后再说"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12496934',
+    },
+    {
+      key: 8,
+      name: '帖子底部广告卡片',
+      activityIds: 'com.baidu.tieba.pb.pb.main.PbActivity',
+      rules:
+        'LinearLayout > RelativeLayout > ImageView[id=null][clickable=true]',
+      snapshotUrls: 'https://gkd-kit.songe.li/import/12775882',
     },
   ],
 });

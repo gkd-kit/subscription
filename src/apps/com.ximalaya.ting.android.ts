@@ -20,6 +20,11 @@ export default defineAppConfig({
             'https://gkd-kit.gitee.io/import/12506273',
           ],
         },
+        {
+          matches:
+            'TextView[text^="跳过"] < @LinearLayout +3 TextView[text^="跳转详情"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12877937'],
+        },
       ],
     },
     {
@@ -27,16 +32,27 @@ export default defineAppConfig({
       name: '首页右侧浮动广告',
       activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
       rules: '[id="com.ximalaya.ting.android:id/main_ad_broadside_close_real"]',
-      snapshotUrls: [
-        'https://gkd-kit.gitee.io/import/38517192/45664dfb-b8e6-4bdb-b5bb-9852c7a86a2f',
-      ],
+      snapshotUrls: ['https://gkd-kit.gitee.io/import/12472620'],
     },
     {
       key: 1,
-      name: '播放页面-暂停按钮下面的广告',
+      name: '播放页面-播放控制区域的广告',
       activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
-      rules: '[id="com.ximalaya.ting.android:id/x_play_ad_banner_close_real"]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12506218',
+      rules: [
+        {
+          key: 0,
+          name: '暂停按钮下方的广告',
+          matches:
+            '[id="com.ximalaya.ting.android:id/x_play_ad_banner_close_real"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12506218',
+        },
+        {
+          key: 1,
+          name: '喜马小游戏广告',
+          matches: '[id="com.ximalaya.ting.android:id/host_game_close_tv"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12927110',
+        },
+      ],
     },
     {
       key: 2,
@@ -50,8 +66,12 @@ export default defineAppConfig({
         },
         {
           activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
-          matches: '[id="com.ximalaya.ting.android:id/main_close"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12506225',
+          matches:
+            '[id="com.ximalaya.ting.android:id/main_mark_text"] + [id="com.ximalaya.ting.android:id/main_close"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12506225',
+            'https://gkd-kit.gitee.io/import/12701414', // 关闭广告后，控件仍然存在但不可见，使用 visibleToUser=true 进行限定，防止关闭之后继续触发规则
+          ],
         },
       ],
     },
@@ -85,6 +105,12 @@ export default defineAppConfig({
           matches: '[id="com.ximalaya.ting.android:id/xm_ad_close_real"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12506253',
         },
+        {
+          activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
+          matches:
+            '[id="com.ximalaya.ting.android:id/main_ad_dynamic_lay"] >(4) ImageView + ImageView',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12701374',
+        },
       ],
     },
     {
@@ -116,6 +142,15 @@ export default defineAppConfig({
           '[id="com.ximalaya.ting.android:id/host_dialog_close"]',
         ],
       },
+    },
+    {
+      key: 8,
+      name: '评论区广告',
+      activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
+      quickFind: true,
+      rules:
+        '[id="com.ximalaya.ting.android:id/main_ad_close_real"][visibleToUser=true]',
+      snapshotUrls: 'https://gkd-kit.songe.li/import/12869426',
     },
   ],
 });
