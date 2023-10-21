@@ -60,6 +60,12 @@ export default defineAppConfig({
             'https://gkd-kit.gitee.io/import/12840951',
           ],
         },
+        {
+          key: 1,
+          matches:
+            'RelativeLayout[childCount=2] > RelativeLayout[childCount=1][clickable=true] > ImageView',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13060892',
+        },
       ],
     },
     {
