@@ -13,14 +13,11 @@ export default defineAppConfig({
         {
           key: 0,
           matches:
-            '[id="com.mfcloudcalculate.networkdisk:id/frame_ad_splash_container"] >n [text="跳过"]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12846434',
-        },
-        {
-          key: 1,
-          matches:
-            '[id="com.mfcloudcalculate.networkdisk:id/frame_ad_splash_container"] >n [text^="跳过"]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/13059834',
+            '[id="com.mfcloudcalculate.networkdisk:id/frame_ad_splash_container"] >n [text^="跳过"][text.length<=4]',
+          snapshotUrls: [
+            'https://gkd-kit.songe.li/import/12846434',
+            'https://gkd-kit.songe.li/import/13059834',
+          ],
         },
       ],
     },
