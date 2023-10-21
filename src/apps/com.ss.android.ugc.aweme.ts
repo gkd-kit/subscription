@@ -84,11 +84,13 @@ export default defineAppConfig({
     },
     {
       key: 6,
-      name: '取消去商品评分',
+      name: '去商店评分',
+      desc: '点击[取消]',
       activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
       rules: '@[text="取消"] +2 [text="五星好评"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/13053628',
       exampleUrls:
-        'https://github.com/gkd-kit/selector/assets/44717382/7fd9aa26-f56e-4e42-b2b2-d2a826d42e5a',
+        'https://github.com/gkd-kit/inspect/assets/38517192/4554c785-39e0-4eac-9cfb-f1b1c2976008',
     },
     {
       enable: false,
