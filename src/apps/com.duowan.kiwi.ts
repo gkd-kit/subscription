@@ -19,7 +19,7 @@ export default defineAppConfig({
         {
           key: 1,
           matches:
-            '[id="com.duowan.kiwi:id/ams_splash_ad_container"] >n [text="广告"] + [text^="跳过"]',
+            '[id="com.duowan.kiwi:id/ams_splash_ad_container"] >2 [text^="跳过"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/13052592'],
         },
       ],
