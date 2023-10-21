@@ -9,7 +9,6 @@ export default defineAppConfig({
       name: '开屏广告',
       desc: '点击右上方跳过按钮',
       matchLauncher: true,
-      quickFind: true,
       activityIds:
         'com.iflytek.inputmethod.settingsnew.splash.activity.NewSplashActivity',
       rules: [
