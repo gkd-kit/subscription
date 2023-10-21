@@ -141,5 +141,12 @@ export default defineAppConfig({
         'LinearLayout > RelativeLayout > ImageView[id=null][clickable=true]',
       snapshotUrls: 'https://gkd-kit.songe.li/import/12775882',
     },
+    {
+      key: 9,
+      name: '应用内广告弹窗',
+      activityIds: 'com.baidu.tbadk.browser.TBWebContainerActivity',
+      rules: 'View[childCount=3] > @View[clickable=true] > Image',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/13060891',
+    },
   ],
 });
