@@ -10,9 +10,20 @@ export default defineAppConfig({
       activityIds: 'com.mfcloudcalculate.networkdisk.activity.SplashActivity',
       matchLauncher: true,
       quickFind: true,
-      rules:
-        '[id="com.mfcloudcalculate.networkdisk:id/frame_ad_splash_container"] >n [text="跳过"]',
-      snapshotUrls: 'https://gkd-kit.songe.li/import/12846434',
+      rules: [
+        {
+          key: 0,
+          matches:
+            '[id="com.mfcloudcalculate.networkdisk:id/frame_ad_splash_container"] >n [text="跳过"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/12846434',
+        },
+        {
+          key: 1,
+          matches:
+            '[id="com.mfcloudcalculate.networkdisk:id/frame_ad_splash_container"] >n [text^="跳过"]',
+          snapshotUrls: 'https://gkd-kit.songe.li/import/13059834',
+        },
+      ],
     },
   ],
 });
