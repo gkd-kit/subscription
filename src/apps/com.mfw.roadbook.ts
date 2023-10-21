@@ -12,8 +12,7 @@ export default defineAppConfig({
       activityIds: 'com.mfw.roadbook.business.launch.SplashAdActivity',
       rules: [
         {
-          matches:
-            '[id="com.mfw.roadbook:id/skipLayout"] > [id="com.mfw.roadbook:id/skip_text"]',
+          matches: '[id="com.mfw.roadbook:id/skipLayout"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13049046',
         },
       ],
