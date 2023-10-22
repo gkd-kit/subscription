@@ -34,9 +34,13 @@ export default defineAppConfig({
       name: '首页通知',
       activityIds: ['com.cyl.musiccy.ou.MainActivity'],
       rules: [
+        // {
+        //   matches: '[desc="了解更多"] - [desc="我知道了"]',
+        //   snapshotUrls: 'https://gkd-kit.gitee.io/import/12775920',
+        // },
         {
-          matches: '[desc="了解更多"] - [desc="我知道了"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12775920',
+          matches: '[desc="我知道了"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13063206',
         },
       ],
     },
