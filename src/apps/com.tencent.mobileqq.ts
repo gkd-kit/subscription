@@ -10,7 +10,8 @@ export default defineAppConfig({
       name: '开屏广告',
       desc: '规则误触,待修复,需要快照准确定位',
       activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
-      rules: '[text*=`跳过`]',
+      rules: '[id!=null][text="跳过"]',
+      snapshotUrls: 'https://gkd-kit.songe.li/import/13062244',
     },
     {
       enable: false,
