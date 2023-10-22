@@ -24,8 +24,12 @@ export default defineAppConfig({
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12775926',
         },
         {
-          matches: 'LinearLayout > FrameLayout > TextView[text="跳过"]',
+          matches: 'LinearLayout > FrameLayout > TextView[text^="跳过"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13063151',
+        },
+        {
+          matches: 'FrameLayout > LinearLayout > TextView[text^="跳过"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13063246',
         },
       ],
     },
@@ -93,6 +97,12 @@ export default defineAppConfig({
           matches:
             'TextView[text="立即下载"] < FrameLayout <2 FrameLayout[childCount=2] -n FrameLayout[childCount=1] > ImageView',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12789928',
+        },
+        {
+          action: 'click',
+          matches:
+            'TextView[text^="摇动"||text^="点击"] <2 LinearLayout < LinearLayout < FrameLayout -n FrameLayout[childCount=1] > ImageView',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13063249',
         },
       ],
     },
