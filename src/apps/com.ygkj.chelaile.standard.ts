@@ -32,5 +32,16 @@ export default defineAppConfig({
         'https://i.gkd.li/import/13464325',
       ],
     },
+    {
+      key: 1,
+      name: '应用内广告卡片',
+      activityIds: 'dev.xesam.chelaile.app.module.func.SplashActivity',
+      rules:
+        'ImageView[id^="com.ygkj.chelaile.standard:id/cll_all_pic_close"][visibleToUser=true]',
+      snapshotUrls: [
+        'https://gkd-kit.songe.li/import/13062991',
+        'https://gkd-kit.songe.li/import/13062984',
+      ],
+    },
   ],
 });
