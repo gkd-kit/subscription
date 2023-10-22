@@ -1,13 +1,13 @@
 import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
-  id: 'com.ksf.yyx',
+  id: 'com.cyl.musiccy.ou',
   name: 'OMOFUN',
   groups: [
     {
       key: 0,
       name: '开屏广告',
-      activityIds: ['com.ksf.yyx.MainActivity'],
+      activityIds: ['com.cyl.musiccy.ou.MainActivity'],
       rules: [
         {
           matches: '[id="com.ksf.yyx:id/ksad_splash_circle_skip_view"]',
@@ -23,12 +23,16 @@ export default defineAppConfig({
             'FrameLayout > FrameLayout > [text^="跳过 "][text.length<=4][clickable=true]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12775926',
         },
+        {
+          matches: 'LinearLayout > FrameLayout > TextView[text="跳过"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13063151',
+        },
       ],
     },
     {
       key: 1,
       name: '首页通知',
-      activityIds: ['com.ksf.yyx.MainActivity'],
+      activityIds: ['com.cyl.musiccy.ou.MainActivity'],
       rules: [
         {
           matches: '[desc="了解更多"] - [desc="我知道了"]',
@@ -40,10 +44,10 @@ export default defineAppConfig({
       key: 2,
       name: '插屏广告',
       activityIds: [
-        'com.ksf.yyx.MainActivity',
+        'com.cyl.musiccy.ou.MainActivity',
         'com.sigmob.sdk.base.common.TransparentAdActivity',
-        // 'com.miui.wakepath.ui.ConfirmStartActivity', //抓到activityIds为小米的 不确定是否正常
-        // 'com.miui.home.launcher.Launcher',
+        'com.miui.wakepath.ui.ConfirmStartActivity',
+        'com.miui.home.launcher.Launcher',
       ],
       rules: [
         {
