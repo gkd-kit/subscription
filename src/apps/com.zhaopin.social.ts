@@ -33,7 +33,7 @@ export default defineAppConfig({
       activityIds: ['com.zhaopin.social.homepage.ZSC_MainTabActivity'],
       rules:
         'ImageView[clickable=true&&focusable=true] < FrameLayout + FrameLayout > ImageView[clickable=false&&focusable=false]',
-      snapshotUrls: 'https://gkd-kit.songe.li/import/13063393',
+      snapshotUrls: 'https://inspect.gkd.li/import/13063442',
     },
     {
       key: 4,
