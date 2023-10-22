@@ -10,8 +10,8 @@ export default defineAppConfig({
       matchLauncher: true,
       activityIds: 'cn.wenyu.bodian.MainActivity',
       rules:
-        '[id="cn.wenyu.bodian:id/splash_container"] +n TextView[text="跳过广告"]',
-      snapshotUrls: 'https://gkd-kit.songe.li/import/13062529',
+        '[id="cn.wenyu.bodian:id/splash_container"] < FrameLayout > TextView[text="跳过广告"][clickable=true]',
+      snapshotUrls: 'https://i.gkd.li/import/13062529',
     },
   ],
 });
