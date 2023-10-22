@@ -10,12 +10,12 @@ export default defineAppConfig({
       activityIds: ['com.cyl.musiccy.ou.MainActivity'],
       rules: [
         {
-          matches: '[id="com.ksf.yyx:id/ksad_splash_circle_skip_view"]',
+          matches: '[id="com.cyl.musiccy.ou:id/ksad_splash_circle_skip_view"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12775918',
         },
         {
           matches:
-            '[id="com.ksf.yyx:id/ksad_splash_root_container"] [childCount=3] > @ImageView[clickable=true] - [text="|"]',
+            '[id="com.cyl.musiccy.ou:id/ksad_splash_root_container"] [childCount=3] > @ImageView[clickable=true] - [text="|"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12775919'],
         },
         {
@@ -55,12 +55,15 @@ export default defineAppConfig({
       ],
       rules: [
         {
-          matches: '[id="com.ksf.yyx:id/ksad_container"] [text="跳过"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12775922',
+          matches: '[id="com.cyl.musiccy.ou:id/ksad_container"] [text="跳过"]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12775922',
+            'https://gkd-kit.gitee.io/import/13063222',
+          ],
         },
         {
           matches:
-            '[id="com.ksf.yyx:id/ksad_container"] [text="广告"] <2 ViewGroup -2 ViewGroup > @ViewGroup[clickable=true][childCount=1] ImageView',
+            '[id="com.cyl.musiccy.ou:id/ksad_container"] [text="广告"] <2 ViewGroup -2 ViewGroup > @ViewGroup[clickable=true][childCount=1] ImageView',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12775923',
         },
         {
