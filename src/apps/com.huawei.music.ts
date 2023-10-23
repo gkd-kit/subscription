@@ -43,7 +43,7 @@ export default defineAppConfig({
       rules: [
         {
           matches:
-            'TextView[text="直接关闭"&&id="com.huawei.music:id/label_title"]',
+            'TextView[id="com.huawei.music:id/label_title"][text="直接关闭"]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/13067574',
             'https://gkd-kit.gitee.io/import/13067572',
