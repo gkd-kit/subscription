@@ -10,7 +10,7 @@ export default defineAppConfig({
       activityIds: ['com.meetyou.crsdk.CROpenScreenNewActivity'],
       rules: [
         {
-          matches: '[text="跳过"]',
+          matches: '[id="com.lingan.seeyou:id/rl_count_container"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13065769',
         },
       ],
