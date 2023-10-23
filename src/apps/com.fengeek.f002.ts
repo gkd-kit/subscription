@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
     key: 1,
-    name: '首页-文档列表广告',
+    name: 'fiil+开屏广告',
     activityIds: ['com.fengeek.f002.WelcomeActivity'],
     rules: [
       {
