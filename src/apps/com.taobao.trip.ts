@@ -10,7 +10,7 @@ export default defineAppConfig({
       activityIds: ['com.taobao.trip.splash.ui.ImageSplashActivity'],
       rules: [
         {
-          matches: '[text="跳过广告"]',
+          matches: '[id="com.taobao.trip:id/splash_biz_skip_ad"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13065579',
         },
       ],
