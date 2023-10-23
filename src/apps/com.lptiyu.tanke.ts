@@ -5,6 +5,15 @@ export default defineAppConfig({
   name: '步道乐跑',
   groups: [
     {
+      key: -1,
+      name: '开屏广告',
+      activityIds: 'com.lptiyu.tanke.activities.splash.SplashActivity',
+      matchLauncher: true,
+      rules:
+        '[id="com.lptiyu.tanke:id/splash_full_tk_play_card_view"] >n [text="跳过"]',
+      snapshotUrls: 'https://i.gkd.li/import/13070420',
+    },
+    {
       key: 0,
       name: '弹窗广告',
       activityIds: 'com.lptiyu.tanke.activities.main.MainActivity',
