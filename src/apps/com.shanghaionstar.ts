@@ -11,6 +11,6 @@ export default defineAppConfig({
       activityIds: 'com.shanghaionstar.home.LoadingActivity',
       rules: '[id="com.shanghaionstar:id/jump_view"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13071523',
-    }
+    },
   ],
 });
