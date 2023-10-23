@@ -33,7 +33,8 @@ export default defineAppConfig({
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13063246',
         },
         {
-          matches: '[id="com.cyl.musiccy.ou:id/ksad_splash_root_container"] [text="跳过"]',
+          matches:
+            '[id="com.cyl.musiccy.ou:id/ksad_splash_root_container"] [text="跳过"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13071599',
         },
       ],
