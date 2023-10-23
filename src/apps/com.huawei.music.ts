@@ -26,7 +26,7 @@ export default defineAppConfig({
       ],
       rules: [
         {
-          matches: 'Textview[id="com.huawei.music:id/ad_banner_tag"]',
+          matches: 'TextView[id="com.huawei.music:id/ad_banner_tag"]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/13068287',
             'https://gkd-kit.gitee.io/import/13067243',
@@ -75,7 +75,7 @@ export default defineAppConfig({
       rules: [
         {
           matches:
-            'Textview[id="com.huawei.music:id/ad_icon"&&visibleToUser=true]',
+            'TextView[id="com.huawei.music:id/ad_icon"&&visibleToUser=true]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/13067806',
             'https://gkd-kit.gitee.io/import/13067956',
