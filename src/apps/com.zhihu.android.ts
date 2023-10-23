@@ -10,7 +10,7 @@ export default defineAppConfig({
       quickFind: true,
       matchLauncher: true,
       activityIds: [
-        'com.zhihu.android.app.ui.activity',//匹配所有ui.activity
+        'com.zhihu.android.app.ui.activity', //匹配所有ui.activity
         'com.zhihu.android.app.feed.AdTransparentHostActivity',
         'com.zhihu.android.ContentActivity',
         'com.zhihu.android.mixshortcontainer.MixShortContainerActivity',
@@ -24,7 +24,6 @@ export default defineAppConfig({
         'https://i.gkd.li/import/12841423', // com.zhihu.android.ContentActivity
         'https://gkd-kit.gitee.io/import/12883329', // com.zhihu.android.mixshortcontainer.MixShortContainerActivity
         'https://gkd-kit.gitee.io/import/12981146', // com.zhihu.android.mix.activity.ContentMixProfileActivity
-
       ],
     },
     {
