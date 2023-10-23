@@ -12,7 +12,7 @@ export default defineAppConfig({
       activityIds: 'com.okcam.ookcam.SplashActivity',
       rules: [
         {
-          matches: '[text*="跳过"]',
+          matches: '[text^="跳过"][text.length<=3]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/13066267',
             'https://gkd-kit.gitee.io/import/13066200',
