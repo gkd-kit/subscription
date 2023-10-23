@@ -10,7 +10,7 @@ export default defineAppConfig({
       activityIds: ['com.fengeek.f002.WelcomeActivity'],
       rules: [
         {
-          matches: '[text$=	"跳过"]',
+          matches: '[id="com.fengeek.f002:id/we_img_skip"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13068924',
         },
       ],
