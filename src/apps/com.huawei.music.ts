@@ -78,7 +78,6 @@ export default defineAppConfig({
           matches:
             'TextView[id="com.huawei.music:id/ad_icon"&&visibleToUser=true]',
           snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/13068935',
             'https://gkd-kit.gitee.io/import/13067956',
             'https://gkd-kit.gitee.io/import/13067978',
             'https://gkd-kit.gitee.io/import/13067387',
@@ -112,6 +111,18 @@ export default defineAppConfig({
             'https://gkd-kit.gitee.io/import/13067986',
             'https://gkd-kit.gitee.io/import/13067981',
           ],
+        },
+      ],
+    },
+    {
+      key: 7,
+      name: '播放器上滑广告',
+      quickFind: true,
+      activityIds: ['com.android.mediacenter.MainActivity'],
+      rules: [
+        {
+          matches: 'ViewGroup > TextView[text="广告"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/13068935'],
         },
       ],
     },
