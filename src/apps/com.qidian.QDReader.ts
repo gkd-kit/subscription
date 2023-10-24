@@ -17,10 +17,19 @@ export default defineAppConfig({
     {
       key: 1,
       name: '更新弹窗',
-      activityIds: ['com.qidian.QDReader.framework.widget.dialog.judian'],
-      rules:
+      quickFind: true,
+      activityIds: [
+        'com.qidian.QDReader.framework.widget.dialog.judian',
+        'com.tencent.upgrade.ui.UpgradeDialogActivity',
+      ],
+      rules: [
         'TextView[text$="新版本"] +(2) RelativeLayout >(4) TextView[text="以后再说"]',
-      snapshotUrls: ['https://gkd-kit.gitee.io/import/12641026'],
+        '[id="com.qidian.QDReader:id/upgrade_dialog_close_btn"]',
+      ],
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/12641026',
+        'https://gkd-kit.gitee.io/import/13116821',
+      ],
     },
     {
       key: 2,
