@@ -10,8 +10,7 @@ export default defineAppConfig({
       quickFind: true,
       matchLauncher: true,
       activityIds: 'com.hihonor.appmarket.module.main.MainActivity',
-      rules:
-        '[id="com.hihonor.appmarket:id/tv_operation_skip"]',
+      rules: '[id="com.hihonor.appmarket:id/tv_operation_skip"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13063925',
     },
     {
@@ -19,8 +18,7 @@ export default defineAppConfig({
       name: '广告弹窗',
       quickFind: true,
       activityIds: 'com.hihonor.android.launcher.unihome.UniHomeLauncher',
-      rules:
-        '[id="com.hihonor.appmarket:id/iv_dialog_operation_close"]',
+      rules: '[id="com.hihonor.appmarket:id/iv_dialog_operation_close"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13063815',
     },
     {
@@ -28,8 +26,7 @@ export default defineAppConfig({
       name: '悬浮窗小广告',
       quickFind: true,
       activityIds: 'com.hihonor.appmarket.module.main.MainActivity',
-      rules:
-        '[id="com.hihonor.appmarket:id/iv_floating_close"]',
+      rules: '[id="com.hihonor.appmarket:id/iv_floating_close"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13063928',
     },
     {
