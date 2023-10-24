@@ -5,13 +5,14 @@ export default defineAppConfig({
   name: 'QQ',
   groups: [
     {
-      enable: false,
+      quickFind: true,
+      enable: true,
       key: 0,
       name: '开屏广告',
-      desc: '规则误触,待修复,需要快照准确定位',
+      desc: '尝试修复开屏广告误触',
       activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
-      rules: '[id!=null][text="跳过"][clickable=true]',
-      snapshotUrls: 'https://i.gkd.li/import/13062244',
+      rules: '[name="android.widget.TextView"][id=null][clickable=true][text= "跳过"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/13093155',
     },
     {
       enable: false,
@@ -251,6 +252,19 @@ export default defineAppConfig({
       activityIds: 'com.tencent.mobileqq.activity.DevlockQuickLoginActivity',
       rules: 'Button[text="允许登录QQ"][clickable=true][id!=null]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13063027',
+    },
+    {
+      key: 17,
+      name: 'qq顶部新人有礼横幅',
+      activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
+      enable: true,
+      rules: [
+        {
+          key: 0,
+          matches: '[clickable=true][name="android.widget.ImageView"][id="com.tencent.mobileqq:id/vke"]',
+          snapshotUrls: 'com.tencent.mobileqq.activity.SplashActivity',
+        }
+      ]
     },
   ],
 });
