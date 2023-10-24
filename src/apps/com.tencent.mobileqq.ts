@@ -257,12 +257,12 @@ export default defineAppConfig({
       key: 17,
       name: 'qq顶部新人有礼横幅',
       activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
-      enable: true,
-      rules: [
+      enable:true,
+      rules:[
         {
           key: 0,
           matches: '[clickable=true][name="android.widget.ImageView"][id="com.tencent.mobileqq:id/vke"]',
-          snapshotUrls: 'com.tencent.mobileqq.activity.SplashActivity',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13107298',
         }
       ]
     },
