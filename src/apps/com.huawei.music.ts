@@ -106,7 +106,7 @@ export default defineAppConfig({
       activityIds: ['com.android.mediacenter.MainActivity'],
       rules: [
         {
-          matches: 'TextView[text="不感兴趣"][visibleToUser=true]',
+          matches: 'TextView[text="不感兴趣"][id$="title"][visibleToUser=true]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/13067986',
             'https://gkd-kit.gitee.io/import/13067981',
