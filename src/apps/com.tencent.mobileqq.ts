@@ -5,6 +5,14 @@ export default defineAppConfig({
   name: 'QQ',
   groups: [
     {
+      key: -1,
+      name: '开屏广告',
+      desc: '识别文字【互动广告】，点击【跳过】',
+      activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
+      rules: 'TextView[text='互动广告'] + TextView[text='跳过']',
+      snapshotUrls: 'https://i.gkd.li/import/13093155',
+    },
+    {
       enable: false,
       key: 0,
       name: '开屏广告',
