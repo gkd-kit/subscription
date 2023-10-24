@@ -28,14 +28,13 @@ export default defineAppConfig({
       key: 1,
       name: '更新弹窗',
       matchLauncher: true,
-      activityIds: [], //什么地方都会出现，不应该匹配activity
+      activityIds: ['com.ss.android.mine.BaseSettingActivity'],
       rules: [
         {
           matches: '[text="升级版本"] +n [desc="关闭"][clickable=true]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12685000',
             'https://gkd-kit.gitee.io/import/12840104',
-            'https://gkd-kit.gitee.io/import/13089176',
           ],
         },
       ],
@@ -128,6 +127,21 @@ export default defineAppConfig({
             'https://gkd-kit.gitee.io/import/12733152',
             'https://gkd-kit.gitee.io/import/12755265',
           ],
+        },
+        {
+          name: '新闻列表广告',
+          preKeys: 1,
+          matches: 'FlattenUIText[text="广告"] +n UIView[text*="不感兴趣"]',
+          action: 'clickCenter',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/13093576'],
+        },
+        {
+          name: '点击不感兴趣', //有没有办法共用一个？因为这个规则和上面的是一样的
+          preKeys: 1,
+          matches:
+            '@ViewGroup[clickable=true] > ImageView + TextView[text="不感兴趣"]',
+          action: 'clickCenter',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/13094451'],
         },
       ],
     },
