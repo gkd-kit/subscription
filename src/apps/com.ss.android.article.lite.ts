@@ -7,7 +7,7 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      quickfind: true,
+      quickFind: true,
       matchLauncher: true,
       activityIds: 'com.ss.android.article.lite.activity.SplashActivity',
       rules: '@FrameLayout[desc= "跳过广告"] > TextView[text="跳过广告"]',
