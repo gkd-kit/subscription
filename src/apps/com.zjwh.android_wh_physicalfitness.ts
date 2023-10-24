@@ -67,5 +67,16 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 6,
+      name: '淘宝广告',
+      activityIds: ['com.zjwh.android_wh_physicalfitness.activity.SplashActivity'],
+      rules: [
+        {
+          matches: '[text="跳过"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/snapshot/1698078894282',//获取链接的方法在上一步有说明
+        },
+      ],
+    },
   ],
 });
