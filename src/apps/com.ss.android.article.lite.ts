@@ -10,7 +10,7 @@ export default defineAppConfig({
       quickfind: true,
       matchLauncher: true,
       activityIds: 'com.ss.android.article.lite.activity.SplashActivity',
-      rules: @FrameLayout[desc= "跳过广告"] > TextView[text="跳过广告"]',
+      rules: '@FrameLayout[desc= "跳过广告"] > TextView[text="跳过广告"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13111705',
     },
     {
