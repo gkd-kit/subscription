@@ -28,13 +28,14 @@ export default defineAppConfig({
       key: 1,
       name: '更新弹窗',
       matchLauncher: true,
-      activityIds: ['com.ss.android.mine.BaseSettingActivity'],
+      activityIds: [], //什么地方都会出现，不应该匹配activity
       rules: [
         {
           matches: '[text="升级版本"] +n [desc="关闭"][clickable=true]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12685000',
             'https://gkd-kit.gitee.io/import/12840104',
+            'https://gkd-kit.gitee.io/import/13089176',
           ],
         },
       ],
