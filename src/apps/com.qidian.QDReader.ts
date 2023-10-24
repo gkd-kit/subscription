@@ -23,12 +23,15 @@ export default defineAppConfig({
         'com.tencent.upgrade.ui.UpgradeDialogActivity',
       ],
       rules: [
-        'TextView[text$="新版本"] +(2) RelativeLayout >(4) TextView[text="以后再说"]',
-        '[id="com.qidian.QDReader:id/upgrade_dialog_close_btn"]',
-      ],
-      snapshotUrls: [
-        'https://gkd-kit.gitee.io/import/12641026',
-        'https://gkd-kit.gitee.io/import/13116821',
+        {
+          matches:
+            'TextView[text$="新版本"] +(2) RelativeLayout >(4) TextView[text="以后再说"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12641026'],
+        },
+        {
+          matches: '[id="com.qidian.QDReader:id/upgrade_dialog_close_btn"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/13116821'],
+        },
       ],
     },
     {
