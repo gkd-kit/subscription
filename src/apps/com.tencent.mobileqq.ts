@@ -11,7 +11,8 @@ export default defineAppConfig({
       name: '开屏广告',
       desc: '尝试修复开屏广告误触',
       activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
-      rules: '[name="android.widget.TextView"][id=null][clickable=true][text= "跳过"]',
+      rules:
+        '[name="android.widget.TextView"][id=null][clickable=true][text= "跳过"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13093155',
     },
     {
@@ -261,7 +262,8 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          matches: '[clickable=true][name="android.widget.ImageView"][id="com.tencent.mobileqq:id/vke"]',
+          matches:
+            '[clickable=true][name="android.widget.ImageView"][id="com.tencent.mobileqq:id/vke"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13107298',
         },
       ],
