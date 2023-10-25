@@ -7,9 +7,24 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: 'com.weico.international.ui.ad.AdActivity',
-      rules: 'LinearLayout > TextView[text="跳过"]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12738090',
+      activityIds: [
+        'com.weico.international.ui.ad.AdActivity',
+        'com.weico.international.activity.LogoActivity',
+      ],
+      rules: [
+        {
+          key: 0,
+          name: '开屏广告1',
+          matches: 'LinearLayout > TextView[text="跳过"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12738090',
+        },
+        {
+          key: 1,
+          name: '开屏广告2',
+          matches: 'TextView[text="跳过"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13146158',
+        },
+      ],
     },
     {
       key: 1,
