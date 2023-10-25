@@ -16,7 +16,10 @@ export default defineAppConfig({
     {
       key: 1,
       name: '优量汇广告',
-      activityIds: 'com.zjwh.android_wh_physicalfitness.activity.HomeActivity',
+      activityIds: [
+        'com.zjwh.android_wh_physicalfitness.activity.HomeActivity',
+        'com.zjwh.android_wh_physicalfitness.ui.AdActivity',
+      ],
       rules: [
         {
           matches:
@@ -24,6 +27,7 @@ export default defineAppConfig({
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12673231',
             'https://gkd-kit.gitee.io/import/12673523',
+            'https://i.gkd.li/import/13166472', // com.zjwh.android_wh_physicalfitness.ui.AdActivity
           ],
         },
       ],
