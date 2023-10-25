@@ -155,7 +155,7 @@ export default defineAppConfig({
         'com.baidu.tbadk.browser.TBWebContainerActivity',
         'com.baidu.tieba.tblauncher.MainTabActivity',
       ],
-      rules:[
+      rules: [
         {
           key: 0,
           desc: '点击右上角x关闭',
@@ -165,7 +165,8 @@ export default defineAppConfig({
         {
           key: 1,
           desc: '点击正下方x关闭',
-          matches: '@TextView[clickable=true && text=null] - FrameLayout TextView[text="广告"]',
+          matches:
+            '@TextView[clickable=true && text=null] - FrameLayout TextView[text="广告"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13168383',
         },
       ],
