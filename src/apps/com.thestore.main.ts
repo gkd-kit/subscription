@@ -10,26 +10,26 @@ export default defineAppConfig({
       matchLauncher: true,
       quickFind: true,
       activityIds: 'com.thestore.main.LoadingActivity',
-          rules: [
-            {
-              matches: '[id="com.thestore.main:id/ll_skip"] > [text="跳过"]',
-              snapshotUrls: 'https://gkd-kit.gitee.io/import/13163668',
-            },
-          ],
+      rules: [
+        {
+          matches: '[id="com.thestore.main:id/ll_skip"] > [text="跳过"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13163668',
+        },
+      ],
     },
     {
-        key: 1,
-        enable: false,
-        name: '促销广告',
-        desc: '关闭促销弹窗，也许有用呢',
-        activityIds: 'com.thestore.main.app.home.HomeActivity',
-            rules: [
-              {
-                matches: '[id="com.thestore.main.home.feature:id/ad"] > TextView',
-                //TextView有id类似".../j"担心这个id是随机的，所以用了TextView而不是id
-                snapshotUrls: 'https://gkd-kit.gitee.io/import/13163686',
-              },
-            ],
-      },
+      key: 1,
+      enable: false,
+      name: '促销广告',
+      desc: '关闭促销弹窗，也许有用呢',
+      activityIds: 'com.thestore.main.app.home.HomeActivity',
+      rules: [
+        {
+          matches: '[id="com.thestore.main.home.feature:id/ad"] > TextView',
+          //TextView有id类似".../j"担心这个id是随机的，所以用了TextView而不是id
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13163686',
+        },
+      ],
+    },
   ],
 });
