@@ -34,9 +34,10 @@ export default defineAppConfig({
           name: '点击扫描到的设备',
           quickFind: true,
           action: 'clickNode',
-          matches: '[clickable=true][id="com.fengeek.f002:id/device_container"]',
+          matches:
+            '[clickable=true][id="com.fengeek.f002:id/device_container"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13161365',
-        }
+        },
       ],
     },
   ],
