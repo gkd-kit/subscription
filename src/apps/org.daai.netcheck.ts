@@ -7,7 +7,8 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      rules: 'TextView[text*="点击跳过"]',
+      activityIds: 'org.daai.netcheck.MainActivity',
+      rules: '[id="org.daai.netcheck:id/skip_view"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13174128',
     },
   ],
