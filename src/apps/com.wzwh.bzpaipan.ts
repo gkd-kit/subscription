@@ -9,7 +9,8 @@ export default defineAppConfig({
       name: '全屏广告',
       quickFind: true,
       activityIds: 'com.qq.e.ads.PortraitADActivity',
-      rules: 'ImageView[clickable=true]',
+      rules:
+        '@ImageView[clickable=true] < LinearLayout[childCount=1] <2 FrameLayout[childCount=2] < [id="android:id/content"][childCount=1]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13162912',
     },
   ],
