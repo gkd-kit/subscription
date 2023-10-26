@@ -32,7 +32,7 @@ export default defineAppConfig({
       key: 3,
       name: '付款后广告弹窗',
       activityIds:
-            'com.sankuai.waimai.bussiness.order.detail.WMOrderDetailActivity',
+        'com.sankuai.waimai.bussiness.order.detail.WMOrderDetailActivity',
       rules: [
         {
           key: 0,
