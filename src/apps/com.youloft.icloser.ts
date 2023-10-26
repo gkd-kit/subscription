@@ -10,7 +10,7 @@ export default defineAppConfig({
       quickFind: true,
       matchLauncher: true,
       activityIds: [
-        'com.youloft.icloser.splash.AdSplashActivity'],
+        'com.youloft.icloser.splash.AdSplashActivity',
         'com.youloft.icloser.splash.SplashActivity',
     ],
       rules: [
