@@ -16,6 +16,7 @@ export default defineAppConfig({
       ],
     },
     {
+      enable: false,
       key: 2,
       name: '自动连接耳机',
       activityIds: ['com.fengeek.f002.MainActivity'],
