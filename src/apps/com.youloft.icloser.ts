@@ -9,7 +9,10 @@ export default defineAppConfig({
       name: '开屏广告',
       quickFind: true,
       matchLauncher: true,
-      activityIds: ['com.youloft.icloser.splash.AdSplashActivity'],
+      activityIds: [
+        'com.youloft.icloser.splash.AdSplashActivity'],
+        'com.youloft.icloser.splash.SplashActivity',
+    ],
       rules: [
         {
           matches: [
@@ -19,6 +22,7 @@ export default defineAppConfig({
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12910405',
             'https://i.gkd.li/import/13072365',
+            'https://gkd-kit.gitee.io/import/13175102'
           ],
         },
       ],
