@@ -10,7 +10,7 @@ export default defineAppConfig({
       quickFind: true,
       matchLauncher: true,
       activityIds: 'com.yunma.app.ui.start.SplashActivity',
-      rules: 'TextView[text="跳过"]',
+      rules: '[id="cn.com.yunma.school.app:id/skip"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13175275',
     },
   ],
