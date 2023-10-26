@@ -11,7 +11,7 @@ export default defineAppConfig({
       rules: [
         {
           matches: 'TextView[text*="跳过"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/snapshot/1698310750136',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13175317',
         },
       ],
     },
