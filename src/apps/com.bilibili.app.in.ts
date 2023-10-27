@@ -18,8 +18,7 @@ export default defineAppConfig({
       name: 'APP评分',
       quickFind: true,
       activityIds: 'tv.danmaku.bili.MainActivityV2',
-      rules:
-        '[id="com.bilibili.app.in:id/cancel"][text="下次再说"]',
+      rules: '[id="com.bilibili.app.in:id/cancel"][text="下次再说"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13180746',
     },
   ],
