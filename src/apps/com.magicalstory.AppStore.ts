@@ -9,7 +9,7 @@ export default defineAppConfig({
       name: '开屏广告',
       matchLauncher: true,
       quickFind: true,
-      activityIds: 'com.hihonor.android.launcher.unihome.UniHomeLauncher',
+      activityIds: 'com.magicalstory.AppStore.ad.SplashActivity',
       rules: [
         {
           matches: '[text="跳过"]',
