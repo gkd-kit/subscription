@@ -10,12 +10,12 @@ export default defineAppConfig({
       matchLauncher: true,
       quickFind: true,
       activityIds: 'com.sf.ui.launcher.LauncherActivity',
-          rules: [
-            {
-              matches: '[id="com.sfacg:id/tv_jump"]',
-              snapshotUrls: 'https://gkd-kit.gitee.io/import/13185579',
-            },
-          ],
+      rules: [
+        {
+          matches: '[id="com.sfacg:id/tv_jump"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13185579',
+        },
+      ],
     },
   ],
 });
