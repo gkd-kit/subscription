@@ -70,5 +70,20 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      enable: false,
+      key: 5,
+      name: 'VIP 弹窗',
+      activityIds:
+        'com.netease.cloudmusic.music.biz.rn.activity.MainProcessLayerReactNativeActivity',
+      rules: [
+        {
+          key: 0,
+          matches:
+            '[text*="开通VIP"] + @ViewGroup[childCount=1][clickable=true] > ImageView',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13189055',
+        },
+      ],
+    },
   ],
 });
