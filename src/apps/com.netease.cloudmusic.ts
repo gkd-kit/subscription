@@ -57,5 +57,18 @@ export default defineAppConfig({
       rules: ['@ImageView + ViewGroup > TextView[text="VIP歌曲免费听30分钟"]'],
       snapshotUrls: ['https://i.gkd.li/import/12843383'],
     },
+    {
+      key: 4,
+      name: '广告弹窗',
+      activityIds: 'com.netease.cloudmusic.activity.MainActivity',
+      rules: [
+        {
+          key: 0,
+          name: '音乐专辑售卖广告弹窗',
+          matches: 'WebView >n View > TextView + TextView + TextView',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13188737',
+        },
+      ],
+    },
   ],
 });
