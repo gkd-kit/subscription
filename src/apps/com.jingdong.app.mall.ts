@@ -88,7 +88,8 @@ export default defineAppConfig({
       key: 11,
       name: '支付界面-产品推荐',
       desc: '自动点击右上角【x】',
-      activityIds: 'com.jd.lib.settlement.fillorder.activity.NewFillOrderActivity',
+      activityIds:
+        'com.jd.lib.settlement.fillorder.activity.NewFillOrderActivity',
       rules: 'ImageView[clickable=true && desc="关闭"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13191146',
     },
