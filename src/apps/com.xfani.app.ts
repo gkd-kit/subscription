@@ -12,5 +12,12 @@ export default defineAppConfig({
       rules: 'TextView[text^="跳过"]',
       snapshotUrls: 'https://i.gkd.li/import/13188526',
     },
+    {
+      key: 1,
+      name: '广告弹窗',
+      activityIds: 'com.xfani.app.MainActivity',
+      rules: 'ImageView - LinearLayout - FrameLayout > FrameLayout > ImageView',
+      snapshotUrls: 'https://i.gkd.li/import/13188550',
+    },
   ],
 });
