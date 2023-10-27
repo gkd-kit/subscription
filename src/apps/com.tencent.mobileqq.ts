@@ -261,5 +261,12 @@ export default defineAppConfig({
       rules: 'Button[text="允许登录QQ"][clickable=true][id!=null]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13063027',
     },
+    {
+      key: 17,
+      name: '更新弹窗',
+      activityIds: 'com.tencent.mobileqq.upgrade',
+      rules: '@[desc="关闭"] - ViewGroup > [text="发现新版本"]',
+      snapshotUrls: 'https://i.gkd.li/import/13188721',
+    },
   ],
 });
