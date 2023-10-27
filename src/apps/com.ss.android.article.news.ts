@@ -91,6 +91,20 @@ export default defineAppConfig({
             '@LinearLayout[clickable=true] > RelativeLayout + TextView[text="不感兴趣"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12679277',
         },
+        {
+          key: 2,
+          name: '第二种广告界面；点击右上角[更多]图标按钮',
+          matches:
+            '@ImageView[clickable=true][desc="更多"] <n RelativeLayout -2 RelativeLayout >n TextView[text$="广告"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/13185633'],
+        },
+        {
+          preKeys: [2, 1],
+          name: '匹配key2成功后，点击不感兴趣',
+          matches:
+            '@LinearLayout[clickable=true] > RelativeLayout + TextView[text="不感兴趣"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12679277',
+        },
       ],
     },
     {
