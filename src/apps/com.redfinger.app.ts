@@ -7,13 +7,19 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: 'com.redfinger.app.activity.Ads2Activity',
+      activityIds: [
+        'com.redfinger.app.activity.Ads2Activity',
+        'com.redfinger.app.activity.AdsActivity',
+      ],
       matchLauncher: true,
       rules: [
         {
           key: 0,
           matches: '[id="com.redfinger.app:id/ksad_splash_circle_skip_view"]',
-          snapshotUrls: 'https://i.gkd.li/import/13166289',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13166289',
+            'https://i.gkd.li/import/13188631',
+          ],
         },
         {
           key: 1,
