@@ -26,7 +26,7 @@ export default defineAppConfig({
             'FrameLayout > FrameLayout  > FrameLayout > [text="关闭"]',
           ],
           snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/13183946'. //com.alipay.android.msp.ui.views.MspContainerActivity
+            'https://gkd-kit.gitee.io/import/13183946', //com.alipay.android.msp.ui.views.MspContainerActivity
             'https://i.gkd.li/import/12826077', //com.alipay.android.msp.ui.views.MspUniRenderActivity
             'https://gkd-kit.gitee.io/import/12915864', //matchLauncher
           ],
