@@ -31,5 +31,15 @@ export default defineAppConfig({
       rules: '[id="com.lucky.luckyclient:id/close_iv"][visibleToUser=true]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12922834',
     },
+    {
+      key: 3,
+      name: '优惠卷领取提示',
+      desc: '关闭优惠卷领取提示',
+      enable: false,
+      activityIds: 'com.luckin.client.main.FirstActivity',
+      action: 'back',
+      rules: '[id="com.lucky.luckyclient:id/webcontent"]',
+      snapshotUrls: 'https://i.gkd.li/import/13164114',
+    },
   ],
 });
