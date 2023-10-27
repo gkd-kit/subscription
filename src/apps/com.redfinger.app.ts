@@ -27,6 +27,11 @@ export default defineAppConfig({
             '[id="com.redfinger.app:id/anythink_myoffer_splash_skip_area"]',
           snapshotUrls: 'https://i.gkd.li/import/13166298',
         },
+        {
+          key: 2,
+          matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
+          snapshotUrls: 'https://i.gkd.li/import/13188645',
+        },
       ],
     },
   ],
