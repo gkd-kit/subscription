@@ -13,6 +13,10 @@ export default defineAppConfig({
           matches: 'TextView[text*="跳过"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13175317',
         },
+        {
+          matches: 'View[id="com.byted.pangle:id/tt_splash_skip_btn"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13190313',
+        },
       ],
     },
   ],
