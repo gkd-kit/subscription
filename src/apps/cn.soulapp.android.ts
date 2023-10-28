@@ -7,6 +7,7 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
+      matchLauncher: true,
       activityIds: [
         'cn.soulapp.android.ad.ui.HotAdActivity',
         'cn.soulapp.android.component.startup.main.MainActivity',
