@@ -8,6 +8,7 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       quickFind: true,
+      matchLauncher: true,
       activityIds: [
         'com.sina.weibo.MainTabActivity',
         'com.sina.weibo.mobileads.view.', // 需要补充快照
