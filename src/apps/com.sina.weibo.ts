@@ -8,13 +8,15 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       quickFind: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: 'TextView[text="跳过"]',
+      activityIds: [
+        'com.sina.weibo.MainTabActivity',
+        'com.sina.weibo.mobileads.view.', // 需要补充快照
+        'com.sina.weibo.SplashActivity',
+      ],
+      rules: '@RelativeLayout > TextView[text="跳过"]',
       snapshotUrls: [
-        'https://i.gkd.li/import/12782355',
-        'https://i.gkd.li/import/13194049',
+        'https://i.gkd.li/import/12782355', // com.sina.weibo.MainTabActivity
+        'https://i.gkd.li/import/13195669', // com.sina.weibo.SplashActivity
       ],
     },
     {
