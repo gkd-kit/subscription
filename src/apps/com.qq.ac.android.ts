@@ -7,9 +7,9 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: [
-        'com.qq.ac.android.splash', //同时适配splash.SplashActivity & splash.SplashHotActivity
-      ],
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: '[id="com.qq.ac.android:id/text_ad_logo"] + [text="跳过"]',
       snapshotUrls: [
         'https://gkd-kit.gitee.io/import/12707750', //com.qq.ac.android.splash.SplashActivity
