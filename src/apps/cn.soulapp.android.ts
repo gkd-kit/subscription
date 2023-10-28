@@ -8,14 +8,9 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       quickFind: true,
-      matchLauncher: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: [
-        'cn.soulapp.android.ad.ui.HotAdActivity',
-        'cn.soulapp.android.component.startup.main.MainActivity',
-      ],
       rules: [
         {
           action: 'clickCenter', // 在极少数情况下, 即使节点是 clickable 的, APP 也不会响应节点点击事件, 此时需要手动设置 `clickCenter`
@@ -33,8 +28,7 @@ export default defineAppConfig({
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
-      resetMatch: 'activity',
-      activityIds: ['cn.soulapp.android.component.square.widget.dialog.d'],
+      resetMatch: 'app',
       rules: [
         {
           matches: '[id="cn.soulapp.android:id/btn_sure"]',
