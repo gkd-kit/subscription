@@ -11,10 +11,7 @@ export default defineAppConfig({
       matchLauncher: true,
       rules: [
         {
-          matches:[
-            '[text="检测到新版本"]',
-            '[text="取消"]',
-          ],
+          matches: ['[text="检测到新版本"]', '[text="取消"]'],
           snapshotUrls: 'https://i.gkd.li/import/13194979',
         },
       ],
