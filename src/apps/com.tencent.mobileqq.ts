@@ -8,8 +8,11 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
-      rules: '[childCount=5] > TextView[text="跳过"][clickable=true]',
+      rules: 'TextView[text="跳过"][clickable=true]',
       snapshotUrls: [
         'https://i.gkd.li/import/13062244',
         'https://i.gkd.li/import/13093155',
@@ -269,6 +272,7 @@ export default defineAppConfig({
       snapshotUrls: 'https://i.gkd.li/import/13188721',
     },
     {
+      enable: false,
       key: 18,
       name: '消息页面-顶部更新提示',
       activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
