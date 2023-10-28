@@ -14,8 +14,10 @@ export default defineAppConfig({
     {
       key: 2,
       name: '青少年弹窗',
-      matchLauncher: true,
-      rules: 'TextView[text="QQ阅读青少年模式"] +3 TextView[text="我知道了"]',
+      quickFind: true,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: '[id="com.qq.reader:id/tv_i_know"]',
       snapshotUrls: 'https://i.gkd.li/import/13194867',
     },
   ],
