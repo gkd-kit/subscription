@@ -7,9 +7,12 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: ['com.MobileTicket.ui.dialog.SplashAdDialog','com.MobileTicket.ui.activity.MainActivity'],
+      activityIds: [
+        'com.MobileTicket.ui.dialog.SplashAdDialog',
+        'com.MobileTicket.ui.activity.MainActivity',
+      ],
       rules: '[id=`com.MobileTicket:id/tv_skip`]',
-      snapshotUrls: 'https://i.gkd.li/import/13196243'
+      snapshotUrls: 'https://i.gkd.li/import/13196243',
     },
   ],
 });
