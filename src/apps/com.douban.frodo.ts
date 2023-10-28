@@ -185,7 +185,9 @@ export default defineAppConfig({
       name: '弹窗',
       desc: '浏览详情时弹窗广告',
       rules: {
-        activityIds: ['com.douban.frodo.subject.structure.activity.MovieActivity'],
+        activityIds: [
+          'com.douban.frodo.subject.structure.activity.MovieActivity',
+        ],
         matches: [
           '[text="查看详情"]',
           'FrameLayout[childCount=5] > FrameLayout > ImageView',
