@@ -12,7 +12,7 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       rules: '[id = "com.yingyonghui.market:id/splashAdvert_skipText"]',
-      snapshotUrls: 'https://i.gkd.li/import/13194979',
+      snapshotUrls: 'https://i.gkd.li/import/13196213',
     },
   ],
 });
