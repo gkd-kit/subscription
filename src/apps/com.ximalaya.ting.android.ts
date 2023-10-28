@@ -154,6 +154,7 @@ export default defineAppConfig({
     },
     {
       key: 9,
+      enable: false,
       name: '我的-中间卡片式广告',
       desc: '点击图片中【x】,原因选【不感兴趣】',
       activityIds: [
