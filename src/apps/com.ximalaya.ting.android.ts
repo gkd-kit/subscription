@@ -168,7 +168,7 @@ export default defineAppConfig({
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13194838',
         },
         {
-          prekey: 0,
+          preKeys: 0,
           matches:
             '[id="com.ximalaya.ting.android:id/xm_ad_main_ad_dislike_un_interest_title"][text="不感兴趣"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13194839',
