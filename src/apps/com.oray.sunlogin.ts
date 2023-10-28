@@ -22,7 +22,7 @@ export default defineAppConfig({
       quickFind: true,
       rules: [
         {
-          matches: ['[text="最新版本为"]', '[text="以后再说"]'],
+          matches: ['[text *="最新版本为"]', '[text="以后再说"]'],
           snapshotUrls: 'https://i.gkd.li/import/13195560',
         },
       ],
