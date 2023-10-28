@@ -14,7 +14,7 @@ export default defineAppConfig({
       ],
       rules: [
         {
-          action: 'clickCenter', //action=clickNode会造成点击失败，疑似GKD v1.41前版本问题
+          action: 'clickCenter', // 在极少数情况下, 即使节点是 clickable 的, APP 也不会响应节点点击事件, 此时需要手动设置 `clickCenter`
           matches: '[id="cn.soulapp.android:id/c_ad_skip_view_btn"]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12833280',
