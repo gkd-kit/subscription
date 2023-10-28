@@ -12,16 +12,16 @@ export default defineAppConfig({
         'cn.soulapp.android.ad.ui.HotAdActivity',
         'cn.soulapp.android.component.startup.main.MainActivity',
       ],
-      rules: [{
+      rules: [
+        {
           action: 'clickCenter', //action=clickNode会造成点击失败，疑似GKD v1.41前版本问题
           matches: '[id="cn.soulapp.android:id/c_ad_skip_view_btn"]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12833280',
             'https://gkd-kit.gitee.io/import/12850094',
           ],
-        },       
+        },
       ],
-     
     },
     {
       key: 1,
