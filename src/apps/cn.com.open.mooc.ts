@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '首页-10周年活动',
+      name: '开屏广告',
       activityIds: ['com.imooc.component.imoocmain.splash.MCSplashActivity'],
       rules: [
         {
