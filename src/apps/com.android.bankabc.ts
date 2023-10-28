@@ -7,10 +7,10 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: [
-        'com.alipay.mobile.quinox.LauncherActivity',
-        'com.android.bankabc.splashvideo.FullscreenActivity',
-      ],
+      matchTime: 10000,
+      actionMaximum: 1,
+      quickFind: true,
+      resetMatch: 'app',
       rules: ['ImageView[id="com.android.bankabc:id/close"]'],
       snapshotUrls: [
         'https://gkd-kit.gitee.io/import/12472629',
