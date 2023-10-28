@@ -23,8 +23,11 @@ export default defineAppConfig({
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12985488',
         },
         {
-          matches: 'LinearLayout[childCount=2] > [text^="跳过"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/13028151',
+          matches: '[text^="跳过"]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/13028151',
+            'https://i.gkd.li/import/13195567',
+          ],
         },
       ],
     },
