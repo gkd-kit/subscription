@@ -23,7 +23,7 @@ export default defineAppConfig({
         'com.qq.ac.android.view.fragment.dialog',
         'com.qq.ac.android.main.MainActivity',
       ],
-      
+
       rules: '[text="青少年守护模式"] - [id="com.qq.ac.android:id/close_btn"]',
       snapshotUrls: [
         'https://gkd-kit.gitee.io/import/12707752',
