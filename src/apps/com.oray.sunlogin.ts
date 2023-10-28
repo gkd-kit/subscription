@@ -22,7 +22,8 @@ export default defineAppConfig({
       quickFind: true,
       rules: [
         {
-          matches: ['[text *="最新版本为"]', '[text="以后再说"]'],
+          matches:
+            '[text="立即更新"] <2 * > [id="com.oray.sunlogin:id/button_cancel"][text="以后再说"]',
           snapshotUrls: 'https://i.gkd.li/import/13195560',
         },
       ],
