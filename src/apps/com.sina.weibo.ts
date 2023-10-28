@@ -11,9 +11,13 @@ export default defineAppConfig({
       activityIds: [
         'com.sina.weibo.MainTabActivity',
         'com.sina.weibo.mobileads.view.', // 需要补充快照
+        'com.sina.weibo.SplashActivity',
       ],
-      rules: ['@RelativeLayout > TextView[text="跳过"]'],
-      snapshotUrls: 'https://i.gkd.li/import/12782355',
+      rules: '@RelativeLayout > TextView[text="跳过"]',
+      snapshotUrls: [
+        'https://i.gkd.li/import/12782355', // com.sina.weibo.MainTabActivity
+        'https://i.gkd.li/import/13195669', // com.sina.weibo.SplashActivity
+      ],
     },
     {
       key: 1,
