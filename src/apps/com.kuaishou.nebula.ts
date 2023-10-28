@@ -16,6 +16,7 @@ export default defineAppConfig({
       name: '青少年弹窗',
       activityIds: 'com.yxcorp.gifshow.HomeActivity',
       rules: '[id="com.kuaishou.nebula:id/positive"][text^="我知道了"]',
+      quickFind: true,
       snapshotUrls: 'https://i.gkd.li/import/13196316',
     },
   ],
