@@ -5,6 +5,14 @@ export default defineAppConfig({
   name: '向日葵远程控制',
   groups: [
     {
+      key: -1,
+      name: '开屏广告',
+      activityIds: 'com.oray.sunlogin.application.Main',
+      matchLauncher: true,
+      rules: '[id="com.oray.sunlogin:id/close"]',
+      snapshotUrls: 'https://i.gkd.li/import/13195950',
+    },
+    {
       key: 0,
       name: '会员弹窗',
       desc: '点击右上角[关闭]',
