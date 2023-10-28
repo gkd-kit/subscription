@@ -7,9 +7,10 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
+      quickFind: true,
       activityIds:
         'com.cgb.mobilebank.sit.launcher.module.main.activity.IndexActivity_',
-      rules: '[text^="跳过"]',
+      rules: '[text^="跳过"][text.length<=10]',
       snapshotUrls: ['https://i.gkd.li/import/13189690'],
     },
   ],
