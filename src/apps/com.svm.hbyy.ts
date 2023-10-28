@@ -23,7 +23,7 @@ export default defineAppConfig({
             rules: [
               {
                 matches: [
-                    '[text="打开或下载第三方应用"]'
+                    '[text="打开或下载第三方应用"]',
                     'FrameLayout[childCount=3] + FrameLayout > ImageView',
                 ],
                 snapshotUrls: 'https://gkd-kit.gitee.io/import/13185377',
