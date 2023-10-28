@@ -34,11 +34,13 @@ export default defineAppConfig({
     {
       key: 3,
       name: '优惠卷领取提示',
-      desc: '关闭优惠卷领取提示',
+      desc: '按下返回键关闭优惠卷领取提示',
       enable: false,
       activityIds: 'com.luckin.client.main.FirstActivity',
-      action: 'back',
-      rules: '[id="com.lucky.luckyclient:id/webcontent"]',
+      rules: {
+        matches: '[id="com.lucky.luckyclient:id/webcontent"]',
+        action: 'back',
+      },
       snapshotUrls: 'https://i.gkd.li/import/13164114',
     },
   ],
