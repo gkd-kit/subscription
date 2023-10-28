@@ -7,13 +7,17 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      matchLauncher: true,
       quickFind: true,
-      activityIds: 'com.magicalstory.AppStore.ad.SplashActivity',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
           matches: '[text="跳过"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/13185745',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13185745',
+            'https://i.gkd.li/import/13191546',
+          ],
         },
       ],
     },
@@ -25,7 +29,7 @@ export default defineAppConfig({
         {
           matches: [
             '[id="com.magicalstory.AppStore:id/banner"]',
-            'FrameLayout[childCount=1] > ImageView',
+            'FrameLayout[childCount=5] > FrameLayout[childCount=1] > ImageView',
           ],
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13185746',
         },
