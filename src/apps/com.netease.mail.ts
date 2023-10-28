@@ -24,10 +24,11 @@ export default defineAppConfig({
         {
           key: 1,
           matches:
-            '[id="com.netease.mail:id/ad_placeholder"] >n [text^="跳过"]',
+            '[id="com.netease.mail:id/ad_placeholder"] >n [text*="跳过"]',
           snapshotUrls: [
             'https://i.gkd.li/import/12893573',
             'https://i.gkd.li/import/12923776', // com.netease.mail.biz.main.SplashActivity
+            'https://i.gkd.li/import/13195662',
           ],
         },
         {
