@@ -12,5 +12,12 @@ export default defineAppConfig({
       rules: '[text="广告"] - @FrameLayout > [text="跳过"]',
       snapshotUrls: 'https://i.gkd.li/import/12739065',
     },
+    {
+      key: 1,
+      name: '申请开启通知',
+      activityIds: 'com.xingin.xhs.index.v2.IndexActivityV2',
+      rules: '[text ^="打开通知"] <2 LinearLayout + ImageView[clickable=true]',
+      snapshotUrls: 'https://i.gkd.li/import/13195753',
+    },
   ],
 });
