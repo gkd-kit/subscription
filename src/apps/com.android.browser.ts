@@ -19,6 +19,7 @@ export default defineAppConfig({
     {
       key: 1,
       name: '主页信息流广告',
+      quickFind: true,
       activityIds: [
         'com.android.browser.BrowserActivity',
         'com.android.browser.flow.view.FeedbackDialog',
