@@ -43,11 +43,11 @@ export default defineAppConfig({
     },
     {
       key: 3,
-      name: '内测、广告体验弹窗',
-      desc: '点击否定含义按钮',
+      name: '中部弹窗',
+      desc: '点击第一个按钮',
       activityIds: 'com.tencent.qqmusic.activity.AppStarterActivity',
-      quickFind: true,
-      rules: 'ViewGroup > LinearLayout[childCount=3] > @TextView[index=0][clickable=true] +2 TextView[clickable=true] ',
+      rules: 
+        'ViewGroup > LinearLayout[childCount=3] > @TextView[index=0][clickable=true] +2 TextView[clickable=true]',
       snapshotUrls: [
         'https://gkd-kit.gitee.io/import/13178485',
         'https://gkd-kit.gitee.io/import/13197868',
