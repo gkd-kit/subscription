@@ -11,7 +11,7 @@ export default defineAppConfig({
       activityIds: 'com.svm.core.lib.view.activity.BackgroundActivity',
           rules: [
             {
-              matches: 'id="com.byted.pangle:id/tt_splash_skip_btn"',
+              matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
               snapshotUrls: 'https://gkd-kit.gitee.io/import/13185376',
             },
           ],
