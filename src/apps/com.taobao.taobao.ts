@@ -7,8 +7,12 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       activityIds: 'com.taobao.bootimage.activity.BootImageActivity',
-      rules: '[id="com.taobao.taobao:id/close"]', // 1687596777612
+      rules: '[id="com.taobao.taobao:id/close"]',
     },
     {
       enable: false,
