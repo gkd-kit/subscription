@@ -10,12 +10,12 @@ export default defineAppConfig({
       matchLauncher: true,
       quickFind: true,
       activityIds: 'com.kkeji.news.client.start.ActivitySplashMy',
-          rules: [
-            {
-              matches: '[id="com.kkeji.news.client:id/tv_counter"]',
-              snapshotUrls: 'https://i.gkd.li/import/13197536',
-            },
-          ],
+      rules: [
+        {
+          matches: '[id="com.kkeji.news.client:id/tv_counter"]',
+          snapshotUrls: 'https://i.gkd.li/import/13197536',
+        },
+      ],
     },
   ],
 });
