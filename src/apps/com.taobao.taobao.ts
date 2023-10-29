@@ -56,12 +56,5 @@ export default defineAppConfig({
       rules: '@TextView[id="com.taobao.taobao.triver_taobao:id/close_image"] - RelativeLayout[id="com.taobao.taobao.triver_taobao:id/add_window"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13197362',
     },
-    {
-      key: 13,
-      name: '消息页面-开启系统通知提示',
-      activityIds: 'com.taobao.tao.welcome.Welcome',
-      rules: 'View[text="开启系统通知，不错过桌面推送消息"] + Image["O1CN01db8geS1QXdLJRv2c3_!!6000000001986-2-tps-26-26"]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/13197601',
-    },
   ],
 });
