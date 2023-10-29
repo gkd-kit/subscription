@@ -32,8 +32,11 @@ export default defineAppConfig({
       key: 2,
       name: '消息页面-热门活动卡片',
       activityIds: 'com.taobao.tao.welcome.Welcome',
-      rules: '[desc="热门活动抢先看"] +(6) FrameLayout > TextView',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12642795',
+      rules: 'View[desc.length>0] +2n FrameLayout > TextView[text="퀺"]',
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/12642795',
+        'https://i.gkd.li/import/13197877',
+      ],
     },
     {
       enable: false,
