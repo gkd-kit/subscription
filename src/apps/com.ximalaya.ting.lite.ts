@@ -7,11 +7,14 @@ export default defineAppConfig({
     {
       key: 1,
       name: '开屏广告',
-      activityIds: 'com.ximalaya.ting.android.host.activity.WelComeActivity',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
-          matches: '[id=null][text^="跳过"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/13197061', // 需要补充快照
+          matches: '[text^="跳过"][text.length<=10]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13197061',
         },
         {
           matches:
@@ -23,7 +26,7 @@ export default defineAppConfig({
       key: 0,
       name: '首页-推荐-卡片广告',
       activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
-      rules: '[id=\'com.ximalaya.ting.lite:id/main_ad_top_home_iv_close\']',
+      rules: '[id="com.ximalaya.ting.lite:id/main_ad_top_home_iv_close"]',
     },
   ],
 });
