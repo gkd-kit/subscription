@@ -33,8 +33,7 @@ export default defineAppConfig({
         {
           activityIds: 'com.bbk.appstore.ui.AppStoreTabActivity',
           matches: '[id="com.bbk.appstore:id/common_dialog_netgtive_btn"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/13198234',
-          
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13198234',   
         },
       ],
     },
