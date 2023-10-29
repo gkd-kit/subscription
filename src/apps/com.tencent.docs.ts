@@ -19,5 +19,12 @@ export default defineAppConfig({
       rules: '@[desc="暂不更新"] + [desc="现在更新"]',
       snapshotUrls: 'https://i.gkd.li/import/13198091',
     },
+    {
+      key: 2,
+      name: '广告卡片',
+      activityIds: 'com.tencent.docs.DocsFlutterActivity',
+      rules: '[desc="限时购买"] + ImageView[clickable=true]',
+      snapshotUrls: 'https://i.gkd.li/import/13198097',
+    },
   ],
 });
