@@ -37,6 +37,15 @@ export default defineAppConfig({
     },
     {
       enable: false,
+      key: 8,
+      name: '开启系统通知提示',
+      desc: '自动点击关闭',
+      activityIds: ['com.taobao.tao.welcome.Welcome'],
+      rules: 'View[text^="开启系统通知"] + Image[clickable=true]',
+      snapshotUrls: ['https://i.gkd.li/import/13197594'],
+    },
+    {
+      enable: false,
       key: 9,
       name: '各级页面-添加到首页弹窗',
       desc: '自动点击退出',
