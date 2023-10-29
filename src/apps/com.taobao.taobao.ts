@@ -16,12 +16,14 @@ export default defineAppConfig({
       name: '限时福利弹窗',
       activityIds: [
         'com.taobao.tao.welcome.Welcome',
+        'com.taobao.tao.TBMainActivity',
         'com.taobao.android.tbabilitykit.pop.StdPopContainerActivity',
         'com.taobao.android.detail.wrapper.activity.DetailActivity',
       ],
       rules: '[desc^="限时福利"] < FrameLayout + [desc="关闭按钮"]',
       snapshotUrls: [
         'https://gkd-kit.gitee.io/import/12642792', // activityId: com.taobao.tao.welcome.Welcome
+        'https://gkd-kit.gitee.io/import/13180826', // activityId: com.taobao.tao.TBMainActivity
         'https://gkd-kit.gitee.io/import/12648734', // activityId: com.taobao.android.tbabilitykit.pop.StdPopContainerActivity
         'https://gkd-kit.gitee.io/import/12648746', // activityId: com.taobao.android.detail.wrapper.activity.DetailActivity
       ],
@@ -32,6 +34,22 @@ export default defineAppConfig({
       activityIds: 'com.taobao.tao.welcome.Welcome',
       rules: '[desc="热门活动抢先看"] +(6) FrameLayout > TextView',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12642795',
+    },
+    {
+      enable: false,
+      key: 9,
+      name: '各级页面-添加到首页弹窗',
+      desc: '自动点击退出',
+      quickFind: true,
+      activityIds: [
+        'com.taobao.themis.container.app.TMSActivity',
+        'com.alibaba.triver.container.TriverMainActivity',
+      ],
+      rules: 'TextView[text="去首页"] + TextView[text="退出"]',
+      snapshotUrls: [
+        'https://i.gkd.li/import/13197553',
+        'https://i.gkd.li/import/13197546',
+      ],
     },
     {
       key: 10,
