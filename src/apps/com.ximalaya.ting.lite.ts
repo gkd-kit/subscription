@@ -16,7 +16,6 @@ export default defineAppConfig({
         {
           matches:
             '[id="com.ximalaya.ting.lite:id/host_common_time_countdown_text_view"]',
-          snapshotUrls: '', // 需要补充快照
         },
       ],
     },
