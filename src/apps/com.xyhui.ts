@@ -8,16 +8,22 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       quickFind: true,
-      activityIds: 'com.xyhui.start.LoadingActivity',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
-        '[name$="ViewGroup"||name$="LinearLayout"] > [text^="跳过"]',
-        '[id="com.xyhui:id/ms_skipView"]',
-      ],
-      snapshotUrls: [
-        'https://gkd-kit.gitee.io/import/12642486',
-        'https://i.gkd.li/import/12846496',
-        'https://i.gkd.li/import/12868232',
-        'https://i.gkd.li/import/13197417',
+        {
+          snapshotUrls: [
+            'https://i.gkd.li/import/12642486',
+            'https://i.gkd.li/import/12846496',
+            'https://i.gkd.li/import/12868232',
+          ],
+          matches: '[text^="跳过"][text.length<=10]',
+        },
+        {
+          matches: '[id="com.xyhui:id/ms_skipView"]',
+          snapshotUrls: ['https://i.gkd.li/import/13197417'],
+        },
       ],
     },
     {
@@ -26,7 +32,6 @@ export default defineAppConfig({
       matchLauncher: true,
       activityIds: [
         'com.xyhui.start.PUMainActivity',
-        'com.huawei.android.launcher.unihome.UniHomeLauncher',
         'com.huawei.permissioncontroller.hwcust.appjump.AppJumpActivity',
         'com.xyhui.start.LoadingActivity',
       ],
