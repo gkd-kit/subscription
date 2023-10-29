@@ -13,7 +13,10 @@ export default defineAppConfig({
         'com.xingin.matrix.detail.activity.DetailFeedActivity',
         ],
       rules: '[text="广告"] - @FrameLayout > [text="跳过"]',
-      snapshotUrls: 'https://i.gkd.li/import/12739065',
+      snapshotUrls: [
+        'https://i.gkd.li/import/12739065', // com.xingin.xhs.index.v2.IndexActivityV2
+        'https://gkd-kit.gitee.io/import/13197784', // com.xingin.matrix.detail.activity.DetailFeedActivity
+        ],
     },
     {
       key: 1,
