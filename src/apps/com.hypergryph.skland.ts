@@ -7,13 +7,12 @@ export default defineAppConfig({
     {
       key: 1,
       name: '青少年模式弹窗',
+      quickFind: true,
+      actionMaximum: 1,
+      resetMatch: 'app',
       activityIds: ['com.hypergryph.skland.MainActivity'],
-      rules: [
-        {
-          matches: '[id="com.hypergryph.skland:id/confirmTv"]',
-          snapshotUrls: 'https://i.gkd.li/import/13197012',
-        },
-      ],
+      rules: '[id="com.hypergryph.skland:id/confirmTv"]',
+      snapshotUrls: 'https://i.gkd.li/import/13197012',
     },
   ],
 });
