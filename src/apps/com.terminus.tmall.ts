@@ -10,12 +10,12 @@ export default defineAppConfig({
       matchLauncher: true,
       quickFind: true,
       activityIds: 'com.terminus.tmall.MainActivity',
-          rules: [
-            {
-              matches: '[text^="跳过"][text.length=5]',
-              snapshotUrls: 'https://gkd-kit.gitee.io/import/13199252',
-            },
-          ],
+      rules: [
+        {
+          matches: '[text^="跳过"][text.length=5]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13199252',
+        },
+      ],
     },
   ],
 });
