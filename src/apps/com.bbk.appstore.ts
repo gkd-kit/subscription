@@ -11,16 +11,14 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules:
-        '[id="com.bbk.appstore:id/launch_activity_root_layout"] >6 [text^="跳过"]',
+      rules: '[text^="跳过"][text.length<=10]',
       snapshotUrls: 'https://i.gkd.li/import/12847395',
     },
     {
       key: 1,
       name: '请求消息通知',
       quickFind: true,
-      matchTime: 10000,
-      actionMaximum: 2,
+      actionMaximum: 1,
       resetMatch: 'app',
       rules: [
         {
