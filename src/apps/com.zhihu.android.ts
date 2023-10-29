@@ -114,11 +114,14 @@ export default defineAppConfig({
           key: 4,
           matches: 'TextView[text*=`回答`][text*=`关注`] + TextView[text=`×`]',
         },
-        {
-          key: 5,
-          matches:
-            'TextView[text!=null] + TextView[text*=`赞同`] + View > Image',
-        },
+        //存在误触，缺乏快照处置，暂时移除
+        //误触快照：https://i.gkd.li/import/13196039
+        // {
+        //   key: 5,
+        //   matches:
+        //     'TextView[text!=null] + TextView[text*=`赞同`] + View > Image',
+        // },
+        
         {
           key: 6,
           matches: 'TextView[text$=`的广告`] - Image[id=null]',
