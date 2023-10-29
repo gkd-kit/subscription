@@ -27,5 +27,12 @@ export default defineAppConfig({
         '[id="com.smzdm.client.android:id/tv_version"] +2 [id="com.smzdm.client.android:id/iv_close"]',
       snapshotUrls: 'https://i.gkd.li/import/13198016',
     },
+    {
+      key: 10,
+      name: '请求读取剪贴板权限弹窗',
+      activityIds: 'com.smzdm.client.android.app.HomeActivity',
+      rules: '@[text="暂不允许"] + [text="允许"]',
+      snapshotUrls: 'https://i.gkd.li/import/13198020',
+    },
   ],
 });
