@@ -7,8 +7,10 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      matchLauncher: true,
-      activityIds: 'com.svm.core.lib.view.activity.BackgroundActivity',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      quickFind: true,
       rules: [
         {
           matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
