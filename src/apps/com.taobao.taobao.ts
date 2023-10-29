@@ -7,8 +7,12 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       activityIds: 'com.taobao.bootimage.activity.BootImageActivity',
-      rules: '[id="com.taobao.taobao:id/close"]', // 1687596777612
+      rules: '[id="com.taobao.taobao:id/close"]',
     },
     {
       enable: false,
@@ -51,9 +55,11 @@ export default defineAppConfig({
     },
     {
       key: 12,
-      name: '菜鸟页面-下次从首页找到',
+      name: '弹窗-下次从首页找到',
+      desc: '点击底部x图片按钮',
+      quickFind: true,
       activityIds: 'com.alibaba.triver.container.TriverMainActivity',
-      rules: '@TextView[id="com.taobao.taobao.triver_taobao:id/close_image"] - RelativeLayout[id="com.taobao.taobao.triver_taobao:id/add_window"]',
+      rules: '[id="com.taobao.taobao.triver_taobao:id/close_image"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13197362',
     },
   ],
