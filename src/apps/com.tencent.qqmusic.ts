@@ -43,15 +43,21 @@ export default defineAppConfig({
     },
     {
       key: 3,
-      name: '中部弹窗',
-      desc: '点击第一个按钮',
+      name: '内测体验弹窗',
+      desc: '点击[不再提醒]',
       activityIds: 'com.tencent.qqmusic.activity.AppStarterActivity',
-      rules:
-        'ViewGroup > LinearLayout[childCount=3] > @TextView[index=0][clickable=true] +2 TextView[clickable=true]',
-      snapshotUrls: [
-        'https://gkd-kit.gitee.io/import/13178485',
-        'https://gkd-kit.gitee.io/import/13197868',
-      ],
+      quickFind: true,
+      rules: '[text="抢先体验"] -2 [text="不再提醒"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/13178485',
+    },
+    {
+      key: 4,
+      name: '免流弹窗',
+      desc: '点击[流量够用]',
+      activityIds: 'com.tencent.qqmusic.activity.AppStarterActivity',
+      quickFind: true,
+      rules: '[text="流量够用"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/13197868',
     },
   ],
 });
