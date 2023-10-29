@@ -10,8 +10,19 @@ export default defineAppConfig({
       quickFind: true,
       matchLauncher: true,
       activityIds: 'com.yunma.app.ui.start.SplashActivity',
-      rules: '[id="cn.com.yunma.school.app:id/skip"]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/13175275',
+      rules: [
+        {
+          key: 0,
+          matches: '[id="cn.com.yunma.school.app:id/skip"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13175275',
+        },
+        {
+          key: 1,
+          matches:
+            '[id="cn.com.yunma.school.app:id/anythink_myoffer_splash_skip"]',
+          snapshotUrls: 'https://i.gkd.li/import/13198129',
+        },
+      ],
     },
   ],
 });
