@@ -5,7 +5,7 @@ export default defineAppConfig({
   name: '喜马拉雅极速版',
   groups: [
     {
-      key: 1,
+      key: -1,
       name: '开屏广告',
       quickFind: true,
       matchTime: 10000,
