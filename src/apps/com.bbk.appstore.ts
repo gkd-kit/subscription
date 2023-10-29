@@ -27,7 +27,8 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.bbk.appstore.upgrade.UpgradeNecessaryActivity',
-          matches: '[id="com.bbk.appstore:id/upgrade_necessary_btn_high_new"]',
+          matches:
+            '[id="com.bbk.appstore:id/upgrade_necessary_btn_high_new"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13198101',
         },
         {
