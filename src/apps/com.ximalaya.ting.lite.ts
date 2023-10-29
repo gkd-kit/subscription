@@ -8,9 +8,7 @@ export default defineAppConfig({
       key: -1,
       name: '开屏广告1',
       activityIds: 'com.ximalaya.ting.android.host.activity.WelComeActivity',
-      rules: [
-        '[id=null][text^="跳过"]',
-      ],
+      rules: ['[id=null][text^="跳过"]'],
     },
     {
       key: 0,
