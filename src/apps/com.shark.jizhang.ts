@@ -5,6 +5,19 @@ export default defineAppConfig({
   name: '鲨鱼记账',
   groups: [
     {
+      key: -1,
+      name: '开屏广告',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          matches: '[id="com.byted.pangle.m:id/tt_splash_skip_btn"]',
+          snapshotUrls: ['https://i.gkd.li/import/13192242'],
+        },
+      ],
+    },
+    {
       key: 0,
       name: '新用户特惠广告',
       desc: '弹窗广告,右下角浮动广告',
@@ -17,18 +30,6 @@ export default defineAppConfig({
             'https://gkd-kit.gitee.io/import/12518500',
             'https://gkd-kit.gitee.io/import/12518517',
           ],
-        },
-      ],
-    },
-    {
-      key: 1,
-      name: '开屏广告',
-      matchLauncher: true,
-      activityIds: 'com.shark.jizhang.module.main.MainActivity',
-      rules: [
-        {
-          matches: '[id="com.byted.pangle.m:id/tt_splash_skip_btn"]',
-          snapshotUrls: ['https://i.gkd.li/import/13192242'],
         },
       ],
     },
