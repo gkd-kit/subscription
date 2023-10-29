@@ -8,7 +8,10 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       quickFind: true,
-      activityIds: 'com.xingin.xhs.index.v2.IndexActivityV2',
+      activityIds: [
+        'com.xingin.xhs.index.v2.IndexActivityV2',
+        'com.xingin.matrix.detail.activity.DetailFeedActivity',
+        ],
       rules: '[text="广告"] - @FrameLayout > [text="跳过"]',
       snapshotUrls: 'https://i.gkd.li/import/12739065',
     },
