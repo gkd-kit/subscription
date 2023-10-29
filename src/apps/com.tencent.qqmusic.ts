@@ -43,12 +43,15 @@ export default defineAppConfig({
     },
     {
       key: 3,
-      name: '内测体验弹窗',
-      desc: '点击[不再提醒]',
+      name: '内测、广告体验弹窗',
+      desc: '点击否定含义按钮',
       activityIds: 'com.tencent.qqmusic.activity.AppStarterActivity',
       quickFind: true,
-      rules: '[text="抢先体验"] -2 [text="不再提醒"]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/13178485',
+      rules: 'ViewGroup > LinearLayout[childCount=3] > @TextView[index=0][clickable=true] +2 TextView[clickable=true] ',
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/13178485',
+        'https://gkd-kit.gitee.io/import/13197868',
+      ],
     },
   ],
 });
