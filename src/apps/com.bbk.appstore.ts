@@ -27,14 +27,13 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.bbk.appstore.upgrade.UpgradeNecessaryActivity',
-          matches:
-            '[id="com.bbk.appstore:id/upgrade_necessary_btn_high_new"]',
+          matches: '[id="com.bbk.appstore:id/upgrade_necessary_btn_high_new"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13198101',
         },
         {
           activityIds: 'com.bbk.appstore.ui.AppStoreTabActivity',
           matches: '[id="com.bbk.appstore:id/common_dialog_netgtive_btn"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/13198234',   
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13198234',
         },
       ],
     },
