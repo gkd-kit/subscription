@@ -7,7 +7,10 @@ export default defineAppConfig({
     {
       key: 1,
       name: '开屏广告',
-      activityIds: ['com.ikang.official.ui.AdvertActivity'],
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
           matches: '[id="com.ikang.official:id/llAdvertCountdown"]',
