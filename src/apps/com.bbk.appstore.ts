@@ -8,11 +8,9 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       quickFind: true,
-      matchLauncher: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: ['com.bbk.appstore.ui.AppStore'],
       rules:
         '[id="com.bbk.appstore:id/launch_activity_root_layout"] >6 [text^="跳过"]',
       snapshotUrls: 'https://i.gkd.li/import/12847395',
