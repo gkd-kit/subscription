@@ -85,5 +85,15 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 6,
+      name: '版本更新',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: 'ImageButton[id="com.netease.cloudmusic:id/md_dialog_cm_close_btn"]',
+      snapshotUrls: 'https://i.gkd.li/import/13197457',
+    },
   ],
 });
