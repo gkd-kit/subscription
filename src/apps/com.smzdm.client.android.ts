@@ -7,10 +7,8 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: [
-        'com.smzdm.client.android.app.WelComeActivity',
-        'com.miui.home.launcher.Launcher',
-      ],
+      activityIds: 'com.smzdm.client.android.app.WelComeActivity',
+      matchLauncher: true,
       rules: '[id="com.smzdm.client.android:id/tv_skip"]',
       snapshotUrls: 'https://i.gkd.li/import/12535072',
     },
