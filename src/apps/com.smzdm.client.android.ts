@@ -19,5 +19,13 @@ export default defineAppConfig({
       rules: '[id="com.smzdm.client.android:id/dialog_home_close"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12695751',
     },
+    {
+      key: 2,
+      name: '更新弹窗',
+      activityIds: 'com.smzdm.client.android.app.HomeActivity',
+      rules:
+        '[id="com.smzdm.client.android:id/tv_version"] +2 [id="com.smzdm.client.android:id/iv_close"]',
+      snapshotUrls: 'https://i.gkd.li/import/13198016',
+    },
   ],
 });
