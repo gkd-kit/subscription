@@ -20,5 +20,20 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 1,
+      name: '开屏广告',
+      matchLauncher: true,
+      activityIds: 'com.shark.jizhang.module.main.MainActivity',
+      rules: [
+        {
+          matches:
+            '[id="com.byted.pangle.m:id/tt_splash_skip_btn"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13192242',
+          ],
+        },
+      ],
+    },
   ],
 });
