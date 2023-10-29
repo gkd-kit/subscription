@@ -8,27 +8,22 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       quickFind: true,
-      matchLauncher: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'com.android.mediacenter.PageActivity',
       rules: [
         {
           key: 0,
           action: 'clickCenter',
-          matches: '[id="com.huawei.hms.ads.uiengine:id/hiad_skip_text"]',
-          snapshotUrls: 'https://i.gkd.li/import/12901417',
-          exampleUrls:
+          matches: '[text^="跳过"][text.length<=10]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12901417',
+            'https://i.gkd.li/import/12908742',
+          ],
+          exampleUrls: [
             'https://github.com/gkd-kit/inspect/assets/38517192/6c34cd13-cfda-4462-99ed-2a2534a6fdf5',
-        },
-        {
-          key: 1,
-          action: 'clickCenter',
-          matches: '[id="com.android.mediacenter:id/jump"]',
-          snapshotUrls: 'https://i.gkd.li/import/12908742',
-          exampleUrls:
             'https://github.com/gkd-kit/inspect/assets/38517192/c71bb14d-cd1f-4f9e-8ee9-6a1e11e56901',
+          ],
         },
       ],
     },
