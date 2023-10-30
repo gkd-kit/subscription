@@ -15,7 +15,7 @@ export default defineAppConfig({
         {
           key: 0,
           matches: '[text*="跳过"][text.length<=10]',
-          excludeMatches: '[desc="网易邮箱大师"] + FrameLayout + [text="跳过"]',
+          excludeMatches: '[id="com.netease.mail:id/ad_skip"][clickable=false]',
           snapshotUrls: [
             'https://i.gkd.li/import/12893573',
             'https://i.gkd.li/import/12923776',
