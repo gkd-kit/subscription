@@ -91,7 +91,8 @@ export default defineAppConfig({
         },
       ],
     },
-    { // Key1,2,3,4,11 均为授权类的规则
+    {
+      // Key1,2,3,4,11 均为授权类的规则
       key: 1,
       name: '电脑微信快捷自动登录',
       activityIds: '.plugin.webwx.ui.ExtDeviceWXLoginUI',
@@ -238,7 +239,7 @@ export default defineAppConfig({
       name: '订阅号文章广告反馈',
       desc: '⚠ 此规则有概率误触。自动点击反馈理由，配合【订阅号文章广告】规则使用',
       activityIds:
-        'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebView',//调整为TmplWebView, 同时兼容多种ID
+        'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebView', //调整为TmplWebView, 同时兼容多种ID
       rules: [
         {
           key: 1,
