@@ -59,11 +59,16 @@ export default defineAppConfig({
       rules: [
         {
           name: '弹窗广告',
-          activityIds:
+          activityIds: [
+            'com.tencent.mobileqq.activity.SplashActivity',
             'com.tencent.qqlive.module.videoreport.inject.dialog.ReportDialog',
+          ],
           matches:
             'ImageView[id="com.tencent.mobileqq:id/close"][clickable=true]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12642081',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13206663', // com.tencent.mobileqq.activity.SplashActivity
+            'https://gkd-kit.gitee.io/import/12642081', // com.tencent.qqlive.module.videoreport.inject.dialog.ReportDialog
+          ],
         },
         {
           name: '右侧悬浮广告',
