@@ -327,5 +327,54 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      enable: false,
+      key: 14,
+      name: '小程序-内部广告',
+      desc: '需同时开启"小程序-内部广告-反馈"',
+      activityIds: [
+        'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
+      ],
+      quickFind: true,
+      rules: [
+        {
+          matches:
+            'FrameLayout[childCount=3] >n FrameLayout > FrameLayout > [text="广告"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/13199282', //[childCount=3]避免在点击展开菜单后重复点击
+          ],
+        },
+      ],
+    },
+    {
+      enable: false,
+      key: 15,
+      name: '小程序-内部广告-反馈',
+      desc: '需同时开启"小程序-内部广告"',
+      activityIds: [
+        'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
+      ],
+      quickFind: true,
+      rules: [
+        {
+          matches:
+            '[text="不感兴趣"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13200044',
+          ],
+        },
+        {
+          matches:
+            '[text="与我无关"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13200048',
+          ],
+        },
+        {
+          matches:
+            '[text="关闭此广告"][visibleToUser=true]', //预防性规则,目前没有快照
+        },
+      ],
+    },
   ],
 });
