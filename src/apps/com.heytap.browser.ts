@@ -13,8 +13,7 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
-          matches:
-            'TextView[text^="跳过"][text.length<=4][clickable=true]',
+          matches: 'TextView[text^="跳过"][text.length<=4][clickable=true]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12841168',
             'https://gkd-kit.gitee.io/import/13199536',
