@@ -6,10 +6,11 @@ export default defineAppConfig({
   groups: [
     {
       key: 0,
-      matchLauncher: true,
       name: '开屏广告',
-      activityIds: 'com.tt.turbo.MainActivity',
-      rules: 'View[desc^="跳过"][desc.length=4]',
+      matchTime: 10000,
+      resetMatch: 'app',
+      actionMaximum: 1,
+      rules: 'View[desc^="跳过"][desc.length<=4]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13200355',
     },
   ],
