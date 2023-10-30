@@ -39,5 +39,17 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      name: '去商店评分',
+      desc: '点击[下次再说]',
+      key: 3,
+      activityIds: ['com.miui.home.launcher.Launcher'],
+      rules: [
+        {
+          matches: '[text="下次再说"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13203217',
+        },
+      ],
+    },
   ],
 });
