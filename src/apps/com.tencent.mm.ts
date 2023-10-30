@@ -327,23 +327,5 @@ export default defineAppConfig({
         },
       ],
     },
-    {
-      enable: false,
-      key: 14,
-      name: '微信小程序-内部广告',
-      activityIds: [
-        'xxx',
-      ],
-      quickFind: true,
-      rules: [
-        {
-          matches:
-            'xx',
-          snapshotUrls: [
-            'xx',
-          ],
-        },
-      ],
-    },
   ],
 });
