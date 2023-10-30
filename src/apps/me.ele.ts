@@ -17,11 +17,10 @@ export default defineAppConfig({
       key: 1,
       name: '更新弹窗',
       quickFind: true,
-      matchLauncher: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'com.afollestad.materialdialogs.MaterialDialog',
+      matchDelay: 3000,
       rules:
         '[text*="更新应用版本"] < ScrollView + [text="取消"][focusable=true]',
       snapshotUrls: [
