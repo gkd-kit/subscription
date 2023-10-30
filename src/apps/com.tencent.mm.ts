@@ -333,9 +333,7 @@ export default defineAppConfig({
       key: 14,
       name: '小程序-内部广告',
       desc: '需同时开启"小程序-内部广告-反馈"',
-      activityIds: [
-        'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
-      ],
+      activityIds: ['com.tencent.mm.plugin.appbrand.ui.AppBrandUI'],
       quickFind: true,
       rules: [
         {
@@ -352,28 +350,19 @@ export default defineAppConfig({
       key: 15,
       name: '小程序-内部广告-反馈',
       desc: '需同时开启"小程序-内部广告"',
-      activityIds: [
-        'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
-      ],
+      activityIds: ['com.tencent.mm.plugin.appbrand.ui.AppBrandUI'],
       quickFind: true,
       rules: [
         {
-          matches:
-            '[text="不感兴趣"][visibleToUser=true]',
-          snapshotUrls: [
-            'https://i.gkd.li/import/13200044',
-          ],
+          matches: '[text="不感兴趣"][visibleToUser=true]',
+          snapshotUrls: ['https://i.gkd.li/import/13200044'],
         },
         {
-          matches:
-            '[text="与我无关"][visibleToUser=true]',
-          snapshotUrls: [
-            'https://i.gkd.li/import/13200048',
-          ],
+          matches: '[text="与我无关"][visibleToUser=true]',
+          snapshotUrls: ['https://i.gkd.li/import/13200048'],
         },
         {
-          matches:
-            '[text="关闭此广告"][visibleToUser=true]', //预防性规则,目前没有快照
+          matches: '[text="关闭此广告"][visibleToUser=true]', //预防性规则,目前没有快照
         },
       ],
     },
