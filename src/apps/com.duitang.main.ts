@@ -7,7 +7,9 @@ export default defineAppConfig({
     {
       name: '开屏广告',
       key: 0,
-      activityIds: ['com.duitang.main.activity.SplashActivity'],
+      matchTime: 10000,
+      resetMatch: 'app',
+      actionMaximum: 1,
       rules: [
         {
           matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
@@ -19,10 +21,11 @@ export default defineAppConfig({
       name: '青少年模式',
       desc: '关闭青少年模式提醒弹窗',
       key: 1,
+      actionMaximum: 1,
       activityIds: ['com.duitang.main.business.main.NAMainActivity'],
       rules: [
         {
-          matches: '[text="进入青少年模式"] + [text="我知道了"]',
+          matches: '[id="com.duitang.main:id/teenGuideKnown"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13202230',
         },
       ],
@@ -32,6 +35,7 @@ export default defineAppConfig({
       desc: '关闭推荐浏览页面广告',
       key: 2,
       activityIds: ['com.duitang.main.business.main.NAMainActivity'],
+      quickFind: true,
       rules: [
         {
           matches: '[id="com.duitang.main:id/adOptionEntry"]',
@@ -43,10 +47,12 @@ export default defineAppConfig({
       name: '去商店评分',
       desc: '点击[下次再说]',
       key: 3,
+      actionMaximum: 1,
+      quickFind: true,
       activityIds: ['com.miui.home.launcher.Launcher'],
       rules: [
         {
-          matches: '[text="下次再说"]',
+          matches: '[id="com.duitang.main:id/scoreDuitangCancel"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13203217',
         },
       ],
