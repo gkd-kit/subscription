@@ -29,11 +29,6 @@ export default defineAppConfig({
           matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12999739',
         },
-        {
-          key: 2,
-          matches: '[id="com.netease.mail:id/anythink_myoffer_splash_skip"]',
-          snapshotUrls: 'https://i.gkd.li/import/13206020',
-        },
       ],
     },
     {
