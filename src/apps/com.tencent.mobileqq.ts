@@ -59,6 +59,7 @@ export default defineAppConfig({
       rules: [
         {
           name: '弹窗广告',
+          quickFind: true,
           activityIds: [
             'com.tencent.mobileqq.activity.SplashActivity',
             'com.tencent.qqlive.module.videoreport.inject.dialog.ReportDialog',
