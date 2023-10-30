@@ -13,7 +13,7 @@ export default defineAppConfig({
       actionMaximum: 1,
       rules: [
         {
-          matches: '[text^="跳过"][text.length=5]',
+          matches: '[text^="跳过"][text.length<=5]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13199252',
         },
       ],
