@@ -7,9 +7,10 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      matchLauncher: true,
       quickFind: true,
-      activityIds: 'com.terminus.tmall.MainActivity',
+      matchTime: 10000,
+      resetMatch: 'app',
+      actionMaximum: 1,
       rules: [
         {
           matches: '[text^="跳过"][text.length=5]',
