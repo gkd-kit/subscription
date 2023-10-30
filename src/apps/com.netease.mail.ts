@@ -15,17 +15,24 @@ export default defineAppConfig({
         {
           key: 0,
           matches: '[text*="跳过"][text.length<=10]',
+          excludeMatches: '[desc="网易邮箱大师"] + FrameLayout + [text="跳过"]',
           snapshotUrls: [
             'https://i.gkd.li/import/12893573',
             'https://i.gkd.li/import/12923776',
             'https://i.gkd.li/import/13195662',
             'https://i.gkd.li/import/12818335',
+            'https://i.gkd.li/import/13206298', // 使用 excludeMatches 防止提前触发规则
           ],
         },
         {
           key: 1,
           matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12999739',
+        },
+        {
+          key: 2,
+          matches: '[id="com.netease.mail:id/anythink_myoffer_splash_skip"]',
+          snapshotUrls: 'https://i.gkd.li/import/13206020',
         },
       ],
     },
