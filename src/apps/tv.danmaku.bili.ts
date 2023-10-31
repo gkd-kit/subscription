@@ -100,11 +100,33 @@ export default defineAppConfig({
       quickFind: true,
       key: 6,
       name: '更新弹窗',
-      activityIds: 'com.bilibili.app.preferences.BiliPreferencesActivity',
+      activityIds: [
+        'com.bilibili.app.preferences.BiliPreferencesActivity',
+        'tv.danmaku.bili.ui.splash.ad.page.HotSplashActivity',
+    ],
       rules: [
-        '[id="tv.danmaku.bili:id/update_btn_confirm"] + [id="tv.danmaku.bili:id/update_btn_cancel"]',
+        {
+          Key: 1, //先勾选忽略更新
+          matches: '[id="tv.danmaku.bili:id/update_cbx_ignore_version"][checked=false]', 
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13212209',
+        },
+        {
+          Key: 2, //接上一步
+          matches: [
+            '[id="tv.danmaku.bili:id/update_cbx_ignore_version"][checked=true]',
+            '[id="tv.danmaku.bili:id/update_btn_cancel"][text="以后再说"]',
+          ],
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13212209',
+        },
+        {
+          Key: 3, //另一种情况, 没有忽略更新选项
+          matches: [
+            'LinearLayout[childCount=3]', //有忽略更新选项时,Count=4
+            '[id="tv.danmaku.bili:id/update_btn_cancel"][text="以后再说"]',
+          ],
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12649689',
+        },
       ],
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12649689',
     },
     {
       quickFind: true,
