@@ -15,7 +15,7 @@ export default defineAppConfig({
           matches: '[id$="id/hiad_skip_text"]',
           action: 'clickCenter',
           snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/12667766'
+            'https://gkd-kit.gitee.io/import/12667766',
             'https://gkd-kit.gitee.io/import/13215012',
           ],
         },
