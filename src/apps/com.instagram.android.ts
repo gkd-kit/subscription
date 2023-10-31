@@ -22,8 +22,7 @@ export default defineAppConfig({
         {
           key: 1,
           name: '点击【隐藏广告】按钮',
-          matches:
-            '[text="隐藏广告"] <n ViewGroup',
+          matches: '[text="隐藏广告"] <n ViewGroup',
           snapshotUrls: [
             'https://i.gkd.li/import/12798571',
             'https://gkd-kit.gitee.io/import/12829448',
@@ -32,8 +31,7 @@ export default defineAppConfig({
         {
           key: 2,
           name: '点击【广告不相关】按钮',
-          matches:
-            '[text="广告不相关"] < ViewGroup',
+          matches: '[text="广告不相关"] < ViewGroup',
           snapshotUrls: [
             'https://i.gkd.li/import/12798590',
             'https://gkd-kit.gitee.io/import/12829464',
@@ -43,9 +41,7 @@ export default defineAppConfig({
           key: 3,
           name: '关闭[你不会再看到这条广告]',
           action: 'back',
-          matches: [
-            '[text="你不会再看到这条广告"]',
-          ],
+          matches: ['[text="你不会再看到这条广告"]'],
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12829492',
         },
       ],
