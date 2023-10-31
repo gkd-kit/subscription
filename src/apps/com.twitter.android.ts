@@ -11,7 +11,7 @@ export default defineAppConfig({
       activityIds: [
         'com.twitter.app.main.MainActivity',
         'com.twitter.app.profiles.ProfileActivity',
-    ],
+      ],
       cd: 3000, // https://github.com/gkd-kit/subscription/issues/832
       rules: [
         {
