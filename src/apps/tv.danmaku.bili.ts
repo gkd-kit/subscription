@@ -103,11 +103,12 @@ export default defineAppConfig({
       activityIds: [
         'com.bilibili.app.preferences.BiliPreferencesActivity',
         'tv.danmaku.bili.ui.splash.ad.page.HotSplashActivity',
-    ],
+      ],
       rules: [
         {
           key: 1, //先勾选忽略更新
-          matches: '[id="tv.danmaku.bili:id/update_cbx_ignore_version"][checked=false]', 
+          matches:
+            '[id="tv.danmaku.bili:id/update_cbx_ignore_version"][checked=false]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13212209',
         },
         {
