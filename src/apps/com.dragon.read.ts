@@ -60,6 +60,20 @@ export default defineAppConfig({
       ],
     },
     {
+      key: 4,
+      name: '开屏广告',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          matches:
+            '[text="跳过广告"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13210844',
+        },
+      ],
+    },
+    {
       enable: false,
       key: 10,
       name: '请求通知权限弹窗',
