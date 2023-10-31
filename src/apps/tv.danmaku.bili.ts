@@ -106,12 +106,12 @@ export default defineAppConfig({
     ],
       rules: [
         {
-          Key: 1, //先勾选忽略更新
+          key: 1, //先勾选忽略更新
           matches: '[id="tv.danmaku.bili:id/update_cbx_ignore_version"][checked=false]', 
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13212209',
         },
         {
-          Key: 2, //接上一步
+          key: 2, //接上一步
           matches: [
             '[id="tv.danmaku.bili:id/update_cbx_ignore_version"][checked=true]',
             '[id="tv.danmaku.bili:id/update_btn_cancel"][text="以后再说"]',
@@ -119,7 +119,7 @@ export default defineAppConfig({
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13212209',
         },
         {
-          Key: 3, //另一种情况, 没有忽略更新选项
+          key: 3, //另一种情况, 没有忽略更新选项
           matches: [
             'LinearLayout[childCount=3]', //有忽略更新选项时,Count=4
             '[id="tv.danmaku.bili:id/update_btn_cancel"][text="以后再说"]',
