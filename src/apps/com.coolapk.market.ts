@@ -20,7 +20,7 @@ export default defineAppConfig({
         },
         {
           key: 1,
-          matches:[
+          matches: [
             '[id="com.coolapk.market:id/ad_container"]',
             '[id="com.byted.pangle:id/tt_splash_skip_btn" || text^="跳过"]',
           ],
