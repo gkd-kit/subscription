@@ -16,9 +16,8 @@ export default defineAppConfig({
       key: 1,
       name: '广告弹窗',
       activityIds: 'com.onethingcloud.android.MainActivity',
-      rules:
-        'FrameLayout >8 View > ImageView + ImageView + ImageView[clickable=true]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12841171',
+      rules: 'View[childCount=3] > ImageView[index=2]',
+      snapshotUrls: ['https://gkd-kit.gitee.io/import/12841171'],
     },
   ],
 });
