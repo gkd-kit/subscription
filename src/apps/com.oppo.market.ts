@@ -5,15 +5,18 @@ export default defineAppConfig({
   name: '一加软件商店',
   groups: [
     {
-        key: 1,
-        name: '开屏广告',
-        activityIds: ['com.heytap.cdo.client.ui.activity.MainTabPageActivity'],
-        rules: [
+      key: 1,
+      name: '开屏广告',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
         {
-            matches: '@LinearLayout > TextView[text="跳过"]',
-            snapshotUrls: 'https://i.gkd.li/import/13211017'
-        }
-        ]
-    }
-  ]
+          matches: '[text*="跳过"][text.length<=10]',
+          snapshotUrls: 'https://i.gkd.li/import/13211017',
+        },
+      ],
+    },
+  ],
 });
