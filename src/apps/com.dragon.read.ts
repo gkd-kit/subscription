@@ -67,8 +67,7 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
-          matches:
-            '[text="跳过广告"]',
+          matches: '[text="跳过广告"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13210844',
         },
       ],
