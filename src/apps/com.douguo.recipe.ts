@@ -11,7 +11,6 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'com.douguo.recipe.MainActivity',
       rules: [
         {
           matches: '[id="com.douguo.recipe:id/ad_jump"] > [text^="跳过"]',
