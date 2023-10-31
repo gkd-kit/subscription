@@ -12,12 +12,12 @@ export default defineAppConfig({
       resetMatch: 'app',
       quickFind: true,
       activityIds: 'com.ifenglian.superapp.ui.splash.SASplashAdActivity',
-          rules: [
-            {
-              matches: '[id="com.qihoo.srouter.n300:id/tv_countdown"]', 
-              snapshotUrls: 'https://gkd-kit.gitee.io/import/13216607',
-            },
-          ],
+      rules: [
+        {
+          matches: '[id="com.qihoo.srouter.n300:id/tv_countdown"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13216607',
+        },
+      ],
     },
   ],
 });
