@@ -5,12 +5,19 @@ export default defineAppConfig({
   name: '黑阈',
   groups: [
     {
+      enable: false,
       key: 1,
-      name: '权限不足',
+      name: '权限不足弹窗',
+      desc: '点击取消',
       activityIds: ['me.piebridge.brevent.ui.BreventActivity'],
+      actionMaximum: 1,
+      quickFind: true,
       rules: [
         {
-          matches: '[id=`android:id/button2`][text=`取消`]',
+          matches: [
+            '[id="android:id/message"][text^=`黑阈服务权限不足`]',
+            '[text=`取消`][id^=`android:id/button`]',
+          ],
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13218439',
         },
       ],
