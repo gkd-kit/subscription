@@ -5,6 +5,15 @@ export default defineAppConfig({
   name: '抖音',
   groups: [
     {
+      key: -1,
+      name: '开屏广告',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: '[desc="跳过广告"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/13216121',
+    },
+    {
       key: 0,
       name: '关闭青少年弹窗',
       rules: 'Button[text=`开启青少年模式`] + * > Button[text!=null]',
@@ -14,8 +23,7 @@ export default defineAppConfig({
       name: '关闭用户推荐',
       rules: [
         {
-          activityIds:
-            'com.google.android.material.bottomsheet.BottomSheetDialog',
+          activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
           matches:
             '[id="com.ss.android.ugc.aweme:id/desc"][text="减少此类推荐"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12520962',
@@ -89,15 +97,6 @@ export default defineAppConfig({
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13053628',
       exampleUrls:
         'https://github.com/gkd-kit/inspect/assets/38517192/4554c785-39e0-4eac-9cfb-f1b1c2976008',
-    },
-    {
-      key: 7,
-      name: '开屏广告',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: '[desc="跳过广告"]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/13216121',
     },
     {
       enable: false,
