@@ -1,8 +1,8 @@
 import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
-  id: 'com.heytap.browser',
-  name: 'OPPO浏览器',
+  id: 'com.kkeji.news.client',
+  name: '快科技',
   groups: [
     {
       key: 0,
@@ -13,11 +13,8 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
-          matches: 'TextView[text^="跳过"][text.length<=4][clickable=true]',
-          snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/12841168',
-            'https://gkd-kit.gitee.io/import/13199536',
-          ],
+          matches: '[id="com.kkeji.news.client:id/tv_counter"]',
+          snapshotUrls: 'https://i.gkd.li/import/13197536',
         },
       ],
     },

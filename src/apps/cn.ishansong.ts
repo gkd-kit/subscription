@@ -1,8 +1,8 @@
 import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
-  id: 'com.heytap.browser',
-  name: 'OPPO浏览器',
+  id: 'cn.ishansong',
+  name: '闪送',
   groups: [
     {
       key: 0,
@@ -13,11 +13,8 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
-          matches: 'TextView[text^="跳过"][text.length<=4][clickable=true]',
-          snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/12841168',
-            'https://gkd-kit.gitee.io/import/13199536',
-          ],
+          matches: '[text*="跳过"][text.length<=10]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13205475',
         },
       ],
     },

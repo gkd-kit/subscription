@@ -15,11 +15,14 @@ export default defineAppConfig({
         {
           key: 0,
           matches: '[text*="跳过"][text.length<=10]',
+          excludeMatches: '[id="com.netease.mail:id/ad_skip"][clickable=false]',
           snapshotUrls: [
             'https://i.gkd.li/import/12893573',
             'https://i.gkd.li/import/12923776',
             'https://i.gkd.li/import/13195662',
             'https://i.gkd.li/import/12818335',
+            'https://i.gkd.li/import/13206298', // 使用 excludeMatches 防止提前触发规则
+            'https://i.gkd.li/import/13207736', // TODO 一整块图片，无法跳过
           ],
         },
         {
@@ -43,13 +46,15 @@ export default defineAppConfig({
       key: 2,
       name: '邮件列表广告',
       activityIds: ['com.netease.mail.biz.main.MainITabActivity'],
+      quickFind: true,
       rules: [
         {
           key: 0,
-          matches: '[id="com.netease.mail:id/ad_arrow"]',
+          matches: '[id="com.netease.mail:id/ad_vip"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12999833',
         },
         {
+          preKeys: 0,
           key: 1,
           matches: '[id="com.netease.mail:id/ll_delete"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12999841',

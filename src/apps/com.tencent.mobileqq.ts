@@ -11,11 +11,11 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
-      rules: 'TextView[text="跳过"][clickable=true]',
+      rules: 'TextView[text^="跳过"][text.length<=10]',
       snapshotUrls: [
         'https://i.gkd.li/import/13062244',
         'https://i.gkd.li/import/13093155',
+        'https://i.gkd.li/import/13207731',
       ],
     },
     {
@@ -25,11 +25,16 @@ export default defineAppConfig({
       desc: '规则误触,待修复,需要快照准确定位', // 当从聊天界面点击链接进入网页时会误触
       activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
       rules: [
-        '@[desc="关闭"][clickable=true] - LinearLayout > TextView[text!=null] + TextView[text!=null]', // 1687669217838
-      ],
-      snapshotUrls: [
-        'https://i.gkd.li/import/12892726',
-        'https://i.gkd.li/import/12774870',
+        {
+          key: 0,
+          matches:
+            '@[desc="关闭"][clickable=true] - LinearLayout > TextView[text!=null]', // 1687669217838
+          snapshotUrls: [
+            'https://i.gkd.li/import/12892726',
+            'https://i.gkd.li/import/12774870',
+            'https://i.gkd.li/import/13207766',
+          ],
+        },
       ],
     },
     {
@@ -59,11 +64,17 @@ export default defineAppConfig({
       rules: [
         {
           name: '弹窗广告',
-          activityIds:
+          quickFind: true,
+          activityIds: [
+            'com.tencent.mobileqq.activity.SplashActivity',
             'com.tencent.qqlive.module.videoreport.inject.dialog.ReportDialog',
+          ],
           matches:
             'ImageView[id="com.tencent.mobileqq:id/close"][clickable=true]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12642081',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13206663', // com.tencent.mobileqq.activity.SplashActivity
+            'https://gkd-kit.gitee.io/import/12642081', // com.tencent.qqlive.module.videoreport.inject.dialog.ReportDialog
+          ],
         },
         {
           name: '右侧悬浮广告',
