@@ -8,22 +8,18 @@ export default defineAppConfig({
       key: -1,
       name: '开屏广告',
       quickFind: true,
-      activityIds: [
-        'com.coolapk.market.view.splash.SplashActivity',
-        'com.coolapk.market.view.main.MainActivity',
-      ],
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
           key: 0,
-          matches: '[id$=":id/tt_splash_skip_btn"]',
+          matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12503773',
         },
         {
           key: 1,
-          matches: [
-            '[id="com.coolapk.market:id/ad_container"]',
-            '[id="com.byted.pangle:id/tt_splash_skip_btn" || text^="跳过"]',
-          ],
+          matches: '[text^="跳过"][text.length<=4]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12917990',
             'https://gkd-kit.gitee.io/import/13211392',
