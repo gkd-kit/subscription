@@ -11,7 +11,6 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'cn.me.android.splash.activity.SplashActivity',
       rules: [
         {
           matches: '[id="com.yaya.zone:id/tv_skip"][text^="跳过"]',
