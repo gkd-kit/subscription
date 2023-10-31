@@ -26,8 +26,7 @@ export default defineAppConfig({
         },
         {
           key: 2,
-          matches:
-            '[id="com.coolapk.market:id/skip_button"] >n [text^="跳过"]',
+          matches: '[id="com.coolapk.market:id/skip_button"] >n [text^="跳过"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13211392',
         },
       ],
