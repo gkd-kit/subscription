@@ -20,9 +20,14 @@ export default defineAppConfig({
         },
         {
           key: 1,
-          matches:
-            '[id="com.coolapk.market:id/ad_container"] >n [text^="跳过"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12917990',
+          matches: [
+            '[id="com.coolapk.market:id/ad_container"]',
+            '[id="com.byted.pangle:id/tt_splash_skip_btn" || text^="跳过"]',
+          ],
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12917990',
+            'https://gkd-kit.gitee.io/import/13211392',
+          ],
         },
       ],
     },
