@@ -47,14 +47,12 @@ export default defineAppConfig({
       rules: [
         {
           key: 1,
-          matches:
-            '[text="广告"] + [id="net.csdn.csdnplus:id/iv_more"]',
+          matches: '[text="广告"] + [id="net.csdn.csdnplus:id/iv_more"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12673738'],
         },
         {
           key: 2,
-          matches:
-            '[text="重复推荐该广告"] <n LinearLayout',
+          matches: '[text="重复推荐该广告"] <n LinearLayout',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12673787'],
         },
       ],
