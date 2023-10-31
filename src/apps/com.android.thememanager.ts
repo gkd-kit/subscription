@@ -15,8 +15,7 @@ export default defineAppConfig({
       name: '广告弹窗',
       quickFind: true,
       activityIds: 'com.android.thememanager.ThemeResourceTabActivity',
-      rules:
-        'ImageView[id="com.android.thememanager:id/cancel"][desc="关闭"]',
+      rules: 'ImageView[id="com.android.thememanager:id/cancel"][desc="关闭"]',
       snapshotUrls: 'https://i.gkd.li/import/13215038',
     },
   ],
