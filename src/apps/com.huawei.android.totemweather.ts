@@ -17,5 +17,14 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 1,
+      name: '广告卡片',
+      quickFind: true,
+      activityIds:
+        'com.huawei.android.totemweather.composite.MarketCompositeActivity',
+      rules: '[id="com.huawei.android.totemweather:id/promote_ad_cancel"]',
+      snapshotUrls: 'https://i.gkd.li/import/13218197',
+    },
   ],
 });
