@@ -50,9 +50,7 @@ export default defineAppConfig({
     {
       key: 2,
       matchLauncher: true,
-      activityIds: [
-        'com.ss.android.ugc.aweme.main.MainActivity',
-      ],
+      activityIds: ['com.ss.android.ugc.aweme.main.MainActivity'],
       name: '关闭朋友推荐弹窗',
       rules: '[text="朋友推荐"] +2 [id="com.ss.android.ugc.aweme:id/close"]',
       snapshotUrls: [
