@@ -7,9 +7,11 @@ export default defineAppConfig({
     {
       key: 0,
       name: '取消更新',
+      desc: '点击[以后再说]',
       activityIds: [
         'com.google.android.apps.photos.update.treatment.UpdateAppTreatmentPromoPageActivity',
       ],
+      quickFind: true,
       rules: [
         {
           matches:
