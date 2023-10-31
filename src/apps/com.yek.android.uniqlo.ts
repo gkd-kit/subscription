@@ -20,11 +20,8 @@ export default defineAppConfig({
       name: '弹窗广告',
       quickFind: true,
       activityIds: 'com.yek.android.uniqlo.uiux.Home.activity.HomeActivity',
-      rules:
-        'ImageView[id="com.yek.android.uniqlo:id/pop_close"]',
-      snapshotUrls: [
-        'https://gkd-kit.gitee.io/import/13212320',
-      ],
+      rules: 'ImageView[id="com.yek.android.uniqlo:id/pop_close"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/13212320',
     },
   ],
 });
