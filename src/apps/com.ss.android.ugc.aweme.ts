@@ -16,6 +16,9 @@ export default defineAppConfig({
     {
       key: 0,
       name: '关闭青少年弹窗',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: 'Button[text=`开启青少年模式`] + * > Button[text!=null]',
     },
     {
@@ -69,6 +72,8 @@ export default defineAppConfig({
     {
       key: 3,
       name: '关闭更新弹窗',
+      actionMaximum: 1,
+      resetMatch: 'app',
       activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
       rules: '@[text="以后再说"] +2 [text="立即升级"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12534016',
@@ -90,6 +95,8 @@ export default defineAppConfig({
     },
     {
       key: 6,
+      actionMaximum: 1,
+      resetMatch: 'app',
       name: '去商店评分',
       desc: '点击[取消]',
       activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
@@ -101,6 +108,8 @@ export default defineAppConfig({
     {
       enable: false,
       key: 10,
+      actionMaximum: 1,
+      resetMatch: 'app',
       name: '请求开启通知提示信息',
       desc: '自动点击“暂不”',
       activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
