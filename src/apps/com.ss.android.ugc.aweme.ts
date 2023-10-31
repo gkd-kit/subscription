@@ -49,9 +49,9 @@ export default defineAppConfig({
     },
     {
       key: 2,
+      matchLauncher: true,
       activityIds: [
         'com.ss.android.ugc.aweme.main.MainActivity',
-        'com.miui.home.launcher.Launcher',
       ],
       name: '关闭朋友推荐弹窗',
       rules: '[text="朋友推荐"] +2 [id="com.ss.android.ugc.aweme:id/close"]',
@@ -91,6 +91,15 @@ export default defineAppConfig({
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13053628',
       exampleUrls:
         'https://github.com/gkd-kit/inspect/assets/38517192/4554c785-39e0-4eac-9cfb-f1b1c2976008',
+    },
+    {
+      key: 7,
+      name: '开屏广告',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: '[desc="跳过广告"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/13216121',
     },
     {
       enable: false,
