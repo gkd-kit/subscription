@@ -11,7 +11,6 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       quickFind: true,
-      activityIds: 'com.ifenglian.superapp.ui.splash.SASplashAdActivity',
       rules: [
         {
           matches: '[id="com.qihoo.srouter.n300:id/tv_countdown"]',
