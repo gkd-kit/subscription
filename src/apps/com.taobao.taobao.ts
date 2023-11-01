@@ -62,8 +62,11 @@ export default defineAppConfig({
       name: '开启系统通知提示',
       desc: '自动点击关闭',
       activityIds: ['com.taobao.tao.welcome.Welcome'],
-      rules: 'View[text^="开启系统通知"] + Image[clickable=true]',
-      snapshotUrls: ['https://i.gkd.li/import/13197594'],
+      rules: '[text^="开启系统通知"] + Image[clickable=true]',
+      snapshotUrls: [
+        'https://i.gkd.li/import/13197594',
+        'https://i.gkd.li/import/13229234',
+      ],
     },
     {
       enable: false,
