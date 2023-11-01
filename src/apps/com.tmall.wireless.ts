@@ -32,7 +32,8 @@ export default defineAppConfig({
         'com.tmall.wireless.turboweb.container.TurboWebViewActivity',
         'com.tmall.wireless.webview.TMCommonWebViewActivity',
       ],
-      rules: 'Image[id=null][clickable=false] < View + Image[id=null][clickable=true]',
+      rules: 
+        'Image[id=null][clickable=false] < View + Image[id=null][clickable=true]',
       snapshotUrls: [
         'https://gkd-kit.gitee.io/import/13222394', //com.tmall.wireless.maintab.module.TMMainTabActivity
         'https://gkd-kit.gitee.io/import/13222500', //com.tmall.wireless.turboweb.container.TurboWebViewActivity
