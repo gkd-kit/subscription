@@ -141,5 +141,12 @@ export default defineAppConfig({
       rules: '[id="tv.danmaku.bili:id/shopping_close"]',
       snapshotUrls: 'https://i.gkd.li/import/13200549',
     },
+    {
+      key: 9,
+      name: '请求通知权限弹窗',
+      activityIds: 'tv.danmaku.bili.MainActivityV2',
+      rules: '[text="打开推送通知"] +2 * > [id="tv.danmaku.bili:id/close"]',
+      snapshotUrls: 'https://i.gkd.li/import/13229159',
+    },
   ],
 });
