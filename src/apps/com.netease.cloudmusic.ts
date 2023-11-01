@@ -68,6 +68,12 @@ export default defineAppConfig({
           matches: 'WebView >n View > TextView + TextView + TextView',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13188737',
         },
+        {
+          key: 1,
+          name: '京东双十一广告弹窗',
+          matches: '[text="广告"] < ViewGroup + ImageView',
+          snapshotUrls: 'https://i.gkd.li/import/13229016',
+        },
       ],
     },
     {
