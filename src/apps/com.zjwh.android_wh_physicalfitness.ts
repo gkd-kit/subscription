@@ -68,7 +68,7 @@ export default defineAppConfig({
           key: 0,
           matches:
             '[id="com.kwad.dy.sdk:id/ksad_splash_root_container"] >n ViewGroup > [text="跳过"]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12673495'],
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12673495',
         },
         {
           key: 1,
@@ -78,6 +78,12 @@ export default defineAppConfig({
             'https://i.gkd.li/import/12826112',
             'https://i.gkd.li/import/12826124',
           ],
+        },
+        {
+          key: 2,
+          matches:
+            '[id="com.zjwh.android_wh_physicalfitness:id/ksad_tk_view"] >n ViewGroup > @ViewGroup[childCount=1] > ImageView',
+          snapshotUrls: 'https://i.gkd.li/import/13228216',
         },
       ],
     },
