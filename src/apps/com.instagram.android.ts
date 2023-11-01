@@ -9,6 +9,7 @@ export default defineAppConfig({
       enable: false,
       name: '信息流广告',
       desc: '但是步骤较多, 影响app使用',
+      quickFind: true,
       activityIds: 'com.instagram.mainactivity.InstagramMainActivity',
       rules: [
         {
@@ -22,7 +23,7 @@ export default defineAppConfig({
         {
           key: 1,
           name: '点击【隐藏广告】按钮',
-          matches: '[text="隐藏广告"] <n ViewGroup',
+          matches: '@ViewGroup >n [text="隐藏广告"]',
           snapshotUrls: [
             'https://i.gkd.li/import/12798571',
             'https://gkd-kit.gitee.io/import/12829448',
@@ -31,7 +32,7 @@ export default defineAppConfig({
         {
           key: 2,
           name: '点击【广告不相关】按钮',
-          matches: '[text="广告不相关"] < ViewGroup',
+          matches: '@ViewGroup > [text="广告不相关"]',
           snapshotUrls: [
             'https://i.gkd.li/import/12798590',
             'https://gkd-kit.gitee.io/import/12829464',
@@ -41,7 +42,7 @@ export default defineAppConfig({
           key: 3,
           name: '关闭[你不会再看到这条广告]',
           action: 'back',
-          matches: ['[text="你不会再看到这条广告"]'],
+          matches: '[text="你不会再看到这条广告"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12829492',
         },
       ],
