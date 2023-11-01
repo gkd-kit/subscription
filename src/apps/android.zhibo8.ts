@@ -24,6 +24,7 @@ export default defineAppConfig({
     {
       key: 1,
       name: '信息流广告',
+      quickFind: true,
       activityIds: 'android.zhibo8.ui.contollers.main.MainActivity',
       rules: [
         {
@@ -37,7 +38,7 @@ export default defineAppConfig({
           key: 1, //不重叠不需要preKeys
           name: '点击[不感兴趣]',
           matches:
-            '[id="android.zhibo8:id/tv_title"][text="不感兴趣"] < LinearLayout',
+            '@LinearLayout > [id="android.zhibo8:id/tv_title"][text="不感兴趣"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12841135',
           exampleUrls: 'https://github.com/gkd-kit/subscription/issues/1656', //直接指向text可能不工作
         },
