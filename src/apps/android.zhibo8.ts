@@ -38,9 +38,8 @@ export default defineAppConfig({
           key: 1, //不重叠不需要preKeys
           name: '点击[不感兴趣]',
           matches:
-            '@LinearLayout > [id="android.zhibo8:id/tv_title"][text="不感兴趣"]',
+            '@LinearLayout > [id="android.zhibo8:id/tv_title"][text="不感兴趣"]', // issues/1656, 直接指向text可能不工作
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12841135',
-          exampleUrls: 'https://github.com/gkd-kit/subscription/issues/1656', //直接指向text可能不工作
         },
       ],
     },
