@@ -6,6 +6,13 @@ export default defineAppConfig({
   groups: [
     // 预留 key 0-8
     {
+      key: 8,
+      name: '请求通知权限弹窗',
+      activityIds: 'com.yanzhenjie.permission.PermissionActivity',
+      rules: '[text*="开启通知"] < FrameLayout + FrameLayout >2 [text="取消"]',
+      snapshotUrls: 'https://i.gkd.li/import/13228735',
+    },
+    {
       enable: false,
       key: 9,
       name: '请求定位权限弹窗',
