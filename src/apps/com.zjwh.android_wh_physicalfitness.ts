@@ -7,11 +7,24 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: 'com.zjwh.android_wh_physicalfitness.ui.AdActivity',
-      matchLauncher: true,
-      rules:
-        '[id="com.zjwh.android_wh_physicalfitness:id/layoutContainer"] >n [text="跳过"]',
-      snapshotUrls: 'https://i.gkd.li/import/13166424',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          key: 0,
+          quickFind: true,
+          matches:
+            '[id="com.zjwh.android_wh_physicalfitness:id/layoutContainer"] >n [text="跳过"]',
+          snapshotUrls: 'https://i.gkd.li/import/13166424',
+        },
+        {
+          key: 1,
+          matches:
+            '[id="com.zjwh.android_wh_physicalfitness:id/splash_full_tk_play_card_view"] >n ViewGroup > @ImageView + ViewGroup > TextView[text="跳过"]',
+          snapshotUrls: 'https://i.gkd.li/import/13228145',
+        },
+      ],
     },
     {
       key: 1,
