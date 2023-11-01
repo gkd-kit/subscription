@@ -8,7 +8,6 @@ export default defineAppConfig({
       key: 1,
       name: '首页广告弹窗',
       matchTime: 10000,
-      actionMaximum: 1,
       activityIds: 'pdj.main.MainActivity',
       rules: [
         {
