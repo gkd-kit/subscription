@@ -52,7 +52,7 @@ export default defineAppConfig({
         },
         {
           key: 2,
-          matches: '[text="重复推荐该广告"] <n LinearLayout',
+          matches: '@LinearLayout >n [text="重复推荐该广告"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12673787'],
         },
       ],
