@@ -11,12 +11,12 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       quickFind: true,
-          rules: [
-            {
-              matches: '[text^="关闭"][text.length=4]', 
-              snapshotUrls: 'https://i.gkd.li/import/13214974',
-            },
-          ],
+      rules: [
+        {
+          matches: '[text^="关闭"][text.length=4]',
+          snapshotUrls: 'https://i.gkd.li/import/13214974',
+        },
+      ],
     },
   ],
 });
