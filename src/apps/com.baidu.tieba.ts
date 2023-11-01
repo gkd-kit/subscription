@@ -159,7 +159,8 @@ export default defineAppConfig({
         {
           key: 0,
           desc: '点击右上角x关闭',
-          matches: 'View[childCount=3] > @View[clickable=true][childCount=1] > Image',
+          matches:
+            'View[childCount=3] > @View[clickable=true][childCount=1] > Image',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/13060891',
             'https://gkd-kit.gitee.io/import/13222361', //childCount=1否则误触这里
