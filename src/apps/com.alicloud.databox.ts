@@ -26,5 +26,12 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 1,
+      name: '活动弹窗',
+      activityIds: 'com.alicloud.databox.MainActivity',
+      rules: '[text^="好运盲盒"] >n View > Image + TextView[clickable=true]',
+      snapshotUrls: 'https://i.gkd.li/import/13228610',
+    },
   ],
 });
