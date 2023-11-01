@@ -97,13 +97,7 @@ export default defineAppConfig({
         },
       ],
     },
-    {
-      key: 5,
-      name: '更新弹窗',
-      activityIds: 'tv.danmaku.bili.MainActivityV2',
-      rules: '[id="tv.danmaku.bili:id/update_btn_cancel"]',
-      snapshotUrls: 'https://i.gkd.li/import/13228977',
-    },
+    // key = 5已弃用
     {
       quickFind: true,
       key: 6,
@@ -144,6 +138,13 @@ export default defineAppConfig({
       activityIds: 'com.bilibili.bililive.room.ui.roomv3.LiveRoomActivityV3',
       rules: '[id="tv.danmaku.bili:id/shopping_close"]',
       snapshotUrls: 'https://i.gkd.li/import/13200549',
+    },
+    {
+      key: 9,
+      name: '更新弹窗',
+      activityIds: 'tv.danmaku.bili.MainActivityV2',
+      rules: '[id="tv.danmaku.bili:id/update_btn_cancel"]',
+      snapshotUrls: 'https://i.gkd.li/import/13228977',
     },
   ],
 });
