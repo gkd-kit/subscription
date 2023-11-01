@@ -63,7 +63,7 @@ export default defineAppConfig({
       desc: '自动点击关闭',
       activityIds: [
         'com.taobao.tao.welcome.Welcome',
-        'com.taobao.android.order.bundle.TBOrderDetailActivity'
+        'com.taobao.android.order.bundle.TBOrderDetailActivity',
       ],
       rules: 'View[text^="开启系统通知"] + Image[clickable=true]',
       snapshotUrls: [
