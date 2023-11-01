@@ -10,7 +10,8 @@ export default defineAppConfig({
       quickFind: true,
       actionMaximum: 1,
       activityIds: 'com.hd.smartVillage.modules.main.MainActivity',
-      rules: 'View[id="com.hd.smartVillage:id/notificationSettingCloseBtn"]',
+      rules:
+        'View[id="com.hd.smartVillage:id/notificationSettingCloseBtn"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13223669',
     },
     {
@@ -20,7 +21,8 @@ export default defineAppConfig({
       quickFind: true,
       actionMaximum: 1,
       activityIds: 'com.hd.smartVillage.modules.main.MainActivity',
-      rules: 'TextView[id="com.hd.smartVillage:id/tv_upgrade_cancel"][text="取消"]',
+      rules:
+        'TextView[id="com.hd.smartVillage:id/tv_upgrade_cancel"][text="取消"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13223642',
     },
   ],
