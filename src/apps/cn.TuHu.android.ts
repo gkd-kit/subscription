@@ -7,9 +7,10 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: 'cn.TuHu.Activity.tuhutab.TuHuTabActivity',
-      matchLauncher: true,
       quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: '[id="cn.TuHu.android:id/rl_activity_welcome_jump"]',
       snapshotUrls: 'https://i.gkd.li/import/12846408',
     },
