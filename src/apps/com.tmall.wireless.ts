@@ -22,6 +22,7 @@ export default defineAppConfig({
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13162603',
     },
     {
+      enable: false,
       key: 2,
       name: '弹窗广告',
       matchTime: 10000,
