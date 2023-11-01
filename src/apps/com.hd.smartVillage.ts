@@ -10,8 +10,7 @@ export default defineAppConfig({
       quickFind: true,
       actionMaximum: 1,
       activityIds: 'com.hd.smartVillage.modules.main.MainActivity',
-      rules:
-        'View[id="com.hd.smartVillage:id/notificationSettingCloseBtn"]',
+      rules: 'View[id="com.hd.smartVillage:id/notificationSettingCloseBtn"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13223669',
     },
     {
