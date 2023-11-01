@@ -105,14 +105,16 @@ export default defineAppConfig({
       activityIds: [
         'com.bilibili.app.preferences.BiliPreferencesActivity',
         'tv.danmaku.bili.ui.splash.ad.page.HotSplashActivity',
+        'tv.danmaku.bili.MainActivityV2',
       ],
       rules: [
         {
           key: 1,
           matches: '[id="tv.danmaku.bili:id/update_btn_cancel"]',
           snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/13212209',
-            'https://gkd-kit.gitee.io/import/12649689',
+            'https://gkd-kit.gitee.io/import/12649689', // com.bilibili.app.preferences.BiliPreferencesActivity
+            'https://gkd-kit.gitee.io/import/13212209', // tv.danmaku.bili.ui.splash.ad.page.HotSplashActivity
+            'https://i.gkd.li/import/13228977', // tv.danmaku.bili.MainActivityV2
           ],
         },
       ],
@@ -138,13 +140,6 @@ export default defineAppConfig({
       activityIds: 'com.bilibili.bililive.room.ui.roomv3.LiveRoomActivityV3',
       rules: '[id="tv.danmaku.bili:id/shopping_close"]',
       snapshotUrls: 'https://i.gkd.li/import/13200549',
-    },
-    {
-      key: 9,
-      name: '更新弹窗',
-      activityIds: 'tv.danmaku.bili.MainActivityV2',
-      rules: '[id="tv.danmaku.bili:id/update_btn_cancel"]',
-      snapshotUrls: 'https://i.gkd.li/import/13228977',
     },
   ],
 });
