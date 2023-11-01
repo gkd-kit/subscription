@@ -60,6 +60,13 @@ export default defineAppConfig({
       ],
     },
     {
+      key: 3,
+      name: '更新弹窗',
+      activityIds: 'tv.danmaku.bili.MainActivityV2',
+      rules: '[id="tv.danmaku.bili:id/update_btn_cancel"]',
+      snapshotUrls: 'https://i.gkd.li/import/13228977',
+    },
+    {
       key: 4,
       name: '视频底部广告',
       desc: '点击[视频底部,评论区顶部]的广告卡片右侧菜单按钮,选择屏蔽广告原因',
