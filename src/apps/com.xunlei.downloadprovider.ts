@@ -40,6 +40,12 @@ export default defineAppConfig({
           matches: '[id="com.xunlei.downloadprovider:id/ad_ima_skip"]',
           snapshotUrls: 'https://i.gkd.li/import/12882988',
         },
+        {
+          key: 3,
+          matches:
+            '[id="com.xunlei.downloadprovider:id/play_detail_ad_title"] + [id="com.xunlei.downloadprovider:id/close_iv"]',
+          snapshotUrls: 'https://i.gkd.li/import/13228423',
+        },
       ],
     },
     {
