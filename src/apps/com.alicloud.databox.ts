@@ -2,7 +2,7 @@ import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
   id: 'com.alicloud.databox',
-  name: '阿里网盘',
+  name: '阿里云盘',
   groups: [
     {
       key: 0,
