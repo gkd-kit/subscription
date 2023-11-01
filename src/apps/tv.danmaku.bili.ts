@@ -59,13 +59,7 @@ export default defineAppConfig({
         },
       ],
     },
-    {
-      key: 3,
-      name: '更新弹窗',
-      activityIds: 'tv.danmaku.bili.MainActivityV2',
-      rules: '[id="tv.danmaku.bili:id/update_btn_cancel"]',
-      snapshotUrls: 'https://i.gkd.li/import/13228977',
-    },
+    // key = 3已弃用
     {
       key: 4,
       name: '视频底部广告',
@@ -102,6 +96,13 @@ export default defineAppConfig({
           ],
         },
       ],
+    },
+    {
+      key: 5,
+      name: '更新弹窗',
+      activityIds: 'tv.danmaku.bili.MainActivityV2',
+      rules: '[id="tv.danmaku.bili:id/update_btn_cancel"]',
+      snapshotUrls: 'https://i.gkd.li/import/13228977',
     },
     {
       quickFind: true,
