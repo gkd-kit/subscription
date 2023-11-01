@@ -205,6 +205,13 @@ export default defineAppConfig({
       snapshotUrls: 'https://i.gkd.li/import/12882892',
     },
     {
+      key: 6,
+      name: '更新弹窗',
+      activityIds: 'com.xunlei.upgrade.XUpgradeActivity',
+      rules: '[id="com.xunlei.downloadprovider:id/x_upgrade_cancel"]',
+      snapshotUrls: 'https://i.gkd.li/import/13228920',
+    },
+    {
       key: 10,
       name: '会员续费广告',
       rules: [
