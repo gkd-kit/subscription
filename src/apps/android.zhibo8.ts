@@ -7,16 +7,17 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      matchLauncher: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       quickFind: true,
       rules: [
         {
-          matches: '[id="android.zhibo8:id/tv_skip_text"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12700387',
-        },
-        {
-          matches: '[id="android.zhibo8:id/asv_splash"] TextView[text^="跳过"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12661109',
+          matches: 'TextView[text^="跳过"]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12700387',
+            'https://gkd-kit.gitee.io/import/12661109',
+          ],
         },
       ],
     },
@@ -33,10 +34,11 @@ export default defineAppConfig({
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12841134',
         },
         {
-          preKeys: 0,
+          key: 1, //不重叠不需要preKeys
           name: '点击[不感兴趣]',
-          matches: '[id="android.zhibo8:id/tv_title"][text="不感兴趣"]',
+          matches: '[id="android.zhibo8:id/tv_title"][text="不感兴趣"] < LinearLayout',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12841135',
+          exampleUrls: 'https://github.com/gkd-kit/subscription/issues/1656', //直接指向text可能不工作
         },
       ],
     },
