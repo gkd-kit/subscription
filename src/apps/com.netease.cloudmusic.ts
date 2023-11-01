@@ -87,13 +87,25 @@ export default defineAppConfig({
     },
     {
       key: 6,
-      name: '版本更新',
+      name: '更新弹窗',
       quickFind: true,
-      activityIds:
-        'com.netease.cloudmusic.music.biz.rn.activity.MainProcessLayerReactNativeActivity',
-      rules:
-        'ImageButton[id="com.netease.cloudmusic:id/md_dialog_cm_close_btn"]',
-      snapshotUrls: 'https://i.gkd.li/import/13197457',
+      matchLauncher: true,
+      rules: [
+        {
+          key: 0,
+          activityIds:
+            'com.netease.cloudmusic.music.biz.rn.activity.MainProcessLayerReactNativeActivity',
+          matches:
+            'ImageButton[id="com.netease.cloudmusic:id/md_dialog_cm_close_btn"]',
+          snapshotUrls: 'https://i.gkd.li/import/13197457',
+        },
+        {
+          key: 1,
+          activityIds: 'com.huawei.android.launcher.unihome.UniHomeLauncher',
+          matches: '[id="com.netease.cloudmusic:id/md_dialog_cm_close_btn"]',
+          snapshotUrls: 'https://i.gkd.li/import/13228878',
+        },
+      ],
     },
     {
       enable: false,
