@@ -15,6 +15,14 @@ export default defineAppConfig({
       snapshotUrls: 'https://i.gkd.li/import/12846408',
     },
     {
+      key: 1,
+      name: '广告弹窗',
+      activityIds: 'cn.TuHu.Activity.tuhutab.TuHuTabActivity',
+      rules:
+        '@[id="cn.TuHu.android:id/imgClose"] - [id="cn.TuHu.android:id/rlContent"] > [id="cn.TuHu.android:id/img_jump"]',
+      snapshotUrls: 'https://i.gkd.li/import/13228818',
+    },
+    {
       key: 10,
       name: '请求通知权限弹窗',
       activityIds: 'cn.TuHu.Activity.tuhutab.TuHuTabActivity',
