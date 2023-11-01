@@ -15,7 +15,7 @@ export default defineAppConfig({
       snapshotUrls: [
         'https://i.gkd.li/import/13197473',
         'https://gkd-kit.gitee.io/import/13223790',
-      ]
+      ],
     },
   ],
 });
