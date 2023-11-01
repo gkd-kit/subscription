@@ -8,8 +8,7 @@ export default defineAppConfig({
       key: 1,
       name: '广告弹窗',
       activityIds: 'com.zhouyu.music.activities.MainActivity',
-      rules:
-        '@[id=null][clickable=true] + View >n View [text$="广告"]',
+      rules: '@[id=null][clickable=true] + View >n View [text$="广告"]',
       snapshotUrls: [
         'https://i.gkd.li/import/13062330',
         'https://i.gkd.li/import/13068583',
