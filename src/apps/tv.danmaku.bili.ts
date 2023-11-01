@@ -18,15 +18,6 @@ export default defineAppConfig({
     },
     {
       quickFind: true,
-      key: 1,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      name: '青少年模式弹窗',
-      rules: 'TextView[text*=`青少年模式`] + TextView[text=`我知道了`]',
-    },
-    {
-      quickFind: true,
       key: 0,
       name: '评论区顶部公告横幅',
       rules:
@@ -39,6 +30,15 @@ export default defineAppConfig({
         'https://gkd-kit.gitee.io/import/12785461',
         'https://gkd-kit.gitee.io/import/12775156',
       ],
+    },
+    {
+      quickFind: true,
+      key: 1,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      name: '青少年模式弹窗',
+      rules: 'TextView[text*=`青少年模式`] + TextView[text=`我知道了`]',
     },
     {
       quickFind: true,
