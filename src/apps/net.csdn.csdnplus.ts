@@ -12,11 +12,14 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
-          matches: '[id*="_skip_"]',
-          snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/12673680',
-            'https://gkd-kit.gitee.io/import/12838461',
-          ],
+          quickFind: true,
+          matches: '[text*="跳过"][text.length<=10]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12673680'],
+        },
+        {
+          // 无法使用 quickFind
+          matches: '[id="com.byted.pangle.m:id/tt_splash_skip_btn"]',
+          snapshotUrls: 'https://i.gkd.li/import/13224627',
         },
       ],
     },
@@ -24,6 +27,9 @@ export default defineAppConfig({
       key: 1,
       name: '更新弹窗',
       quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       activityIds: [
         'net.csdn.csdnplus.activity.MainActivity',
         'net.csdn.csdnplus.activity.SetActivity',
@@ -48,12 +54,20 @@ export default defineAppConfig({
         {
           key: 1,
           matches: '[text="广告"] + [id="net.csdn.csdnplus:id/iv_more"]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12673738'],
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12673738',
+            'https://i.gkd.li/import/13224538',
+          ],
         },
         {
+          preKeys: 1,
           key: 2,
-          matches: '@LinearLayout >n [text="重复推荐该广告"]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12673787'],
+          matches:
+            '@[clickable=true] > [id="net.csdn.csdnplus:id/img_feedback_title"][text="重复推荐该广告"]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12673787',
+            'https://i.gkd.li/import/13224551',
+          ],
         },
       ],
     },
@@ -61,6 +75,9 @@ export default defineAppConfig({
       enable: false,
       key: 10,
       quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       name: '请求推送通知弹窗',
       activityIds: 'net.csdn.csdnplus.activity.MainActivity',
       rules: {
