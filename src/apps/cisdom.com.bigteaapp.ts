@@ -7,8 +7,10 @@ export default defineAppConfig({
     {
       key: 1,
       name: '广告弹窗',
-      activityIds: 'com.huawei.android.launcher.unihome.UniHomeLauncher',
-      rules: '@[id="cisdom.com.bigteaapp:id/close"] + * > [text$="抽奖送大礼"]',
+      quickFind: true,
+      matchTime: 10000,
+      rules:
+        '[text$="抽奖送大礼"] < WebView - [id="cisdom.com.bigteaapp:id/close"]',
       snapshotUrls: 'https://i.gkd.li/import/13228579',
     },
   ],
