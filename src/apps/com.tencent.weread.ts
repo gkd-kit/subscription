@@ -18,5 +18,12 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 2,
+      name: '青少年模式弹窗',
+      activityIds: 'com.tencent.weread.WeReadFragmentActivity',
+      rules: '[text="设置青少年模式"] - LinearLayout >2 [text="我知道了"]',
+      snapshotUrls: 'https://i.gkd.li/import/13233668',
+    },
   ],
 });
