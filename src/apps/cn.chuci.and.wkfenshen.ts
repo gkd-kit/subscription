@@ -10,8 +10,11 @@ export default defineAppConfig({
       activityIds: 'cn.chuci.and.wkfenshen.ActMain',
       rules: [
         {
-          matches:
-            '@[id="cn.chuci.and.wkfenshen:id/action_close"] +n ViewGroup > [text="会员专享特权"] ',
+          quickFind: true,
+          matches: [
+            '[id="cn.chuci.and.wkfenshen:id/dialog_local_buy_btn"]',
+            '[id="cn.chuci.and.wkfenshen:id/action_close"]',
+          ],
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13226988',
         },
       ],
