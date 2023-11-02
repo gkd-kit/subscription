@@ -8,9 +8,11 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       desc: '点击右上角跳过',
+      actionMaximum: 1,
+      matchTime: 10000,
+      resetMatch: 'app',
       rules: [
         {
-          activityIds: 'com.wifitutu.ui.launcher.LauncherActivity',
           matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12992451',
         },
@@ -22,16 +24,12 @@ export default defineAppConfig({
       activityIds: ['com.wifitutu.ui.main.MainActivity'],
       rules: [
         {
-          matches: ['View < [desc^="dislike"]'],
+          matches: 'View < [desc^="dislike"][visibleToUser=true]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13233916',
         },
         {
           matches:
             '@Image[text=""] < View +n View > View > TextView[text="广告"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/13234048',
-        },
-        {
-          matches: '[text="无法关闭"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13234048',
         },
       ],
