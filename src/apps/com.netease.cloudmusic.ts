@@ -15,8 +15,12 @@ export default defineAppConfig({
       snapshotUrls: ['https://gkd-kit.gitee.io/import/12700920'],
     },
     {
+      enable: false,
       key: 1,
       name: '广告卡片',
+      desc: '点击【x】-【直接关闭】',
+      quickFind: true,
+      matchDelay: 3000,
       rules: [
         {
           key: 0,
@@ -26,7 +30,7 @@ export default defineAppConfig({
             'com.netease.cloudmusic.music.biz.comment.activity.ReplyCommentActivity2',
             'com.netease.cloudmusic.music.biz.search.activity.SearchActivity',
           ],
-          matches: '[id="com.netease.cloudmusic:id/adTagClose"]',
+          matches: '[id="com.netease.cloudmusic:id/adTagView"]',
           snapshotUrls: [
             'https://i.gkd.li/import/12829944',
             'https://gkd-kit.gitee.io/import/12723229',
@@ -36,7 +40,7 @@ export default defineAppConfig({
           ],
         },
         {
-          preKeys: 1,
+          preKeys: 0,
           matches: '[text="直接关闭"]',
           snapshotUrls: ['https://i.gkd.li/import/12829967'],
         },
