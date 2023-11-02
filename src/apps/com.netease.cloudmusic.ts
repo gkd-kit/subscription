@@ -49,6 +49,7 @@ export default defineAppConfig({
     {
       key: 2,
       name: '我的页面-中间滚动广告',
+      quickFind: true,
       activityIds: ['com.netease.cloudmusic.activity.MainActivity'],
       rules:
         '[id="com.netease.cloudmusic:id/auto_scroll_switcher"] + [id="com.netease.cloudmusic:id/close_btn"]',
@@ -57,6 +58,7 @@ export default defineAppConfig({
     {
       key: 3,
       name: '主页-免费听歌',
+      quickFind: true,
       activityIds: ['com.netease.cloudmusic.activity.MainActivity'],
       rules: ['@ImageView + ViewGroup > TextView[text="VIP歌曲免费听30分钟"]'],
       snapshotUrls: ['https://i.gkd.li/import/12843383'],
