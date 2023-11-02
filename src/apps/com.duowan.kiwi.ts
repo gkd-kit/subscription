@@ -10,6 +10,7 @@ export default defineAppConfig({
       activityIds: [
         'com.duowan.kiwi.homepage.Homepage',
         'com.duowan.kiwi.adsplash.view.AdSplashActivity',
+        'com.duowan.kiwi.simpleactivity.SplashActivity',
       ],
       rules: [
         {
@@ -20,7 +21,10 @@ export default defineAppConfig({
           key: 1,
           matches:
             '[id="com.duowan.kiwi:id/ams_splash_ad_container"] >2 [text^="跳过"]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/13052592'],
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/13052592', // com.duowan.kiwi.adsplash.view.AdSplashActivity
+            'https://i.gkd.li/import/13239109', // com.duowan.kiwi.simpleactivity.SplashActivity
+          ],
         },
       ],
     },
