@@ -10,7 +10,7 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: '[text^="跳过"]',
+      rules: '[text^="跳过"][text.length<=10]',
       snapshotUrls: [
         'https://i.gkd.li/import/13062992',
         'https://gkd-kit.gitee.io/import/13225111', //无ID
