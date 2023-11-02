@@ -84,13 +84,17 @@ export default defineAppConfig({
       enable: false,
       key: 5,
       name: 'VIP 弹窗',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
           key: 0,
           activityIds:
             'com.netease.cloudmusic.music.biz.rn.activity.MainProcessLayerReactNativeActivity',
           matches:
-            '[text*="开通VIP"] + @ViewGroup[childCount=1][clickable=true] > ImageView',
+            'ImageView < @ViewGroup[clickable=true] - [text*="开通VIP"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13189055',
         },
         {
@@ -98,6 +102,19 @@ export default defineAppConfig({
           activityIds: 'com.netease.cloudmusic.activity.MainActivity',
           matches: '@ImageView - ViewGroup > [text="解锁千万级会员曲库"]',
           snapshotUrls: 'https://i.gkd.li/import/13228955',
+        },
+        {
+          key: 2,
+          activityIds: 'com.netease.cloudmusic.activity.PlayerActivity',
+          matches: '@ImageView -2 ViewGroup [text="解锁更高音质"]',
+          snapshotUrls: 'https://i.gkd.li/import/13230603',
+        },
+        {
+          key: 3,
+          name: 'VIP续费',
+          activityIds: 'com.netease.cloudmusic.music.biz.rn.activity.MainProcessLayerReactNativeActivity',
+          matches: 'ImageView < @ViewGroup -3 ViewGroup [text="您的黑胶VIP已过期"]',
+          snapshotUrls: 'https://i.gkd.li/import/13230605',
         },
       ],
     },
