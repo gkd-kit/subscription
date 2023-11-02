@@ -16,5 +16,22 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 1,
+      name: '首页-WiFi列表广告',
+      activityIds: ['com.wifitutu.ui.main.MainActivity'],
+      rules: [{
+        matches: ['View < [desc^="dislike"]'],
+        snapshotUrls: 'https://gkd-kit.gitee.io/import/13233916',
+      },
+      {
+        matches: '@Image[text=""] < View +n View > View > TextView[text="广告"]',
+        snapshotUrls: 'https://gkd-kit.gitee.io/import/13234048',
+      }
+        , {
+        matches: '[text="无法关闭"]',
+        snapshotUrls: 'https://gkd-kit.gitee.io/import/13234048',
+      }]
+    }
   ],
 });
