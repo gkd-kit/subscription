@@ -198,6 +198,8 @@ export default defineAppConfig({
     {
       key: 11,
       name: '更新弹窗',
+      quickFind: true,
+      actionMaximum: 1,
       rules: [
         {
           key: 0,
