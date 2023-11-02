@@ -8,13 +8,18 @@ export default defineAppConfig({
       key: 1,
       name: '系统推送弹窗',
       desc: '系统推送弹窗-点击取消',
-      activityIds:
+      activityIds: [
         'com.tencent.weread.module.bottomSheet.BottomSheetForFragment',
+        'com.tencent.weread.WeReadFragmentActivity',
+      ],
       rules: [
         {
           matches:
             '[id="com.tencent.weread:id/open_notification_title"] +(n) [id="com.tencent.weread:id/open_notification_close"]',
-          snapshotUrls: ['https://gkd-kit.gitee.io/import/12642247'],
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12642247',
+            'https://i.gkd.li/import/13233735',
+          ],
         },
       ],
     },
