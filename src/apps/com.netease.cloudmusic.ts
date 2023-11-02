@@ -109,18 +109,12 @@ export default defineAppConfig({
             'com.netease.cloudmusic.activity.MainActivity',
             'com.netease.cloudmusic.music.biz.rn.activity.MainProcessLayerReactNativeActivity',
           ],
-          matches:
-            'ImageButton[id="com.netease.cloudmusic:id/md_dialog_cm_close_btn"]',
+          matches: '[id="com.netease.cloudmusic:id/md_dialog_cm_close_btn"]',
           snapshotUrls: [
             'https://i.gkd.li/import/13233790',
             'https://i.gkd.li/import/13197457',
+            'https://i.gkd.li/import/13228878',
           ],
-        },
-        {
-          key: 1,
-          activityIds: 'com.huawei.android.launcher.unihome.UniHomeLauncher',
-          matches: '[id="com.netease.cloudmusic:id/md_dialog_cm_close_btn"]',
-          snapshotUrls: 'https://i.gkd.li/import/13228878',
         },
       ],
     },
