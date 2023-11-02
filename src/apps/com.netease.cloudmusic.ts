@@ -95,6 +95,12 @@ export default defineAppConfig({
           matches: '@ImageView - ViewGroup > [text="解锁千万级会员曲库"]',
           snapshotUrls: 'https://i.gkd.li/import/13228955',
         },
+        {
+          key: 2,
+          activityIds: 'com.netease.cloudmusic.activity.PlayerActivity',
+          matches: '@ImageView -2 ViewGroup [text="解锁更高音质"]',
+          snapshotUrls: 'https://i.gkd.li/import/13230603',
+        },
       ],
     },
     {
