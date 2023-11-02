@@ -17,6 +17,7 @@ export default defineAppConfig({
         },
         {
           key: 1,
+          quickFind: true,
           matches: '[id="com.jingdong.pdj:id/ivClose"][desc="关闭"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13223282',
         },
