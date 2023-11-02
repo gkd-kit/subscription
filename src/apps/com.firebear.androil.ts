@@ -15,8 +15,11 @@ export default defineAppConfig({
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12712742',
         },
         {
-          matches: '[id="com.mangshe.tvdown:id/skip_view2"]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12855707',
+          matches: '[id="com.byted.pangle.m:id/tt_splash_skip_btn"]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/13088169',
+            'https://i.gkd.li/import/12855707',
+          ],
         },
       ],
     },
@@ -37,6 +40,12 @@ export default defineAppConfig({
           name: '点击右上角[数字s|跳过]',
           matches: '[text="广告"] + View >4 [text="| 跳过"]',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12864214'],
+        },
+        {
+          key: 2,
+          name: '点击右上角x (2)',
+          matches: '[id="com.byted.pangle.m:id/tt_reward_full_count_down"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/13175439'],
         },
       ],
     },

@@ -5,8 +5,20 @@ export default defineAppConfig({
   name: '抖音',
   groups: [
     {
+      key: -1,
+      name: '开屏广告',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: '[desc="跳过广告"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/13216121',
+    },
+    {
       key: 0,
       name: '关闭青少年弹窗',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: 'Button[text=`开启青少年模式`] + * > Button[text!=null]',
     },
     {
@@ -14,8 +26,7 @@ export default defineAppConfig({
       name: '关闭用户推荐',
       rules: [
         {
-          activityIds:
-            'com.google.android.material.bottomsheet.BottomSheetDialog',
+          activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
           matches:
             '[id="com.ss.android.ugc.aweme:id/desc"][text="减少此类推荐"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12520962',
@@ -49,10 +60,8 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      activityIds: [
-        'com.ss.android.ugc.aweme.main.MainActivity',
-        'com.miui.home.launcher.Launcher',
-      ],
+      matchLauncher: true,
+      activityIds: ['com.ss.android.ugc.aweme.main.MainActivity'],
       name: '关闭朋友推荐弹窗',
       rules: '[text="朋友推荐"] +2 [id="com.ss.android.ugc.aweme:id/close"]',
       snapshotUrls: [
@@ -63,6 +72,8 @@ export default defineAppConfig({
     {
       key: 3,
       name: '关闭更新弹窗',
+      actionMaximum: 1,
+      resetMatch: 'app',
       activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
       rules: '@[text="以后再说"] +2 [text="立即升级"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12534016',
@@ -83,8 +94,22 @@ export default defineAppConfig({
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12769137',
     },
     {
+      key: 6,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      name: '去商店评分',
+      desc: '点击[取消]',
+      activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
+      rules: '@[text="取消"] +2 [text="五星好评"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/13053628',
+      exampleUrls:
+        'https://github.com/gkd-kit/inspect/assets/38517192/4554c785-39e0-4eac-9cfb-f1b1c2976008',
+    },
+    {
       enable: false,
       key: 10,
+      actionMaximum: 1,
+      resetMatch: 'app',
       name: '请求开启通知提示信息',
       desc: '自动点击“暂不”',
       activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
@@ -101,8 +126,8 @@ export default defineAppConfig({
         'com.ss.android.ugc.aweme.im.sdk.media.choose.MediaChooseActivity',
       rules: '[text="原图"][desc="未选中/复选框 原图"]',
       snapshotUrls: [
-        'https://gkd-kit.songe.li/import/12846036', // 未选中
-        'https://gkd-kit.songe.li/import/12846040', // 已选中
+        'https://i.gkd.li/import/12846036', // 未选中
+        'https://i.gkd.li/import/12846040', // 已选中
       ],
     },
   ],

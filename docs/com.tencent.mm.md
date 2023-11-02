@@ -1,6 +1,6 @@
 # 微信
 
-存在 13 规则组 - [com.tencent.mm](/src/apps/com.tencent.mm.ts)
+存在 16 规则组 - [com.tencent.mm](/src/apps/com.tencent.mm.ts)
 
 ## 朋友圈广告
 
@@ -11,21 +11,26 @@
 - [快照-0](https://gkd-kit.gitee.io/import/12642588)
 - [快照-1](https://gkd-kit.gitee.io/import/12888129)
 - [快照-2](https://gkd-kit.gitee.io/import/12907641)
-- [快照-3](https://gkd-kit.gitee.io/import/12642584)
-- [快照-4](https://gkd-kit.gitee.io/import/12663984)
-- [快照-5](https://gkd-kit.gitee.io/import/12907642)
+- [快照-3](https://gkd-kit.gitee.io/import/13000395)
+- [快照-4](https://gkd-kit.gitee.io/import/12642584)
+- [快照-5](https://gkd-kit.gitee.io/import/12663984)
+- [快照-6](https://gkd-kit.gitee.io/import/12907642)
 
 ## 朋友圈广告-英文版
 
 默认禁用 - 点击广告卡片右上角[Sponsored],直接关闭/出现菜单点击[Close the ad],确认关闭
 
-- [快照-0](https://gkd-kit.songe.li/import/12905837)
-- [快照-1](https://gkd-kit.songe.li/import/12905838)
-- [快照-2](https://gkd-kit.songe.li/import/12905846)
+- [快照-0](https://i.gkd.li/import/12905837)
+- [快照-1](https://i.gkd.li/import/12905838)
+- [快照-2](https://i.gkd.li/import/12905846)
 
 ## 电脑微信快捷自动登录
 
 ## 浏览器扫码微信登录自动授权
+
+自动允许使用头像昵称等
+
+- [快照-0](https://gkd-kit.gitee.io/import/13065462)
 
 ## 第三方APP申请使用授权弹窗
 
@@ -35,8 +40,8 @@
 
 ## 微信读书网页版扫码登录自动授权
 
-- [快照-0](https://gkd-kit.songe.li/import/12506197)
-- [快照-1](https://gkd-kit.songe.li/import/12506201)
+- [快照-0](https://i.gkd.li/import/12506197)
+- [快照-1](https://i.gkd.li/import/12506201)
 
 ## 微信红包自动领取
 
@@ -54,19 +59,20 @@
 默认禁用 - ⚠ 此规则有概率误触。自动点击关闭按钮，必须同时启用【订阅号文章广告反馈】规则
 
 - [快照-0](https://gkd-kit.gitee.io/import/12642232)
-- [快照-1](https://gkd-kit.gitee.io/import/12646837)
-- [快照-2](https://gkd-kit.gitee.io/import/12678937)
-- [快照-3](https://gkd-kit.gitee.io/import/12714427)
-- [快照-4](https://gkd-kit.gitee.io/import/12700183)
-- [快照-5](https://gkd-kit.gitee.io/import/12701503)
-- [快照-6](https://gkd-kit.gitee.io/import/12714424)
+- [快照-1](https://gkd-kit.gitee.io/import/13199281)
+- [快照-2](https://gkd-kit.gitee.io/import/12646837)
+- [快照-3](https://gkd-kit.gitee.io/import/12678937)
+- [快照-4](https://gkd-kit.gitee.io/import/12714427)
+- [快照-5](https://gkd-kit.gitee.io/import/12700183)
+- [快照-6](https://gkd-kit.gitee.io/import/12701503)
+- [快照-7](https://gkd-kit.gitee.io/import/12714424)
 
 ## 自动选中发送原图
 
 默认禁用 - 图片和视频选择器-自动选中底部中间的发送原图
 
 - [快照-0](https://gkd-kit.gitee.io/import/12686641)
-- [快照-1](https://gkd-kit.songe.li/import/12840865)
+- [快照-1](https://i.gkd.li/import/12840865)
 - [快照-2](https://gkd-kit.gitee.io/import/12686640)
 
 ## 订阅号文章广告反馈
@@ -97,4 +103,23 @@
 
 ## 网页版文件传输助手扫码自动授权
 
-- [快照-0](https://gkd-kit.songe.li/import/12793745)
+- [快照-0](https://i.gkd.li/import/12793745)
+
+## 提瓦特助手小程序-弹窗广告
+
+默认禁用
+
+- [快照-0](https://gkd-kit.gitee.io/import/12926021)
+
+## 小程序-内部广告
+
+默认禁用 - 需同时开启"小程序-内部广告-反馈"
+
+- [快照-0](https://gkd-kit.gitee.io/import/13199282)
+
+## 小程序-内部广告-反馈
+
+默认禁用 - 需同时开启"小程序-内部广告"
+
+- [快照-0](https://i.gkd.li/import/13200044)
+- [快照-1](https://i.gkd.li/import/13200048)

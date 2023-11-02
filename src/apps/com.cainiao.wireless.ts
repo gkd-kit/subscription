@@ -27,7 +27,7 @@ export default defineAppConfig({
         'com.taobao.cainiao.logistic.ui.view.LogisticDetailActivity',
       ],
       rules: 'RelativeLayout > ImageView[desc="关闭"]',
-      snapshotUrls: ['https://gkd-kit.songe.li/import/12914371'],
+      snapshotUrls: ['https://i.gkd.li/import/12914371'],
     },
     {
       key: 2,
@@ -36,7 +36,7 @@ export default defineAppConfig({
         'com.taobao.cainiao.logistic.ui.view.LogisticDetailActivity',
       ],
       rules: 'View[desc="立即查看"] +2 ImageView[id=null]',
-      snapshotUrls: ['https://gkd-kit.songe.li/import/12914450'],
+      snapshotUrls: ['https://i.gkd.li/import/12914450'],
     },
     {
       key: 3,
@@ -46,7 +46,7 @@ export default defineAppConfig({
         'com.alipay.mobile.nebulax.integration.mpaas.activity.NebulaActivity$Main',
       ],
       rules: 'View + Image + View[text.length>0]',
-      snapshotUrls: ['https://gkd-kit.songe.li/import/13042279'],
+      snapshotUrls: ['https://i.gkd.li/import/13042279'],
     },
     {
       key: 4,
@@ -57,7 +57,19 @@ export default defineAppConfig({
         'com.cainiao.wireless.homepage.view.activity.HomePageActivity',
       ],
       rules: '[text="确认"] - [text="取消"]',
-      snapshotUrls: ['https://gkd-kit.songe.li/import/13042207'],
+      snapshotUrls: ['https://i.gkd.li/import/13042207'],
+    },
+    {
+      key: 5,
+      name: '开启消息弹窗',
+      desc: '自动点击关闭。',
+      enable: false,
+      quickFind: true,
+      activityIds: [
+        'com.cainiao.wireless.homepage.view.activity.HomePageActivity',
+      ],
+      rules: '[id="com.cainiao.wireless:id/gg_dialog_base_close"]',
+      snapshotUrls: ['https://i.gkd.li/import/13068573'],
     },
   ],
 });

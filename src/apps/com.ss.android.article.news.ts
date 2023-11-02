@@ -12,6 +12,7 @@ export default defineAppConfig({
       activityIds: [
         'com.ss.android.article.news.activity.MainActivity',
         'com.bytedance.ugc.UgcDetailInfoActivity',
+        'com.ss.android.splashad.splash.view.SplashAdActivity',
       ],
       rules: [
         {
@@ -20,6 +21,7 @@ export default defineAppConfig({
             'https://gkd-kit.gitee.io/import/12684954',
             'https://gkd-kit.gitee.io/import/12754759',
             'https://gkd-kit.gitee.io/import/12840189',
+            'https://gkd-kit.gitee.io/import/13174224',
           ],
         },
       ],
@@ -64,6 +66,14 @@ export default defineAppConfig({
       activityIds: 'com.ss.android.ugc.detail.activity.TikTokActivity',
       rules: [
         {
+          key: -1,
+          preKeys: [0, 1, 2, 3],
+          name: '点击不感兴趣',
+          matches:
+            '@LinearLayout[clickable=true] > RelativeLayout + TextView[text="不感兴趣"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12679277',
+        },
+        {
           key: 0,
           name: '点击右上角[更多]图标按钮',
           matches:
@@ -83,11 +93,18 @@ export default defineAppConfig({
           snapshotUrls: ['https://gkd-kit.gitee.io/import/12733281'],
         },
         {
-          preKeys: [0, 1],
-          name: '点击不感兴趣',
+          key: 2,
+          name: '第二种广告界面；点击右上角[更多]图标按钮',
           matches:
-            '@LinearLayout[clickable=true] > RelativeLayout + TextView[text="不感兴趣"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12679277',
+            '@ImageView[clickable=true][desc="更多"] <n RelativeLayout -2 RelativeLayout >n TextView[text$="广告"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/13185633'],
+        },
+        {
+          key: 3,
+          name: '第三种广告界面；点击右上角[更多]图标按钮',
+          matches:
+            '@ImageView[clickable=true][desc="更多"] <n RelativeLayout +2 LinearLayout > TextView[text$="广告"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/13186082'],
         },
       ],
     },
@@ -105,13 +122,14 @@ export default defineAppConfig({
           name: '点击右上角x按钮',
           key: 0,
           matches:
-            '[text^="广告"|| text$="广告" ||text^="来自"] <n FrameLayout > UIView[text^="不感兴趣"][clickable=true]',
+            '[text^="广告"|| text$="广告" ||text^="来自"] <n FrameLayout > UIView[text^="不感兴趣"]',
           action: 'clickCenter',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12733098',
             'https://gkd-kit.gitee.io/import/12755264',
             'https://gkd-kit.gitee.io/import/12836272',
-            'https://gkd-kit.gitee.io/import/12840162', //别的‘广告’是单独的一个组件，它是和标题一起
+            'https://gkd-kit.gitee.io/import/12840162',
+            'https://gkd-kit.gitee.io/import/13093576',
           ],
           exampleUrls: [
             'https://user-images.githubusercontent.com/44717382/273436460-cf007525-81ce-418b-ac05-3bfd75a627fe.gif', //这是 https://gkd-kit.gitee.io/import/12840162

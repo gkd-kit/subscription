@@ -9,16 +9,26 @@ export default defineAppConfig({
       name: '开屏广告',
       activityIds: ['com.xunmeng.pinduoduo.ui.activity.MainFrameActivity'],
       rules: ['RelativeLayout > TextView[id!=null][text^="跳过"]'],
-      snapshotUrls: ['https://gkd-kit.songe.li/import/12799632'],
+      snapshotUrls: ['https://i.gkd.li/import/12799632'],
     },
     {
       key: 1,
       name: '更新弹窗',
-      activityIds: ['com.xunmeng.pinduoduo.activity.NewPageActivity'],
       rules: [
-        '[text*="新版本"] - ImageView < LinearLayout < LinearLayout + ImageButton[clickable=true]',
+        {
+          key: 0,
+          activityIds: 'com.xunmeng.pinduoduo.activity.NewPageActivity',
+          matches:
+            '[text*="新版本"] - ImageView < LinearLayout < LinearLayout + ImageButton[clickable=true]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12642017',
+        },
+        {
+          key: 1,
+          activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
+          matches: '@Image + Image +n [text="立即升级"]',
+          snapshotUrls: 'https://i.gkd.li/import/13195645',
+        },
       ],
-      snapshotUrls: ['https://gkd-kit.gitee.io/import/12642017'],
     },
     {
       enable: false,
@@ -88,6 +98,38 @@ export default defineAppConfig({
         '@ImageView[id=null] < ViewGroup < ViewGroup +(2) ViewGroup >(n) [text^="每日签到"]',
       ],
       snapshotUrls: ['https://gkd-kit.gitee.io/import/12700615'],
+    },
+    {
+      enable: false,
+      key: 8,
+      name: '商品详情页视频讲解窗口',
+      activityIds: 'com.xunmeng.pinduoduo.activity.NewPageActivity',
+      rules: '[id="com.xunmeng.pinduoduo:id/iv_float_window_close"] > TextView',
+      snapshotUrls: 'https://i.gkd.li/import/13178326',
+    },
+    {
+      enable: false,
+      key: 9,
+      name: '多多视频每日自动签到',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'activity',
+      activityIds: ['com.xunmeng.pinduoduo.ui.activity.HomeActivity'],
+      rules: [
+        {
+          key: 0,
+          desc: '自动签到',
+          matches: ['FrameLayout > TextView[text="领取今日现金"]'],
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13201422',
+        },
+        {
+          key: 1,
+          preKeys: [0],
+          desc: '在签到后关闭弹窗',
+          matches: ['FrameLayout > TextView[text="明日继续来领"]'],
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13205634',
+        },
+      ],
     },
   ],
 });

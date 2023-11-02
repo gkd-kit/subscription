@@ -1,11 +1,16 @@
 # 番茄免费小说
 
-存在 6 规则组 - [com.dragon.read](/src/apps/com.dragon.read.ts)
+存在 8 规则组 - [com.dragon.read](/src/apps/com.dragon.read.ts)
+
+## 开屏广告
+
+- [快照-0](https://gkd-kit.gitee.io/import/13210844)
 
 ## 阅读页面底部广告
 
-- [快照-0](https://gkd-kit.songe.li/import/12908734)
+- [快照-0](https://i.gkd.li/import/12908734)
 - [快照-1](https://gkd-kit.gitee.io/import/12716444)
+- [快照-2](https://gkd-kit.gitee.io/import/13062909)
 
 ## 更新弹窗
 
@@ -17,7 +22,7 @@
 
 ## 优惠券弹窗
 
-- [快照-0](https://gkd-kit.songe.li/import/12910159)
+- [快照-0](https://i.gkd.li/import/12910159)
 
 ## 请求通知权限弹窗
 
@@ -30,3 +35,9 @@
 点击底部圆形x图标
 
 - [快照-0](https://gkd-kit.gitee.io/import/12878266)
+
+## 关闭阅读-全屏广告
+
+点击右上角【关闭】
+
+- [快照-0](https://gkd-kit.gitee.io/import/13191156)

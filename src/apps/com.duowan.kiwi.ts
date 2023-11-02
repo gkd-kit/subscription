@@ -11,7 +11,18 @@ export default defineAppConfig({
         'com.duowan.kiwi.homepage.Homepage',
         'com.duowan.kiwi.adsplash.view.AdSplashActivity',
       ],
-      rules: ['[id=`com.duowan.kiwi:id/skip_time`]'],
+      rules: [
+        {
+          key: 0,
+          matches: '[id=`com.duowan.kiwi:id/skip_time`]',
+        },
+        {
+          key: 1,
+          matches:
+            '[id="com.duowan.kiwi:id/ams_splash_ad_container"] >2 [text^="跳过"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/13052592'],
+        },
+      ],
     },
     {
       key: 1,
@@ -23,7 +34,7 @@ export default defineAppConfig({
       matchLauncher: true,
       rules:
         '[id="com.duowan.kiwi:id/hyui_dialog_button_positive"][text="我知道了"]',
-      snapshotUrls: 'https://gkd-kit.songe.li/import/12908790',
+      snapshotUrls: 'https://i.gkd.li/import/12908790',
     },
     {
       key: 2,

@@ -5,6 +5,20 @@ export default defineAppConfig({
   name: '番茄免费小说',
   groups: [
     {
+      key: -1,
+      name: '开屏广告',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      quickFind: true,
+      rules: [
+        {
+          matches: '[text="跳过广告"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13210844',
+        },
+      ],
+    },
+    {
       key: 0,
       name: '阅读页面底部广告',
       activityIds: [
@@ -18,12 +32,15 @@ export default defineAppConfig({
         },
         {
           matches: '@ImageView - LinearLayout TextView[text="广告"]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12908734',
+          snapshotUrls: 'https://i.gkd.li/import/12908734',
         },
         {
           matches:
-            '[id="com.dragon.read:id/root_view"] >n ViewGroup > @FrameLayout[id!=null][clickable=true] > ImageView',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12716444',
+            '[id="com.dragon.read:id/root_view"] >n ViewGroup[childCount=4] > @FrameLayout[id!=null][clickable=true][childCount=1] > ImageView[visibleToUser=true]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12716444',
+            'https://gkd-kit.gitee.io/import/13062909', // 误触
+          ],
         },
       ],
     },
@@ -52,7 +69,7 @@ export default defineAppConfig({
           activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
           matches:
             '@LynxFlattenUI[id=null][text=""][clickable=true] - [text="去逛商城"] -4 [text$="电商惊喜券"] ',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12910159',
+          snapshotUrls: 'https://i.gkd.li/import/12910159',
         },
       ],
     },
@@ -75,6 +92,15 @@ export default defineAppConfig({
       rules:
         '@ImageView[clickable=true] <2 LinearLayout[childCount=2] < [id="android:id/content"][childCount=1]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12878266',
+    },
+    {
+      key: 12,
+      name: '关闭阅读-全屏广告',
+      desc: '点击右上角【关闭】',
+      quickFind: true,
+      activityIds: 'com.dragon.read.reader.ui.ReaderActivity',
+      rules: 'TextView[text="广告"] +2 Button[id="com.dragon.read:id/close"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/13191156',
     },
   ],
 });

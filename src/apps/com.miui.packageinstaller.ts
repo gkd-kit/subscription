@@ -9,10 +9,22 @@ export default defineAppConfig({
       key: 9,
       name: '自动第三方安装应用',
       desc: '自动允许第三方应用调用安装，安装应用',
-      activityIds: [],
-      rules:
-        'TextView[text*="尝试安装应用"] < LinearLayout +2n LinearLayout > Button[text="继续"]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12874746',
+      rules: [
+        {
+          key: 0,
+          activityIds: [],
+          matches:
+            'TextView[text*="尝试安装应用"] < LinearLayout +2n LinearLayout > Button[text="继续"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12874746',
+        },
+        {
+          key: 1,
+          activityIds:
+            'com.miui.packageInstaller.ui.InstallPrepareAlertActivity',
+          matches: '@[text="允许"] + [text="禁止"]',
+          snapshotUrls: 'https://i.gkd.li/import/13054478',
+        },
+      ],
     },
     {
       enable: false,
@@ -31,14 +43,21 @@ export default defineAppConfig({
           matches:
             '[text="取消安装"] < LinearLayout - @FrameLayout > LinearLayout > [text="继续安装"]',
           snapshotUrls: [
-            'https://gkd-kit.songe.li/import/12818034',
-            'https://gkd-kit.songe.li/import/12818054',
+            'https://i.gkd.li/import/12818034',
+            'https://i.gkd.li/import/12818054',
           ],
+        },
+        {
+          key: 1,
+          desc: '点击【继续安装】',
+          activityIds: 'com.miui.packageInstaller.NewInstallerPrepareActivity',
+          matches: '@[text="继续安装"] + [text="取消安装"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/12889120',
         },
 
         // 需勾选【已了解此应用未经安全检测】才能继续安装
         {
-          key: 1,
+          key: 2,
           desc: '勾选【已了解此应用未经安全检测】',
           activityIds: 'com.miui.packageInstaller.NewInstallerPrepareActivity',
           matches:
@@ -51,15 +70,15 @@ export default defineAppConfig({
 
         // 需勾选【已了解此应用存在高风险】才能继续安装
         {
-          key: 2,
+          key: 3,
           desc: '点击【了解风险】',
           activityIds: 'com.miui.packageInstaller.NewInstallerPrepareActivity',
           matches: '@[text="了解风险"] + [text="取消安装"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12889135',
         },
         {
-          preKeys: 2,
-          key: 3,
+          preKeys: 3,
+          key: 4,
           desc: '勾选【已了解此应用存在高风险】',
           activityIds: 'com.miui.packageInstaller.NewInstallerPrepareActivity',
           matches:
@@ -69,21 +88,9 @@ export default defineAppConfig({
             'https://gkd-kit.gitee.io/import/12889148', // 已勾选
           ],
         },
-
-        // 普通应用安装，提示文本为【继续安装】
         {
-          preKeys: [0, 1],
-          key: 10,
-          desc: '点击【继续安装】',
-          activityIds: 'com.miui.packageInstaller.NewInstallerPrepareActivity',
-          matches: '@[text="继续安装"] + [text="取消安装"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12889120',
-        },
-
-        // 高风险应用安装，提示文本为【仍然安装】
-        {
-          preKeys: 3,
-          key: 11,
+          preKeys: 4,
+          key: 5,
           desc: '点击【仍然安装】',
           activityIds: 'com.miui.packageInstaller.NewInstallerPrepareActivity',
           matches: '@[text="仍然安装"] + [text="取消安装"]',
@@ -92,14 +99,14 @@ export default defineAppConfig({
 
         // 安装完成
         {
-          preKeys: [10, 11],
-          key: 12,
+          preKeys: [0, 1, 5],
+          key: 6,
           desc: '点击【完成】',
           activityIds:
             'com.miui.packageInstaller.ui.normalmode.InstallProgressActivity',
           matches:
             '[id="com.miui.packageinstaller:id/done_layout"] > [text="完成"]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12818044',
+          snapshotUrls: 'https://i.gkd.li/import/12818044',
         },
       ],
     },
@@ -119,8 +126,8 @@ export default defineAppConfig({
           matches:
             '[text="取消更新"] < LinearLayout - @FrameLayout > LinearLayout > [text="继续更新"]',
           snapshotUrls: [
-            'https://gkd-kit.songe.li/import/12817988',
-            'https://gkd-kit.songe.li/import/12910080',
+            'https://i.gkd.li/import/12817988',
+            'https://i.gkd.li/import/12910080',
           ],
         },
         {
@@ -129,8 +136,8 @@ export default defineAppConfig({
           activityIds: 'com.miui.packageInstaller.NewInstallerPrepareActivity',
           matches: '@[text="继续更新"] + [text="取消更新"]',
           snapshotUrls: [
-            'https://gkd-kit.songe.li/import/13024731',
-            'https://gkd-kit.songe.li/import/13038465',
+            'https://i.gkd.li/import/13024731',
+            'https://i.gkd.li/import/13038465',
           ],
         },
 
@@ -145,8 +152,8 @@ export default defineAppConfig({
           matches:
             '[id="com.miui.packageinstaller:id/install_checked"][checked=false][text="已了解此安装包未经安全检测"]',
           snapshotUrls: [
-            'https://gkd-kit.songe.li/import/13024730', // 未勾选
-            'https://gkd-kit.songe.li/import/13024731', // 已勾选
+            'https://i.gkd.li/import/13024730', // 未勾选
+            'https://i.gkd.li/import/13024731', // 已勾选
           ],
         },
 
@@ -159,7 +166,7 @@ export default defineAppConfig({
             'com.miui.packageInstaller.ui.normalmode.InstallProgressActivity',
           matches:
             '[id="com.miui.packageinstaller:id/done_layout"] > [text="完成"]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12817999',
+          snapshotUrls: 'https://i.gkd.li/import/12817999',
         },
       ],
     },

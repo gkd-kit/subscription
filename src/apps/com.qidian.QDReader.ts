@@ -17,10 +17,22 @@ export default defineAppConfig({
     {
       key: 1,
       name: '更新弹窗',
-      activityIds: ['com.qidian.QDReader.framework.widget.dialog.judian'],
-      rules:
-        'TextView[text$="新版本"] +(2) RelativeLayout >(4) TextView[text="以后再说"]',
-      snapshotUrls: ['https://gkd-kit.gitee.io/import/12641026'],
+      quickFind: true,
+      activityIds: [
+        'com.qidian.QDReader.framework.widget.dialog.judian',
+        'com.tencent.upgrade.ui.UpgradeDialogActivity',
+      ],
+      rules: [
+        {
+          matches:
+            'TextView[text$="新版本"] +(2) RelativeLayout >(4) TextView[text="以后再说"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12641026'],
+        },
+        {
+          matches: '[id="com.qidian.QDReader:id/upgrade_dialog_close_btn"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/13116821'],
+        },
+      ],
     },
     {
       key: 2,
@@ -35,7 +47,7 @@ export default defineAppConfig({
       snapshotUrls: [
         'https://gkd-kit.gitee.io/import/12640241',
         'https://gkd-kit.gitee.io/import/12709168',
-        'https://gkd-kit.songe.li/import/12905817',
+        'https://i.gkd.li/import/12905817',
       ],
     },
     {
@@ -51,7 +63,7 @@ export default defineAppConfig({
       snapshotUrls: [
         'https://gkd-kit.gitee.io/import/12640195',
         'https://gkd-kit.gitee.io/import/12640158',
-        'https://gkd-kit.songe.li/import/12818198',
+        'https://i.gkd.li/import/12818198',
       ],
     },
     {

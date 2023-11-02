@@ -70,7 +70,7 @@ export default defineAppConfig({
           name: '点击广告卡片右上角[Sponsored]',
           matches:
             'ImageView - TextView[text="Sponsored"][clickable=true][id!=null]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12905837',
+          snapshotUrls: 'https://i.gkd.li/import/12905837',
         },
         // 以下是[确认关闭按钮]出现的情况
         // 情况1 - 你觉得这条广告怎么样->直接关闭
@@ -80,18 +80,19 @@ export default defineAppConfig({
           name: 'Sponsored story-点击[Close the ad]',
           matches:
             '@LinearLayout[clickable=true][childCount=2] > TextView[text="Close the ad"]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12905838',
+          snapshotUrls: 'https://i.gkd.li/import/12905838',
         },
         {
           preKeys: 1,
           key: 2,
           name: 'Reason for closing the ad - 点击[Close]',
           matches: '[text="Reason for closing the ad"] +(2) [text="Close"]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12905846',
+          snapshotUrls: 'https://i.gkd.li/import/12905846',
         },
       ],
     },
     {
+      // Key1,2,3,4,11 均为授权类的规则
       key: 1,
       name: '电脑微信快捷自动登录',
       activityIds: '.plugin.webwx.ui.ExtDeviceWXLoginUI',
@@ -100,8 +101,13 @@ export default defineAppConfig({
     {
       key: 2,
       name: '浏览器扫码微信登录自动授权',
-      activityIds: ['com.tencent.mm.plugin.webview.ui.tools.SDKOAuthUI'],
+      desc: '自动允许使用头像昵称等',
+      activityIds: [
+        'com.tencent.mm.plugin.webview.ui.tools.SDKOAuthUI',
+        'com.tencent.mm.ui.LauncherUI',
+      ],
       rules: 'Button[text="拒绝"] - Button[text="允许"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/13065462', //com.tencent.mm.ui.LauncherUI
     },
     {
       enable: false,
@@ -119,14 +125,14 @@ export default defineAppConfig({
       rules: [
         {
           matches: 'Button[text="登 录"]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12506197',
+          snapshotUrls: 'https://i.gkd.li/import/12506197',
         },
         {
           matches: [
             '[text="登录成功"]',
             '[id="com.tencent.mm:id/g1"][desc="返回"]',
           ],
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12506201',
+          snapshotUrls: 'https://i.gkd.li/import/12506201',
         },
       ],
     },
@@ -175,16 +181,19 @@ export default defineAppConfig({
       key: 6,
       name: '订阅号文章广告',
       desc: '⚠ 此规则有概率误触。自动点击关闭按钮，必须同时启用【订阅号文章广告反馈】规则',
-      activityIds:
-        'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebViewMMUI',
+      activityIds: [
+        'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebView', //调整为TmplWebView, 同时兼容多种ID
+      ],
       rules: [
         {
           key: 1,
           name: '广告类型1',
-          matches:
+          matches: [
             'View[id="ad_container"] > View[childCount=1] >n @View > [id=null][text^="广告"][visibleToUser=true]',
+          ],
           snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/12642232',
+            'https://gkd-kit.gitee.io/import/12642232', // ui.TmplWebViewMMUI
+            'https://gkd-kit.gitee.io/import/13199281', // ui.TmplWebViewTooLMpUI
             'https://gkd-kit.gitee.io/import/12646837', // 事件完成后，反馈按钮仍然存在，使用 View[childCount=1] 进行限定，防止频繁触发规则
             'https://gkd-kit.gitee.io/import/12678937', // 文章未浏览至页面底部，广告反馈按钮不可见，使用 [visibleToUser=true] 进行限定，防止打开文章就频繁触发规则
             'https://gkd-kit.gitee.io/import/12714427', // 优化规则，使用 View[id="ad_container"] 作为特征节点
@@ -218,7 +227,7 @@ export default defineAppConfig({
           matches: '[text="原图"] - ImageButton[desc="未选中,原图,复选框"]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12686641', // 未选中
-            'https://gkd-kit.songe.li/import/12840865', // 未选中
+            'https://i.gkd.li/import/12840865', // 未选中
             'https://gkd-kit.gitee.io/import/12686640', // 已选中
           ],
         },
@@ -230,7 +239,7 @@ export default defineAppConfig({
       name: '订阅号文章广告反馈',
       desc: '⚠ 此规则有概率误触。自动点击反馈理由，配合【订阅号文章广告】规则使用',
       activityIds:
-        'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebViewMMUI',
+        'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebView', //调整为TmplWebView, 同时兼容多种ID
       rules: [
         {
           key: 1,
@@ -302,7 +311,60 @@ export default defineAppConfig({
       quickFind: true,
       activityIds: 'com.tencent.mm.ui.LauncherUI',
       rules: '[text="打开网页版文件传输助手"] + * > Button[text="打开"]',
-      snapshotUrls: 'https://gkd-kit.songe.li/import/12793745',
+      snapshotUrls: 'https://i.gkd.li/import/12793745',
+    },
+    {
+      enable: false,
+      key: 13,
+      name: '提瓦特助手小程序-弹窗广告',
+      activityIds: ['com.tencent.mm.plugin.appbrand.ui.AppBrandUI'],
+      rules: [
+        {
+          matches: [
+            'RelativeLayout[childCount=1][clickable=true] > [text="提瓦特小助手"]',
+            'FrameLayout[childCount=5] + FrameLayout[childCount=2] >2 FrameLayout[childCount=1]',
+          ],
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/12926021'],
+        },
+      ],
+    },
+    {
+      enable: false,
+      key: 14,
+      name: '小程序-内部广告',
+      desc: '需同时开启"小程序-内部广告-反馈"',
+      activityIds: ['com.tencent.mm.plugin.appbrand.ui.AppBrandUI'],
+      quickFind: true,
+      rules: [
+        {
+          matches:
+            'FrameLayout[childCount=3] >n FrameLayout > FrameLayout > [text="广告"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/13199282', //[childCount=3]避免在点击展开菜单后重复点击
+          ],
+        },
+      ],
+    },
+    {
+      enable: false,
+      key: 15,
+      name: '小程序-内部广告-反馈',
+      desc: '需同时开启"小程序-内部广告"',
+      activityIds: ['com.tencent.mm.plugin.appbrand.ui.AppBrandUI'],
+      quickFind: true,
+      rules: [
+        {
+          matches: '[text="不感兴趣"][visibleToUser=true]',
+          snapshotUrls: ['https://i.gkd.li/import/13200044'],
+        },
+        {
+          matches: '[text="与我无关"][visibleToUser=true]',
+          snapshotUrls: ['https://i.gkd.li/import/13200048'],
+        },
+        {
+          matches: '[text="关闭此广告"][visibleToUser=true]', //预防性规则,目前没有快照
+        },
+      ],
     },
   ],
 });

@@ -90,11 +90,13 @@ export default defineAppConfig({
             'com.douban.frodo.subject.structure.activity.MovieActivity',
             'com.douban.frodo.subject.activity.ForumTopicActivity',
             'com.douban.frodo.group.activity.GroupTopicActivity',
+            'com.douban.frodo.activity.SplashActivity',
           ],
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12548064',
             'https://gkd-kit.gitee.io/import/12548450',
             'https://gkd-kit.gitee.io/import/12723751',
+            'https://gkd-kit.gitee.io/import/13062693',
           ],
         },
         {
@@ -176,6 +178,21 @@ export default defineAppConfig({
         matches:
           '[id="com.douban.frodo:id/info"][text^="开启个性化推荐"] - [id="com.douban.frodo:id/close"]',
         snapshotUrls: 'https://gkd-kit.gitee.io/import/12836798',
+      },
+    },
+    {
+      key: 10,
+      name: '弹窗',
+      desc: '浏览详情时弹窗广告',
+      rules: {
+        activityIds: [
+          'com.douban.frodo.subject.structure.activity.MovieActivity',
+        ],
+        matches: [
+          '[text="查看详情"]',
+          'FrameLayout[childCount=5] > FrameLayout > ImageView',
+        ],
+        snapshotUrls: 'https://i.gkd.li/import/13195565',
       },
     },
   ],

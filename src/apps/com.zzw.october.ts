@@ -13,15 +13,18 @@ export default defineAppConfig({
           key: 1,
           desc: '方形按钮-开屏广告',
           quickFind: true,
-          matches: '[id="com.zzw.october:id/skip_parent_view"]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12842667',
+          matches: ['[id="com.zzw.october:id/skip_parent_view"]'],
+          snapshotUrls: ['https://i.gkd.li/import/12842667'],
         },
         {
           key: 2,
           desc: '圆形按钮-开屏广告',
           quickFind: true,
-          matches: '@ImageView + ViewGroup > TextView[text="跳过"]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12842724',
+          matches: 'TextView[text^="跳过"][text.length<=4]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12842724',
+            'https://i.gkd.li/import/13160835',
+          ],
         },
       ],
     },
@@ -37,8 +40,8 @@ export default defineAppConfig({
           matches:
             '[id="com.zzw.october:id/interact_ad_root"] >n ImageView[id="com.zzw.october:id/iv_close"]',
           snapshotUrls: [
-            'https://gkd-kit.songe.li/import/12842675',
-            'https://gkd-kit.songe.li/import/12869369',
+            'https://i.gkd.li/import/12842675',
+            'https://i.gkd.li/import/12869369',
           ],
         },
       ],

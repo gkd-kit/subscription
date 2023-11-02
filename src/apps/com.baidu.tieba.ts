@@ -12,6 +12,7 @@ export default defineAppConfig({
       activityIds: [
         'com.baidu.tieba.tblauncher.MainTabActivity',
         'com.baidu.tieba.pb.pb.main.PbActivity',
+        'com.baidu.tieba.frs.FrsActivity',
       ],
       rules: [
         {
@@ -25,7 +26,7 @@ export default defineAppConfig({
           matches:
             'TextView[text*="广告"||text.length=1] - TextView[text^="跳过"][text.length=5||text.length=2]',
           snapshotUrls: [
-            'https://gkd-kit.songe.li/import/12775906',
+            'https://i.gkd.li/import/12775906',
             'https://gkd-kit.gitee.io/import/12566191',
           ],
         },
@@ -35,13 +36,19 @@ export default defineAppConfig({
             '@FrameLayout[childCount=1][clickable=true][id!=null] > TextView[text="跳过"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12870916',
         },
+        {
+          key: 4,
+          matches:
+            'TextView[text="广告"] - @LinearLayout[clickable=true] [text="关闭"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13168386',
+        },
       ],
     },
     {
       key: 1,
       name: '任意界面-选择不喜欢理由-不感兴趣',
       rules: '@View[text=null] - TextView[text="选择不喜欢理由"][index=0]',
-      snapshotUrls: 'https://gkd-kit.songe.li/import/12775914',
+      snapshotUrls: 'https://i.gkd.li/import/12775914',
     },
     {
       key: 2,
@@ -56,9 +63,15 @@ export default defineAppConfig({
           matches:
             'TextView[text$="广告"] <n RelativeLayout <n LinearLayout - RelativeLayout > LinearLayout > FrameLayout +n RelativeLayout > LinearLayout',
           snapshotUrls: [
-            'https://gkd-kit.songe.li/import/12775930',
+            'https://i.gkd.li/import/12775930',
             'https://gkd-kit.gitee.io/import/12840951',
           ],
+        },
+        {
+          key: 1,
+          matches:
+            'RelativeLayout[childCount=2] > RelativeLayout[childCount=1][clickable=true] > ImageView',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13060892',
         },
       ],
     },
@@ -91,10 +104,11 @@ export default defineAppConfig({
         {
           key: 1,
           matches:
-            'TextView[text$="广告"] +n FrameLayout[id="com.baidu.tieba:id/obfuscated"] >n ImageView[id=null]',
+            'TextView[text$="广告"] +n FrameLayout[id="com.baidu.tieba:id/obfuscated"] >n @FrameLayout[clickable=true] > ImageView[id=null]',
           snapshotUrls: [
-            'https://gkd-kit.songe.li/import/12775913', // com.baidu.tieba.pb.pb.main.PbActivity
-            'https://gkd-kit.songe.li/import/13043133', // com.baidu.tieba.tblauncher.MainTabActivity
+            'https://i.gkd.li/import/12775913', // com.baidu.tieba.pb.pb.main.PbActivity
+            'https://i.gkd.li/import/13043133', // com.baidu.tieba.tblauncher.MainTabActivity
+            'https://i.gkd.li/import/13054256',
           ],
         },
         {
@@ -102,8 +116,8 @@ export default defineAppConfig({
           matches:
             'TextView[text$="广告"] < RelativeLayout <n LinearLayout - RelativeLayout >n @FrameLayout > ImageView[id=null][desc=null]',
           snapshotUrls: [
-            'https://gkd-kit.songe.li/import/12775916',
-            'https://gkd-kit.songe.li/import/12775892', // 指定点击目标为具备 clickable=true 属性的 @FrameLayout，防止在这个快照误触点击收藏
+            'https://i.gkd.li/import/12775916',
+            'https://i.gkd.li/import/12775892', // 指定点击目标为具备 clickable=true 属性的 @FrameLayout，防止在这个快照误触点击收藏
           ],
         },
       ],
@@ -132,7 +146,37 @@ export default defineAppConfig({
       activityIds: 'com.baidu.tieba.pb.pb.main.PbActivity',
       rules:
         'LinearLayout > RelativeLayout > ImageView[id=null][clickable=true]',
-      snapshotUrls: 'https://gkd-kit.songe.li/import/12775882',
+      snapshotUrls: 'https://i.gkd.li/import/12775882',
+    },
+    {
+      key: 9,
+      name: '应用内广告弹窗',
+      activityIds: [
+        'com.baidu.tbadk.browser.TBWebContainerActivity',
+        'com.baidu.tieba.tblauncher.MainTabActivity',
+      ],
+      rules: [
+        {
+          key: 0,
+          desc: '点击右上角x关闭',
+          matches: 'View[childCount=3] > @View[clickable=true] > Image',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13060891',
+        },
+        {
+          key: 1,
+          desc: '点击正下方x关闭',
+          matches:
+            '@TextView[clickable=true && text=null] - FrameLayout TextView[text="广告"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13168383',
+        },
+      ],
+    },
+    {
+      key: 10,
+      name: '首页-悬浮小广告',
+      activityIds: 'com.baidu.tieba.tblauncher.MainTabActivity',
+      rules: 'TextView[text="广告"] + ImageView[clickable=true]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/13115167',
     },
   ],
 });

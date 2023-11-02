@@ -19,23 +19,29 @@ export default defineAppConfig({
     {
       key: 1,
       name: '主页信息流广告',
+      quickFind: true,
+      activityIds: [
+        'com.android.browser.BrowserActivity',
+        'com.android.browser.flow.view.FeedbackDialog',
+      ],
       rules: [
         {
           key: 0,
-          activityIds: 'com.android.browser.BrowserActivity',
           matches:
             '@[id!=null][desc="负反馈"][visibleToUser=true] -n * > * > [text="广告"]',
           snapshotUrls: [
-            'https://gkd-kit.songe.li/import/12894221',
-            'https://gkd-kit.songe.li/import/12893649',
+            'https://i.gkd.li/import/12894221',
+            'https://i.gkd.li/import/12893649',
           ],
         },
         {
           preKeys: 0,
           key: 1,
-          activityIds: 'com.android.browser.flow.view.FeedbackDialog',
           matches: '@FrameLayout > ViewGroup > [text="不感兴趣"]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12894234',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12894234',
+            'https://i.gkd.li/import/13196059',
+          ],
         },
       ],
     },

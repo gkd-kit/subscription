@@ -11,7 +11,7 @@ export default defineAppConfig({
       matchLauncher: true,
       quickFind: true,
       rules: '[id="com.lucky.luckyclient:id/tv_skip"]',
-      snapshotUrls: 'https://gkd-kit.songe.li/import/12508764',
+      snapshotUrls: 'https://i.gkd.li/import/12508764',
     },
     {
       key: 1,
@@ -19,7 +19,7 @@ export default defineAppConfig({
       activityIds: 'com.luckin.client.main.FirstActivity',
       rules:
         '@ImageView[id="com.lucky.luckyclient:id/dismiss_btn"] - LinearLayout > ImageView[id="com.lucky.luckyclient:id/update_btn"]',
-      snapshotUrls: 'https://gkd-kit.songe.li/import/12846499',
+      snapshotUrls: 'https://i.gkd.li/import/12846499',
     },
     {
       key: 2,
@@ -30,6 +30,18 @@ export default defineAppConfig({
       quickFind: true,
       rules: '[id="com.lucky.luckyclient:id/close_iv"][visibleToUser=true]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12922834',
+    },
+    {
+      key: 3,
+      name: '优惠卷领取提示',
+      desc: '按下返回键关闭优惠卷领取提示',
+      enable: false,
+      activityIds: 'com.luckin.client.main.FirstActivity',
+      rules: {
+        matches: '[id="com.lucky.luckyclient:id/webcontent"]',
+        action: 'back',
+      },
+      snapshotUrls: 'https://i.gkd.li/import/13164114',
     },
   ],
 });

@@ -32,7 +32,7 @@ export default defineAppConfig({
         'FrameLayout + RelativeLayout > RelativeLayout > ImageView + ImageView[desc!="返回"][visibleToUser=true]',
       snapshotUrls: [
         'https://gkd-kit.gitee.io/import/12642270',
-        'https://gkd-kit.songe.li/import/12774910', // 使用 [desc!="返回"] 进行限定，防止在进入商品详情页时点击返回按钮
+        'https://i.gkd.li/import/12774910', // 使用 [desc!="返回"] 进行限定，防止在进入商品详情页时点击返回按钮
       ],
     },
     {
@@ -40,12 +40,12 @@ export default defineAppConfig({
       key: 3,
       name: '首页-浮层广告',
       activityIds: 'com.jingdong.app.mall.MainFrameActivity',
-      rules: [
-        {
-          matches:
-            '@[desc^="关闭浮层"] <n * < [id="com.jingdong.app.mall:id/home_float_layout"]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12837870',
-        },
+      rules: 'RelativeLayout >n * > [desc^="关闭浮层"]',
+      snapshotUrls: [
+        'https://i.gkd.li/import/13165659',
+        'https://i.gkd.li/import/12837870',
+        'https://i.gkd.li/import/13072091',
+        'https://i.gkd.li/import/12837870',
       ],
     },
     {
@@ -67,6 +67,26 @@ export default defineAppConfig({
       ],
     },
     {
+      key: 5,
+      name: '广告弹窗',
+      rules: [
+        {
+          key: 0,
+          activityIds: 'com.jingdong.app.mall.MainFrameActivity',
+          matches: 'FrameLayout > [desc="关闭"]',
+          snapshotUrls: 'https://i.gkd.li/import/13165721',
+        },
+        {
+          key: 1,
+          activityIds:
+            'com.jd.lib.cashier.complete.view.CashierCompleteActivity',
+          matches:
+            '[id="com.jingdong.app.mall:id/webview"] + [id="com.jingdong.app.mall:id/close"][desc="关闭页面"]',
+          snapshotUrls: 'https://i.gkd.li/import/13218034',
+        },
+      ],
+    },
+    {
       enable: false,
       key: 10,
       name: '京东账号登录授权',
@@ -74,6 +94,16 @@ export default defineAppConfig({
       activityIds: 'com.jingdong.app.mall.WebActivity',
       rules: '[text="京东登录"] > [desc="确认登录"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12901734',
+    },
+    {
+      enable: false,
+      key: 11,
+      name: '支付界面-产品推荐',
+      desc: '自动点击右上角【x】',
+      activityIds:
+        'com.jd.lib.settlement.fillorder.activity.NewFillOrderActivity',
+      rules: 'ImageView[clickable=true && desc="关闭"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/13191146',
     },
   ],
 });

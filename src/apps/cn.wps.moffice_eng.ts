@@ -8,7 +8,18 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       activityIds: 'cn.wps.moffice.documentmanager.PreStartActivity',
-      rules: '[id=`cn.wps.moffice_eng:id/splash_skip`]',
+      rules: [
+        {
+          key: 0,
+          matches: '[id=`cn.wps.moffice_eng:id/splash_skip`]',
+          snapshotUrls: [], // 需要补充快照
+        },
+        {
+          key: 1,
+          matches: '[id="cn.wps.moffice_eng:id/splash_jump"]',
+          snapshotUrls: 'https://i.gkd.li/import/13188596',
+        },
+      ],
     },
     {
       key: 1,
@@ -25,7 +36,7 @@ export default defineAppConfig({
           matches: '[text="关闭当前广告"||text="不喜欢此广告"]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12505365',
-            'https://gkd-kit.songe.li/import/12882277',
+            'https://i.gkd.li/import/12882277',
           ],
         },
         {
@@ -46,8 +57,8 @@ export default defineAppConfig({
       ],
       rules: '[id="cn.wps.moffice_eng:id/afterlogin_cancel"]',
       snapshotUrls: [
-        'https://gkd-kit.songe.li/import/12882589',
-        'https://gkd-kit.songe.li/import/12882712',
+        'https://i.gkd.li/import/12882589',
+        'https://i.gkd.li/import/12882712',
       ],
     },
     {
@@ -60,7 +71,7 @@ export default defineAppConfig({
       ],
       rules:
         '[id="cn.wps.moffice_eng:id/close_new_func_guide_dialog_imageView"]',
-      snapshotUrls: 'https://gkd-kit.songe.li/import/12882371',
+      snapshotUrls: 'https://i.gkd.li/import/12882371',
     },
     {
       enable: false,
@@ -77,14 +88,14 @@ export default defineAppConfig({
           matches:
             '[id="cn.wps.moffice_eng:id/cloud_protocol_dialog_not_start_btn"]',
           snapshotUrls: [
-            'https://gkd-kit.songe.li/import/12882536',
-            'https://gkd-kit.songe.li/import/12882610',
-            'https://gkd-kit.songe.li/import/12882678',
+            'https://i.gkd.li/import/12882536',
+            'https://i.gkd.li/import/12882610',
+            'https://i.gkd.li/import/12882678',
           ],
         },
         {
           matches: '[id="cn.wps.moffice_eng:id/dialog_button_positive"]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12882554',
+          snapshotUrls: 'https://i.gkd.li/import/12882554',
         },
       ],
     },

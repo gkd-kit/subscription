@@ -22,7 +22,25 @@ export default defineAppConfig({
       rules: [
         {
           matches: '@[text="稍候再说"] + [text="立即更新"]',
-          snapshotUrls: 'https://gkd-kit.songe.li/import/12727278',
+          snapshotUrls: 'https://i.gkd.li/import/12727278',
+        },
+      ],
+    },
+    {
+      key: 2,
+      name: '支付完成界面广告卡片',
+      activityIds: 'com.unionpay.activity.react.UPActivityReactNative',
+      rules: [
+        {
+          key: 0,
+          matches: '[id="bannerBox"] >2 [text="广告"] + TextView',
+          snapshotUrls: 'https://i.gkd.li/import/13070564',
+        },
+        {
+          preKeys: 0,
+          key: 1,
+          matches: '[text="关闭广告"]',
+          snapshotUrls: 'https://i.gkd.li/import/13070974',
         },
       ],
     },

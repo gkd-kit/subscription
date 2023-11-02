@@ -1,6 +1,10 @@
 # 抖音
 
-存在 8 规则组 - [com.ss.android.ugc.aweme](/src/apps/com.ss.android.ugc.aweme.ts)
+存在 10 规则组 - [com.ss.android.ugc.aweme](/src/apps/com.ss.android.ugc.aweme.ts)
+
+## 开屏广告
+
+- [快照-0](https://gkd-kit.gitee.io/import/13216121)
 
 ## 关闭青少年弹窗
 
@@ -29,6 +33,14 @@
 
 - [快照-0](https://gkd-kit.gitee.io/import/12769137)
 
+## 去商店评分
+
+点击[取消]
+
+- [示例-0](https://github.com/gkd-kit/inspect/assets/38517192/4554c785-39e0-4eac-9cfb-f1b1c2976008)
+
+- [快照-0](https://gkd-kit.gitee.io/import/13053628)
+
 ## 请求开启通知提示信息
 
 默认禁用 - 自动点击“暂不”
@@ -39,5 +51,5 @@
 
 默认禁用 - 聊天发送图片时自动勾选原图
 
-- [快照-0](https://gkd-kit.songe.li/import/12846036)
-- [快照-1](https://gkd-kit.songe.li/import/12846040)
+- [快照-0](https://i.gkd.li/import/12846036)
+- [快照-1](https://i.gkd.li/import/12846040)
