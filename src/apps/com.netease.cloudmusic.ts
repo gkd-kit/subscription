@@ -93,8 +93,7 @@ export default defineAppConfig({
           key: 0,
           activityIds:
             'com.netease.cloudmusic.music.biz.rn.activity.MainProcessLayerReactNativeActivity',
-          matches:
-            'ImageView < @ViewGroup[clickable=true] - [text*="开通VIP"]',
+          matches: 'ImageView < @ViewGroup[clickable=true] - [text*="开通VIP"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13189055',
         },
         {
@@ -112,8 +111,10 @@ export default defineAppConfig({
         {
           key: 3,
           name: 'VIP续费',
-          activityIds: 'com.netease.cloudmusic.music.biz.rn.activity.MainProcessLayerReactNativeActivity',
-          matches: 'ImageView < @ViewGroup -3 ViewGroup [text="您的黑胶VIP已过期"]',
+          activityIds:
+            'com.netease.cloudmusic.music.biz.rn.activity.MainProcessLayerReactNativeActivity',
+          matches:
+            'ImageView < @ViewGroup -3 ViewGroup [text="您的黑胶VIP已过期"]',
           snapshotUrls: 'https://i.gkd.li/import/13230605',
         },
       ],
