@@ -14,15 +14,11 @@ export default defineAppConfig({
         {
           key: 0,
           quickFind: true,
-          matches:
-            '[id="com.zjwh.android_wh_physicalfitness:id/layoutContainer"] >n [text="跳过"]',
-          snapshotUrls: 'https://i.gkd.li/import/13166424',
-        },
-        {
-          key: 1,
-          matches:
-            '[id="com.zjwh.android_wh_physicalfitness:id/splash_full_tk_play_card_view"] >n ViewGroup > @ImageView + ViewGroup > TextView[text="跳过"]',
-          snapshotUrls: 'https://i.gkd.li/import/13228145',
+          matches: '[text*="跳过"][text.length<=10]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13166424',
+            'https://i.gkd.li/import/13228145',
+          ],
         },
       ],
     },
