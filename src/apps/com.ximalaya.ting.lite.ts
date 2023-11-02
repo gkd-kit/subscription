@@ -45,6 +45,7 @@ export default defineAppConfig({
     {
       key: 2,
       name: '小说推荐弹窗',
+      quickFind: true,
       activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
       rules: '[id="com.ximalaya.ting.lite:id/main_iv_novel_back"]',
       snapshotUrls: 'https://i.gkd.li/import/13229127',
