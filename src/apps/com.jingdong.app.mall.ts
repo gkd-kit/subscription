@@ -84,6 +84,12 @@ export default defineAppConfig({
             '[id="com.jingdong.app.mall:id/webview"] + [id="com.jingdong.app.mall:id/close"][desc="关闭页面"]',
           snapshotUrls: 'https://i.gkd.li/import/13218034',
         },
+        {
+          key: 2,
+          activityIds: 'com.jingdong.app.mall.MainFrameActivity',
+          matches: '[desc="弹窗"] + [desc="关闭按钮"]',
+          snapshotUrls: 'https://i.gkd.li/import/13241883',
+        },
       ],
     },
     {
