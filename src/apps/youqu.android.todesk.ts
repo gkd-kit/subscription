@@ -8,6 +8,7 @@ export default defineAppConfig({
       key: 1,
       name: '广告卡片',
       activityIds: 'youqu.android.todesk.activity.WelcomeActivity',
+      quickFind: true,
       rules:
         '[id="youqu.android.todesk:id/sivDeviceBanner"] + [id="youqu.android.todesk:id/llClose"]',
       snapshotUrls: 'https://i.gkd.li/import/13228546',
