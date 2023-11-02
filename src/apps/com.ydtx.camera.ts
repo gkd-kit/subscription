@@ -7,15 +7,17 @@ export default defineAppConfig({
     {
       key: 1,
       name: '开屏广告',
-      activityIds: ['com.ydtx.camera.activity.SplashActivitynew'],
+      quickFind: true,
+      actionMaximum: 1,
+      matchTime: 10000,
+      resetMatch: 'app',
       rules: [
         {
-          matches: '[id="com.ydtx.camera:id/ksad_splash_circle_skip_view"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/13226708', //获取链接的方法在上一步有说明
-        },
-        {
-          matches: '[text*="跳过"][text.length<=5]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/13234627',
+          matches: '[text*="跳过"][text.length<=10]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/13234627',
+            'https://gkd-kit.gitee.io/import/13226708',
+          ],
         },
       ],
     },
