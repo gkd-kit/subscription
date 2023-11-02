@@ -17,6 +17,7 @@ export default defineAppConfig({
     {
       key: 1,
       name: '广告弹窗',
+      quickFind: true,
       activityIds: 'cn.TuHu.Activity.tuhutab.TuHuTabActivity',
       rules:
         '@[id="cn.TuHu.android:id/imgClose"] - [id="cn.TuHu.android:id/rlContent"] > [id="cn.TuHu.android:id/img_jump"]',
@@ -24,6 +25,7 @@ export default defineAppConfig({
     },
     {
       key: 10,
+      quickFind: true,
       name: '请求通知权限弹窗',
       activityIds: 'cn.TuHu.Activity.tuhutab.TuHuTabActivity',
       rules: '[text="开启推送提醒"] <2 * + [id="cn.TuHu.android:id/imgClose"]',
