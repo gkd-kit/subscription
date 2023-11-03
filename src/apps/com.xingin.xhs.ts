@@ -32,5 +32,14 @@ export default defineAppConfig({
         'https://gkd-kit.gitee.io/import/13222356', //com.xingin.xhs.notification.NotificationAuthorizationTranslucentActivity
       ],
     },
+    {
+      key: 2,
+      name: '免流量升级弹窗',
+      quickFind: true,
+      actionMaximum: 1,
+      activityIds: 'com.xingin.xhs.index.v2.IndexActivityV2',
+      rules: 'ImageView[id="com.xingin.xhs:id/b6w"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/13246890',
+    },
   ],
 });
