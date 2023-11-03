@@ -32,5 +32,13 @@ export default defineAppConfig({
         'https://gkd-kit.gitee.io/import/13222356', //com.xingin.xhs.notification.NotificationAuthorizationTranslucentActivity
       ],
     },
+    {
+      key: 2,
+      name: '消息页底部关闭开启通知横幅',
+      activityIds: ['com.xingin.xhs.index.v2.IndexActivityV2'],
+      rules:
+        '[text*="打开通知"] + LinearLayout > TextView[text="开启"] + ImageView[checked=false]',
+      snapshotUrls: ['https://gkd-kit.gitee.io/import/13250418'],
+    },
   ],
 });
