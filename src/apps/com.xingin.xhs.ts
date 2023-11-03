@@ -22,6 +22,8 @@ export default defineAppConfig({
       name: '关闭开启通知弹窗',
       quickFind: true,
       actionMaximum: 1,
+      matchTime: 30000,
+      resetMatch: 'app',
       activityIds: [
         'com.xingin.xhs.index.v2.IndexActivityV2',
         'com.xingin.xhs.notification.NotificationAuthorizationTranslucentActivity',
@@ -37,8 +39,11 @@ export default defineAppConfig({
       name: '免流量升级弹窗',
       quickFind: true,
       actionMaximum: 1,
+      matchTime: 30000,
+      resetMatch: 'app',
       activityIds: 'com.xingin.xhs.index.v2.IndexActivityV2',
-      rules: 'ImageView[id="com.xingin.xhs:id/b6w"]',
+      rules:
+        '@ImageView[clickable=true] <2 FrameLayout < LinearLayout >2 [text="立即安装"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13246890',
     },
   ],
