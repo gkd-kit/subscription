@@ -27,6 +27,7 @@ export default defineAppConfig({
       name: '内部弹窗广告',
       matchLauncher: true,
       activityIds: ['com.copymanga.app.MainActivity'],
+
       delay: 500,
       rules: [
         {
@@ -38,20 +39,26 @@ export default defineAppConfig({
           ],
         },
         {
-          matches: 'FrameLayout[childCount=8] > FrameLayout > ImageView',
+          matches: [
+            '[text^="立即" || text*="看"]', //软件正常元素都用的des,只有广告用text
+            '[depth=6][childCount=1] > ImageView',
+          ],
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12504520',
             'https://gkd-kit.gitee.io/import/12661019',
             'https://i.gkd.li/import/13193877',
+            'https://gkd-kit.gitee.io/import/12892156',
+            'https://gkd-kit.gitee.io/import/12504501',
+            'https://gkd-kit.gitee.io/import/13246786',
           ],
         },
         {
-          matches: 'FrameLayout[childCount=5] > FrameLayout > ImageView',
-          snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/12892156',
-            'https://gkd-kit.gitee.io/import/12504501',
+          matches: [
+            '[text="扭动或点击去买买买"]',
+            'LinearLayout + FrameLayout > ImageView',
           ],
-        },
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13233178',
+        }
         {
           activityIds:
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
@@ -64,13 +71,6 @@ export default defineAppConfig({
           matches: '[text="反馈"] -4 @View < View[childCount=7]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12925095',
         },
-        {
-          matches: [
-            '[text="扭动或点击去买买买"]',
-            'LinearLayout + FrameLayout > ImageView',
-          ],
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/13233178',
-        }
       ],
     },
     {
