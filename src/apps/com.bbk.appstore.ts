@@ -27,9 +27,9 @@ export default defineAppConfig({
       rules: 
         '[id="com.bbk.appstore:id/upgrade_necessary_btn_high_new" || id="com.bbk.appstore:id/common_dialog_netgtive_btn" || "com.bbk.appstore:id/quit_button"]',
       snapshotUrls: [
-      'https://gkd-kit.gitee.io/import/13198101', //com.bbk.appstore.upgrade.UpgradeNecessaryActivity
-      'https://gkd-kit.gitee.io/import/13198234', //com.bbk.appstore.ui.AppStoreTabActivity
-      'https://gkd-kit.gitee.io/import/13246971', //com.bbk.appstore.ui.AppStoreTabActivity
+        'https://gkd-kit.gitee.io/import/13198101', //com.bbk.appstore.upgrade.UpgradeNecessaryActivity
+        'https://gkd-kit.gitee.io/import/13198234', //com.bbk.appstore.ui.AppStoreTabActivity
+        'https://gkd-kit.gitee.io/import/13246971', //com.bbk.appstore.ui.AppStoreTabActivity
       ],
     },
   ],
