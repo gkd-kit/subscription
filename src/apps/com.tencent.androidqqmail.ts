@@ -37,6 +37,7 @@ export default defineAppConfig({
         {
           preKeys: [1],
           key: 9,
+          actionDelay: 300,
           matches:
             '[text="赞助商提供的广告"] < FrameLayout + @FrameLayout > [text="不感兴趣"]',
           snapshotUrls: 'https://i.gkd.li/import/12775862',
