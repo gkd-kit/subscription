@@ -18,7 +18,8 @@ export default defineAppConfig({
       key: 1,
       name: '应用内弹窗',
       quickFind: true,
-      activityIds: 'com.fanli.android.module.webview.ui.activity.TransparentBrowserInnerActivity',
+      activityIds:
+        'com.fanli.android.module.webview.ui.activity.TransparentBrowserInnerActivity',
       rules: '[id="J_poplayer_box"] >n @View + [text="main_bkg"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13245808',
     },
