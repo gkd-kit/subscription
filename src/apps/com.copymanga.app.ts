@@ -7,11 +7,9 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      matchLauncher: true,
-      activityIds: [
-        'com.copymanga.app.MainActivity',
-        'com.reaper.flutter.reaper_flutter_plugin.activity.ReaperSplashActivity',
-      ],
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
           matches: '[text *= "跳过" && text.length<6]',
@@ -33,35 +31,26 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.kwad.components.ad.interstitial',
-          matches: 'TextView[text="跳过"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12504486',
-        },
-        {
-          activityIds: 'com.kwad.components.ad.interstitial',
-          matches: 'ViewGroup[clickable=true] > ImageView',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12504488',
-        },
-        {
-          matches:
-            'ImageView < FrameLayout < FrameLayout +2 FrameLayout > ImageView',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12504501',
-        },
-        {
-          matches: 'ImageView + FrameLayout + FrameLayout > ImageView',
+          matches: '@ViewGroup[clickable=true][visibleToUser=true] > ImageView',
           snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/12504520',
-            'https://gkd-kit.gitee.io/import/12661019',
+            'https://gkd-kit.gitee.io/import/12504486',
+            'https://gkd-kit.gitee.io/import/12504488'
           ],
         },
         {
-          matches:
-            '@ImageView < FrameLayout[childCount=1] +2 FrameLayout[childCount=2] >2 TextView[text$="看看"][text^="去"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12504501',
+          matches: 'FrameLayout[childCount=8] > FrameLayout > ImageView',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12504520',
+            'https://gkd-kit.gitee.io/import/12661019',
+            'https://i.gkd.li/import/13193877',
+          ],
         },
         {
-          matches:
-            'TextView[text.length=4] < FrameLayout[childCount>=1] <2 FrameLayout[childCount>=2] -2 FrameLayout > ImageView',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12892156', //最后是ImageView否则和io/import/12504501误触
+          matches: 'FrameLayout[childCount=5] > FrameLayout > ImageView',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12892156',
+            'https://gkd-kit.gitee.io/import/12504501',
+          ],
         },
         {
           activityIds:
@@ -75,6 +64,13 @@ export default defineAppConfig({
           matches: '[text="反馈"] -4 @View < View[childCount=7]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12925095',
         },
+        {
+          matches: [
+            '[text="扭动或点击去买买买"]',
+            'LinearLayout + FrameLayout > ImageView',
+          ],
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13233178',
+        }
       ],
     },
     {
@@ -109,5 +105,31 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 4,
+      name: '自动确认线路',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          matches: '[desc="进入拷贝漫画"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13233179',
+        },
+      ],
+    }
+    {
+      key: 5,
+      name: '关闭提示',
+      matchTime: 20000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          matches: '[desc="系统提示"] +2 [desc="确定"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13233180',
+        },
+      ],
+    }
   ],
 });
