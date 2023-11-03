@@ -5,6 +5,16 @@ export default defineAppConfig({
   name: '网上国网',
   groups: [
     {
+      key: 0,
+      name: '开屏广告',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      quickFind: true,
+      matches: '[text^="跳过"][text.length<10]'
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/13247957',
+    }
+    {
       key: 1,
       name: '首页弹窗广告',
       matchLauncher: true,
@@ -16,7 +26,7 @@ export default defineAppConfig({
         {
           key: 1,
           actionCd: 2000,
-          matches: '@[focusable=true][checked=false] + [text="今日不再出现"]',
+          matches: '@[focusable=true] + [text="今日不再出现"]',
           snapshotUrls: [
             'https://i.gkd.li/import/12745042',
             'https://gkd-kit.gitee.io/import/13247655',
