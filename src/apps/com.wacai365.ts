@@ -34,7 +34,8 @@ export default defineAppConfig({
       quickFind: true,
       actionMaximum: 1,
       activityIds: 'com.wacai365.HomeActivity',
-      rules: '@ImageView[id="com.wacai365:id/tv_cancel"] - TextView[text^="新版本"]',
+      rules:
+        '@ImageView[id="com.wacai365:id/tv_cancel"] - TextView[text^="新版本"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13249620',
     },
     {
