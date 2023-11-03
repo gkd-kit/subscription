@@ -7,7 +7,10 @@ export default defineAppConfig({
     {
       key: 1,
       name: '开屏广告',
-      activityIds: ['com.babycloud.hanju.ui.activity.HanjuHomeActivity'],
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
           matches: '[text*="跳过"][text.length<=5]',
