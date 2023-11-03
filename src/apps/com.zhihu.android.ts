@@ -54,13 +54,14 @@ export default defineAppConfig({
     {
       key: 5,
       name: '推荐页广告卡片',
-      desc: '赚稿费广告卡片,盐选推荐广告,知乎学课堂,汽车广告',
+      desc: '赚稿费广告卡片,盐选推荐广告,知乎学课堂,汽车广告，下载APP广告',
       activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
       rules: [
         '[id="com.zhihu.android:id/content"] >2 TextView[text="不感兴趣"][id="com.zhihu.android:id/title"]', // 1686989681860
         'TextView[text=`内容质量差`][id=`com.zhihu.android:id/tv_content`]',
         '@ImageView[id=`com.zhihu.android:id/menu`] < FrameLayout - * > TextView[text^=`广告`]', // 1687913210243 1686989714786
         '@ImageView[id=null][clickable=true] -n TextView[text*=`广告`][index=0]', // 1687418944396 1686924015259
+        '@ImageView[clickable=true] <n ViewGroup >2 TextView[text=`广告`]', // 1699054767835
       ],
     },
     {
