@@ -46,8 +46,8 @@ export default defineAppConfig({
           '[id="com.wm.dmall:id/update_confirm_btn"]',
           '[id="com.wm.dmall:id/close_btn"]',
         ],
-      snapshotUrls: ['https://gkd-kit.gitee.io/import/13234668'],
-    }
+        snapshotUrls: ['https://gkd-kit.gitee.io/import/13234668'],
+      },
     },
   ],
 });
