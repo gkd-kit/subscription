@@ -68,7 +68,7 @@ export default defineAppConfig({
       name: '问题-回答列表-卡片广告',
       activityIds: 'com.zhihu.android.ContentActivity',
       rules: [
-        '@ImageView[clickable=true] <n ViewGroup >2 TextView[text=`广告`]',
+        '@ImageView[clickable=true] <n ViewGroup >2 TextView[text=`广告`]', // 1699016431821
         '@ImageView -n TextView[text=`广告`][index=0]', // 1687787712268 1687787635158
         'ImageView[id=null] + TextView[text!=null][id=null] + ViewGroup > ImageView[clickable=true]', // 1688028432747
       ],
