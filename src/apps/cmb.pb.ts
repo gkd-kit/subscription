@@ -22,10 +22,11 @@ export default defineAppConfig({
     {
       key: 11,
       name: '请求定位权限弹窗',
+      quickFind: true,
       activityIds:
         'cmb.pb.app.h5container.webviewcontainer.PBWebContainerActivity',
       rules:
-        '@[id="cmb.pb:id/ivDelete"][desc="关闭"] - FrameLayout > [text*="获取您的位置"]',
+        '@[id="cmb.pb:id/ivDelete"][desc="关闭"] - FrameLayout > [id="cmb.pb:id/tvDescription"][text*="获取您的位置"]',
       snapshotUrls: [
         'https://gkd-kit.gitee.io/import/12706029',
         'https://i.gkd.li/import/13248893',
