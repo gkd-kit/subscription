@@ -11,15 +11,15 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       quickFind: true,
-          rules: [
-            {
-              matches: [
-                '[id="com.fenbi.android.solar:id/text_upgrade"]',
-                '[id="com.fenbi.android.solar:id/img_close"]',
-            ],
-              snapshotUrls: 'https://i.gkd.li/import/13246056',
-            },
+      rules: [
+        {
+          matches: [
+            '[id="com.fenbi.android.solar:id/text_upgrade"]',
+            '[id="com.fenbi.android.solar:id/img_close"]',
           ],
+          snapshotUrls: 'https://i.gkd.li/import/13246056',
+        },
+      ],
     },
   ],
 });
