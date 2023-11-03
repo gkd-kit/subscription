@@ -41,11 +41,13 @@ export default defineAppConfig({
       name: '更新提示',
       quickFind: true,
       activityIds: 'com.wm.dmall.MainActivity',
-      rules: [
-        '[id="com.wm.dmall:id/update_confirm_btn"]',
-        '[id="com.wm.dmall:id/close_btn"]',
-      ],
+      rules: {
+        matches: [
+          '[id="com.wm.dmall:id/update_confirm_btn"]',
+          '[id="com.wm.dmall:id/close_btn"]',
+        ],
       snapshotUrls: ['https://gkd-kit.gitee.io/import/13234668'],
+    }
     },
   ],
 });
