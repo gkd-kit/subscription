@@ -13,7 +13,7 @@ export default defineAppConfig({
       quickFind: true,
       matches: '[text^="跳过"][text.length<10]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13247957',
-    }
+    },
     {
       key: 1,
       name: '首页弹窗广告',
