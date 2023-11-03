@@ -20,14 +20,16 @@ export default defineAppConfig({
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12706022',
     },
     {
-      enable: false,
       key: 11,
       name: '请求定位权限弹窗',
       activityIds:
         'cmb.pb.app.h5container.webviewcontainer.PBWebContainerActivity',
       rules:
-        '@[id="cmb.pb:id/ivDelete"][desc="关闭"] - FrameLayout > [text*="开启定位"]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12706029',
+        '@[id="cmb.pb:id/ivDelete"][desc="关闭"] - FrameLayout > [text*="获取您的位置"]',
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/12706029',
+        'https://i.gkd.li/import/13248893',
+      ],
     },
   ],
 });
