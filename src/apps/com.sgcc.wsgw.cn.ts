@@ -11,10 +11,8 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       quickFind: true,
-      rules: [
-        matches: '[text^="跳过"][text.length<10]',
-        snapshotUrls: 'https://gkd-kit.gitee.io/import/13247957',
-      ],
+      rules: '[text^="跳过"][text.length<10]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/13247957',
     },
     {
       key: 1,
