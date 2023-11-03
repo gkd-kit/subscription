@@ -183,6 +183,7 @@ export default defineAppConfig({
       ],
     },
     {
+      enable: false,
       key: 10,
       name: '首页-专辑订阅推荐弹窗',
       quickFind: true,
