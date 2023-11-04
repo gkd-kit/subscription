@@ -57,5 +57,13 @@ export default defineAppConfig({
       rules: '[id="com.ximalaya.ting.lite:id/main_login_guide_close"][index=1]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13256447',
     },
+    {
+      key: 4,
+      name: '关闭开启通知弹窗',
+      activityIds: 'com.ximalaya.ting.android.host.activity.WelComeActivity',
+      rules:
+        '[text="立即开启"] + [id="com.ximalaya.ting.lite:id/host_dialog_cancel_iv"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/13256505',
+    },
   ],
 });
