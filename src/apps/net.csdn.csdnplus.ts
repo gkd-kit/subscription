@@ -72,6 +72,13 @@ export default defineAppConfig({
       ],
     },
     {
+      key: 3,
+      name: '关闭好评弹窗',
+      activityIds: 'net.csdn.csdnplus.activity.MainActivity',
+      rules: '[text="喜欢我，就给个好评吧"] +n [text="残忍拒绝"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/13251085',
+    },
+    {
       enable: false,
       key: 10,
       quickFind: true,
