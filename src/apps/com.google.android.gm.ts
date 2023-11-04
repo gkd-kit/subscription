@@ -12,7 +12,8 @@ export default defineAppConfig({
         {
           key: 0,
           name: '点击广告扩展',
-          matches: '[id="com.google.android.gm:id/button_chip_ad_teaser_info_icon" || id="com.google.android.gm:id/basic_ad_teaser_info_icon"]',
+          matches:
+            '[id="com.google.android.gm:id/button_chip_ad_teaser_info_icon" || id="com.google.android.gm:id/basic_ad_teaser_info_icon"]',
           snapshotUrls: 'https://i.gkd.li/import/13255698',
         },
         {
@@ -29,9 +30,7 @@ export default defineAppConfig({
           matches: 'Button[text="继续"]',
           snapshotUrls: 'https://i.gkd.li/import/13255701',
         },
-      
       ],
-      
     },
   ],
 });
