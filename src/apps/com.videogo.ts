@@ -15,5 +15,20 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 1,
+      name: '主页广告',
+      activityIds: ['com.videogo.main.MainTabActivity'],
+      rules: [
+        {
+          matches: '[id="com.videogo:id/ad_close"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13255684',
+        },
+        {
+          matches: '[id="com.videogo:id/ad_closead_nointerest"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13255697',
+        },
+      ],
+    },
   ],
 });
