@@ -29,7 +29,8 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.jd.jrapp.bm.mainbox.main.MainActivity',
-          matches: 'TextView[text^="打开通知"] +2 [id="com.jd.jrapp:id/iv_close"]',
+          matches:
+            'TextView[text^="打开通知"] +2 [id="com.jd.jrapp:id/iv_close"]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13249998',
         },
         {
