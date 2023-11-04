@@ -166,7 +166,8 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          matches: '[id="tv.danmaku.bili:id/ad_tint_frame"] [id="tv.danmaku.bili:id/more"]',
+          matches:
+            '[id="tv.danmaku.bili:id/ad_tint_frame"] [id="tv.danmaku.bili:id/more"]',
           snapshotUrls: 'https://i.gkd.li/import/13256570',
         },
         {
