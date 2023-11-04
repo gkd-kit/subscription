@@ -50,5 +50,12 @@ export default defineAppConfig({
       rules: '[id="com.ximalaya.ting.lite:id/main_iv_novel_back"]',
       snapshotUrls: 'https://i.gkd.li/import/13229127',
     },
+    {
+      key: 3,
+      name: 'ZFB提现广告',
+      activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
+      rules: '[id="com.ximalaya.ting.lite:id/main_login_guide_close"][index=1]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/13256447',
+    },
   ],
 });
