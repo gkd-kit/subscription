@@ -111,6 +111,8 @@ export default defineAppConfig({
     },
     {
       key: 7,
+      enable: false,
+      quickFind: true,
       name: '设置无声进入抖音',
       desc: '点击[拒绝]',
       activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
