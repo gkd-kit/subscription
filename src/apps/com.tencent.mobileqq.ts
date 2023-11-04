@@ -293,7 +293,7 @@ export default defineAppConfig({
       rules: 'TextView[text="发现QQ版本更新"] + ImageView[clickable=true]', //修正desc值为null时无法点击问题
       snapshotUrls: [
         'https://i.gkd.li/import/13188722',
-        'https://gkd-kit.gitee.io/import/13255493'//desc值为null快照
+        'https://gkd-kit.gitee.io/import/13255493', //desc值为null快照
       ],
     },
   ],
