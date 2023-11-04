@@ -27,6 +27,7 @@ export default defineAppConfig({
       activityIds: [
         'com.xingin.xhs.index.v2.IndexActivityV2',
         'com.xingin.xhs.notification.NotificationAuthorizationTranslucentActivity',
+        'com.huawei.android.launcher.unihome.UniHomeLauncher',
       ],
       rules: [
         {
@@ -34,6 +35,7 @@ export default defineAppConfig({
           snapshotUrls: [
             'https://i.gkd.li/import/13195753', //com.xingin.xhs.index.v2.IndexActivityV2
             'https://gkd-kit.gitee.io/import/13222356', //com.xingin.xhs.notification.NotificationAuthorizationTranslucentActivity
+            'https://gkd-kit.gitee.io/import/13256145', //com.huawei.android.launcher.unihome.UniHomeLauncher
           ],
         },
         {
