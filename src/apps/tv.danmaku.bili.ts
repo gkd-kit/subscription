@@ -174,6 +174,7 @@ export default defineAppConfig({
           matches: '[id="tv.danmaku.bili:id/menu_layout"] [text="不感兴趣"]',
           snapshotUrls: 'https://i.gkd.li/import/13256605',
         },
+      ],
     },
   ],
 });
