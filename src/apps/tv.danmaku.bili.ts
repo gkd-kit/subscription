@@ -157,5 +157,23 @@ export default defineAppConfig({
       rules: '[text="打开推送通知"] +2 * > [id="tv.danmaku.bili:id/close"]',
       snapshotUrls: 'https://i.gkd.li/import/13229159',
     },
+    {
+      key: 10,
+      enable: false,
+      name: '推荐-信息流广告',
+      activityIds: 'tv.danmaku.bili.MainActivityV2',
+      quickFind: true,
+      rules: [
+        {
+          key: 0,
+          matches: '[id="tv.danmaku.bili:id/ad_tint_frame"] [id="tv.danmaku.bili:id/more"]',
+          snapshotUrls: 'https://i.gkd.li/import/13256570',
+        },
+        {
+          preKeys: 0,
+          matches: '[id="tv.danmaku.bili:id/menu_layout"] [text="不感兴趣"]',
+          snapshotUrls: 'https://i.gkd.li/import/13256605',
+        },
+    },
   ],
 });
