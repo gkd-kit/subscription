@@ -11,12 +11,12 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       quickFind: true,
-          rules: [
-            {
-              matches: '[text^="跳过" && text.length<10]', 
-              snapshotUrls: 'https://i.gkd.li/import/13222520',
-            },
-          ],
+      rules: [
+        {
+          matches: '[text^="跳过" && text.length<10]',
+          snapshotUrls: 'https://i.gkd.li/import/13222520',
+        },
+      ],
     },
   ],
 });
