@@ -13,5 +13,12 @@ export default defineAppConfig({
       rules: '[desc^="跳过"][desc.length<=10]',
       snapshotUrls: 'https://i.gkd.li/import/13258874',
     },
+    {
+      key: 1,
+      name: '广告弹窗',
+      activityIds: 'cn.com.livelab.MainActivity',
+      rules: 'View >n View[childCount=2] > ImageView + Button',
+      snapshotUrls: 'https://i.gkd.li/import/13258873',
+    },
   ],
 });
