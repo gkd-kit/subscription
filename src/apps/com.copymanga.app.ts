@@ -42,26 +42,20 @@ export default defineAppConfig({
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12504488',
         },
         {
-          matches:
-            'ImageView < FrameLayout < FrameLayout +2 FrameLayout > ImageView',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12504501',
-        },
-        {
-          matches: 'ImageView + FrameLayout + FrameLayout > ImageView',
+          matches: 'FrameLayout[childCount=8] > FrameLayout > ImageView',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12504520',
             'https://gkd-kit.gitee.io/import/12661019',
+            'https://i.gkd.li/import/13193877',
           ],
         },
         {
           matches:
-            '@ImageView < FrameLayout[childCount=1] +2 FrameLayout[childCount=2] >2 TextView[text$="看看"][text^="去"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12504501',
-        },
-        {
-          matches:
-            'TextView[text.length=4] < FrameLayout[childCount>=1] <2 FrameLayout[childCount>=2] -2 FrameLayout > ImageView',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12892156', //最后是ImageView否则和io/import/12504501误触
+            'FrameLayout[childCount=5] > FrameLayout > ImageView',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12892156',
+            'https://gkd-kit.gitee.io/import/12504501',
+          ],
         },
         {
           activityIds:
