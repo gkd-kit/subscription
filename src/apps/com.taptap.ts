@@ -31,7 +31,7 @@ export default defineAppConfig({
           snapshotUrls: [
             'https://i.gkd.li/import/12840904',
             'https://i.gkd.li/import/13258679', //other.basic.impl.TapMainActivity
-          ]
+          ],
         },
       ],
     },
