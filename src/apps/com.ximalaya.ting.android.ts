@@ -114,7 +114,7 @@ export default defineAppConfig({
           snapshotUrls: 'https://gkd-kit.gitee.io/import/12701374',
         },
         {
-          preKeys: [0,1],
+          preKeys: [0, 1],
           name: '点击关闭原因【屏蔽】',
           quickFind: true,
           matches:
