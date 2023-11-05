@@ -29,21 +29,22 @@ export default defineAppConfig({
       ],
       activityIds: [
         'cn.wps.moffice.main.StartPublicActivity',
+        'cn.wps.moffice.documentmanager.PreStartActivity',
         'cn.wps.moffice.main.local.HomeRootActivity',
       ],
       rules: [
-        {
-          matches: '[text="关闭当前广告"||text="不喜欢此广告"]',
-          snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/12505365',
-            'https://i.gkd.li/import/12882277',
-          ],
-        },
         {
           matches: '[id$="/nativeclose"]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12505350',
             'https://gkd-kit.gitee.io/import/12505286',
+          ],
+        },
+        {
+          matches: '[text="关闭当前广告"||text="不喜欢此广告"]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12505365',
+            'https://i.gkd.li/import/13259090',
           ],
         },
       ],
@@ -57,7 +58,7 @@ export default defineAppConfig({
       ],
       rules: '[id="cn.wps.moffice_eng:id/afterlogin_cancel"]',
       snapshotUrls: [
-        'https://i.gkd.li/import/12882589',
+        'https://i.gkd.li/import/13259097',
         'https://i.gkd.li/import/12882712',
       ],
     },
