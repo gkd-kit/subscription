@@ -8,8 +8,9 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       quickFind: true,
-      matchLauncher: true,
-      activityIds: 'com.tmall.wireless.maintab.module.TMMainTabActivity',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: '[id="com.tmall.wireless:id/splash_ad_txt_skip"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13162604',
     },
@@ -21,7 +22,7 @@ export default defineAppConfig({
         'com.tmall.wireless.splash.TMSplashActivity',
         'com.tmall.wireless.maintab.module.TMMainTabActivity',
       ],
-      rules: '[id="com.tmall.wireless:id/update_button_cancel"] [text="取消"]',
+      rules: '[id="com.tmall.wireless:id/update_button_cancel"]',
       snapshotUrls: [
         'https://gkd-kit.gitee.io/import/13162603', //com.tmall.wireless.splash.TMSplashActivity
         'https://gkd-kit.gitee.io/import/13258201', //com.tmall.wireless.maintab.module.TMMainTabActivity
