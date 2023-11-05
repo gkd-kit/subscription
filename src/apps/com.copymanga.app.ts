@@ -7,14 +7,12 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      matchLauncher: true,
-      activityIds: [
-        'com.copymanga.app.MainActivity',
-        'com.reaper.flutter.reaper_flutter_plugin.activity.ReaperSplashActivity',
-      ],
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
-          matches: '[text *= "跳过" && text.length<6]',
+          matches: '@* > [text *= "跳过" && text.length<6]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12504489',
             'https://gkd-kit.gitee.io/import/12504507',
@@ -33,30 +31,37 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.kwad.components.ad.interstitial',
-          matches: 'TextView[text="跳过"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12504486',
+          matches: '@ViewGroup[clickable=true][visibleToUser=true] > ImageView',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12504486',
+            'https://gkd-kit.gitee.io/import/12504488'
+          ],
         },
         {
-          activityIds: 'com.kwad.components.ad.interstitial',
-          matches: 'ViewGroup[clickable=true] > ImageView',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12504488',
-        },
-        {
-          matches: 'FrameLayout[childCount=8] > FrameLayout > ImageView',
+          matches: [
+            '[text^="立即" || text^="领取" || text*="看"]', //软件正常元素都用的des,只有广告用text
+            '[depth=6][childCount=1] > ImageView',
+          ],
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12504520',
             'https://gkd-kit.gitee.io/import/12661019',
             'https://i.gkd.li/import/13193877',
+            'https://gkd-kit.gitee.io/import/12892156',
+            'https://gkd-kit.gitee.io/import/12504501',
+            'https://gkd-kit.gitee.io/import/13246786',
+            'https://i.gkd.li/import/13259082', //text^="领取"
           ],
         },
         {
-          matches:
-            'FrameLayout[childCount=5] > FrameLayout > ImageView',
-          snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/12892156',
-            'https://gkd-kit.gitee.io/import/12504501',
+          matches: [
+            '[text="京东"]',
+            '[_id=20]',
           ],
-        },
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/13233178',
+            'https://i.gkd.li/import/13259085',
+          ]
+        }
         {
           activityIds:
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
@@ -103,5 +108,32 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 4,
+      name: '自动确认线路',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          matches: '[desc="进入拷贝漫画"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13233179',
+        },
+      ],
+    }
+    {
+      key: 5,
+      name: '关闭提示',
+      matchTime: 20000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          matches: '[desc="系统提示"] +2 [desc="确定"]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13233180',
+        },
+      ],
+    }
   ],
-});
+}
+);
