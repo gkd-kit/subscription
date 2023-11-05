@@ -28,6 +28,7 @@ export default defineAppConfig({
       activityIds: [
         'com.xingin.xhs.index.v2.IndexActivityV2',
         'com.xingin.xhs.notification.NotificationAuthorizationTranslucentActivity',
+        'com.xingin.matrix.notedetail.r10.comment.r10.NoteCommentActivity',
       ],
       rules: [
         {
@@ -36,6 +37,7 @@ export default defineAppConfig({
             'https://i.gkd.li/import/13195753', //com.xingin.xhs.index.v2.IndexActivityV2
             'https://gkd-kit.gitee.io/import/13222356', //com.xingin.xhs.notification.NotificationAuthorizationTranslucentActivity
             'https://gkd-kit.gitee.io/import/13256145', //com.huawei.android.launcher.unihome.UniHomeLauncher
+            'https://gkd-kit.gitee.io/import/13255627', //com.xingin.matrix.notedetail.r10.comment.r10.NoteCommentActivity
           ],
         },
         {
