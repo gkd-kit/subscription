@@ -27,6 +27,18 @@ export default defineAppConfig({
       desc: '点击卡片右上角广告文字,出现广告反馈,点击屏蔽该广告',
       rules: [
         {
+          key: 0,
+          quickFind: true,
+          activityIds: 'com.hupu.topic.TopicActivity',
+          matches:
+            '@[id="com.hupu.games:id/shield_view"] >2 [id="com.hupu.games:id/tv_tag"][text="广告"]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12511005', // com.hupu.games.main.MainActivity
+            'https://i.gkd.li/import/13258026', // com.hupu.topic.TopicActivity
+            'https://i.gkd.li/import/13259692', // com.hupu.android.bbs.detail.PostDetailActivity
+          ],
+        },
+        {
           preKeys: 0,
           key: 1,
           activityIds:
@@ -37,18 +49,6 @@ export default defineAppConfig({
             'https://gkd-kit.gitee.io/import/12511010', // com.hupu.games.main.MainActivity
             'https://gkd-kit.gitee.io/import/12534848', // com.google.android.material.bottomsheet.BottomSheetDialog
             'https://i.gkd.li/import/13259699', // com.hupu.android.bbs.detail.PostDetailActivity
-          ],
-        },
-        {
-          key: 0,
-          quickFind: true,
-          activityIds: 'com.hupu.topic.TopicActivity',
-          matches:
-            '@[id="com.hupu.games:id/shield_view"] >2 [id="com.hupu.games:id/tv_tag"][text="广告"]',
-          snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/12511005', // com.hupu.games.main.MainActivity
-            'https://i.gkd.li/import/13258026', // com.hupu.topic.TopicActivity
-            'https://i.gkd.li/import/13259692', // com.hupu.android.bbs.detail.PostDetailActivity
           ],
         },
       ],
