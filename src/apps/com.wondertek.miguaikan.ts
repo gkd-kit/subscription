@@ -7,7 +7,10 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: 'com.shinemo.miguaikan.biz.splash.SplashActivity',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: '[id="com.wondertek.miguaikan:id/splash_time"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13258889',
     },
