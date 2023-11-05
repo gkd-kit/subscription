@@ -51,7 +51,8 @@ export default defineAppConfig({
       name: '系统通知',
       matchTime: 10000,
       actionMaximum: 1,
-      activityIds: 'com.tmall.wireless.messagebox.activity.TMMsgboxMainActivity',
+      activityIds:
+        'com.tmall.wireless.messagebox.activity.TMMsgboxMainActivity',
       rules: 'View[text="开启系统通知"] - View[clickable=true]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13258215',
     },
