@@ -19,15 +19,15 @@ export default defineAppConfig({
     },
     {
       key: 1,
-      name: '关闭请求通知弹窗',
+      name: '通知权限弹窗',
       quickFind: true,
       actionMaximum: 1,
       matchTime: 30000,
       resetMatch: 'app',
+      matchLauncher: true,
       activityIds: [
         'com.xingin.xhs.index.v2.IndexActivityV2',
         'com.xingin.xhs.notification.NotificationAuthorizationTranslucentActivity',
-        'com.huawei.android.launcher.unihome.UniHomeLauncher',
       ],
       rules: [
         {
@@ -46,7 +46,7 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      name: '免流量升级弹窗',
+      name: '更新弹窗',
       quickFind: true,
       actionMaximum: 1,
       matchTime: 30000,
