@@ -34,6 +34,7 @@ export default defineAppConfig({
       ],
       rules: [
         {
+          key: 0,
           matches: '[id$="/nativeclose"]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12505350',
@@ -41,6 +42,7 @@ export default defineAppConfig({
           ],
         },
         {
+          preKeys: 0,
           matches: '[text="关闭当前广告"||text="不喜欢此广告"]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12505365',
@@ -52,6 +54,7 @@ export default defineAppConfig({
     {
       key: 2,
       name: '首页-弹窗广告',
+      quickFind: true,
       activityIds: [
         'cn.wps.moffice.main.AfterLoginActivity',
         'com.android.packageinstaller.permission.ui.GrantPermissionsActivity',
