@@ -7,12 +7,20 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: 'com.jingdong.app.mall.MainFrameActivity',
-      rules:
-        '@RelativeLayout[desc="跳过"][id!=null] > TextView[text="跳过"][id!=null]',
-      snapshotUrls: [
-        'https://gkd-kit.gitee.io/import/12668289',
-        'https://gkd-kit.gitee.io/import/12519430',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      quickFind: true,
+      rules: [
+        {
+          key: 0,
+          matches: '[text="跳过"]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/12668289',
+            'https://gkd-kit.gitee.io/import/12519430',
+            'https://gkd-kit.gitee.io/import/13255802',
+          ],
+        },
       ],
     },
     {
@@ -51,7 +59,7 @@ export default defineAppConfig({
     {
       enable: false,
       key: 3,
-      name: '首页-浮层广告',
+      name: '首页-右侧浮层广告',
       activityIds: 'com.jingdong.app.mall.MainFrameActivity',
       rules: 'RelativeLayout >n * > [desc^="关闭浮层"]',
       snapshotUrls: [
@@ -100,9 +108,30 @@ export default defineAppConfig({
         {
           key: 2,
           activityIds: 'com.jingdong.app.mall.MainFrameActivity',
-          matches: '[desc="弹窗"] + [desc="关闭按钮"]',
-          snapshotUrls: 'https://i.gkd.li/import/13241883',
+          matches: '@[desc="关闭按钮"] <n * >n *[desc="弹窗"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13241883',
+            'https://i.gkd.li/import/132599029',
+          ],
         },
+        {
+          key: 3,
+          activityIds: 'com.jingdong.app.mall.MainFrameActivity',
+          matches: 'RelativeLayout > ImageView[desc="关闭页面"]',
+          snapshotUrls: 'https://i.gkd.li/import/13258996',
+        },
+      ],
+    },
+    {
+      enable: false,
+      key: 6,
+      name: '首页-底部横幅广告',
+      activityIds: 'com.jingdong.app.mall.MainFrameActivity',
+      rules: 'ImageView < FrameLayout - FrameLayout > ImageView[desc="关闭"]',
+      snapshotUrls: [
+        'https://i.gkd.li/import/13258973',
+        'https://i.gkd.li/import/13258980',
+        'https://i.gkd.li/import/13258981',
       ],
     },
     {
