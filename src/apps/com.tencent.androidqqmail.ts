@@ -13,7 +13,7 @@ export default defineAppConfig({
     },
     {
       key: 0,
-      name: '广告邮件-列表卡片广告',
+      name: '列表卡片广告',
       quickFind: true,
       activityIds: 'com.tencent.qqmail.fragment.base.MailFragmentActivity',
       rules: [
@@ -37,6 +37,7 @@ export default defineAppConfig({
           snapshotUrls: 'https://i.gkd.li/import/12775857',
         },
         {
+          preKeys: [0, 1], // https://github.com/gkd-kit/subscription/issues/1776
           key: 9,
           name: '点击[不感兴趣]',
           matches:
