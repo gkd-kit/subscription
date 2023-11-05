@@ -6,10 +6,12 @@ export default defineAppConfig({
   groups: [
     {
       key: 2,
-      name: '推荐-广告弹窗',
+      name: '广告弹窗',
+      desc: '点击右上角x',
       activityIds: 'com.zhl.bmi.MainActivity',
+      quickFind: true,
       rules:
-        'ImageView[depth=5] <n FrameLayout >2 FrameLayout[index=2] > ImageView',
+        '@ImageView < FrameLayout[childCount=1] <3 FrameLayout <2 FrameLayout < FrameLayout < [id="android:id/content"]',
       snapshotUrls: [
         'https://i.gkd.li/import/13255787',
         'https://i.gkd.li/import/13255786',
