@@ -17,9 +17,15 @@ export default defineAppConfig({
       key: 1,
       name: '版本更新',
       quickFind: true,
-      activityIds: 'com.tmall.wireless.splash.TMSplashActivity',
+      activityIds: [
+        'com.tmall.wireless.splash.TMSplashActivity',
+        'com.tmall.wireless.maintab.module.TMMainTabActivity',
+      ],
       rules: '[id="com.tmall.wireless:id/update_button_cancel"] [text="取消"]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/13162603',
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/13162603', //com.tmall.wireless.splash.TMSplashActivity
+        'https://gkd-kit.gitee.io/import/13258201', //com.tmall.wireless.maintab.module.TMMainTabActivity
+      ],
     },
     {
       enable: false,
@@ -39,6 +45,15 @@ export default defineAppConfig({
         'https://gkd-kit.gitee.io/import/13222500', //com.tmall.wireless.turboweb.container.TurboWebViewActivity
         'https://gkd-kit.gitee.io/import/13222510', //com.tmall.wireless.webview.TMCommonWebViewActivity
       ],
+    },
+    {
+      key: 3,
+      name: '系统通知',
+      matchTime: 10000,
+      actionMaximum: 1,
+      activityIds: 'com.tmall.wireless.messagebox.activity.TMMsgboxMainActivity',
+      rules: 'View[text="开启系统通知"] - View[clickable=true]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/13258215',
     },
   ],
 });
