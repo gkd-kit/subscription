@@ -10,20 +10,16 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
+      quickFind: true,
       rules: [
         {
           key: 0,
-          matches:
-            '@RelativeLayout[desc="跳过"][id!=null] > TextView[text="跳过"][id!=null]',
+          matches: '[text="跳过"]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12668289',
             'https://gkd-kit.gitee.io/import/12519430',
+            'https://gkd-kit.gitee.io/import/13255802',
           ],
-        },
-        {
-          key: 1,
-          matches: 'ImageView[desc="闪屏广告"] + * >2 TextView[text="跳过"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/13255802',
         },
       ],
     },
