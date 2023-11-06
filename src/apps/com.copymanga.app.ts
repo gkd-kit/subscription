@@ -10,9 +10,10 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
+      quickFind: true,
       rules: [
         {
-          matches: '@* > [text *= "跳过" && text.length<6]',
+          matches: '[text^= "跳过"][text.length<6]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12504489',
             'https://gkd-kit.gitee.io/import/12504507',
