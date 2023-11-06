@@ -5,7 +5,7 @@ export default defineAppConfig({
   name: '轻松阅',
   groups: [
     {
-      key: 0,
+      key: -1,
       name: '开屏广告',
       matchTime: 10000,
       actionMaximum: 1,
