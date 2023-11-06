@@ -33,14 +33,14 @@ export default defineAppConfig({
       name: '主页弹窗',
       activityIds: [
         'com.youdao.dict.activity.MainActivity',
-        'com.youdao.dict.activity.DictSplashActivity'
-        ],
+        'com.youdao.dict.activity.DictSplashActivity',
+      ],
       rules: '@ImageView[id="com.youdao.dict:id/iv_close_bt"]',
       quickFind: true,
       snapshotUrls: [
         'https://i.gkd.li/import/12893419',
-        'https://gkd-kit.gitee.io/import/13263801'
-        ],
+        'https://gkd-kit.gitee.io/import/13263801',
+      ],
     },
     {
       key: 3,
