@@ -61,7 +61,7 @@ export default defineAppConfig({
             'https://gkd-kit.gitee.io/import/13233178',
             'https://i.gkd.li/import/13259085',
           ]
-        }
+        },
         {
           activityIds:
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
