@@ -135,4 +135,5 @@ export default defineAppConfig({
       ],
     }
   ],
-});
+}
+);
