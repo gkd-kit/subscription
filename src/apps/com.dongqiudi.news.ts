@@ -21,7 +21,6 @@ export default defineAppConfig({
           ],
         },
         {
-          name: '另一种倒计时广告',
           quickFind: true,
           name: '另一种倒计时广告', // 此广告要点击文字相邻的图片,如果直接点击文字会无反应或者触发广告跳转
           matches:
