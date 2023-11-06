@@ -22,5 +22,15 @@ export default defineAppConfig({
       rules: '[id="com.newcapec.mobile.ncp:id/dialog_oppotion"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12843399',
     },
+    {
+      key: 12,
+      name: '开屏广告',
+      desc: '关闭开屏广告',
+      enable: true,
+      activityIds: 'com.wanxiao.basebusiness.activity.SplashActivity',
+      rules:
+        'LinearLayout[id=`com.newcapec.mobile.ncp:id/layout_ad`] TextView[text=`跳过 `]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/13263321',
+    },
   ],
 });
