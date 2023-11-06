@@ -1,6 +1,4 @@
-import { defineAppConfig } from '../types';
-
-export default defineAppConfig({
+{
   id: 'com.copymanga.app',
   name: '拷貝漫畫',
   groups: [
@@ -12,7 +10,7 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
-          matches: '[text *= "跳过" && text.length<6]',
+          matches: '@* > [text *= "跳过" && text.length<6]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12504489',
             'https://gkd-kit.gitee.io/import/12504507',
@@ -27,7 +25,6 @@ export default defineAppConfig({
       name: '内部弹窗广告',
       matchLauncher: true,
       activityIds: ['com.copymanga.app.MainActivity'],
-
       delay: 500,
       rules: [
         {
@@ -40,7 +37,7 @@ export default defineAppConfig({
         },
         {
           matches: [
-            '[text^="立即" || text*="看"]', //软件正常元素都用的des,只有广告用text
+            '[text^="立即" || text^="领取" || text*="看"]', //软件正常元素都用的des,只有广告用text
             '[depth=6][childCount=1] > ImageView',
           ],
           snapshotUrls: [
@@ -50,14 +47,18 @@ export default defineAppConfig({
             'https://gkd-kit.gitee.io/import/12892156',
             'https://gkd-kit.gitee.io/import/12504501',
             'https://gkd-kit.gitee.io/import/13246786',
+            'https://i.gkd.li/import/13259082', //text^="领取"
           ],
         },
         {
           matches: [
-            '[text="扭动或点击去买买买"]',
-            'LinearLayout + FrameLayout > ImageView',
+            '[text="京东"]',
+            '[_id=20]',
           ],
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/13233178',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/import/13233178',
+            'https://i.gkd.li/import/13259085',
+          ]
         }
         {
           activityIds:
@@ -132,4 +133,4 @@ export default defineAppConfig({
       ],
     }
   ],
-});
+}
