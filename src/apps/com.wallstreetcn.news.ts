@@ -20,6 +20,7 @@ export default defineAppConfig({
       name: '卡片广告',
       desc: '点击关闭, 无后续确认操作',
       activityIds: ['com.wallstreetcn.news.ProxyMainActivity'],
+      quickFind: true,
       rules: [
         {
           matches:
