@@ -8,12 +8,9 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       quickFind: true,
-      matchLauncher: true,
-      activityIds: [
-        'com.ss.android.article.news.activity.MainActivity',
-        'com.bytedance.ugc.UgcDetailInfoActivity',
-        'com.ss.android.splashad.splash.view.SplashAdActivity',
-      ],
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
           matches: '[childCount=1] > [text="跳过广告"]',
@@ -38,6 +35,19 @@ export default defineAppConfig({
             'https://gkd-kit.gitee.io/import/12685000',
             'https://gkd-kit.gitee.io/import/12840104',
           ],
+        },
+      ],
+    },
+    {
+      key: 2,
+      name: '浮窗广告',
+      quickFind: true,
+      activityIds: ['com.ss.android.article.news.activity.MainActivity'],
+      rules: [
+        {
+          matches:
+            'FrameLayout[childCount=2] >1 ImageView[clickable=true][index=0]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/import/13262675'],
         },
       ],
     },
