@@ -29,6 +29,47 @@ export default defineAppConfig({
           snapshotUrls: 'https://i.gkd.li/import/12903095',
         },
       ],
+      
+      
+      key: 1,
+      name: '首页广告',
+      activityIds: [
+        'com.qiekj.user.MainActivity',
+        'com.bbk.launcher2.Launcher',
+        'com.anythink.basead.ui.ATPortraitTranslucentActivity',
+        'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity'
+      ],
+      rules: [
+        {
+          key: 0,
+          matches: [
+            '[name=\"android.widget.ImageView\"][bottom=507||bottom=427]',
+            '[name=\"android.view.ViewGroup\"][bottom=522][clickable=true]'
+          ],
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/snapshot/1699186836571',
+            'https://gkd-kit.gitee.io/snapshot/1699251680882'
+          ]
+        },
+        {
+          key: 1,
+          matches: '[name=\"android.widget.ImageView\"][bottom=507||bottom=427]',
+          snapshotUrls: 'https://gkd-kit.gitee.io/snapshot/1699188053991'
+        },
+        {
+          key: 2,
+          matches: '[id=\"com.qiekj.user:id/anythink_myoffer_btn_close_id\"]',
+          snapshotUrls: ['https://gkd-kit.gitee.io/snapshot/1699183282615']
+        },
+        {
+          key: 3,
+          matches: '[name=\"android.widget.Image\"][bottom=867||bottom=629||bottom=623]',
+          snapshotUrls: [
+            'https://gkd-kit.gitee.io/snapshot/1699252913559',
+            'https://gkd-kit.gitee.io/snapshot/1699188879502'
+          ]
+        }
+      ]
     },
   ],
 });
