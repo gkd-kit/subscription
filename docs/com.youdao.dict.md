@@ -14,7 +14,12 @@
 ## 主页弹窗
 
 - [快照-0](https://i.gkd.li/import/12893419)
+- [快照-1](https://gkd-kit.gitee.io/import/13263801)
 
 ## 学习-弹窗
 
 - [快照-0](https://i.gkd.li/import/12893450)
+
+## VIP-弹窗
+
+- [快照-0](https://gkd-kit.gitee.io/import/13263706)
