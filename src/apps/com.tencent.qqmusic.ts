@@ -31,7 +31,8 @@ export default defineAppConfig({
         {
           key: 0,
           matches:
-            '@LinearLayout[clickable=true] > TextView[text="广告"] + ImageView', // 1688045698846
+            'ImageView[height>0] - RelativeLayout > @LinearLayout[clickable=true] > TextView[text="广告"] + ImageView', // 1688045698846
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13277440', // [height>0] 否则误触
         },
         {
           key: 1,
