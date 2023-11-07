@@ -19,7 +19,11 @@ export default defineAppConfig({
         },
         {
           activityIds: 'com.jincheng.supercaculator.activity.SplashActivity',
-          matches: ['[text^="京东"]', '[_id=20]'],
+          matches: [
+            '[text^="京东"]',
+            '[text^="扭动"]',
+            'ImageView[index=0][depth=9]',
+          ],
           snapshotUrls: ['https://gkd-kit.gitee.io/import/13261870'],
         },
       ],
