@@ -20,15 +20,12 @@ export default defineAppConfig({
     },
     {
       key: 0,
-      name: '弹窗',
+      name: '弹窗广告',
       activityIds: 'io.sbyd.app.ui.book.read.ReadBookActivity',
       rules: [
         {
-          matches: [
-            '[text^="京东"]',
-            '[text^="扭动"]',
-            'ImageView[index=0][depth=9]',
-          ],
+          matches:
+            'TextView < LinearLayout[childCount=2] < FrameLayout[childCount=2] > FrameLayout[childCount=1] > ImageView',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13274336',
         },
       ],
