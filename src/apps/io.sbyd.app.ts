@@ -13,7 +13,7 @@ export default defineAppConfig({
       quickFind: true,
       rules: [
         {
-          matches: '[text="跳过"][text.length<10]',
+          matches: '[text^="跳过"][text.length<10]',
           snapshotUrls: 'https://gkd-kit.gitee.io/import/13261949',
         },
       ],
@@ -24,8 +24,12 @@ export default defineAppConfig({
       activityIds: 'io.sbyd.app.ui.book.read.ReadBookActivity',
       rules: [
         {
-          matches: ['[text^="京东"]', '[_id=20]'],
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/13261949',
+          matches: [
+            '[text^="京东"]',
+            '[text^="扭动"]',
+            'ImageView[index=0][depth=9]',
+          ],
+          snapshotUrls: 'https://gkd-kit.gitee.io/import/13274336',
         },
       ],
     },
