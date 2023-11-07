@@ -7,7 +7,6 @@ export default defineAppConfig({
     {
       key: 1,
       name: '弹窗广告',
-      quickFind: true,
       activityIds:
         'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
       rules: [
