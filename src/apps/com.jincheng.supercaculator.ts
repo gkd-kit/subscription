@@ -19,11 +19,8 @@ export default defineAppConfig({
         },
         {
           activityIds: 'com.jincheng.supercaculator.activity.SplashActivity',
-          matches: [
-            '[text^="京东"]',
-            '[text^="扭动"]',
-            'ImageView[index=0][depth=9]',
-          ],
+          matches:
+            'TextView < LinearLayout[childCount=2] < FrameLayout[childCount=2] > FrameLayout[childCount=1] > ImageView',
           snapshotUrls: ['https://gkd-kit.gitee.io/import/13261870'],
         },
       ],
