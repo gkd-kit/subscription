@@ -5,9 +5,9 @@ export default defineAppConfig({
   name: '全民泡泡超人',
   groups: [
     {
-      key: 1,
+      key: 0,
       name: '开屏广告',
-      matchLauncher: true,
+      quickFind: true,
       matchTime: 15000,
       actionMaximum: 1,
       resetMatch: 'app',
