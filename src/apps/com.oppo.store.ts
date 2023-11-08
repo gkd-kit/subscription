@@ -1,8 +1,8 @@
-import { defineAppConfig } from "../types";
+import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
   id: 'com.oppo.store',
-  name: "OPPO商城",
+  name: 'OPPO商城',
   groups: [
     {
       key: 1,
@@ -18,9 +18,9 @@ export default defineAppConfig({
       key: 2,
       name: '弹窗广告',
       quickFind: true,
-      activityIds: "com.oppo.store.MainActivity",
+      activityIds: 'com.oppo.store.MainActivity',
       rules: 'ImageView[id="com.oppo.store:id/dialog_delete"][desc="关闭"]',
-      snapshotUrls: "https://gkd-kit.gitee.io/import/13295201",
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/13295201',
     },
   ],
 });
