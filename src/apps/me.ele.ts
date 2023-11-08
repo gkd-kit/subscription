@@ -73,5 +73,13 @@ export default defineAppConfig({
       rules: 'bb Button[text="关闭"]',
       snapshotUrls: 'https://i.gkd.li/import/13205301',
     },
+    {
+      key: 6,
+      name: '吃货卡续费弹窗',
+      quickFind: true,
+      activityIds: 'me.ele.component.webcontainer.view.AppUCWebActivity',
+      rules: '@View + View >2 [text="买校园版超级吃货卡"]',
+      snapshotUrls: 'https://i.gkd.li/import/13295007',
+    },
   ],
 });
