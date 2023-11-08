@@ -187,17 +187,33 @@ export default defineAppConfig({
       rules: {
         activityIds: [
           'com.douban.frodo.subject.structure.activity.MovieActivity',
+          'com.huawei.android.launcher.unihome.UniHomeLauncher', //新增ids
         ],
-        matches: [
-          '[text="查看详情"]',
-          'FrameLayout[childCount=5] > FrameLayout > ImageView',
+        matches: ['FrameLayout[childCount=5] > FrameLayout > ImageView'],
+        snapshotUrls: [
+          'https://i.gkd.li/import/13195565',
+          'https://gkd-kit.gitee.io/import/13296656', //新增ids对应快照
         ],
-        snapshotUrls: 'https://i.gkd.li/import/13195565',
       },
     },
     {
       key: 11,
       name: '更新弹窗',
+      quickFind: true,
+      actionMaximum: 1,
+      rules: [
+        {
+          key: 0,
+          activityIds: 'com.douban.frodo.activity.BetaApkDialogActivity',
+          matches: ['[text="新版试用邀请"]', '@[text="取消"] + [text="下载"]'],
+          snapshotUrls: 'https://i.gkd.li/import/13228832',
+        },
+      ],
+    },
+    {
+      key: 12,
+      name: '广告弹窗',
+      desc: '',
       quickFind: true,
       actionMaximum: 1,
       rules: [
