@@ -102,8 +102,11 @@ export default defineAppConfig({
           activityIds:
             'com.jd.lib.cashier.complete.view.CashierCompleteActivity',
           matches:
-            '[id="com.jingdong.app.mall:id/webview"] + [id="com.jingdong.app.mall:id/close"][desc="关闭页面"]',
-          snapshotUrls: 'https://i.gkd.li/import/13218034',
+            '@[desc="关闭页面"] - * >7 WebView[text="老罗直播间"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13218034',
+            'https://gkd-kit.gitee.io/import/13255877',
+          ],
         },
         {
           key: 2,
