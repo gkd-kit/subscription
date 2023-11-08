@@ -30,11 +30,13 @@ export default defineAppConfig({
           quickFind: true,
           key: 1,
           matches: '[text^="跳过"][text.length<=4]',
+          excludeMatches: '[id="com.coolapk.market:id/item_view"]',
           snapshotUrls: [
             'https://gkd-kit.gitee.io/import/12917990',
             'https://gkd-kit.gitee.io/import/13211392',
             'https://i.gkd.li/import/13247733', // 误触
             'https://i.gkd.li/import/13247782', // 可能误触
+            'https://i.gkd.li/import/13296816', // snapshot of excludeMatches
           ],
         },
       ],
