@@ -3,6 +3,7 @@ import { defineAppConfig } from '../types';
 export default defineAppConfig({
   id: 'com.coolapk.market',
   name: '酷安',
+  deprecatedKeys: [2],
   groups: [
     {
       key: -1,
@@ -102,6 +103,5 @@ export default defineAppConfig({
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12503762',
       rules: '[text=`立即更新`] - [text=`取消`]',
     },
-    // key=2 曾经被使用,不可再用
   ],
 });
