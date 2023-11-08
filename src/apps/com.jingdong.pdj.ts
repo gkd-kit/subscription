@@ -5,6 +5,16 @@ export default defineAppConfig({
   name: '京东到家',
   groups: [
     {
+      key: 0,
+      name: '开屏广告',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      quickFind: true,
+      rules: '[text="跳过"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/13293044',
+    },
+    {
       key: 1,
       name: '首页广告弹窗',
       matchTime: 10000,
