@@ -101,8 +101,7 @@ export default defineAppConfig({
           key: 1,
           activityIds:
             'com.jd.lib.cashier.complete.view.CashierCompleteActivity',
-          matches:
-            '@[desc="关闭页面"] - * >7 WebView[text="老罗直播间"]',
+          matches: '@[desc="关闭页面"] - * >7 WebView[text="老罗直播间"]',
           snapshotUrls: [
             'https://i.gkd.li/import/13218034',
             'https://gkd-kit.gitee.io/import/13255877',
