@@ -124,7 +124,7 @@ export default defineAppConfig({
       activityIds: ['com.tencent.mm.plugin.webview.ui.tools.MMWebViewUI'],
       rules: [
         {
-          matches: 'Button[text="登 录"]',
+          matches: '[text="微信读书网页版"] +3 Button[text="登 录"]',
           snapshotUrls: 'https://i.gkd.li/import/12506197',
         },
         {
