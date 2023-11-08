@@ -366,5 +366,15 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      enable: false,
+      key: 16,
+      name: '小程序-京东购物',
+      desc: '低价包邮广告',
+      actionMaximum: 1,
+      activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI01',
+      rules: '@Image -n * > View[text="可横向滚动"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/13298294',
+    },
   ],
 });
