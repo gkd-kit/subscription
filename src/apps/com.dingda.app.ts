@@ -13,7 +13,10 @@ export default defineAppConfig({
       quickFind: true,
       rules: [
         {
-          matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
+          matches: [
+            '[id="com.dingda.app:id/adContent"]',
+            '[id!=null][id="com.byted.pangle:id/tt_splash_skip_btn"]', // 不能 quickFind
+          ],
           snapshotUrls: 'https://i.gkd.li/import/13290327',
         },
       ],
