@@ -182,14 +182,18 @@ export default defineAppConfig({
     },
     {
       key: 10,
-      name: '弹窗',
-      desc: '浏览详情时弹窗广告',
+      name: '弹窗广告',
+      desc: '浏览详情时弹窗广告,点击右上角x',
       matchLauncher: true,
+      quickFind: true,
       rules: {
         activityIds: [
           'com.douban.frodo.subject.structure.activity.MovieActivity',
         ],
-        matches: ['FrameLayout[childCount=5] > FrameLayout > ImageView'],
+        matches: [
+          '[text*="看"][text="查看详情"||text^="去"&&text$="看看"]',
+          'FrameLayout[childCount=5] > FrameLayout[childCount=1] > ImageView',
+        ],
         snapshotUrls: [
           'https://i.gkd.li/import/13195565',
           'https://gkd-kit.gitee.io/import/13296656', //新增ids对应快照
