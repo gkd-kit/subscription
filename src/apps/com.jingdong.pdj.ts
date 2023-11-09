@@ -11,7 +11,7 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       quickFind: true,
-      rules: '[text="跳过"]',
+      rules: '[id="com.jingdong.pdj:id/adv_exit_bnt"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13293044',
     },
     {
