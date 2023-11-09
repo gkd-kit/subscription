@@ -184,10 +184,10 @@ export default defineAppConfig({
       key: 10,
       name: '弹窗',
       desc: '浏览详情时弹窗广告',
+      matchLauncher: true,
       rules: {
         activityIds: [
           'com.douban.frodo.subject.structure.activity.MovieActivity',
-          'com.huawei.android.launcher.unihome.UniHomeLauncher', //新增ids
         ],
         matches: ['FrameLayout[childCount=5] > FrameLayout > ImageView'],
         snapshotUrls: [
@@ -212,8 +212,7 @@ export default defineAppConfig({
     },
     {
       key: 12,
-      name: '广告弹窗',
-      desc: '',
+      name: '新版试用弹窗',
       quickFind: true,
       actionMaximum: 1,
       rules: [
