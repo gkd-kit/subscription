@@ -81,6 +81,7 @@ export default defineAppConfig({
           ],
         },
         {
+          preKeys: [1],
           key: 3,
           name: '选择关闭原因-点击不感兴趣',
           matches: [
@@ -102,6 +103,14 @@ export default defineAppConfig({
       activityIds: 'com.coolapk.market.view.main.MainActivity',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/12503762',
       rules: '[text=`立即更新`] - [text=`取消`]',
+    },
+    {
+      key: 3,
+      quickFind: true,
+      name: '关闭推送通知',
+      activityIds: 'com.coolapk.market.view.main.MainActivity',
+      rules: '[text="以后再说"] + [text="去开启"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/13296465',
     },
   ],
 });
