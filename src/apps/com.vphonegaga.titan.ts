@@ -13,5 +13,13 @@ export default defineAppConfig({
       rules: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
       snapshotUrls: 'https://i.gkd.li/import/13296354',
     },
+    {
+      key: 1,
+      name: '广告弹窗',
+      quickFind: true,
+      activityIds: 'com.vphonegaga.titan.MyNativeActivity1',
+      rules: '@Image < View +2 [text="反馈"]',
+      snapshotUrls: 'https://i.gkd.li/import/13292911',
+    },
   ],
 });
