@@ -7,16 +7,12 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
+      quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      quickFind: true,
-      rules: [
-        {
-          matches: '[text="跳过"][text.length<10]',
-          snapshotUrls: 'https://i.gkd.li/import/13302895',
-        },
-      ],
+      rules: '[id="com.excean.gspace:id/tv_jump"]',
+      snapshotUrls: 'https://i.gkd.li/import/13296144',
     },
     {
       key: 1,
@@ -25,7 +21,7 @@ export default defineAppConfig({
       rules: [
         {
           matches:
-            'FrameLayout[childCount=2] > LinearLayout + FrameLayout > ImageView',
+            'FrameLayout[childCount=2] > LinearLayout[childCount=2] + FrameLayout[childCount=1] > ImageView',
           snapshotUrls: 'https://i.gkd.li/import/13302890',
         },
       ],
