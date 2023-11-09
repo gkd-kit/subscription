@@ -13,7 +13,7 @@ export default defineAppConfig({
       quickFind: true,
       rules: [
         {
-          matches: '[text="跳过"][text.length<10]',
+          matches: '[id="com.aiwu.market:id/tv_red_skip"]',
           snapshotUrls: 'https://i.gkd.li/import/13295919',
         },
       ],
