@@ -21,12 +21,33 @@ export default defineAppConfig({
     {
       key: 1,
       name: '浮窗广告',
-      desc: '关闭免费20分钟提示  ',
+      desc: '关闭右侧飘窗广告',
+      quickFind: true,
       activityIds:
         'com.tencent.qqmusiclite.activity.player.MusicPlayerActivity',
       rules:
         '[id="com.miui.player:id/free_mode_tips_layout"] + [id="com.miui.player:id/iv_close"]',
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13303283',
+    },
+    {
+      key: 2,
+      name: '横幅广告',
+      desc: '关闭播放页面横幅广告',
+      quickFind: true,
+      activityIds:
+        'com.tencent.qqmusiclite.activity.player.MusicPlayerActivity',
+      rules: '[id="com.miui.player:id/ad_skip_text"][text="关闭"]',
+      snapshotUrls: [
+        'https://gkd-kit.gitee.io/import/13304347', // 倒计时
+        'https://gkd-kit.gitee.io/import/13304344', // 可关闭
+      ],
+    },
+    {
+      key: 3,
+      name: '弹窗广告_底部弹窗',
+      activityIds: 'com.tencent.qqmusiccommon.hybrid.HybridViewActivity',
+      rules: 'ViewGroup > @ViewGroup + ViewGroup[childCount=5]',
+      snapshotUrls: ['https://gkd-kit.gitee.io/import/13304343'],
     },
     {
       enable: false,
