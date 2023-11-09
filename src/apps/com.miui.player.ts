@@ -7,16 +7,26 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: [
-        'com.tencent.qqmusiclite.activity.MainActivity',
-        'com.tencent.qqmusiclite.activity.SplashAdActivity',
-      ],
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      quickFind: true,
       rules:
         '@TextView[text$=`跳过`] + TextView[id="com.miui.player:id/ad_view"]',
       snapshotUrls: [
         'https://gkd-kit.gitee.io/import/12700962',
         'https://i.gkd.li/import/12852707',
       ],
+    },
+    {
+      key: 1,
+      name: '浮窗广告',
+      desc: '关闭免费20分钟提示  ',
+      activityIds:
+        'com.tencent.qqmusiclite.activity.player.MusicPlayerActivity',
+      rules:
+        '[id="com.miui.player:id/free_mode_tips_layout"] + [id="com.miui.player:id/iv_close"]',
+      snapshotUrls: 'https://gkd-kit.gitee.io/import/13303283',
     },
     {
       enable: false,
