@@ -373,9 +373,11 @@ export default defineAppConfig({
       desc: '低价包邮广告',
       actionDelay: 500,
       actionMaximum: 1,
-      action: 'clickCenter',
       activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI01',
-      rules: '@Image -n * > View[text="可横向滚动"]',
+      rules: {
+        matches: '@Image -n * > View[text="可横向滚动"]',
+        action: 'clickCenter',
+      },
       snapshotUrls: 'https://gkd-kit.gitee.io/import/13298294',
     },
   ],
