@@ -53,6 +53,7 @@ type CommonProps = {
   delay?: number;
 
   /**
+   * 当节点支持qucikFind时，节点属性列表顶部将出现'可快速查找'标识,例：[id="com.ct.client:id/tvNo"](https://i.gkd.li/import/13316168)
    *
    * 如果开启, 此规则下的所有 `末尾属性选择器`的`第一个属性选择表达式`符合下面的结构之一的选择器 将使用快速查找
    *
