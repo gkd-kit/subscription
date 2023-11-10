@@ -9,7 +9,6 @@ export default defineAppConfig({
       name: '开屏广告',
       desc: '点击跳过',
       matchLauncher: true,
-      quickFind: true,
       activityIds: 'com.huachenjie.shandong_school.splash.SplashActivity',
       rules: [
         {
