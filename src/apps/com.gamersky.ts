@@ -15,7 +15,7 @@ export default defineAppConfig({
         },
         {
           matches: '[id="com.gamersky:id/jump"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/13038181',
+          snapshotUrls: 'https://i.gkd.li/import/13038181',
         },
       ],
     },

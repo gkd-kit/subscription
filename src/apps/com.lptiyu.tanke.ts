@@ -7,11 +7,14 @@ export default defineAppConfig({
     {
       key: -1,
       name: '开屏广告',
-      activityIds: 'com.lptiyu.tanke.activities.splash.SplashActivity',
-      matchLauncher: true,
-      rules:
-        '[id="com.lptiyu.tanke:id/splash_full_tk_play_card_view"] >n [text="跳过"]',
-      snapshotUrls: 'https://i.gkd.li/import/13070420',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: '[text="跳过"][text.length<10]',
+      snapshotUrls: [
+        'https://i.gkd.li/import/13070420',
+        'https://i.gkd.li/import/13293751',
+      ],
     },
     {
       key: 0,
@@ -23,7 +26,7 @@ export default defineAppConfig({
           matches:
             '[id="com.lptiyu.tanke:id/interact_ad_root"] >n [id="com.lptiyu.tanke:id/iv_close"]',
           snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/12829816',
+            'https://i.gkd.li/import/12829816',
             'https://i.gkd.li/import/12869344',
           ],
         },

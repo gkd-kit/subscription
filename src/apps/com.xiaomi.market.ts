@@ -39,40 +39,41 @@ export default defineAppConfig({
           key: 0,
           matches:
             '[id="com.xiaomi.market:id/fold_text"][text^="查看全部升级"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12674261',
+          snapshotUrls: 'https://i.gkd.li/import/12674261',
         },
         {
           key: 1,
           matches:
             '[id="com.xiaomi.market:id/expandable_textview"] + [id="com.xiaomi.market:id/expand_button"][desc="更多"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12674264',
+          snapshotUrls: 'https://i.gkd.li/import/12674264',
         },
         {
           preKeys: [1],
           key: 2,
           matches:
             '@[id="com.xiaomi.market:id/ignore_this"][text="忽略本次"] + [id="com.xiaomi.market:id/ignore_permanently"][text="永久忽略"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12674269',
+          snapshotUrls: 'https://i.gkd.li/import/12674269',
         },
       ],
     },
     {
-      enable: false,
       key: 11,
-      name: '请求开启推送弹窗',
+      name: '请求通知权限提示弹窗',
       desc: '自动点击关闭按钮',
       quickFind: true,
-      activityIds: [
-        'com.xiaomi.market.ui.UpdateListActivity',
-        'com.miui.home.launcher.Launcher',
-      ],
+      matchLauncher: true,
+      activityIds: 'com.xiaomi.market.ui.UpdateListActivity',
       rules: [
         {
+          key: 0,
+          name: '开启推送',
           matches:
             '@[id="com.xiaomi.market:id/dialog_cancel"] - LinearLayout > [id="com.xiaomi.market:id/btn_start_push"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12714980',
+          snapshotUrls: 'https://i.gkd.li/import/12714980',
         },
         {
+          key: 1,
+          name: '开启通知栏提醒',
           matches: 'Button[text="立即开启"] - Button[text="不了，谢谢"]',
           snapshotUrls: 'https://i.gkd.li/import/13197306',
         },
