@@ -228,5 +228,17 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 13,
+      name: '详情页广告',
+      rules: [
+        {
+          activityIds: 'com.huawei.android.launcher.unihome.UniHomeLauncher',
+          matches:
+            '[text^="扭动或点击"] <n FrameLayout -5 * ImageView[depth=8]',
+          snapshotUrls: 'https://i.gkd.li/import/13318902',
+        },
+      ],
+    },
   ],
 });
