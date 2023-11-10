@@ -16,8 +16,8 @@ export default defineAppConfig({
         action: 'clickCenter',
       },
       snapshotUrls: [
-        'https://gkd-kit.gitee.io/import/12814007',
-        'https://gkd-kit.gitee.io/import/12819351',
+        'https://i.gkd.li/import/12814007',
+        'https://i.gkd.li/import/12819351',
       ],
     },
   ],

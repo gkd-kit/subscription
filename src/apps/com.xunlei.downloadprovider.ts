@@ -11,7 +11,7 @@ export default defineAppConfig({
       quickFind: true,
       activityIds: 'com.xunlei.downloadprovider.launch.LaunchActivity',
       rules: 'TextView[text^="跳过"]',
-      snapshotUrls: 'https://gkd-kit.gitee.io/import/12707693',
+      snapshotUrls: 'https://i.gkd.li/import/12707693',
     },
     {
       key: 1,
@@ -24,7 +24,7 @@ export default defineAppConfig({
           key: 0,
           matches:
             '[id="com.xunlei.downloadprovider:id/hermes_ad_banner_negative"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12707701',
+          snapshotUrls: 'https://i.gkd.li/import/12707701',
         },
         {
           preKeys: [0],
@@ -33,8 +33,8 @@ export default defineAppConfig({
           matches:
             '[id="com.xunlei.downloadprovider:id/feedback_not_interested_layout"]',
           snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/12707717', // activityId: 'com.xunlei.downloadprovider.download.taskdetails.newui.DownloadDetailsActivity',
-            'https://gkd-kit.gitee.io/import/12707702', // activityId: 'com.xunlei.downloadprovider.feedback.view'
+            'https://i.gkd.li/import/12707717', // activityId: 'com.xunlei.downloadprovider.download.taskdetails.newui.DownloadDetailsActivity',
+            'https://i.gkd.li/import/12707702', // activityId: 'com.xunlei.downloadprovider.feedback.view'
           ],
         },
         {
@@ -63,14 +63,14 @@ export default defineAppConfig({
             'com.xunlei.downloadprovider.download.taskdetails.newui.DownloadDetailsActivity',
           matches:
             '[id="com.xunlei.downloadprovider:id/title_tv"] + [id="com.xunlei.downloadprovider:id/more"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12707701',
+          snapshotUrls: 'https://i.gkd.li/import/12707701',
         },
         {
           preKeys: [0],
           key: 1,
           activityIds: 'com.xunlei.downloadprovider.download.center.newcenter',
           matches: '[id="com.xunlei.downloadprovider:id/close_ad"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12707710',
+          snapshotUrls: 'https://i.gkd.li/import/12707710',
         },
       ],
     },
@@ -87,7 +87,7 @@ export default defineAppConfig({
           matches: '@[text="关闭"] +n * >n [text*="广告"]',
           snapshotUrls: [
             'https://i.gkd.li/import/12868648',
-            'https://gkd-kit.gitee.io/import/12879372',
+            'https://i.gkd.li/import/12879372',
             'https://i.gkd.li/import/12882366',
             'https://i.gkd.li/import/12892871',
           ],
@@ -99,11 +99,12 @@ export default defineAppConfig({
           activityIds:
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
           matches:
-            'Image[text=""] < @View + View +n View > View > TextView[text="广告"]',
+            'Image[text=""] < @View + View +n View > View > TextView[text$="广告"][text.length<=10]',
           delay: 1000,
           snapshotUrls: [
             'https://i.gkd.li/import/12868667',
             'https://i.gkd.li/import/12881946',
+            'https://i.gkd.li/import/13295179',
           ],
         },
 
@@ -161,7 +162,7 @@ export default defineAppConfig({
           activityIds: 'com.xunlei.downloadprovider.frame.MainTabActivity',
           matches:
             'TextView[text="广告"] <n ViewGroup -2 ViewGroup > @ViewGroup',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12879452',
+          snapshotUrls: 'https://i.gkd.li/import/12879452',
         },
       ],
     },
@@ -226,7 +227,7 @@ export default defineAppConfig({
           key: 0,
           activityIds: 'com.xunlei.downloadprovider.homepage.member',
           matches: '[id="com.xunlei.downloadprovider:id/close_btn"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12707698',
+          snapshotUrls: 'https://i.gkd.li/import/12707698',
         },
         {
           key: 1,
@@ -247,7 +248,7 @@ export default defineAppConfig({
           activityIds: 'com.xunlei.downloadprovider.frame.MainTabActivity',
           matches:
             '[text="您的会员已过期"] < LinearLayout +n ImageView[desc="迅雷"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/13259268',
+          snapshotUrls: 'https://i.gkd.li/import/13259268',
         },
       ],
     },
