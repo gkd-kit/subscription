@@ -28,7 +28,7 @@ export default defineAppConfig({
       name: '更新弹窗',
       matchLauncher: true,
       activityIds: [
-        'com.ss.android.mine.BaseSettingActivity'
+        'com.ss.android.mine.BaseSettingActivity',
         'com.ss.android.article.base.feature.ugc.story.StoryVideoActivity',
       ],
       rules: [
