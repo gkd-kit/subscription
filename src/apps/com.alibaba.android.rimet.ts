@@ -32,7 +32,7 @@ export default defineAppConfig({
       name: '自动点击原图',
       rules: [
         {
-          key: 1,
+          key: 0,
           actionMaximum:1,
           activityIds: 'com.alibaba.android.dingtalk.photoui.activitys.AlbumActivity',
           matches: '[text^="("&&text$=")"] - [text="原图"]',
