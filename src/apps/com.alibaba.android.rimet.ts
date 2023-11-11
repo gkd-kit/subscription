@@ -33,7 +33,7 @@ export default defineAppConfig({
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
-      resetMatch: "app",
+      resetMatch: 'app',
       activityIds: 'com.bbk.launcher2.Launcher',
       rules: [
         {
@@ -41,7 +41,7 @@ export default defineAppConfig({
           matches:
             'ImageView < FrameLayout + FrameLayout > [id="com.alibaba.android.rimet:id/icft_close"]',
           snapshotUrls: 'https://i.gkd.li/import/13325125',
-          action: "clickCenter",
+          action: 'clickCenter',
         },
       ],
     },
@@ -52,14 +52,14 @@ export default defineAppConfig({
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
-      resetMatch: "app",
+      resetMatch: 'app',
       activityIds: 'com.bbk.launcher2.Launcher',
       rules: [
         {
           key: 0,
           matches:
             '@FrameLayout[id="com.alibaba.android.rimet:id/layout_close"] -2 TextView[text="文件即将过期请备份"]',
-          action: "clickCenter",
+          action: 'clickCenter',
           snapshotUrls: 'https://i.gkd.li/import/13325125',
         },
       ],
