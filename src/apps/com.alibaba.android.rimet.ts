@@ -33,15 +33,15 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          actionMaximum:1,
-          activityIds: 'com.alibaba.android.dingtalk.photoui.activitys.AlbumActivity',
+          actionMaximum: 1,
+          activityIds:
+            'com.alibaba.android.dingtalk.photoui.activitys.AlbumActivity',
           matches: '[text^="("&&text$=")"] - [text="原图"]',
           snapshotUrls: [
-            'https://i.gkd.li/import/13309648',//未选中
-            'https://i.gkd.li/import/13309845',//已选中
-          ]
+            'https://i.gkd.li/import/13309648', //未选中
+            'https://i.gkd.li/import/13309845', //已选中
+          ],
         },
-        
       ],
     },
   ],
