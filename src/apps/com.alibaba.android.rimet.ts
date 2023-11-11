@@ -26,5 +26,23 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      enable: false,
+      key: 1,
+      name: '自动点击原图',
+      rules: [
+        {
+          key: 1,
+          actionMaximum:1,
+          activityIds: 'com.alibaba.android.dingtalk.photoui.activitys.AlbumActivity',
+          matches: '[text^="("&&text$=")"] - [text="原图"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13309648',//未选中
+            'https://i.gkd.li/import/13309845',//已选中
+          ]
+        },
+        
+      ],
+    },
   ],
 });
