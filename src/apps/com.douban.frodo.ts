@@ -1,4 +1,3 @@
-import { matches } from 'lodash';
 import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
@@ -199,10 +198,6 @@ export default defineAppConfig({
         {
           key: 1,
           name: '腾讯广告-2',
-          activityIds: [
-            'com.huawei.android.launcher.unihome.UniHomeLauncher',
-            'com.miui.home.launcher.Launcher',
-          ],
           matches:
             'ImageView -n FrameLayout[childCount=2] > FrameLayout > FrameLayout > ImageView',
           snapshotUrls: [
