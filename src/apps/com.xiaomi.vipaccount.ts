@@ -11,7 +11,7 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: 'id="com.xiaomi.vipaccount:id/tv_skip"',
+      rules: '[id="com.xiaomi.vipaccount:id/tv_skip"]',
       snapshotUrls: 'https://i.gkd.li/import/12841023',
     },
     {
