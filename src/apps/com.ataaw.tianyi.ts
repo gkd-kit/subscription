@@ -17,7 +17,7 @@ export default defineAppConfig({
           matches:
             '[text^="发现新版本"] < RelativeLayout + LinearLayout [id="com.ataaw.tianyi:id/ignore"]',
           snapshotUrls: 'https://i.gkd.li/import/13327303',
-         },
+        },
       ],
     },
   ],
