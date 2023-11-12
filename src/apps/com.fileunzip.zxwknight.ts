@@ -19,5 +19,13 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 2,
+      name: '升级专业版弹窗',
+      activityIds: 'com.fileunzip.zxwknight.activity.MainActivity',
+      rules:
+        '@[id="com.fileunzip.zxwknight:id/ziputil_dialog_imageview"] +n [text="升级到专业版"]',
+      snapshotUrls: 'https://i.gkd.li/import/13328212',
+    },
   ],
 });
