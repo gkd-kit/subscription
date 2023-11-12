@@ -7,13 +7,13 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      //quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       rules: [
         {
           key: 0,
+          quickFind: true,
           name: '【跳过+倒计时】型',
           matches: 'TextView[text^="跳过"][text.length<=10]',
           snapshotUrls: [
@@ -42,7 +42,7 @@ export default defineAppConfig({
       enable: false,
       key: 2,
       name: '信息流广告',
-      desc: '像正常内容的广告,关闭时弹窗选原因',
+      desc: '推荐帖子列表,评论区列表:像正常内容的广告,关闭时弹窗选原因',
       activityIds: [
         'com.baidu.tieba.pb.pb.main.PbActivity',
         'com.baidu.tieba.frs.FrsActivity',
@@ -84,6 +84,8 @@ export default defineAppConfig({
         'com.baidu.tieba.tblauncher.MainTabActivity',
         'com.baidu.tieba.frs.FrsActivity',
       ],
+      matchTime: 10000,
+      actionMaximum: 1,
       rules: [
         {
           key: 1,
@@ -113,7 +115,7 @@ export default defineAppConfig({
         {
           key: 0,
           matches:
-            'LinearLayout > RelativeLayout > ImageView[id=null][clickable=true]',
+            'LinearLayout > RelativeLayout[id!=null][clickable=false] > ImageView[id=null][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/12775882',
         },
         {
