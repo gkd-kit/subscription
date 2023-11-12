@@ -7,19 +7,19 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      matchLauncher: true,
       quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
           key: 0,
-          activityIds: 'com.alibaba.android.rimet.biz.SplashActivity',
           matches:
-            '[id="com.alibaba.android.rimet:id/btn_check_detail"||text^="跳过"]',
+            '[id="com.alibaba.android.rimet:id/btn_check_detail"][text^="跳过"]',
           snapshotUrls: 'https://i.gkd.li/import/12506211',
         },
         {
           key: 1,
-          activityIds: 'com.alibaba.android.rimet.biz.SplashAdvertiseActivity',
           matches:
             '[id="com.alibaba.android.rimet:id/splash_advertise_pass_text"]',
           snapshotUrls: 'https://i.gkd.li/import/12837220',
@@ -34,7 +34,6 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'com.bbk.launcher2.Launcher',
       rules: [
         {
           key: 0,
@@ -53,7 +52,6 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'com.bbk.launcher2.Launcher',
       rules: [
         {
           key: 0,
