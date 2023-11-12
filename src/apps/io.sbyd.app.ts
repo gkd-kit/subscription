@@ -14,7 +14,7 @@ export default defineAppConfig({
       rules: [
         {
           matches: '[text^="跳过"][text.length<10]',
-          snapshotUrls: 'https://i.gkd.li/import/import/13261949',
+          snapshotUrls: 'https://i.gkd.li/import/13261949',
         },
       ],
     },
@@ -33,7 +33,7 @@ export default defineAppConfig({
           key: 2,
           matches: [
             '[text^="立即" || text^="查看" || text^="领取"][text.length=4]', // 立即抢购,立即下载,立即申请,查看详情,领取优惠
-            '[depth=6][childCount=1] > ImageView[text=null][visibleToUser=true]', // 非广告页面下没有这种节点,不会误触
+            '[id="android:id/content"] >2 FrameLayout[childCount=3||childCount=2] > FrameLayout[childCount=5||childCount=6||childCount=8] > FrameLayout[childCount=1] > ImageView[text=null][visibleToUser=true]', // 非广告页面下没有这种节点,不会误触
           ],
           snapshotUrls: [
             'https://i.gkd.li/import/13302326',
