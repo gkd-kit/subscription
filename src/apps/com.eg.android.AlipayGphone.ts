@@ -73,7 +73,7 @@ export default defineAppConfig({
       activityIds: 'com.alipay.android.msp.ui.views.MspContainerActivity',
       rules: [
         {
-          '@TextView[text="关闭"] < * <3 * < * + * >3 TextView[text="设置支付宝小组件"]',
+          matches: '@TextView[text="关闭"] < * <3 * < * + * >3 TextView[text="设置支付宝小组件"]',
           action: 'clickCenter',
           snapshotUrls: 'https://i.gkd.li/import/13327349',
         },
