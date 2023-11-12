@@ -3,6 +3,7 @@ import { defineAppConfig } from '../types';
 export default defineAppConfig({
   id: 'com.baidu.tieba',
   name: '百度贴吧',
+  deprecatedKeys: [4],
   groups: [
     {
       key: 0,
@@ -74,7 +75,6 @@ export default defineAppConfig({
       rules:
         'TextView[text=`广告`] <n FrameLayout <n LinearLayout - RelativeLayout @FrameLayout > ImageView', // 需要补充快照
     },
-    // key=4 的规则组已经删除, 后续不可添加 key=4 的规则组
     {
       key: 5,
       name: '帖子评论区广告卡片',
@@ -138,15 +138,12 @@ export default defineAppConfig({
     },
     {
       key: 9,
-      name: '应用内广告弹窗',
-      activityIds: [
-        'com.baidu.tbadk.browser.TBWebContainerActivity',
-        'com.baidu.tieba.tblauncher.MainTabActivity',
-      ],
+      name: '广告弹窗',
       rules: [
         {
           key: 0,
           name: '点击右上角x关闭',
+          activityIds: 'com.baidu.tbadk.browser.TBWebContainerActivity',
           matches:
             'View[childCount=3] > @View[clickable=true][childCount=1] > Image',
           snapshotUrls: [
@@ -157,9 +154,16 @@ export default defineAppConfig({
         {
           key: 1,
           name: '点击正下方x关闭',
+          activityIds: [
+            'com.baidu.tieba.tblauncher.MainTabActivity',
+            'com.baidu.tieba.LogoActivity',
+          ],
           matches:
             '@TextView[clickable=true && text=null] - FrameLayout TextView[text="广告"]',
-          snapshotUrls: 'https://i.gkd.li/import/13168383',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13168383',
+            'https://i.gkd.li/import/13328246',
+          ],
         },
       ],
     },
