@@ -29,5 +29,13 @@ export default defineAppConfig({
       rules: '[text="closeGray"][clickable=true]',
       snapshotUrls: 'https://i.gkd.li/import/12642459',
     },
+    {
+      enable: false,
+      key: 3,
+      name: '签到弹窗',
+      activityIds: 'com.xiaomi.vipaccount.newbrowser.NormalWebActivity',
+      rules: '[text="签到赢权益"] +n Image[text*="cancel_circle"]',
+      snapshotUrls: 'https://i.gkd.li/import/13328271',
+    },
   ],
 });
