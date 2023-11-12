@@ -23,7 +23,8 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       activityIds: 'com.ddyc.lotterytool.module.main.MainActivity',
-      rules: 'ImageView - ImageButton[id="com.ddyc.lotterytool:id/arg"][text=null]',
+      rules:
+        'ImageView - ImageButton[id="com.ddyc.lotterytool:id/arg"][text=null]',
       snapshotUrls: 'https://i.gkd.li/import/13324555',
     },
     {
