@@ -57,7 +57,7 @@ export default defineAppConfig({
       enable: false,
       key: 3,
       name: '版本更新提示',
-      desc: '选择稍后再说'
+      desc: '选择稍后再说',
       quickFind: true,
       activityIds: 'com.alipay.mobile.alipassapp.alkb.kb.ALPMainPage63',
       rules:
@@ -68,7 +68,7 @@ export default defineAppConfig({
       enable: false,
       key: 4,
       name: '设置支付宝小组件',
-      desc: '点击关闭'
+      desc: '点击关闭',
       quickFind: true,
       action: "clickCenter",
       activityIds: 'com.alipay.android.msp.ui.views.MspContainerActivity',
