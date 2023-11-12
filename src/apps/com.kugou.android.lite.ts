@@ -10,11 +10,21 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules:
-        '[text*="跳过" && text.length<=10 || desc*="跳过" && desc.length<=10]',
-      snapshotUrls: [
-        'https://i.gkd.li/import/12919282',
-        'https://i.gkd.li/import/13324363',
+      rules: [
+        {
+          key: 0,
+          quickFind: true,
+          matches: '[text*="跳过"][text.length<=10]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13324363',
+            'https://i.gkd.li/import/13318737',
+          ],
+        },
+        {
+          key: 1,
+          matches: '[desc*="跳过" && desc.length<=10]',
+          snapshotUrls: 'https://i.gkd.li/import/12919282',
+        },
       ],
     },
   ],
