@@ -203,8 +203,11 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'activity',
       rules:
-        '[text="看到这了，进吧逛逛呗"] < LinearLayout + LinearLayout ImageView[clickable=true]',
-      snapshotUrls: 'https://i.gkd.li/import/13322337',
+        'TextView[text!=null] < LinearLayout + LinearLayout > View + ImageView[clickable=true]',
+      snapshotUrls: [
+        'https://i.gkd.li/import/13322337',
+        'https://i.gkd.li/import/13328738',
+      ],
     },
   ],
 });
