@@ -233,9 +233,12 @@ export default defineAppConfig({
       name: '详情页广告',
       rules: [
         {
-          activityIds: 'com.huawei.android.launcher.unihome.UniHomeLauncher',
-          matches:
-            '[text^="扭动或点击"] <n FrameLayout -5 * ImageView[depth=8]',
+          matchLauncher: true,
+          quickFind: true,
+          matches: [
+            '[text^="扭动或点击"]',
+            '[text^="扭动或点击"] <n FrameLayout[childCount=4] -5 FrameLayout[childCount=2] > FrameLayout[childCount=3] > FrameLayout[childCount=1] > ImageView[id=null]',
+          ],
           snapshotUrls: 'https://i.gkd.li/import/13318902',
         },
       ],
