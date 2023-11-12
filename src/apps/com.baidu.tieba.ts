@@ -101,11 +101,14 @@ export default defineAppConfig({
         },
         {
           key: 2,
-          matches:
-            'TextView[text$="广告"] < RelativeLayout <n LinearLayout - RelativeLayout >n @FrameLayout > ImageView[id=null][desc=null]',
+          matches: [
+            'LinearLayout > RelativeLayout > TextView[text$="广告"][visibleToUser=true]',
+            'RelativeLayout > LinearLayout > @FrameLayout > ImageView',
+          ],
           snapshotUrls: [
             'https://i.gkd.li/import/12775916',
             'https://i.gkd.li/import/12775892', // 指定点击目标为具备 clickable=true 属性的 @FrameLayout，防止在这个快照误触点击收藏
+            'https://i.gkd.li/import/13328300',
           ],
         },
       ],
