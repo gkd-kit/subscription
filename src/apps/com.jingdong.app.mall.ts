@@ -118,7 +118,11 @@ export default defineAppConfig({
           key: 3,
           activityIds: 'com.jingdong.app.mall.MainFrameActivity',
           matches: 'RelativeLayout > ImageView[desc="关闭页面"]',
-          snapshotUrls: 'https://i.gkd.li/import/13258996',
+          excludeMatches: 'ImageView[desc="关闭页面"] - [text="优惠券"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13258996',
+            'https://i.gkd.li/import/13336847', // 增加excludeMatches: 'ImageView[desc="关闭页面"] - [text="优惠券"]', 避免在该快照误触
+          ],
         },
       ],
     },
