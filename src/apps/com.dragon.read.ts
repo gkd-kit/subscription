@@ -60,20 +60,12 @@ export default defineAppConfig({
       ],
       rules: [
         {
-          key: 1,
-          name: '红包',
-          desc: '关闭右侧悬浮红包提示',
           matches:
-            '[id="android:id/content"] > FrameLayout > RelativeLayout[childCount=1][clickable=true] > RelativeLayout[childCount=3] > ImageView[id!=null][clickable=true]',
-          snapshotUrls: 'https://i.gkd.li/import/12716506',
-        },
-        {
-          key: 2,
-          name: '小说推荐',
-          desc: '关闭右侧悬浮小说推荐',
-          matches:
-            '[id="android:id/content"] >2 RelativeLayout >2 ImageView[id!=null][clickable=true]',
-          snapshotUrls: 'https://i.gkd.li/import/13318796',
+            '[id="android:id/content"] > FrameLayout[childCount=1] > RelativeLayout[childCount=1] >2 ImageView[id!=null][clickable=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12716506', //relativeLayout和ImageView之间是RelativeLayoutRelativeLayout
+            'https://i.gkd.li/import/13318796', //relativeLayout和ImageView之间是ViewGroup
+          ],
         },
       ],
     },
