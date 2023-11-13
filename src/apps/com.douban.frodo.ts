@@ -3,15 +3,16 @@ import { defineAppConfig } from '../types';
 export default defineAppConfig({
   id: 'com.douban.frodo',
   name: '豆瓣',
+  deprecatedKeys: [7],
   groups: [
     {
       key: 0,
       name: '开屏广告',
-      activityIds: [
-        'com.douban.frodo.activity.SplashActivity',
-        'com.douban.frodo.splash.SplashActivityHot',
-      ],
-      rules: '[id="com.douban.frodo:id/skip"||text^="跳过"]',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: '[text^="跳过"][text.length<=10]',
       snapshotUrls: [
         'https://i.gkd.li/import/12505151',
         'https://i.gkd.li/import/12505152',
@@ -152,7 +153,6 @@ export default defineAppConfig({
         },
       ],
     },
-    // key=7 已被删除,不可使用
     {
       key: 8,
       name: '小组讨论详情页广告',
@@ -185,20 +185,27 @@ export default defineAppConfig({
       name: '弹窗广告',
       desc: '浏览详情时弹窗广告,点击右上角x',
       matchLauncher: true,
-      quickFind: true,
-      rules: {
-        activityIds: [
-          'com.douban.frodo.subject.structure.activity.MovieActivity',
-        ],
-        matches: [
-          '[text*="看"][text="查看详情"||text^="去"&&text$="看看"]',
-          'FrameLayout[childCount=5] > FrameLayout[childCount=1] > ImageView',
-        ],
-        snapshotUrls: [
-          'https://i.gkd.li/import/13195565',
-          'https://i.gkd.li/import/13296656', //新增ids对应快照
-        ],
-      },
+      rules: [
+        {
+          key: 0,
+          name: '腾讯广告-1',
+          activityIds:
+            'com.douban.frodo.subject.structure.activity.MovieActivity',
+          matches:
+            'ImageView - FrameLayout[childCount=5] > FrameLayout[childCount=1] > ImageView',
+          snapshotUrls: 'https://i.gkd.li/import/13195565',
+        },
+        {
+          key: 1,
+          name: '腾讯广告-2',
+          matches:
+            'ImageView -n FrameLayout[childCount=2] > FrameLayout > FrameLayout > ImageView',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13296656',
+            'https://i.gkd.li/import/13328126',
+          ],
+        },
+      ],
     },
     {
       key: 11,
@@ -225,6 +232,21 @@ export default defineAppConfig({
           activityIds: 'com.douban.frodo.activity.BetaApkDialogActivity',
           matches: ['[text="新版试用邀请"]', '@[text="取消"] + [text="下载"]'],
           snapshotUrls: 'https://i.gkd.li/import/13228832',
+        },
+      ],
+    },
+    {
+      key: 13,
+      name: '详情页广告',
+      rules: [
+        {
+          matchLauncher: true,
+          quickFind: true,
+          matches: [
+            '[text^="扭动或点击"]',
+            '[text^="扭动或点击"] <n FrameLayout[childCount=4] -5 FrameLayout[childCount=2] > FrameLayout[childCount=3] > FrameLayout[childCount=1] > ImageView[id=null]',
+          ],
+          snapshotUrls: 'https://i.gkd.li/import/13318902',
         },
       ],
     },
