@@ -66,12 +66,8 @@ export default defineAppConfig({
       key: 14,
       name: '骑行卡-优惠券弹窗',
       activityIds: ['com.hellobike.atlas.business.portal.PortalActivity'],
-      rules: [
-        {
-          matches: '[desc="去使用"] + Button[text=null][visibleToUser=true]',
-          snapshotUrls: ['https://i.gkd.li/import/12739316'],
-        },
-      ],
+      rules: '[desc="去使用"] + Button[text=null][visibleToUser=true]',
+      snapshotUrls: ['https://i.gkd.li/import/12739316'],
     },
   ],
 });
