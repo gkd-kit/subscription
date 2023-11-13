@@ -14,5 +14,13 @@ export default defineAppConfig({
       rules: '[desc^="跳过"][desc.length<=10]',
       snapshotUrls: 'https://i.gkd.li/import/13334640',
     },
+    {
+      enable: false,
+      key: 1,
+      name: '公告弹窗',
+      activityIds: 'app.lawnchair.LawnchairLauncher',
+      rules: '[desc="公告"] + * + [desc="知道了"]',
+      snapshotUrls: 'https://i.gkd.li/import/13334608',
+    },
   ],
 });
