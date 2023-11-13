@@ -53,11 +53,29 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      name: '右侧悬浮红包',
-      activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
-      rules:
-        '[id="android:id/content"] > FrameLayout > RelativeLayout[childCount=1][clickable=true] > RelativeLayout[childCount=3] > ImageView[id!=null][clickable=true]',
-      snapshotUrls: 'https://i.gkd.li/import/12716506',
+      name: '首页右侧悬浮广告',
+      activityIds: [
+        'com.dragon.read.pages.main.MainFragmentActivity',
+        'com.dragon.read.ad.openingscreenad.OpeningScreenADActivity',
+      ],
+      rules: [
+        {
+          key: 1,
+          name: '红包',
+          desc: '关闭右侧悬浮红包提示',
+          matches:
+            '[id="android:id/content"] > FrameLayout > RelativeLayout[childCount=1][clickable=true] > RelativeLayout[childCount=3] > ImageView[id!=null][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/import/12716506',
+        },
+        {
+          key: 2,
+          name: '小说推荐',
+          desc: '关闭右侧悬浮小说推荐',
+          matches:
+            '[id="android:id/content"] >2 RelativeLayout >2 ImageView[id!=null][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/import/13318796',
+        },
+      ],
     },
     {
       key: 3,
