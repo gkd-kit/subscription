@@ -15,10 +15,10 @@ export default defineAppConfig({
         {
           matches: '[text^= "跳过"][text.length<6]',
           snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/12504489',
-            'https://gkd-kit.gitee.io/import/12504507',
+            'https://i.gkd.li/import/12504489',
+            'https://i.gkd.li/import/12504507',
             'https://i.gkd.li/import/12852509',
-            'https://gkd-kit.gitee.io/import/12504492',
+            'https://i.gkd.li/import/12504492',
           ],
         },
       ],
@@ -28,52 +28,64 @@ export default defineAppConfig({
       name: '内部弹窗广告',
       matchLauncher: true,
       activityIds: ['com.copymanga.app.MainActivity'],
-      delay: 500,
+      delay: 400,
       rules: [
         {
+          Key: 1,
           activityIds: 'com.kwad.components.ad.interstitial',
           matches: '@ViewGroup[clickable=true][visibleToUser=true] > ImageView',
           snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/12504486',
-            'https://gkd-kit.gitee.io/import/12504488'
+            'https://i.gkd.li/import/12504486',
+            'https://i.gkd.li/import/12504488',
           ],
         },
         {
+          key: 2,
           matches: [
             '[text^="立即" || text^="领取" || text*="看"]', //软件正常元素都用的des,只有广告用text
-            '[depth=6][childCount=1] > ImageView',
+            '[id="android:id/content"] >2 FrameLayout[childCount=3||childCount=2] > FrameLayout[childCount=5||childCount=6||childCount=8] > FrameLayout[childCount=1] > ImageView[text=null][visibleToUser=true]',
           ],
           snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/12504520',
-            'https://gkd-kit.gitee.io/import/12661019',
+            'https://i.gkd.li/import/12504520',
+            'https://i.gkd.li/import/12661019',
             'https://i.gkd.li/import/13193877',
-            'https://gkd-kit.gitee.io/import/12892156',
-            'https://gkd-kit.gitee.io/import/12504501',
-            'https://gkd-kit.gitee.io/import/13246786',
+            'https://i.gkd.li/import/12892156',
+            'https://i.gkd.li/import/12504501',
+            'https://i.gkd.li/import/13246786',
             'https://i.gkd.li/import/13259082', //text^="领取"
           ],
         },
         {
+          key: 3,
           matches: [
-            '[text="京东"]',
-            '[_id=20]',
+            '[text^="京东"]',
+            '[text^="扭"]',
+            'ImageView[index=0][depth=9]',
           ],
           snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/13233178',
+            'https://i.gkd.li/import/13233178',
             'https://i.gkd.li/import/13259085',
-          ]
+          ],
         },
         {
+          key: 4,
           activityIds:
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
           matches: '[text="反馈"] -2 @View - Image',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12925052',
+          snapshotUrls: 'https://i.gkd.li/import/12925052',
         },
         {
+          key: 5,
           activityIds:
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
           matches: '[text="反馈"] -4 @View < View[childCount=7]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12925095',
+          snapshotUrls: 'https://i.gkd.li/import/12925095',
+        },
+        {
+          key: 6,
+          matches:
+            '[id="com.copymanga.app:id/video_view"] + [id="com.copymanga.app:id/iv_close"]',
+          snapshotUrls: 'https://i.gkd.li/import/13332719',
         },
       ],
     },
@@ -85,15 +97,15 @@ export default defineAppConfig({
         {
           name: '点击右上角x',
           matches: 'ImageView[id="com.copymanga.app:id/close"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12504525',
+          snapshotUrls: 'https://i.gkd.li/import/12504525',
         },
         {
           name: '点击右下角x',
           matches:
             'FrameLayout[childCount=3] > LinearLayout + FrameLayout[childCount=1] > ImageView[id=null]',
           snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/12851671',
-            'https://gkd-kit.gitee.io/import/12909005',
+            'https://i.gkd.li/import/12851671',
+            'https://i.gkd.li/import/12909005',
           ],
         },
       ],
@@ -105,7 +117,7 @@ export default defineAppConfig({
       rules: [
         {
           matches: '@[desc="就这样吧"] + [desc^="赞助免广告"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/12851627',
+          snapshotUrls: 'https://i.gkd.li/import/12851627',
         },
       ],
     },
@@ -118,10 +130,10 @@ export default defineAppConfig({
       rules: [
         {
           matches: '[desc="进入拷贝漫画"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/13233179',
+          snapshotUrls: 'https://i.gkd.li/import/13233179',
         },
       ],
-    }
+    },
     {
       key: 5,
       name: '关闭提示',
@@ -131,10 +143,9 @@ export default defineAppConfig({
       rules: [
         {
           matches: '[desc="系统提示"] +2 [desc="确定"]',
-          snapshotUrls: 'https://gkd-kit.gitee.io/import/13233180',
+          snapshotUrls: 'https://i.gkd.li/import/13233180',
         },
       ],
-    }
+    },
   ],
-}
-);
+});
