@@ -7,9 +7,11 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: 'com.github.eprendre.tingshu.ui.SplashActivity',
-      rules:
-        '[id="com.github.eprendre.tingshu:id/frame_layout"] >n [text^="跳过"]',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: '[text^="跳过"][text.length<=10]',
       snapshotUrls: 'https://i.gkd.li/import/12783430',
     },
     {
