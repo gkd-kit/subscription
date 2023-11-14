@@ -20,5 +20,17 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      "key": 1,
+      "name": "开屏广告new",
+      "rules": [
+        {
+          "activityIds": "com.vyou.app.ui.activity.SplashActivity",
+          "matches": "[text='跳过']",
+          "exampleUrls": "https://m.gkd.li/6328439/5b974f9d-a7bf-46fa-9ba3-57df81aca131",
+          "snapshotUrls": "https://i.gkd.li/import/13347076"
+        }
+      ]
+    }
   ],
 });
