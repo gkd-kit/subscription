@@ -21,52 +21,51 @@ export default defineAppConfig({
     },
     {
       key: 1,
-      name: '应用内广告弹窗',
-      desc: '点击右上角x',
+      name: '弹窗广告',
+      matchLauncher: true,
       rules: [
-        // 腾讯广告
-        {
-          key: 0,
-          activityIds: 'com.bbk.launcher2.Launcher',
-          matches: 'ImageView - FrameLayout > FrameLayout > ImageView',
-          snapshotUrls: 'https://i.gkd.li/import/12777325',
-        },
         {
           key: 1,
-          activityIds:
-            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Activity_T',
+          name: '腾讯广告-1',
+          activityIds: 'com.aster.comic.app.view.MainActivity',
           matches:
-            'FrameLayout[childCount=5] > FrameLayout[childCount=1] > ImageView',
-          snapshotUrls: 'https://i.gkd.li/import/13029880',
+            'ImageView - FrameLayout > FrameLayout[childCount=1] > ImageView[childCount=0]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12984767',
+            'https://i.gkd.li/import/12998908', // com.huawei.android.launcher.unihome.UniHomeLauncher
+            'https://i.gkd.li/import/12777325', // com.bbk.launcher2.Launcher
+          ],
         },
         {
           key: 2,
-          activityIds: 'com.aster.comic.app.view.MainActivity',
+          name: '腾讯广告-2',
+          activityIds:
+            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Activity_T',
           matches:
-            'ImageView - LinearLayout - FrameLayout > FrameLayout > ImageView',
-          snapshotUrls: 'https://i.gkd.li/import/12872249',
+            'ImageView < FrameLayout + FrameLayout > FrameLayout[childCount=1] > ImageView[childCount=0]',
+          snapshotUrls: 'https://i.gkd.li/import/13029880',
         },
-        // 字节广告
         {
           key: 3,
+          name: '腾讯广告-3',
           activityIds: 'com.aster.comic.app.view.MainActivity',
-          matches: '[desc^="webview-close"] > View',
-          snapshotUrls: 'https://i.gkd.li/import/12903062',
+          matches:
+            'ImageView - LinearLayout - FrameLayout > FrameLayout[childCount=1] > ImageView[childCount=0]',
+          snapshotUrls: 'https://i.gkd.li/import/12872249',
         },
         {
           key: 4,
-          activityIds: [
-            'com.aster.comic.app.view.MainActivity',
-            'ImageView - FrameLayout > FrameLayout > ImageView',
+          name: '字节广告-1',
+          activityIds: 'com.aster.comic.app.view.MainActivity',
+          matches: [
+            '[desc^="logo-union"] > [desc^="logoad"] > [text="广告"]',
+            '[desc^="webview-close"] > View',
           ],
-          matches: 'ImageView - FrameLayout > FrameLayout > ImageView',
-          snapshotUrls: [
-            'https://i.gkd.li/import/12984767',
-            'https://i.gkd.li/import/12998908',
-          ],
+          snapshotUrls: 'https://i.gkd.li/import/12903062',
         },
         {
-          key: 11,
+          key: 5,
+          name: '字节广告-2',
           activityIds:
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
           matches:
