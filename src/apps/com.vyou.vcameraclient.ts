@@ -23,6 +23,7 @@ export default defineAppConfig({
     {
       "key": 1,
       "name": "开屏广告new",
+      "desc": "新的盯盯拍开屏广告",
       "rules": [
         {
           "activityIds": "com.vyou.app.ui.activity.SplashActivity",
