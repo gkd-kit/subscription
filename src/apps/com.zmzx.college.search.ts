@@ -11,7 +11,6 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'com.zmzx.college.search.activity.init.InitActivity',
       rules: ['TextView[text^="跳过"][text.length<=3]'],
       snapshotUrls: [
         'https://i.gkd.li/import/12867875',
