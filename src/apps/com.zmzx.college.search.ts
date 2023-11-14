@@ -8,6 +8,9 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       activityIds: 'com.zmzx.college.search.activity.init.InitActivity',
       rules: ['TextView[text^="跳过"][text.length<=3]'],
       snapshotUrls: [
@@ -20,6 +23,10 @@ export default defineAppConfig({
       enable: false,
       key: 1,
       name: '首页-推送通知',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       activityIds:
         'com.zmzx.college.search.activity.main.activity.MainActivity',
       rules: 'ImageView[id="com.zmzx.college.search:id/siv_dialog_close"]',
@@ -30,6 +37,10 @@ export default defineAppConfig({
       name: '弹窗广告',
       desc: '会出现在搜题页面与我的页面',
       quickFind: true,
+      matchLauncher: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       activityIds: [
         'com.zmzx.college.search.activity.main.activity.MainActivity',
         'com.zmzx.college.search.activity.questionsearch.camera.activity.PicSearchResultActivity',
@@ -66,6 +77,9 @@ export default defineAppConfig({
       name: '升级弹窗',
       enable: false,
       quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       activityIds: [
         'com.zmzx.college.search.activity.main.activity.MainActivity',
       ],
