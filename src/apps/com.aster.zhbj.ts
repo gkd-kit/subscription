@@ -77,5 +77,22 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 2,
+      name: '视频广告',
+      rules: [
+        {
+          key: 1,
+          name: '字节广告',
+          activityIds:
+            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
+          matches: [
+            'View > View > View > View > [text="广告"]',
+            'View[childCount=2] > [text$="跳过"]',
+          ],
+          snapshotUrls: 'https://i.gkd.li/import/13348662',
+        },
+      ],
+    },
   ],
 });
