@@ -13,7 +13,7 @@ export default defineAppConfig({
       quickFind: true,
       rules: [
         {
-          matches: '[text^= "跳过"][text.length<6]',
+          matches: '[text^="跳过"][text.length<6]',
           snapshotUrls: [
             'https://i.gkd.li/import/12504489',
             'https://i.gkd.li/import/12504507',
@@ -86,6 +86,24 @@ export default defineAppConfig({
           matches:
             '[id="com.copymanga.app:id/video_view"] + [id="com.copymanga.app:id/iv_close"]',
           snapshotUrls: 'https://i.gkd.li/import/13332719',
+        },
+        {
+          key: 7,
+          desc: '二步跳过广告_步骤1',
+          quickFind: true,
+          matches: '[text="跳过"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13344156', // step1
+          ],
+        },
+        {
+          key: 8,
+          preKeys: [7],
+          desc: '二步跳过广告_步骤2',
+          matches: 'ImageView < ViewGroup[clickable=true][childCount=1]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13344156', // step2
+          ],
         },
       ],
     },
