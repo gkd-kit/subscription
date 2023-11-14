@@ -27,7 +27,6 @@ export default defineAppConfig({
       quickFind: true,
       rules: [
         {
-          key: '1',
           matches: [
             '[id="android:id/content"] >n FrameLayout[childCount=5 || childCount=8] > FrameLayout > ImageView[text=null][visibleToUser=true]',
           ],
