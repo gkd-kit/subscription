@@ -136,7 +136,7 @@ export default defineAppConfig({
         },
         {
           preKeys: 0,
-          name: '点击【不感兴趣】'
+          name: '点击【不感兴趣】',
           matches:
             '[text="广告"] < * + * > [text="不感兴趣"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/import/12548116',
