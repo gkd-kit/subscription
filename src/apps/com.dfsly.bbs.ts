@@ -23,7 +23,7 @@ export default defineAppConfig({
       key: 1,
       name: '弹窗广告',
       matchLauncher: true,
-      activityIds: ['com.dfsly.bbs.ui.NavigationActivity,'],
+      activityIds: ['com.dfsly.bbs.ui.NavigationActivity'],
       quickFind: true,
       rules: [
         {
