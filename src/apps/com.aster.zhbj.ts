@@ -7,23 +7,16 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      desc: '点击右上角跳过',
-      matchLauncher: true,
-      rules: [
-        {
-          activityIds: [
-            'com.aster.comic.app.ad.view.mediation.MediationSplashAdActivity',
-            'com.aster.comic.app.ad.view.mediation.MediationAppResumeSplashAdActivity',
-            'com.aster.comic.app.view.reader.ReaderActivity',
-          ],
-          matches: '[id="com.byted.pangle.m:id/tt_splash_skip_btn"]',
-          snapshotUrls: [
-            'https://i.gkd.li/import/12981243',
-            'https://i.gkd.li/import/13029855',
-            'https://i.gkd.li/import/13043320',
-            'https://i.gkd.li/import/13043344',
-          ],
-        },
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: '[id="com.byted.pangle.m:id/tt_splash_skip_btn"]',
+      snapshotUrls: [
+        'https://i.gkd.li/import/12981243',
+        'https://i.gkd.li/import/13029855',
+        'https://i.gkd.li/import/13043320',
+        'https://i.gkd.li/import/13043344',
       ],
     },
     {
