@@ -94,5 +94,15 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      enable: false,
+      key: 3,
+      name: '看视频解锁任意读弹窗',
+      desc: '自动点击【我拒绝】',
+      activityIds: 'com.aster.comic.app.view.reader.ReaderActivity',
+      rules:
+        '[text="看视频解锁任意读"] < LinearLayout +n LinearLayout > [id="com.aster.zhbj:id/btnReject"][text*="拒绝"]',
+      snapshotUrls: 'https://i.gkd.li/import/13348635',
+    },
   ],
 });
