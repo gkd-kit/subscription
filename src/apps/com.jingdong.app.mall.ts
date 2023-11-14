@@ -116,6 +116,7 @@ export default defineAppConfig({
         },
         {
           key: 3,
+          quickFind: true,
           activityIds: 'com.jingdong.app.mall.MainFrameActivity',
           matches: 'RelativeLayout > ImageView[desc="关闭页面"]',
           excludeMatches: 'ImageView[desc="关闭页面"] - [text="优惠券"]',
