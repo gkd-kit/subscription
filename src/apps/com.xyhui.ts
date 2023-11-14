@@ -14,6 +14,8 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
+          key: 1,
+          name: '开屏广告-1',
           snapshotUrls: [
             'https://i.gkd.li/import/12642486',
             'https://i.gkd.li/import/12846496',
@@ -22,6 +24,8 @@ export default defineAppConfig({
           matches: '[text^="跳过"][text.length<=10]',
         },
         {
+          key: 2,
+          name: '开屏广告-2',
           matches: '[id="com.xyhui:id/ms_skipView"]',
           snapshotUrls: ['https://i.gkd.li/import/13197417'],
         },
