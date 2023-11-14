@@ -105,7 +105,7 @@ export default defineAppConfig({
           key: 3,
           name: '小组-帖子列表信息流广告',
           activityIds: [
-            'com.douban.frodo.group.activity.GroupDetailActivity'
+            'com.douban.frodo.group.activity.GroupDetailActivity',
             'com.douban.frodo.activity.SplashActivity',
           ],
           matches: '[id="com.douban.frodo:id/ad_tag"][text="广告"]',
