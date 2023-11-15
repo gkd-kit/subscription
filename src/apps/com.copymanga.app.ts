@@ -27,7 +27,10 @@ export default defineAppConfig({
       key: 1,
       name: '内部弹窗广告',
       matchLauncher: true,
-      activityIds: ['com.copymanga.app.MainActivity'],
+      activityIds: [
+        'com.copymanga.app.MainActivity',
+        'com.reaper.flutter.reaper_flutter_plugin.activity.ReaperSplashActivity',
+      ],
       delay: 400,
       rules: [
         {
@@ -42,7 +45,7 @@ export default defineAppConfig({
         {
           key: 2,
           matches: [
-            '[text^="立即" || text^="领取" || text*="看"]', //软件正常元素都用的des,只有广告用text
+            '[text^="立即" || text^="领取" || text^="了解" || text*="看"]', //软件正常元素都用的des,只有广告用text
             '[id="android:id/content"] >2 FrameLayout[childCount=3||childCount=2] > FrameLayout[childCount=5||childCount=6||childCount=8] > FrameLayout[childCount=1] > ImageView[text=null][visibleToUser=true]',
           ],
           snapshotUrls: [
