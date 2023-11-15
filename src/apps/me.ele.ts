@@ -61,11 +61,23 @@ export default defineAppConfig({
     },
     {
       key: 4,
-      name: '首页活动弹窗',
-      activityIds: 'me.ele.component.pops2.Pops2MistDialog',
-      rules:
-        '[id="me.ele:id/id_magex_mistview"] > ImageView + ImageView[id=null][clickable=true]',
-      snapshotUrls: 'https://i.gkd.li/import/12726709',
+      name: '活动弹窗',
+      rules: [
+        {
+          key: 1,
+          name: '天天特价',
+          activityIds: [
+            'me.ele.component.pops2.Pops2MistDialog',
+            'me.ele.newbooking.checkout.entrypoint.WMCheckoutActivity',
+          ],
+          matches:
+            '[id="me.ele:id/id_magex_mistview"][childCount=2] > ImageView + ImageView[clickable=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12726709',
+            'https://i.gkd.li/import/13362878',
+          ],
+        },
+      ],
     },
     {
       key: 5,
