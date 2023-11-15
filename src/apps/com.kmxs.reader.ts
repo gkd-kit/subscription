@@ -61,5 +61,12 @@ export default defineAppConfig({
       },
       snapshotUrls: ['https://i.gkd.li/import/12640287'],
     },
+    {
+      key: 5,
+      name: '熄屏后唤醒广告',
+      activityIds: 'org.geometerplus.android.fbreader.FBReader',
+      rules: ['[id="com.kmxs.reader:id/tv_count_down_text"][text^="跳过"]'],
+      snapshotUrls: ['https://i.gkd.li/import/13361430'],
+    },
   ],
 });
