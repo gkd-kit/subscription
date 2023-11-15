@@ -43,5 +43,18 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 2,
+      name: '厨房问卷',
+      rules: [
+        {
+          key: 1,
+          name: '厨房问卷',
+          activityIds: 'com.xiachufang.activity.recipe.RecipeDetailActivity',
+          matches: '[text^="厨房问卷"] + [desc="关闭"]',
+          snapshotUrls: 'https://i.gkd.li/import/13363042',
+        },
+      ],
+    },
   ],
 });
