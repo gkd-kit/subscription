@@ -30,7 +30,6 @@ export default defineAppConfig({
       ],
     },
     {
-      enable: false,
       key: 2,
       name: '红包弹窗',
       rules: [
@@ -41,13 +40,17 @@ export default defineAppConfig({
             'me.ele.component.pops2.Pops2MistDialog',
             'me.ele.component.webcontainer.view.AppUCWebActivity',
             'me.ele.application.ui.Launcher.LauncherActivity',
+            'me.ele.application.ui.GeneralSettingsActivity',
+            'me.ele.shopdetailv2.ShopDetailV2Activity',
           ],
           matches:
-            '@ImageView[id=null][clickable=true] - ViewGroup >(5) ViewGroup[childCount=5]',
+            '[id="me.ele:id/id_magex_mistview"][childCount=2] > ViewGroup + ImageView[clickable=true]',
           snapshotUrls: [
             'https://i.gkd.li/import/12650238',
             'https://i.gkd.li/import/13294893',
-            'https://i.gkd.li/import/13331361', // me.ele.application.ui.Launcher.LauncherActivity
+            'https://i.gkd.li/import/13331361',
+            'https://i.gkd.li/import/13362974',
+            'https://i.gkd.li/import/13376008',
           ],
         },
         {
