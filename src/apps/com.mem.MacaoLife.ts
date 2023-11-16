@@ -6,11 +6,12 @@ export default defineAppConfig({
   groups: [
     {
       key: 0,
-      name: '開屏廣告',
+      name: '开屏广告',
       matchTime: 10000,
       actionDelay: 800, // 剛啟動時開屏廣告點擊不到
       quickFind: true,
-      activityIds: 'com.mem.life.ui.launch.LaunchActivity',
+      resetMatch: 'app',
+      actionMaximum: 1,
       rules: '[id="com.mem.MacaoLife:id/skip_time_out_layout"]',
       snapshotUrls: 'https://i.gkd.li/import/13350651',
     },
