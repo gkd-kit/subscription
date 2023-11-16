@@ -134,10 +134,8 @@ export default defineAppConfig({
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
-      activityIds: [
-        'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
-        'com.bbk.launcher2.Launcher',
-      ],
+      matchLauncher: true,
+      activityIds: ['com.xunmeng.pinduoduo.ui.activity.HomeActivity'],
       rules: [
         {
           key: 0,
