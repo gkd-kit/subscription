@@ -3,20 +3,21 @@ import { defineAppConfig } from '../types';
 export default defineAppConfig({
   id: 'com.vgjump.jump',
   name: 'Jump',
-
   groups: [
     {
-      key: 1,
-      quickFind: true,
-      name: 'jump开屏广告',
-      desc: '跳过jump开屏广告',
-      matchTime: 5000,
+      key: 0,
+      name: '开屏广告',
+      matchTime: 10000,
+      actionMaximum: 1,
       resetMatch: 'app',
       rules: [
         {
-          activityIds: 'com.vgjump.jump.ui.main.launch.LaunchActivity',
-          matches:
-            '[name=\'android.view.View\'][clickable=true][id=\'com.byted.pangle:id/tt_splash_skip_btn\']',
+          quickFind: true,
+          matches: 'TextView[text^="跳过"]',
+          snapshotUrls: 'https://i.gkd.li/import/13259108',
+        },
+        {
+          matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
           snapshotUrls: 'https://i.gkd.li/import/13372486',
         },
       ],
