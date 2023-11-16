@@ -12,8 +12,7 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
-          activityIds: 'cn.com.voc.mobile.wxhn.splash.SplashActivity',
-          matches: '[text*=\'跳过\']',
+          matches: '[text*="跳过"]',
           exampleUrls:
             'https://m.gkd.li/6328439/ae26cfeb-c977-416a-8ac3-6f5cc867b3ae',
           snapshotUrls: 'https://i.gkd.li/import/13374520',
