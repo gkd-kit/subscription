@@ -20,7 +20,7 @@ export default defineAppConfig({
         },
         {
           key: 1,
-          name: '【圆圈跳过】型-穿山甲SDK'
+          name: '【圆圈跳过】型-穿山甲SDK',
           matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
           snapshotUrls: 'https://i.gkd.li/import/13346451',
         },
