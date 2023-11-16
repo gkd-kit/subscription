@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 0,
-      name: '开屏广告',  
+      name: '开屏广告',
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
@@ -28,7 +28,7 @@ export default defineAppConfig({
     },
     {
       key: 3,
-      name: '广告弹窗',  
+      name: '广告弹窗',
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
@@ -38,7 +38,7 @@ export default defineAppConfig({
           matches:
             'View > View[childCount=2] > ImageView[clickable=true] + ImageView[id=""][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13346187',
-        }
+        },
       ],
     },
   ],
