@@ -165,7 +165,7 @@ export default defineAppConfig({
         },
         {
           matches: '[text="管理使用时间"] + Button[text="忽略提醒"]',
-          snapshotUrls: 'https://i.gkd.li/import/13372725', 
+          snapshotUrls: 'https://i.gkd.li/import/13372725',
         },
       ],
     },
