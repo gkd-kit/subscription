@@ -6,10 +6,11 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '歡迎頁',
+      name: '开屏广告',
       matchTime: 10000,
       quickFind: true,
-      activityIds: 'com.gov.dsat.activity.WelcomeActivity',
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: '[id="mo.gov.dsat.bis:id/skipBtn"]',
       snapshotUrls: 'https://i.gkd.li/import/13350002',
     },
