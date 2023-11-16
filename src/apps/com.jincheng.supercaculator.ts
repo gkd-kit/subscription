@@ -25,7 +25,8 @@ export default defineAppConfig({
         },
         {
           // 与"咕咚"app快照类似，https://i.gkd.li/import/13348663 ，可能来自同个sdk
-          activityIds: 'com.jincheng.supercaculator.activity.basic.CalculatorActivity',
+          activityIds:
+            'com.jincheng.supercaculator.activity.basic.CalculatorActivity',
           matches:
             '[id="android:id/content"] >4 FrameLayout > ImageView + FrameLayout > ImageView',
           snapshotUrls: 'https://i.gkd.li/import/13378847',
