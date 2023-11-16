@@ -12,8 +12,8 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
-          activityIds: 'com.chaozh.iReader.ui.activity.WelcomeActivity',
-          matches: '[text*=\'跳过\']',
+          quickFind: true,
+          matches: '[text*="跳过"][text.length<=10]',
           exampleUrls:
             'https://m.gkd.li/6328439/ee16eabc-470a-45b5-8d5f-398af1cae47e',
           snapshotUrls: 'https://i.gkd.li/import/13375516',
