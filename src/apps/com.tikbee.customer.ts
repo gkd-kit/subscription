@@ -6,10 +6,11 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '開屏廣告',
+      name: '开屏广告',
       matchTime: 10000,
       quickFind: true,
-      activityIds: 'com.tikbee.customer.mvp.view.UI.StartUpActivity',
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: '[id="com.tikbee.customer:id/skip_btn"]',
       snapshotUrls: 'https://i.gkd.li/import/13350836',
     },
