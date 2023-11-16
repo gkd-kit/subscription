@@ -14,7 +14,7 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          name: '【跳过+倒计时】型'
+          name: '【跳过+倒计时】型',
           matches: '[text*="跳过"][text.length<=10]',
           snapshotUrls: 'https://i.gkd.li/import/13348806',
         },
