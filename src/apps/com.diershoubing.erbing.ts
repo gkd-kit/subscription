@@ -15,5 +15,13 @@ export default defineAppConfig({
         '@[id="com.byted.pangle:id/tt_splash_skip_btn"] <<n [id="com.diershoubing.erbing:id/containerV"]',
       snapshotUrls: 'https://i.gkd.li/import/13378853',
     },
+    {
+      key: 1,
+      name: '签到弹窗',
+      activityIds: 'com.diershoubing.erbing.activity.MainReActivity',
+      rules:
+        '@[id="com.diershoubing.erbing:id/closeBtn"] - * > [text="签到成功"]',
+      snapshotUrls: 'https://i.gkd.li/import/13378845',
+    },
   ],
 });
