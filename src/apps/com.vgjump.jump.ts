@@ -17,7 +17,7 @@ export default defineAppConfig({
           activityIds: "com.vgjump.jump.ui.main.launch.LaunchActivity",
           matches: "[name='android.view.View'][clickable=true][id='com.byted.pangle:id/tt_splash_skip_btn']",
           snapshotUrls: 'https://i.gkd.li/import/13372486',
-        }
+        },
       ],
     },
   ],
