@@ -356,7 +356,7 @@ export default defineAppConfig({
           snapshotUrls: 'https://i.gkd.li/import/13378208',
         },
         {
-          preKeys: [0,1],
+          preKeys: [0, 1],
           key: 11,
           name: '点击原因【不感兴趣】',
           matches: '[text="不感兴趣"][visibleToUser=true]',
