@@ -18,6 +18,28 @@ export default defineAppConfig({
       ],
     },
     {
+      key: 1,
+      name: '更新弹窗',
+      actionMaximum: 1,
+      resetMatch: 'app',
+      quickFind: true,
+      rules: [
+        {
+          key: 1,
+          name: '更新弹窗-1',
+          matches:
+            '@[id="com.autonavi.minimap:id/iv_close"] + * > [text^="立即升级"]',
+          snapshotUrls: 'https://i.gkd.li/import/13379094',
+        },
+        {
+          key: 2,
+          name: '更新弹窗-2',
+          matches: '@[text="取消"] + * + [text="去下载"]',
+          snapshotUrls: 'https://i.gkd.li/import/13379426',
+        },
+      ],
+    },
+    {
       key: 10,
       name: '首页-地图页面上方消息提醒',
       activityIds: 'com.autonavi.map.activity.NewMapActivity',
