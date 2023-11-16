@@ -13,7 +13,7 @@ export default defineAppConfig({
       quickFind: true,
       rules: [
         {
-          matches: '[text="跳过"][text.length<10]',
+          matches: '[text="跳过"]',
           snapshotUrls: 'https://i.gkd.li/import/13359460',
         },
       ],
