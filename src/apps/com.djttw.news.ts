@@ -13,8 +13,7 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
-          activityIds: 'io.dcloud.PandoraEntryActivity',
-          matches: '[text=\'跳过\']',
+          matches: '[text="跳过"]',
           exampleUrls:
             'https://m.gkd.li/6328439/3434673a-67eb-4c81-8fd3-c69dfa8d00db',
           snapshotUrls: 'https://i.gkd.li/import/13359665',
