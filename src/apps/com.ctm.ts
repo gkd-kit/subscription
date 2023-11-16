@@ -6,16 +6,17 @@ export default defineAppConfig({
   groups: [
     {
       key: 0,
-      name: '開屏廣告',
+      name: '开屏广告',
       matchTime: 10000,
       quickFind: true,
-      activityIds: 'com.blankj.utilcode.util.UtilsTransActivity',
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: '[id="com.ctm:id/tv_skip_adv"]',
       snapshotUrls: 'https://i.gkd.li/import/13350472',
     },
     {
       key: 1,
-      name: '浮窗廣告',
+      name: '浮窗广告',
       quickFind: true,
       activityIds: 'com.ctm.home.page.MainActivity',
       rules: '[id="com.ctm:id/iv_close"]',
@@ -23,7 +24,7 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      name: '底部橫幅廣告',
+      name: '底部横幅广告',
       quickFind: true,
       activityIds: 'com.ctm.home.page.MainActivity',
       rules: '[id="com.ctm:id/btn_close"]',
