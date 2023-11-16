@@ -46,7 +46,7 @@ export default defineAppConfig({
           key: 2,
           matches: [
             '[text^="立即" || text^="领取" || text^="了解" || text*="看"]', //软件正常元素都用的des,只有广告用text
-            '[id="android:id/content"] >2 FrameLayout[childCount=3||childCount=2] > FrameLayout[childCount=5||childCount=6||childCount=8] > FrameLayout[childCount=1] > ImageView[text=null][visibleToUser=true]',
+            '[id="android:id/content"] >2 FrameLayout[childCount=4|| childCount=3||childCount=2] > FrameLayout[childCount=5||childCount=6||childCount=8] > FrameLayout[childCount=1] > [name="android.view.View" || name="android.widget.ImageView"][text=null][visibleToUser=true]',
           ],
           snapshotUrls: [
             'https://i.gkd.li/import/12504520',
@@ -55,7 +55,8 @@ export default defineAppConfig({
             'https://i.gkd.li/import/12892156',
             'https://i.gkd.li/import/12504501',
             'https://i.gkd.li/import/13246786',
-            'https://i.gkd.li/import/13259082', //text^="领取"
+            'https://i.gkd.li/import/13259082', // text^="领取"
+            'https://i.gkd.li/import/13372542', // View
           ],
         },
         {
