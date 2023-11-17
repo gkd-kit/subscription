@@ -1,0 +1,19 @@
+{
+    "id": "com.miui.video",
+    "name": "小米视频",
+    "groups": [
+      {
+        "key": 1,
+        "name": "视频个人中心广告",
+        "desc": "",
+        "rules": [
+          {
+            "activityIds": "com.miui.video.feature.main.MainTabActivity",
+            "matches": "[id='com.miui.video:id/iv_close']",
+            "exampleUrls": "https://m.gkd.li/33366298/5e49a9be-f9fd-40ef-be23-902cd2062b76",
+            "snapshotUrls": "https://i.gkd.li/import/13388152"
+          }
+        ]
+      }
+    ]
+}
