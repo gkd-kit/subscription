@@ -234,5 +234,18 @@ export default defineAppConfig({
         '@[id="com.ximalaya.ting.android:id/host_close_firework"] +2 [id="com.ximalaya.ting.android:id/host_firework_ad_tag"]',
       snapshotUrls: 'https://i.gkd.li/import/13263421',
     },
+     {
+        "key": 1,
+        "name": "推送通知",
+        "desc": "取消推送通知",
+        "rules": [
+          {
+            "activityIds": "com.ximalaya.ting.android.host.activity.MainActivity",
+            "matches": "[id='com.ximalaya.ting.android:id/cancel_btn']",
+            "exampleUrls": "https://m.gkd.li/33366298/f6ac028a-509b-49d8-959a-7da90fb4d9df",
+            "snapshotUrls": "https://i.gkd.li/import/13389145"
+          }
+        ]
+      },
   ],
 });
