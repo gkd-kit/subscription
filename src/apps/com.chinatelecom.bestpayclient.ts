@@ -15,7 +15,7 @@ export default defineAppConfig({
       snapshotUrls: 'https://i.gkd.li/import/13197640',
     },
     {
-      key: 0,
+      key: 1,
       name: '版本更新',
       quickFind: true,
       matchTime: 10000,
