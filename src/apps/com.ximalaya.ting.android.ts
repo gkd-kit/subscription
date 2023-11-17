@@ -235,7 +235,7 @@ export default defineAppConfig({
       snapshotUrls: 'https://i.gkd.li/import/13263421',
     },
      {
-        "key": 1,
+        "key": 12,
         "name": "推送通知",
         "desc": "取消推送通知",
         "rules": [
