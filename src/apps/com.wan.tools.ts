@@ -22,5 +22,13 @@ export default defineAppConfig({
       rules: '@[text="识别解析"] -2 * > [text^="检测到你复制链接"]',
       snapshotUrls: 'https://i.gkd.li/import/13392085',
     },
+    {
+      enable: false,
+      key: 3,
+      name: '开通会员弹窗',
+      activityIds: 'com.one.downloadtools.ui.activity.HomeActivity',
+      rules: '[text^="开通会员"] < * +n * > [text="暂不"]',
+      snapshotUrls: 'https://i.gkd.li/import/13392112',
+    },
   ],
 });
