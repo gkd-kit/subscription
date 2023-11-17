@@ -1,4 +1,5 @@
-{
+import { defineAppConfig } from '../types';
+export default defineAppConfig({
     "id": "com.miui.video",
     "name": "小米视频",
     "groups": [
@@ -16,4 +17,4 @@
         ]
       }
     ]
-}
+});
