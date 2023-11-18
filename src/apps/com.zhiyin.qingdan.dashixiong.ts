@@ -7,21 +7,14 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: 'com.zhiyin.qingdan.dashixiong.MainActivity',
-      matchLauncher: true,
       quickFind: true,
-      rules: [
-        {
-          key: 0,
-          matches: 'ImageView -n LinearLayout > [text^="跳过"]',
-          snapshotUrls: 'https://i.gkd.li/import/12843284',
-        },
-        {
-          key: 1,
-          matches:
-            '[id="com.zhiyin.qingdan.dashixiong:id/ksad_splash_circle_skip_view"] > [text="跳过"]',
-          snapshotUrls: 'https://i.gkd.li/import/12843283',
-        },
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: '[text^="跳过"][text.length<=10]',
+      snapshotUrls: [
+        'https://i.gkd.li/import/12843284',
+        'https://i.gkd.li/import/12843283',
       ],
     },
     {
