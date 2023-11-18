@@ -8,10 +8,12 @@ export default defineAppConfig({
       key: 1,
       name: '开屏广告',
       quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
-          activityIds: 'player.normal.np.activity.SplashActivity',
-          matches: '@LinearLayout > TextView[text^=\'跳过\']',
+          matches: '@LinearLayout > TextView[text^="跳过"]',
           snapshotUrls: [
             'https://i.gkd.li/import/13400234',
             'https://i.gkd.li/import/13400250',
