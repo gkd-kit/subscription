@@ -19,11 +19,12 @@ export default defineAppConfig({
     },
     {
       key: 1,
-      name: '应用内广告弹窗',
+      name: '弹窗广告',
       activityIds: 'com.zhiyin.qingdan.dashixiong.MainActivity',
       rules: [
         {
           key: 0,
+          name: '快手广告',
           quickFind: true,
           matches:
             '@ImageView <n ViewGroup -2 ViewGroup > ViewGroup > [text="广告"]',
@@ -31,20 +32,26 @@ export default defineAppConfig({
         },
         {
           key: 1,
+          name: '腾讯广告-1',
           matches:
-            'ImageView - LinearLayout - FrameLayout > FrameLayout > ImageView',
+            'ImageView - LinearLayout - FrameLayout > FrameLayout[childCount=1] > ImageView[childCount=0]',
           snapshotUrls: 'https://i.gkd.li/import/12843282',
         },
         {
           key: 2,
-          matches: 'ImageView - FrameLayout > FrameLayout > ImageView',
+          name: '腾讯广告-2',
+          activityIds: 'com.qq.e.ads.ADActivity',
+          matches:
+            'ImageView - FrameLayout > FrameLayout[childCount=1] > ImageView[childCount=0]',
           snapshotUrls: [
             'https://i.gkd.li/import/12843345',
             'https://i.gkd.li/import/12843333',
+            'https://i.gkd.li/import/13400656', // com.qq.e.ads.ADActivity
           ],
         },
         {
           key: 3,
+          name: '字节广告',
           quickFind: true,
           matches: '@Image < View +n View > View > View > [text="广告"]',
           snapshotUrls: 'https://i.gkd.li/import/12843323',
