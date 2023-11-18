@@ -175,7 +175,8 @@ export default defineAppConfig({
       rules: [
         {
           name: '话题谈论',
-          matches: 'FlattenUIText[text="参与讨论"] + FlattenUIImage[clickable=true]',
+          matches:
+            'FlattenUIText[text="参与讨论"] + FlattenUIImage[clickable=true]',
           snapshotUrls: ['https://i.gkd.li/import/12706699'],
         },
       ],
