@@ -17,10 +17,8 @@ export default defineAppConfig({
     {
       key: 1,
       name: '更新弹窗',
-      activityIds: [
-        'com.ecitic.bank.mobile.ui.MainActivity',
-        'com.miui.home.launcher.Launcher',
-      ],
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: '@[text="暂不更新"] + [text="立即更新"]',
       snapshotUrls: [
         'https://i.gkd.li/import/12701217',
