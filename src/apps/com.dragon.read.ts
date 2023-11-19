@@ -91,8 +91,7 @@ export default defineAppConfig({
         {
           key: 0,
           activityIds: 'com.dragon.read.reader.ui.ReaderActivity',
-          matches:
-            '@ImageView +2 FrameLayout >3 [text="关注"]',
+          matches: '@ImageView +2 FrameLayout >3 [text="关注"]',
           snapshotUrls: 'https://i.gkd.li/import/13399505',
         },
       ],
