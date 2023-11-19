@@ -82,12 +82,10 @@ export default defineAppConfig({
         },
         {
           name: '发现页',
-          activityIds:
-            'com.cmbchina.ccd.pluto.cmbActivity.CMBRootActivityV2',
+          activityIds: 'com.cmbchina.ccd.pluto.cmbActivity.CMBRootActivityV2',
           matches:
             '[id="com.cmbchina.ccd.pluto.cmbActivity:id/view_cat"] + [id="com.cmbchina.ccd.pluto.cmbActivity:id/view_close"]',
-          snapshotUrls:
-            'https://i.gkd.li/import/13402782',
+          snapshotUrls: 'https://i.gkd.li/import/13402782',
         },
       ],
     },
