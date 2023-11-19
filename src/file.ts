@@ -16,6 +16,7 @@ const sortKeys: (keyof SubscriptionConfig)[] = [
   'author',
   'supportUri',
   'updateUrl',
+  'checkUpdateUrl',
   'apps',
 ];
 
@@ -39,9 +40,11 @@ const pkg: typeof PkgT = JSON.parse(
 );
 const pkgKeys = Object.keys(pkg);
 
-export const writeConfig = async (fp: string, config: SubscriptionConfig) => {
+export const writeConfig = async (config: SubscriptionConfig) => {
+  const gkdFp = process.cwd() + '/dist/gkd.json';
+  const versionFp = process.cwd() + '/dist/gkd.version.json';
   const oldConfig: SubscriptionConfig = JSON.parse(
-    await fs.readFile(fp, 'utf-8').catch(() => '{}'),
+    await fs.readFile(gkdFp, 'utf-8').catch(() => '{}'),
   );
 
   const newConfig: SubscriptionConfig = {
@@ -72,7 +75,30 @@ export const writeConfig = async (fp: string, config: SubscriptionConfig) => {
 
   // update gkd.json
   const buffer = Buffer.from(orderdStringify(newConfig, sortKeys), 'utf-8');
-  await fs.writeFile(fp, buffer);
+  await fs.writeFile(gkdFp, buffer);
+
+  // update gkd.openad.json
+  const onlyOpenAdConfig = _.cloneDeep(newConfig);
+  onlyOpenAdConfig.apps.forEach((a) => {
+    a.groups?.forEach((g) => {
+      g.enable = g.name.startsWith('开屏广告');
+    });
+  });
+  await fs.writeFile(
+    process.cwd() + '/dist/gkd.openad.json',
+    orderdStringify(onlyOpenAdConfig, sortKeys),
+    'utf-8',
+  );
+
+  // update gkd.version.json
+  await fs.writeFile(
+    versionFp,
+    JSON.stringify(
+      { id: newConfig.id, version: newConfig.version },
+      undefined,
+      2,
+    ),
+  );
 
   console.log(
     `更新订阅: v${newConfig.version}, 文件大小: ${
@@ -330,7 +356,14 @@ export const updateReadMeMd = async (
         .reduce((p, c) => p + (c.groups?.length || 0), 0)
         .toString(),
     )
-    .replaceAll('--VERSION--', (newConfig.version || 0).toString())
-    .replaceAll('--APP_LIST--', appListText);
+    .replaceAll('--VERSION--', (newConfig.version || 0).toString());
   await fs.writeFile(process.cwd() + '/README.md', readMeMdText);
+  const appListTemplateMd = await fs.readFile(
+    process.cwd() + '/AppListTemplate.md',
+    'utf-8',
+  );
+  await fs.writeFile(
+    process.cwd() + '/AppList.md',
+    appListTemplateMd.replaceAll('--APP_LIST--', appListText),
+  );
 };

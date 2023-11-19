@@ -1,6 +1,6 @@
 # 抖音
 
-存在 12 规则组 - [com.ss.android.ugc.aweme](/src/apps/com.ss.android.ugc.aweme.ts)
+存在 14 规则组 - [com.ss.android.ugc.aweme](/src/apps/com.ss.android.ugc.aweme.ts)
 
 ## 开屏广告
 
@@ -24,6 +24,7 @@
 ## 关闭更新弹窗
 
 - [快照-0](https://i.gkd.li/import/12534016)
+- [快照-1](https://i.gkd.li/import/13328599)
 
 ## 首页左上角广告
 
@@ -65,3 +66,13 @@
 默认禁用
 
 - [快照-0](https://i.gkd.li/import/13241564)
+- [快照-1](https://i.gkd.li/import/13372604)
+- [快照-2](https://i.gkd.li/import/13372725)
+
+## 添加搜索到桌面弹窗
+
+- [快照-0](https://i.gkd.li/import/13338556)
+
+## 视频播放中途插入的打招呼界面
+
+- [快照-0](https://i.gkd.li/import/13379307)

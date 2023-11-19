@@ -10,10 +10,12 @@
 
 - [快照-0](https://i.gkd.li/import/12647025)
 - [快照-1](https://i.gkd.li/import/12727203)
+- [快照-2](https://i.gkd.li/import/13345771)
 
 ## 首页弹窗
 
 - [快照-0](https://i.gkd.li/import/12647000)
+- [快照-1](https://i.gkd.li/import/13360282)
 
 ## 右侧悬浮广告
 

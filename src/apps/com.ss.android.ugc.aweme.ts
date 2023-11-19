@@ -73,12 +73,16 @@ export default defineAppConfig({
     {
       key: 3,
       name: '关闭更新弹窗',
+      matchLauncher: true,
       quickFind: true,
       actionMaximum: 1,
       resetMatch: 'app',
       activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
       rules: '@[text="以后再说"] +2 [text="立即升级"]',
-      snapshotUrls: 'https://i.gkd.li/import/12534016',
+      snapshotUrls: [
+        'https://i.gkd.li/import/12534016',
+        'https://i.gkd.li/import/13328599',
+      ],
     },
     {
       key: 4,
@@ -151,11 +155,42 @@ export default defineAppConfig({
       key: 12,
       name: '休息提醒',
       quickFind: true,
+      rules: [
+        {
+          matches: '[text="可进入使用管理助手更改设置"] -2 Button[text="取消"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13241564',
+            'https://i.gkd.li/import/13372604',
+          ],
+        },
+        {
+          matches: '[text="管理使用时间"] + Button[text="忽略提醒"]',
+          snapshotUrls: 'https://i.gkd.li/import/13372725',
+        },
+      ],
+    },
+    {
+      key: 13,
+      name: '添加搜索到桌面弹窗',
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: '[text="休息一下吧"] +3 Button[text="取消"]',
-      snapshotUrls: 'https://i.gkd.li/import/13241564',
+      activityIds:
+        'com.ss.android.ugc.aweme.search.activity.SearchResultActivity',
+      rules: [
+        {
+          action: 'back',
+          matches: 'ViewGroup[desc="添加搜索到桌面"]',
+          snapshotUrls: 'https://i.gkd.li/import/13338556',
+        },
+      ],
+    },
+    {
+      key: 14,
+      name: '视频播放中途插入的打招呼界面',
+      activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
+      rules: 'FrameLayout > @[desc="关闭"] + ViewGroup > [text$="打个招呼"]',
+      snapshotUrls: 'https://i.gkd.li/import/13379307',
     },
   ],
 });

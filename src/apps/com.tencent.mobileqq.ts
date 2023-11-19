@@ -30,11 +30,12 @@ export default defineAppConfig({
         {
           key: 0,
           matches:
-            '@[desc="关闭"][clickable=true] - LinearLayout > TextView[text!=null]', // 1687669217838
+            'TextView[text!=null] < LinearLayout + ImageView[desc="关闭"]', // 原@语法会出现两个选项可能会导致误触
           snapshotUrls: [
             'https://i.gkd.li/import/12892726',
             'https://i.gkd.li/import/12774870',
             'https://i.gkd.li/import/13207766',
+            'https://i.gkd.li/import/13386518',
           ],
         },
       ],
@@ -256,21 +257,33 @@ export default defineAppConfig({
       ],
     },
     {
+      enable: false,
       key: 15,
       name: '好友动态-为你推荐',
-      activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
+      quickFind: true,
+      matchLauncher: true,
+      activityIds: [
+        'com.tencent.mobileqq.activity.SplashActivity',
+        'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
+      ],
       rules: [
         {
           key: 0,
-          matches: '[text="为你推荐"] + ImageView[id!=null][clickable=true]',
-          snapshotUrls: 'https://i.gkd.li/import/12929620',
+          matches: '@ImageView[clickable=true] - [text="为你推荐"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12929620',
+            'https://i.gkd.li/import/13387606', // activityIds: 'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
+          ],
         },
         {
           preKeys: 0,
           key: 1,
           matches:
             '@LinearLayout[id!=null][clickable=true] > LinearLayout > [text="减少此类推荐"]',
-          snapshotUrls: 'https://i.gkd.li/import/12929619',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12929619',
+            'https://i.gkd.li/import/13387605', // matchLauncher: true,
+          ],
         },
       ],
     },
@@ -285,9 +298,15 @@ export default defineAppConfig({
     {
       key: 17,
       name: '更新弹窗',
-      activityIds: 'com.tencent.mobileqq.upgrade',
+      activityIds: [
+        'com.tencent.mobileqq.upgrade',
+        'com.tencent.mobileqq.activity.SplashActivity',
+      ],
       rules: '@[desc="关闭"] - ViewGroup > [text="发现新版本"]',
-      snapshotUrls: 'https://i.gkd.li/import/13188721',
+      snapshotUrls: [
+        'https://i.gkd.li/import/13188721',
+        'https://i.gkd.li/import/13386719',
+      ],
     },
     {
       enable: false,

@@ -44,14 +44,46 @@ export default defineAppConfig({
       snapshotUrls: 'https://i.gkd.li/import/12792688',
     },
     {
-      enable: false,
       key: 2,
-      name: '关闭开启通知提示',
+      name: '请求通知权限提示',
       quickFind: true,
       activityIds: 'com.eg.android.AlipayGphone.AlipayLogin',
+      rules: [
+        {
+          key: 0,
+          name: '首页底部提示',
+          matches:
+            '@[desc="关闭"] - * >n [id="com.alipay.mobile.antui:id/tipTextView"][text^="开启通知权限"]',
+          snapshotUrls: 'https://i.gkd.li/import/13194955',
+        },
+      ],
+    },
+    {
+      enable: false,
+      key: 3,
+      name: '版本更新提示',
+      desc: '选择稍后再说',
+      quickFind: true,
+      activityIds: 'com.alipay.mobile.alipassapp.alkb.kb.ALPMainPage63',
       rules:
-        '@[id="com.alipay.mobile.antui:id/closeButton"] - [id="com.alipay.mobile.antui:id/textAndButtonLayout"] [id="com.alipay.mobile.antui:id/tipTextView"][text ^="开启通知权限"]',
-      snapshotUrls: 'https://i.gkd.li/import/13194955',
+        'TextView[id="com.alipay.mobile.accountauthbiz:id/update_cancel_tv"]',
+      snapshotUrls: 'https://i.gkd.li/import/13327095',
+    },
+    {
+      enable: false,
+      key: 4,
+      name: '设置支付宝小组件',
+      desc: '点击关闭',
+      quickFind: true,
+      activityIds: 'com.alipay.android.msp.ui.views.MspContainerActivity',
+      rules: [
+        {
+          matches:
+            '@TextView[text="关闭"] < * <3 * < * + * >3 TextView[text="设置支付宝小组件"]',
+          action: 'clickCenter',
+          snapshotUrls: 'https://i.gkd.li/import/13327349',
+        },
+      ],
     },
   ],
 });
