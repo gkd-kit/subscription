@@ -14,5 +14,14 @@ export default defineAppConfig({
         '[text="发现新版本"] - * > [id="com.lenovo.browser.hd:id/fl_close"]',
       snapshotUrls: 'https://i.gkd.li/import/13401982',
     },
+    {
+      key: 2,
+      name: '请求通知权限弹窗',
+      activityIds: 'com.zui.launcher.drawer.NormalLauncher',
+      quickFind: true,
+      rules:
+        '[text="开启消息通知"] +n * > [id="com.lenovo.browser.hd:id/tv_cancle"]',
+      snapshotUrls: 'https://i.gkd.li/import/13401980',
+    },
   ],
 });
