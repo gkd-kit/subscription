@@ -89,7 +89,7 @@ export default defineAppConfig({
         },
         {
           name: '点击不感兴趣',
-          preKeys: [1, 2,],
+          preKeys: [1, 2],
           matches:
             '@LinearLayout[clickable=true] > [id="com.douban.frodo:id/mainText"][text="不感兴趣"]',
           snapshotUrls: [
