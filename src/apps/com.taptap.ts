@@ -37,7 +37,7 @@ export default defineAppConfig({
     },
     {
       key: 3,
-      name: '更新提示'
+      name: '更新提示',
       quickFind: true,
       activityIds: 'com.taptap.upgrade.library.dialog.UpgradeDialogAct',
       matches: '@[id="com.taptap.app.game:id/btn_dismiss"] - LinearLayout >n [text="立即更新"]',
