@@ -13,12 +13,13 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
-          matches: '[childCount=1] > [text="跳过广告"]',
+          matches: '[text*="跳过"][text.length<=10]',
           snapshotUrls: [
             'https://i.gkd.li/import/12684954',
             'https://i.gkd.li/import/12754759',
             'https://i.gkd.li/import/12840189',
             'https://i.gkd.li/import/13174224',
+            'https://i.gkd.li/import/13402688',
           ],
         },
       ],
