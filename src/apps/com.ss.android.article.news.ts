@@ -181,5 +181,30 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      enable: false,
+      key: 14,
+      name: '自动观看广告视频',
+      desc: '自动观看广告并等待30s后关闭',
+      quickFind: true,
+      rules: [
+        {
+          key: 0,
+          name: '点击【看视频】',
+          activityIds: 'com.ss.android.article.news.activity.MainActivity',
+          matches:
+            '[id="com.bytedance.novel.api:id/component_ad_dialog_button_video"]',
+          snapshotUrls: 'https://i.gkd.li/import/13402468',
+        },
+        {
+          name: '等待30s点击广告视频',
+          actionDelay: 30000,
+          activityIds: 'com.ss.android.excitingvideo.ExcitingVideoActivity',
+          matches: 'UIText[text="广告"] +n UIText[text="关闭"]',
+          snapshotUrls: 'https://i.gkd.li/import/13402480',
+        },
+        
+      ],
+    },
   ],
 });
