@@ -203,7 +203,6 @@ export default defineAppConfig({
           matches: 'UIText[text="广告"] +n UIText[text="关闭"]',
           snapshotUrls: 'https://i.gkd.li/import/13402480',
         },
-        
       ],
     },
   ],
