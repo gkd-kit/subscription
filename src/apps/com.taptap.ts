@@ -41,9 +41,11 @@ export default defineAppConfig({
       quickFind: true,
       activityIds: 'com.taptap.upgrade.library.dialog.UpgradeDialogAct',
       rules: [
-      matches: '@[id="com.taptap.app.game:id/btn_dismiss"] - LinearLayout >n [text="立即更新"]',
-      snapshotUrls: 'https://i.gkd.li/import/13387479',
-    ],
+        {
+          matches: '@[id="com.taptap.app.game:id/btn_dismiss"] - LinearLayout >n [text="立即更新"]',
+          snapshotUrls: 'https://i.gkd.li/import/13387479',
+        },
+      ],
     },
   ],
 });
