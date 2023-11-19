@@ -197,7 +197,7 @@ export default defineAppConfig({
           snapshotUrls: 'https://i.gkd.li/import/13402468',
         },
         {
-          name: '等待30s点击广告视频',
+          name: '等待30s点击【关闭】',
           actionDelay: 30000,
           activityIds: 'com.ss.android.excitingvideo.ExcitingVideoActivity',
           matches: 'UIText[text="广告"] +n UIText[text="关闭"]',
