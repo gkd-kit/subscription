@@ -46,6 +46,7 @@ export default defineAppConfig({
       ],
     },
     {
+      enable: false,
       key: 3,
       name: '信息流广告',
       desc: '首页动态/推荐,小组讨论列表,帖子底部,点击广告关闭后出现关闭原因底部菜单-点击不感兴趣',
@@ -229,6 +230,7 @@ export default defineAppConfig({
       name: '版本更新',
       quickFind: true,
       actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
           key: 0,
