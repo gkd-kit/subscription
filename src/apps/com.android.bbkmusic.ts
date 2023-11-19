@@ -11,12 +11,12 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       quickFind: true,
-          rules: [
-            {
-              matches: '[id="com.android.bbkmusic:id/launcher_page_skip_text"]', 
-              snapshotUrls: 'https://i.gkd.li/import/13400275',
-            },
-          ],
+      rules: [
+        {
+          matches: '[id="com.android.bbkmusic:id/launcher_page_skip_text"]',
+          snapshotUrls: 'https://i.gkd.li/import/13400275',
+        },
+      ],
     },
   ],
 });
