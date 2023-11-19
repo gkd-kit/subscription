@@ -11,7 +11,6 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'org.daimhim.zzzfun.ui.SplashActivity',
       rules: '[text*="跳过"][text.length<=10]',
       snapshotUrls: 'https://i.gkd.li/import/13402607',
     },
