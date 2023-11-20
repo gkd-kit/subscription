@@ -40,11 +40,11 @@ export default defineAppConfig({
     {
       key: 2,
       name: '直播间悬浮广告',
-      quickFind: true,
       activityIds: 'com.duowan.kiwi.liveroom.ChannelPage',
       rules: [
         {
           key: 0,
+          quickFind: true,
           matches: '[id="com.duowan.kiwi:id/ad_close"]',
           snapshotUrls: [
             'https://i.gkd.li/import/12901045',
@@ -53,21 +53,20 @@ export default defineAppConfig({
         },
         {
           key: 1,
+          quickFind: true,
           matches: '[id="com.duowan.kiwi:id/game_header_close"]',
           snapshotUrls: [
             'https://i.gkd.li/import/13395604',
             'https://i.gkd.li/import/13395606',
           ],
         },
+        {
+          key: 2,
+          matches:
+            '[id="com.duowan.kiwi:id/miniapp_content_container"] FrameLayout > ViewGroup[childCount=2] > @ViewGroup[clickable=true] > ImageView',
+          snapshotUrls: 'https://i.gkd.li/import/13401266',
+        },
       ],
-    },
-    {
-      key: 5,
-      name: '直播间底部弹窗',
-      activityIds: 'com.duowan.kiwi.liveroom.ChannelPage',
-      rules:
-        '[id="com.duowan.kiwi:id/miniapp_content_container"] FrameLayout > ViewGroup[childCount=2] > @ViewGroup[clickable=true] > ImageView',
-      snapshotUrls: 'https://i.gkd.li/import/13401266',
     },
   ],
 });
