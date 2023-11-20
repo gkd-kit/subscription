@@ -7,14 +7,23 @@ export default defineAppConfig({
     {
       key: 1,
       name: '开屏广告',
-      activityIds: ['com.baidu.youavideo.app.ui.SplashActivity'],
+      quickFind: true,
+      matchTime: 10000,
+      resetMatch: 'app',
       rules: [
         {
-          matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"||text="跳过"]',
-          snapshotUrls: [
-            'https://i.gkd.li/import/12597925',
-            'https://i.gkd.li/import/12598507',
-          ],
+          key: 0,
+          name: '字节广告',
+          actionMaximum: 1,
+          matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
+          snapshotUrls: 'https://i.gkd.li/import/12597925',
+        },
+        {
+          key: 1,
+          name: '百青藤广告',
+          actionMaximumKey: 0,
+          matches: '[text="跳过"]',
+          snapshotUrls: 'https://i.gkd.li/import/12598507',
         },
       ],
     },
