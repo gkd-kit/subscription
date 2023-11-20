@@ -351,6 +351,7 @@ export default defineAppConfig({
           snapshotUrls: [
             'https://i.gkd.li/import/13199282', // [childCount=3]避免在点击展开菜单后重复点击
             'https://i.gkd.li/import/13407275', // excludeMatches中添加key10中规则，避免误触
+          ],
         },
         {
           key: 1,
