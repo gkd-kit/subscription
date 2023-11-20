@@ -347,7 +347,8 @@ export default defineAppConfig({
           name: '【广告】0',
           matches:
             'FrameLayout[childCount=3] >n FrameLayout > FrameLayout > [text="广告"][visibleToUser=true]',
-          excludeMatches: 'FrameLayout > TextView + FrameLayout > TextView[text="跳过"]',
+          excludeMatches:
+            'FrameLayout > TextView + FrameLayout > TextView[text="跳过"]',
           snapshotUrls: [
             'https://i.gkd.li/import/13199282', // [childCount=3]避免在点击展开菜单后重复点击
             'https://i.gkd.li/import/13407275', // excludeMatches中添加key10中规则，避免误触
