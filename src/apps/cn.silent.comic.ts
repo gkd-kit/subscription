@@ -1,6 +1,5 @@
 import { defineAppConfig } from '../types';
-export default defineAppConfig(
-  {
+export default defineAppConfig({
     "id": "cn.silent.comic",
     "name": "免漫",
     "groups": [
@@ -37,5 +36,4 @@ export default defineAppConfig(
         ]
       }
     ]
-  }
-);
+  });
