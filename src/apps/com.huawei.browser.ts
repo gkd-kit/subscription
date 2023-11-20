@@ -12,11 +12,10 @@ export default defineAppConfig({
         {
           matches: '[id$="/hiad_skip_text"]',
           action: 'clickCenter',
-          snapshotUrls: 
-            [
-              'https://i.gkd.li/import/12681995',
-              'https://i.gkd.li/import/13403785',
-            ],
+          snapshotUrls: [
+            'https://i.gkd.li/import/12681995',
+            'https://i.gkd.li/import/13403785',
+          ],
         },
       ],
     },
