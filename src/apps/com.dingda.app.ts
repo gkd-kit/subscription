@@ -10,16 +10,18 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       quickFind: true,
+      matchTime: 10000,
       rules: [
         {
-          matches: [
-            '[id!=null][id="com.byted.pangle:id/tt_splash_skip_btn"]', // 不能 quickFind
-            '[text="跳过 "&&name="android.widget.TextView"]',
-          ],
-          snapshotUrls: [
-            'https://i.gkd.li/import/13290327',
-            'https://i.gkd.li/import/13403575',
-          ],
+          key: 0,
+          matches:
+            '@[id="com.byted.pangle:id/tt_splash_skip_btn"] <<n [id="com.dingda.app:id/adContent"]',
+          snapshotUrls: 'https://i.gkd.li/import/13290327',
+        },
+        {
+          actionMaximumKey: 0,
+          matches: '[text^="跳过"][text.length<=10]',
+          snapshotUrls: 'https://i.gkd.li/import/13403575',
         },
       ],
     },
