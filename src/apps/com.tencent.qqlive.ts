@@ -3,6 +3,7 @@ import { defineAppConfig } from '../types';
 export default defineAppConfig({
   id: 'com.tencent.qqlive',
   name: '腾讯视频',
+  deprecatedKeys: [5, 19],
   groups: [
     {
       key: 0,
@@ -39,29 +40,79 @@ export default defineAppConfig({
       snapshotUrls: 'https://i.gkd.li/import/12700486',
     },
     {
+      enable: false,
       key: 3,
-      name: '首页-顶部广告卡片',
-      activityIds: ['com.tencent.qqlive.ona.activity.SplashHomeActivity'],
+      name: '卡片式广告',
+      activityIds: 'com.tencent.qqlive.ona.activity.SplashHomeActivity',
       rules: [
         {
-          name: '点击右上角[广告]',
+          key: 0,
+          name: '首页顶部卡片广告',
           matches:
-            'FrameLayout - RelativeLayout > RelativeLayout > FrameLayout + ImageView[clickable=true]',
+            'FrameLayout - RelativeLayout > RelativeLayout > FrameLayout + ImageView[clickable=true][childCount=0]',
           snapshotUrls: [
             'https://i.gkd.li/import/12700299',
             'https://i.gkd.li/import/12700302',
           ],
         },
         {
-          name: '点击右上角[关闭广告]',
+          key: 1,
+          name: '首页顶部背景广告',
           matches: '[text="关闭广告"][clickable=true]',
-          snapshotUrls: ['https://i.gkd.li/import/12700518'],
+          snapshotUrls: 'https://i.gkd.li/import/12700518',
         },
         {
+          key: 2,
+          name: '个人中心页中间卡片广告',
+          matches:
+            'ViewGroup > TextView + LinearLayout[childCount=2] + ImageView[clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/import/12700175',
+        },
+        {
+          key: 3,
+          name: '个人中心页顶部背景广告',
+          matches:
+            'RelativeLayout > FrameLayout + @ImageView[clickable=true] + ImageView + ImageView',
+          snapshotUrls: 'https://i.gkd.li/import/12777344',
+        },
+        {
+          key: 4,
           name: '点击右上角[广告]',
           matches:
             'RelativeLayout[id=null] > @FrameLayout[clickable=true][id!=null] > ImageView[desc="the ad tag"]',
           snapshotUrls: 'https://i.gkd.li/import/12737313',
+        },
+        {
+          key: 5,
+          name: '点击右下角关闭',
+          matches:
+            'ImageView[childCount=0] <<2 RelativeLayout + FrameLayout + RelativeLayout > RelativeLayout > RelativeLayout > ImageView',
+          snapshotUrls: 'https://i.gkd.li/import/13426421',
+        },
+        // 以下是配合本规则组内其他key使用的规则，反馈界面的规则都是一样的
+        {
+          key: 98,
+          name: '广告反馈卡片-选择原因',
+          quickFind: true,
+          activityIds:
+            'com.tencent.qqlive.qaduikit.common.dialog.feedback.variable.QAdFeedbackVariableDislikeItemDialog',
+          matches:
+            '[text="关闭这条广告的原因"] +(2) RecyclerView > [text="不感兴趣"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12700303',
+            'https://i.gkd.li/import/12829866',
+          ],
+        },
+        {
+          preKeys: [98],
+          key: 99,
+          name: '广告反馈卡片-确认',
+          quickFind: true,
+          activityIds:
+            'com.tencent.qqlive.qaduikit.common.dialog.feedback.variable.QAdFeedbackVariableDislikeItemDialog',
+          matches:
+            '[text="关闭这条广告的原因"] + [text="确认"][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/import/12700210',
         },
       ],
     },
@@ -87,52 +138,6 @@ export default defineAppConfig({
           matches:
             'FrameLayout[childCount=2] > FrameLayout > RelativeLayout > View[id!=null][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13043079',
-        },
-      ],
-    },
-    {
-      key: 5,
-      name: '个人中心广告',
-      activityIds: ['com.tencent.qqlive.ona.activity.SplashHomeActivity'],
-      rules: [
-        {
-          key: 0,
-          matches:
-            'ViewGroup > TextView + LinearLayout[childCount=2] + ImageView[clickable=true]',
-          snapshotUrls: 'https://i.gkd.li/import/12700175',
-        },
-        {
-          key: 1,
-          matches:
-            'RelativeLayout > FrameLayout + @ImageView[clickable=true] + ImageView + ImageView',
-          snapshotUrls: 'https://i.gkd.li/import/12777344',
-        },
-      ],
-    },
-    {
-      key: 19, // 配合应用内其他广告卡片使用，反馈界面的规则都是一样的
-      name: '广告反馈卡片',
-      desc: '自动点击 不感兴趣 -> 确定',
-      activityIds: [
-        'com.tencent.qqlive.ona.activity.SplashHomeActivity',
-        'com.tencent.qqlive.qaduikit.common.dialog.feedback.variable.QAdFeedbackVariableDislikeItemDialog',
-      ],
-      rules: [
-        {
-          key: 1,
-          matches:
-            '[text="关闭这条广告的原因"] +(2) RecyclerView > [text="不感兴趣"]',
-          snapshotUrls: [
-            'https://i.gkd.li/import/12700303',
-            'https://i.gkd.li/import/12829866',
-          ],
-        },
-        {
-          preKeys: [1],
-          key: 2,
-          matches:
-            '[text="关闭这条广告的原因"] + [text="确认"][clickable=true]',
-          snapshotUrls: 'https://i.gkd.li/import/12700210',
         },
       ],
     },
