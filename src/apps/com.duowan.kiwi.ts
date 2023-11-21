@@ -59,6 +59,12 @@ export default defineAppConfig({
             'https://i.gkd.li/import/13395606',
           ],
         },
+        {
+          key: 2,
+          matches:
+            '[id="com.duowan.kiwi:id/popup_banner"] >2 [id="com.duowan.kiwi:id/ui_count_down"]',
+          snapshotUrls: ['https://i.gkd.li/import/13417245'],
+        },
       ],
     },
   ],
