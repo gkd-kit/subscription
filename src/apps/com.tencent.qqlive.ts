@@ -145,7 +145,8 @@ export default defineAppConfig({
       enable: false,
       key: 20,
       name: '请求通知权限弹窗',
-      desc: '自动点击“以后再说”',
+      desc: '自动点击[以后再说]',
+      quickFind: true,
       activityIds:
         'com.tencent.qqlive.ona.update.trunk.client.TrunkUpdateActivity',
       rules: 'LinearLayout > @[text="以后再说"] + [text="好的"]',
