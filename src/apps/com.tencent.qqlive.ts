@@ -124,7 +124,8 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          name: '点击[跳过广告]',
+          name: '全屏广告',
+          quickFind: true,
           matches:
             '@[text$="跳过广告"][clickable=true] < LinearLayout > [text="VIP可关闭该广告"]',
           snapshotUrls: [
@@ -134,7 +135,7 @@ export default defineAppConfig({
         },
         {
           key: 1,
-          name: '点击左下角广告横幅右上角x',
+          name: '左下角悬浮广告',
           matches:
             'FrameLayout[childCount=2] > FrameLayout > RelativeLayout > View[id!=null][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13043079',
