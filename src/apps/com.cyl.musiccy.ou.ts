@@ -47,6 +47,7 @@ export default defineAppConfig({
       key: 2,
       name: '插屏广告',
       matchLauncher: true,
+      actionDelay: 300,
       activityIds: [
         'com.cyl.musiccy.ou.MainActivity',
         'com.sigmob.sdk.base.common.TransparentAdActivity',
@@ -95,6 +96,13 @@ export default defineAppConfig({
             'ImageView <n FrameLayout - FrameLayout > FrameLayout[index=1] > ImageView',
           snapshotUrls: 'https://i.gkd.li/import/13063249',
         },
+        {
+          key: 5,
+          matches:
+            'ImageView <n FrameLayout > FrameLayout[index=0] > FrameLayout FrameLayout > ImageView',
+          snapshotUrls: 'https://i.gkd.li/import/13422363',
+        },
+   
       ],
     },
   ],
