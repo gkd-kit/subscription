@@ -17,5 +17,13 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 2,
+      name: '三星安装软件跳过提示',
+      activityIds: 'com.android.packageinstaller.activity.InstallerActivity',
+      matchLauncher: true,
+      rules: '[id="com.android.packageinstaller:id/cancel_btn"]',
+      snapshotUrls: 'https://i.gkd.li/import/13421592',
+    }
   ],
 });
