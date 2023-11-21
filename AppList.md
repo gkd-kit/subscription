@@ -712,3 +712,4 @@
 | 作业帮                 | [com.baidu.homework](/docs/com.baidu.homework.md)                                                 | 1               |
 | 作业帮家长版           | [com.zuoyebang.knowledge](/docs/com.zuoyebang.knowledge.md)                                       | 2               |
 | アニメ新番組           | [online.bangumi](/docs/online.bangumi.md)                                                         | 1               |
+| Fa米家               | [com.x2era.xcloud.app](/docs/com.x2era.xcloud.app.md)                                              | 2启用/2规则     |
