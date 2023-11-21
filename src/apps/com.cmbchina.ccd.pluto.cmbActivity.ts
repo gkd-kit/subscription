@@ -97,9 +97,7 @@ export default defineAppConfig({
       quickFind: true,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: [
-        'com.cmbchina.ccd.pluto.cmbActivity.messagebox',
-      ],
+      activityIds: ['com.cmbchina.ccd.pluto.cmbActivity.messagebox'],
       rules:
         '[id="com.cmbchina.ccd.pluto.cmbActivity:id/btn_open_notify"] + [id="com.cmbchina.ccd.pluto.cmbActivity:id/iv_delete"]',
       snapshotUrls: ['https://i.gkd.li/import/12647068'],
