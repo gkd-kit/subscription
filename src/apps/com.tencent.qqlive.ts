@@ -21,13 +21,11 @@ export default defineAppConfig({
     },
     {
       key: 1,
-      name: '关闭青少年弹窗',
-      activityIds: [
-        'com.tencent.qqlive.ona.update.trunk.client.TrunkUpdateActivity',
-        'com.tencent.qqlive.ona.activity.SplashHomeActivity',
-      ],
-      rules:
-        'TextView[text*="青少年模式"] +n TextView[id="com.tencent.qqlive:id/arg"][text="我知道了"]',
+      name: '青少年模式弹窗',
+      actionMaximum: 1,
+      resetMatch: 'app',
+      quickFind: true,
+      rules: 'TextView[text*="青少年模式"] +n TextView[text="我知道了"]',
       snapshotUrls: 'https://i.gkd.li/import/12700145',
     },
     {
@@ -141,7 +139,7 @@ export default defineAppConfig({
     {
       enable: false,
       key: 20,
-      name: '请求开启推送通知弹窗',
+      name: '请求通知权限弹窗',
       desc: '自动点击“以后再说”',
       activityIds:
         'com.tencent.qqlive.ona.update.trunk.client.TrunkUpdateActivity',
