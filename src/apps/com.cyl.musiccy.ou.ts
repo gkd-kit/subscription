@@ -102,7 +102,6 @@ export default defineAppConfig({
             'ImageView <n FrameLayout > FrameLayout[index=0] > FrameLayout FrameLayout > ImageView',
           snapshotUrls: 'https://i.gkd.li/import/13422363',
         },
-   
       ],
     },
   ],
