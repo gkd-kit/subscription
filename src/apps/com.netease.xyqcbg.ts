@@ -1,4 +1,4 @@
-import {defineAppConfig} from '../types';
+import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
   id: 'com.netease.xyqcbg',
@@ -10,6 +10,7 @@ export default defineAppConfig({
       name: '开屏广告跳过',
       activityIds: 'com.netease.cbg.activities.LoadingActivity',
       rules: '[id="com.netease.xyqcbg:id/tv_cbg_launch_skip"]',
+      snapshotUrls: 'https://i.gkd.li/import/13421627',
     },
     {
       enable: false,
@@ -19,6 +20,7 @@ export default defineAppConfig({
       resetMatch: 'app',
       name: '回流福利窗口跳过',
       rules: '[id="com.netease.xyqcbg:id/iv_close"]',
+      snapshotUrls: 'https://i.gkd.li/import/13421627',
     },
   ],
 });
