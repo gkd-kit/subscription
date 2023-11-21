@@ -77,6 +77,19 @@ export const writeConfig = async (config: SubscriptionConfig) => {
   const buffer = Buffer.from(orderdStringify(newConfig, sortKeys), 'utf-8');
   await fs.writeFile(gkdFp, buffer);
 
+  // update gkd.openad.json
+  const onlyOpenAdConfig = _.cloneDeep(newConfig);
+  onlyOpenAdConfig.apps.forEach((a) => {
+    a.groups?.forEach((g) => {
+      g.enable = g.name.startsWith('开屏广告');
+    });
+  });
+  await fs.writeFile(
+    process.cwd() + '/dist/gkd.openad.json',
+    orderdStringify(onlyOpenAdConfig, sortKeys),
+    'utf-8',
+  );
+
   // update gkd.version.json
   await fs.writeFile(
     versionFp,
@@ -343,7 +356,14 @@ export const updateReadMeMd = async (
         .reduce((p, c) => p + (c.groups?.length || 0), 0)
         .toString(),
     )
-    .replaceAll('--VERSION--', (newConfig.version || 0).toString())
-    .replaceAll('--APP_LIST--', appListText);
+    .replaceAll('--VERSION--', (newConfig.version || 0).toString());
   await fs.writeFile(process.cwd() + '/README.md', readMeMdText);
+  const appListTemplateMd = await fs.readFile(
+    process.cwd() + '/AppListTemplate.md',
+    'utf-8',
+  );
+  await fs.writeFile(
+    process.cwd() + '/AppList.md',
+    appListTemplateMd.replaceAll('--APP_LIST--', appListText),
+  );
 };
