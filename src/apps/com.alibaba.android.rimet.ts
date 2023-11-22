@@ -98,5 +98,22 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      enable: false,
+      key: 5,
+      name: '电脑钉钉自动登录',
+      activityIds: 'com.alibaba.android.user.qrcode.WebLoginActivity',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          key: 0,
+          matches: '[id="com.alibaba.android.rimet:id/tv"][text*="登录"]',
+          snapshotUrls: 'https://i.gkd.li/import/13433981',
+        },
+      ],
+    },
   ],
 });
