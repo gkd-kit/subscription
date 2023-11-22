@@ -10,7 +10,7 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: 'ImageView[desc=	"miniLogoView"] + View[clickable=true]',
+      rules: 'ImageView[desc="miniLogoView"] + View[clickable=true]',
       snapshotUrls: [
         'https://i.gkd.li/import/12775410',
         'https://i.gkd.li/import/13426030',
