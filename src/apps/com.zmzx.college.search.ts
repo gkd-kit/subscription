@@ -106,7 +106,8 @@ export default defineAppConfig({
       actionMaximum: 1,
       rules: [
         {
-          matches: '[text="开启推送通知"] - [id="com.zmzx.college.search:id/siv_dialog_close"]',
+          matches:
+            '[text="开启推送通知"] - [id="com.zmzx.college.search:id/siv_dialog_close"]',
           snapshotUrls: 'https://i.gkd.li/import/13440939',
         },
       ],
