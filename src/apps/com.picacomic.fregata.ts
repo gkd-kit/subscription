@@ -7,12 +7,10 @@ export default defineAppConfig({
     {
       key: 1,
       name: '开屏广告',
-      desc: '点击开屏广告',
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'com.picacomic.fregata.activities.MainActivity',
       rules: [
         {
           matches: '[id="com.picacomic.fregata:id/imageButton_popup_close"]',
