@@ -12,8 +12,7 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
-          activityIds: 'uni.UNIE7FC6F0.view.logo.AdvertisingActivity',
-          matches: '@TextView[id="uni.UNIE7FC6F0:id/tv_seconds"][text$="跳过"]',
+          matches: '@TextView[id="uni.UNIE7FC6F0:id/tv_seconds"]',
           exampleUrls: [
             'https://m.gkd.li/83610194/e6748e2f-3bdb-4f13-8caf-1ab8b5795f24',
           ],
