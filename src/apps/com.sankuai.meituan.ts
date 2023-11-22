@@ -109,18 +109,18 @@ export default defineAppConfig({
     },
     {
       enable: false,
-      "key": 8,
-      "name": "通知弹窗",
-      "desc": "点击跳过",
+      key: 8,
+      name: '通知弹窗',
+      desc: '点击跳过',
       quickFind: true,
       actionMaximum: 1,
-      "rules": [
+      rules: [
         {
-          "activityIds": "com.meituan.android.pt.homepage.activity.MainActivity",
-          "matches": "TextView[id='com.sankuai.meituan:id/later']",
-          "snapshotUrls": "https://i.gkd.li/import/13439134"
-        }
-      ]
-    }
+          activityIds: 'com.meituan.android.pt.homepage.activity.MainActivity',
+          matches: 'TextView[id=\'com.sankuai.meituan:id/later\']',
+          snapshotUrls: 'https://i.gkd.li/import/13439134',
+        },
+      ],
+    },
   ],
 });
