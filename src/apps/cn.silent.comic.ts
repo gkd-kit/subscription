@@ -10,7 +10,6 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: ['io.dcloud.PandoraEntryActivity', 'io.dcloud.PandoraEntry'],
       rules: [
         {
           matches: '[id="cn.silent.comic:id/ksad_splash_circle_skip_view"]',
