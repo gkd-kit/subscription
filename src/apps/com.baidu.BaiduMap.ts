@@ -124,18 +124,18 @@ export default defineAppConfig({
     },
     {
       enable: false,
-      "key": 9,
-      "name": "通勤卡-添加至桌面",
-      "desc": "点击取消",
+      key: 9,
+      name: '通勤卡-添加至桌面',
+      desc: '点击取消',
       quickFind: true,
       actionMaximum: 1,
-      "rules": [
+      rules: [
         {
-          "activityIds": "com.baidu.baidumaps.MapsActivity",
-          "matches": "TextView[id='com.baidu.BaiduMap:id/tv_dialog_cancel']",
-          "snapshotUrls": "https://i.gkd.li/import/13439258"
-        }
-      ]
-    }
+          activityIds: 'com.baidu.baidumaps.MapsActivity',
+          matches: 'TextView[id=\'com.baidu.BaiduMap:id/tv_dialog_cancel\']',
+          snapshotUrls: 'https://i.gkd.li/import/13439258',
+        },
+      ],
+    },
   ],
 });
