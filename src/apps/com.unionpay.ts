@@ -97,16 +97,16 @@ export default defineAppConfig({
       ],
     },
     {
-      "key": 13,
-      "name": "获得新勋章提示",
+      key: 13,
+      name: '获得新勋章提示',
       actionMaximum: 1,
-      "rules": [
+      rules: [
         {
-          "activityIds": "com.unionpay.cordova.UPActivityCordovaWeb",
-          "matches": "TextView[text='炫耀一下'] + TextView[clickable=true]",
-          "snapshotUrls": "https://i.gkd.li/import/13440341"
-        }
-      ]
-    }
+          activityIds: 'com.unionpay.cordova.UPActivityCordovaWeb',
+          matches: 'TextView[text=\'炫耀一下\'] + TextView[clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/import/13440341',
+        },
+      ],
+    },
   ],
 });
