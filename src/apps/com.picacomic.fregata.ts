@@ -1,4 +1,5 @@
 import { defineAppConfig } from '../types';
+
 export default defineAppConfig({
   id: 'com.picacomic.fregata',
   name: 'PicACG',
@@ -69,7 +70,7 @@ export default defineAppConfig({
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
-      resetMatch: 'app',
+      resetMatch: 'activity',
       activityIds: 'com.picacomic.fregata.activities.MainActivity',
       rules: [
         {
