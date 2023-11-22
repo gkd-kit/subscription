@@ -5,7 +5,6 @@ export default defineAppConfig({
   name: '淘票票',
   groups: [
     {
-      enable: false,
       key: 0,
       name: '开屏广告',
       quickFind: true,
