@@ -17,10 +17,6 @@ export default defineAppConfig({
           matches: '[text*="跳过"][text.length<=10]',
           snapshotUrls: 'https://i.gkd.li/import/13424651',
         },
-        {
-          name: '【穿山甲SDK】',
-          matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
-        },
       ],
     },
   ],
