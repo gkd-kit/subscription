@@ -38,9 +38,17 @@ export default defineAppConfig({
             'https://i.gkd.li/import/13386518',
           ],
         },
+        {
+          key: 1,
+          name: '消息页面-顶部惊喜礼包',
+          matches:
+            '[text*="惊喜礼包"] + FrameLayout + ImageView[clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/import/13426912',
+        },
       ],
     },
     {
+      enable: false,
       key: 2,
       name: '好友动态-广告卡片',
       activityIds: [
@@ -55,8 +63,9 @@ export default defineAppConfig({
         },
         {
           preKeys: 0,
+          quickFind: true,
           matches:
-            '[clickable=true] > ImageView + TextView[text="关闭此条广告"]',
+            '@[clickable=true] > ImageView + TextView[text="关闭此条广告"]',
           snapshotUrls: 'https://i.gkd.li/import/12840889',
         },
       ],
