@@ -22,9 +22,14 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       activityIds: 'cmccwm.mobilemusic.ui.base.MainActivity',
-      rules:
-        '[id="cmccwm.mobilemusic.libraries_feature:id/tv_title"][text="发现新版本"]',
-      snapshotUrls: 'https://i.gkd.li/import/13448898',
+      rules: [
+        {
+          action: 'back',
+          matches:
+            '[id="cmccwm.mobilemusic.libraries_feature:id/tv_title"][text="发现新版本"]',
+          snapshotUrls: 'https://i.gkd.li/import/13448898',
+        },
+      ],
     },
   ],
 });
