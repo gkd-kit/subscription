@@ -231,7 +231,7 @@ export default defineAppConfig({
             'com.xunlei.downloadprovider.frame.MainTabActivity',
           ],
           matches:
-            '@[id="com.xunlei.downloadprovider:id/close_btn"] - LinearLayout [text='您的会员已过期']',
+            '@[id="com.xunlei.downloadprovider:id/close_btn"] - LinearLayout [text="您的会员已过期"]',
           snapshotUrls: [
             'https://i.gkd.li/import/12707698',
             'https://i.gkd.li/import/13448909',
