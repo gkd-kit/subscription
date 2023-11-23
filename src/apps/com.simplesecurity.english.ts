@@ -14,8 +14,7 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       rules: '[id="com.simplesecurity.english:id/splash_ad_countdown"]',
-      snapshotUrls: 'https://i.gkd.li/import/13447714',
+      snapshotUrls: 'https://i.gkd.li/import/13447714', // matchDelay: 3000, 反馈3s后才能关闭
     },
-    {
   ],
 });
