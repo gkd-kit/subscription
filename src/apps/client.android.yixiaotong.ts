@@ -7,10 +7,11 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: 'client.android.yixiaotong.ui.WelcomeActivity',
-      matchLauncher: true,
-      rules:
-        '[id="client.android.yixiaotong:id/rel_advlogo"] - * >n [text^="跳过"]',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: '[text^="跳过"][text.length<=10]',
       snapshotUrls: 'https://i.gkd.li/import/13055542',
     },
     {
