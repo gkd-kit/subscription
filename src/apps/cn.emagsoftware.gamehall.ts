@@ -22,7 +22,8 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       activityIds: 'com.migugame.home_module.ui.activity.HomeActivity',
-      rules: '[id="cn.emagsoftware.gamehall:id/btn_update"] -2 [id="cn.emagsoftware.gamehall:id/btn_cancle"]',
+      rules:
+        '[id="cn.emagsoftware.gamehall:id/btn_update"] -2 [id="cn.emagsoftware.gamehall:id/btn_cancle"]',
       snapshotUrls: 'https://i.gkd.li/import/13448894',
     },
   ],
