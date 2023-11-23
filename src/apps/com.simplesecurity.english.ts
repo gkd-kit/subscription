@@ -10,6 +10,7 @@ export default defineAppConfig({
       name: '开屏广告',
       quickFind: true,
       matchTime: 10000,
+      matchDelay: 3000,
       actionMaximum: 1,
       resetMatch: 'app',
       rules: '[id="com.simplesecurity.english:id/splash_ad_countdown"]',
