@@ -160,17 +160,17 @@ export default defineAppConfig({
     },
     {
       enable: false,
-      "key": 12,
-      "name": "购物车界面-支付成功广告弹窗",
-      "desc": "自动点击正下方的【x】",
+      key: 12,
+      name: '购物车界面-支付成功广告弹窗',
+      desc: '自动点击正下方的【x】',
       quickFind: true,
-      "rules": [
+      rules: [
         {
-          "activityIds": "com.jd.lib.cart.ShoppingCartNewActivity",
-          "matches": "@ImageView - ViewGroup >2 TextView[text='查看订单']",
-          "snapshotUrls": "https://i.gkd.li/import/13446362"
-        }
-      ]
-    }
+          activityIds: 'com.jd.lib.cart.ShoppingCartNewActivity',
+          matches: '@ImageView - ViewGroup >2 TextView[text=\'查看订单\']',
+          snapshotUrls: 'https://i.gkd.li/import/13446362',
+        },
+      ],
+    },
   ],
 });
