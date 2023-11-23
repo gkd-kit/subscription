@@ -41,11 +41,28 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      name: '应用内广告卡片',
-      activityIds:
-        'client.android.yixiaotong.v3.ui.appcontrol.bath.BathDetailActivity',
-      rules: 'ImageView - FrameLayout - FrameLayout > ImageView',
-      snapshotUrls: 'https://i.gkd.li/import/13055542',
+      name: '卡片式广告',
+
+      rules: [
+        {
+          key: 0,
+          name: '腾讯广告',
+          activityIds:
+            'client.android.yixiaotong.v3.ui.appcontrol.bath.BathDetailActivity',
+          matches:
+            'ImageView - FrameLayout - FrameLayout[childCount=1] > ImageView[childCount=0]',
+          snapshotUrls: 'https://i.gkd.li/import/13451010',
+        },
+        {
+          key: 1,
+          name: '快手广告',
+          activityIds:
+            'client.android.yixiaotong.v3.ui.appcontrol.bath.BathDetailActivity',
+          matches:
+            '[id="client.android.yixiaotong:id/ksad_container"] >n @TextView + View > [text="广告"]',
+          snapshotUrls: 'https://i.gkd.li/import/13450887',
+        },
+      ],
     },
   ],
 });
