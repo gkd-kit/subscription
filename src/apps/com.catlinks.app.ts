@@ -1,8 +1,8 @@
 import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
-  id: 'fit.flutter.dsm_helper',
-  name: '群晖助手',
+  id: 'com.catlinks.app',
+  name: 'CATLINK',
   groups: [
     {
       key: 0,
@@ -11,8 +11,8 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
-      snapshotUrls: ['https://i.gkd.li/import/13450752', 'https://i.gkd.li/import/13445496']
+      rules: '[text*="跳过"][text.length<=10]',
+      snapshotUrls: 'https://i.gkd.li/import/13446513',
     },
   ],
 });
