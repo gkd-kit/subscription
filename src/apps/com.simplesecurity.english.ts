@@ -1,4 +1,3 @@
-
 import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
