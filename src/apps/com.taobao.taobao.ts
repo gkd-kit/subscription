@@ -77,7 +77,7 @@ export default defineAppConfig({
         'https://i.gkd.li/import/13197594', //com.taobao.tao.welcome.Welcome
         'https://i.gkd.li/import/13222946', //com.taobao.android.order.bundle.TBOrderDetailActivity
         'https://i.gkd.li/import/13438404', //com.taobao.android.tbabilitykit.pop.StdPopContainerActivity
-        'https://i.gkd.li/import/13446901', 
+        'https://i.gkd.li/import/13446901',
       ],
     },
     {
