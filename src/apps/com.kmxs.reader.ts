@@ -83,7 +83,8 @@ export default defineAppConfig({
       key: 5,
       name: '【字节】视频广告',
       desc: '此规则有概率误触或失效，请谨慎选择开启。',
-      activityIds: 'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
+      activityIds:
+        'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
       quickFind: true,
       rules: [
         {
@@ -99,7 +100,8 @@ export default defineAppConfig({
         {
           key: 1,
           name: '点击叉号',
-          matches: '[id="com.byted.pangle:id/tt_reward_full_count_down_after_close"]',
+          matches:
+            '[id="com.byted.pangle:id/tt_reward_full_count_down_after_close"]',
           snapshotUrls: 'https://i.gkd.li/import/13459182',
         },
       ],
