@@ -35,7 +35,7 @@ export default defineAppConfig({
         {
           key: 0,
           matches: '@Button[text="取消"] + Button[text="更新"]',
-          snapshotUrls: "https://i.gkd.li/import/13292512",
+          snapshotUrls: 'https://i.gkd.li/import/13292512',
         },
         {
           key: 1,
