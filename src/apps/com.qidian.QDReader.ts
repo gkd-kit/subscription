@@ -18,14 +18,12 @@ export default defineAppConfig({
       key: 1,
       name: '更新弹窗',
       quickFind: true,
-      activityIds: [
-        'com.qidian.QDReader.framework.widget.dialog.judian',
-        'com.tencent.upgrade.ui.UpgradeDialogActivity',
-      ],
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
           matches:
-            'TextView[text$="新版本"] +(2) RelativeLayout >(4) TextView[text="以后再说"]',
+            '[text$="新版本"] +2 * >2 [id="com.qidian.QDReader:id/cancel"]',
           snapshotUrls: ['https://i.gkd.li/import/12641026'],
         },
         {
