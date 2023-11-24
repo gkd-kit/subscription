@@ -70,13 +70,15 @@ export default defineAppConfig({
           key: 0,
           action: 'longClick',
           name: '长按【赞助】卡片',
-          matches: '@FrameLayout[clickable=true] ImageView + ImageView + TextView[text="赞助"]',
+          matches:
+            '@FrameLayout[clickable=true] ImageView + ImageView + TextView[text="赞助"]',
           snapshotUrls: 'https://i.gkd.li/import/13455503',
         },
         {
           preKeys: 0,
           name: '长按【赞助】卡片',
-          matches: 'RecyclerView > @LinearLayout > TextView[text="不喜欢该内容"]',
+          matches:
+            'RecyclerView > @LinearLayout > TextView[text="不喜欢该内容"]',
           snapshotUrls: 'https://i.gkd.li/import/13455500',
         },
       ],
