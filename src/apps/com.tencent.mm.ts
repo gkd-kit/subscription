@@ -97,8 +97,9 @@ export default defineAppConfig({
       enable: false,
       key: 1,
       name: '电脑微信快捷自动登录',
-      activityIds: '.plugin.webwx.ui.ExtDeviceWXLoginUI',
+      activityIds: ['.plugin.webwx.ui.ExtDeviceWXLoginUI', '.ui.LauncherUI'],
       rules: 'TextView[text="取消登录"] - Button[text="登录"]',
+      snapshotUrls: 'https://i.gkd.li/import/13453976', // .ui.LauncherUI
     },
     {
       enable: false,
