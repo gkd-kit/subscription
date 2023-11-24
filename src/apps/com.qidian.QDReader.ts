@@ -35,11 +35,9 @@ export default defineAppConfig({
     {
       key: 2,
       name: '青少年模式弹窗',
-      activityIds: [
-        'com.qidian.QDReader.bll.helper.z0',
-        'com.qidian.QDReader.ui.activity.MainGroupActivity',
-        'com.qidian.QDReader.framework.widget.dialog.judian',
-      ],
+      quickFind: true,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules:
         '[id="com.qidian.QDReader:id/btnEnterTeen"] + [id="com.qidian.QDReader:id/btnCancel"]',
       snapshotUrls: [
