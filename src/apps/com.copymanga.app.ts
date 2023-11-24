@@ -7,7 +7,7 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      matchTime: 10000,
+      matchTime: 30000,
       actionMaximum: 1,
       resetMatch: 'app',
       quickFind: true,
@@ -159,7 +159,7 @@ export default defineAppConfig({
     {
       key: 5,
       name: '关闭提示',
-      matchTime: 20000,
+      matchTime: 30000,
       actionMaximum: 1,
       resetMatch: 'app',
       rules: [
