@@ -73,11 +73,26 @@ export default defineAppConfig({
     },
     {
       key: 5,
-      name: '右侧悬浮广告',
-      activityIds: ['com.qidian.QDReader.ui.activity.MainGroupActivity'],
-      rules:
-        '[id="com.qidian.QDReader:id/ivAd"] + [id="com.qidian.QDReader:id/ivAdClose"]',
-      snapshotUrls: ['https://i.gkd.li/import/12717032'],
+      name: '悬浮广告',
+      rules: [
+        {
+          key: 0,
+          name: '书架页面右侧悬浮广告',
+          activityIds: 'com.qidian.QDReader.ui.activity.MainGroupActivity',
+          quickFind: true,
+          matches:
+            '[id="com.qidian.QDReader:id/ivAd"] + [id="com.qidian.QDReader:id/ivAdClose"]',
+          snapshotUrls: 'https://i.gkd.li/import/12717032',
+        },
+        {
+          key: 1,
+          name: '详情页右侧悬浮广告',
+          activityIds: 'com.qidian.QDReader.ui.activity.QDBookDetailActivity',
+          matches:
+            '[id="com.qidian.QDReader:id/floatingView"] + [id="com.qidian.QDReader:id/ivAdClose"]',
+          snapshotUrls: 'https://i.gkd.li/import/13459031',
+        },
+      ],
     },
     {
       enable: false,
