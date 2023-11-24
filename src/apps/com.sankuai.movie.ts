@@ -30,5 +30,13 @@ export default defineAppConfig({
         'https://i.gkd.li/import/12649938', // activityId: com.miui.home.launcher.Launcher
       ],
     },
+    {
+      key: 2,
+      name: '通知弹窗',
+      activityIds: ['com.ss.android.article.video.activity.SplashActivity'],
+      rules:
+        '@TextView[id="com.ss.android.article.video:id/sj"][text="暂不开启"]',
+      snapshotUrls: ['https://i.gkd.li/import/13456568'],
+    },
   ],
 });
