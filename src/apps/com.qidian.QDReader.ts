@@ -63,13 +63,13 @@ export default defineAppConfig({
       ],
     },
     {
-      enable: false,
       key: 4,
-      name: '系统推送提示信息',
+      name: '请求通知权限提示信息',
       desc: '点击顶部提醒左侧x按钮',
-      activityIds: ['com.afollestad.materialdialogs.MaterialDialog'],
+      quickFind: true,
+      activityIds: 'com.afollestad.materialdialogs.MaterialDialog',
       rules: '@[id="com.qidian.QDReader:id/ivClose"] + [text^="开启推送"]',
-      snapshotUrls: ['https://i.gkd.li/import/12640242'],
+      snapshotUrls: 'https://i.gkd.li/import/12640242',
     },
     {
       key: 5,
