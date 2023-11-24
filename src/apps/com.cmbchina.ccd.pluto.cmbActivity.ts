@@ -54,8 +54,9 @@ export default defineAppConfig({
       key: 3,
       name: '右侧悬浮广告',
       quickFind: true,
+      matchTime: 10000,
       actionMaximum: 1,
-      resetMatch: 'app',
+      resetMatch: 'activity',
       rules: [
         {
           name: '信用卡、我的页面',
