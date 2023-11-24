@@ -42,7 +42,8 @@ export default defineAppConfig({
         },
         {
           key: 1,
-          matches: '[id="com.chinatelecom.bestpayclient:id/iv_dialog_close_one"]',
+          matches:
+            '[id="com.chinatelecom.bestpayclient:id/iv_dialog_close_one"]',
           snapshotUrls: 'https://i.gkd.li/import/13455790',
         },
       ],
