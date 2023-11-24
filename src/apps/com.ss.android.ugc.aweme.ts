@@ -192,5 +192,12 @@ export default defineAppConfig({
       rules: 'FrameLayout > @[desc="关闭"] + ViewGroup > [text$="打个招呼"]',
       snapshotUrls: 'https://i.gkd.li/import/13379307',
     },
+    {
+      key: 15,
+      name: '开屏广告',
+      activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
+      rules: '[text="跳过广告"]',
+      snapshotUrls: 'https://i.gkd.li/import/13460370',
+    },
   ],
 });
