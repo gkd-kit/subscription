@@ -11,7 +11,10 @@ export default defineAppConfig({
         'com.sankuai.movie.welcome.Welcome',
         'com.miui.home.launcher.Launcher',
       ],
-      rules: '[text="点击跳转详情页"] < FrameLayout +(2) [text$="跳过"]',
+      rules: [
+        '[text="点击跳转详情页"] < FrameLayout +(2) [text$="跳过"]',
+        '@Button[id=\'com.sankuai.movie:id/jf\'][text$=\'跳过\']',
+      ],
       snapshotUrls: [
         'https://i.gkd.li/import/12649967', // activityId: com.sankuai.movie.welcome.Welcome
         'https://i.gkd.li/import/12649911', // activityId: com.miui.home.launcher.Launcher
