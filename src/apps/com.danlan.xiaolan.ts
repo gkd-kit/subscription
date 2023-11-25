@@ -14,10 +14,9 @@ export default defineAppConfig({
       activityIds: 'com.blued.android.core.ui.TerminalActivity',
       rules: [
         {
-          matches: '[id="com.danlan.xiaolan:id/tt_splash_skip_btn"][clickable=true]',
-          snapshotUrls: [
-            'https://i.gkd.li/import/13421629',
-          ],
+          matches:
+            '[id="com.danlan.xiaolan:id/tt_splash_skip_btn"][clickable=true]',
+          snapshotUrls: ['https://i.gkd.li/import/13421629'],
         },
       ],
     },
@@ -29,7 +28,8 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          matches: '[id="com.danlan.xiaolan:id/ad_container"] >n [id="com.danlan.xiaolan:id/img_close"][clickable=true]',
+          matches:
+            '[id="com.danlan.xiaolan:id/ad_container"] >n [id="com.danlan.xiaolan:id/img_close"][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13421613',
         },
         {
