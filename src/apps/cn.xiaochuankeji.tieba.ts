@@ -24,6 +24,7 @@ export default defineAppConfig({
         },
       ],
     },
+
     {
       key: 1,
       name: '更新弹窗',
@@ -96,5 +97,22 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      'key': 12,
+      'name': '帖子广告',
+      'desc': '浏览时伪装成帖子的广告',
+      'rules': [
+        {
+          'activityIds': 'cn.xiaochuankeji.tieba.ui.home.page.PageMainActivity',
+          'matches': '[text="不感兴趣"][id="cn.xiaochuankeji.tieba:id/tvContent"]',
+          'snapshotUrls': 'https://i.gkd.li/import/13463346'
+        },
+        {
+          'activityIds': 'cn.xiaochuankeji.tieba.ui.home.page.PageMainActivity',
+          'matches': '[id="cn.xiaochuankeji.tieba:id/closeIcon"]',
+          'snapshotUrls': 'https://i.gkd.li/import/13463343'
+        }
+      ]
+    }
   ],
 });
