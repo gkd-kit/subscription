@@ -55,8 +55,8 @@ export default defineAppConfig({
       name: '右侧悬浮广告',
       quickFind: true,
       matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'activity',
+      actionMaximum: 2, // 目前只有2个界面会分别弹悬浮窗
+      resetMatch: 'app',
       rules: [
         {
           name: '信用卡、我的页面',
