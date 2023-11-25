@@ -21,7 +21,8 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'activity',
-      rules: 'FrameLayout[childCount=3] + FrameLayout[childCount=1][index=1] > ImageView',
+      rules:
+        'FrameLayout[childCount=3] + FrameLayout[childCount=1][index=1] > ImageView',
       snapshotUrls: 'https://i.gkd.li/import/13463241',
     },
   ],
