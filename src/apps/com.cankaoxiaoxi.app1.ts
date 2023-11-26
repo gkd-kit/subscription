@@ -1,8 +1,8 @@
 import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
-  id: 'com.tencent.qqsports',
-  name: '腾讯体育',
+  id: 'com.cankaoxiaoxi.app1',
+  name: '参考消息',
   groups: [
     {
       key: 0,
@@ -12,7 +12,7 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       rules: '[text*="跳过"][text.length<=10]',
-      snapshotUrls: 'https://i.gkd.li/import/12845494',
+      snapshotUrls: 'https://i.gkd.li/import/13459218',
     },
   ],
 });
