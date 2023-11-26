@@ -56,8 +56,8 @@ export default defineAppConfig({
           activityIds: 'com.xiachufang.activity.recipe.RecipeDetailActivity',
           quickFind: true,
           matches: '[id="com.byted.pangle:id/tt_item_tv"][text="不感兴趣"]',
-          snapshotUrls: 'https://i.gkd.li/import/13454534'
-        }
+          snapshotUrls: 'https://i.gkd.li/import/13454534',
+        },
       ],
     },
     {
