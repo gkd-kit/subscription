@@ -46,7 +46,8 @@ export default defineAppConfig({
         },
         {
           key: 1,
-          activityIds: 'com.netease.cloudmusic.music.biz.comment.activity.CommentActivity', //评论区广告卡片不适用上方规则
+          activityIds:
+            'com.netease.cloudmusic.music.biz.comment.activity.CommentActivity', //评论区广告卡片不适用上方规则
           matches:
             'ViewGroup[childCount=2][index=1] > ViewGroup + ImageView[index=1]',
           snapshotUrls: 'https://i.gkd.li/import/13467017',
