@@ -11,7 +11,7 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: '@[text="跳过"] <<n [id="com.cloudy.component:id/tv_main_jump"]',
+      rules: '[id="com.cloudy.component:id/tv_main_jump"]',
       snapshotUrls: 'https://i.gkd.li/import/13458161',
     },
   ],
