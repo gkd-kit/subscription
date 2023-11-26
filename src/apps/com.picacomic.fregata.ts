@@ -103,8 +103,7 @@ export default defineAppConfig({
         {
           matches:
             'RelativeLayout > Button[text="確定"][id="com.picacomic.fregata:id/button_dialog_custom_positive"]',
-          snapshotUrls:
-            'https://i.gkd.li/import/13466492',
+          snapshotUrls: 'https://i.gkd.li/import/13466492',
         },
       ],
     },
