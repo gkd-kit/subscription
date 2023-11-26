@@ -7,13 +7,11 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      desc: '跳过开屏广告',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
-          activityIds: [
-            'com.apkpure.aegon.main.activity.SplashActivity',
-            'com.san.mads.splash.SplashAdActivity',
-          ],
           matches: '[text$="跳过"||text^="Skip"]',
           snapshotUrls: 'https://i.gkd.li/import/13466685',
         },
@@ -33,6 +31,7 @@ export default defineAppConfig({
       ],
     },
     {
+      enable: false,
       key: 2,
       name: '更新与已安装界面-查看更多',
       desc: '在更新界面自动点击查看更多按钮，展开所有应用',
@@ -50,35 +49,26 @@ export default defineAppConfig({
       ],
     },
     {
+      enable: false,
       key: 3,
-      name: '更新界面-广告软件三点',
+      name: '更新界面-软件推荐',
+      activityIds: [
+        'com.apkpure.aegon.main.activity.MainTabActivity',
+        'com.apkpure.aegon.main.activity.AppManagerActivity',
+        'com.apkpure.aegon.cms.activity.CommonActivity',
+        'com.apkpure.aegon.main.activity.AppMoreActivity',
+      ],
+      quickFind: true,
       rules: [
         {
-          quickFind: true,
-          activityIds: [
-            'com.apkpure.aegon.main.activity.MainTabActivity',
-            'com.apkpure.aegon.main.activity.AppManagerActivity',
-            'com.apkpure.aegon.cms.activity.CommonActivity',
-            'com.apkpure.aegon.main.activity.AppMoreActivity',
-          ],
-          matches:
-            '@[name="android.widget.ImageView"] - [name="android.widget.RelativeLayout"] [text="AD"]',
+          name: '点击三点图标',
+          key: 0,
+          matches: '@ImageView - RelativeLayout >3 [text="AD"]',
           snapshotUrls: 'https://i.gkd.li/import/13466329',
         },
-      ],
-    },
-    {
-      key: 4,
-      name: '更新界面-广告软件三点关闭',
-      rules: [
         {
-          quickFind: true,
-          activityIds: [
-            'com.apkpure.aegon.main.activity.MainTabActivity',
-            'com.apkpure.aegon.main.activity.AppManagerActivity',
-            'com.apkpure.aegon.cms.activity.CommonActivity',
-            'com.apkpure.aegon.main.activity.AppMoreActivity',
-          ],
+          name: '点击关闭',
+          preKeys: 0,
           matches: 'TextView[text="关闭"]',
           snapshotUrls: 'https://i.gkd.li/import/13466610',
         },
