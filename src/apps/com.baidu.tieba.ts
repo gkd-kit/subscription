@@ -60,7 +60,7 @@ export default defineAppConfig({
             'LinearLayout[clickable=true][childCount=1] > @FrameLayout[clickable=true][childCount=1][desc=null] > ImageView',
           ],
           snapshotUrls: [
-            'https://i.gkd.li/import/12775913', // 此3条应算卡片式广告 
+            'https://i.gkd.li/import/12775913', // 此3条应算卡片式广告
             'https://i.gkd.li/import/13043133', // 此3条应算卡片式广告
             'https://i.gkd.li/import/13054256', // 此3条应算卡片式广告
             'https://i.gkd.li/import/12775930',
