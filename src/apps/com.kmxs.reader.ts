@@ -85,7 +85,6 @@ export default defineAppConfig({
       desc: '此规则有概率误触或失效，请谨慎选择开启。',
       activityIds:
         'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
-      quickFind: true,
       rules: [
         {
           key: 0,
