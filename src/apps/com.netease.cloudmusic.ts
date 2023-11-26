@@ -18,7 +18,7 @@ export default defineAppConfig({
       enable: false,
       key: 1,
       name: '广告卡片',
-      desc: '点击【x】-【直接关闭】',
+      desc: '点击【x】',
       quickFind: true,
       matchDelay: 3000,
       rules: [
@@ -26,36 +26,33 @@ export default defineAppConfig({
           key: 0,
           activityIds: [
             'com.netease.cloudmusic.activity.MainActivity',
-            //'com.netease.cloudmusic.music.biz.comment.activity.CommentActivity',
+            'com.netease.cloudmusic.music.biz.comment.activity.CommentActivity',
             'com.netease.cloudmusic.music.biz.comment.activity.ReplyCommentActivity2',
             'com.netease.cloudmusic.music.biz.search.activity.SearchActivity',
           ],
-          matches: '[id="com.netease.cloudmusic:id/adTagView"]',
+          matches: [
+            '[id="com.netease.cloudmusic:id/adTagView"]',
+            'ViewGroup[childCount=2][index=1] > ViewGroup + ImageView[index=1]',
+          ],
           snapshotUrls: [
             'https://i.gkd.li/import/12829944',
-            'https://i.gkd.li/import/12723229',
+            //'https://i.gkd.li/import/12723229', 评论区旧规则
             'https://i.gkd.li/import/12829938',
             'https://i.gkd.li/import/12829964',
             'https://i.gkd.li/import/12829953',
+            'https://i.gkd.li/import/13467017', //评论区新规则
           ],
         },
         {
           preKeys: 0,
-          matches: '[text="直接关闭"]',
-          snapshotUrls: ['https://i.gkd.li/import/12829967'],
-        },
-        {
-          key: 1,
-          activityIds:
-            'com.netease.cloudmusic.music.biz.comment.activity.CommentActivity', //评论区广告卡片不适用上方规则
-          matches:
-            'ViewGroup[childCount=2][index=1] > ViewGroup + ImageView[index=1]',
-          snapshotUrls: 'https://i.gkd.li/import/13467017',
-        },
-        {
-          preKeys: 1,
-          matches: 'TextView[text="不感兴趣"][text.length<=10]',
-          snapshotUrls: 'https://i.gkd.li/import/13467049',
+          matches: [
+            '[text="直接关闭"]',
+            '[text="不感兴趣"][text.length<=10]',
+          ],
+          snapshotUrls: [
+            'https://i.gkd.li/import/12829967',
+            'https://i.gkd.li/import/13467049', //评论区新规则
+          ],
         },
       ],
     },
