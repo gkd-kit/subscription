@@ -55,7 +55,7 @@ export default defineAppConfig({
           name: '菜谱底部卡片广告-1-弹出窗口',
           activityIds: 'com.xiachufang.activity.recipe.RecipeDetailActivity',
           quickFind: true,
-          matches: '[id="com.byted.pangle:id/tt_item_tv" && text="不感兴趣"]',
+          matches: '[id="com.byted.pangle:id/tt_item_tv"][text="不感兴趣"]',
           snapshotUrls: 'https://i.gkd.li/import/13454534'
         }
       ],
