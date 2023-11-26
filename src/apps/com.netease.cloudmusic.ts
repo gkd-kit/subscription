@@ -45,10 +45,7 @@ export default defineAppConfig({
         },
         {
           preKeys: 0,
-          matches: [
-            '[text="直接关闭"]',
-            '[text="不感兴趣"][text.length<=10]',
-          ],
+          matches: ['[text="直接关闭"]', '[text="不感兴趣"][text.length<=10]'],
           snapshotUrls: [
             'https://i.gkd.li/import/12829967',
             'https://i.gkd.li/import/13467049', //评论区新规则
