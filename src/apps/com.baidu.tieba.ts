@@ -74,7 +74,6 @@ export default defineAppConfig({
         {
           preKeys: 0,
           name: '关闭原因-【不感兴趣】',
-          quickFind: true,
           matches:
             '@View[text=null] - TextView[text="选择不喜欢理由"][index=0]',
           snapshotUrls: 'https://i.gkd.li/import/12775914',
