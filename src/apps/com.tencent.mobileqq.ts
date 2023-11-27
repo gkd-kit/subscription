@@ -45,6 +45,12 @@ export default defineAppConfig({
             '[text*="惊喜礼包"] + FrameLayout + ImageView[clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13426912',
         },
+        {
+          key: 2,
+          matches:
+            'ImageView + RelativeLayout[childCount=2] > TextView[text!=null] + ImageView',
+          snapshotUrls: 'https://i.gkd.li/import/13476400',
+        },
       ],
     },
     {
