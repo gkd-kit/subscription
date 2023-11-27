@@ -93,7 +93,7 @@ export default defineAppConfig({
         },
         {
           key: 7,
-          desc: '二步跳过广告_步骤1',
+          // desc: '二步跳过广告_步骤1',
           quickFind: true,
           matches: '[text="跳过"]',
           snapshotUrls: [
@@ -103,7 +103,7 @@ export default defineAppConfig({
         {
           key: 8,
           preKeys: [7],
-          desc: '二步跳过广告_步骤2',
+          // desc: '二步跳过广告_步骤2',
           matches: 'ImageView < ViewGroup[clickable=true][childCount=1]',
           snapshotUrls: [
             'https://i.gkd.li/import/13344156', // step2
