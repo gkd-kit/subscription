@@ -14,5 +14,18 @@ export default defineAppConfig({
       rules: '[text$="跳过"][text.length<=10]',
       snapshotUrls: 'https://i.gkd.li/import/13476349',
     },
+    {
+      key: 1,
+      name: '卡片式广告',
+      rules: [
+        {
+          key: 0,
+          activityIds: 'com.qingwatq.weather.home.HomeActivity',
+          matches:
+            '[id="com.qingwatq.weather:id/titleArea"] + [id="com.qingwatq.weather:id/closeImg"]',
+          snapshotUrls: 'https://i.gkd.li/import/13476350',
+        },
+      ],
+    },
   ],
 });
