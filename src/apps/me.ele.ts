@@ -21,7 +21,7 @@ export default defineAppConfig({
       // matchTime: 10000, 部分更新提示不在10s内
       actionMaximum: 1,
       resetMatch: 'app',
-      matchDelay: 3000,
+      // matchDelay: 3000, 想不起来为啥加的了，先删掉
       rules:
         '[text*="更新应用版本"] < ScrollView + [text="取消"][focusable=true]',
       snapshotUrls: [
