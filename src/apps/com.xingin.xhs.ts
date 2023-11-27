@@ -62,7 +62,7 @@ export default defineAppConfig({
       enable: false,
       key: 3,
       name: '信息流广告',
-      desc: '点有【赞助】/【广告】标识的卡片-点【不感兴趣】',
+      desc: '长按【赞助】/【广告】标识的卡片-点【不感兴趣】',
       quickFind: true,
       activityIds: 'com.xingin.xhs.index.v2.IndexActivityV2',
       rules: [
