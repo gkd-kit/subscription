@@ -34,7 +34,7 @@ export default defineAppConfig({
       delay: 400,
       rules: [
         {
-          Key: 1,
+          key: 1,
           activityIds: 'com.kwad.components.ad.interstitial',
           matches: '@ViewGroup[clickable=true][visibleToUser=true] > ImageView',
           snapshotUrls: [
