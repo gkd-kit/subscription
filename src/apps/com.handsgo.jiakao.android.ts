@@ -13,5 +13,18 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: '[id=`com.handsgo.jiakao.android:id/closeLayout`]', // 缺少快照
     },
+    {
+      key: 1,
+      name: '悬浮广告',
+      rules: [
+        {
+          key: 0,
+          activityIds: 'com.handsgo.jiakao.android.main.activity.MainActivity',
+          matches:
+            '@[id="com.handsgo.jiakao.android:id/ivDelete"] + [id="com.handsgo.jiakao.android:id/ivRemote"]',
+          snapshotUrls: 'https://i.gkd.li/import/13475994',
+        },
+      ],
+    },
   ],
 });
