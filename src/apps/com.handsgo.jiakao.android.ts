@@ -7,8 +7,11 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: 'com.handsgo.jiakao.android.splash.Login',
-      rules: '[id=`com.handsgo.jiakao.android:id/closeLayout`]',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: '[id=`com.handsgo.jiakao.android:id/closeLayout`]', // 缺少快照
     },
   ],
 });
