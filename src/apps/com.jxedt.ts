@@ -6,17 +6,16 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '首页广告',
-      activityIds: ['com.jxedt.ui.activitys.GuideActivity'],
-      rules: [
-        {
-          matches: '[id="com.jxedt:id/tv_guide_tiaoguo" || text*="跳过"]',
-          snapshotUrls: [
-            'https://i.gkd.li/import/12605051',
-            'https://i.gkd.li/import/12605053',
-            'https://i.gkd.li/import/12605057',
-          ],
-        },
+      name: '开屏广告',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: '[text^="跳过"][text.length<=10]',
+      snapshotUrls: [
+        'https://i.gkd.li/import/12605051',
+        'https://i.gkd.li/import/12605053',
+        'https://i.gkd.li/import/12605057',
       ],
     },
     {
