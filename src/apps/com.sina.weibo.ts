@@ -221,7 +221,8 @@ export default defineAppConfig({
       desc: '点击【x】',
       quickFind: true,
       activityIds: 'com.sina.weibo.feed.DetailWeiboActivity',
-      rules: '[text*="一键转发"] < LinearLayout +2 [id="com.sina.weibo:id/tv_close"]',
+      rules:
+        '[text*="一键转发"] < LinearLayout +2 [id="com.sina.weibo:id/tv_close"]',
       snapshotUrls: 'https://i.gkd.li/import/13482960',
     },
   ],
