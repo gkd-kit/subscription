@@ -1,8 +1,8 @@
 import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
-  id: 'com.vidure.papago',
-  name: 'PAPAGO焦点',
+  id: 'com.ehai',
+  name: '一嗨租车',
   groups: [
     {
       key: 0,
@@ -12,7 +12,7 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       rules: '[text*="跳过"][text.length<=10]',
-      snapshotUrls: 'https://i.gkd.li/import/13470524',
+      snapshotUrls: 'https://i.gkd.li/import/13483557',
     },
   ],
 });
