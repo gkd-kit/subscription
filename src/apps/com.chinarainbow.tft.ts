@@ -17,6 +17,7 @@ export default defineAppConfig({
         },
         {
           key: 1,
+          quickFind: true,
           matches:
             '[id="com.byted.pangle.m:id/tt_reward_full_count_down_after_close"]',
           snapshotUrls: 'https://i.gkd.li/import/13468554',
