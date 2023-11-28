@@ -5,7 +5,7 @@ export default defineAppConfig({
   name: '大淘客联盟',
   groups: [
     {
-      key: 3,
+      key: 1,
       name: '开启消息通知',
       quickFind: true,
       matchTime: 10000,
