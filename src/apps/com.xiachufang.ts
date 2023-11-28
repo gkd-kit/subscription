@@ -63,9 +63,10 @@ export default defineAppConfig({
           name: '菜谱底部卡片广告-3',
           activityIds: 'com.xiachufang.activity.recipe.RecipeDetailActivity',
           quickFind: true,
-          matches: '[id="com.xiachufang:id/fl_container"] >6 [name="android.widget.ImageView" && width=32]',
-          snapshotUrls: 'https://i.gkd.li/import/13484117'
-        }
+          matches:
+            '[id="com.xiachufang:id/fl_container"] >6 [name="android.widget.ImageView" && width=32]',
+          snapshotUrls: 'https://i.gkd.li/import/13484117',
+        },
       ],
     },
     {
