@@ -61,13 +61,24 @@ export default defineAppConfig({
     {
       enable: false,
       key: 3,
-      name: '版本更新提示',
-      desc: '选择稍后再说',
+      name: '版本更新',
       quickFind: true,
-      activityIds: 'com.alipay.mobile.alipassapp.alkb.kb.ALPMainPage63',
-      rules:
-        'TextView[id="com.alipay.mobile.accountauthbiz:id/update_cancel_tv"]',
-      snapshotUrls: 'https://i.gkd.li/import/13327095',
+      activityIds: [
+        'com.alipay.mobile.alipassapp.alkb.kb.ALPMainPage63',
+        'com.eg.android.AlipayGphone.AlipayLogin'
+      ],
+      rules: [
+        {
+          name: '点击【稍后再说】',
+          matches: 'TextView[id="com.alipay.mobile.accountauthbiz:id/update_cancel_tv"]',
+          snapshotUrls: 'https://i.gkd.li/import/13327095',
+        },
+        {
+          name: '点击【x】',
+          matches: '[text="版本更新"] - [id="com.alipay.mobile.antui:id/btn_close"]',
+          snapshotUrls: 'https://i.gkd.li/import/13490191',
+        },
+      ],
     },
     {
       enable: false,
