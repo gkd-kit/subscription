@@ -12,15 +12,12 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
-          matches: 'ImageView[desc="miniLogoView"] + View[clickable=true]',
+          matches: '[desc="跳过"||desc="GdtCountDownView"]',
           snapshotUrls: [
             'https://i.gkd.li/import/12775410',
             'https://i.gkd.li/import/13426030',
+            'https://i.gkd.li/import/13468987',
           ],
-        },
-        {
-          matches: '[desc*="跳过"][desc.length<=10]',
-          snapshotUrls: 'https://i.gkd.li/import/13468987',
         },
       ],
     },
