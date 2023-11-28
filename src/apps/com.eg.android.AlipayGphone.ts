@@ -78,7 +78,7 @@ export default defineAppConfig({
           name: '弹窗-【x】',
           matches:
             '[text="版本更新"] - [id="com.alipay.mobile.antui:id/btn_close"]',
-          snapshotUrls: 'https://i.gkd.li/import/13490191',
+          snapshotUrls: 'https://i.gkd.li/import/13490805',
         },
         {
           name: '卡片-【x】',
