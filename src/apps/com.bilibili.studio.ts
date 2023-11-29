@@ -39,7 +39,8 @@ export default defineAppConfig({
         {
           key: 0,
           name: '勾选【忽略】',
-          matches: '[id="com.bilibili.studio:id/update_cbx_ignore_version"][checked=false]',
+          matches:
+            '[id="com.bilibili.studio:id/update_cbx_ignore_version"][checked=false]',
         },
         {
           preKeys: 0,
