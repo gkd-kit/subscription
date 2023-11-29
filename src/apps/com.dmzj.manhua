@@ -1,0 +1,144 @@
+{
+  "id": "com.dmzj.manhua",
+  "name": "动漫之家",
+  "groups": [
+    {
+      "key": 1,
+      "name": "[ChangeMe]规则名称-2023-11-29 14:58:34",
+      "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
+      "rules": [
+        {
+          "activityIds": "com.dmzj.manhua.ui.home.HomeTabsActivitys",
+          "matches": "[id='com.dmzj.manhua:id/ivAdClose']",
+          "snapshotUrls": "https://i.gkd.li/import/13497128"
+        }
+      ]
+    }
+  ]
+}
+{
+  "id": "com.dmzj.manhua",
+  "name": "动漫之家",
+  "groups": [
+    {
+      "key": 1,
+      "name": "[ChangeMe]规则名称-2023-11-29 14:59:23",
+      "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
+      "rules": [
+        {
+          "activityIds": "com.dmzj.manhua.ui.LaunchInterceptorActivity",
+          "matches": "[id='com.dmzj.manhua:id/iv_close']",
+          "snapshotUrls": "https://i.gkd.li/import/13497143"
+        }
+      ]
+    }
+  ]
+}
+{
+  "id": "com.dmzj.manhua",
+  "name": "动漫之家",
+  "groups": [
+    {
+      "key": 1,
+      "name": "[ChangeMe]规则名称-2023-11-29 15:01:08",
+      "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
+      "rules": [
+        {
+          "activityIds": "com.dmzj.manhua.ui.LaunchInterceptorActivity",
+          "matches": "[id='com.dmzj.manhua:id/skip_parent_view']",
+          "snapshotUrls": "https://i.gkd.li/import/13497149"
+        }
+      ]
+    }
+  ]
+}
+{
+  "id": "com.dmzj.manhua",
+  "name": "动漫之家",
+  "groups": [
+    {
+      "key": 1,
+      "name": "[ChangeMe]规则名称-2023-11-29 15:04:53",
+      "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
+      "rules": [
+        {
+          "activityIds": "com.dmzj.manhua.ui.home.HomeTabsActivitys",
+          "matches": "[id='com.dmzj.manhua:id/iv_close']",
+          "snapshotUrls": "https://i.gkd.li/import/13497187"
+        }
+      ]
+    }
+  ]
+}
+{
+  "id": "com.dmzj.manhua",
+  "name": "动漫之家",
+  "groups": [
+    {
+      "key": 1,
+      "name": "[ChangeMe]规则名称-2023-11-29 15:06:10",
+      "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
+      "rules": [
+        {
+          "activityIds": "com.dmzj.manhua.ui.LaunchInterceptorActivity",
+          "matches": "[text='跳过']",
+          "snapshotUrls": "https://i.gkd.li/import/13497214"
+        }
+      ]
+    }
+  ]
+}
+{
+  "id": "com.dmzj.manhua",
+  "name": "动漫之家",
+  "groups": [
+    {
+      "key": 1,
+      "name": "[ChangeMe]规则名称-2023-11-29 15:07:24",
+      "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
+      "rules": [
+        {
+          "activityIds": "com.dmzj.manhua.ui.home.HomeTabsActivitys",
+          "matches": "[text='跳过']",
+          "snapshotUrls": "https://i.gkd.li/import/13497228"
+        }
+      ]
+    }
+  ]
+}
+{
+  "id": "com.dmzj.manhua",
+  "name": "动漫之家",
+  "groups": [
+    {
+      "key": 1,
+      "name": "[ChangeMe]规则名称-2023-11-29 15:11:21",
+      "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
+      "rules": [
+        {
+          "activityIds": "com.dmzj.manhua.ui.home.HomeTabsActivitys",
+          "matches": "[text=''][name='android.widget.Image'][left=871]"
+        }
+      ]
+    }
+  ]
+}
+
+{
+  "id": "com.dmzj.manhua",
+  "name": "动漫之家",
+  "groups": [
+    {
+      "key": 1,
+      "name": "[ChangeMe]规则名称-2023-11-29 15:12:29",
+      "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
+      "rules": [
+        {
+          "activityIds": "com.dmzj.manhua.ui.home.HomeTabsActivitys",
+          "matches": "[text='跳过 ']",
+          "snapshotUrls": "https://i.gkd.li/import/13497265"
+        }
+      ]
+    }
+  ]
+}
