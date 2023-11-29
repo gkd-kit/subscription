@@ -1,4 +1,22 @@
 {
+  "id": "com.jarworld.bleach.bvn.sjm.cyc",
+  "name": "次元城动漫",
+  "groups": [
+    {
+      "key": 1,
+      "name": "开屏5",
+      "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
+      "rules": [
+        {
+          "activityIds": "com.jarworld.bleach.bvn.sjm.cyc.MainActivity",
+          "matches": "[text='跳过 '][left=922][top=158][name='android.widget.TextView']",
+          "snapshotUrls": "https://i.gkd.li/import/13497901"
+        }
+      ]
+    }
+  ]
+}
+{
   "id": "com.dmzj.manhua",
   "name": "动漫之家",
   "groups": [
