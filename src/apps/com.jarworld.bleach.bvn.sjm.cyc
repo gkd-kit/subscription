@@ -159,3 +159,57 @@
     }
   ]
 }
+{
+  "id": "com.jarworld.bleach.bvn.sjm.cyc",
+  "name": "次元城动漫",
+  "groups": [
+    {
+      "key": 1,
+      "name": "[ChangeMe]规则名称-2023-11-29 22:51:20",
+      "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
+      "rules": [
+        {
+          "activityIds": "com.sigmob.sdk.base.common.TransparentAdActivity",
+          "matches": "[id='close_btn']",
+          "snapshotUrls": "https://i.gkd.li/import/13501904"
+        }
+      ]
+    }
+  ]
+}
+{
+  "id": "com.jarworld.bleach.bvn.sjm.cyc",
+  "name": "次元城动漫",
+  "groups": [
+    {
+      "key": 1,
+      "name": "弹窗7",
+      "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
+      "rules": [
+        {
+          "activityIds": "com.sigmob.sdk.base.common.TransparentAdActivity",
+          "matches": "[id='close_btn']",
+          "snapshotUrls": "https://i.gkd.li/import/13501904"
+        }
+      ]
+    }
+  ]
+}
+{
+  "id": "com.jarworld.bleach.bvn.sjm.cyc",
+  "name": "次元城动漫",
+  "groups": [
+    {
+      "key": 1,
+      "name": "弹窗6",
+      "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
+      "rules": [
+        {
+          "activityIds": "com.sigmob.sdk.base.common.TransparentAdActivity",
+          "matches": "[id='close_btn']",
+          "snapshotUrls": "https://i.gkd.li/import/13501877"
+        }
+      ]
+    }
+  ]
+}
