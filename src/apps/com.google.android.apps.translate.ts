@@ -14,7 +14,8 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       activityIds: 'com.google.android.apps.translate.TranslateActivity',
-      rules: 'Button[id="com.google.android.apps.translate:id/sign_in_button"] + [id="com.google.android.apps.translate:id/secondary_action_button"]',
+      rules:
+        'Button[id="com.google.android.apps.translate:id/sign_in_button"] + [id="com.google.android.apps.translate:id/secondary_action_button"]',
       snapshotUrls: 'https://i.gkd.li/import/13495796',
     },
   ],
