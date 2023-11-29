@@ -160,3 +160,75 @@
     }
   ]
 }
+{
+  "id": "com.dmzj.manhua",
+  "name": "动漫之家",
+  "groups": [
+    {
+      "key": 1,
+      "name": "评论区贴片",
+      "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
+      "rules": [
+        {
+          "activityIds": "com.dmzj.manhua.ui.CartoonInstructionActivity",
+          "matches": "[id='com.dmzj.manhua:id/close_ad']",
+          "snapshotUrls": "https://i.gkd.li/import/13498058"
+        }
+      ]
+    }
+  ]
+}
+{
+  "id": "com.dmzj.manhua",
+  "name": "动漫之家",
+  "groups": [
+    {
+      "key": 1,
+      "name": "详情页贴片",
+      "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
+      "rules": [
+        {
+          "activityIds": "com.dmzj.manhua.ui.CartoonInstructionActivity",
+          "matches": "[id='com.dmzj.manhua:id/close']",
+          "snapshotUrls": "https://i.gkd.li/import/13498045"
+        }
+      ]
+    }
+  ]
+}
+{
+  "id": "com.dmzj.manhua",
+  "name": "动漫之家",
+  "groups": [
+    {
+      "key": 1,
+      "name": "贴片广告",
+      "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
+      "rules": [
+        {
+          "activityIds": "com.dmzj.manhua.ui.BrowseActivityAncestors",
+          "matches": "[id='com.dmzj.manhua:id/close']",
+          "snapshotUrls": "https://i.gkd.li/import/13498036"
+        }
+      ]
+    }
+  ]
+}
+{
+  "id": "com.dmzj.manhua",
+  "name": "动漫之家",
+  "groups": [
+    {
+      "key": 1,
+      "name": "浏览结束页广告",
+      "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
+      "rules": [
+        {
+          "activityIds": "com.dmzj.manhua.ui.BrowseActivityAncestors",
+          "matches": "[id='com.dmzj.manhua:id/close_ad']",
+          "snapshotUrls": "https://i.gkd.li/import/13498028"
+        }
+      ]
+    }
+  ]
+}
