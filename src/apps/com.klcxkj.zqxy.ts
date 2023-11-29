@@ -57,6 +57,8 @@ export default defineAppConfig({
           snapshotUrls: 'https://i.gkd.li/import/13274838',
         },
       ],
+    },
+    {
       key: 2,
       name: '横幅广告',
       rules: [
