@@ -1,0 +1,36 @@
+{
+  "id": "com.tencent.qt.sns",
+  "name": "掌上穿越火线",
+  "groups": [
+    {
+      "key": 1,
+      "name": "活动弹窗广告",
+      "desc": "x",
+      "rules": [
+        {
+          "activityIds": null,
+          "matches": "[id='com.tencent.qt.sns:id/closebtn']",
+          "snapshotUrls": "https://i.gkd.li/import/13497978"
+        }
+      ]
+    }
+  ]
+}
+{
+  "id": "com.tencent.qt.sns",
+  "name": "掌上穿越火线",
+  "groups": [
+    {
+      "key": 1,
+      "name": "更新提示",
+      "desc": "取消",
+      "rules": [
+        {
+          "activityIds": null,
+          "matches": "[id='com.tencent.qt.sns:id/btnNegative']",
+          "snapshotUrls": "https://i.gkd.li/import/13497984"
+        }
+      ]
+    }
+  ]
+}
