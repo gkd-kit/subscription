@@ -13,6 +13,16 @@ export default defineAppConfig({
       snapshotUrls: 'https://i.gkd.li/import/12870733',
     },
     {
+      key: 1,
+      name: '桌面端登录确认',
+      quickFind: true,
+      activityIds:
+        'com.ss.lark.android.passport.biz.feature.sso.suite.SuiteConfirmActivity',
+      rules:
+        '[text="飞书 桌面端登录确认"] +2 [id="com.ss.android.lark:id/login_button"]',
+      snapshotUrls: 'https://i.gkd.li/import/13494960',
+    },
+    {
       enable: false,
       key: 10,
       name: '自动查看原图',
