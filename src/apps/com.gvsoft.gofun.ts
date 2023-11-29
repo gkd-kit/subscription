@@ -22,7 +22,8 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       activityIds: 'com.gvsoft.gofun.module.home.activity.HomeActivity',
-      rules: '[id="com.gvsoft.gofun:id/cardView"] + [id="com.gvsoft.gofun:id/iv_close"]',
+      rules:
+        '[id="com.gvsoft.gofun:id/cardView"] + [id="com.gvsoft.gofun:id/iv_close"]',
       snapshotUrls: 'https://i.gkd.li/import/13497777',
     },
   ],
