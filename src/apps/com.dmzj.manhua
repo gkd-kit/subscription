@@ -4,7 +4,7 @@
   "groups": [
     {
       "key": 1,
-      "name": "[ChangeMe]规则名称-2023-11-29 14:58:34",
+      "name": "弹窗1",
       "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
       "rules": [
         {
@@ -22,7 +22,7 @@
   "groups": [
     {
       "key": 1,
-      "name": "[ChangeMe]规则名称-2023-11-29 14:59:23",
+      "name": "弹窗2",
       "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
       "rules": [
         {
@@ -40,7 +40,7 @@
   "groups": [
     {
       "key": 1,
-      "name": "[ChangeMe]规则名称-2023-11-29 15:01:08",
+      "name": "弹窗3",
       "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
       "rules": [
         {
@@ -58,7 +58,7 @@
   "groups": [
     {
       "key": 1,
-      "name": "[ChangeMe]规则名称-2023-11-29 15:04:53",
+      "name": "弹窗4",
       "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
       "rules": [
         {
@@ -76,7 +76,7 @@
   "groups": [
     {
       "key": 1,
-      "name": "[ChangeMe]规则名称-2023-11-29 15:06:10",
+      "name": "底部",
       "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
       "rules": [
         {
@@ -94,7 +94,7 @@
   "groups": [
     {
       "key": 1,
-      "name": "[ChangeMe]规则名称-2023-11-29 15:07:24",
+      "name": "开屏1",
       "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
       "rules": [
         {
@@ -112,7 +112,7 @@
   "groups": [
     {
       "key": 1,
-      "name": "[ChangeMe]规则名称-2023-11-29 15:11:21",
+      "name": "弹窗",
       "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
       "rules": [
         {
@@ -130,7 +130,7 @@
   "groups": [
     {
       "key": 1,
-      "name": "[ChangeMe]规则名称-2023-11-29 15:12:29",
+      "name": "开屏2",
       "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
       "rules": [
         {
