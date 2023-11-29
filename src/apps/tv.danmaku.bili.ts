@@ -17,7 +17,6 @@ export default defineAppConfig({
       snapshotUrls: 'https://i.gkd.li/import/12705270',
     },
     {
-      
       key: 0,
       name: '评论区顶部公告横幅',
       quickFind: true,
@@ -33,7 +32,6 @@ export default defineAppConfig({
       ],
     },
     {
-      
       key: 1,
       name: '青少年模式弹窗',
       quickFind: true,
