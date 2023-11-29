@@ -1,0 +1,90 @@
+{
+  "id": "com.jarworld.bleach.bvn.sjm.cyc",
+  "name": "次元城动漫",
+  "groups": [
+    {
+      "key": 1,
+      "name": "开屏广告",
+      "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
+      "rules": [
+        {
+          "activityIds": "com.jarworld.bleach.bvn.sjm.cyc.MainActivity",
+          "matches": "[name='android.widget.TextView'][text='跳过']",
+          "snapshotUrls": "https://i.gkd.li/import/13497000"
+        }
+      ]
+    }
+  ]
+}
+{
+  "id": "com.jarworld.bleach.bvn.sjm.cyc",
+  "name": "次元城动漫",
+  "groups": [
+    {
+      "key": 1,
+      "name": "弹窗4",
+      "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
+      "rules": [
+        {
+          "activityIds": "com.jarworld.bleach.bvn.sjm.cyc.MainActivity",
+          "matches": "[name='android.widget.ImageView'][top=1936]",
+          "snapshotUrls": "https://i.gkd.li/import/13497035"
+        }
+      ]
+    }
+  ]
+}
+{
+  "id": "com.jarworld.bleach.bvn.sjm.cyc",
+  "name": "次元城动漫",
+  "groups": [
+    {
+      "key": 1,
+      "name": "弹窗3",
+      "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
+      "rules": [
+        {
+          "activityIds": "com.jarworld.bleach.bvn.sjm.cyc.MainActivity",
+          "matches": "[name='android.widget.ImageView'][left=967]",
+          "snapshotUrls": "https://i.gkd.li/import/13497492"
+        }
+      ]
+    }
+  ]
+}
+{
+  "id": "com.jarworld.bleach.bvn.sjm.cyc",
+  "name": "次元城动漫",
+  "groups": [
+    {
+      "key": 1,
+      "name": "弹窗2",
+      "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
+      "rules": [
+        {
+          "activityIds": null,
+          "matches": "[name='android.widget.ImageView'][left=165]",
+          "snapshotUrls": "https://i.gkd.li/import/13497075"
+        }
+      ]
+    }
+  ]
+}
+{
+  "id": "com.jarworld.bleach.bvn.sjm.cyc",
+  "name": "次元城动漫",
+  "groups": [
+    {
+      "key": 1,
+      "name": "弹窗1",
+      "desc": "[ChangeMe]本规则由GKD网页端审查工具生成",
+      "rules": [
+        {
+          "activityIds": "com.jarworld.bleach.bvn.sjm.cyc.MainActivity",
+          "matches": "[name='android.widget.ImageView'][left=918]",
+          "snapshotUrls": "https://i.gkd.li/import/13497469"
+        }
+      ]
+    }
+  ]
+}
