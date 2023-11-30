@@ -61,7 +61,7 @@ export default defineAppConfig({
           key: 0,
           name: '类型0',
           quickFind: true,
-          matches: 'id="com.byted.pangle:id/tt_reward_full_count_down"',
+          matches: '[id="com.byted.pangle:id/tt_reward_full_count_down"]',
           snapshotUrls: 'https://i.gkd.li/import/13511052',
         },
         {
