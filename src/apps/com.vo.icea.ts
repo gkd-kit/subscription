@@ -56,7 +56,7 @@ export default defineAppConfig({
       resetMatch: 'app',
       activityIds: 'com.vo.icea.MainActivity',
       rules: [
-      //字节穿山甲广告SDK: key0-4
+        //字节穿山甲广告SDK: key0-4
         {
           key: 0,
           name: '类型0',
