@@ -68,9 +68,7 @@ export default defineAppConfig({
           preKeys: [1, 2],
           action: 'back',
           matches: 'ListView[childCount=0]',
-          snapshotUrls: [
-            'https://m.gkd.li/22029832/0f4dfa74-6012-47e5-8f8e-afdebe9b5149',
-          ],
+          snapshotUrls: ['https://i.gkd.li/import/13508072'],
         },
       ],
     },
