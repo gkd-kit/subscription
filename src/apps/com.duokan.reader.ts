@@ -44,8 +44,16 @@ export default defineAppConfig({
       quickFind: true,
       activityIds: 'com.duokan.reader.DkMainActivity',
       rules: [
-        '@TextView[id="com.duokan.reader:id/reading__app_ad_view__close"][text="广告"]',
-        '@TextView[id="com.duokan.reader:id/ad__feedback_close_dialog_button"][text="知道了"]',
+        {
+          key: 0,
+          matches:
+            '@TextView[id="com.duokan.reader:id/reading__app_ad_view__close"][text="广告"]',
+        },
+        {
+          preKeys: 0,
+          matches:
+            '@TextView[id="com.duokan.reader:id/ad__feedback_close_dialog_button"][text="知道了"]',
+        },
       ],
       snapshotUrls: [
         'https://i.gkd.li/import/13498048',
