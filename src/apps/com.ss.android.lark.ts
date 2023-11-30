@@ -13,6 +13,7 @@ export default defineAppConfig({
       snapshotUrls: 'https://i.gkd.li/import/12870733',
     },
     {
+      enable: false,
       key: 1,
       name: '桌面端登录确认',
       quickFind: true,
