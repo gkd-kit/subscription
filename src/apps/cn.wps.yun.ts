@@ -11,6 +11,7 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'cn.wps.yun.ui.IndexActivity',
+          quickFind: true,
           matches:
             '[id="cn.wps.yun:id/rootGroup"][childCount=5] >  [id="cn.wps.yun:id/moreIconRight"]',
           exampleUrls:
