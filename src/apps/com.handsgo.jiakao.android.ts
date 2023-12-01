@@ -43,5 +43,14 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 3,
+      name: '请求开启通知权限弹窗',
+      activityIds: [],
+      quickFind: true,
+      rules:
+        '[text="开启专属学习资料推送"] + [id="com.handsgo.jiakao.android:id/closeIv"]',
+      snapshotUrls: 'https://i.gkd.li/import/13520296',
+    },
   ],
 });
