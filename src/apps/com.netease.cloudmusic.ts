@@ -21,16 +21,16 @@ export default defineAppConfig({
       desc: '有二次确认弹窗',
       quickFind: true,
       // matchDelay: 3000, 我又想不起来为什么要有这个了
-      activityIds: [
-        'com.netease.cloudmusic.activity.MainActivity',
-        'com.netease.cloudmusic.music.biz.comment.activity.CommentActivity',
-        'com.netease.cloudmusic.music.biz.comment.activity.ReplyCommentActivity2',
-        'com.netease.cloudmusic.music.biz.search.activity.SearchActivity',
-      ],
       rules: [
         {
           key: 0,
           name: '卡片式广告',
+          activityIds: [
+            'com.netease.cloudmusic.activity.MainActivity',
+            'com.netease.cloudmusic.music.biz.comment.activity.CommentActivity',
+            'com.netease.cloudmusic.music.biz.comment.activity.ReplyCommentActivity2',
+            'com.netease.cloudmusic.music.biz.search.activity.SearchActivity',
+          ],
           matches: '[id="com.netease.cloudmusic:id/adTagView"]',
           snapshotUrls: [
             'https://i.gkd.li/import/12829944',
@@ -42,12 +42,14 @@ export default defineAppConfig({
         },
         {
           preKeys: 0,
+          activityIds: 'com.netease.cloudmusic.module.ad.feedback.AdFeedbackBottomSheet',
           matches: '[text="直接关闭"]',
           snapshotUrls: ['https://i.gkd.li/import/12829967'],
         },
         {
           key: 3,
-          name: '信息流广告-内容推荐', // 考虑位置是否移出
+          name: '信息流广告-评论区内容推荐', // 考虑位置是否移出
+          activityIds: 'com.netease.cloudmusic.music.biz.comment.activity.CommentActivity',
           matches:
             '@ViewGroup[clickable=true][childCount=2] > ImageView - ViewGroup > TextView[text.length>0]',
           snapshotUrls: [
@@ -57,6 +59,7 @@ export default defineAppConfig({
         },
         {
           preKeys: 3,
+          activityIds: 'com.netease.cloudmusic.music.biz.comment.activity.CommentActivity',
           matches:
             '@[id="com.netease.cloudmusic:id/artist_container"] > [text="不感兴趣"]',
           snapshotUrls: 'https://i.gkd.li/import/13526712',
