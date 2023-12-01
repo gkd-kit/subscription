@@ -305,7 +305,7 @@ export default defineAppConfig({
       quickFind: true,
       activityIds: 'com.tencent.mm.ui.chatting.gallery.ImageGalleryUI',
       rules: 'Button[text^="查看原图"][clickable=true]',
-      snapshotUrls: 'https://i.gkd.li/import/12706944',
+      snapshotUrls: 'https://i.gkd.li/import/13523031',
     },
     {
       key: 10,
