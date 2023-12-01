@@ -118,6 +118,28 @@ export default defineAppConfig({
       ],
     },
     {
+      key: 5,
+      name: '广告弹窗',
+      rules: [
+        {
+          key: 0,
+          name: '阅读页面广告弹窗-点击反馈按钮',
+          activityIds: 'com.dragon.read.reader.ui.ReaderActivity',
+          matches: '[text="反馈"][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/import/13520160',
+        },
+        {
+          preKeys: 0,
+          key: 1,
+          name: '阅读页面广告弹窗-点击不感兴趣',
+          activityIds: 'com.dragon.read.reader.ui.ReaderActivity',
+          quickFind: true,
+          matches: '[id="com.dragon.read:id/ad_feedback_not_interest"]',
+          snapshotUrls: 'https://i.gkd.li/import/13520219',
+        },
+      ],
+    },
+    {
       enable: false,
       key: 10,
       name: '请求通知权限弹窗',
