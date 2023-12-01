@@ -3,6 +3,7 @@ import { defineAppConfig } from '../types';
 export default defineAppConfig({
   id: 'com.ss.android.auto',
   name: '懂车帝',
+  deprecatedKeys: [5],
   groups: [
     {
       key: 0,
@@ -52,35 +53,49 @@ export default defineAppConfig({
     },
     {
       key: 3,
-      name: '首页直播推荐窗口',
-      activityIds: 'com.ss.android.auto.activity.SplashActivity',
-      rules:
-        '@ImageView[clickable=true][id!=null] - RelativeLayout >4 [id="com.ss.android.auto:id/at1"][text="特价抢购"]',
-      snapshotUrls: 'https://i.gkd.li/import/12798338',
+      name: '悬浮广告',
+
+      rules: [
+        {
+          key: 0,
+          name: '特价抢购悬浮广告',
+          activityIds: 'com.ss.android.auto.activity.SplashActivity',
+          quickFind: true,
+          matches: '@ImageView - RelativeLayout >4 [text="特价抢购"]',
+          snapshotUrls: 'https://i.gkd.li/import/12798338',
+        },
+      ],
     },
     {
       key: 4,
-      name: '文章底部广告',
-      activityIds:
-        'com.ss.android.article.base.feature.detail2.view.NewDetailActivity',
-      rules:
-        '@ImageView[clickable=true] <2 RelativeLayout[childCount=4][id!=null] > TextView[text="广告"][id!=null]',
-      snapshotUrls: 'https://i.gkd.li/import/12811597',
-    },
-    {
-      key: 5,
-      name: '评论区广告',
-      activityIds: [
-        'com.ss.android.article.base.feature.detail2.view.NewDetailActivity',
-        'com.ss.android.auto.ugc.video.activity.UgcLongPostActivity',
-        'com.ss.android.auto.ugc.video.activity.UgcNewDetailActivity',
-      ],
-      rules:
-        'RelativeLayout[childCount=5][id=null] > @ImageView[clickable=true][id!=null] - LinearLayout[childCount=2][id!=null] > TextView[text="广告"][id!=null]',
-      snapshotUrls: [
-        'https://i.gkd.li/import/12811459',
-        'https://i.gkd.li/import/12825865',
-        'https://i.gkd.li/import/12900666',
+      name: '卡片式广告',
+      rules: [
+        {
+          key: 0,
+          name: '文章底部广告',
+          activityIds:
+            'com.ss.android.article.base.feature.detail2.view.NewDetailActivity',
+          quickFind: true,
+          matches:
+            'FrameLayout > FrameLayout > RelativeLayout > @ImageView[clickable=true] + [text="广告"]',
+          snapshotUrls: 'https://i.gkd.li/import/12811597',
+        },
+        {
+          key: 1,
+          name: '评论区广告',
+          activityIds: [
+            'com.ss.android.article.base.feature.detail2.view.NewDetailActivity',
+            'com.ss.android.auto.ugc.video.activity.UgcLongPostActivity',
+            'com.ss.android.auto.ugc.video.activity.UgcNewDetailActivity',
+          ],
+          matches:
+            'FrameLayout > FrameLayout > RelativeLayout > @ImageView[clickable=true] + [text="广告"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12811459',
+            'https://i.gkd.li/import/12825865',
+            'https://i.gkd.li/import/12900666',
+          ],
+        },
       ],
     },
     {
