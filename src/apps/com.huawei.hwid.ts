@@ -18,5 +18,16 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 1,
+      name: '开屏广告',
+      desc: '',
+      rules: [
+        {
+          matches: '[id="com.huawei.hwid:id/hiad_skip_text"]',
+          snapshotUrls: ['https://i.gkd.li/import/13520462'],
+        },
+      ],
+    }
   ],
 });
