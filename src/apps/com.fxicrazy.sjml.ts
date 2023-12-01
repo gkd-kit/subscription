@@ -13,8 +13,7 @@ export default defineAppConfig({
       quickFind: true,
       rules: [
         {
-          activityIds: 'com.fxicrazy.sjml.ui.welcome.WelcomeActivity',
-          matches: '[text=^"跳过"][text.length<10]',
+          matches: '[text^="跳过"][text.length<10]',
           exampleUrls:
             'https://m.gkd.li/47232102/cb7a2c32-db59-47c4-af35-b70125b88bd2',
           snapshotUrls: 'https://i.gkd.li/import/13514356',
