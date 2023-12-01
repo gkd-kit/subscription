@@ -43,10 +43,11 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      name: '升级弹窗',
-      activityIds: 'com.ss.android.auto.activity.SplashActivity',
-      rules:
-        '@TextView[text="以后再说"] - FrameLayout >2 TextView[text$="升级"]',
+      name: '更新弹窗',
+      actionMaximum: 1,
+      resetMatch: 'app',
+      quickFind: true,
+      rules: '@[text="以后再说"] - * >2 [text$="升级"]',
       snapshotUrls: 'https://i.gkd.li/import/12711631',
     },
     {
