@@ -338,11 +338,8 @@ export default defineAppConfig({
     {
       key: 19,
       name: '内测邀请弹窗',
-      matchLauncher: true,
       quickFind: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
+      activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
       rules: [
         {
           key: 0,
