@@ -97,14 +97,29 @@ export default defineAppConfig({
       enable: false,
       key: 1,
       name: '电脑微信快捷自动登录',
-      activityIds: '.plugin.webwx.ui.ExtDeviceWXLoginUI',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'activity',
+      activityIds: [
+        '.plugin.webwx.ui.ExtDeviceWXLoginUI',
+        'com.tencent.mm.ui.LauncherUI',
+      ],
       rules: 'TextView[text="取消登录"] - Button[text="登录"]',
+      snapshotUrls: [
+        'https://i.gkd.li/import/13522625', // activityIds: 'com.tencent.mm.plugin.webwx.ui.ExtDeviceWXLoginUI'
+        'https://i.gkd.li/import/13522577', // activityIds: 'com.tencent.mm.ui.LauncherUI'
+      ],
     },
     {
       enable: false,
       key: 2,
       name: '浏览器扫码微信登录自动授权',
       desc: '自动允许使用头像昵称等',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'activity',
       activityIds: [
         'com.tencent.mm.plugin.webview.ui.tools.SDKOAuthUI',
         'com.tencent.mm.ui.LauncherUI',
@@ -117,6 +132,10 @@ export default defineAppConfig({
       key: 3,
       name: '第三方APP申请使用授权弹窗',
       desc: '自动点击允许,但由于此界面可以额外新建昵称头像,默认不启用',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'activity',
       activityIds: ['com.tencent.mm.plugin.base.stub.UIEntryStub'],
       rules: 'Button[text="拒绝"] - Button[text="允许"]',
       snapshotUrls: 'https://i.gkd.li/import/12663602',
@@ -125,6 +144,10 @@ export default defineAppConfig({
       enable: false,
       key: 4,
       name: '微信读书网页版扫码登录自动授权',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'activity',
       activityIds: ['com.tencent.mm.plugin.webview.ui.tools.MMWebViewUI'],
       rules: [
         {
@@ -221,6 +244,7 @@ export default defineAppConfig({
       key: 7,
       name: '自动选中发送原图',
       desc: '图片和视频选择器-自动选中底部中间的发送原图',
+      quickFind: true,
       activityIds: [
         'com.tencent.mm.plugin.gallery.ui.AlbumPreviewUI',
         'com.tencent.mm.plugin.gallery.ui.ImagePreviewUI',
@@ -228,7 +252,7 @@ export default defineAppConfig({
       rules: [
         {
           key: 1,
-          matches: '[text="原图"] - ImageButton[desc="未选中,原图,复选框"]',
+          matches: '@ImageButton[desc="未选中,原图,复选框"] + [text="原图"]',
           snapshotUrls: [
             'https://i.gkd.li/import/12686641', // 未选中
             'https://i.gkd.li/import/12840865', // 未选中
@@ -278,6 +302,7 @@ export default defineAppConfig({
       key: 9,
       name: '自动查看原图',
       desc: '自动点击底部左侧[查看原图（*M）]按钮',
+      quickFind: true,
       activityIds: 'com.tencent.mm.ui.chatting.gallery.ImageGalleryUI',
       rules: 'Button[text^="查看原图"][clickable=true]',
       snapshotUrls: 'https://i.gkd.li/import/12706944',
@@ -316,6 +341,9 @@ export default defineAppConfig({
       key: 11,
       name: '网页版文件传输助手扫码自动授权',
       quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'activity',
       activityIds: 'com.tencent.mm.ui.LauncherUI',
       rules: '[text="打开网页版文件传输助手"] + * > Button[text="打开"]',
       snapshotUrls: 'https://i.gkd.li/import/12793745',
