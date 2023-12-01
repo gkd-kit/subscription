@@ -3,6 +3,7 @@ import { defineAppConfig } from '../types';
 export default defineAppConfig({
   id: 'com.dragon.read',
   name: '番茄免费小说',
+  deprecatedKeys: [11],
   groups: [
     {
       key: -1,
@@ -87,9 +88,19 @@ export default defineAppConfig({
           key: 0,
           name: '电商惊喜券',
           activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
+          quickFind: true,
           matches:
-            '@LynxFlattenUI[id=null][text=""][clickable=true] - [text="去逛商城"] -4 [text$="电商惊喜券"] ',
+            '@LynxFlattenUI[id=null][text=""][clickable=true] - [text="去逛商城"] -4 [text$="电商惊喜券"]',
           snapshotUrls: 'https://i.gkd.li/import/12910159',
+        },
+        {
+          key: 1,
+          name: '爆款好物一分购',
+          quickFind: true,
+          activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
+          matches:
+            '@ImageView[clickable=true] <2 LinearLayout[childCount=2] < [id="android:id/content"][childCount=1]',
+          snapshotUrls: 'https://i.gkd.li/import/12878266',
         },
       ],
     },
@@ -115,16 +126,6 @@ export default defineAppConfig({
       rules:
         '@[text="取消"] < LinearLayout -2 LinearLayout > [text="开启推送提醒"]',
       snapshotUrls: 'https://i.gkd.li/import/12716592',
-    },
-    {
-      key: 11,
-      name: '广告弹窗',
-      desc: '点击底部圆形x图标',
-      quickFind: true,
-      activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
-      rules:
-        '@ImageView[clickable=true] <2 LinearLayout[childCount=2] < [id="android:id/content"][childCount=1]',
-      snapshotUrls: 'https://i.gkd.li/import/12878266',
     },
     {
       key: 12,
