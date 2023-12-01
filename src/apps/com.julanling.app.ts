@@ -18,7 +18,8 @@ export default defineAppConfig({
       key: 5,
       name: '广告弹窗',
       activityIds: 'com.julanling.dgq.main.view.MainFragmentActivity',
-      rules: 'FrameLayout > FrameLayout[childCount=1] > ImageView[width<80][height<80]',
+      rules:
+        'FrameLayout > FrameLayout[childCount=1] > ImageView[width<80][height<80]',
       snapshotUrls: 'https://i.gkd.li/import/13523567',
     },
   ],
