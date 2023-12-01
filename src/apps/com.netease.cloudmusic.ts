@@ -22,11 +22,11 @@ export default defineAppConfig({
       quickFind: true,
       // matchDelay: 3000, 我又想不起来为什么要有这个了
       activityIds: [
-            'com.netease.cloudmusic.activity.MainActivity',
-            'com.netease.cloudmusic.music.biz.comment.activity.CommentActivity',
-            'com.netease.cloudmusic.music.biz.comment.activity.ReplyCommentActivity2',
-            'com.netease.cloudmusic.music.biz.search.activity.SearchActivity',
-          ],
+        'com.netease.cloudmusic.activity.MainActivity',
+        'com.netease.cloudmusic.music.biz.comment.activity.CommentActivity',
+        'com.netease.cloudmusic.music.biz.comment.activity.ReplyCommentActivity2',
+        'com.netease.cloudmusic.music.biz.search.activity.SearchActivity',
+      ],
       rules: [
         {
           key: 0,
@@ -48,7 +48,8 @@ export default defineAppConfig({
         {
           key: 3,
           name: '信息流广告-内容推荐', // 考虑位置是否移出
-          matches: '@ViewGroup[clickable=true][childCount=2] > ImageView - ViewGroup > TextView[text.length>0]',
+          matches:
+            '@ViewGroup[clickable=true][childCount=2] > ImageView - ViewGroup > TextView[text.length>0]',
           snapshotUrls: [
             'https://i.gkd.li/import/13526986',
             'https://i.gkd.li/import/13526711',
@@ -56,7 +57,8 @@ export default defineAppConfig({
         },
         {
           preKeys: 3,
-          matches: '@[id="com.netease.cloudmusic:id/artist_container"] > [text="不感兴趣"]',
+          matches:
+            '@[id="com.netease.cloudmusic:id/artist_container"] > [text="不感兴趣"]',
           snapshotUrls: 'https://i.gkd.li/import/13526712',
         },
       ],
@@ -181,8 +183,9 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          name:'右上角VIP小悬浮',
-          matches: 'TextView[text!=null] + ImageView[id="com.netease.cloudmusic:id/close"]',
+          name: '右上角VIP小悬浮',
+          matches:
+            'TextView[text!=null] + ImageView[id="com.netease.cloudmusic:id/close"]',
           snapshotUrls: [
             'https://i.gkd.li/import/13402634',
             'https://i.gkd.li/import/13402635',
@@ -191,7 +194,7 @@ export default defineAppConfig({
         },
         {
           key: 1,
-          name:'巨幅卡片式广告',
+          name: '巨幅卡片式广告',
           matches: '[text^="跳过广告"][text.length<=10]',
           snapshotUrls: 'https://i.gkd.li/import/13527105',
         },
