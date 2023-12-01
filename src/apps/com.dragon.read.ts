@@ -20,7 +20,7 @@ export default defineAppConfig({
     },
     {
       key: 0,
-      name: '阅读页面底部广告',
+      name: '卡片式广告',
       activityIds: [
         'com.dragon.read.ad.banner.ui',
         'com.dragon.read.reader.ReaderActivity',
@@ -28,19 +28,29 @@ export default defineAppConfig({
       ],
       rules: [
         {
+          key: 0,
           matches: '@[clickable=true] TextView[text="关闭此条广告"]',
         },
         {
+          key: 1,
           matches: '@ImageView - LinearLayout TextView[text="广告"]',
           snapshotUrls: 'https://i.gkd.li/import/12908734',
         },
         {
+          key: 2,
           matches:
-            '[id="com.dragon.read:id/root_view"] >n ViewGroup[childCount=4] > @FrameLayout[id!=null][clickable=true][childCount=1] > ImageView[visibleToUser=true]',
+            'FrameLayout > FrameLayout > ViewGroup[childCount=4] > @FrameLayout[clickable=true][visibleToUser=true] > ImageView',
           snapshotUrls: [
             'https://i.gkd.li/import/12716444',
             'https://i.gkd.li/import/13062909', // 误触
           ],
+        },
+        {
+          key: 3,
+          quickFind: true,
+          matches:
+            '[id="com.dragon.read:id/layout_banner_ad_bg"] > [id="com.dragon.read:id/close_button"]',
+          snapshotUrls: 'https://i.gkd.li/import/13520314',
         },
       ],
     },
