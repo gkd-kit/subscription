@@ -144,7 +144,7 @@ export default defineAppConfig({
           key: 2,
           name: '全屏广告2',
           quickFind: true,
-          matches: '[id="com.tencent.qqlive:id/arg"]',
+          matches: '[text*="关闭广告"][text.length<=10]',
           snapshotUrls: 'https://i.gkd.li/import/13526547',
         },
       ],
