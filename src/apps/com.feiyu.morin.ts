@@ -18,5 +18,19 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 1,
+      name: '卡片式广告',
+      rules: [
+        {
+          key: 0,
+          name: '腾讯广告',
+          activityIds: 'com.feiyu.morin.view.main.MainActivity',
+          matches:
+            'ImageView + LinearLayout + LinearLayout + FrameLayout > ImageView',
+          snapshotUrls: 'https://i.gkd.li/import/13521680',
+        },
+      ],
+    },
   ],
 });
