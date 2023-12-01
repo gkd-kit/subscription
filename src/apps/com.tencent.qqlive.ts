@@ -144,7 +144,7 @@ export default defineAppConfig({
           key: 2,
           name: '全屏广告2',
           quickFind: true,
-          matches: '[text*="关闭广告"][text.length<=10]',
+          matches: '@[text$="关闭广告"][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13526547',
         },
       ],
