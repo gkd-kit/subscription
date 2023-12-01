@@ -335,5 +335,21 @@ export default defineAppConfig({
         'https://i.gkd.li/import/13255493', //desc值为null快照
       ],
     },
+    {
+      key: 19,
+      name: '版本更新',
+      matchLauncher: true,
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          key: 0,
+          matches: '[id="com.tencent.mobileqq:id/ywf"]',
+          snapshotUrls: 'https://i.gkd.li/import/13526551',
+        },
+      ],
+    },
   ],
 });
