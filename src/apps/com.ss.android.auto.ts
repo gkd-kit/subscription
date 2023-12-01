@@ -7,8 +7,10 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: 'com.ss.android.auto.activity.SplashActivity',
-      rules: '[desc="跳过广告"][id!=null]',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: '[desc="跳过广告"]',
       snapshotUrls: 'https://i.gkd.li/import/12605327',
     },
     {
