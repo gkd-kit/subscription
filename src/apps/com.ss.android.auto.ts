@@ -88,6 +88,7 @@ export default defineAppConfig({
             'com.ss.android.auto.ugc.video.activity.UgcLongPostActivity',
             'com.ss.android.auto.ugc.video.activity.UgcNewDetailActivity',
           ],
+          quickFind: true,
           matches:
             'FrameLayout > FrameLayout > RelativeLayout > @ImageView[clickable=true] + [text="广告"]',
           snapshotUrls: [
@@ -102,8 +103,8 @@ export default defineAppConfig({
       key: 6,
       name: '请求推送通知弹窗',
       activityIds: 'com.ss.android.auto.activity.SplashActivity',
-      rules:
-        '@TextView[clickable=true && text.length =1] + [text ^="打开推送通知"]',
+      quickFind: true,
+      rules: '@TextView[clickable=true] + [text^="打开推送通知"]',
       snapshotUrls: 'https://i.gkd.li/import/12840664',
     },
   ],
