@@ -58,7 +58,9 @@ export default defineAppConfig({
     {
       key: 1,
       name: '更新弹窗',
-      activityIds: 'com.dragon.read.update',
+      actionMaximum: 1,
+      resetMatch: 'app',
+      quickFind: true,
       rules: '@[text="以后再说"] + [text="优先体验"]',
       snapshotUrls: 'https://i.gkd.li/import/12716477',
     },
