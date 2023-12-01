@@ -23,14 +23,10 @@ export default defineAppConfig({
     {
       key: 1,
       name: '更新弹窗',
-      activityIds: ['com.excelliance.kxqp.gs.main.MainActivity'],
-      rules: [
-        {
-          matches:
-            '[id="com.excean.splay:id/positive"][text="立即更新"] + [id="com.excean.splay:id/negative"][text="忽略"]',
-          snapshotUrls: ['https://i.gkd.li/import/12684551'],
-        },
-      ],
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: '[text="发现新版本"] +n * > [text="忽略"]',
+      snapshotUrls: 'https://i.gkd.li/import/12684551',
     },
   ],
 });
