@@ -123,8 +123,7 @@ export default defineAppConfig({
       name: '请求通知权限弹窗',
       desc: '自动点击【取消】',
       activityIds: 'com.dragon.read.widget.ConfirmDialogBuilder',
-      rules:
-        '@[text="取消"] < LinearLayout -2 LinearLayout > [text="开启推送提醒"]',
+      rules: '@[text="取消"] < * -2 * > [text="开启推送提醒"]',
       snapshotUrls: 'https://i.gkd.li/import/12716592',
     },
     {
