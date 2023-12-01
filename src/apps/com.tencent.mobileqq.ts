@@ -337,7 +337,7 @@ export default defineAppConfig({
     },
     {
       key: 19,
-      name: '版本更新',
+      name: '内测邀请弹窗',
       matchLauncher: true,
       quickFind: true,
       matchTime: 10000,
