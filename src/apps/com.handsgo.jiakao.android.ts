@@ -41,6 +41,15 @@ export default defineAppConfig({
           ],
           snapshotUrls: 'https://i.gkd.li/import/13476039',
         },
+        {
+          key: 1,
+          name: '课程广告',
+          activityIds: 'com.handsgo.jiakao.android.main.activity.MainActivity',
+          quickFind: true,
+          matches:
+            '[id="com.handsgo.jiakao.android:id/adsdk__ids_cta_layout"] - * > [id="com.handsgo.jiakao.android:id/close"]',
+          snapshotUrls: 'https://i.gkd.li/import/13523033',
+        },
       ],
     },
     {
