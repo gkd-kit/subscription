@@ -15,6 +15,7 @@ export default defineAppConfig({
       snapshotUrls: 'https://i.gkd.li/import/12605327',
     },
     {
+      enable: false,
       key: 1,
       name: '首页推荐卡片广告',
       desc: '需二次点击关闭原因',
