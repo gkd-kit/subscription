@@ -58,7 +58,8 @@ export default defineAppConfig({
       activityIds: 'org.iqiyi.video.activity.PlayerActivity',
       rules: [
         {
-          matches: '@RelativeLayout[id="com.qiyi.video:id/unused_res_a"] > TextView[text="关闭广告"]',
+          matches:
+            '@RelativeLayout[id="com.qiyi.video:id/unused_res_a"] > TextView[text="关闭广告"]',
           snapshotUrls: 'https://i.gkd.li/import/13536669',
         },
       ],
