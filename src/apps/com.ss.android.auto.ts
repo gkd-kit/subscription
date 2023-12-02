@@ -43,7 +43,6 @@ export default defineAppConfig({
       key: 2,
       name: '升级弹窗',
       quickFind: true,
-      matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       activityIds: 'com.ss.android.auto.activity.SplashActivity',
@@ -53,12 +52,23 @@ export default defineAppConfig({
     },
     {
       key: 3,
-      name: '首页直播推荐窗口',
+      name: '右下角悬浮窗',
       quickFind: true,
-      activityIds: 'com.ss.android.auto.activity.SplashActivity',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'activity',
+      activityIds: [
+        'com.ss.android.auto.activity.SplashActivity',
+        'com.ss.android.auto.activity.ConcernDetailActivity',
+      ],
       rules:
-        '@ImageView[clickable=true][id!=null] - RelativeLayout >4 [id="com.ss.android.auto:id/at1"][text="特价抢购"]',
-      snapshotUrls: 'https://i.gkd.li/import/12798338',
+        'FrameLayout > RelativeLayout[childCount=2] > RelativeLayout + ImageView[clickable=true]',
+      snapshotUrls: [
+        'https://i.gkd.li/import/12798338',
+        'https://i.gkd.li/import/13535531',
+        'https://i.gkd.li/import/13535933',
+        'https://i.gkd.li/import/13535932',
+      ],
     },
     {
       key: 4,
@@ -91,7 +101,6 @@ export default defineAppConfig({
       key: 6,
       name: '请求推送通知弹窗',
       quickFind: true,
-      matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       activityIds: 'com.ss.android.auto.activity.SplashActivity',
