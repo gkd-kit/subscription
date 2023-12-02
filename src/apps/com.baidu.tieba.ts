@@ -41,7 +41,7 @@ export default defineAppConfig({
       ],
     },
     {
-      key: 2,
+      key: 1,
       name: '申请消息提醒弹窗',
       activityIds: 'com.baidu.tieba.pb.pb.main.PbActivity',
       rules: '@ImageView[clickable=true] -2 LinearLayout > [text^="打开通知"]',
