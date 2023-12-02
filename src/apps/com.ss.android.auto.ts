@@ -43,10 +43,13 @@ export default defineAppConfig({
       key: 2,
       name: '升级弹窗',
       quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       activityIds: 'com.ss.android.auto.activity.SplashActivity',
       rules:
         '@TextView[text="以后再说"] - FrameLayout >2 TextView[text$="升级"]',
-      snapshotUrls: 'https://i.gkd.li/import/12711631',
+      snapshotUrls: 'https://i.gkd.li/import/13534445',
     },
     {
       key: 3,
@@ -88,6 +91,9 @@ export default defineAppConfig({
       key: 6,
       name: '请求推送通知弹窗',
       quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       activityIds: 'com.ss.android.auto.activity.SplashActivity',
       rules:
         '@TextView[clickable=true && text.length =1] + [text ^="打开推送通知"]',
