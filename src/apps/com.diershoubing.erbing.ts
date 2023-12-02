@@ -13,7 +13,7 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         '@[id="com.byted.pangle:id/tt_splash_skip_btn"] <<n [id="com.diershoubing.erbing:id/containerV"]',
-        '[id="com.diershoubing.erbing:id/skip"][text*="跳过"]'
+        '[id="com.diershoubing.erbing:id/skip"][text*="跳过"]',
       ],
       snapshotUrls: [
         'https://i.gkd.li/import/13378853',
