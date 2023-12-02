@@ -60,7 +60,10 @@ export default defineAppConfig({
         {
           matches:
             '@RelativeLayout[id="com.qiyi.video:id/unused_res_a"] > TextView[text="关闭广告"]',
-          snapshotUrls: 'https://i.gkd.li/import/13536669',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13536669',
+            'https://i.gkd.li/import/13536703',
+          ],
         },
       ],
     },
