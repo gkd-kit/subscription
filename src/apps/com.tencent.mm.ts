@@ -287,7 +287,7 @@ export default defineAppConfig({
       name: '微信小程序-开屏广告',
       quickFind: true,
       matchTime: 10000,
-      actionMaximum: 1,
+      // actionMaximum: 1, // 经常需要点2次，首次点击过早大概率跳不过
       resetMatch: 'activity',
       activityIds: [
         'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
@@ -295,6 +295,7 @@ export default defineAppConfig({
       ],
       rules: [
         {
+          actionDelay: 800, // 过早点击首次大概率跳不过
           matches: [
             'FrameLayout > TextView + FrameLayout > TextView[text="广告"]',
             'FrameLayout > TextView + FrameLayout > TextView[text="跳过"]',
