@@ -99,8 +99,7 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules:
-        '[text^="您的设备已经被ROOT"] + LinearLayout [text="确认"]',
+      rules: '[text^="您的设备已经被ROOT"] + LinearLayout [text="确认"]',
       snapshotUrls: 'https://i.gkd.li/import/13536744',
     },
   ],
