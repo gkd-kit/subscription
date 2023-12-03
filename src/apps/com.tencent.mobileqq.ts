@@ -336,6 +336,7 @@ export default defineAppConfig({
       ],
     },
     {
+      enable: false,
       key: 19,
       name: '内测邀请弹窗',
       quickFind: true,
@@ -343,7 +344,7 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          matches: '[id="com.tencent.mobileqq:id/ywf"]',
+          matches: '@ImageView[desc="关闭"] <2 * >2 [text="QQ测试版"]',
           snapshotUrls: 'https://i.gkd.li/import/13526551',
         },
       ],
