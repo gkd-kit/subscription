@@ -120,7 +120,7 @@ export default defineAppConfig({
       key: 4,
       name: '视频播放时的广告',
       desc: '自动点击 跳过广告',
-      activityIds: ['com.tencent.qqlive.ona.activity.VideoDetailActivity'],
+      activityIds: 'com.tencent.qqlive.ona.activity.VideoDetailActivity',
       rules: [
         {
           key: 0,
@@ -139,6 +139,12 @@ export default defineAppConfig({
           matches:
             'FrameLayout[childCount=2] > FrameLayout > RelativeLayout > View[id!=null][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13043079',
+        },
+        {
+          key: 2,
+          name: '暂停播放后弹出的广告',
+          matches: '[text="广告"] + [text="关闭广告"]',
+          snapshotUrls: 'https://i.gkd.li/import/13537846',
         },
       ],
     },
