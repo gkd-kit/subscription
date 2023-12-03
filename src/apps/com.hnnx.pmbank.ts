@@ -12,7 +12,8 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       activityIds: 'com.yitong.mbank.app.android.activity.SplashActivity',
-      rules: '[text="是否下载最新版客户端？"] <<n [id="android:id/parentPanel"] Button[text="取消"]',
+      rules:
+        '[text="是否下载最新版客户端？"] <<n [id="android:id/parentPanel"] Button[text="取消"]',
       snapshotUrls: 'https://i.gkd.li/import/13536762',
     },
   ],
