@@ -42,5 +42,18 @@ export default defineAppConfig({
         '[id="com.dianping.v1:id/float_image"] + [id="com.dianping.v1:id/close"][clickable=true]',
       snapshotUrls: 'https://i.gkd.li/import/12727366',
     },
+    {
+      key: 4,
+      name: '弹窗广告',
+      rules: [
+        {
+          key: 0,
+          activityIds: 'com.dianping.v1.NovaMainActivity',
+          quickFind: true,
+          matches: '[id="com.dianping.v1:id/operate_cross_icon"]',
+          snapshotUrls: 'https://i.gkd.li/import/13538340',
+        },
+      ],
+    },
   ],
 });
