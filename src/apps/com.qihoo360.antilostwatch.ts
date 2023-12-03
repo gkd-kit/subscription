@@ -7,9 +7,15 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: 'com.qihoo.kids.watch.im.boot.MainActivity',
+      activityIds: [
+        'com.qihoo.kids.watch.im.boot.MainActivity',
+        'com.qihoo.kids.watch.im.home.HomeActivity',
+      ],
       rules: '[name="android.widget.TextView"&&text="跳过"]',
-      snapshotUrls: 'https://i.gkd.li/import/13538012',
+      snapshotUrls: [
+        'https://i.gkd.li/import/13538012',
+        'https://i.gkd.li/import/13538800',
+      ],
     },
   ],
 });
