@@ -1,7 +1,7 @@
 import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
-  id: 'com.yitong.bbw.mbank.android,
+  id: 'com.yitong.bbw.mbank.android',
   name: '广西北部湾银行',
   groups: [
     {
