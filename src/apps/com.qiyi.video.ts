@@ -50,5 +50,18 @@ export default defineAppConfig({
       snapshotUrls: 'https://i.gkd.li/import/12838158',
       rules: ['[id="com.qiyi.video:id/cancel_btn"][text="暂不升级"]'],
     },
+    {
+      key: 5,
+      name: '播放视频时的广告',
+      rules: [
+        {
+          key: 0,
+          activityIds: 'org.iqiyi.video.activity.PlayerActivity',
+          matches:
+            'RelativeLayout[childCount=2] > [text="关闭广告"] + ImageView',
+          snapshotUrls: 'https://i.gkd.li/import/13538187',
+        },
+      ],
+    },
   ],
 });
