@@ -434,5 +434,16 @@ export default defineAppConfig({
         ],
       },
     },
+    {
+      key: 17,
+      name: '青少年模式弹窗',
+      quickFind: true,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      activityIds: 'com.tencent.mm.plugin.finder.ui.FinderSelfUI',
+      rules:
+        'TextView[text^="为呵护未成年人健康成长，微信推出青少年模式"] +2 Button[text="我知道了"]',
+      snapshotUrls: 'https://i.gkd.li/import/13538145',
+    },
   ],
 });
