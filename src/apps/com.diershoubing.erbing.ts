@@ -11,9 +11,19 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules:
-        '@[id="com.byted.pangle:id/tt_splash_skip_btn"] <<n [id="com.diershoubing.erbing:id/containerV"]',
-      snapshotUrls: 'https://i.gkd.li/import/13378853',
+      rules: [
+        {
+          key: 0,
+          matches:
+            '@[id="com.byted.pangle:id/tt_splash_skip_btn"] <<n [id="com.diershoubing.erbing:id/containerV"]',
+          snapshotUrls: 'https://i.gkd.li/import/13378853',
+        },
+        {
+          key: 1,
+          matches: '[text="跳过"]',
+          snapshotUrls: 'https://i.gkd.li/import/13538207',
+        },
+      ],
     },
     {
       key: 1,
