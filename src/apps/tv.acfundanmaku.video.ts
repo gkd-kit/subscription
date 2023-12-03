@@ -30,7 +30,7 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'tv.acfun.core.module.main.MainActivity',
-          matches: '[id=\'tv.acfundanmaku.video:id/btnSimpleDialogOne\']',
+          matches: '[id="tv.acfundanmaku.video:id/btnSimpleDialogOne"]',
           exampleUrls:
             'https://m.gkd.li/6328439/8229e6ec-f1d6-4162-96ad-c3a6b74877c7',
           snapshotUrls: 'https://i.gkd.li/import/13518737',
