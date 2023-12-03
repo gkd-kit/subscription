@@ -33,7 +33,7 @@ export default defineAppConfig({
         {
           // 不与旧版本合并，尽量使用[clickable=true]，保证速度避免误触
           preKeys: 1,
-          name: '点击【不感兴趣】1',  // 懂车帝v7.8.4样式
+          name: '点击【不感兴趣】1', // 懂车帝v7.8.4样式
           matches: '@ViewGroup[clickable=true] TextView[text="不感兴趣"]',
           snapshotUrls: 'https://i.gkd.li/import/13538627',
         },
