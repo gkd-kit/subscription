@@ -25,7 +25,8 @@ export default defineAppConfig({
       actionMaximum: 1,
       rules: [
         {
-          matches: 'FrameLayout[id="cn.ccspeed:id/float_layout"] > ImageView - ImageView',
+          matches:
+            'FrameLayout[id="cn.ccspeed:id/float_layout"] > ImageView - ImageView',
           snapshotUrls: 'https://i.gkd.li/import/13539299',
         },
       ],
