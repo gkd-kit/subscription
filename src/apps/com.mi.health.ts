@@ -38,5 +38,14 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 4,
+      name: '更新弹窗',
+      actionMaximum: 1,
+      resetMatch: 'app',
+      quickFind: true,
+      rules: '[text^="发现新版本"] < * + * >n [text="放弃更新"]',
+      snapshotUrls: 'https://i.gkd.li/import/13537840',
+    },
   ],
 });
