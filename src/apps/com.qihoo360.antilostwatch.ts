@@ -7,6 +7,9 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
+      matchDelay: 300,
+      matchTime: 5000,
+      actionMaximum: 1,
       activityIds: [
         'com.qihoo.kids.watch.im.boot.MainActivity',
         'com.qihoo.kids.watch.im.home.HomeActivity',
