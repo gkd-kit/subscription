@@ -133,7 +133,7 @@ export default defineAppConfig({
       activityIds: [
         'com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity',
         'com.bilibili.video.videodetail.VideoDetailsActivity',
-      ]
+      ],
       rules: ['[id="tv.danmaku.bili:id/toast_x"]'],
       snapshotUrls: [
         'https://i.gkd.li/import/12892611',
