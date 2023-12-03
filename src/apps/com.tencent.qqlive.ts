@@ -120,7 +120,7 @@ export default defineAppConfig({
       key: 4,
       name: '视频播放时的广告',
       desc: '自动点击 跳过广告',
-      activityIds: ['com.tencent.qqlive.ona.activity.VideoDetailActivity'],
+      activityIds: 'com.tencent.qqlive.ona.activity.VideoDetailActivity',
       rules: [
         {
           key: 0,
