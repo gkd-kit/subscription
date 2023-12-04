@@ -27,5 +27,21 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 1,
+      name: '弹窗广告',
+      rules: [
+        {
+          key: 0,
+          name: '字节广告',
+          activityIds:
+            'com.mfcloudcalculate.networkdisk.activity.AdFreeActivity',
+          quickFind: true,
+          matches:
+            '[id="com.mfcloudcalculate.networkdisk:id/tv_ad_free_colse"]',
+          snapshotUrls: 'https://i.gkd.li/import/13546443',
+        },
+      ],
+    },
   ],
 });
