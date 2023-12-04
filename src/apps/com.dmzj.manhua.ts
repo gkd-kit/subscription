@@ -34,7 +34,8 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'activity',
       matchTime: 10000,
-      rules: '@[id="com.dmzj.manhua:id/ivAdClose"] - [id="com.dmzj.manhua:id/ivFloatAd"]',
+      rules:
+        '@[id="com.dmzj.manhua:id/ivAdClose"] - [id="com.dmzj.manhua:id/ivFloatAd"]',
       snapshotUrls: 'https://i.gkd.li/import/13542506',
     },
   ],
