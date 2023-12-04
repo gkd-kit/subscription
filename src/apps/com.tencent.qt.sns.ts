@@ -28,7 +28,7 @@ export default defineAppConfig({
       resetMatch: 'app',
       quickFind: true,
       matchDelay: 10000,
-      rules: 
+      rules:
         '@[id="com.tencent.qt.sns:id/btnNegative"][text*="取消"] +2 [id="com.tencent.qt.sns:id/btnPositive"][text*="现在升级"]', //防止误触其它取消按钮
       snapshotUrls: 'https://i.gkd.li/import/13497984',
     },
