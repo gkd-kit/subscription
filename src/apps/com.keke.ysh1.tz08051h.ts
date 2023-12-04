@@ -15,6 +15,8 @@ export default defineAppConfig({
       ],
       rules: [
         {
+          key: 1,
+          name: '网址更新',
           matches: 'TextView[text="可可影视"] < LinearLayout >n @TextView[text*="知道了"]',
           quickfind: true,
           snapshotUrls: 'https://i.gkd.li/import/13548412',
