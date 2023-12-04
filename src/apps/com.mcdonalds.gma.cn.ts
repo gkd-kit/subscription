@@ -20,8 +20,10 @@ export default defineAppConfig({
       snapshotUrls: 'https://i.gkd.li/import/13259242',
     },
     {
+      enable: false,
       key: 2,
-      name: '首页广告',
+      name: '优惠券弹窗',
+      desc: '自动关闭',
       rules: [
         {
           activityIds: 'com.mcdonalds.gma.cn.activity.MainActivity',
