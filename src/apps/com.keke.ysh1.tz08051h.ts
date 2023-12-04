@@ -7,6 +7,9 @@ export default defineAppConfig({
     {
       key: 1,
       name: '开屏提示',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       activityIds: [
         'com.salmon.film.main.ui.MainActivity',
       ],
@@ -16,7 +19,7 @@ export default defineAppConfig({
           quickfind: true,
           snapshotUrls: 'https://i.gkd.li/import/13548412',
         },
-      ],
+      ]
     },
   ],
 });
