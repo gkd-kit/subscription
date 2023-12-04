@@ -48,12 +48,5 @@ export default defineAppConfig({
         },
       ],
     },
-    {
-      key: 3,
-      name: '请求开启个性化推荐弹窗',
-      activityIds: 'com.huawei.watchface.api.WebViewActivity',
-      rules: '[text="开启个性化推荐"] +2 [text="开启"] + Button',
-      snapshotUrls: 'https://i.gkd.li/import/13546292',
-    },
   ],
 });
