@@ -19,5 +19,16 @@ export default defineAppConfig({
       rules: '[id="com.mcdonalds.gma.cn:id/tv_cancel"][text="取消"]',
       snapshotUrls: 'https://i.gkd.li/import/13259242',
     },
+    {
+      key: 2,
+      name: '首页广告',
+      rules: [
+        {
+          activityIds: 'com.mcdonalds.gma.cn.activity.MainActivity',
+          matches: '[id="com.mcdonalds.gma.cn:id/iv_ad_close"]',
+          snapshotUrls: 'https://i.gkd.li/import/13465873',
+        },
+      ],
+    },
   ],
 });
