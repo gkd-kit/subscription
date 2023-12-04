@@ -10,6 +10,7 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
+      quickfind: true,
       activityIds: [
         'com.salmon.film.main.ui.MainActivity',
       ],
@@ -18,7 +19,6 @@ export default defineAppConfig({
           key: 1,
           name: '网址更新',
           matches: 'TextView[text="可可影视"] < LinearLayout >n @TextView[text*="知道了"]',
-          quickfind: true,
           snapshotUrls: 'https://i.gkd.li/import/13548412',
         },
       ]
