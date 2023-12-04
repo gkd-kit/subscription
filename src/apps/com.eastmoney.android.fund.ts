@@ -35,5 +35,13 @@ export default defineAppConfig({
       ],
       snapshotUrls: 'https://i.gkd.li/import/12642387',
     },
+    {
+      key: 3,
+      name: '更新弹窗',
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: '@FrameLayout[clickable=true] - * >2 [desc="立即升级"]',
+      snapshotUrls: 'https://i.gkd.li/import/13546927',
+    },
   ],
 });
