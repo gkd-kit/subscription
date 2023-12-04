@@ -35,7 +35,7 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'activity',
       quickFind: true,
-      rules: 
+      rules:
         '[text*="关闭"][id="com.mfcloudcalculate.networkdisk:id/tv_ad_free_colse"]',
       snapshotUrls: 'https://i.gkd.li/import/13546173',
     },
