@@ -7,11 +7,17 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: 'com.tencent.mocmna.activity.MainActivity',
+      activityIds: [
+        'com.tencent.mocmna.activity.MainActivity',
+        'com.tencent.mocmna.base.ad.AdsActivity',
+      ],
       matchLauncher: true,
       quickFind: true,
       rules: '[text$="跳过"]',
-      snapshotUrls: 'https://i.gkd.li/import/12847303',
+      snapshotUrls: [
+        'https://i.gkd.li/import/12847303',
+        'https://i.gkd.li/import/13539641', //分别对应两条activityIds
+      ],
     },
     {
       key: 1,
