@@ -7,9 +7,11 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds:
-        'com.eastmoney.android.fund.centralis.activity.FundRootActivity',
-      rules: '[id="com.eastmoney.android.fund:id/ad_ignore"][text^="跳过"]',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: '[text^="跳过"][text.length<=10]',
       snapshotUrls: 'https://i.gkd.li/import/12781533',
     },
     {
