@@ -35,5 +35,18 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 2,
+      name: '弹窗广告',
+      rules: [
+        {
+          key: 0,
+          activityIds: 'com.huawei.watchface.api.WebViewActivity',
+          matches:
+            'View[childCount=2] > View + View[childCount=1] > Image[childCount=0]',
+          snapshotUrls: 'https://i.gkd.li/import/13546292',
+        },
+      ],
+    },
   ],
 });
