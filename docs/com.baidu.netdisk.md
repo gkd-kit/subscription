@@ -9,6 +9,7 @@
 - [快照-2](https://i.gkd.li/import/12988458)
 - [快照-3](https://i.gkd.li/import/12648924)
 - [快照-4](https://i.gkd.li/import/12865287)
+- [快照-5](https://i.gkd.li/import/13538334)
 
 ## 活动弹窗
 
@@ -33,9 +34,7 @@
 
 - [快照-0](https://i.gkd.li/import/12648987)
 
-## 更新提醒弹窗
-
-默认禁用
+## 更新弹窗
 
 - [快照-0](https://i.gkd.li/import/12863984)
 

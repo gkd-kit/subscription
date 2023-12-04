@@ -7,19 +7,34 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: 'com.github.eprendre.tingshu.ui.SplashActivity',
-      rules:
-        '[id="com.github.eprendre.tingshu:id/frame_layout"] >n [text^="跳过"]',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: '[text*="跳过"][text.length<=10]',
       snapshotUrls: 'https://i.gkd.li/import/12783430',
     },
     {
       key: 1,
-      name: '搜索结果底部广告',
-      activityIds:
+      name: '卡片式广告',
+      activityIds: [
         'com.github.eprendre.tingshu.ui.search.AggregateSearchActivity',
-      rules:
-        '[id="com.github.eprendre.tingshu:id/banner_container"] >n FrameLayout > ImageView +2 FrameLayout > ImageView',
-      snapshotUrls: 'https://i.gkd.li/import/12783466',
+        'com.github.eprendre.tingshu.ui.play.PlayerActivity',
+      ],
+      rules: [
+        {
+          key: 0,
+          name: '搜索结果底部/播放页面广告卡片',
+          activityIds: 'com.github.eprendre.tingshu.ui.play.PlayerActivity',
+          matches:
+            'FrameLayout > FrameLayout[childCount=1] > ImageView[width<80][height<80]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12783466',
+            'https://i.gkd.li/import/13334850',
+            'https://i.gkd.li/import/13446735',
+          ],
+        },
+      ],
     },
   ],
 });

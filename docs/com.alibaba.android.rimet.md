@@ -1,6 +1,6 @@
 # 钉钉
 
-存在 4 规则组 - [com.alibaba.android.rimet](/src/apps/com.alibaba.android.rimet.ts)
+存在 6 规则组 - [com.alibaba.android.rimet](/src/apps/com.alibaba.android.rimet.ts)
 
 ## 开屏广告
 
@@ -25,3 +25,15 @@
 
 - [快照-0](https://i.gkd.li/import/13309648)
 - [快照-1](https://i.gkd.li/import/13309845)
+
+## 版本更新弹窗
+
+默认禁用
+
+- [快照-0](https://i.gkd.li/import/13402478)
+
+## 扫码自动登录桌面版
+
+默认禁用
+
+- [快照-0](https://i.gkd.li/import/13433981)

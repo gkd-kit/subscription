@@ -7,9 +7,19 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: 'com.kugou.android.app.splash.SplashActivity',
-      rules: '[desc=`跳过`]',
-      snapshotUrls: 'https://i.gkd.li/import/12775410',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          matches: '[desc="跳过"||desc="GdtCountDownView"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12775410',
+            'https://i.gkd.li/import/13426030',
+            'https://i.gkd.li/import/13468987',
+          ],
+        },
+      ],
     },
   ],
 });

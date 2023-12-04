@@ -30,16 +30,31 @@ export default defineAppConfig({
         {
           key: 0,
           matches:
-            '@[desc="关闭"][clickable=true] - LinearLayout > TextView[text!=null]', // 1687669217838
+            'TextView[text!=null] < LinearLayout + ImageView[desc="关闭"]', // 原@语法会出现两个选项可能会导致误触
           snapshotUrls: [
             'https://i.gkd.li/import/12892726',
             'https://i.gkd.li/import/12774870',
             'https://i.gkd.li/import/13207766',
+            'https://i.gkd.li/import/13386518',
           ],
+        },
+        {
+          key: 1,
+          name: '消息页面-顶部惊喜礼包',
+          matches:
+            '[text*="惊喜礼包"] + FrameLayout + ImageView[clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/import/13426912',
+        },
+        {
+          key: 2,
+          matches:
+            'ImageView + RelativeLayout[childCount=2] > TextView[text!=null] + ImageView',
+          snapshotUrls: 'https://i.gkd.li/import/13476400',
         },
       ],
     },
     {
+      enable: false,
       key: 2,
       name: '好友动态-广告卡片',
       activityIds: [
@@ -54,8 +69,9 @@ export default defineAppConfig({
         },
         {
           preKeys: 0,
+          quickFind: true,
           matches:
-            '[clickable=true] > ImageView + TextView[text="关闭此条广告"]',
+            '@[clickable=true] > ImageView + TextView[text="关闭此条广告"]',
           snapshotUrls: 'https://i.gkd.li/import/12840889',
         },
       ],
@@ -181,12 +197,14 @@ export default defineAppConfig({
       activityIds: [
         'com.tencent.mobileqq.activity.SplashActivity',
         'com.tencent.qqnt.qbasealbum.WinkHomeActivity',
+        'com.tencent.mobileqq.activity.photo.album.NewPhotoListActivity',
       ],
       rules: '@CheckBox[checked=false] + [text="原图"]',
       snapshotUrls: [
         'https://i.gkd.li/import/12705556', // 未勾选原图
         'https://i.gkd.li/import/12705559', // 已勾选原图
         'https://i.gkd.li/import/13295142', // com.tencent.qqnt.qbasealbum.WinkHomeActivity
+        'https://i.gkd.li/import/13476247', // com.tencent.mobileqq.activity.photo.album.NewPhotoListActivity
       ],
     },
     {
@@ -256,21 +274,33 @@ export default defineAppConfig({
       ],
     },
     {
+      enable: false,
       key: 15,
       name: '好友动态-为你推荐',
-      activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
+      quickFind: true,
+      matchLauncher: true,
+      activityIds: [
+        'com.tencent.mobileqq.activity.SplashActivity',
+        'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
+      ],
       rules: [
         {
           key: 0,
-          matches: '[text="为你推荐"] + ImageView[id!=null][clickable=true]',
-          snapshotUrls: 'https://i.gkd.li/import/12929620',
+          matches: '@ImageView[clickable=true] - [text="为你推荐"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12929620',
+            'https://i.gkd.li/import/13387606', // activityIds: 'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
+          ],
         },
         {
           preKeys: 0,
           key: 1,
           matches:
             '@LinearLayout[id!=null][clickable=true] > LinearLayout > [text="减少此类推荐"]',
-          snapshotUrls: 'https://i.gkd.li/import/12929619',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12929619',
+            'https://i.gkd.li/import/13387605', // matchLauncher: true,
+          ],
         },
       ],
     },
@@ -285,9 +315,14 @@ export default defineAppConfig({
     {
       key: 17,
       name: '更新弹窗',
-      activityIds: 'com.tencent.mobileqq.upgrade',
-      rules: '@[desc="关闭"] - ViewGroup > [text="发现新版本"]',
-      snapshotUrls: 'https://i.gkd.li/import/13188721',
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: '@[desc="关闭"] - ViewGroup > [text="立即体验"||text="立即升级"]',
+      snapshotUrls: [
+        'https://i.gkd.li/import/13188721',
+        'https://i.gkd.li/import/13386719',
+        'https://i.gkd.li/import/13459507',
+      ],
     },
     {
       enable: false,
@@ -298,6 +333,20 @@ export default defineAppConfig({
       snapshotUrls: [
         'https://i.gkd.li/import/13188722',
         'https://i.gkd.li/import/13255493', //desc值为null快照
+      ],
+    },
+    {
+      enable: false,
+      key: 19,
+      name: '内测邀请弹窗',
+      quickFind: true,
+      activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
+      rules: [
+        {
+          key: 0,
+          matches: '@ImageView[desc="关闭"] <2 * >2 [text="QQ测试版"]',
+          snapshotUrls: 'https://i.gkd.li/import/13526551',
+        },
       ],
     },
   ],

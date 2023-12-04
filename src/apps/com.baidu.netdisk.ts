@@ -12,6 +12,7 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
+          key: 0,
           quickFind: true,
           matches: '[text^="跳过"][text.length<=5]',
           snapshotUrls: [
@@ -23,8 +24,10 @@ export default defineAppConfig({
           ],
         },
         {
+          key: 1,
           quickFind: false,
           matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
+          snapshotUrls: 'https://i.gkd.li/import/13538334',
         },
       ],
     },
@@ -33,14 +36,22 @@ export default defineAppConfig({
       name: '活动弹窗',
       desc: '关闭各种活动弹窗信息',
       quickFind: true,
-      activityIds: 'com.baidu.netdisk.ui.MainActivity',
       rules: [
         {
-          matches: '[id="com.baidu.netdisk:id/iv_close"]',
-          snapshotUrls: [
-            'https://i.gkd.li/import/12642505',
-            'https://i.gkd.li/import/12923937',
-          ],
+          key: 1,
+          name: '一刻相册推广弹窗',
+          activityIds: 'com.baidu.netdisk.ui.MainActivity',
+          matches:
+            '[id="com.baidu.netdisk:id/cl_content"] - [id="com.baidu.netdisk:id/iv_close"]',
+          snapshotUrls: ['https://i.gkd.li/import/12642505'],
+        },
+        {
+          key: 2,
+          name: 'VIP弹窗',
+          activityIds: 'com.baidu.netdisk.business.guide.dialog.lifeproduct.', // LifeV10GuideDialog
+          matches:
+            '[id="com.baidu.netdisk:id/view_content_bg2"] - [id="com.baidu.netdisk:id/iv_close"]',
+          snapshotUrls: ['https://i.gkd.li/import/12923937'],
         },
       ],
     },
@@ -80,13 +91,13 @@ export default defineAppConfig({
       snapshotUrls: 'https://i.gkd.li/import/12648987',
     },
     {
-      enable: false,
       key: 6,
-      name: '更新提醒弹窗',
+      name: '更新弹窗',
       quickFind: true,
-      activityIds: 'com.baidu.netdisk.ui.MainActivity',
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: '[text="立即更新"] -n [text="下次再说"]', //使用ID会导致误触（例如删除确认https://i.gkd.li/import/13069049）
-      snapshotUrls: ['https://i.gkd.li/import/12863984'],
+      snapshotUrls: 'https://i.gkd.li/import/12863984',
     },
     {
       key: 7,

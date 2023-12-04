@@ -82,5 +82,37 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      enable: false,
+      key: 4,
+      name: '版本更新弹窗',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          key: 0,
+          matches: '@Button[text*="暂不更新"] + Button[text*="更新"]',
+          snapshotUrls: 'https://i.gkd.li/import/13402478',
+        },
+      ],
+    },
+    {
+      enable: false,
+      key: 5,
+      name: '扫码自动登录桌面版',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'activity',
+      activityIds: 'com.alibaba.android.user.qrcode.WebLoginActivity',
+      rules: [
+        {
+          matches: '[id="com.alibaba.android.rimet:id/btn_login"]',
+          snapshotUrls: 'https://i.gkd.li/import/13433981',
+        },
+      ],
+    },
   ],
 });

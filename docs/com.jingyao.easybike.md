@@ -4,7 +4,10 @@
 
 ## 请求通知权限弹窗
 
+默认禁用
+
 - [快照-0](https://i.gkd.li/import/13228735)
+- [快照-1](https://i.gkd.li/import/13402675)
 
 ## 请求定位权限弹窗
 
@@ -16,6 +19,7 @@
 
 - [快照-0](https://i.gkd.li/import/12650028)
 - [快照-1](https://i.gkd.li/import/12650090)
+- [快照-2](https://i.gkd.li/import/13331231)
 
 ## 哈啰智能电动车-广告弹窗
 

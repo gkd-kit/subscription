@@ -1,6 +1,6 @@
 # QQ
 
-存在 19 规则组 - [com.tencent.mobileqq](/src/apps/com.tencent.mobileqq.ts)
+存在 20 规则组 - [com.tencent.mobileqq](/src/apps/com.tencent.mobileqq.ts)
 
 ## 开屏广告
 
@@ -16,8 +16,13 @@
 - [快照-0](https://i.gkd.li/import/12892726)
 - [快照-1](https://i.gkd.li/import/12774870)
 - [快照-2](https://i.gkd.li/import/13207766)
+- [快照-3](https://i.gkd.li/import/13386518)
+- [快照-4](https://i.gkd.li/import/13426912)
+- [快照-5](https://i.gkd.li/import/13476400)
 
 ## 好友动态-广告卡片
+
+默认禁用
 
 - [快照-0](https://i.gkd.li/import/12847842)
 - [快照-1](https://i.gkd.li/import/12840889)
@@ -75,6 +80,7 @@
 - [快照-0](https://i.gkd.li/import/12705556)
 - [快照-1](https://i.gkd.li/import/12705559)
 - [快照-2](https://i.gkd.li/import/13295142)
+- [快照-3](https://i.gkd.li/import/13476247)
 
 ## 自动查看原图
 
@@ -104,8 +110,12 @@
 
 ## 好友动态-为你推荐
 
+默认禁用
+
 - [快照-0](https://i.gkd.li/import/12929620)
-- [快照-1](https://i.gkd.li/import/12929619)
+- [快照-1](https://i.gkd.li/import/13387606)
+- [快照-2](https://i.gkd.li/import/12929619)
+- [快照-3](https://i.gkd.li/import/13387605)
 
 ## NT QQ-登录确认
 
@@ -116,6 +126,8 @@ NT QQ 登录时自动点击允许登录QQ
 ## 更新弹窗
 
 - [快照-0](https://i.gkd.li/import/13188721)
+- [快照-1](https://i.gkd.li/import/13386719)
+- [快照-2](https://i.gkd.li/import/13459507)
 
 ## 消息页面-顶部更新提示
 
@@ -123,3 +135,9 @@ NT QQ 登录时自动点击允许登录QQ
 
 - [快照-0](https://i.gkd.li/import/13188722)
 - [快照-1](https://i.gkd.li/import/13255493)
+
+## 内测邀请弹窗
+
+默认禁用
+
+- [快照-0](https://i.gkd.li/import/13526551)

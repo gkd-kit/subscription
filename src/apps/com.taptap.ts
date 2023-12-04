@@ -35,5 +35,21 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 3,
+      name: '版本更新',
+      quickFind: true,
+      activityIds: 'com.taptap.upgrade.library.dialog.UpgradeDialogAct',
+      rules: [
+        {
+          matches:
+            '@[id="com.taptap.app.game:id/btn_dismiss"] <3 LinearLayout [text="发现新版本"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13387479',
+            'https://i.gkd.li/import/13488702',
+          ],
+        },
+      ],
+    },
   ],
 });

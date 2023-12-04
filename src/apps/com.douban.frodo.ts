@@ -12,7 +12,7 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: '[text^="跳过"][text.length<=10]',
+      rules: '[text*="跳过"][text.length<=10]',
       snapshotUrls: [
         'https://i.gkd.li/import/12505151',
         'https://i.gkd.li/import/12505152',
@@ -20,13 +20,30 @@ export default defineAppConfig({
       ],
     },
     {
-      key: 1,
-      name: '不同步到我的动态',
-      desc: '标记看过时，不同步到我的动态',
       enable: false,
+      key: 1,
+      name: '不分享/同步作品短评',
+      desc: '书影音-作品-状态-不分享/同步短评(5s后可手动)',
+      quickFind: true,
+      matchTime: 5000,
+      resetMatch: 'activity',
       activityIds: 'com.douban.frodo.subject.activity.RatingActivity',
-      rules: '[id="com.douban.frodo:id/check_status"][checked=true]',
-      snapshotUrls: ['https://i.gkd.li/import/12508777'],
+      rules: [
+        {
+          key: 0,
+          name: '不分享到微信、微博',
+          matches:
+            '@LinearLayout > [id="com.douban.frodo:id/check_weibo_wechat"][visibleToUser=true][checked=true]',
+          snapshotUrls: ['https://i.gkd.li/import/12508777'],
+        },
+        {
+          key: 1,
+          name: '不同步到动态',
+          matches:
+            '@LinearLayout > [id="com.douban.frodo:id/check_status"][visibleToUser=true][checked=true]',
+          snapshotUrls: ['https://i.gkd.li/import/12508777'],
+        },
+      ],
     },
     {
       key: 2,
@@ -46,9 +63,11 @@ export default defineAppConfig({
       ],
     },
     {
+      enable: false,
       key: 3,
       name: '信息流广告',
       desc: '首页动态/推荐,小组讨论列表,帖子底部,点击广告关闭后出现关闭原因底部菜单-点击不感兴趣',
+      quickFind: true,
       activityIds: [
         'com.douban.frodo.activity.SplashActivity',
         'com.douban.frodo.status.activity.StatusDetailActivity',
@@ -59,18 +78,8 @@ export default defineAppConfig({
       ],
       rules: [
         {
-          name: '点击不感兴趣',
-          preKeys: [1, 2, 3],
-          matches:
-            '@LinearLayout[clickable=true] > [id="com.douban.frodo:id/mainText"][text="不感兴趣"]',
-          snapshotUrls: [
-            'https://i.gkd.li/import/12548016',
-            'https://i.gkd.li/import/12723422',
-          ],
-        },
-        {
           key: 1,
-          name: '点击广告卡片右上角菜单图标按钮',
+          name: '首页-动态-信息流广告',
           activityIds: [
             'com.douban.frodo.activity.SplashActivity',
             'com.douban.frodo.status.activity.StatusDetailActivity',
@@ -85,7 +94,90 @@ export default defineAppConfig({
         },
         {
           key: 2,
-          name: '点击广告卡片右下角[广告]文字按钮',
+          name: '小组-帖子列表信息流广告',
+          activityIds: [
+            'com.douban.frodo.group.activity.GroupDetailActivity',
+            'com.douban.frodo.activity.SplashActivity',
+          ],
+          matches: '[id="com.douban.frodo:id/ad_tag"][text="广告"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12723569',
+            'https://i.gkd.li/import/13347455',
+          ],
+        },
+        {
+          name: '点击不感兴趣',
+          preKeys: [1, 2],
+          matches:
+            '@LinearLayout[clickable=true] > [id="com.douban.frodo:id/mainText"][text="不感兴趣"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12548016',
+            'https://i.gkd.li/import/12723422',
+          ],
+        },
+      ],
+    },
+    {
+      key: 4,
+      cd: 10000,
+      name: '卡片广告',
+      desc: '书影音-卡片广告-点击卡片右下角"广告"文字',
+      // 豆瓣在屏幕之外渲染了大量节点, 在节点肉眼不可见但是无障碍可见的情况下, 仍然会触发大量点击
+      // 发现增加一个较高的 cd 值可以避免后续广告节点出现, 从而不会触发点击
+      quickFind: true,
+      snapshotUrls: 'https://i.gkd.li/import/12548160',
+      activityIds: 'com.douban.frodo.activity.SplashActivity',
+      rules: [
+        {
+          key: 0,
+          name: '点击【广告】',
+          matches:
+            '@View[clickable=true] > Image - TextView[text="广告"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/import/12548131',
+        },
+        {
+          preKeys: 0,
+          name: '点击【不感兴趣】',
+          matches:
+            '[text="广告"] < * + * > [text="不感兴趣"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/import/12548116',
+        },
+      ],
+    },
+    {
+      key: 5,
+      name: '关闭评分反馈弹窗',
+      quickFind: true,
+      activityIds: 'com.douban.frodo.activity.SplashActivity',
+      rules: {
+        matches: '[text="下次再说"][id="com.douban.frodo:id/neutral"]',
+        snapshotUrls: 'https://i.gkd.li/import/12548314',
+      },
+    },
+    {
+      key: 8,
+      name: '帖子内容与评论区中间的卡片式广告',
+      actionMaximum: 1,
+      resetMatch: 'activity',
+      rules: [
+        {
+          key: 0,
+          name: '点击【x】关闭型',
+          activityIds: ['com.douban.frodo.group.activity.GroupTopicActivity'],
+          matches:
+            'ImageView[id=null] +(n) LinearLayout[childCount<=2] + FrameLayout[childCount=1] > ImageView[id=null][visibleToUser=true][top>250]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12674798',
+            'https://i.gkd.li/import/12674842',
+            'https://i.gkd.li/import/12723462',
+            'https://i.gkd.li/import/12723800',
+            'https://i.gkd.li/import/13402399', // 添加[top>250]，避免误触快照中【更多】按钮
+            'https://i.gkd.li/import/12548476', // 原key6
+          ],
+        },
+        {
+          key: 1,
+          name: '点击【广告】选原因型',
           matches: '[text="广告"][id$="ad_not_interest"]',
           activityIds: [
             'com.douban.frodo.subject.structure.activity.MovieActivity',
@@ -101,73 +193,16 @@ export default defineAppConfig({
           ],
         },
         {
-          key: 3,
-          name: '点击卡片中间的[广告]文字按钮',
-          activityIds: ['com.douban.frodo.group.activity.GroupDetailActivity'],
-          matches: '[id="com.douban.frodo:id/ad_tag"][text="广告"]',
-          snapshotUrls: 'https://i.gkd.li/import/12723569',
+          name: '点击【不感兴趣】',
+          preKeys: 1,
+          matches:
+            '@LinearLayout[clickable=true] > [id="com.douban.frodo:id/mainText"][text="不感兴趣"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12548016',
+            'https://i.gkd.li/import/12723422',
+          ],
         },
       ],
-    },
-    {
-      key: 4,
-      cd: 10000,
-      name: '卡片广告',
-      desc: '书影音-卡片广告-点击卡片右下角"广告"文字',
-      // 豆瓣在屏幕之外渲染了大量节点, 在节点肉眼不可见但是无障碍可见的情况下, 仍然会触发大量点击
-      // 发现增加一个较高的 cd 值可以避免后续广告节点出现, 从而不会触发点击
-      snapshotUrls: 'https://i.gkd.li/import/12548160',
-      activityIds: 'com.douban.frodo.activity.SplashActivity',
-      rules: [
-        {
-          matches:
-            '[text="广告"] < * + * > [text="不感兴趣"][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/import/12548116',
-        },
-        {
-          matches:
-            '@View[clickable=true] > Image - TextView[text="广告"][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/import/12548131',
-        },
-      ],
-    },
-    {
-      key: 5,
-      name: '关闭评分反馈弹窗',
-      activityIds: 'com.douban.frodo.activity.SplashActivity',
-      rules: {
-        matches: '[text="下次再说"][id="com.douban.frodo:id/neutral"]',
-        snapshotUrls: 'https://i.gkd.li/import/12548314',
-      },
-    },
-    {
-      key: 6,
-      name: '影评广告卡片',
-      desc: '影评顶部评论区顶部广告卡片-点击右下角x关闭广告',
-      activityIds: ['com.douban.frodo.subject.activity.ForumTopicActivity'],
-      rules: [
-        {
-          matches:
-            'TextView < FrameLayout + FrameLayout > ImageView +3 FrameLayout > ImageView',
-          snapshotUrls: 'https://i.gkd.li/import/12548476',
-        },
-      ],
-    },
-    {
-      key: 8,
-      name: '小组讨论详情页广告',
-      desc: '帖子底部-评论区顶部广告卡片,点击卡片右下角x直接关闭',
-      rules: {
-        activityIds: ['com.douban.frodo.group.activity.GroupTopicActivity'],
-        matches:
-          'ImageView[id=null] +(n) LinearLayout[childCount<=2] + FrameLayout[childCount=1] > ImageView[id=null][visibleToUser=true]',
-        snapshotUrls: [
-          'https://i.gkd.li/import/12674798',
-          'https://i.gkd.li/import/12674842',
-          'https://i.gkd.li/import/12723462',
-          'https://i.gkd.li/import/12723800',
-        ],
-      },
     },
     {
       key: 9,
@@ -181,7 +216,7 @@ export default defineAppConfig({
       },
     },
     {
-      key: 10,
+      key: 10, // 已包含key13内容
       name: '弹窗广告',
       desc: '浏览详情时弹窗广告,点击右上角x',
       matchLauncher: true,
@@ -201,52 +236,24 @@ export default defineAppConfig({
           matches:
             'ImageView -n FrameLayout[childCount=2] > FrameLayout > FrameLayout > ImageView',
           snapshotUrls: [
-            'https://i.gkd.li/import/13296656',
+            'https://i.gkd.li/import/13296656', // 与"咕咚" https://i.gkd.li/import/13348663 ，"全能计算器" https://i.gkd.li/import/13378847类似，可能来自同个sdk
             'https://i.gkd.li/import/13328126',
           ],
         },
       ],
     },
     {
-      key: 11,
-      name: '更新弹窗',
+      key: 11, //与key12完全重复
+      name: '版本更新',
       quickFind: true,
       actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
           key: 0,
           activityIds: 'com.douban.frodo.activity.BetaApkDialogActivity',
           matches: ['[text="新版试用邀请"]', '@[text="取消"] + [text="下载"]'],
           snapshotUrls: 'https://i.gkd.li/import/13228832',
-        },
-      ],
-    },
-    {
-      key: 12,
-      name: '新版试用弹窗',
-      quickFind: true,
-      actionMaximum: 1,
-      rules: [
-        {
-          key: 0,
-          activityIds: 'com.douban.frodo.activity.BetaApkDialogActivity',
-          matches: ['[text="新版试用邀请"]', '@[text="取消"] + [text="下载"]'],
-          snapshotUrls: 'https://i.gkd.li/import/13228832',
-        },
-      ],
-    },
-    {
-      key: 13,
-      name: '详情页广告',
-      rules: [
-        {
-          matchLauncher: true,
-          quickFind: true,
-          matches: [
-            '[text^="扭动或点击"]',
-            '[text^="扭动或点击"] <n FrameLayout[childCount=4] -5 FrameLayout[childCount=2] > FrameLayout[childCount=3] > FrameLayout[childCount=1] > ImageView[id=null]',
-          ],
-          snapshotUrls: 'https://i.gkd.li/import/13318902',
         },
       ],
     },

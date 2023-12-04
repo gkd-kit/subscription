@@ -9,19 +9,23 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       quickFind: true,
-      activityIds: 'com.xunlei.downloadprovider.launch.LaunchActivity',
-      rules: 'TextView[text^="跳过"]',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: '[text^="跳过"][text.length<=10]',
       snapshotUrls: 'https://i.gkd.li/import/12707693',
     },
     {
       key: 1,
       name: '视频详情页广告',
       quickFind: true,
-      activityIds:
-        'com.xunlei.downloadprovider.download.taskdetails.newui.DownloadDetailsActivity',
       rules: [
         {
           key: 0,
+          name: '点击右上角x按钮',
+          activityIds:
+            'com.xunlei.downloadprovider.download.taskdetails.newui.DownloadDetailsActivity',
+          quickFind: true,
           matches:
             '[id="com.xunlei.downloadprovider:id/hermes_ad_banner_negative"]',
           snapshotUrls: 'https://i.gkd.li/import/12707701',
@@ -29,7 +33,12 @@ export default defineAppConfig({
         {
           preKeys: [0],
           key: 1,
-          activityIds: 'com.xunlei.downloadprovider.feedback.view',
+          name: '点击不感兴趣',
+          activityIds: [
+            'com.xunlei.downloadprovider.download.taskdetails.newui.DownloadDetailsActivity',
+            'com.xunlei.downloadprovider.feedback.view',
+          ],
+          quickFind: true,
           matches:
             '[id="com.xunlei.downloadprovider:id/feedback_not_interested_layout"]',
           snapshotUrls: [
@@ -39,12 +48,18 @@ export default defineAppConfig({
         },
         {
           key: 2,
+          name: '点击关闭按钮',
           activityIds: 'com.xunlei.downloadprovider.feedback.view',
+          quickFind: true,
           matches: '[id="com.xunlei.downloadprovider:id/ad_ima_skip"]',
           snapshotUrls: 'https://i.gkd.li/import/12882988',
         },
         {
           key: 3,
+          name: '点击右上角x按钮',
+          activityIds:
+            'com.xunlei.downloadprovider.download.taskdetails.newui.DownloadDetailsActivity',
+          quickFind: true,
           matches:
             '[id="com.xunlei.downloadprovider:id/play_detail_ad_title"] + [id="com.xunlei.downloadprovider:id/close_iv"]',
           snapshotUrls: 'https://i.gkd.li/import/13228423',
@@ -167,18 +182,22 @@ export default defineAppConfig({
       ],
     },
     {
+      enable: false,
       key: 4,
-      name: '下载页面-广告卡片',
-      matchLauncher: true,
+      name: '【下载页】广告卡片',
+      desc: '需选二次弹窗关闭原因',
+      quickFind: true,
       rules: [
         {
           key: 0,
+          name: '点击更多【···】',
           activityIds: 'com.xunlei.downloadprovider.frame.MainTabActivity',
           matches: '[id="com.xunlei.downloadprovider:id/ad_more"]',
           snapshotUrls: 'https://i.gkd.li/import/12881865',
         },
         {
           key: 1,
+          name: '点击【x】',
           activityIds: [
             'com.xunlei.downloadprovider.frame.MainTabActivity',
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
@@ -191,12 +210,17 @@ export default defineAppConfig({
         },
         {
           preKeys: [0, 1],
+          name: '关闭原因选【减少推荐】',
           key: 2,
-          activityIds: 'com.xunlei.downloadprovider.download.center.newcenter',
+          activityIds: [
+            'com.xunlei.downloadprovider.download.center.newcenter',
+            'com.xunlei.downloadprovider.frame.MainTabActivity',
+          ],
           matches: '[id="com.xunlei.downloadprovider:id/close_ad"]',
           snapshotUrls: [
             'https://i.gkd.li/import/128818775',
             'https://i.gkd.li/import/13198070',
+            'https://i.gkd.li/import/13484249',
           ],
         },
       ],
@@ -225,12 +249,21 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          activityIds: 'com.xunlei.downloadprovider.homepage.member',
-          matches: '[id="com.xunlei.downloadprovider:id/close_btn"]',
-          snapshotUrls: 'https://i.gkd.li/import/12707698',
+          name: '【我的】',
+          activityIds: [
+            'com.xunlei.downloadprovider.homepage.member',
+            'com.xunlei.downloadprovider.frame.MainTabActivity',
+          ],
+          matches:
+            '@[id="com.xunlei.downloadprovider:id/close_btn"] - LinearLayout [text="您的会员已过期"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12707698',
+            'https://i.gkd.li/import/13448909',
+          ],
         },
         {
           key: 1,
+          name: '【下载页】1',
           activityIds: 'com.xunlei.downloadprovider.frame.MainTabActivity',
           matches:
             '[id="com.xunlei.downloadprovider:id/all_picture_image"] + [id="com.xunlei.downloadprovider:id/close_btn"]',
@@ -238,6 +271,7 @@ export default defineAppConfig({
         },
         {
           key: 2,
+          name: '【下载页】2',
           activityIds: 'com.xunlei.downloadprovider.frame.MainTabActivity',
           matches:
             '[text="立即开通"] + [id="com.xunlei.downloadprovider:id/close"]',
@@ -245,9 +279,10 @@ export default defineAppConfig({
         },
         {
           key: 3,
+          name: '【首页】',
           activityIds: 'com.xunlei.downloadprovider.frame.MainTabActivity',
           matches:
-            '[text="您的会员已过期"] < LinearLayout +n ImageView[desc="迅雷"]',
+            '[text="您的会员已过期"] < LinearLayout +n [id="com.xunlei.downloadprovider:id/touch_bottom_bar_bubble_close_iv"]',
           snapshotUrls: 'https://i.gkd.li/import/13259268',
         },
       ],

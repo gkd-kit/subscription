@@ -13,12 +13,13 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
-          matches: '[childCount=1] > [text="跳过广告"]',
+          matches: '[text*="跳过"][text.length<=10]',
           snapshotUrls: [
             'https://i.gkd.li/import/12684954',
             'https://i.gkd.li/import/12754759',
             'https://i.gkd.li/import/12840189',
             'https://i.gkd.li/import/13174224',
+            'https://i.gkd.li/import/13402688',
           ],
         },
       ],
@@ -26,20 +27,13 @@ export default defineAppConfig({
     {
       key: 1,
       name: '更新弹窗',
-      matchLauncher: true,
-      activityIds: [
-        'com.ss.android.mine.BaseSettingActivity',
-        'com.ss.android.article.base.feature.ugc.story.StoryVideoActivity',
-      ],
-      rules: [
-        {
-          matches: '[text="升级版本"] +n [desc="关闭"][clickable=true]',
-          snapshotUrls: [
-            'https://i.gkd.li/import/12685000',
-            'https://i.gkd.li/import/12840104',
-            'https://i.gkd.li/import/13316081',
-          ],
-        },
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: '[text="升级版本"] +n [desc="关闭"][clickable=true]',
+      snapshotUrls: [
+        'https://i.gkd.li/import/12685000',
+        'https://i.gkd.li/import/12840104',
+        'https://i.gkd.li/import/13316081',
       ],
     },
     {
@@ -164,6 +158,44 @@ export default defineAppConfig({
             'https://i.gkd.li/import/12733152',
             'https://i.gkd.li/import/12755265',
           ],
+        },
+      ],
+    },
+    {
+      enable: false,
+      key: 13,
+      name: '底部话题推荐弹窗',
+      activityIds: ['com.ss.android.article.news.activity.MainActivity'],
+      rules: [
+        {
+          name: '话题谈论',
+          matches:
+            'FlattenUIText[text="参与讨论"] + FlattenUIImage[clickable=true]',
+          snapshotUrls: ['https://i.gkd.li/import/12706699'],
+        },
+      ],
+    },
+    {
+      enable: false,
+      key: 14,
+      name: '自动观看广告视频',
+      desc: '自动观看广告并等待30s后关闭',
+      quickFind: true,
+      rules: [
+        {
+          key: 0,
+          name: '点击【看视频】',
+          activityIds: 'com.ss.android.article.news.activity.MainActivity',
+          matches:
+            '[id="com.bytedance.novel.api:id/component_ad_dialog_button_video"]',
+          snapshotUrls: 'https://i.gkd.li/import/13402468',
+        },
+        {
+          name: '等待30s点击【关闭】',
+          actionDelay: 30000,
+          activityIds: 'com.ss.android.excitingvideo.ExcitingVideoActivity',
+          matches: 'UIText[text="广告"] +n UIText[text="关闭"]',
+          snapshotUrls: 'https://i.gkd.li/import/13402480',
         },
       ],
     },

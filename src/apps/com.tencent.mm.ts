@@ -5,6 +5,7 @@ export default defineAppConfig({
   name: '微信',
   groups: [
     {
+      enable: false,
       key: 0,
       name: '朋友圈广告',
       desc: '点击广告卡片右上角广告,直接关闭/出现菜单,确认关闭',
@@ -93,15 +94,32 @@ export default defineAppConfig({
     },
     {
       // Key1,2,3,4,11 均为授权类的规则
+      enable: false,
       key: 1,
       name: '电脑微信快捷自动登录',
-      activityIds: '.plugin.webwx.ui.ExtDeviceWXLoginUI',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'activity',
+      activityIds: [
+        '.plugin.webwx.ui.ExtDeviceWXLoginUI',
+        'com.tencent.mm.ui.LauncherUI',
+      ],
       rules: 'TextView[text="取消登录"] - Button[text="登录"]',
+      snapshotUrls: [
+        'https://i.gkd.li/import/13522625', // activityIds: 'com.tencent.mm.plugin.webwx.ui.ExtDeviceWXLoginUI'
+        'https://i.gkd.li/import/13522577', // activityIds: 'com.tencent.mm.ui.LauncherUI'
+      ],
     },
     {
+      enable: false,
       key: 2,
       name: '浏览器扫码微信登录自动授权',
       desc: '自动允许使用头像昵称等',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'activity',
       activityIds: [
         'com.tencent.mm.plugin.webview.ui.tools.SDKOAuthUI',
         'com.tencent.mm.ui.LauncherUI',
@@ -114,13 +132,22 @@ export default defineAppConfig({
       key: 3,
       name: '第三方APP申请使用授权弹窗',
       desc: '自动点击允许,但由于此界面可以额外新建昵称头像,默认不启用',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'activity',
       activityIds: ['com.tencent.mm.plugin.base.stub.UIEntryStub'],
       rules: 'Button[text="拒绝"] - Button[text="允许"]',
       snapshotUrls: 'https://i.gkd.li/import/12663602',
     },
     {
+      enable: false,
       key: 4,
       name: '微信读书网页版扫码登录自动授权',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'activity',
       activityIds: ['com.tencent.mm.plugin.webview.ui.tools.MMWebViewUI'],
       rules: [
         {
@@ -217,6 +244,7 @@ export default defineAppConfig({
       key: 7,
       name: '自动选中发送原图',
       desc: '图片和视频选择器-自动选中底部中间的发送原图',
+      quickFind: true,
       activityIds: [
         'com.tencent.mm.plugin.gallery.ui.AlbumPreviewUI',
         'com.tencent.mm.plugin.gallery.ui.ImagePreviewUI',
@@ -224,7 +252,7 @@ export default defineAppConfig({
       rules: [
         {
           key: 1,
-          matches: '[text="原图"] - ImageButton[desc="未选中,原图,复选框"]',
+          matches: '@ImageButton[desc="未选中,原图,复选框"] + [text="原图"]',
           snapshotUrls: [
             'https://i.gkd.li/import/12686641', // 未选中
             'https://i.gkd.li/import/12840865', // 未选中
@@ -274,24 +302,28 @@ export default defineAppConfig({
       key: 9,
       name: '自动查看原图',
       desc: '自动点击底部左侧[查看原图（*M）]按钮',
+      quickFind: true,
       activityIds: 'com.tencent.mm.ui.chatting.gallery.ImageGalleryUI',
       rules: 'Button[text^="查看原图"][clickable=true]',
-      snapshotUrls: 'https://i.gkd.li/import/12706944',
+      snapshotUrls: 'https://i.gkd.li/import/13523031',
     },
     {
-      enable: false,
       key: 10,
       name: '微信小程序-开屏广告',
+      quickFind: true,
+      matchTime: 10000,
+      // actionMaximum: 1, // 经常需要点2次，首次点击过早大概率跳不过
+      // resetMatch: 'activity',
       activityIds: [
         'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
         'com.tencent.mm.plugin.appbrand.launching.AppBrandLaunchProxyUI',
       ],
-      quickFind: true,
       rules: [
         {
+          actionDelay: 800, // 过早点击首次大概率跳不过
           matches: [
-            'FrameLayout[childCount=2] > FrameLayout[childCount=3] > FrameLayout[childCount=1] > TextView[text="广告"]',
-            'FrameLayout[childCount<=3] > FrameLayout[childCount=2] >  FrameLayout[childCount=1] > [text="跳过"]',
+            'FrameLayout > TextView + FrameLayout > TextView[text="广告"]',
+            'FrameLayout > TextView + FrameLayout > TextView[text="跳过"]',
           ],
           snapshotUrls: [
             'https://i.gkd.li/import/12701979',
@@ -299,19 +331,20 @@ export default defineAppConfig({
             'https://i.gkd.li/import/12785012',
             'https://i.gkd.li/import/12785183',
             'https://i.gkd.li/import/13306883',
+            'https://i.gkd.li/import/12785246',
+            'https://i.gkd.li/import/13407275',
           ],
-        },
-        {
-          matches:
-            '[text="广告"] < * <2 * <2 * <2 FrameLayout[childCount=2] - FrameLayout[childCount=2] >  FrameLayout[childCount=1] > [text="跳过"]',
-          snapshotUrls: ['https://i.gkd.li/import/12785246'],
         },
       ],
     },
     {
+      enable: false,
       key: 11,
       name: '网页版文件传输助手扫码自动授权',
       quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'activity',
       activityIds: 'com.tencent.mm.ui.LauncherUI',
       rules: '[text="打开网页版文件传输助手"] + * > Button[text="打开"]',
       snapshotUrls: 'https://i.gkd.li/import/12793745',
@@ -320,14 +353,23 @@ export default defineAppConfig({
       enable: false,
       key: 13,
       name: '提瓦特助手小程序-弹窗广告',
-      activityIds: ['com.tencent.mm.plugin.appbrand.ui.AppBrandUI'],
+      activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
       rules: [
         {
+          key: 0,
           matches: [
             'RelativeLayout[childCount=1][clickable=true] > [text="提瓦特小助手"]',
             'FrameLayout[childCount=5] + FrameLayout[childCount=2] >2 FrameLayout[childCount=1]',
           ],
-          snapshotUrls: ['https://i.gkd.li/import/12926021'],
+          snapshotUrls: 'https://i.gkd.li/import/12926021',
+        },
+        {
+          key: 1,
+          matches: [
+            'FrameLayout > FrameLayout > FrameLayout > TextView[text="广告"]',
+            'FrameLayout[childCount=6] + FrameLayout[childCount=2] > FrameLayout > FrameLayout > ImageView',
+          ],
+          snapshotUrls: 'https://i.gkd.li/import/13459614',
         },
       ],
     },
@@ -335,37 +377,40 @@ export default defineAppConfig({
       enable: false,
       key: 14,
       name: '小程序-内部广告',
-      desc: '需同时开启"小程序-内部广告-反馈"',
       activityIds: ['com.tencent.mm.plugin.appbrand.ui.AppBrandUI'],
       quickFind: true,
       rules: [
         {
+          key: 0,
+          name: '【广告】0',
           matches:
             'FrameLayout[childCount=3] >n FrameLayout > FrameLayout > [text="广告"][visibleToUser=true]',
+          excludeMatches:
+            'FrameLayout > TextView + FrameLayout > TextView[text="跳过"]',
           snapshotUrls: [
-            'https://i.gkd.li/import/13199282', //[childCount=3]避免在点击展开菜单后重复点击
+            'https://i.gkd.li/import/13199282', // [childCount=3]避免在点击展开菜单后重复点击
+            'https://i.gkd.li/import/13407275', // excludeMatches中添加key10中规则，避免误触
           ],
         },
-      ],
-    },
-    {
-      enable: false,
-      key: 15,
-      name: '小程序-内部广告-反馈',
-      desc: '需同时开启"小程序-内部广告"',
-      activityIds: ['com.tencent.mm.plugin.appbrand.ui.AppBrandUI'],
-      quickFind: true,
-      rules: [
         {
+          key: 1,
+          name: '【广告】1',
+          matches: 'Image[text="feedback_icon"] - [text="广告"]',
+          snapshotUrls: 'https://i.gkd.li/import/13378208',
+        },
+        {
+          preKeys: [0, 1],
+          key: 11,
+          name: '点击原因【不感兴趣】',
           matches: '[text="不感兴趣"][visibleToUser=true]',
-          snapshotUrls: ['https://i.gkd.li/import/13200044'],
+          snapshotUrls: 'https://i.gkd.li/import/13200044',
         },
         {
+          preKeys: 11,
+          key: 12,
+          name: '点击原因【与我无关】',
           matches: '[text="与我无关"][visibleToUser=true]',
-          snapshotUrls: ['https://i.gkd.li/import/13200048'],
-        },
-        {
-          matches: '[text="关闭此广告"][visibleToUser=true]', //预防性规则,目前没有快照
+          snapshotUrls: 'https://i.gkd.li/import/13200048',
         },
       ],
     },
@@ -376,12 +421,29 @@ export default defineAppConfig({
       desc: '低价包邮广告',
       actionDelay: 500,
       actionMaximum: 1,
-      activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI01',
+      activityIds: [
+        'com.tencent.mm.plugin.appbrand.ui.AppBrandUI01',
+        'com.tencent.mm.plugin.appbrand.ui.AppBrandUI00',
+      ],
       rules: {
         matches: '@Image -n * > View[text="可横向滚动"]',
         action: 'clickCenter',
+        snapshotUrls: [
+          'https://i.gkd.li/import/13298294', //com.tencent.mm.plugin.appbrand.ui.AppBrandUI01
+          'https://i.gkd.li/import/13327022', //com.tencent.mm.plugin.appbrand.ui.AppBrandUI00
+        ],
       },
-      snapshotUrls: 'https://i.gkd.li/import/13298294',
+    },
+    {
+      key: 17,
+      name: '青少年模式弹窗',
+      quickFind: true,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      activityIds: 'com.tencent.mm.plugin.finder.ui.FinderSelfUI',
+      rules:
+        'TextView[text^="为呵护未成年人健康成长，微信推出青少年模式"] +2 Button[text="我知道了"]',
+      snapshotUrls: 'https://i.gkd.li/import/13538145',
     },
   ],
 });

@@ -1,6 +1,6 @@
 # 哔哩哔哩
 
-存在 10 规则组 - [tv.danmaku.bili](/src/apps/tv.danmaku.bili.ts)
+存在 11 规则组 - [tv.danmaku.bili](/src/apps/tv.danmaku.bili.ts)
 
 ## 开屏广告
 
@@ -22,22 +22,23 @@
 - [快照-0](https://i.gkd.li/import/12700222)
 - [快照-1](https://i.gkd.li/import/12700243)
 
-## 视频底部广告
+## 视频底部与评论区中间卡片式广告
 
-点击[视频底部,评论区顶部]的广告卡片右侧菜单按钮,选择屏蔽广告原因
+默认禁用 - 需点击二次弹窗 屏蔽原因
 
 - [快照-0](https://i.gkd.li/import/12642260)
 - [快照-1](https://i.gkd.li/import/12705266)
 - [快照-2](https://i.gkd.li/import/12776568)
 - [快照-3](https://i.gkd.li/import/12707070)
 - [快照-4](https://i.gkd.li/import/12642261)
-- [快照-5](https://i.gkd.li/import/12706768)
+- [快照-5](https://i.gkd.li/import/13495649)
 
 ## 更新弹窗
 
 - [快照-0](https://i.gkd.li/import/12649689)
 - [快照-1](https://i.gkd.li/import/13212209)
 - [快照-2](https://i.gkd.li/import/13228977)
+- [快照-3](https://i.gkd.li/import/13334963)
 
 ## 视频悬浮广告
 
@@ -47,6 +48,7 @@
 
 - [快照-0](https://i.gkd.li/import/12892611)
 - [快照-1](https://i.gkd.li/import/13308344)
+- [快照-2](https://i.gkd.li/import/13538048)
 
 ## 直播间卡片广告
 
@@ -66,3 +68,7 @@
 
 - [快照-0](https://i.gkd.li/import/13256570)
 - [快照-1](https://i.gkd.li/import/13256605)
+
+## 个性化内容推荐弹窗
+
+- [快照-0](https://i.gkd.li/import/13448905)

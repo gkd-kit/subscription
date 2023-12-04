@@ -134,20 +134,41 @@ export default defineAppConfig({
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
+      matchLauncher: true,
       activityIds: ['com.xunmeng.pinduoduo.ui.activity.HomeActivity'],
       rules: [
         {
           key: 0,
           name: '自动签到',
+          action: 'clickCenter',
           matches: ['FrameLayout > TextView[text="领取今日现金"]'],
-          snapshotUrls: 'https://i.gkd.li/import/13201422',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13201422', //com.xunmeng.pinduoduo.ui.activity.HomeActivity
+            'https://i.gkd.li/import/13372677', //com.bbk.launcher2.Launcher
+          ],
         },
         {
           key: 1,
           preKeys: [0],
           name: '在签到后关闭弹窗',
+          action: 'clickCenter',
           matches: ['FrameLayout > TextView[text="明日继续来领"]'],
           snapshotUrls: 'https://i.gkd.li/import/13205634',
+        },
+      ],
+    },
+    {
+      enable: false,
+      key: 10,
+      name: '多多视频-划到广告自动跳过',
+      desc: '点击返回自动刷新，从而跳过广告',
+      quickFind: true,
+      rules: [
+        {
+          activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
+          matches:
+            '@ImageView[desc=\'返回\'] -3 ViewPager >19 TextView[text=\'正在直播\']',
+          snapshotUrls: 'https://i.gkd.li/import/13446291',
         },
       ],
     },

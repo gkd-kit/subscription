@@ -7,10 +7,11 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: 'client.android.yixiaotong.ui.WelcomeActivity',
-      matchLauncher: true,
-      rules:
-        '[id="client.android.yixiaotong:id/rel_advlogo"] - * >n [text^="跳过"]',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: '[text^="跳过"][text.length<=10]',
       snapshotUrls: 'https://i.gkd.li/import/13055542',
     },
     {
@@ -40,11 +41,41 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      name: '应用内广告卡片',
+      name: '卡片式广告',
+
+      rules: [
+        {
+          key: 0,
+          name: '腾讯广告',
+          activityIds:
+            'client.android.yixiaotong.v3.ui.appcontrol.bath.BathDetailActivity',
+          matches:
+            'ImageView - FrameLayout - FrameLayout[childCount=1] > ImageView[childCount=0]',
+          snapshotUrls: 'https://i.gkd.li/import/13451010',
+        },
+        {
+          key: 1,
+          name: '快手广告',
+          activityIds:
+            'client.android.yixiaotong.v3.ui.appcontrol.bath.BathDetailActivity',
+          matches:
+            '[id="client.android.yixiaotong:id/ksad_container"] >n @TextView + View > [text="广告"]',
+          snapshotUrls: 'https://i.gkd.li/import/13450887',
+        },
+      ],
+    },
+    {
+      key: 3,
+      name: '底部卡片广告',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'activity',
       activityIds:
         'client.android.yixiaotong.v3.ui.appcontrol.bath.BathDetailActivity',
-      rules: 'ImageView - FrameLayout - FrameLayout > ImageView',
-      snapshotUrls: 'https://i.gkd.li/import/13055542',
+      rules:
+        '@TextView[clickable=true][text=""] + View [text="广告"] <<n [id="client.android.yixiaotong:id/ksad_container"]',
+      snapshotUrls: 'https://i.gkd.li/import/13448963',
     },
   ],
 });

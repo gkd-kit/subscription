@@ -8,6 +8,7 @@
 
 - [快照-0](https://i.gkd.li/import/12874746)
 - [快照-1](https://i.gkd.li/import/13054478)
+- [快照-2](https://i.gkd.li/import/13399425)
 
 ## 自动安装应用
 
@@ -24,6 +25,7 @@
 - [快照-8](https://i.gkd.li/import/12889148)
 - [快照-9](https://i.gkd.li/import/12818044)
 - [快照-10](https://i.gkd.li/import/13229404)
+- [快照-11](https://i.gkd.li/import/13501872)
 
 ## 自动更新应用
 

@@ -12,6 +12,8 @@ type CommonProps = {
   activityIds?: IArray<string>;
 
   /**
+   * @deprecated 从 v1.5.0 已弃用
+   *
    * 匹配桌面的 activityId, 因为 activityId 在某些机器/应用上获取概率不准确
    *
    * 有时当出现 开屏广告 时, activityId 还是桌面的
@@ -162,7 +164,7 @@ export type AppConfigMudule = {
   default: AppConfig;
 };
 
-type GroupConfig = {
+export type GroupConfig = {
   /**
    * 当前规则组在列表中的唯一标识\
    * 也是客户端禁用/启用此规则组的依据
@@ -249,8 +251,45 @@ type RuleConfig = {
    * @example
    * `back`
    * // 向系统发起一个返回事件, 相当于按下返回键
+   *
+   * @example
+   * `longClick`
+   * // 如果目标节点是 longClickable 的, 则使用 `longClickNode`, 反之使用 `longClickCenter`
+   *
+   * @example
+   * `longClickNode`
+   * // 向系统发起一个长按无障碍节点事件，与 clickNode 类似
+   *
+   * @example
+   * `longClickCenter`
+   * // 与 clickCenter 类似, 长按时间为 400 毫秒
    */
-  action?: 'click' | 'clickNode' | 'clickCenter' | 'back';
+  action?:
+    | 'click'
+    | 'clickNode'
+    | 'clickCenter'
+    | 'back'
+    | 'longClick'
+    | 'longClickNode'
+    | 'longClickCenter';
+
+  /**
+   * 与这个 key 的 rule 共享次数
+   *
+   * 比如开屏广告可能需要多个 rule 去匹配, 当一个 rule 触发时, 其它 rule 的触发是无意义的
+   *
+   * 如果你对这个 key 的 rule 设置 actionMaximum=1, 那么当这个 rule 和 本 rule 触发任意一个时, 两个 rule 都将进入休眠
+   */
+  actionMaximumKey?: number;
+
+  /**
+   * 与这个 key 的 rule 共享 cd
+   *
+   * 比如开屏广告可能需要多个 rule 去匹配, 当一个 rule 触发时, 其它 rule 的触发是无意义的
+   *
+   * 如果你对这个 key 的 rule 设置 actionCd=3000, 那么当这个 rule 和 本 rule 触发任意一个时, 在 3000毫秒 内两个 rule 都将进入 cd
+   */
+  actionCdKey?: number;
 
   snapshotUrls?: IArray<string>;
   exampleUrls?: IArray<string>;
@@ -284,8 +323,17 @@ export type SubscriptionConfig = {
 
   /**
    * APP 会定时或者用户手动请求这个链接, 如果返回的订阅的 version 大于 APP 订阅当前的 version , 则更新
+   *
+   * 如果这个字段不存在, 则使用添加订阅时填写的链接
    */
   updateUrl?: string;
+
+  /**
+   * 一个只需要 id 和 version 的 json 文件链接, 检测更新时, 优先检测此链接, 如果 id 相等并且 version 增加, 则再去请求 updateUrl
+   *
+   * 目的是防止订阅文件过大而消耗过多的流量
+   */
+  checkUpdateUrl?: string;
 
   /**
    * https url, custom android schema url

@@ -116,9 +116,14 @@ export default defineAppConfig({
         },
         {
           key: 3,
+          quickFind: true,
           activityIds: 'com.jingdong.app.mall.MainFrameActivity',
           matches: 'RelativeLayout > ImageView[desc="关闭页面"]',
-          snapshotUrls: 'https://i.gkd.li/import/13258996',
+          excludeMatches: 'ImageView[desc="关闭页面"] - [text="优惠券"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13258996',
+            'https://i.gkd.li/import/13336847', // 增加excludeMatches: 'ImageView[desc="关闭页面"] - [text="优惠券"]', 避免在该快照误触
+          ],
         },
       ],
     },
@@ -132,6 +137,20 @@ export default defineAppConfig({
         'https://i.gkd.li/import/13258973',
         'https://i.gkd.li/import/13258980',
         'https://i.gkd.li/import/13258981',
+      ],
+    },
+    {
+      enable: false,
+      key: 7,
+      name: '首页弹窗-打开通知',
+      desc: '自动点击正下方的【x】',
+      quickFind: true,
+      rules: [
+        {
+          activityIds: 'com.jingdong.app.mall.MainFrameActivity',
+          matches: '[id="com.jingdong.app.mall:id/btn_close"]',
+          snapshotUrls: 'https://i.gkd.li/import/13463618',
+        },
       ],
     },
     {
@@ -152,6 +171,20 @@ export default defineAppConfig({
         'com.jd.lib.settlement.fillorder.activity.NewFillOrderActivity',
       rules: 'ImageView[clickable=true && desc="关闭"]',
       snapshotUrls: 'https://i.gkd.li/import/13191146',
+    },
+    {
+      enable: false,
+      key: 12,
+      name: '购物车界面-支付成功广告弹窗',
+      desc: '自动点击正下方的【x】',
+      quickFind: true,
+      rules: [
+        {
+          activityIds: 'com.jd.lib.cart.ShoppingCartNewActivity',
+          matches: '@ImageView - ViewGroup >2 TextView[text=\'查看订单\']',
+          snapshotUrls: 'https://i.gkd.li/import/13446362',
+        },
+      ],
     },
   ],
 });
