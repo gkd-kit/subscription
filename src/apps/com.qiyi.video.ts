@@ -21,10 +21,9 @@ export default defineAppConfig({
       key: 1,
       name: '青少年弹窗',
       quickFind: true,
-      activityIds: 'org.qiyi.basecore.widget.dialog.AlertDialogBottom1',
+      activityIds: 'org.qiyi.android.video.MainActivity',
       rules: [
         {
-          activityIds: 'org.qiyi.android.video.MainActivity',
           matches: '[id="com.qiyi.video:id/confirm_btn"][text="我知道了"]',
           exampleUrls:
             'https://m.gkd.li/6328439/d69e92f8-8304-4296-909a-11730e408a16',
