@@ -7,12 +7,13 @@ export default defineAppConfig({
     {
       key: 1,
       name: '开屏广告',
-      activityIds: [
-        'com.beisen.hybrid.platform.engine.window.RootWebWindowActivity',
-      ],
+      matchTime: 10000,
+      actionMaximum: 1,
+      quickFind: true,
+      resetMatch: 'app',
       rules: [
         {
-          matches: '[text="跳过"]',
+          matches: '[text*="跳过"][text.length<=10]',
           snapshotUrls: 'https://i.gkd.li/import/13554892',
         },
       ],
