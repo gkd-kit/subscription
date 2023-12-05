@@ -11,8 +11,7 @@ export default defineAppConfig({
       activityIds: 'com.zhl.bmi.MainActivity',
       quickFind: true,
       rules: [
-        '@ImageView < FrameLayout[childCount=1] <3 FrameLayout <2 FrameLayout < FrameLayout < [id="android:id/content"]',
-        '@ImageView < FrameLayout[childCount=1] <2 FrameLayout < FrameLayout < FrameLayout < [id="android:id/content"]',
+        '@ImageView < FrameLayout[childCount=1] <(2,3) FrameLayout <(1,2) FrameLayout < FrameLayout < [id="android:id/content"]',
       ],
       snapshotUrls: [
         'https://i.gkd.li/import/13255787',
