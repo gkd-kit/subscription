@@ -27,8 +27,7 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.kugou.android.app.MediaActivity',
-          matches:
-            'FrameLayout > LinearLayout > ImageView',
+          matches: 'FrameLayout > LinearLayout > ImageView',
           exampleUrls:
             'https://m.gkd.li/87047583/9e150986-2103-4130-a12f-12ed2b07ef90',
           snapshotUrls: 'https://i.gkd.li/import/13558426',
