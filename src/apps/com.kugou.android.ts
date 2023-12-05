@@ -28,7 +28,7 @@ export default defineAppConfig({
         {
           activityIds: 'com.kugou.android.app.MediaActivity',
           matches:
-            'FrameLayout > LinearLayout > ImageView[id="com.kugou.android:id/gxc"]',
+            'FrameLayout > LinearLayout > ImageView',
           exampleUrls:
             'https://m.gkd.li/87047583/9e150986-2103-4130-a12f-12ed2b07ef90',
           snapshotUrls: 'https://i.gkd.li/import/13558426',
@@ -41,7 +41,7 @@ export default defineAppConfig({
       rules: [
         {
           matches:
-            'RelativeLayout > View + RelativeLayout > @ImageView[id="com.kugou.android:id/ti4"][clickable=true]',
+            'RelativeLayout > View + RelativeLayout > @ImageView + RelativeLayout',
           exampleUrls:
             'https://m.gkd.li/87047583/84c1379f-5eb1-4982-b27b-35e267594101',
           snapshotUrls: 'https://i.gkd.li/import/13548005',
