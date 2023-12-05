@@ -84,6 +84,16 @@ export default defineAppConfig({
       ],
     },
     {
+      key: 4,
+      name: '百度广告',
+      activityIds: 'com.baidu.mobads.sdk.api.MobRewardVideoActivity',
+      actionMaximum: 1,
+      resetMatch: 'activity',
+      matchTime: 10000,
+      rules: '@ImageView - RelativeLayout[childCount=9]',
+      snapshotUrls: 'https://i.gkd.li/import/13554229',
+    },
+    {
       key: 9,
       name: '第三方SDK广告', // 不知道是什么SDK
       activityIds: 'com.zjwh.android_wh_physicalfitness.activity.HomeActivity',
