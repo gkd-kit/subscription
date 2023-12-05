@@ -2,7 +2,7 @@ import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
   id: 'com.liuzh.deviceinfo',
-  name: '设备信息-by流舟',
+  name: '设备信息',
   groups: [
     {
       key: 0,
