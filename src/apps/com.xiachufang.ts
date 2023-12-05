@@ -28,12 +28,12 @@ export default defineAppConfig({
           ],
         },
         {
-        key: 2,
-        name: '开屏广告-3',
-        activityIds: ['com.xiachufang.startpage.ui.StartPageActivity'],
-        matches: '[name="android.widget.TextView" && text="跳过"]',
-        quickFind: true,
-        snapshotUrls: 'https://i.gkd.li/import/13539576'
+          key: 2,
+          name: '开屏广告-3',
+          activityIds: ['com.xiachufang.startpage.ui.StartPageActivity'],
+          matches: '[name="android.widget.TextView" && text="跳过"]',
+          quickFind: true,
+          snapshotUrls: 'https://i.gkd.li/import/13539576',
         },
       ],
     },
