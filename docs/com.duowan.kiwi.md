@@ -1,6 +1,6 @@
 # 虎牙直播
 
-存在 4 规则组 - [com.duowan.kiwi](/src/apps/com.duowan.kiwi.ts)
+存在 5 规则组 - [com.duowan.kiwi](/src/apps/com.duowan.kiwi.ts)
 
 ## 开屏广告
 
@@ -8,9 +8,13 @@
 
 ## 青少年模式弹窗
 
+默认禁用
+
 - [快照-0](https://i.gkd.li/import/12908790)
 
 ## 直播间悬浮广告
+
+默认禁用
 
 - [快照-0](https://i.gkd.li/import/12901045)
 - [快照-1](https://i.gkd.li/import/12901044)
@@ -24,3 +28,9 @@
 默认禁用
 
 - [快照-0](https://i.gkd.li/import/13440833)
+
+## root提示
+
+默认禁用 - 您的设备已经被ROOT
+
+- [快照-0](https://i.gkd.li/import/13536744)
