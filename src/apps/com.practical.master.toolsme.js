@@ -1,8 +1,8 @@
 import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
-  id: 'cn.wps.moffice_eng',
-  name: 'WPS',
+  id: 'com.practical.master.toolsme',
+  name: '实用大师',
   groups: [{
     "name":"[ChangeMe]规则名称-2023-12-04 16:43:58",
     "key":0,
