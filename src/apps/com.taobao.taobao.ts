@@ -155,7 +155,7 @@ export default defineAppConfig({
       key: 14,
       name: '开启悬浮窗权限',
       desc: '点击“否”',
-      activityIds: 
+      activityIds:
         'com.taobao.android.detail2.core.framework.floatwindow.permission.PermissionActivity',
       quickFind: true,
       actionMaximum: 1,
