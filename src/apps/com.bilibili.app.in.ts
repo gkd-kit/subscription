@@ -37,7 +37,8 @@ export default defineAppConfig({
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
-      rules: '[text="打开推送通知"] +2 LinearLayout > [id="com.bilibili.app.in:id/close"]',
+      rules:
+        '[text="打开推送通知"] +2 LinearLayout > [id="com.bilibili.app.in:id/close"]',
       snapshotUrls: 'https://i.gkd.li/import/13600976',
     },
   ],
