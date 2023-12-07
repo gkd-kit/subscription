@@ -36,7 +36,8 @@ export default defineAppConfig({
     {
       key: 2,
       name: '时光设备间-自动点击“开心收下”',
-      activityIds: 'com.alipay.mobile.nebulax.integration.mpaas.activity.NebulaActivity$Main',
+      activityIds:
+        'com.alipay.mobile.nebulax.integration.mpaas.activity.NebulaActivity$Main',
       actionMaximum: 1,
       resetMatch: 'activity',
       matchTime: 10000,
