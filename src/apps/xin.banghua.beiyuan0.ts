@@ -12,7 +12,8 @@ export default defineAppConfig({
         {
           activityIds: 'xin.banghua.beiyuan0.chat.ADActivity',
           matches: 'TextView[text*="跳过"]',
-          exampleUrls: 'https://m.gkd.li/58279234/eaa5ddd9-734a-40fe-9295-f89e1984ac8c',
+          exampleUrls:
+            'https://m.gkd.li/58279234/eaa5ddd9-734a-40fe-9295-f89e1984ac8c',
           snapshotUrls: 'https://i.gkd.li/import/13596389',
         },
       ],
