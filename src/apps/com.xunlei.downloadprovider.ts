@@ -152,9 +152,11 @@ export default defineAppConfig({
         },
         {
           key: 23,
-          activityIds: 'com.xunlei.downloadprovider.download.taskdetails.newui.DownloadDetailsActivity',
+          activityIds:
+            'com.xunlei.downloadprovider.download.taskdetails.newui.DownloadDetailsActivity',
           quickFind: true,
-          matches: '[id="com.xunlei.downloadprovider:id/hermes_ad_banner_negative"]',
+          matches:
+            '[id="com.xunlei.downloadprovider:id/hermes_ad_banner_negative"]',
           snapshotUrls: 'https://i.gkd.li/import/13597068',
         },
 
