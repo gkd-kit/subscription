@@ -25,7 +25,7 @@ export default defineAppConfig({
       rules: [
         {
           action: 'back',
-          matches: '[id="com.luna.music:id/design_bottom_sheet"]', 
+          matches: '[id="com.luna.music:id/design_bottom_sheet"]',
           snapshotUrls: [
             'https://i.gkd.li/import/13533795',
             'https://i.gkd.li/import/13533797',
@@ -48,7 +48,7 @@ export default defineAppConfig({
         {
           key: 0,
           name: '等待30s点击【跳过】',
-          actionDelay: 30000, 
+          actionDelay: 30000,
           matches: 'WebView > WebView > View TextView[text="| 跳过"]',
           snapshotUrls: [
             'https://i.gkd.li/import/13611006',
