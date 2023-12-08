@@ -5,9 +5,12 @@ export default defineAppConfig({
   name: 'BT磁力下载器',
   groups: [
     {
-      name: '[ChangeMe]规则名称-2023-12-04 17:40:51',
+      name: '开屏广告',
       key: 0,
-      desc: '[ChangeMe]本规则由GKD网页端审查工具生成',
+      quickFind: true,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      matchTime: 10000,
       rules: [
         {
           matches: ['[id="com.ncili.jie:id/skip_view2"]'],
