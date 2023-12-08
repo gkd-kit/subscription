@@ -1,8 +1,8 @@
 import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
-  id: 'com.mymoney',
-  name: '随手记',
+  id: 'cn.dxy.idxyer',
+  name: '丁香园',
   groups: [
     {
       key: 0,
@@ -11,11 +11,8 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: '[text*="跳过"][text.length<=10]',
-      snapshotUrls: [
-        'https://i.gkd.li/import/12709192',
-        'https://i.gkd.li/import/13583695',
-      ],
+      rules: '[id="cn.dxy.idxyer:id/start_up_ad_skip_image"]',
+      snapshotUrls: 'https://i.gkd.li/import/13561587',
     },
   ],
 });

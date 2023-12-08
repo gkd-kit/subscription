@@ -164,5 +164,24 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      enable: false,
+      key: 15,
+      name: '开启悬浮窗权限',
+      desc: '点击“否”',
+      activityIds:
+        'com.taobao.android.detail2.core.framework.floatwindow.permission.PermissionActivity',
+      quickFind: true,
+      actionMaximum: 1,
+      resetMatch: 'activity',
+      matchTime: 10000,
+      rules: {
+        matches: [
+          '[id="android:id/message"][text*="悬浮窗权限"]',
+          '[id="android:id/button2"][text="否"]',
+        ],
+      },
+      snapshotUrls: 'https://i.gkd.li/import/13588165',
+    },
   ],
 });
