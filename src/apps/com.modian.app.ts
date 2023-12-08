@@ -21,7 +21,8 @@ export default defineAppConfig({
       activityIds: 'com.modian.app.ui.activity.MainActivity',
       rules: [
         {
-          matches: '[id="com.modian.app:id/banner_view"] + [id="com.modian.app:id/iv_close"]',
+          matches:
+            '[id="com.modian.app:id/banner_view"] + [id="com.modian.app:id/iv_close"]',
           snapshotUrls: 'https://i.gkd.li/import/13610188',
         },
       ],
