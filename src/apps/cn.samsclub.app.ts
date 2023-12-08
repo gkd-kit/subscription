@@ -10,7 +10,8 @@ export default defineAppConfig({
       activityIds: 'cn.samsclub.app.ui.MainActivity',
       rules: [
         {
-          matches: '[id="cn.samsclub.app:id/advertising_container"] > ImageView[clickable=true]',
+          matches:
+            '[id="cn.samsclub.app:id/advertising_container"] > ImageView[clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13609106',
         },
       ],
