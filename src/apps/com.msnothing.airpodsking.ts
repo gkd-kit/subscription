@@ -9,14 +9,11 @@ export default defineAppConfig({
       name: '开屏广告',
       activityIds: 'com.msnothing.ad.splash.HomeSplashActivity',
       matchLauncher: true,
-      rules: [
-        '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
-        '[text="跳过"]'
-      ],
+      rules: ['[id="com.byted.pangle:id/tt_splash_skip_btn"]', '[text="跳过"]'],
       snapshotUrls: [
         'https://i.gkd.li/import/12908449',
-        'https://i.gkd.li/import/13607847'
+        'https://i.gkd.li/import/13607847',
       ],
-    }
+    },
   ],
 });
