@@ -5,12 +5,13 @@ export default defineAppConfig({
   name: '小飞机网盘',
   groups: [
     {
-      name: '[ChangeMe]规则名称-2023-12-05 10:30:09',
+      name: '开屏广告',
       key: 0,
-      desc: '[ChangeMe]本规则由GKD网页端审查工具生成',
+      actionMaximum: 1,
+      resetMatch: 'app',
+      matchTime: 10000,
       rules: [
         {
-          activityIds: ['com.xiaofeiji.app.disk.MainActivity'],
           matches: ['[desc$="跳过"]'],
           snapshotUrls: ['https://i.gkd.li/import/13554076'],
           exampleUrls: [
