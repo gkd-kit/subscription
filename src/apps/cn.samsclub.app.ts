@@ -7,11 +7,14 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: 'cn.samsclub.app.ui.MainActivity',
+      actionMaximum: 1,
+      quickFind: true,
+      matchTime: 10000,
+      resetMatch: 'app',
       rules: [
         {
           matches:
-            '[id="cn.samsclub.app:id/advertising_container"] > ImageView[clickable=true]',
+            '@ImageView[clickable=true] <2 [id="cn.samsclub.app:id/advertising_container"]',
           snapshotUrls: 'https://i.gkd.li/import/13609106',
         },
       ],
