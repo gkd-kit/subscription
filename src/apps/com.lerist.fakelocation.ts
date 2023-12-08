@@ -7,10 +7,13 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: 'com.stub.stub01.StartActivity',
+      quickFind: true,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      matchTime: 10000,
       rules: [
         {
-          matches: '[text^="跳过"]',
+          matches: '[text^="跳过"][text.length<=10]',
           snapshotUrls: 'https://i.gkd.li/import/13608967',
         },
       ],
