@@ -7,7 +7,10 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: 'com.modian.app.ui.activity.SplashActivity',
+      quickFind: true,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      matchTime: 10000,
       rules: [
         {
           matches: '[id="com.modian.app:id/tv_skip"][text^="跳过"]',
