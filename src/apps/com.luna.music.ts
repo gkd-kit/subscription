@@ -25,7 +25,8 @@ export default defineAppConfig({
       rules: [
         {
           action: 'back',
-          matches: '[id="com.luna.music:id/design_bottom_sheet"] [id="com.luna.music:id/bullet_container"]',
+          matches:
+            '[id="com.luna.music:id/design_bottom_sheet"] [id="com.luna.music:id/bullet_container"]',
           snapshotUrls: [
             'https://i.gkd.li/import/13533795',
             'https://i.gkd.li/import/13533797',
