@@ -20,20 +20,13 @@ export default defineAppConfig({
         {
           key: 1,
           name: '开屏广告-2',
-          matches: '@FrameLayout > [text$="跳过"][text.length<=10]',
+          matches: '[text*="跳过"][text.length<=10]',
           quickFind: true,
           snapshotUrls: [
             'https://i.gkd.li/import/12506014',
             'https://i.gkd.li/import/12506041',
+            'https://i.gkd.li/import/13539576',
           ],
-        },
-        {
-          key: 2,
-          name: '开屏广告-3',
-          activityIds: ['com.xiachufang.startpage.ui.StartPageActivity'],
-          matches: '[name="android.widget.TextView" && text="跳过"]',
-          quickFind: true,
-          snapshotUrls: 'https://i.gkd.li/import/13539576',
         },
       ],
     },
