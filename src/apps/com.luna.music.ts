@@ -25,12 +25,13 @@ export default defineAppConfig({
       rules: [
         {
           action: 'back',
-          matches: '[id="com.luna.music:id/design_bottom_sheet"]',
+          matches: '[id="com.luna.music:id/design_bottom_sheet"] [id="com.luna.music:id/bullet_container"]',
           snapshotUrls: [
             'https://i.gkd.li/import/13533795',
             'https://i.gkd.li/import/13533797',
-            'https://i.gkd.li/import/13613296', // 旧规则matches: '[id="com.luna.music:id/bullet_container"]',在此误触
-            'https://i.gkd.li/import/13613498', // 旧规则matches: '[id="com.luna.music:id/bullet_container"]',在此误触
+            'https://i.gkd.li/import/13613296', // matches中添加[id="com.luna.music:id/design_bottom_sheet"], 避免在此误触
+            'https://i.gkd.li/import/13613498', // matches中添加[id="com.luna.music:id/design_bottom_sheet"], 避免在此误触
+            'https://i.gkd.li/import/13613850', // 单独matches: '[id="com.luna.music:id/design_bottom_sheet"]', 会误触
           ],
         },
       ],
