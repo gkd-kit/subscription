@@ -6,12 +6,14 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '小贝乐园开屏广告',
-      desc: '[ChangeMe]本规则由GKD网页端审查工具生成',
+      name: '开屏广告',
+      quickFind: true,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      matchTime: 10000,
       rules: [
         {
-          activityIds: 'xin.banghua.beiyuan0.chat.ADActivity',
-          matches: 'TextView[text*="跳过"]',
+          matches: '[text*="跳过"][text.length<=10]',
           exampleUrls:
             'https://m.gkd.li/58279234/eaa5ddd9-734a-40fe-9295-f89e1984ac8c',
           snapshotUrls: 'https://i.gkd.li/import/13596389',
