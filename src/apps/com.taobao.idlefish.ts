@@ -25,12 +25,12 @@ export default defineAppConfig({
       snapshotUrls: 'https://i.gkd.li/import/13538351',
     },
     {
-        key: 2,
-        name: '请求开启手机信息权限弹窗',
-        activityIds:
-          'com.taobao.idlefish.maincontainer.activity.MainActivity',
-        rules: '@Button[text="取消"] <<n FrameLayout >n TextView[text*="手机信息"]',
-        snapshotUrls: 'https://i.gkd.li/import/13620277',
-      },
+      key: 2,
+      name: '请求开启手机信息权限弹窗',
+      activityIds: 'com.taobao.idlefish.maincontainer.activity.MainActivity',
+      rules:
+        '@Button[text="取消"] <<n FrameLayout >n TextView[text*="手机信息"]',
+      snapshotUrls: 'https://i.gkd.li/import/13620277',
+    },
   ],
 });
