@@ -178,7 +178,7 @@ export default defineAppConfig({
         {
           activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
           matches:
-            "@ImageView[desc='返回'] -3 ViewPager >19 TextView[text='正在直播']",
+            '@ImageView[desc=\'返回\'] -3 ViewPager >19 TextView[text=\'正在直播\']',
           snapshotUrls: 'https://i.gkd.li/import/13446291',
         },
       ],
