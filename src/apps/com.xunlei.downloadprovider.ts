@@ -18,7 +18,6 @@ export default defineAppConfig({
     {
       key: 1,
       name: '视频详情页广告',
-      quickFind: true,
       rules: [
         {
           key: 0,
