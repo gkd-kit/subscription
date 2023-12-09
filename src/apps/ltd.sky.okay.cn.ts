@@ -5,7 +5,7 @@ export default defineAppConfig({
   name: '漫天星',
   groups: [
     {
-      key: 0,
+      key: 1,
       name: '弹窗广告',
       rules: [
         {
