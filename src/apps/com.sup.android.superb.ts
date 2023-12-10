@@ -11,7 +11,8 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       activityIds: 'com.sup.android.base.MainActivity',
-      rules: 'FrameLayout > RelativeLayout > @ImageView[clickable=true] + ImageView',
+      rules:
+        'FrameLayout > RelativeLayout > @ImageView[clickable=true] + ImageView',
       snapshotUrls: 'https://i.gkd.li/import/13624220',
     },
   ],
