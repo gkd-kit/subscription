@@ -49,7 +49,8 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       activityIds: 'com.jd.jrapp.bm.mainbox.main.MainActivity',
-      rules: '@ImageButton[id="com.jd.jrapp:id/ib_close"] + RelativeLayout [text^="发现新版本"]',
+      rules:
+        '@ImageButton[id="com.jd.jrapp:id/ib_close"] + RelativeLayout [text^="发现新版本"]',
       snapshotUrls: 'https://i.gkd.li/import/13628364',
     },
   ],
