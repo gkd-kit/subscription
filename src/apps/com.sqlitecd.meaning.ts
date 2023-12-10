@@ -1,4 +1,4 @@
-import { defineAppConfig } from "../types";
+import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
   id: 'com.sqlitecd.meaning',
