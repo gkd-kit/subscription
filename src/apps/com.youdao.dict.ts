@@ -3,6 +3,7 @@ import { defineAppConfig } from '../types';
 export default defineAppConfig({
   id: 'com.youdao.dict',
   name: '网易有道词典',
+  deprecatedKeys: [3],
   groups: [
     {
       key: 0,
@@ -33,25 +34,31 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      name: '主页弹窗',
-      activityIds: [
-        'com.youdao.dict.activity.MainActivity',
-        'com.youdao.dict.activity.DictSplashActivity',
+      name: '弹窗广告',
+      rules: [
+        {
+          key: 0,
+          name: '首页-弹窗广告',
+          activityIds: [
+            'com.youdao.dict.activity.MainActivity',
+            'com.youdao.dict.activity.DictSplashActivity',
+          ],
+          quickFind: true,
+          matches: '@ImageView[id="com.youdao.dict:id/iv_close_bt"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12893419',
+            'https://i.gkd.li/import/13263801',
+          ],
+        },
+        {
+          key: 1,
+          name: '学习页面-弹窗广告',
+          activityIds: 'com.youdao.dict.edu.main.MainPopDialog',
+          quickFind: true,
+          matches: '@ImageView[id="com.youdao.dict:id/iv_close"]',
+          snapshotUrls: 'https://i.gkd.li/import/12893450',
+        },
       ],
-      rules: '@ImageView[id="com.youdao.dict:id/iv_close_bt"]',
-      quickFind: true,
-      snapshotUrls: [
-        'https://i.gkd.li/import/12893419',
-        'https://i.gkd.li/import/13263801',
-      ],
-    },
-    {
-      key: 3,
-      name: '学习-弹窗',
-      activityIds: 'com.youdao.dict.edu.main.MainPopDialog',
-      rules: '@ImageView[id="com.youdao.dict:id/iv_close"]',
-      quickFind: true,
-      snapshotUrls: 'https://i.gkd.li/import/12893450',
     },
     {
       key: 4,
