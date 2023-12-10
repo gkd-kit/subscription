@@ -7,6 +7,7 @@
 - [快照-0](https://i.gkd.li/import/12867875)
 - [快照-1](https://i.gkd.li/import/12867970)
 - [快照-2](https://i.gkd.li/import/12881929)
+- [快照-3](https://i.gkd.li/import/13561976)
 
 ## 首页-推送通知
 
@@ -16,7 +17,7 @@
 
 ## 弹窗广告
 
-会出现在搜题页面与我的页面
+默认禁用 - 会出现在搜题页面与我的页面
 
 - [快照-0](https://i.gkd.li/import/12867751)
 - [快照-1](https://i.gkd.li/import/12894813)
@@ -28,9 +29,13 @@
 
 ## 资料库-弹窗广告
 
+默认禁用
+
 - [快照-0](https://i.gkd.li/import/12893408)
 
 ## 教材-底部广告
+
+默认禁用
 
 - [快照-0](https://i.gkd.li/import/13063381)
 - [快照-1](https://i.gkd.li/import/13346621)
@@ -48,5 +53,7 @@
 - [快照-0](https://i.gkd.li/import/13440939)
 
 ## 请求好评弹窗
+
+默认禁用
 
 - [快照-0](https://i.gkd.li/import/13476308)
