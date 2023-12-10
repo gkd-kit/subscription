@@ -101,12 +101,14 @@ export default defineAppConfig({
       rules: [
         {
           name: '腾讯广告SDK',
-          matches: 'FrameLayout > FrameLayout[childCount=1] > ImageView[width<80][height<80]',
+          matches:
+            'FrameLayout > FrameLayout[childCount=1] > ImageView[width<80][height<80]',
           snapshotUrls: 'https://i.gkd.li/import/13626900',
         },
         {
           name: '快手广告磁力智投SDK',
-          matches: 'ViewGroup[childCount=1] > @ViewGroup[clickable=true][childCount=1] > ImageView',
+          matches:
+            'ViewGroup[childCount=1] > @ViewGroup[clickable=true][childCount=1] > ImageView',
           snapshotUrls: 'https://i.gkd.li/import/13627105',
         },
         {
