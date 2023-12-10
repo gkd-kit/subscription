@@ -26,5 +26,19 @@ export default defineAppConfig({
         '[id="com.lolaage.tbulu.tools:id/tvFullUpgrade"] + [id="com.lolaage.tbulu.tools:id/tvCancel"]',
       snapshotUrls: 'https://i.gkd.li/import/12882550',
     },
+    {
+      key: 2,
+      name: '弹窗广告',
+      rules: [
+        {
+          key: 0,
+          name: '腾讯广告',
+          activityIds: 'com.lolaage.tbulu.tools.ui.activity.WelcomeActivity',
+          matches:
+            'ImageView -2 FrameLayout > FrameLayout > FrameLayout[childCount=1] > ImageView[childCount=0]',
+          snapshotUrls: 'https://i.gkd.li/import/13627861',
+        },
+      ],
+    },
   ],
 });
