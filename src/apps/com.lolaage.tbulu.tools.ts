@@ -20,7 +20,8 @@ export default defineAppConfig({
     {
       key: 1,
       name: '更新弹窗',
-      activityIds: 'com.lolaage.tbulu.tools.upgrade',
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules:
         '[id="com.lolaage.tbulu.tools:id/tvFullUpgrade"] + [id="com.lolaage.tbulu.tools:id/tvCancel"]',
       snapshotUrls: 'https://i.gkd.li/import/12882550',
