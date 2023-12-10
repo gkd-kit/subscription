@@ -52,7 +52,8 @@ export default defineAppConfig({
         },
         {
           activityIds: 'com.mi.health.home.HomeActivity',
-          matches: '[text="立即更新"] + [id="com.mi.health:id/tv_negative"][text="取消"]',
+          matches:
+            '[text="立即更新"] + [id="com.mi.health:id/tv_negative"][text="取消"]',
           snapshotUrls: 'https://i.gkd.li/import/13626328',
         },
       ],
