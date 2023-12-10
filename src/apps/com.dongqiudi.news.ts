@@ -106,7 +106,8 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       activityIds: 'com.dongqiudi.news.MainActivity',
-      rules: 'FrameLayout > FrameLayout[childCount=1] > ImageView[width<80][height<80]',
+      rules:
+        'FrameLayout > FrameLayout[childCount=1] > ImageView[width<80][height<80]',
       snapshotUrls: 'https://i.gkd.li/import/13626900',
     },
   ],
