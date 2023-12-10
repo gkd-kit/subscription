@@ -16,5 +16,12 @@ export default defineAppConfig({
         'https://i.gkd.li/import/12894163',
       ],
     },
+    {
+      key: 1,
+      name: '首页顶部横幅广告',
+      activityIds: 'chuxin.shimo.shimowendang.MainActivity',
+      rules: '[desc="banner-desktop-announcement-close"]',
+      snapshotUrls: 'https://i.gkd.li/import/13627960',
+    },
   ],
 });
