@@ -43,5 +43,19 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 3,
+      name: '悬浮广告',
+      rules: [
+        {
+          key: 0,
+          activityIds: 'com.chinamobile.mcloud.client.ui.MenuActivity',
+          quickFind: true,
+          matches:
+            '[id="com.chinamobile.mcloud:id/iv_logo"] + [id="com.chinamobile.mcloud:id/iv_close"]',
+          snapshotUrls: 'https://i.gkd.li/import/13627834',
+        },
+      ],
+    },
   ],
 });
