@@ -841,3 +841,4 @@
 | 作业帮                 | [com.baidu.homework](/docs/com.baidu.homework.md)                                                 | 1      |
 | 作业帮家长版           | [com.zuoyebang.knowledge](/docs/com.zuoyebang.knowledge.md)                                       | 2      |
 | アニメ新番組           | [online.bangumi](/docs/online.bangumi.md)                                                         | 1      |
+| 财联社                 | [com.lanjinger.choiassociatedpress](/docs/com.lanjinger.choiassociatedpress.md)                   | 1      |
