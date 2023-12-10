@@ -21,6 +21,7 @@ export default defineAppConfig({
           matches: '[text*="跳过"][text.length<=10]',
           snapshotUrls: 'https://i.gkd.li/import/13627060',
         },
+      ],
     },
     {
       key: 1,
