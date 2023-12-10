@@ -79,5 +79,15 @@ export default defineAppConfig({
       rules: '[id="com.youdao.dict:id/btn_never"][text*="不再提醒"]',
       snapshotUrls: 'https://i.gkd.li/import/13540941',
     },
+    {
+      key: 6,
+      name: '更新弹窗',
+      quickFind: true,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules:
+        '[id="com.youdao.dict:id/tv_version"] + [id="com.youdao.dict:id/iv_close"]',
+      snapshotUrls: 'https://i.gkd.li/import/13627912',
+    },
   ],
 });
