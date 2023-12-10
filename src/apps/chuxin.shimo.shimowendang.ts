@@ -7,16 +7,13 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: [
-        'chuxin.shimo.shimowendang.launchad.mediatom.MediatomActivity',
-        'chuxin.shimo.shimowendang.MainActivity',
-      ],
-      matchLauncher: true,
-      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
       snapshotUrls: [
-        'https://i.gkd.li/import/12894158', // chuxin.shimo.shimowendang.launchad.mediatom.MediatomActivity
-        'https://i.gkd.li/import/12894163', // chuxin.shimo.shimowendang.MainActivity
+        'https://i.gkd.li/import/12894158',
+        'https://i.gkd.li/import/12894163',
       ],
     },
   ],
