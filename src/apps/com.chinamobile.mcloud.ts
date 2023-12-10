@@ -57,5 +57,14 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 4,
+      name: '请求开启自动备份弹窗',
+      activityIds: 'com.chinamobile.mcloud.client.ui.MenuActivity',
+      quickFind: true,
+      rules:
+        '[text="开启自动备份"] +n [id="com.chinamobile.mcloud:id/tv_skip"]',
+      snapshotUrls: 'https://i.gkd.li/import/13627830',
+    },
   ],
 });
