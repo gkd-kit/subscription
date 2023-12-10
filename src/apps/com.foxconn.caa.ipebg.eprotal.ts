@@ -2,7 +2,7 @@ import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
   id: 'com.foxconn.caa.ipebg.eprotal',
-  name: '中国人保',
+  name: 'i好办',
   groups: [
     {
       key: 0,
