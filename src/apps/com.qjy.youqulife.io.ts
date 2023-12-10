@@ -21,8 +21,14 @@ export default defineAppConfig({
           key: 2,
           name: '腾讯广告',
           activityIds: 'com.qjy.youqulife.io.MainActivity',
-          matches: 'FrameLayout[index=1]',
-          snapshotUrls: 'https://i.gkd.li/import/13628208',
+          matches: [
+            '@FrameLayout[index=1][childCount=1]',
+            '@FrameLayout[index=2][childCount=1]',
+          ],
+          snapshotUrls: [
+            'https://i.gkd.li/import/13628208', //index=1
+            'https://i.gkd.li/import/13628253', //index=2
+          ],
         },
       ],
     },
