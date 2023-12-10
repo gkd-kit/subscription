@@ -99,5 +99,15 @@ export default defineAppConfig({
       rules: '[id="com.dongqiudi.news:id/iv_close"]',
       snapshotUrls: 'https://i.gkd.li/import/13260467',
     },
+    {
+      key: 8,
+      name: '右下角数据积分榜弹窗广告',
+      desc: '来自腾讯广告SDK',
+      actionMaximum: 1,
+      resetMatch: 'app',
+      activityIds: 'com.dongqiudi.news.MainActivity',
+      rules: 'FrameLayout > FrameLayout[childCount=1] > ImageView[width<80][height<80]',
+      snapshotUrls: 'https://i.gkd.li/import/13626900',
+    },
   ],
 });
