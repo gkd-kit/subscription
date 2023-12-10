@@ -77,6 +77,11 @@ export default defineAppConfig({
             'FrameLayout[childCount=2] > @ImageView - FrameLayout > RelativeLayout > WebView',
           snapshotUrls: 'https://i.gkd.li/import/13056107',
         },
+        {
+          key: 5,
+          matches: '[id="air.tv.douyu.android:id/br3"]',
+          snapshotUrls: 'https://i.gkd.li/import/13628121',
+        },
       ],
     },
   ],
