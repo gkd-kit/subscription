@@ -48,7 +48,7 @@ export default defineAppConfig({
           ],
           matches: '[text="直接关闭"]',
           snapshotUrls: [
-            'https://i.gkd.li/import/12829967'
+            'https://i.gkd.li/import/12829967',
             'https://i.gkd.li/import/13627047', //activityIds: 'com.netease.cloudmusic.music.biz.search.activity.SearchActivity',
           ],
         },
