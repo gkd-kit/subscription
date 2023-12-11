@@ -225,5 +225,14 @@ export default defineAppConfig({
         '[text*="一键转发"] < LinearLayout +2 [id="com.sina.weibo:id/tv_close"]',
       snapshotUrls: 'https://i.gkd.li/import/13482960',
     },
+    {
+      key: 17,
+      name: '评论区-信息流广告',
+      desc: '点击【x】',
+      activityIds: 'com.sina.weibo.feed.DetailWeiboActivity',
+      quickFind: true,
+      rules: '[text="广告"] + [id="com.sina.weibo:id/iv_close_icon"]',
+      snapshotUrls: 'https://i.gkd.li/import/13632175',
+    },
   ],
 });
