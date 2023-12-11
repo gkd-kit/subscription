@@ -5,7 +5,7 @@ export default defineAppConfig({
   name: '财联社',
   groups: [
     {
-      key: -1,
+      key: 0,
       name: '开屏广告',
       activityIds: 'com.lanjinger.choiassociatedpress',
       rules: '[id="com.lanjinger.choiassociatedpress:id/iv_skip"]',
