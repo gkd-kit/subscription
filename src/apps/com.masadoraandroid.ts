@@ -13,8 +13,8 @@ export default defineAppConfig({
       matchTime: 10000,
       rules: [
         {
-          matches: '[id="com.masadoraandroid:id/skip"]',
-          snapshotUrls: 'https://i.gkd.li/import/13578688',
+          matches: '[id="com.masadoraandroid:id/skip"][text="跳过 5"]',
+          snapshotUrls: 'https://i.gkd.li/import/13638359',
         },
       ],
     },
