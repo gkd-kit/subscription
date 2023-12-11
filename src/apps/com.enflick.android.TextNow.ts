@@ -14,7 +14,8 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          matches: '[id="com.enflick.android.TextNow:id/btn_dismiss"][text="Not Now"]',
+          matches:
+            '[id="com.enflick.android.TextNow:id/btn_dismiss"][text="Not Now"]',
           snapshotUrls: 'https://i.gkd.li/import/13630460',
         },
         {
