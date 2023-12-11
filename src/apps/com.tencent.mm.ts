@@ -461,17 +461,15 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          activityIds: 'com.tencent.mm.plugin.teenmode.ui.AuthorizationRequestUI',
+          activityIds:
+            'com.tencent.mm.plugin.teenmode.ui.AuthorizationRequestUI',
           matches: '@LinearLayout[childCount=2] > [text="验证密码"]',
           snapshotUrls: 'https://i.gkd.li/import/13588338',
         },
         {
           key: 1,
           activityIds: 'com.tencent.mm.plugin.webview.ui.tools.MMWebViewUI',
-          matches: [
-            'View[text="申请今天临时访问"]',
-            'View[desc="验证密码"]',
-          ],
+          matches: ['View[text="申请今天临时访问"]', 'View[desc="验证密码"]'],
           snapshotUrls: 'https://i.gkd.li/import/13631987',
         },
       ],
