@@ -233,6 +233,16 @@ export default defineAppConfig({
       quickFind: true,
       rules: '[text="广告"] + [id="com.sina.weibo:id/iv_close_icon"]',
       snapshotUrls: 'https://i.gkd.li/import/13632175',
+    {
+      key: 18,
+      name: 'APP评分弹窗',
+      desc: '点击【x】',
+      quickFind: true,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      activityIds: 'com.sina.weibo.MainTabActivity',
+      rules: '@[text="不了，谢谢"] +4 [text="喜欢，给好评"]',
+      snapshotUrls: 'https://i.gkd.li/import/13620220',
     },
   ],
 });
