@@ -13,7 +13,8 @@ export default defineAppConfig({
         {
           key: 0,
           name: '字节SDK',
-          activityIds: 'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
+          activityIds:
+            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
           matches: 'View[childCount=7] > View[index=1]',
           snapshotUrls: 'https://i.gkd.li/import/13632639',
         },
