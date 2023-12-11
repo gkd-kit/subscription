@@ -114,7 +114,7 @@ export default defineAppConfig({
       name: '天天签到-获得新勋章提示',
       desc: '点击左上角返回',
       actionMaximum: 1,
-      resetMach: 'app',
+      resetMatch: 'app',
       quickFind: true,
       rules: [
         {
