@@ -16,7 +16,7 @@ export default defineAppConfig({
           preKeys: [],
           matches: ['[text *="略过"]'],
           excludeMatches: [],
-          snapshotUrls: ['https://i.gkd.li/import/13233686'],
+          snapshotUrls: ['https://i.gkd.li/import/13255641'],
         },
         {
           key: 0,
