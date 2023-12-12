@@ -36,7 +36,8 @@ export default defineAppConfig({
         },
         {
           quickFind: true,
-          matches: '[text="花呗服务未升级，将影响后续使用"] <<n FrameLayout @FrameLayout[clickable=true] [text="暂不升级，继续付款"]',
+          matches:
+            '[text="花呗服务未升级，将影响后续使用"] <<n FrameLayout @FrameLayout[clickable=true] [text="暂不升级，继续付款"]',
           snapshotUrls: 'https://i.gkd.li/import/13628020',
         },
       ],
