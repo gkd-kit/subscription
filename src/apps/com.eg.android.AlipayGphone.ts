@@ -8,11 +8,14 @@ export default defineAppConfig({
       enable: false,
       key: 0,
       name: '关闭花呗升级弹窗',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       activityIds: [
         'com.alipay.mobile.nebulax.integration.mpaas.activity.NebulaActivity$Main',
         'com.alipay.android.msp.ui.views', //views.MspContainerActivity & views.MspUniRenderActivity
+        'com.alipay.android.msp.ui.views.MspContainerActivity',
       ],
-      matchLauncher: true,
       rules: [
         {
           key: 0,
@@ -20,7 +23,7 @@ export default defineAppConfig({
           snapshotUrls: 'https://i.gkd.li/import/12737055', //com.alipay.mobile.nebulax.integration.mpaas.activity.NebulaActivity$Main
         },
         {
-          key: 1,
+          quickFind: true,
           matches: [
             '[text="根据相关法律法规要求，请尽快完成花呗升级"]',
             'FrameLayout > FrameLayout  > FrameLayout > [text="关闭"]',
@@ -30,6 +33,11 @@ export default defineAppConfig({
             'https://i.gkd.li/import/12826077', //com.alipay.android.msp.ui.views.MspUniRenderActivity
             'https://i.gkd.li/import/12915864', //matchLauncher
           ],
+        },
+        {
+          quickFind: true,
+          matches: '[text="花呗服务未升级，将影响后续使用"] <<n FrameLayout @FrameLayout[clickable=true] [text="暂不升级，继续付款"]',
+          snapshotUrls: 'https://i.gkd.li/import/13628020',
         },
       ],
     },
