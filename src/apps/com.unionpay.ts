@@ -118,7 +118,8 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.unionpay.cordova.UPActivityCordovaWeb',
-          matches: 'WebView[text="天天签到"] TextView[text="炫耀一下"] + TextView[clickable=true]',
+          matches:
+            'WebView[text="天天签到"] TextView[text="炫耀一下"] + TextView[clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13440341',
         },
       ],
