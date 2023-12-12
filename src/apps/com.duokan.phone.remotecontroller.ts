@@ -19,8 +19,10 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       quickFind: true,
-      activityIds: 'com.xiaomi.mitv.phone.remotecontroller.HoriWidgetMainActivityV2',
-      rules: '[id="com.duokan.phone.remotecontroller:id/ll_permission"] [text="取消"]',
+      activityIds:
+        'com.xiaomi.mitv.phone.remotecontroller.HoriWidgetMainActivityV2',
+      rules:
+        '[id="com.duokan.phone.remotecontroller:id/ll_permission"] [text="取消"]',
       snapshotUrls: 'https://i.gkd.li/import/13642080',
     },
   ],
