@@ -92,6 +92,7 @@ type CommonProps = {
    *
    * 规则准备匹配/或被唤醒时, 等待一段时间, 使此规则参与查询屏幕节点
    *
+   * 由resetMatch确定是activity还是app变化时作用。resetMatch:'app'时，进入app即开始作用，而非进入指定activity时
    */
   matchDelay?: number;
 
@@ -102,6 +103,7 @@ type CommonProps = {
    *
    * 例如某些应用的 开屏广告 的 activityId 容易误触/太广泛, 而开屏广告几乎只在应用切出来时出现, 设置一个有限匹配时间能避免后续的误触
    *
+   * 由resetMatch确定是activity还是app变化时作用。resetMatch:'app'时，进入app即开始作用，而非进入指定activity时
    */
   matchTime?: number;
 
