@@ -34,7 +34,8 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       activityIds: ['com.ss.android.ugc.aweme.main.MainActivity'],
-      rules: '[text="朋友推荐"] +2 [id="com.ss.android.ugc.aweme.lite:id/close"][clickable=true]',
+      rules:
+        '[text="朋友推荐"] +2 [id="com.ss.android.ugc.aweme.lite:id/close"][clickable=true]',
       snapshotUrls: 'https://i.gkd.li/import/13650523',
     },
   ],
