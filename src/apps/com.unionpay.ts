@@ -115,11 +115,10 @@ export default defineAppConfig({
       desc: '点击左上角返回',
       actionMaximum: 1,
       resetMatch: 'app',
-      quickFind: true,
       rules: [
         {
           activityIds: 'com.unionpay.cordova.UPActivityCordovaWeb',
-          matches: '[id="com.unionpay:id/iv_title_left_image"][desc="返回"]', //实测原规则点击中间下方【x】无效
+          matches: 'WebView[text="天天签到"] TextView[text="炫耀一下"] + TextView[clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13440341',
         },
       ],
