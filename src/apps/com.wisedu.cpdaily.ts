@@ -12,7 +12,8 @@ export default defineAppConfig({
       resetMatch: 'app',
       quickFind: true,
       activityIds: 'com.wisorg.wisedu.home.ui.HomeActivity',
-      rules: '[id="com.wisedu.cpdaily:id/btn_update"] + [id="com.wisedu.cpdaily:id/tv_ignore"]',
+      rules:
+        '[id="com.wisedu.cpdaily:id/btn_update"] + [id="com.wisedu.cpdaily:id/tv_ignore"]',
       snapshotUrls: 'https://i.gkd.li/import/13643565',
     },
   ],
