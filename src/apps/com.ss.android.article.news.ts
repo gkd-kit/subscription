@@ -77,11 +77,11 @@ export default defineAppConfig({
       name: '竖屏视频广告',
       desc: '检测到广告时,点击右上角[更多]图标按钮,出现菜单,点击不感兴趣',
       activityIds: 'com.ss.android.ugc.detail.activity.TikTokActivity',
-      actionCd: 35000,//APP更新后点击不感兴趣不会跳过当前视频了，所以需要冷却一下等下一次重新跳过广告视频
       rules: [
         {
           key: -1,
           preKeys: [0, 1, 2, 3],
+          actionCd: 35000, //APP更新后点击不感兴趣不会跳过当前视频了，所以需要冷却一下等下一次重新跳过广告视频
           name: '点击不感兴趣',
           matches:
             '@LinearLayout[clickable=true] > RelativeLayout + TextView[text="不感兴趣"]',
