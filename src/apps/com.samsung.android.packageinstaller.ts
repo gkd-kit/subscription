@@ -20,6 +20,11 @@ export default defineAppConfig({
           matches: ['[text^="是否打开反恶意软件"]', '[text="取消"]'],
           snapshotUrls: ['https://i.gkd.li/import/13233686'],
         },
+        {
+          key: 2,
+          matches: ['[text^="打开应用程序保护?"]', '[text="取消"]'],
+          snapshotUrls: ['https://i.gkd.li/import/13650528'],
+        }
       ],
     },
   ],
