@@ -24,7 +24,7 @@ export default defineAppConfig({
           key: 2,
           matches: ['[text^="打开应用程序保护?"]', '[text="取消"]'],
           snapshotUrls: ['https://i.gkd.li/import/13650528'],
-        }
+        },
       ],
     },
   ],
