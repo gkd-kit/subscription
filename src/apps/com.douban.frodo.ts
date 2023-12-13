@@ -260,6 +260,7 @@ export default defineAppConfig({
           snapshotUrls: [
             'https://i.gkd.li/import/13228832',
             'https://i.gkd.li/import/13659160', // activityIds: 'com.douban.frodo.activity.SplashActivity',
+          ],
         },
       ],
     },
