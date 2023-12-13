@@ -22,11 +22,13 @@ export default defineAppConfig({
       rules: [
         {
           name: '视频下方卡片式广告',
-          matches: 'ViewGroup[childCount=2] > ImageView[clickable=true] + ImageView[clickable=true]',
+          matches:
+            'ViewGroup[childCount=2] > ImageView[clickable=true] + ImageView[clickable=true]',
         },
         {
           name: '云收藏弹窗广告',
-          matches: 'ViewGroup > @ImageView[clickable=true] -n TextView[text="云收藏"]',
+          matches:
+            'ViewGroup > @ImageView[clickable=true] -n TextView[text="云收藏"]',
         },
       ],
       snapshotUrls: 'https://i.gkd.li/import/13630755',
