@@ -122,12 +122,13 @@ export default defineAppConfig({
     {
       key: 5,
       name: '广告弹窗',
+      quickFind: true,
       rules: [
         {
           key: 0,
           name: '阅读页面广告弹窗-点击反馈按钮',
           activityIds: 'com.dragon.read.reader.ui.ReaderActivity',
-          matches: '[text="反馈"][clickable=true]',
+          matches: 'FlattenUIText[text="反馈"]', // 有反馈原规则[text="反馈"][clickable=true]无法点击
           snapshotUrls: 'https://i.gkd.li/import/13520160',
         },
         {
@@ -135,7 +136,6 @@ export default defineAppConfig({
           key: 1,
           name: '阅读页面广告弹窗-点击不感兴趣',
           activityIds: 'com.dragon.read.reader.ui.ReaderActivity',
-          quickFind: true,
           matches: '[id="com.dragon.read:id/ad_feedback_not_interest"]',
           snapshotUrls: 'https://i.gkd.li/import/13520219',
         },
