@@ -130,7 +130,8 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       activityIds: 'com.unionpay.activity.UPActivityMain',
-      rules: '[id="com.unionpay:id/container"] + [id="com.unionpay:id/image"][clickable=true]',
+      rules:
+        '[id="com.unionpay:id/container"] + [id="com.unionpay:id/image"][clickable=true]',
       snapshotUrls: 'https://i.gkd.li/import/13440341',
     },
   ],
