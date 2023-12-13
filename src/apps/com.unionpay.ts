@@ -124,5 +124,14 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 14,
+      name: '我的页面-广告弹窗',
+      matchTime: 10000,
+      actionMaximum: 1,
+      activityIds: 'com.unionpay.activity.UPActivityMain',
+      rules: '[id="com.unionpay:id/container"] + [id="com.unionpay:id/image"][clickable=true]',
+      snapshotUrls: 'https://i.gkd.li/import/13440341',
+    },
   ],
 });
