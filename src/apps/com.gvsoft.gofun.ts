@@ -11,8 +11,11 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: '[text*="跳过"][text.length<=10]',
-      snapshotUrls: 'https://i.gkd.li/import/13497753',
+      rules: '@LinearLayout > [text*="跳过"][text.length<=10]',
+      snapshotUrls: [
+        'https://i.gkd.li/import/13497753',
+        'https://i.gkd.li/import/13668997',
+      ],
     },
     {
       key: 5,
@@ -20,6 +23,7 @@ export default defineAppConfig({
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
+      action: 'clickCenter',
       resetMatch: 'app',
       activityIds: 'com.gvsoft.gofun.module.home.activity.HomeActivity',
       rules:
