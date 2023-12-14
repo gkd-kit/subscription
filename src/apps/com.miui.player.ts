@@ -66,5 +66,13 @@ export default defineAppConfig({
         '[id="com.miui.player:id/banner_image"] + [id="com.miui.player:id/close_banner"]',
       snapshotUrls: 'https://i.gkd.li/import/12700984',
     },
+    {
+      enable: false,
+      key: 12,
+      name: '免费畅听模式',
+      activityIds: 'com.tencent.qqmusiclite.activity.MainActivity',
+      rules: '[text="获得更多时间"]',
+      snapshotUrls: 'https://i.gkd.li/import/13668811',
+    },
   ],
 });
