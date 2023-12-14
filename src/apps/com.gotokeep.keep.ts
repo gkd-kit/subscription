@@ -15,7 +15,7 @@ export default defineAppConfig({
           },
           {
             matches:'[text*="跳过"]',
-            snapshotUrls: 'https://i.gkd.li/snapshot/1702552915491'},
+            snapshotUrls: 'https://i.gkd.li/import/13672587'},
       ],
     },
     {
