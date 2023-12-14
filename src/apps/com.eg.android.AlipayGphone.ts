@@ -8,7 +8,6 @@ export default defineAppConfig({
       enable: false,
       key: 0,
       name: '关闭花呗升级弹窗',
-      matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       activityIds: [
@@ -55,15 +54,25 @@ export default defineAppConfig({
     {
       key: 2,
       name: '请求通知权限提示',
+      actionMaximum: 1,
+      resetMatch: 'app',
       quickFind: true,
-      activityIds: 'com.eg.android.AlipayGphone.AlipayLogin',
       rules: [
         {
           key: 0,
           name: '首页底部提示',
+          activityIds: 'com.eg.android.AlipayGphone.AlipayLogin',
           matches:
             '@[desc="关闭"] - * >n [id="com.alipay.mobile.antui:id/tipTextView"][text^="开启通知权限"]',
           snapshotUrls: 'https://i.gkd.li/import/13194955',
+        },
+        {
+          key: 1,
+          name: '消息页弹窗提示',
+          activityIds: 'com.alipay.mobile.rome.pushservice.integration.PushOpenGuideActivity',
+          matches:
+            '[text="选择通知接收范围"] <2 RelativeLayout [text="暂时不用"]',
+          snapshotUrls: 'https://i.gkd.li/import/13669620',
         },
       ],
     },
@@ -71,6 +80,8 @@ export default defineAppConfig({
       enable: false,
       key: 3,
       name: '版本更新',
+      actionMaximum: 1,
+      resetMatch: 'app',
       quickFind: true,
       activityIds: [
         'com.alipay.mobile.alipassapp.alkb.kb.ALPMainPage63',
