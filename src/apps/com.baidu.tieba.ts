@@ -48,11 +48,13 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.baidu.tieba.pb.pb.main.PbActivity',
-          matches: '@ImageView[clickable=true] -2 LinearLayout > [text^="打开通知"]',
+          matches:
+            '@ImageView[clickable=true] -2 LinearLayout > [text^="打开通知"]',
           snapshotUrls: 'https://i.gkd.li/import/13536170',
         },
         {
-          activityIds: 'com.baidu.tieba.immessagecenter.mention.reply.ReplyMeActivity',
+          activityIds:
+            'com.baidu.tieba.immessagecenter.mention.reply.ReplyMeActivity',
           matches: 'TextView[text="开启消息推送"] +2 TextView[text="不开启"]',
           snapshotUrls: 'https://i.gkd.li/import/13675694',
         },
