@@ -68,7 +68,7 @@ export default defineAppConfig({
     },
     {
       enable: false,
-      key: 12,
+      key: 13,
       name: '免费畅听模式',
       activityIds: 'com.tencent.qqmusiclite.activity.MainActivity',
       rules: '[text="获得更多时间"]',
