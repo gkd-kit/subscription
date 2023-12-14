@@ -28,14 +28,20 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      name: '首页广告弹窗',
+      name: '弹窗广告',
       rules: [
         {
           key: 0,
-          activityIds: 'com.taobao.etao.app.home.view.NewHomeActivity',
+          activityIds: [
+            'com.taobao.etao.app.home.view.NewHomeActivity',
+            'com.taobao.etao.app.homev4.HomeV4Activity',
+          ],
           matches:
-            'LinearLayout > FrameLayout + RelativeLayout > ImageView[id!=null][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/import/12739581',
+            'LinearLayout[childCount=2] > @RelativeLayout[clickable=true][childCount=1] > ImageView[childCount=0]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12739581',
+            'https://i.gkd.li/import/13670025',
+          ],
         },
       ],
     },
