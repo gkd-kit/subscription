@@ -128,7 +128,7 @@ export default defineAppConfig({
           key: 0,
           name: '阅读页面广告弹窗-点击反馈按钮',
           activityIds: 'com.dragon.read.reader.ui.ReaderActivity',
-          matches: 'FlattenUIText[text="反馈"]', // 有反馈原规则[text="反馈"][clickable=true]无法点击
+          matches: 'FlattenUIText[text="反馈"][visibleToUser=true]', // 有反馈原规则'[text="反馈"][clickable=true]'删除[clickable=true]才能点击
           snapshotUrls: 'https://i.gkd.li/import/13520160',
         },
         {
