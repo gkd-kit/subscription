@@ -38,6 +38,12 @@ export default defineAppConfig({
             'https://i.gkd.li/import/13660652', // activityIds: 'com.luna.biz.ad.AdActivity',
           ],
         },
+        {
+          name: '右小角小悬浮窗',
+          matches:
+            '[id="com.luna.music:id/fl_pendant_container"] > [id="com.luna.music:id/view_close"]',
+          snapshotUrls: 'https://i.gkd.li/import/13674376',
+        },
       ],
     },
     {
