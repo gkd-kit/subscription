@@ -143,7 +143,8 @@ export default defineAppConfig({
           key: 2,
           name: '阅读页面广告弹窗-点击下一页',
           activityIds: 'com.dragon.read.reader.ui.ReaderActivity',
-          matches: '[id="com.dragon.read:id/readFlowNonRoundEntranceLayout"] [id="com.dragon.read:id/relativeRight"]',
+          matches:
+            '[id="com.dragon.read:id/readFlowNonRoundEntranceLayout"] [id="com.dragon.read:id/relativeRight"]',
           snapshotUrls: 'https://i.gkd.li/import/13674556',
         },
       ],
