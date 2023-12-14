@@ -26,6 +26,13 @@ export default defineAppConfig({
             'ImageView -2 FrameLayout > FrameLayout[childCount=1] > ImageView[childCount=0]',
           snapshotUrls: 'https://i.gkd.li/import/13625504',
         },
+        {
+          key: 1,
+          activityIds: 'com.qq.e.ads.ADActivity',
+          matches:
+            'FrameLayout[childCount=3] > TextView[text!=""] + @ImageView[clickable=true][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/import/13670176',
+        },
       ],
     },
   ],
