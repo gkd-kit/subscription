@@ -23,11 +23,15 @@ export default defineAppConfig({
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
-      action: 'clickCenter',
       resetMatch: 'app',
       activityIds: 'com.gvsoft.gofun.module.home.activity.HomeActivity',
-      rules:
-        '[id="com.gvsoft.gofun:id/cardView"] + [id="com.gvsoft.gofun:id/iv_close"]',
+      rules: [
+        {
+          action: 'clickCenter',
+          matches:
+            '[id="com.gvsoft.gofun:id/cardView"] + [id="com.gvsoft.gofun:id/iv_close"]',
+        },
+      ],
       snapshotUrls: 'https://i.gkd.li/import/13497777',
     },
   ],
