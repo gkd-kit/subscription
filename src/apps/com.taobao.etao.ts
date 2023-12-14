@@ -17,21 +17,13 @@ export default defineAppConfig({
     {
       key: 1,
       name: '更新弹窗',
-      activityIds: [
-        'com.taobao.etao.app.homev4.HomeV4Activity',
-        'com.taobao.etao.app.home.view.NewHomeActivity',
-        'com.miui.home.launcher.Launcher',
-      ],
-      rules: [
-        {
-          matches:
-            '[text="更新提示"] < LinearLayout < LinearLayout +(2) ScrollView >(2) [text="取消"]',
-          snapshotUrls: [
-            'https://i.gkd.li/import/12684250',
-            'https://i.gkd.li/import/12727457', // activityId: 'com.taobao.etao.app.home.view.NewHomeActivity'
-            'https://i.gkd.li/import/12684244', // activityId: 'com.miui.home.launcher.Launcher'
-          ],
-        },
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: '[text="更新提示"] <<2 * +2 * >2 [text="取消"]',
+      snapshotUrls: [
+        'https://i.gkd.li/import/12684250',
+        'https://i.gkd.li/import/12727457',
+        'https://i.gkd.li/import/12684244',
       ],
     },
     {
