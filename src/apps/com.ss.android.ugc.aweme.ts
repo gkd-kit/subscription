@@ -146,7 +146,8 @@ export default defineAppConfig({
       rules: [
         {
           name: '顶部卡片',
-          matches: '@[text="暂不"][focusable=true] < LinearLayout - LinearLayout >(2) [text="开启朋友通知"]',
+          matches:
+            '@[text="暂不"][focusable=true] < LinearLayout - LinearLayout >(2) [text="开启朋友通知"]',
           snapshotUrls: 'https://i.gkd.li/import/12675129',
         },
         {
@@ -206,7 +207,8 @@ export default defineAppConfig({
         {
           name: '商城快捷方式',
           activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
-          matches: '[text="添加抖音商城到桌面"] +2 LinearLayout > [text="不感兴趣"]',
+          matches:
+            '[text="添加抖音商城到桌面"] +2 LinearLayout > [text="不感兴趣"]',
           snapshotUrls: 'https://i.gkd.li/import/13669682',
         },
       ],
