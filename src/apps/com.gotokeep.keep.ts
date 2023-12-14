@@ -8,8 +8,15 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       activityIds: 'com.gotokeep.keep.splash.SplashActivity',
-      rules: '[id="com.gotokeep.keep:id/textSkip"]',
-      snapshotUrls: 'https://i.gkd.li/import/12706108',
+      rules: [
+          {
+            matches:'[id="com.gotokeep.keep:id/textSkip"]',
+            snapshotUrls: 'https://i.gkd.li/import/12706108',
+          },
+          {
+            matches:'[text*="跳过"]',
+            snapshotUrls: 'https://i.gkd.li/snapshot/1702552915491'},
+      ],
     },
     {
       key: 1,
