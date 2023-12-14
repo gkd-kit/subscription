@@ -55,7 +55,8 @@ export default defineAppConfig({
       rules: [
         {
           action: 'back',
-          matches: '[text="立即了解新版本"] <<n [id="com.alicloud.databox:id/webContainer"]',
+          matches:
+            '[text="立即了解新版本"] <<n [id="com.alicloud.databox:id/webContainer"]',
           snapshotUrls: 'https://i.gkd.li/import/13678160',
         },
       ],
