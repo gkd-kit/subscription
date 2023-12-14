@@ -1,6 +1,6 @@
 # 不背单词
 
-存在 1 规则组 - [cn.com.langeasy.LangEasyLexis](/src/apps/cn.com.langeasy.LangEasyLexis.ts)
+存在 1 规则组 - [cn.com.langeasy.langeasylexis](/src/apps/cn.com.langeasy.langeasylexis.ts)
 
 ## 自动签到
 
