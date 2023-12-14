@@ -69,7 +69,8 @@ export default defineAppConfig({
         {
           key: 1,
           name: '消息页弹窗提示',
-          activityIds: 'com.alipay.mobile.rome.pushservice.integration.PushOpenGuideActivity',
+          activityIds:
+            'com.alipay.mobile.rome.pushservice.integration.PushOpenGuideActivity',
           matches:
             '[text="选择通知接收范围"] <2 RelativeLayout [text="暂时不用"]',
           snapshotUrls: 'https://i.gkd.li/import/13669620',
