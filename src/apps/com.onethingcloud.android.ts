@@ -20,6 +20,7 @@ export default defineAppConfig({
       key: 1,
       name: '广告弹窗',
       activityIds: 'com.onethingcloud.android.MainActivity',
+      actionMaximum: 1, //有个按钮和广告按钮重复了，所以仅需运行一次
       rules:
         'FrameLayout >8 View > ImageView + ImageView + ImageView[clickable=true]',
       snapshotUrls: 'https://i.gkd.li/import/12841171',
