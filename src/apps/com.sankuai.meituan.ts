@@ -70,7 +70,8 @@ export default defineAppConfig({
         {
           name: '订单详情页匿名调查',
           action: 'back',
-          activityIds: 'com.sankuai.waimai.bussiness.order.detail.WMOrderDetailActivity',
+          activityIds:
+            'com.sankuai.waimai.bussiness.order.detail.WMOrderDetailActivity',
           matches: '[id="com.sankuai.meituan:id/questionnaireTitle"]',
           snapshotUrls: 'https://i.gkd.li/import/13682336',
         },
