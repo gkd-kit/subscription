@@ -58,7 +58,7 @@ export default defineAppConfig({
       resetMatch: 'app',
       activityIds: [
         'org.qiyi.android.video.MainActivity',
-        
+        'org.qiyi.android.search.view.PhoneSearchActivity',
       ],
       rules: '[id="com.qiyi.video:id/cancel_btn"][text="暂不升级"]',
       snapshotUrls: [
