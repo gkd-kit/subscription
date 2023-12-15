@@ -74,6 +74,7 @@ export default defineAppConfig({
           matches: '[id="com.sankuai.meituan:id/questionnaireTitle"]',
           snapshotUrls: 'https://i.gkd.li/import/13682336',
         },
+      ],
     },
     {
       key: 4,
