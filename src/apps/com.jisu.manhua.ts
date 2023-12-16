@@ -11,7 +11,8 @@ export default defineAppConfig({
       activityIds: 'com.ilike.cartoon.activities.HomeActivity',
       rules: [
         {
-          matches: '[id="com.jisu.manhua:id/iv_promotion"] + [id="com.jisu.manhua:id/iv_close"]', 
+          matches:
+            '[id="com.jisu.manhua:id/iv_promotion"] + [id="com.jisu.manhua:id/iv_close"]',
           snapshotUrls: 'https://i.gkd.li/import/13688186',
         },
       ],
