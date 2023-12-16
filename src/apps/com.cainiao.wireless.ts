@@ -87,5 +87,12 @@ export default defineAppConfig({
       rules: '[id="com.cainiao.wireless:id/gg_dialog_base_close"]',
       snapshotUrls: ['https://i.gkd.li/import/13068573'],
     },
+    {
+      key: 6,
+      name: '请求好评弹窗',
+      activityIds: 'com.taobao.cainiao.logistic.ui.view.LogisticDetailActivity',
+      rules: '@[text="取消"] + [text="好评"]',
+      snapshotUrls: 'https://i.gkd.li/import/13692761',
+    },
   ],
 });
