@@ -150,5 +150,50 @@ export default defineAppConfig({
       rules: '@[text="关闭"] < * <3 * < * + * >3 [text$="小额免密支付"]',
       snapshotUrls: 'https://i.gkd.li/import/13438414',
     },
+    {
+      enable: false,
+      key: 14,
+      name: '将小组件添加到手机桌面',
+      desc: '点击取消',
+      activityIds: 'com.alibaba.triver.container.TriverMainActivity',
+      rules: [
+        {
+          action: 'clickCenter',
+          matches: 'View[text="立即添加"] + View[text="取消"]',
+          snapshotUrls: 'https://i.gkd.li/import/13598578',
+        },
+      ],
+    },
+    {
+      enable: false,
+      key: 15,
+      name: '开启悬浮窗权限',
+      desc: '点击“否”',
+      activityIds:
+        'com.taobao.android.detail2.core.framework.floatwindow.permission.PermissionActivity',
+      quickFind: true,
+      actionMaximum: 1,
+      resetMatch: 'activity',
+      matchTime: 10000,
+      rules: {
+        matches: [
+          '[id="android:id/message"][text*="悬浮窗权限"]',
+          '[id="android:id/button2"][text="否"]',
+        ],
+      },
+      snapshotUrls: 'https://i.gkd.li/import/13588165',
+    },
+    {
+      key: 16,
+      name: '花呗升级报送征信',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      activityIds: 'com.alipay.android.msp.ui.views.MspContainerActivity',
+      rules:
+        '[text="花呗服务未升级，将影响后续使用"] <<n FrameLayout @FrameLayout[clickable=true] [text="暂不升级，继续付款"]',
+      snapshotUrls: 'https://i.gkd.li/import/13628020',
+    },
   ],
 });

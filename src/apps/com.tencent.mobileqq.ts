@@ -153,23 +153,47 @@ export default defineAppConfig({
       key: 6,
       name: '动态广告卡片',
       desc: '点击右上角[广告]右侧的x按钮直接关闭',
-      activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
+      activityIds: [
+        'com.tencent.mobileqq.activity.SplashActivity',
+        'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
+      ],
       rules:
         '@ImageView[clickable=true] - TextView[text="广告"] - [id="com.tencent.mobileqq:id/tv_name"]',
-      snapshotUrls: 'https://i.gkd.li/import/12749584',
+      snapshotUrls: [
+        'https://i.gkd.li/import/12749584',
+        'https://i.gkd.li/import/13627967',
+      ],
     },
     {
       key: 7,
       name: '扫一扫-登录确认',
+      desc: '自动点击登录。包括 PC 登录确认、QQ 互联登录确认。',
       quickFind: true,
-      activityIds: [
-        'com.tencent.biz.qrcode.activity.QRLoginAuthActivity',
-        'com.tencent.mobileqq.activity.DevLockQuickVerifyActivity',
-      ],
-      rules: 'Button[text="拒绝"] - Button[text="登录"]',
-      snapshotUrls: [
-        'https://i.gkd.li/import/12789287',
-        'https://i.gkd.li/import/13166314',
+      rules: [
+        {
+          key: 1,
+          name: 'PC 登录确认',
+          activityIds: [
+            'com.tencent.biz.qrcode.activity.QRLoginAuthActivity',
+            'com.tencent.mobileqq.activity.DevlockQuickLoginActivity',
+          ],
+          matches:
+            'TextView[text="登录确认"||text="一键验证"] <n * +n * >n Button[text*="登录"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13623520',
+            'https://i.gkd.li/import/12789287',
+            'https://i.gkd.li/import/13063027',
+          ],
+        },
+        {
+          key: 2,
+          name: 'QQ 互联登录确认',
+          activityIds: [
+            'com.tencent.mobileqq.activity.DevLockQuickVerifyActivity',
+          ],
+          matches: 'Button[text="拒绝"] - Button[text="登录"]',
+          snapshotUrls: ['https://i.gkd.li/import/13166314'],
+        },
       ],
     },
     {
@@ -303,14 +327,6 @@ export default defineAppConfig({
           ],
         },
       ],
-    },
-    {
-      key: 16,
-      name: 'NT QQ-登录确认',
-      desc: 'NT QQ 登录时自动点击允许登录QQ',
-      activityIds: 'com.tencent.mobileqq.activity.DevlockQuickLoginActivity',
-      rules: 'Button[text="允许登录QQ"][clickable=true][id!=null]',
-      snapshotUrls: 'https://i.gkd.li/import/13063027',
     },
     {
       key: 17,

@@ -1,6 +1,6 @@
 # APKPure
 
-存在 4 规则组 - [com.apkpure.aegon](/src/apps/com.apkpure.aegon.ts)
+存在 5 规则组 - [com.apkpure.aegon](/src/apps/com.apkpure.aegon.ts)
 
 ## 开屏广告
 
@@ -8,7 +8,7 @@
 
 ## 热门推荐关闭
 
-关闭应用推广
+默认禁用 - 关闭应用推广
 
 - [快照-0](https://i.gkd.li/import/13466647)
 
@@ -24,3 +24,9 @@
 
 - [快照-0](https://i.gkd.li/import/13466329)
 - [快照-1](https://i.gkd.li/import/13466610)
+
+## 添加桌面快捷方式
+
+默认禁用 - 下次添加
+
+- [快照-0](https://i.gkd.li/import/13416401)

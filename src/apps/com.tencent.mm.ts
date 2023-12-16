@@ -440,10 +440,39 @@ export default defineAppConfig({
       quickFind: true,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'com.tencent.mm.plugin.finder.ui.FinderSelfUI',
+      activityIds: [
+        'com.tencent.mm.plugin.finder.ui.FinderSelfUI',
+        'com.tencent.mm.plugin.finder.ui.FinderHomeAffinityUI',
+      ],
       rules:
         'TextView[text^="为呵护未成年人健康成长，微信推出青少年模式"] +2 Button[text="我知道了"]',
-      snapshotUrls: 'https://i.gkd.li/import/13538145',
+      snapshotUrls: [
+        'https://i.gkd.li/import/13538145',
+        'https://i.gkd.li/import/13575195', //activityIds: 'com.tencent.mm.plugin.finder.ui.FinderHomeAffinityUI'
+      ],
+    },
+    {
+      key: 18,
+      name: '青少年模式自动点击验证密码',
+      desc: '点击“验证密码”以申请临时访问',
+      actionMaximum: 1,
+      resetMatch: 'activity',
+      matchTime: 10000,
+      rules: [
+        {
+          key: 0,
+          activityIds:
+            'com.tencent.mm.plugin.teenmode.ui.AuthorizationRequestUI',
+          matches: '@LinearLayout[childCount=2] > [text="验证密码"]',
+          snapshotUrls: 'https://i.gkd.li/import/13588338',
+        },
+        {
+          key: 1,
+          activityIds: 'com.tencent.mm.plugin.webview.ui.tools.MMWebViewUI',
+          matches: ['View[text="申请今天临时访问"]', 'View[desc="验证密码"]'],
+          snapshotUrls: 'https://i.gkd.li/import/13631987',
+        },
+      ],
     },
   ],
 });

@@ -21,8 +21,15 @@ export default defineAppConfig({
       key: 1,
       name: '青少年弹窗',
       quickFind: true,
-      activityIds: 'org.qiyi.basecore.widget.dialog.AlertDialogBottom1',
-      rules: 'Button[id=`com.qiyi.video:id/confirm_btn`][text=`我知道了`]',
+      activityIds: 'org.qiyi.android.video.MainActivity',
+      rules: [
+        {
+          matches: '[id="com.qiyi.video:id/confirm_btn"][text="我知道了"]',
+          exampleUrls:
+            'https://m.gkd.li/6328439/d69e92f8-8304-4296-909a-11730e408a16',
+          snapshotUrls: 'https://i.gkd.li/import/13546555',
+        },
+      ],
     },
     {
       key: 2,
@@ -44,11 +51,20 @@ export default defineAppConfig({
     },
     {
       key: 4,
-      name: '版本更新弹窗',
+      name: '版本更新',
       quickFind: true,
-      activityIds: 'org.qiyi.android.video.MainActivity',
-      snapshotUrls: 'https://i.gkd.li/import/12838158',
-      rules: ['[id="com.qiyi.video:id/cancel_btn"][text="暂不升级"]'],
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      activityIds: [
+        'org.qiyi.android.video.MainActivity',
+        'org.qiyi.android.search.view.PhoneSearchActivity',
+      ],
+      rules: '[id="com.qiyi.video:id/cancel_btn"][text="暂不升级"]',
+      snapshotUrls: [
+        'https://i.gkd.li/import/12838158',
+        'https://i.gkd.li/import/13684912', //activityIds: 'org.qiyi.android.search.view.PhoneSearchActivity',
+      ],
     },
     {
       key: 5,

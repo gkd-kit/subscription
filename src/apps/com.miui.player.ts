@@ -50,6 +50,23 @@ export default defineAppConfig({
       snapshotUrls: ['https://i.gkd.li/import/13304343'],
     },
     {
+      key: 4,
+      name: '飘窗广告_首页右侧',
+      activityIds: 'com.tencent.qqmusiclite.activity.MainActivity',
+      quickFind: true,
+      rules:
+        '[id="com.miui.player:id/cl_floating_promote"] > [id="com.miui.player:id/iv_close"]',
+      snapshotUrls: ['https://i.gkd.li/import/13562649'],
+    },
+    {
+      key: 5,
+      name: '首页-弹窗广告',
+      activityIds: 'com.tencent.qqmusiclite.activity.MainActivity',
+      quickFind: true,
+      rules: '[id="com.miui.player:id/iv_close_dialog_button"]',
+      snapshotUrls: ['https://i.gkd.li/import/13623503'],
+    },
+    {
       enable: false,
       key: 10,
       name: '会员过期续费弹窗',
@@ -65,6 +82,21 @@ export default defineAppConfig({
       rules:
         '[id="com.miui.player:id/banner_image"] + [id="com.miui.player:id/close_banner"]',
       snapshotUrls: 'https://i.gkd.li/import/12700984',
+    },
+    {
+      enable: false,
+      key: 12,
+      name: '看广告视频领VIP',
+      desc: '等待15s自动点击【退出】',
+      rules: [
+        {
+          actionDelay: 15000,
+          quickFind: true,
+          activityIds: 'com.tencentmusic.ad.tmead.reward.TMERewardActivity',
+          matches: '[id="com.miui.player:id/tme_ad_skip_button"]',
+          snapshotUrls: 'https://i.gkd.li/import/13610667',
+        },
+      ],
     },
   ],
 });

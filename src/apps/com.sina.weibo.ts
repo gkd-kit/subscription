@@ -3,6 +3,7 @@ import { defineAppConfig } from '../types';
 export default defineAppConfig({
   id: 'com.sina.weibo',
   name: '微博',
+  deprecatedKeys: [12],
   groups: [
     {
       key: 0,
@@ -50,11 +51,19 @@ export default defineAppConfig({
       activityIds: 'com.sina.weibo.feed.DetailWeiboActivity',
       rules: [
         {
+          key: 0,
           matches:
             '[id="com.sina.weibo:id/left_img_container"] + LinearLayout >2 [id="com.sina.weibo:id/close"][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/12673043',
         },
         {
+          key: 1,
+          matches:
+            '[id="com.sina.weibo:id/left_video_container"] + LinearLayout >2 [id="com.sina.weibo:id/close"][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/import/13635551',
+        },
+        {
+          key: 2,
           matches:
             '[id="com.sina.weibo:id/corner_marker_view"] >2 [id="com.sina.weibo:id/right_top_tag"]',
           snapshotUrls: 'https://i.gkd.li/import/12673051',
@@ -103,12 +112,32 @@ export default defineAppConfig({
     },
     {
       key: 8,
-      name: '发现页广告弹窗',
-      quickFind: true,
-      activityIds: ['com.sina.weibo.page.ad.DiscoverAdDialog'],
-      rules:
-        '[id="com.sina.weibo:id/ad_portrait_layout"] + [id="com.sina.weibo:id/btn_close"]',
-      snapshotUrls: ['https://i.gkd.li/import/12705974'],
+      name: '弹窗广告',
+      rules: [
+        {
+          key: 0,
+          activityIds: 'com.sina.weibo.business',
+          quickFind: true,
+          matches:
+            '@[id="com.sina.weibo:id/btn_close"] - FrameLayout > [id="com.sina.weibo:id/ad_tag"]',
+          snapshotUrls: 'https://i.gkd.li/import/12750090',
+        },
+        {
+          key: 1,
+          activityIds: 'com.sina.weibo.feed.MPDialogActivity',
+          matches:
+            'View[childCount=2] > @TextView[clickable=true] - View >n [text="元"]',
+          snapshotUrls: 'https://i.gkd.li/import/13670266',
+        },
+        {
+          key: 2,
+          activityIds: 'com.sina.weibo.page.ad.DiscoverAdDialog',
+          quickFind: true,
+          matches:
+            '[id="com.sina.weibo:id/ad_portrait_layout"] + [id="com.sina.weibo:id/btn_close"]',
+          snapshotUrls: 'https://i.gkd.li/import/12705974',
+        },
+      ],
     },
     {
       enable: false,
@@ -142,15 +171,6 @@ export default defineAppConfig({
       rules:
         '[id="com.sina.weibo:id/ll_check_in_container"] < FrameLayout - FrameLayout > TextView + [id="com.sina.weibo:id/v_close"]',
       snapshotUrls: ['https://i.gkd.li/import/12749876'],
-    },
-    {
-      key: 12,
-      name: '首页广告弹窗',
-      quickFind: true,
-      activityIds: ['com.sina.weibo.business'],
-      rules:
-        '@[id="com.sina.weibo:id/btn_close"] - FrameLayout > [id="com.sina.weibo:id/ad_tag"]',
-      snapshotUrls: ['https://i.gkd.li/import/12750090'],
     },
     {
       key: 13,
@@ -224,6 +244,26 @@ export default defineAppConfig({
       rules:
         '[text*="一键转发"] < LinearLayout +2 [id="com.sina.weibo:id/tv_close"]',
       snapshotUrls: 'https://i.gkd.li/import/13482960',
+    },
+    {
+      key: 17,
+      name: '评论区-信息流广告',
+      desc: '点击【x】',
+      activityIds: 'com.sina.weibo.feed.DetailWeiboActivity',
+      quickFind: true,
+      rules: '[text="广告"] + [id="com.sina.weibo:id/iv_close_icon"]',
+      snapshotUrls: 'https://i.gkd.li/import/13632175',
+    },
+    {
+      key: 18,
+      name: 'APP评分弹窗',
+      desc: '点击【x】',
+      quickFind: true,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      activityIds: 'com.sina.weibo.MainTabActivity',
+      rules: '@[text="不了，谢谢"] +4 [text="喜欢，给好评"]',
+      snapshotUrls: 'https://i.gkd.li/import/13620220',
     },
   ],
 });

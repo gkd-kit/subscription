@@ -90,5 +90,30 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 4,
+      name: '弹窗广告',
+      rules: [
+        {
+          key: 0,
+          activityIds: 'com.duowan.kiwi.homepage.Homepage',
+          matches:
+            '[id="com.duowan.kiwi:id/animation_view"] + [id="com.duowan.kiwi:id/v_close"]',
+          snapshotUrls: 'https://i.gkd.li/import/13625453',
+        },
+      ],
+    },
+    {
+      enable: false,
+      key: 5,
+      name: 'root提示',
+      desc: '您的设备已经被ROOT',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: '[text^="您的设备已经被ROOT"] + LinearLayout [text="确认"]',
+      snapshotUrls: 'https://i.gkd.li/import/13536744',
+    },
   ],
 });

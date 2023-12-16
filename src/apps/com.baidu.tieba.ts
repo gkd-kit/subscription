@@ -43,9 +43,22 @@ export default defineAppConfig({
     {
       key: 1,
       name: '申请消息提醒弹窗',
-      activityIds: 'com.baidu.tieba.pb.pb.main.PbActivity',
-      rules: '@ImageView[clickable=true] -2 LinearLayout > [text^="打开通知"]',
-      snapshotUrls: 'https://i.gkd.li/import/13536170',
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          activityIds: 'com.baidu.tieba.pb.pb.main.PbActivity',
+          matches:
+            '@ImageView[clickable=true] -2 LinearLayout > [text^="打开通知"]',
+          snapshotUrls: 'https://i.gkd.li/import/13536170',
+        },
+        {
+          activityIds:
+            'com.baidu.tieba.immessagecenter.mention.reply.ReplyMeActivity',
+          matches: 'TextView[text="开启消息推送"] +2 TextView[text="不开启"]',
+          snapshotUrls: 'https://i.gkd.li/import/13675694',
+        },
+      ],
     },
     {
       enable: false,
@@ -201,6 +214,19 @@ export default defineAppConfig({
           activityIds: 'com.baidu.tieba.pb.pb.main.PbActivity',
           matches: 'LinearLayout[childCount=2] > @ImageView + [text="广告"]',
           snapshotUrls: 'https://i.gkd.li/import/13296280',
+        },
+        {
+          key: 2,
+          activityIds: [
+            'com.baidu.tieba.pb.pb.main.PbActivity',
+            'com.baidu.tieba.tblauncher.MainTabActivity',
+          ],
+          matches:
+            'RelativeLayout[childCount=2] > RelativeLayout[childCount=1] > ImageView[childCount=0][clickable=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13625336',
+            'https://i.gkd.li/import/13627881',
+          ],
         },
       ],
     },
