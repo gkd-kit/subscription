@@ -26,8 +26,10 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.huawei.browser.BrowserMainActivity',
-          matches: '@ImageButton -2 LinearLayout[childCount=2] > [text="开启资讯通知"]',
-          exampleUrls: 'https://m.gkd.li/87047583/3982b64a-15a7-4c0c-b179-2ed82d6ea18e',
+          matches:
+            '@ImageButton -2 LinearLayout[childCount=2] > [text="开启资讯通知"]',
+          exampleUrls:
+            'https://m.gkd.li/87047583/3982b64a-15a7-4c0c-b179-2ed82d6ea18e',
           snapshotUrls: 'https://i.gkd.li/import/13692404',
         },
       ],
