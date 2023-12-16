@@ -11,19 +11,16 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules:[
+      rules: [
         {
           matches: 'TextView[id="com.dubox.drive:id/tv_skip"]',
           snapshotUrls: 'https://i.gkd.li/import/13200574',
         },
         {
-        matches: [
-          '[id="inmobi-ad"]',
-          '[id="com.dubox.drive:id/ivClose"]',
-        ],
-        snapshotUrls: 'https://i.gkd.li/import/13688384',
-      },
-    ],
+          matches: ['[id="inmobi-ad"]', '[id="com.dubox.drive:id/ivClose"]'],
+          snapshotUrls: 'https://i.gkd.li/import/13688384',
+        },
+      ],
     },
     {
       key: 1,
@@ -38,7 +35,8 @@ export default defineAppConfig({
       name: '通知权限',
       quickFind: true,
       activityIds: 'com.dubox.drive.permission.view.PermissionDialogActivity',
-      rules: '[text="Authorize"] - [id="com.dubox.drive:id/dialog_button_cancel"]',
+      rules:
+        '[text="Authorize"] - [id="com.dubox.drive:id/dialog_button_cancel"]',
       snapshotUrls: 'https://i.gkd.li/import/13688406',
     },
   ],
