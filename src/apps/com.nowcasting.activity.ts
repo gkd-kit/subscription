@@ -13,8 +13,7 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
-          matches:
-            '[id="com.nowcasting.activity:id/cll_splash_ad_skip"]',
+          matches: '[id="com.nowcasting.activity:id/cll_splash_ad_skip"]',
           snapshotUrls: 'https://i.gkd.li/import/13690833',
         },
       ],
@@ -55,24 +54,18 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          matches: [
-            '[id="com.nowcasting.activity:id/jad_feed_close"]',
-          ],
+          matches: ['[id="com.nowcasting.activity:id/jad_feed_close"]'],
           snapshotUrls: 'https://i.gkd.li/import/13690826',
         },
         {
           key: 1,
-          matches: [
-            '[id="com.nowcasting.activity:id/ll_close"]',
-          ],
+          matches: ['[id="com.nowcasting.activity:id/ll_close"]'],
           snapshotUrls: 'https://i.gkd.li/import/13690822',
         },
         {
           preKeys: 1,
           key: 2,
-          matches: [
-            '[id="com.nowcasting.activity:id/ll_uninterested"]',
-          ],
+          matches: ['[id="com.nowcasting.activity:id/ll_uninterested"]'],
           snapshotUrls: 'https://i.gkd.li/import/13690830',
         },
       ],
