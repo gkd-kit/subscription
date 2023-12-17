@@ -156,7 +156,8 @@ export default defineAppConfig({
       rules: [
         {
           action: 'back',
-          activityIds: 'com.sankuai.waimai.bussiness.order.detail.WMOrderDetailActivity',
+          activityIds:
+            'com.sankuai.waimai.bussiness.order.detail.WMOrderDetailActivity',
           matches: '[id="com.sankuai.meituan:id/module_container"]',
           snapshotUrls: 'https://i.gkd.li/import/13695703',
         },
