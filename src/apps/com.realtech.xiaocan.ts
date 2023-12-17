@@ -34,5 +34,18 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 1,
+      name: '弹窗广告',
+      rules: [
+        {
+          key: 0,
+          activityIds: 'com.realtech.xiaocan.MainActivity',
+          matches:
+            'View[childCount=3] > View + ImageView + ImageView[clickable=true][childCount=0]',
+          snapshotUrls: 'https://i.gkd.li/import/13694864',
+        },
+      ],
+    },
   ],
 });
