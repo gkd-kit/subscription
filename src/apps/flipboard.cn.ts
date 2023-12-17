@@ -1,7 +1,7 @@
 import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
-  id: 'flipboard',
+  id: 'flipboard.cn',
   name: '红板报',
   groups: [
     {
