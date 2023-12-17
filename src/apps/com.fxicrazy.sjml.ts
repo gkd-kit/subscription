@@ -5,18 +5,26 @@ export default defineAppConfig({
   name: '联掌门户',
   groups: [
     {
-      key: 1,
+      key: 0,
       name: '开屏广告',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      quickFind: true,
       rules: [
         {
-          matches: '[text^="跳过"][text.length<10]',
-          exampleUrls:
-            'https://m.gkd.li/47232102/cb7a2c32-db59-47c4-af35-b70125b88bd2',
-          snapshotUrls: 'https://i.gkd.li/import/13514356',
+          activityIds: 'com.fxicrazy.sjml.ui.welcome.WelcomeActivity',
+          matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
+          exampleUrls: 'https://m.gkd.li/51123503/cb6bc364-f517-406f-96ac-11386387100f',
+          snapshotUrls: 'https://i.gkd.li/import/13695784',
+        },
+      ],
+    },
+    {
+      key: 1,
+      name: '通知权限弹窗',
+      rules: [
+        {
+          activityIds: 'com.fxicrazy.sjml.ui.main.HomeTabActivity',
+          matches: '[id="com.fxicrazy.sjml:id/bt_no"]',
+          exampleUrls: 'https://m.gkd.li/51123503/2cc24a34-c589-466b-b1a7-7b7627b6ee10',
+          snapshotUrls: 'https://i.gkd.li/import/13695790',
         },
       ],
     },
