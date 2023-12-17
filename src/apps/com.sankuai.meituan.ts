@@ -141,14 +141,15 @@ export default defineAppConfig({
     {
       enable: false,
       key: 8,
-      name: '通知弹窗',
+      name: '请求开启通知权限弹窗',
       desc: '点击跳过',
       quickFind: true,
       actionMaximum: 1,
       rules: [
         {
           activityIds: 'com.meituan.android.pt.homepage.activity.MainActivity',
-          matches: "TextView[id='com.sankuai.meituan:id/later']",
+          matches:
+            '[id="com.sankuai.meituan:id/notify_open_hint_title"] +n [id="com.sankuai.meituan:id/later"]',
           snapshotUrls: 'https://i.gkd.li/import/13439134',
         },
       ],
