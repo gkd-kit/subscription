@@ -136,9 +136,15 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'com.taobao.android.detail.wrapper.activity.DetailActivity',
+      activityIds: [
+        'com.taobao.android.detail.wrapper.activity.DetailActivity',
+        'com.taobao.android.order.bundle.TBOrderListActivity',
+      ],
       rules: '[id="com.taobao.taobao:id/update_imageview_cancel_v2"]',
-      snapshotUrls: 'https://i.gkd.li/import/13336760',
+      snapshotUrls: [
+        'https://i.gkd.li/import/13336760',
+        'https://i.gkd.li/import/13695520',
+      ],
     },
     {
       enable: false,
