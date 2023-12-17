@@ -7,17 +7,17 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      matchLauncher: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       quickFind: true,
-      activityIds: [
-        'com.ct.client.activity.MainActivity',
-        'com.ct.client.activity.SplashActivity',
-      ],
       rules: [
         {
+          key: 0,
           matches: '[id="com.ct.client:id/tvSkip"]',
         },
         {
+          key: 1,
           matches: '[id="com.ct.client:id/btSkip"]',
           snapshotUrls: [
             'https://i.gkd.li/import/12508958',
