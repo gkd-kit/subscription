@@ -5,7 +5,7 @@ export default defineAppConfig({
   name: '联掌门户',
   groups: [
     {
-      key: 0,
+      key: 1,
       name: '开屏广告',
       rules: [
         {
@@ -17,7 +17,7 @@ export default defineAppConfig({
       ],
     },
     {
-      key: 1,
+      key: 2,
       name: '通知权限弹窗',
       rules: [
         {
