@@ -13,7 +13,7 @@ export default defineAppConfig({
       quickFind: true,
       rules: [
         {
-          matches: '[id="flipboard.cn:id/splash_text_layout"]', 
+          matches: '[id="flipboard.cn:id/splash_text_layout"]',
           snapshotUrls: 'https://i.gkd.li/import/13694601',
         },
       ],
