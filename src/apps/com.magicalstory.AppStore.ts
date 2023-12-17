@@ -82,6 +82,7 @@ export default defineAppConfig({
     {
       key: 6,
       name: '搜索页-卡片广告',
+      desc: '腾讯广告',
       actionMaximum: 1,
       activityIds: 'com.magicalstory.AppStore.search.searchActivity',
       rules:
