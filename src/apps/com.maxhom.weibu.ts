@@ -14,7 +14,7 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          name: '点击右侧X',
+          name: '类型1-点击右侧X',
           matches: ['ImageView - FrameLayout > ImageView'],
           snapshotUrls: [
             'https://i.gkd.li/import/13377607',
@@ -24,10 +24,20 @@ export default defineAppConfig({
         {
           preKeys: 0,
           key: 1,
-          name: '点击弹出窗口的X',
+          name: '类型1-点击弹出窗口的X',
           matches:
             '[text.length>=2&&text.length<=6] <n FrameLayout < FrameLayout - FrameLayout > ImageView',
           snapshotUrls: ['https://i.gkd.li/import/13377611'],
+        },
+        {
+          key: 2,
+          name: '类型2-点击右侧X',
+          matches: ['[id="com.maxhom.weibu:id/anythink_myoffer_banner_close"]'],
+          snapshotUrls: [
+            'https://i.gkd.li/import/13702305',
+            'https://i.gkd.li/import/13702339',
+            'https://i.gkd.li/import/13702345',
+          ],
         },
       ],
     },
