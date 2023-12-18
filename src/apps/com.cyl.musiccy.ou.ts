@@ -7,12 +7,13 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       rules: [
         {
+          key: 0,
+          quickFind: true,
           matches: '[text*="跳过"][text.length<=10]',
           snapshotUrls: [
             'https://i.gkd.li/import/12775918',
@@ -23,6 +24,7 @@ export default defineAppConfig({
           ],
         },
         {
+          key: 1,
           matches:
             '[id="com.cyl.musiccy.ou:id/ksad_splash_root_container"] [childCount=3] > @ImageView[clickable=true] - [text="|"]',
           snapshotUrls: ['https://i.gkd.li/import/12775919'],
