@@ -14,11 +14,13 @@ export default defineAppConfig({
       quickFind: true,
       rules: [
         {
-          matches: 'ImageView[width<90][height<90] < @ViewGroup[clickable=true] <<n [id="com.juduoduo.app:id/ksad_tk_view"]',
+          matches:
+            'ImageView[width<90][height<90] < @ViewGroup[clickable=true] <<n [id="com.juduoduo.app:id/ksad_tk_view"]',
           snapshotUrls: 'https://i.gkd.li/import/13705650',
         },
         {
-          matches: '[id="com.juduoduo.app:id/ksad_tk_view"] @ViewGroup[clickable=true] > [text="跳过"]',
+          matches:
+            '[id="com.juduoduo.app:id/ksad_tk_view"] @ViewGroup[clickable=true] > [text="跳过"]',
           snapshotUrls: 'https://i.gkd.li/import/13705662',
         },
       ],
