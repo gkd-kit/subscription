@@ -29,5 +29,15 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 6,
+      name: '下载页-卡片广告',
+      matchTime: 10000,
+      actionMaximum: 1,
+      activityIds: 'info.muge.appshare.view.app.detail.AppDetailActivity',
+      rules:
+        'FrameLayout[childCount>1] > FrameLayout[childCount=1] > ImageView[width<90][height<90]',
+      snapshotUrls: 'https://i.gkd.li/import/13712716',
+    },
   ],
 });
