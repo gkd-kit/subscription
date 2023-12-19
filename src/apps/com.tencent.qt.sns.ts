@@ -30,8 +30,7 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       quickFind: true,
-      rules:
-        '[text="版本更新"] +4 LinearLayout > [text="取消"]',
+      rules: '[text="版本更新"] +4 LinearLayout > [text="取消"]',
       snapshotUrls: [
         'https://i.gkd.li/import/13497984',
         'https://i.gkd.li/import/13713478',
