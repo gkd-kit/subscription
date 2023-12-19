@@ -9,7 +9,7 @@ export default defineAppConfig({
       name: '视频播放-跳过广告',
       activityIds: [
         'com.google.android.apps.youtube.app.watchwhile.WatchWhileActivity',
-        'com.google.android.youtube'
+        'com.google.android.youtube',
       ],
       quickFind: true,
       rules: [
