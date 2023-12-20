@@ -24,11 +24,13 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'com.xiaoenai.app.presentation.home.view.activity.HomeActivity',
+      activityIds:
+        'com.xiaoenai.app.presentation.home.view.activity.HomeActivity',
       rules: [
         {
           name: '腾讯广告SDK',
-          matches: 'FrameLayout[childCount>1] > FrameLayout[childCount=1] > ImageView[width<90][height<90]',
+          matches:
+            'FrameLayout[childCount>1] > FrameLayout[childCount=1] > ImageView[width<90][height<90]',
           snapshotUrls: 'https://i.gkd.li/import/13728018',
         },
       ],
@@ -36,12 +38,14 @@ export default defineAppConfig({
     {
       key: 7,
       name: '信息流广告',
-      activityIds: 'com.xiaoenai.app.presentation.home.view.activity.HomeActivity',
+      activityIds:
+        'com.xiaoenai.app.presentation.home.view.activity.HomeActivity',
       rules: [
         {
           name: '字节广告SDK',
           quickFind: true,
-          matches: '@ImageView[clickable=true][width<90][height<90] -3 ImageView <<n [id="com.xiaoenai.app:id/view_ad_tpl"]',
+          matches:
+            '@ImageView[clickable=true][width<90][height<90] -3 ImageView <<n [id="com.xiaoenai.app:id/view_ad_tpl"]',
           snapshotUrls: 'https://i.gkd.li/import/13728026',
         },
       ],
