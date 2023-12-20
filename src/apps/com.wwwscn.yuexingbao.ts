@@ -12,7 +12,7 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       rules: [
-        '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
+        '[id$="tt_splash_skip_btn"]',
         '@View[clickable=true][id=null][visibleToUser=true] +n TextView[clickable=true]',
       ],
       snapshotUrls: [
