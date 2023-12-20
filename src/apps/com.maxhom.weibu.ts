@@ -15,10 +15,13 @@ export default defineAppConfig({
         {
           key: 0,
           name: '类型1-点击右侧X',
-          matches: ['ImageView - FrameLayout > ImageView'],
+          matches: [
+            'TextView[text.length>0] < FrameLayout + FrameLayout > ImageView',
+          ],
           snapshotUrls: [
             'https://i.gkd.li/import/13377607',
             'https://i.gkd.li/import/13377810',
+            'https://i.gkd.li/import/13728552',
           ],
         },
         {
