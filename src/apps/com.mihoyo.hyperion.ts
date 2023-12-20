@@ -43,7 +43,7 @@ export default defineAppConfig({
     {
       key: 3,
       name: '自动打卡',
-      desc: '点击顶部搜索框右侧[打卡],切换板块自动签到',
+      desc: '点击[打卡],切换板块自动签到',
       activityIds: 'com.mihoyo.hyperion.main.HyperionMainActivity',
       rules:
         'TextView[id="com.mihoyo.hyperion:id/signTv"][text="打卡"][visibleToUser=true]',
