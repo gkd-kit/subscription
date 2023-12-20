@@ -3,7 +3,6 @@ import { defineAppConfig } from '../types';
 export default defineAppConfig({
   id: 'com.sina.weibolite',
   name: '微博极速版',
-  name: 'WeiboFast',
   groups: [
     {
       key: 0,
