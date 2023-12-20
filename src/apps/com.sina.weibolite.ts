@@ -3,6 +3,7 @@ import { defineAppConfig } from '../types';
 export default defineAppConfig({
   id: 'com.sina.weibolite',
   name: '微博极速版',
+  name: 'WeiboFast',
   groups: [
     {
       key: 0,
@@ -36,6 +37,16 @@ export default defineAppConfig({
           snapshotUrls: 'https://i.gkd.li/import/12738132',
         },
       ],
+    },
+    {
+      key: 2,
+      name: 'APP评分',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      activityIds: 'com.weico.international.activity.MainFragmentActivity',
+      rules: '[id="com.sina.weibolite:id/ed_btn_negative"]',
+      snapshotUrls: 'https://i.gkd.li/import/13727728',
     },
   ],
 });
