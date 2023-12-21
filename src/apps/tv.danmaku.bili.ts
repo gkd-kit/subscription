@@ -38,7 +38,8 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: 'TextView[text*=`青少年模式`] + TextView[text=`我知道了`]',
+      rules: 'TextView[text*=`青少年模式`] +n TextView[text=`我知道了`]',
+      snapshotUrls: 'https://i.gkd.li/import/13734321',
     },
     {
       key: 2,
