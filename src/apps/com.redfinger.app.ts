@@ -14,6 +14,13 @@ export default defineAppConfig({
         {
           quickFind: true,
           key: 0,
+          matches:
+            '[id="com.redfinger.app:id/anythink_myoffer_splash_skip_area"]',
+          snapshotUrls: 'https://i.gkd.li/snapshot/1703162936110',
+        },
+        {
+          quickFind: true,
+          key: 1,
           matches: '[text*="跳过"][text.length<=10]',
           snapshotUrls: [
             'https://i.gkd.li/import/13166289',
@@ -22,7 +29,7 @@ export default defineAppConfig({
           ],
         },
         {
-          key: 1,
+          key: 2,
           matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
           snapshotUrls: 'https://i.gkd.li/import/13188645',
         },
