@@ -16,7 +16,7 @@ export default defineAppConfig({
           key: 0,
           matches:
             '[id="com.redfinger.app:id/anythink_myoffer_splash_skip_area"]',
-          snapshotUrls: 'https://i.gkd.li/snapshot/1703162936110',
+          snapshotUrls: 'https://i.gkd.li/import/13742460',
         },
         {
           quickFind: true,
