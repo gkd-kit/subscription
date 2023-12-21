@@ -1,0 +1,520 @@
+[33mcommit 4593de92e392fc60ed417638bf5e782253fd9066[m[33m ([m[1;36mHEAD -> [m[1;32mecharge1[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mecharge[m[33m)[m
+Author: lisonge <i@songe.li>
+Date:   Sun Dec 17 14:07:50 2023 +0800
+
+    chore: rm md
+
+[33mcommit 39f5a8d8585e46c67efccd809e5ee19f5f8fa89d[m
+Author: lisonge <i@songe.li>
+Date:   Fri Dec 15 22:52:19 2023 +0800
+
+    fix(actions): duplicated tags
+
+[33mcommit e22553ad06041c0c3edaeea058696edb459844da[m
+Author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+Date:   Fri Dec 15 14:08:28 2023 +0000
+
+    chore: v1.177.0
+
+[33mcommit e5fd2804de3176eda38000517c6c2ad24423f55c[m
+Author: Kun Jinkao <45487685+Snoopy1866@users.noreply.github.com>
+Date:   Fri Dec 15 22:05:36 2023 +0800
+
+    feat(腾讯视频): 卡片式广告（优化规则） (#3210)
+
+[33mcommit 235e3b4845fb07044147e595aec71c268ec83b23[m
+Author: fimmy <fimmy@live.cn>
+Date:   Fri Dec 15 22:05:06 2023 +0800
+
+    feat(畅驾): 开屏广告 (#3116)
+    
+    * feat(畅驾): 开屏广告
+    
+    * feat(畅驾): 开屏广告
+    
+    ---------
+    
+    Co-authored-by: lisonge <i@songe.li>
+
+[33mcommit 6e9439ebb71eb24cb2e5eb870ed76b83d350928a[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 20:50:12 2023 +0800
+
+    feat(听听广播):开屏广告 (#3209)
+    
+    close #3197
+
+[33mcommit 9f4a1eedf8654f5129b7e250d858f4b9c99a19d9[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 20:49:43 2023 +0800
+
+    feat(识货):开屏广告 (#3208)
+    
+    close #3190
+
+[33mcommit db15e9fb8a9308c855ebd302a3dd7b580e323377[m
+Author: Kun Jinkao <45487685+Snoopy1866@users.noreply.github.com>
+Date:   Fri Dec 15 20:48:21 2023 +0800
+
+    feat(饿了么): 活动弹窗（补充 activityId） (#3207)
+
+[33mcommit 628018e01e409d2bae3b785b4a03159dcffc7d43[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 20:46:33 2023 +0800
+
+    feat(爱奇艺):版本更新 (#3206)
+    
+    * feat(爱奇艺):版本更新
+    
+    * Update com.qiyi.video.ts
+
+[33mcommit 8a71e8fa3946a48479f895496788f15ec3343c6d[m
+Author: Kun Jinkao <45487685+Snoopy1866@users.noreply.github.com>
+Date:   Fri Dec 15 20:46:14 2023 +0800
+
+    feat(小鸡模拟器): 开屏广告 (#3205)
+
+[33mcommit 0f659631e1e7c269f1c780edce89cbca7191e3e8[m
+Author: Kun Jinkao <45487685+Snoopy1866@users.noreply.github.com>
+Date:   Fri Dec 15 20:45:49 2023 +0800
+
+    feat(抖音极速版): 功能体验邀请弹窗 (#3204)
+
+[33mcommit 7f9a2467200f956cdbae4ac5be3baa45913bf586[m
+Author: Kun Jinkao <45487685+Snoopy1866@users.noreply.github.com>
+Date:   Fri Dec 15 20:45:22 2023 +0800
+
+    feat(139邮箱): 开屏广告 (#3203)
+
+[33mcommit e255b2762285258580eeb67cdf5af6b696c29f27[m
+Author: Kun Jinkao <45487685+Snoopy1866@users.noreply.github.com>
+Date:   Fri Dec 15 20:44:59 2023 +0800
+
+    feat(享做笔记): 开屏广告 (#3202)
+
+[33mcommit 99b76640e70df42d0e99d1fbb295cf7c0790a235[m
+Author: Kun Jinkao <45487685+Snoopy1866@users.noreply.github.com>
+Date:   Fri Dec 15 20:44:24 2023 +0800
+
+    feat(网易云音乐): 弹窗广告（补充规则） (#3201)
+
+[33mcommit 54ab349fee8863945202ad20362a4ceca1dcd098[m
+Author: Kun Jinkao <45487685+Snoopy1866@users.noreply.github.com>
+Date:   Fri Dec 15 20:43:58 2023 +0800
+
+    feat(飞常准): 开屏广告 (#3200)
+
+[33mcommit b71287b1a56f5c19a5ab536bb2f1f8c8de0fd1cc[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 20:43:32 2023 +0800
+
+    feat(美团):订单调查弹窗 (#3194)
+    
+    * feat(美团):订单调查弹窗
+    
+    * Update com.sankuai.meituan.ts
+    
+    * chore(actions): check_format_lint
+    
+    ---------
+    
+    Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+
+[33mcommit 15d148eda22523665611100cc69954eae5bb6b69[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 20:43:00 2023 +0800
+
+    feat(阿里云盘):版本更新 (#3187)
+    
+    * feat(阿里云盘):版本更新
+    
+    * chore(actions): check_format_lint
+    
+    ---------
+    
+    Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+
+[33mcommit 85fcf97d3472c173fce1f52f39e24d2fec0148d2[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 20:38:09 2023 +0800
+
+    feat(百度贴吧): 申请消息提醒弹窗 (#3186)
+    
+    * feat(百度贴吧):申请消息提醒弹窗
+    
+    * chore(actions): check_format_lint
+    
+    ---------
+    
+    Co-authored-by: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+
+[33mcommit d3053fa14832d048e34a45da012aa9628f9aa8dc[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 20:37:50 2023 +0800
+
+    feat(天翼生活): 开屏广告 (#3185)
+
+[33mcommit f7e687776239a20045ad65e3853ca2a3be24c393[m
+Author: Kun Jinkao <45487685+Snoopy1866@users.noreply.github.com>
+Date:   Fri Dec 15 20:37:31 2023 +0800
+
+    feat(韩小圈): 卡片式广告（优化规则） (#3181)
+
+[33mcommit 00f8d3126b9d07a8b4eeaf81cc805c152feea4dc[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 20:37:09 2023 +0800
+
+    feat(两步路户外助手):弹窗广告 (#3128)
+
+[33mcommit 0e182921ffdf820c180f753b2a157090faed0974[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 20:36:46 2023 +0800
+
+    feat(抖音):请求开启通知提示信息、添加快捷方式到桌面、 (#3180)
+    
+    close #3169
+    close #3170
+
+[33mcommit a99caceebbc9b96b1ef94182713d6d58b00edb66[m
+Author: Kun Jinkao <45487685+Snoopy1866@users.noreply.github.com>
+Date:   Fri Dec 15 20:34:23 2023 +0800
+
+    feat(全能计算器): 弹窗广告（补充 activityId） (#3179)
+
+[33mcommit 0055ad0bd4665b9d57ace113b6a5dbf7a3e624d0[m
+Author: Kun Jinkao <45487685+Snoopy1866@users.noreply.github.com>
+Date:   Fri Dec 15 20:33:20 2023 +0800
+
+    feat(腾讯视频): 请求通知权限弹窗（补充规则） (#3178)
+
+[33mcommit fbccdb6b06a7e8500f0c5d979850873a39db0101[m
+Author: Kun Jinkao <45487685+Snoopy1866@users.noreply.github.com>
+Date:   Fri Dec 15 20:32:55 2023 +0800
+
+    feat(秀动): 开屏广告（优化规则）、弹窗广告 (#3177)
+    
+    * feat 开屏广告（优化规则）
+    
+    * feat 弹窗广告
+
+[33mcommit 37ac820f81e003ebbe173f202066a698001acbf4[m
+Author: Kun Jinkao <45487685+Snoopy1866@users.noreply.github.com>
+Date:   Fri Dec 15 20:31:38 2023 +0800
+
+    feat(e高速): 开屏广告、卡片式广告 (#3175)
+    
+    * feat 开屏广告
+    
+    * feat 卡片式广告
+
+[33mcommit 92e004e988313fc67b64ac8255319c643ecae55b[m
+Author: Kun Jinkao <45487685+Snoopy1866@users.noreply.github.com>
+Date:   Fri Dec 15 20:31:02 2023 +0800
+
+    feat(微博): 弹窗广告（优化规则） (#3174)
+
+[33mcommit 3bee0a4f32d67e718d9fb39765ee77c0d02196ea[m
+Author: Kun Jinkao <45487685+Snoopy1866@users.noreply.github.com>
+Date:   Fri Dec 15 20:30:19 2023 +0800
+
+    feat(星影视频): 开屏广告、弹窗广告（补充规则） (#3173)
+    
+    * feat 开屏广告
+    
+    * feat 弹窗广告（补充规则）
+
+[33mcommit 460cf404d50f43aac2fc7e1ca0b893eba3ea0574[m
+Author: Kun Jinkao <45487685+Snoopy1866@users.noreply.github.com>
+Date:   Fri Dec 15 20:29:47 2023 +0800
+
+    feat(一淘): 开屏广告（优化规则）、更新弹窗（优化规则）、弹窗广告（优化规则） (#3172)
+    
+    * feat 开屏广告（优化规则）
+    
+    * feat 更新弹窗（优化规则）
+    
+    * feat 弹窗广告（优化规则）
+
+[33mcommit 7927fc51a2488328d939e1ef07c11ad41ea1c8c0[m
+Author: Kun Jinkao <45487685+Snoopy1866@users.noreply.github.com>
+Date:   Fri Dec 15 20:29:23 2023 +0800
+
+    feat(拼多多): 红包弹窗（补充规则 (#3171)
+
+[33mcommit b8b1e72e9d7a413361a66bae875c99f5e91f9a97[m
+Author: Kun Jinkao <45487685+Snoopy1866@users.noreply.github.com>
+Date:   Fri Dec 15 20:28:56 2023 +0800
+
+    feat(人人视频): 开屏广告 (#3167)
+
+[33mcommit d11bf28155316c6fd7cda75bc12c5313940db5e6[m
+Author: walklty <47232102+walklty@users.noreply.github.com>
+Date:   Fri Dec 15 20:27:59 2023 +0800
+
+    feat(GoFun APP): 开屏, 弹窗 (#3166)
+    
+    close #3163
+
+[33mcommit 391fec8c9e7f3649ffe4bcbe309c02f67ba3c18d[m
+Author: walklty <47232102+walklty@users.noreply.github.com>
+Date:   Fri Dec 15 19:37:40 2023 +0800
+
+    feat(晋江小说阅读):开屏广告 (#3164)
+    
+    close #3161
+
+[33mcommit 7aebcbb8352b803a9845ce57728e792151bc8a94[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 19:37:09 2023 +0800
+
+    feat(相册):开启相册同步弹窗 (#3160)
+    
+    close #3146
+
+[33mcommit a3840662fb744e41c39e071e785249831f3040ea[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 19:36:44 2023 +0800
+
+    Fix(番茄免费小说):广告弹窗 (#3159)
+    
+    close #2959
+    close #3063
+    close #2931
+    close #3182
+
+[33mcommit 45393f61c2eddc3081e49b891e15b4b3b5a2446a[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 19:35:14 2023 +0800
+
+    feat(360摄像机): 卡录像界面广告 (#3158)
+    
+    close #3145
+
+[33mcommit 6cf6a0ee63a7f53fcbcdea4c27c95e6984129137[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 19:34:51 2023 +0800
+
+    feat(汽水音乐): VIP弹窗 (#3156)
+    
+    * feat(汽水音乐): VIP弹窗
+    
+    * feat(汽水音乐):VIP弹窗
+
+[33mcommit 3fadb3aa9934de134033ccee0f3542366bf8bdbd[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 19:34:35 2023 +0800
+
+    feat(VIVO 电子书):开屏广告 (#3155)
+    
+    close #3147
+
+[33mcommit 43cbc2e7a5a61ca412ca924099052e6d659627af[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 19:34:15 2023 +0800
+
+    feat(TextNow):通知/链接蓝牙附件设备 权限申请 (#3154)
+    
+    close #3148
+
+[33mcommit 4b730125988b98e58fe2153738b507ff9f384a70[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 19:33:51 2023 +0800
+
+    feat(RayLink):版本更新 (#3153)
+    
+    close #3144
+
+[33mcommit cad0e0ac8e11f5f94defde6230b2c8ed69efdfbd[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 19:33:28 2023 +0800
+
+    feat(前程无忧51Job):开屏广告 (#3152)
+    
+    close #3149
+
+[33mcommit deee86a2bc41ddc44a19c890cc8ac0b224badd66[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 19:33:06 2023 +0800
+
+    feat(豆瓣):版本更新 (#3151)
+
+[33mcommit 776a13be745727feb795cab1943313019b4ce049[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 19:32:44 2023 +0800
+
+    feat(云闪付):天天签到-获得新勋章提示 (#3140)
+    
+    close #3143
+
+[33mcommit c17c565dc1aec63a69c178359a1db4a259c6109d[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 19:32:02 2023 +0800
+
+    feat(Edge):消息通知 (#3139)
+    
+    close #3119
+
+[33mcommit 946676b7da1eb9353ed4e585aa5fa92f617a7e7d[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 19:31:38 2023 +0800
+
+    feat(微店):首页红包弹窗 (#3138)
+    
+    close #3118
+
+[33mcommit f5d2dc8cf4534c93d028abdf3d4a856be1eb6523[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 19:31:10 2023 +0800
+
+    feat(兴业银行):开屏广告 (#3137)
+    
+    close #3114
+
+[33mcommit 4296330e1781b0618aac5c5d406ddf0412b789bb[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 19:30:43 2023 +0800
+
+    feat(菠萝包轻小说):开屏广告 (#3136)
+    
+    close #3113
+
+[33mcommit b0424b340bc7ff3b48ffbcb0eb26a4479dc682be[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 19:29:21 2023 +0800
+
+    feat(高佣联盟):开屏广告、版本更新 (#3135)
+    
+    clsoe #3111
+    close #3112
+
+[33mcommit 4b62dcc24f48e1e75ff5fa2e90d3a8c28aeb5d98[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 19:28:41 2023 +0800
+
+    feat(青岛地铁):开屏广告 (#3134)
+    
+    close #3110
+
+[33mcommit a1e99fad3048095db93a69d4d4b6456e95668f4a[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 19:28:18 2023 +0800
+
+    feat(华硕应用市场):开屏广告 (#3133)
+    
+    close #3108
+
+[33mcommit 554c89af978e4dad751862644d3e5a25baa4b2be[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 19:27:58 2023 +0800
+
+    feat(支付宝):关闭花呗升级弹窗 (#3132)
+    
+    close #3168
+
+[33mcommit c3407304794380dfd7c32547f83eab8b147ac243[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 19:27:29 2023 +0800
+
+    feat(万能遥控): 申请定位 (#3131)
+    
+    close #3106
+
+[33mcommit e49e8b21e3618ecf7a96f3a0f324de08c039db19[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 19:27:05 2023 +0800
+
+    feat(中华万年历日历):开屏广告 (#3130)
+    
+    close #3105
+
+[33mcommit 7030ade9b2167aecf47221e5102669ac8d49ed96[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 19:26:43 2023 +0800
+
+    feat(今日校园):版本更新 (#3129)
+    
+    close #3103
+
+[33mcommit 2f8bf44b25f84aa5ba6b6129277fe5360a513ae2[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 19:25:16 2023 +0800
+
+    feat(乔安智联):开屏广告 (#3127)
+    
+    close #3101
+
+[33mcommit 5133555a5ecbd4a27a54a97317e58caed821c784[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 19:24:53 2023 +0800
+
+    feat(清瞳):开屏广告 (#3126)
+    
+    close #3100
+
+[33mcommit 0a84ab63fbf6cdaf66bac5420bb22e0c90e0f180[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 19:24:30 2023 +0800
+
+    feat(抖音极速版):朋友推荐弹窗 (#3125)
+    
+    close #3099
+
+[33mcommit 8db2bd77f67c507fb8cc68458abe40a19a287d5d[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 19:24:07 2023 +0800
+
+    feat(讯飞输入法):开屏广告 (#3124)
+    
+    close #3098
+
+[33mcommit 009f4759a20ae4262d1d8473ddc59ecb0fe56598[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 19:23:45 2023 +0800
+
+    feat(Keep):开屏广告 (#3123)
+    
+    close #3096
+
+[33mcommit 25fa988fce45f0f7478599a7c11b42571b93cd6e[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Fri Dec 15 19:23:01 2023 +0800
+
+    feat(LOFTER):开屏广告 (#3122)
+    
+    close #3094
+
+[33mcommit c8933b493b36ad018055b87965c6c8aee21cc2aa[m
+Author: shanlanCoding <44717382+shanlanCoding@users.noreply.github.com>
+Date:   Fri Dec 15 19:22:31 2023 +0800
+
+    fix(今日头条): 竖屏视频广告增加冷却时间 (#3117)
+    
+    * fix(今日头条): 竖屏视频广告增加冷却时间
+    
+    * fix(今日头条): 竖屏视频广告增加冷却时间2
+    
+    ---------
+    
+    Co-authored-by: shanlan <hi@gobyte.cn>
+
+[33mcommit 42d6d339cccf459765cfbd1bda0054d09641ac88[m
+Author: xcz1997 <cappuxcz@outlook.com>
+Date:   Fri Dec 15 19:19:31 2023 +0800
+
+    feat(软件包安装程序): 自动跳过协议 (#3040)
+
+[33mcommit f4a402ea151870e1b8b2a13faa384edc4956b52d[m
+Author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+Date:   Mon Dec 11 13:23:33 2023 +0000
+
+    chore: v1.176.0
+
+[33mcommit d2753397bf4106391711853f3ad8b637d536cacf[m
+Author: jiuqianyuan <39406781+jiuqianyuan@users.noreply.github.com>
+Date:   Mon Dec 11 21:21:01 2023 +0800
+
+    feat: 删除问题quickFind (#2985)
+    
+    删除开屏规则[id="com.byted.pangle:id/tt_splash_skip_btn"]的quickFind属性。
+    快照中[id="com.byted.pangle:id/tt_splash_skip_btn"]可快速查找系GKD标识错误。
+    - https://github.com/gkd-kit/gkd/issues/369
