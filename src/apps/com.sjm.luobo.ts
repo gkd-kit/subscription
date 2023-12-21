@@ -13,7 +13,8 @@ export default defineAppConfig({
       rules: [
         {
           name: '字节广告SDK',
-          matches: 'FrameLayout[childCount>1] > FrameLayout[childCount=1] > ImageView[width<90][height<90]',
+          matches:
+            'FrameLayout[childCount>1] > FrameLayout[childCount=1] > ImageView[width<90][height<90]',
           snapshotUrls: 'https://i.gkd.li/import/13723963',
         },
       ],
