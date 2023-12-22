@@ -192,8 +192,7 @@ export default defineAppConfig({
           preKeys: 0,
           key: 1,
           name: '点击[不感兴趣]',
-          matches:
-            '@RelativeLayout > [text$="不感兴趣"]',
+          matches: '@RelativeLayout > [text$="不感兴趣"]',
           snapshotUrls: [
             'https://i.gkd.li/import/13256605',
             'https://i.gkd.li/import/13625309',
