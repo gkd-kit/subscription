@@ -36,5 +36,33 @@ export default defineAppConfig({
         'ImageView < @Button < ViewGroup +3 Button[desc*="YouTube Premium"]',
       snapshotUrls: 'https://i.gkd.li/import/12877357',
     },
+    {
+      key: 3,
+      name: '视频播放-跳过广告(英文)',
+      rules: [
+        {
+          activityIds:
+            'com.google.android.apps.youtube.app.watchwhile.MainActivity',
+          matches: '[id="com.google.android.youtube:id/skip_ad_button"]',
+          exampleUrls:
+            'https://m.gkd.li/33296184/6f4099c6-7173-436e-add5-edf445402556',
+          snapshotUrls: 'https://i.gkd.li/import/13757181',
+        },
+      ],
+    },
+    {
+      key: 4,
+      name: '视频播放-关闭合集(Mix)',
+      rules: [
+        {
+          activityIds:
+            'com.google.android.apps.youtube.app.watchwhile.MainActivity',
+          matches: '[id="com.google.android.youtube:id/close_button"]',
+          exampleUrls:
+            'https://m.gkd.li/33296184/6c9cb33c-f6b1-4ea6-96da-e159ee0dc0d6',
+          snapshotUrls: 'https://i.gkd.li/import/13757298',
+        },
+      ],
+    },
   ],
 });
