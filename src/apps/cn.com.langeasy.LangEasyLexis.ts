@@ -22,7 +22,7 @@ export default defineAppConfig({
     {
       key: 2,
       enable: false,
-      name: '右下角小弹窗',
+      name: '右下角弹窗',
       quickFind: true,
       matchTime: 10000,
       rules: [
