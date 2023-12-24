@@ -12,14 +12,17 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
+          key: 0,
           matches: '[id$="tt_splash_skip_btn"]',
           snapshotUrls: [
             'https://i.gkd.li/import/12683145',
-            'https://i.gkd.li/import/12683173', // activityId: 'com.miui.home.launcher.Launcher'
+            'https://i.gkd.li/import/12683173',
             'https://i.gkd.li/import/13702708',
           ],
         },
         {
+          key: 1,
+          quickFind: true,
           matches: '[text*="跳过"][text.length<=10]',
           snapshotUrls: [
             'https://i.gkd.li/import/12683168',
