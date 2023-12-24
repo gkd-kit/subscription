@@ -18,6 +18,11 @@ export default defineAppConfig({
             '[id=`com.google.android.apps.photos:id/negative_button`][text=`以后再说`]',
           snapshotUrls: 'https://i.gkd.li/import/13218940',
         },
+        {
+          matches:
+            '[id=`com.google.android.apps.photos:id/negative_button`][text=`Not now`]',
+          snapshotUrls: 'https://i.gkd.li/import/13761928',
+        },
       ],
     },
   ],
