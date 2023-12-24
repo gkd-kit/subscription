@@ -26,8 +26,7 @@ export default defineAppConfig({
         {
           name: '腾讯广告SDK',
           activityIds: 'com.xpx365.projphoto.FirstActivity',
-          matches:
-            'FrameLayout[childCount>1] > FrameLayout[index=3]',
+          matches: 'FrameLayout[childCount>1] > FrameLayout[index=3]',
           snapshotUrls: 'https://i.gkd.li/import/13762196',
         },
         {
