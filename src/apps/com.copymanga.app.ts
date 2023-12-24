@@ -139,16 +139,29 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      name: '加入书架按钮下面的广告',
-      activityIds: 'com.copymanga.app.MainActivity',
+      name: '卡片式广告',
       rules: [
         {
-          name: '点击右上角x',
-          matches: 'ImageView[id="com.copymanga.app:id/close"]',
+          key: 0,
+          name: '快手广告-1',
+          activityIds: 'com.copymanga.app.MainActivity',
+          matches:
+            '[id^="com.copymanga.app:id/ad_flag_source"] - * > [id="com.copymanga.app:id/close"]',
           snapshotUrls: 'https://i.gkd.li/import/12504525',
         },
         {
-          name: '点击右下角x',
+          key: 1,
+          name: '快手广告-2',
+          activityIds: 'com.copymanga.app.MainActivity',
+          quickFind: true,
+          matches:
+            '[id="com.copymanga.app:id/close_m_image_left_text_right_no_compliance"]',
+          snapshotUrls: 'https://i.gkd.li/import/13761154',
+        },
+        {
+          key: 2,
+          name: '腾讯广告',
+          activityIds: 'com.copymanga.app.MainActivity',
           matches:
             'FrameLayout[childCount=3] > LinearLayout + FrameLayout[childCount=1] > ImageView[id=null]',
           snapshotUrls: [
