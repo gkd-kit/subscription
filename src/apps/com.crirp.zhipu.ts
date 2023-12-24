@@ -11,7 +11,7 @@ export default defineAppConfig({
       activityIds: 'com.ruipeng.zipu.ui.bootpage.BootPageActivity',
       matchTime: 10000,
       quickFind: true,
-      actionMaximum: 1, 
+      actionMaximum: 1,
       resetMatch: 'app',
       rules: [
         {
