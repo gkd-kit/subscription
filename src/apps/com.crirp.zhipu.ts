@@ -8,7 +8,6 @@ export default defineAppConfig({
       name: '开屏广告',
       key: 1,
       enable: true,
-      activityIds: 'com.ruipeng.zipu.ui.bootpage.BootPageActivity',
       matchTime: 10000,
       quickFind: true,
       actionMaximum: 1,
