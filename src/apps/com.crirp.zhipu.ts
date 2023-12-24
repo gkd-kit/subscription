@@ -3,13 +3,16 @@ import { defineAppConfig } from '../types';
 export default defineAppConfig({
   id: 'com.crirp.zhipu',
   name: '智谱',
-  quickFind: true,
   groups: [
     {
       name: '开屏广告',
       key: 1,
       enable: true,
       activityIds: 'com.ruipeng.zipu.ui.bootpage.BootPageActivity',
+      matchTime: 10000,
+      quickFind: true,
+      actionMaximum: 1, 
+      resetMatch: 'app',
       rules: [
         {
           matches: '[text="关闭"]',
@@ -22,6 +25,7 @@ export default defineAppConfig({
       key: 2,
       desc: '【首页-今日要闻-不再提示】和【首页-今日要闻-关闭】只开启一个即可',
       enable: false,
+      quickFind: true,
       activityIds: 'com.ruipeng.zipu.ui.main.uniauto.UniautoHomeActivity',
       rules: [
         {
@@ -35,6 +39,7 @@ export default defineAppConfig({
       key: 3,
       desc: '【首页-今日要闻-不再提示】和【首页-今日要闻-关闭】只开启一个即可',
       enable: false,
+      quickFind: true,
       activityIds: 'com.ruipeng.zipu.ui.main.uniauto.UniautoHomeActivity',
       rules: [
         {
