@@ -12,7 +12,6 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
-          quickFind: true,
           key: 0,
           matches: '[text*="跳过"][text.length<=10]',
           snapshotUrls: [
