@@ -52,7 +52,8 @@ export default defineAppConfig({
           key: 1,
           name: '视频页-浮窗广告',
           activityIds: 'com.ss.android.ugc.detail.activity.TikTokActivity',
-          matches: 'FrameLayout > FrameLayout > FrameLayout[childCount=2] > ImageView + ImageView[clickable=true][visibleToUser=true]',
+          matches:
+            'FrameLayout > FrameLayout > FrameLayout[childCount=2] > ImageView + ImageView[clickable=true][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/import/13761236',
         },
       ],
