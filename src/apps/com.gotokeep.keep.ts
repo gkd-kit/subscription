@@ -25,10 +25,10 @@ export default defineAppConfig({
     {
       key: 1,
       name: '青少年模式弹窗',
-      activityIds:
-        'com.gotokeep.keep.refactor.business.main.activity.MainActivity',
-      rules:
-        '[text$="未成年人模式"] + ImageView + ViewGroup > [text="我知道了"]',
+      actionMaximum: 1,
+      resetMatch: 'app',
+      quickFind: true,
+      rules: '[text$="未成年人模式"] +2 @[clickable=true] > [text="我知道了"]',
       snapshotUrls: 'https://i.gkd.li/import/12706097',
     },
     {
