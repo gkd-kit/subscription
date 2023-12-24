@@ -65,5 +65,14 @@ export default defineAppConfig({
       rules: 'ImageView + LinearLayout > ImageView[id=null][clickable=true]',
       snapshotUrls: 'https://i.gkd.li/import/12706111',
     },
+    {
+      key: 5,
+      name: '请求开启通知权限弹窗',
+      actionMaximum: 1,
+      resetMatch: 'app',
+      quickFind: true,
+      rules: '@[text="暂不开启"] +2 [text="开启通知权限"]',
+      snapshotUrls: 'https://i.gkd.li/import/13761671',
+    },
   ],
 });
