@@ -11,7 +11,7 @@ export default defineAppConfig({
       matchTime: 10000,
       resetMatch: 'app',
       actionMaximum: 1,
-      rules: [text="现在升级"] - TextView[text="以后再说"]',
+      rules: '[text="现在升级"] - TextView[text="以后再说"]',
       snapshotUrls: 'https://i.gkd.li/import/13766557',
     },
   ],
