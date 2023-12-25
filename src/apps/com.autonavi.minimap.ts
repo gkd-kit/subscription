@@ -66,7 +66,7 @@ export default defineAppConfig({
       resetMatch: 'app',
       activityIds: 'com.autonavi.map.activity.NewMapActivity',
       rules:
-        'ImageView[visibleToUser=true][width<90][height<90] < @ViewGroup -(2) ViewGroup > ViewGroup > View[text*="成长值"]',
+        'ImageView[visibleToUser=true][width<90][height<90] < @ViewGroup -(2) ViewGroup > ViewGroup > View[text*="签到"||text*="成长值"]',
       snapshotUrls: [
         'https://i.gkd.li/import/12642842',
         'https://i.gkd.li/import/12642845',
