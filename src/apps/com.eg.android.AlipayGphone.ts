@@ -132,7 +132,6 @@ export default defineAppConfig({
     {
       key: 10,
       name: '小程序-12306',
-      quickFind: true,
       activityIds: 'com.alipay.mobile.nebulax.xriver.activity.XRiverActivity',
       rules: [
         {
@@ -145,6 +144,7 @@ export default defineAppConfig({
         {
           preKeys: 0,
           key: 1,
+          quickFind: true,
           matches: '[text="对该内容不感兴趣"]',
           action: 'clickCenter',
           snapshotUrls: 'https://i.gkd.li/import/13763315',
