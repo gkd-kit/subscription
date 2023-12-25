@@ -395,7 +395,6 @@ export default defineAppConfig({
     {
       key: 21,
       name: '半屏广告-元神',
-      quickFind: true,
       activityIds: 'com.tencent.mobileqq.activity.QPublicTransFragmentActivity',
       rules: [
         {
