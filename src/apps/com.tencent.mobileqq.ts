@@ -392,5 +392,19 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 21,
+      name: '半屏广告-元神',
+      quickFind: true,
+      activityIds: 'com.tencent.mobileqq.activity.QPublicTransFragmentActivity',
+      rules: [
+        {
+          key: 0,
+          matches:
+            'ViewGroup[childCount=3] > ViewGroup[childCount=6] + ViewGroup',
+          snapshotUrls: ['https://i.gkd.li/import/13713910'],
+        },
+      ],
+    },
   ],
 });
