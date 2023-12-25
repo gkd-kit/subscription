@@ -13,7 +13,8 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
-          matches: '@[id="com.baixin.mobilebank:id/ad_jump_layout"] > [text="跳过"]',
+          matches:
+            '@[id="com.baixin.mobilebank:id/ad_jump_layout"] > [text="跳过"]',
           snapshotUrls: 'https://i.gkd.li/import/13765072',
         },
       ],
