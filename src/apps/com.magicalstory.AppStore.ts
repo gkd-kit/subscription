@@ -35,13 +35,14 @@ export default defineAppConfig({
           ],
           matches: [
             '[id^="com.magicalstory.AppStore:id/banner"]',
-            'FrameLayout[childCount=5] > FrameLayout[childCount=1] > ImageView',
+            'FrameLayout[childCount=5] > FrameLayout[childCount=1] > ImageView[visibleToUser=true]',
           ],
           snapshotUrls: [
             'https://i.gkd.li/import/13185746',
             'https://i.gkd.li/import/13413482',
             'https://i.gkd.li/import/13416979',
             'https://i.gkd.li/import/13527698',
+            'https://i.gkd.li/import/13759492', // 限定 visibleToUser, 防止误触
           ],
         },
         {
@@ -78,6 +79,16 @@ export default defineAppConfig({
       rules:
         '[id="com.magicalstory.AppStore:id/tv_update"] <2 * + * > [id="com.magicalstory.AppStore:id/iv_close"]',
       snapshotUrls: 'https://i.gkd.li/import/13459373',
+    },
+    {
+      key: 6,
+      name: '搜索页-卡片广告',
+      desc: '腾讯广告',
+      actionMaximum: 1,
+      activityIds: 'com.magicalstory.AppStore.search.searchActivity',
+      rules:
+        'FrameLayout[childCount>1] > FrameLayout[childCount=1] > ImageView[width<80][height<80]',
+      snapshotUrls: 'https://i.gkd.li/import/13695554',
     },
   ],
 });

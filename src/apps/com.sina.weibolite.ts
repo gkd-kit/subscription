@@ -32,10 +32,23 @@ export default defineAppConfig({
           preKeys: 0,
           name: '点击[不感兴趣]',
           matches:
-            '@View[clickable=true][childCount=1] > TextView[text="不感兴趣"]',
-          snapshotUrls: 'https://i.gkd.li/import/12738132',
+            '@View[clickable=true][childCount=1] > TextView[text="不感兴趣"||text$="interest"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12738132',
+            'https://i.gkd.li/import/13727657',
+          ],
         },
       ],
+    },
+    {
+      key: 2,
+      name: 'APP评分',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      activityIds: 'com.weico.international.activity.MainFragmentActivity',
+      rules: '[id="com.sina.weibolite:id/ed_btn_negative"]',
+      snapshotUrls: 'https://i.gkd.li/import/13727728',
     },
   ],
 });

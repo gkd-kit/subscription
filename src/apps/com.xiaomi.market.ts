@@ -61,8 +61,11 @@ export default defineAppConfig({
       name: '请求通知权限提示弹窗',
       desc: '自动点击关闭按钮',
       quickFind: true,
-      matchLauncher: true,
-      activityIds: 'com.xiaomi.market.ui.UpdateListActivity',
+
+      activityIds: [
+        'com.xiaomi.market.ui.UpdateListActivity',
+        'com.xiaomi.market.business_ui.main.MarketTabActivity',
+      ],
       rules: [
         {
           key: 0,
@@ -75,7 +78,10 @@ export default defineAppConfig({
           key: 1,
           name: '开启通知栏提醒',
           matches: 'Button[text="立即开启"] - Button[text="不了，谢谢"]',
-          snapshotUrls: 'https://i.gkd.li/import/13197306',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13197306',
+            'https://i.gkd.li/import/13691701',
+          ],
         },
       ],
     },
