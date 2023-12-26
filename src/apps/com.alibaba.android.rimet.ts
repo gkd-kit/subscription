@@ -38,7 +38,7 @@ export default defineAppConfig({
         {
           key: 0,
           matches:
-            'ImageView < FrameLayout + FrameLayout > [id="com.alibaba.android.rimet:id/icft_close"]',
+            'ImageView < FrameLayout + @FrameLayout > [id="com.alibaba.android.rimet:id/icft_close"]',
           snapshotUrls: 'https://i.gkd.li/import/13325125',
           action: 'clickCenter',
         },
