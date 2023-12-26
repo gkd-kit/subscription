@@ -97,7 +97,8 @@ export default defineAppConfig({
           snapshotUrls: 'https://i.gkd.li/import/13402478',
         },
         {
-          matches: 'TextView[id="com.alibaba.android.rimet:id/dialog_close_button"]',
+          matches:
+            'TextView[id="com.alibaba.android.rimet:id/dialog_close_button"]',
           snapshotUrls: 'https://i.gkd.li/import/13772090',
         },
       ],
