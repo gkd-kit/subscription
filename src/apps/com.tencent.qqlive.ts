@@ -9,13 +9,12 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       quickFind: true,
-      matchTime: 5000,
+      matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       rules: [
         {
-          action: 'clickCenter',
-          actionDelay: 500,
+          action: 'clickCenter', //反馈测试clickNode点击无效
           matches: '[text*="跳过"][text.length<=10]',
           snapshotUrls: [
             'https://i.gkd.li/import/12700227',
