@@ -53,10 +53,15 @@ export default defineAppConfig({
       actionMaximum: 1,
       matchTime: 30000,
       resetMatch: 'app',
-      activityIds: 'com.xingin.xhs.index.v2.IndexActivityV2',
-      rules:
-        '@ImageView[clickable=true] <2 FrameLayout < LinearLayout >2 [text="立即安装"]',
-      snapshotUrls: 'https://i.gkd.li/import/13246890',
+      rules: [
+        {
+          matches: 'ImageView[id="com.xingin.xhs:id/b6w"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13246890',
+            'https://i.gkd.li/import/13741680',
+          ],
+        },
+      ],
     },
     {
       enable: false,
