@@ -9,15 +9,21 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       quickFind: true,
-      matchTime: 10000,
+      matchTime: 5000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: 'FrameLayout[id=null] > TextView[text="跳过"][id=null]',
-      snapshotUrls: [
-        'https://i.gkd.li/import/12700227',
-        'https://i.gkd.li/import/12700122',
-        'https://i.gkd.li/import/12700541',
-        'https://i.gkd.li/import/12910953',
+      rules: [
+        {
+          action: 'clickCenter',
+          actionDelay: 500,
+          matches: '[text*="跳过"][text.length<=10]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12700227',
+            'https://i.gkd.li/import/12700122',
+            'https://i.gkd.li/import/12700541',
+            'https://i.gkd.li/import/12910953',
+          ],
+        },
       ],
     },
     {
