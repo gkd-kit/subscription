@@ -39,7 +39,7 @@ export default defineAppConfig({
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
-      resetMatch: "app",
+      resetMatch: 'app',
       rules: [
         {
           matches: 'Button[id="com.vivo.space:id/vbutton_title"][text="取消"]',
