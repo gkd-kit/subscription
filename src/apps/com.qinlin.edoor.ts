@@ -26,7 +26,8 @@ export default defineAppConfig({
           key: 0,
           name: '穿山甲SDK',
           quickFind: true,
-          matches: '@[id="com.qinlin.edoor:id/iv_close"] - LinearLayout >n [text*="广告"]',
+          matches:
+            '@[id="com.qinlin.edoor:id/iv_close"] - LinearLayout >n [text*="广告"]',
           snapshotUrls: 'https://i.gkd.li/import/13771774',
         },
       ],
