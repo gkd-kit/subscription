@@ -243,5 +243,27 @@ export default defineAppConfig({
         'https://i.gkd.li/import/13328738',
       ],
     },
+    {
+      enable: false,
+      key: 12,
+      name: '贴吧内签到并关闭弹窗',
+      resetMatch: 'activity',
+      rules: [
+        {
+          key: 0,
+          name: '贴吧页签到',
+          activityIds: ['com.baidu.tieba.forum.ForumActivity'],
+          matches: '[name="android.widget.TextView"][text="签到"]',
+          snapshotUrls: ['https://i.gkd.li/import/13776563'],
+        },
+        {
+          key: 1,
+          name: '签到成功-弹窗',
+          activityIds: ['com.baidu.tbadk.browser.TBWebContainerActivity'],
+          matches: '[name="android.widget.TextView"][clickable=true][text=""]',
+          snapshotUrls: ['https://i.gkd.li/import/13776424'],
+        },
+      ],
+    },
   ],
 });
