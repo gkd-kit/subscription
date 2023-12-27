@@ -30,7 +30,7 @@ export default defineAppConfig({
           snapshotUrls: [
             'https://i.gkd.li/import/13183946', //com.alipay.android.msp.ui.views.MspContainerActivity
             'https://i.gkd.li/import/12826077', //com.alipay.android.msp.ui.views.MspUniRenderActivity
-            'https://i.gkd.li/import/12915864', //matchLauncher
+            'https://i.gkd.li/import/12915864',
           ],
         },
         {
@@ -87,6 +87,7 @@ export default defineAppConfig({
       activityIds: [
         'com.alipay.mobile.alipassapp.alkb.kb.ALPMainPage63',
         'com.eg.android.AlipayGphone.AlipayLogin',
+        'com.alipay.mobile.about.ui.AboutAlipayActivity',
       ],
       rules: [
         {
@@ -98,8 +99,11 @@ export default defineAppConfig({
         {
           name: '弹窗-【x】',
           matches:
-            '[text="版本更新"] - [id="com.alipay.mobile.antui:id/btn_close"]',
-          snapshotUrls: 'https://i.gkd.li/import/13490805',
+            '[text="版本更新"||text^="Version"] - [id="com.alipay.mobile.antui:id/btn_close"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13490805',
+            'https://i.gkd.li/import/13580594',
+          ],
         },
         {
           name: '卡片-【x】',
