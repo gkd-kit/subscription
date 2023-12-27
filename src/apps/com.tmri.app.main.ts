@@ -27,6 +27,7 @@ export default defineAppConfig({
           snapshotUrls: [
             'https://i.gkd.li/import/13315944', //com.tmri.app.ui.activity.main.MainTabHostNewActivity
             'https://i.gkd.li/import/13779215', //com.tmri.app.ui.activity.main.TmriNewActivity
+          ],
         },
       ],
     },
