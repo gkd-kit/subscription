@@ -11,12 +11,12 @@ export default defineAppConfig({
       rules: [
         {
           matches:
-            '@ViewGroup[clickable=true][focusable=true][visibleToUser=true][index=0][childCount=1]',
+            '@ViewGroup[id=null][vid=null][text=null][clickable=true][focusable=true][visibleToUser=true][index=0][childCount=1]',
           snapshotUrls: 'https://i.gkd.li/import/13778179',
         },
         {
           matches:
-            '@FrameLayout[clickable=false][focusable=false][visibleToUser=true][index=1][childCount=1]',
+            '@FrameLayout[id=null][vid=null][text=null][clickable=false][focusable=false][visibleToUser=true][index=1][childCount=1]',
           snapshotUrls: 'https://i.gkd.li/import/13784406', //极少触发
         },
         {
