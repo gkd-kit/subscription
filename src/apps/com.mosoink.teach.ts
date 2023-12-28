@@ -10,17 +10,22 @@ export default defineAppConfig({
       activityIds: ['com.mosoink.teach.MainMenuActivity'],
       rules: [
         {
-          matches:
-            '@ViewGroup[id=null][vid=null][text=null][clickable=true][focusable=true][visibleToUser=true][index=0][childCount=1]',
+          matches: '[text="广告"] <2 ViewGroup -2 ViewGroup > ViewGroup',
+          exampleUrls:
+            'https://m.gkd.li/64072399/4f7366d4-77eb-4a11-8e08-26afc29f29ed',
           snapshotUrls: 'https://i.gkd.li/import/13778179',
         },
         {
           matches:
-            '@FrameLayout[id=null][vid=null][text=null][clickable=false][focusable=false][visibleToUser=true][index=1][childCount=1][depth=7]',
+            'TextView - View <1 FrameLayout - FrameLayout >1 FrameLayout > ImageView < FrameLayout',
+          exampleUrls:
+            'https://m.gkd.li/64072399/69bb91ee-5367-4819-94d7-90e357dd9d3c',
           snapshotUrls: 'https://i.gkd.li/import/13784406', //极少触发
         },
         {
           matches: '[id$="/iv_close"]',
+          exampleUrls:
+            'https://m.gkd.li/64072399/695871fb-9c73-4c93-a6d1-18d90786604a',
           snapshotUrls: 'https://i.gkd.li/import/13778123',
         },
       ],
