@@ -60,9 +60,15 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
-          matches: 'View[desc="广告"] + ImageView[clickable=true]', // 1689050226722
-          snapshotUrls: 'https://i.gkd.li/import/12847842',
+          activityIds: [
+            'com.tencent.mobileqq.activity.SplashActivity',
+            'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
+          ],
+          matches: 'View[desc="广告"] + ImageView[clickable=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12847842',
+            'https://i.gkd.li/import/13787345',
+          ],
         },
         {
           preKeys: 0,
