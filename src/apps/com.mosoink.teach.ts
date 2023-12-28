@@ -11,7 +11,7 @@ export default defineAppConfig({
       rules: [
         {
           matches:
-            '[id=null][vid=null][name="android.view.ViewGroup"][text=null][clickable=true][focusable=true][visibleToUser=true][index=0]',
+            '@ViewGroup[clickable=true][focusable=true][visibleToUser=true][index=0][childCount=1]',
           snapshotUrls: 'https://i.gkd.li/import/13778179',
         },
         {
