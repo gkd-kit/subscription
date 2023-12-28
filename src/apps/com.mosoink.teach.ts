@@ -15,6 +15,11 @@ export default defineAppConfig({
           snapshotUrls: 'https://i.gkd.li/import/13778179',
         },
         {
+          matches:
+            '@FrameLayout[clickable=false][focusable=false][visibleToUser=true][index=1][childCount=1]',
+          snapshotUrls: 'https://i.gkd.li/import/13784406', //极少触发
+        },
+        {
           matches: '[id$="/iv_close"]',
           snapshotUrls: 'https://i.gkd.li/import/13778123',
         },
