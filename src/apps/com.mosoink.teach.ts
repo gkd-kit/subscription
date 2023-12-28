@@ -16,7 +16,7 @@ export default defineAppConfig({
         },
         {
           matches:
-            '@FrameLayout[id=null][vid=null][text=null][clickable=false][focusable=false][visibleToUser=true][index=1][childCount=1]',
+            '@FrameLayout[id=null][vid=null][text=null][clickable=false][focusable=false][visibleToUser=true][index=1][childCount=1][depth=7]',
           snapshotUrls: 'https://i.gkd.li/import/13784406', //极少触发
         },
         {
