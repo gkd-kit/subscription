@@ -25,7 +25,8 @@ export default defineAppConfig({
           ],
         },
         {
-          matches: '[id="com.jf.my:id/toUpgradeTv"] - [id="com.jf.my:id/cancelTv"]',
+          matches:
+            '[id="com.jf.my:id/toUpgradeTv"] - [id="com.jf.my:id/cancelTv"]',
           snapshotUrls: 'https://i.gkd.li/import/13786867',
         },
       ],
