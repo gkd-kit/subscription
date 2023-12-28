@@ -21,9 +21,15 @@ export default defineAppConfig({
         {
           name: '情况2',
           quickFind: true,
-          activityIds: 'com.moji.mjad.splash.activity.SplashVideoActivity',
+          activityIds: [
+            'com.moji.mjad.splash.activity.SplashVideoActivity',
+            'com.moji.mjweather.MainActivity',
+          ],
           matches: '[text$="跳过"][text.length<=10]',
-          snapshotUrls: 'https://i.gkd.li/import/13709986',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13709986',
+            'https://i.gkd.li/import/13787272',
+          ],
         },
       ],
     },
