@@ -102,7 +102,8 @@ export default defineAppConfig({
         {
           key: 0,
           name: '点击广告卡片右上角[廣告]',
-          matches: 'ImageView - TextView[text="廣告"][clickable=true][id!=null]',
+          matches:
+            'ImageView - TextView[text="廣告"][clickable=true][id!=null]',
           snapshotUrls: 'https://i.gkd.li/import/13791200',
         },
         {
