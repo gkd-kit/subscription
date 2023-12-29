@@ -482,7 +482,8 @@ export default defineAppConfig({
           key: 0,
           name: '8.0.44以下',
           quickFind: true,
-          activityIds: 'com.tencent.mm.plugin.brandservice.ui.timeline.BizTimeLineUI',
+          activityIds:
+            'com.tencent.mm.plugin.brandservice.ui.timeline.BizTimeLineUI',
           matches: '[text="展开更早的消息"] < [id="com.tencent.mm:id/aqc"]',
           snapshotUrls: 'https://i.gkd.li/import/13790550',
         },
