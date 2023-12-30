@@ -40,7 +40,7 @@ export default defineAppConfig({
           matches: '[text="广告"] +n [desc="关闭"]',
           snapshotUrls: [
             'https://i.gkd.li/import/13206534', //歌单页
-            'https://i.gkd.li/import/13797001' //我的页
+            'https://i.gkd.li/import/13797001', //我的页
           ],
         },
         {
