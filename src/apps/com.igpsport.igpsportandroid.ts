@@ -7,8 +7,11 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      activityIds: 'com.igpsport.globalapp.activity.SplashAdActivity',
-      rules: '[id="com.igpsport.igpsportandroid:id/tvSkip"]',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      quickFind: true,
+      rules: '[text*="跳过"][text.length<=10]',
       snapshotUrls: 'https://i.gkd.li/import/12818230',
     },
   ],
