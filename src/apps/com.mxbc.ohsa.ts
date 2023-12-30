@@ -5,6 +5,19 @@ export default defineAppConfig({
   name: '蜜雪冰城鸿蒙版',
   groups: [
     {
+      key: 0,
+      name: '开屏广告',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          matches: 'UIComponentContainer > [text*="跳过"]',
+          snapshotUrls: 'https://i.gkd.li/import/13797539',
+        },
+      ],
+    },
+    {
       key: 3,
       name: '首页-弹窗广告',
       rules: [
