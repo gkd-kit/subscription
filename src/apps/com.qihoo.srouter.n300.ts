@@ -11,11 +11,10 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       quickFind: true,
-      rules: [
-        {
-          matches: '[id="com.qihoo.srouter.n300:id/tv_countdown"]',
-          snapshotUrls: 'https://i.gkd.li/import/13216607',
-        },
+      rules: '[text*="跳过"][text.length<=10]',
+      snapshotUrls: [
+        'https://i.gkd.li/import/13216607',
+        'https://i.gkd.li/import/13800007',
       ],
     },
   ],
