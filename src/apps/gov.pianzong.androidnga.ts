@@ -11,7 +11,8 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: '[id="gov.pianzong.androidnga:id/iv_tg_ad" || id="gov.pianzong.androidnga:id/ksad_splash_circle_skip_view" || id="gov.pianzong.androidnga:id/ksad_skip_view_skip"]',
+      rules:
+        '[id="gov.pianzong.androidnga:id/iv_tg_ad" || id="gov.pianzong.androidnga:id/ksad_splash_circle_skip_view" || id="gov.pianzong.androidnga:id/ksad_skip_view_skip"]',
       snapshotUrls: [
         'https://i.gkd.li/import/12476484',
         'https://i.gkd.li/import/12706127', // activityIds: 'com.miui.home.launcher.Launcher',
