@@ -13,11 +13,13 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
-          matches: '@LinearLayout > TextView[text^="跳过"]',
+          key: 0,
+          matches: '[text*="跳过"][text.length<=10]',
           snapshotUrls: [
             'https://i.gkd.li/import/13400234',
             'https://i.gkd.li/import/13400250',
             'https://i.gkd.li/import/13400257',
+            'https://i.gkd.li/import/13798922',
           ],
         },
       ],
