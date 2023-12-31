@@ -17,5 +17,14 @@ export default defineAppConfig({
         'https://i.gkd.li/import/13800007',
       ],
     },
+    {
+      key: 1,
+      name: '弹窗广告',
+      actionMaximum: 1,
+      resetMatch: 'app',
+      quickFind: true,
+      rules: '[vid="app_update_later_button"]',
+      snapshotUrls: 'https://i.gkd.li/import/13800011',
+    },
   ],
 });
