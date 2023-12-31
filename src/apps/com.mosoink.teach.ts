@@ -17,7 +17,7 @@ export default defineAppConfig({
         },
         {
           matches:
-            '[text="广告"] <2 ViewGroup < ViewGroup < ViewGroup - ViewGroup > ViewGroup +4 ViewGroup > ViewGroup',
+            '[text="广告"] <2 ViewGroup < ViewGroup < ViewGroup - ViewGroup > FrameLayout + ViewGroup > ViewGroup',
           exampleUrls:
             'https://m.gkd.li/64072399/ab4a196f-725d-4e03-aabf-fb0eb6018f51',
           snapshotUrls: 'https://i.gkd.li/import/13786802',
