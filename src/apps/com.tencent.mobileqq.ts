@@ -3,6 +3,7 @@ import { defineAppConfig } from '../types';
 export default defineAppConfig({
   id: 'com.tencent.mobileqq',
   name: 'QQ',
+  deprecatedKeys: [6],
   groups: [
     {
       key: 0,
@@ -87,6 +88,19 @@ export default defineAppConfig({
           matches: '@[clickable=true] > * > ImageView + [text="隐藏此条动态"]',
           snapshotUrls: 'https://i.gkd.li/import/13761147',
         },
+        {
+          key: 3,
+          activityIds: [
+            'com.tencent.mobileqq.activity.SplashActivity',
+            'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
+          ],
+          matches:
+            '[id="com.tencent.mobileqq:id/tv_name"] + TextView[text="广告"] + @ImageView[clickable=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12749584',
+            'https://i.gkd.li/import/13627967',
+          ],
+        },
       ],
     },
     {
@@ -160,21 +174,6 @@ export default defineAppConfig({
             'https://i.gkd.li/import/12894375', // com.tencent.mobileqq.activity.SplashActivity
           ],
         },
-      ],
-    },
-    {
-      key: 6,
-      name: '动态广告卡片',
-      desc: '点击右上角[广告]右侧的x按钮直接关闭',
-      activityIds: [
-        'com.tencent.mobileqq.activity.SplashActivity',
-        'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
-      ],
-      rules:
-        '@ImageView[clickable=true] - TextView[text="广告"] - [id="com.tencent.mobileqq:id/tv_name"]',
-      snapshotUrls: [
-        'https://i.gkd.li/import/12749584',
-        'https://i.gkd.li/import/13627967',
       ],
     },
     {
