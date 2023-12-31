@@ -16,9 +16,9 @@ export default defineAppConfig({
         '[id="com.bilibili.comic:id/skip_btn"]',
       ],
       snapshotUrls: [
-      'https://i.gkd.li/import/13063673',
-      'https://i.gkd.li/import/13800292', //id="com.bilibili.comic:id/skip_btn"
-    ],
+        'https://i.gkd.li/import/13063673',
+        'https://i.gkd.li/import/13800292', //id="com.bilibili.comic:id/skip_btn"
+      ],
     },
     {
       key: 1,
