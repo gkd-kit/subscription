@@ -12,8 +12,14 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
+          key: 0,
           matches: '[id="com.byted.pangle:id/tt_splash_skip_btn"]',
           snapshotUrls: 'https://i.gkd.li/import/13298944',
+        },
+        {
+          key: 2,
+          matches: '[text*="跳过"][text.length<=5]',
+          snapshotUrls: 'https://i.gkd.li/import/13801584',
         },
       ],
     },
