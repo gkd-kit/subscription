@@ -94,5 +94,16 @@ export default defineAppConfig({
       rules: '@[text="取消"] + [text="好评"]',
       snapshotUrls: 'https://i.gkd.li/import/13692761',
     },
+    {
+      key: 1,
+      name: '红包弹窗',
+      desc: '自动点击关闭',
+      rules: [
+        {
+          matches: '[name="android.widget.ImageView"][id="com.cainiao.wireless:id/dialog_full_image_close"]',
+          snapshotUrls: 'https://i.gkd.li/import/13804415',
+        },
+      ],
+    },
   ],
 });
