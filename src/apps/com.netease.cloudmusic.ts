@@ -241,7 +241,8 @@ export default defineAppConfig({
         {
           key: 1,
           name: '【社区广场】升级-点击右上角x',
-          activityIds: 'com.netease.cloudmusic.music.biz.rn.activity.LayerReactNativeActivity',
+          activityIds:
+            'com.netease.cloudmusic.music.biz.rn.activity.LayerReactNativeActivity',
           matches: '[text="社区广场全新升级"] + ViewGroup > ImageView',
           snapshotUrls: 'https://i.gkd.li/import/13804544',
         },
