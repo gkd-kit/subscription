@@ -16,6 +16,7 @@ export default defineAppConfig({
         'https://i.gkd.li/import/12668795',
         'https://i.gkd.li/import/13635350',
         'https://i.gkd.li/import/13635351',
+        'https://i.gkd.li/import/13802606',
       ],
     },
     {
@@ -33,6 +34,14 @@ export default defineAppConfig({
       rules:
         '[id="com.intsig.camscanner:id/card_ad_tag"] + [id="com.intsig.camscanner:id/card_close"]',
       snapshotUrls: 'https://i.gkd.li/import/12668813',
+    },
+    {
+      key: 2,
+      name: '横幅广告',
+      activityIds: 'com.intsig.camscanner.mainmenu.mainactivity.MainActivity',
+      rules:
+        '[vid$="_close"]',
+      snapshotUrls: 'https://i.gkd.li/import/13802606',
     },
   ],
 });
