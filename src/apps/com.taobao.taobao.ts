@@ -213,5 +213,17 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 17,
+      name: '旧版淘宝小额免密弹窗',
+      desc: '点击跳过',
+      rules: [
+        {
+          activityIds: 'com.alipay.android.msp.ui.views.MspContainerActivity',
+          matches: '[text$="小额免密支付"] -n FrameLayout [text*="跳过"]',
+          snapshotUrls: 'https://i.gkd.li/import/13797820',
+        },
+      ],
+    },
   ],
 });
