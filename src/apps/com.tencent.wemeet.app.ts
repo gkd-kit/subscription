@@ -24,7 +24,8 @@ export default defineAppConfig({
       desc: '自动点击关闭',
       rules: [
         {
-          activityIds: 'com.tencent.wemeet.sdk.meeting.premeeting.home.HomeOperateAlertActivity',
+          activityIds:
+            'com.tencent.wemeet.sdk.meeting.premeeting.home.HomeOperateAlertActivity',
           matches: '[id="com.tencent.wemeet.app:id/dp"]',
           snapshotUrls: 'https://i.gkd.li/import/13804553',
         },
