@@ -18,5 +18,12 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 1,
+      name: '加时卡到账弹窗',
+      quickFind: true,
+      rules: '[id="com.tencent.wemeet.app:id/dp"]',
+      snapshotUrls: 'https://i.gkd.li/import/13804553',
+    },
   ],
 });
