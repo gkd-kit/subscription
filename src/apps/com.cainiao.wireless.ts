@@ -94,5 +94,29 @@ export default defineAppConfig({
       rules: '@[text="取消"] + [text="好评"]',
       snapshotUrls: 'https://i.gkd.li/import/13692761',
     },
+    {
+      key: 1,
+      name: '自动签到',
+      desc: '自动签到并返回首页',
+      rules: [
+        {
+          activityIds: 'com.magicalstory.AppStore.main.MainActivity',
+          matches: '[text="签到"] - ImageView[_id=69] < [id="com.magicalstory.AppStore:id/item_sign"][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/import/13804872',
+        },
+         {
+          key: 2,
+          matches: '[text="排行榜"] - [text="签到"]',
+          snapshotUrls: 'https://i.gkd.li/import/13804871',
+        },
+        {
+          key: 3,
+          preKeys: 2,
+          activityIds: 'com.magicalstory.AppStore.user.sign.signActivity',
+          matches: '[text="签到"] - [name="android.widget.ImageButton"][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/import/13804893',
+        },
+      ],
+    },
   ],
 });
