@@ -95,7 +95,7 @@ export default defineAppConfig({
       snapshotUrls: 'https://i.gkd.li/import/13692761',
     },
     {
-      key: 1,
+      key: 7,
       name: '红包弹窗',
       desc: '自动点击关闭',
       rules: [
