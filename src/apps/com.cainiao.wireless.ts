@@ -101,10 +101,11 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.magicalstory.AppStore.main.MainActivity',
-          matches: '[text="签到"] - ImageView[_id=69] < [id="com.magicalstory.AppStore:id/item_sign"][clickable=true]',
+          matches:
+            '[text="签到"] - ImageView[_id=69] < [id="com.magicalstory.AppStore:id/item_sign"][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13804872',
         },
-         {
+        {
           key: 2,
           matches: '[text="排行榜"] - [text="签到"]',
           snapshotUrls: 'https://i.gkd.li/import/13804871',
@@ -113,7 +114,8 @@ export default defineAppConfig({
           key: 3,
           preKeys: 2,
           activityIds: 'com.magicalstory.AppStore.user.sign.signActivity',
-          matches: '[text="签到"] - [name="android.widget.ImageButton"][clickable=true]',
+          matches:
+            '[text="签到"] - [name="android.widget.ImageButton"][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13804893',
         },
       ],
