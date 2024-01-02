@@ -137,7 +137,8 @@ export default defineAppConfig({
       activityIds: 'com.eg.android.AlipayGphone.AlipayLogin',
       rules: [
         {
-          matches: '[text="去开启"] <2 LinearLayout + FrameLayout[clickable=true]',
+          matches:
+            '[text="去开启"] <2 LinearLayout + FrameLayout[clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13804497',
         },
       ],
