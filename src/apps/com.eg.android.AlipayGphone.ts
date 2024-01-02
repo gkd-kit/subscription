@@ -47,9 +47,19 @@ export default defineAppConfig({
       name: '关闭开启定位提示',
       quickFind: true,
       activityIds: 'com.eg.android.AlipayGphone.AlipayLogin',
-      rules:
-        '@[id="com.alipay.mobile.antui:id/closeButton"] - [id="com.alipay.mobile.antui:id/textAndButtonLayout"] [id="com.alipay.mobile.antui:id/tipTextView"][text^="开启定位权限"]',
-      snapshotUrls: 'https://i.gkd.li/import/12792688',
+      rules:[{
+          key: 0,
+          matches:
+            '@[id="com.alipay.mobile.antui:id/closeButton"] - [id="com.alipay.mobile.antui:id/textAndButtonLayout"] [id="com.alipay.mobile.antui:id/tipTextView"][text^="开启定位权限"]',
+          snapshotUrls: 'https://i.gkd.li/import/12792688',
+      },
+      {
+          key: 1,
+          matches:
+            '[text="去开启"] <2 LinearLayout + FrameLayout[clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/import/13804497',
+      },
+      ]    
     },
     {
       key: 2,
@@ -126,20 +136,6 @@ export default defineAppConfig({
             '@TextView[text="关闭"] < * <3 * < * + * >3 TextView[text="设置支付宝小组件"]',
           action: 'clickCenter',
           snapshotUrls: 'https://i.gkd.li/import/13327349',
-        },
-      ],
-    },
-    {
-      key: 5,
-      name: '底部定位弹窗',
-      desc: '点击关闭',
-      quickFind: true,
-      activityIds: 'com.eg.android.AlipayGphone.AlipayLogin',
-      rules: [
-        {
-          matches:
-            '[text="去开启"] <2 LinearLayout + FrameLayout[clickable=true]',
-          snapshotUrls: 'https://i.gkd.li/import/13804497',
         },
       ],
     },
