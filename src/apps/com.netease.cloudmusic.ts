@@ -258,5 +258,8 @@ export default defineAppConfig({
             'com.netease.cloudmusic.music.biz.rn.activity.LayerReactNativeActivity',
           matches: '[text="社区广场全新升级"] + ViewGroup > ImageView',
           snapshotUrls: 'https://i.gkd.li/import/13804544',
+        },
+      ],
+    },
   ],
 });
