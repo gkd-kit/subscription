@@ -219,6 +219,19 @@ export default defineAppConfig({
     },
     {
       key: 8,
+      name: '发现-顶部视频广告',
+      desc: '自动点击跳过。',
+      quickFind: true,
+      rules: [
+        {
+          activityIds: 'com.netease.cloudmusic.activity.MainActivity',
+          matches: '[id="com.netease.cloudmusic:id/skipBannerAd"]',
+          snapshotUrls: 'https://i.gkd.li/import/13768367',
+        },
+      ],
+    },
+    {
+      key: 9,
       name: '免费听弹窗',
       actionMaximum: 1,
       resetMatch: 'app',
@@ -228,7 +241,7 @@ export default defineAppConfig({
       snapshotUrls: 'https://i.gkd.li/import/13804534',
     },
     {
-      key: 9,
+      key: 10,
       name: '功能升级弹窗',
       rules: [
         {
@@ -245,8 +258,5 @@ export default defineAppConfig({
             'com.netease.cloudmusic.music.biz.rn.activity.LayerReactNativeActivity',
           matches: '[text="社区广场全新升级"] + ViewGroup > ImageView',
           snapshotUrls: 'https://i.gkd.li/import/13804544',
-        },
-      ],
-    },
   ],
 });
