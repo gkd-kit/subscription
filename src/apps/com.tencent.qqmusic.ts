@@ -96,7 +96,8 @@ export default defineAppConfig({
       activityIds: 'com.tencent.qqmusic.activity.AppStarterActivity',
       rules: [
         {
-          matches: 'FrameLayout[id="android:id/content"] >4 ViewGroup[clickable=true]',
+          matches:
+            'FrameLayout[id="android:id/content"] >4 ViewGroup[clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13806782',
         },
       ],
