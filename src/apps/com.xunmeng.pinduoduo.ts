@@ -219,7 +219,8 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
-          matches: '[text="青少年模式"] < FrameLayout +5 ViewGroup [text="我知道了"]',
+          matches:
+            '[text="青少年模式"] < FrameLayout +5 ViewGroup [text="我知道了"]',
           snapshotUrls: 'https://i.gkd.li/import/13809053',
         },
       ],
