@@ -89,5 +89,17 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 6,
+      name: '豪华绿钻弹窗',
+      desc: '点击关闭',
+      activityIds: 'com.tencent.qqmusic.activity.AppStarterActivity',
+      rules: [
+        {
+          matches: '[name="android.view.ViewGroup"][bottom=1842]',
+          snapshotUrls: 'https://i.gkd.li/import/13806782',
+        },
+      ],
+    },
   ],
 });
