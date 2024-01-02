@@ -39,8 +39,7 @@ export default defineAppConfig({
       key: 2,
       name: '横幅广告',
       activityIds: 'com.intsig.camscanner.mainmenu.mainactivity.MainActivity',
-      rules:
-        '[vid$="_close"]',
+      rules: '[vid$="_close"]',
       snapshotUrls: 'https://i.gkd.li/import/13802606',
     },
   ],
