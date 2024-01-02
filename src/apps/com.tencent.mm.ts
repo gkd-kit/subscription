@@ -93,6 +93,29 @@ export default defineAppConfig({
       ],
     },
     {
+      key: 20,
+      name: '朋友圈广告-繁体',
+      desc: '点击广告卡片右上角[廣告],出现菜单点击[關閉此廣告],确认关闭',
+      activityIds: 'com.tencent.mm.plugin.sns.ui.SnsTimeLineUI',
+      quickFind: true,
+      rules: [
+        {
+          key: 0,
+          name: '点击广告卡片右上角[廣告]',
+          matches:
+            'ImageView - TextView[text="廣告"][clickable=true][id!=null]',
+          snapshotUrls: 'https://i.gkd.li/import/13791200',
+        },
+        {
+          preKeys: 0,
+          key: 1,
+          name: '点击[關閉此廣告]',
+          matches: 'RelativeLayout[childCount=6] > TextView[text="關閉此廣告"]',
+          snapshotUrls: 'https://i.gkd.li/import/13791202',
+        },
+      ],
+    },
+    {
       // Key1,2,3,4,11 均为授权类的规则
       enable: false,
       key: 1,
@@ -471,6 +494,27 @@ export default defineAppConfig({
           activityIds: 'com.tencent.mm.plugin.webview.ui.tools.MMWebViewUI',
           matches: ['View[text="申请今天临时访问"]', 'View[desc="验证密码"]'],
           snapshotUrls: 'https://i.gkd.li/import/13631987',
+        },
+      ],
+    },
+    {
+      key: 19,
+      name: '订阅号-展开更早的消息',
+      rules: [
+        {
+          key: 0,
+          name: '8.0.44以下',
+          quickFind: true,
+          activityIds:
+            'com.tencent.mm.plugin.brandservice.ui.timeline.BizTimeLineUI',
+          matches: '[text="展开更早的消息"] < [id="com.tencent.mm:id/aqc"]',
+          snapshotUrls: 'https://i.gkd.li/import/13790550',
+        },
+        {
+          key: 1,
+          name: '8.0.44',
+          matches: '[desc="展开更早的消息"]',
+          snapshotUrls: 'https://i.gkd.li/import/13790949',
         },
       ],
     },

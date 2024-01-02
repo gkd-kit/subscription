@@ -54,6 +54,24 @@ export default defineAppConfig({
             '[id="com.huawei.android.totemweather:id/ad_cancel"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/import/13521221',
         },
+        {
+          key: 3,
+          activityIds: 'com.huawei.android.totemweather.WeatherHome',
+          matches: '[id="com.huawei.android.totemweather:id/ad_cancel"]',
+          snapshotUrls: 'https://i.gkd.li/import/13787501',
+        },
+      ],
+    },
+    {
+      key: 2,
+      name: '顶部广告条',
+      rules: [
+        {
+          key: 0,
+          activityIds: 'com.huawei.android.totemweather.WeatherMainActivity',
+          matches: '[vid="rl_close_pps"] > ImageView',
+          snapshotUrls: 'https://i.gkd.li/import/13800100',
+        },
       ],
     },
   ],

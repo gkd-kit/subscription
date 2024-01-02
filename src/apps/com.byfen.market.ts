@@ -17,9 +17,9 @@ export default defineAppConfig({
           snapshotUrls: 'https://i.gkd.li/import/13298944',
         },
         {
-          key: 2,
-          matches: '[text*="跳过"][text.length<=5]',
-          snapshotUrls: 'https://i.gkd.li/import/13801584',
+          key: 1,
+          matches: '[id="com.byfen.market:id/ad_view"] >3 View[clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/import/13800021',
         },
       ],
     },
