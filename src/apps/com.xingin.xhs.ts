@@ -55,11 +55,14 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
-          matches: 'ImageView[id="com.xingin.xhs:id/b6w"]',
-          snapshotUrls: [
-            'https://i.gkd.li/import/13246890',
-            'https://i.gkd.li/import/13741680',
-          ],
+          key: 0,
+          matches: '@ImageView[clickable=true] <2 FrameLayout +3 FrameLayout > Button[text="立即安装"]',
+          snapshotUrls: 'https://i.gkd.li/import/13246890',
+        },
+        {
+          actionMaximumKey: 0,
+          matches: '@ImageView[clickable=true] <2 FrameLayout +3 FrameLayout > Button[text="立即参与内测"]',
+          snapshotUrls: 'https://i.gkd.li/import/13741680',
         },
       ],
     },
