@@ -9,6 +9,7 @@ export default defineAppConfig({
       name: '视频播放-跳过广告',
       activityIds: [
         'com.google.android.apps.youtube.app.watchwhile.MainActivity',
+        'com.google.android.apps.youtube.app.watchwhile.WatchWhileActivity',
         'com.google.android.youtube',
       ],
       quickFind: true,
@@ -18,6 +19,7 @@ export default defineAppConfig({
       ],
       snapshotUrls: [
         'https://i.gkd.li/import/13770701',
+        'https://i.gkd.li/import/12565261', //activityId: 'com.google.android.apps.youtube.app.watchwhile.WatchWhileActivity',
         'https://i.gkd.li/import/13705106', // rules:'[id="com.google.android.youtube:id/modern_skip_ad_button"]'
       ],
     },
