@@ -129,5 +129,18 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 5,
+      name: '底部定位弹窗',
+      desc: '点击关闭',
+      quickFind: true,
+      activityIds: 'com.eg.android.AlipayGphone.AlipayLogin',
+      rules: [
+        {
+          matches: '[text="去开启"] <2 LinearLayout + FrameLayout[clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/import/13804497',
+        },
+      ],
+    },
   ],
 });
