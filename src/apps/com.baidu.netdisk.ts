@@ -140,7 +140,8 @@ export default defineAppConfig({
       activityIds: 'com.baidu.netdisk.ui.MainActivity',
       rules: [
         {
-          matches: '[id="com.baidu.netdisk:id/tv_title"][text^="恭喜获得"] -3 ImageView[clickable=true]',
+          matches:
+            '[id="com.baidu.netdisk:id/tv_title"][text^="恭喜获得"] -3 ImageView[clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13806852',
         },
       ],
