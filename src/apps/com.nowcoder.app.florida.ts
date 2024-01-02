@@ -26,7 +26,7 @@ export default defineAppConfig({
       rules: [
         {
           matches: '[text="广告"][id="com.nowcoder.app.florida:id/tv_label"] -2 [text$="跳过"][id="com.nowcoder.app.florida:id/tv_skip"]',
-          snapshotUrls: 'https://i.gkd.li/import/13806903',
+          snapshotUrls: 'https://i.gkd.li/import/13806902',
         },
       ],
     },
