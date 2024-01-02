@@ -141,9 +141,9 @@ export default defineAppConfig({
       name: '多多视频每日签到弹窗',
       activityIds: ['com.xunmeng.pinduoduo.ui.activity.HomeActivity'],
       rules: [
-        '@ImageView[id=null] < ViewGroup < ViewGroup +(2) ViewGroup >(n) [text^="每日签到"]',
+        '[text="领取今日现金"] <<n ViewGroup[index=2] -2 ViewGroup[clickable=true] >2 ImageView',
       ],
-      snapshotUrls: ['https://i.gkd.li/import/12700615'],
+      snapshotUrls: ['https://i.gkd.li/import/13804494'],
     },
     {
       enable: false,
@@ -195,6 +195,32 @@ export default defineAppConfig({
           matches:
             '@ImageView[desc="返回"] -3 ViewPager >19 TextView[text="正在直播"]',
           snapshotUrls: 'https://i.gkd.li/import/13446291',
+        },
+      ],
+    },
+    {
+      key: 11,
+      name: '多多视频-上滑看视频得现金弹窗',
+      desc: '点击关闭',
+      quickFind: true,
+      rules: [
+        {
+          activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
+          matches: '[text="上滑看视频得现金"] - [text="webp"]',
+          snapshotUrls: 'https://i.gkd.li/import/13809053',
+        },
+      ],
+    },
+    {
+      key: 12,
+      name: '青少年模式',
+      desc: '点击我知道了',
+      quickFind: true,
+      rules: [
+        {
+          activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
+          matches: '[text="青少年模式"] < FrameLayout +5 ViewGroup [text="我知道了"]',
+          snapshotUrls: 'https://i.gkd.li/import/13809053',
         },
       ],
     },
