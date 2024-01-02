@@ -18,5 +18,17 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+        key: 1,
+        name: '首页弹窗',
+        desc: '自动点击关闭',
+        rules: [
+          {
+            activityIds: 'com.nowcoder.app.florida.activity.home.MainV2Activity',
+            matches: '[name="android.widget.ImageView"][clickable=true]',
+            snapshotUrls: 'https://i.gkd.li/import/13806903',
+          },
+        ],
+      },
   ],
 });
