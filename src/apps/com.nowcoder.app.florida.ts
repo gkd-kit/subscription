@@ -25,7 +25,8 @@ export default defineAppConfig({
       activityIds: 'com.nowcoder.app.florida.activity.home.MainV2Activity',
       rules: [
         {
-          matches: '[text="广告"][id="com.nowcoder.app.florida:id/tv_label"] -2 [text$="跳过"][id="com.nowcoder.app.florida:id/tv_skip"]',
+          matches:
+            '[text="广告"][id="com.nowcoder.app.florida:id/tv_label"] -2 [text$="跳过"][id="com.nowcoder.app.florida:id/tv_skip"]',
           snapshotUrls: 'https://i.gkd.li/import/13806903',
         },
       ],
