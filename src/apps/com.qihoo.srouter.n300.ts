@@ -5,18 +5,13 @@ export default defineAppConfig({
   name: '360家庭防火墙',
   groups: [
     {
-      key: 0,
-      name: '开屏广告',
-      matchTime: 10000,
+      key: 1,
+      name: '弹窗广告',
       actionMaximum: 1,
       resetMatch: 'app',
       quickFind: true,
-      rules: [
-        {
-          matches: '[id="com.qihoo.srouter.n300:id/tv_countdown"]',
-          snapshotUrls: 'https://i.gkd.li/import/13216607',
-        },
-      ],
+      rules: '[vid="app_update_later_button"]',
+      snapshotUrls: 'https://i.gkd.li/import/13800011',
     },
   ],
 });

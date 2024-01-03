@@ -3,20 +3,8 @@ import { defineAppConfig } from '../types';
 export default defineAppConfig({
   id: 'com.able.wisdomtree',
   name: '知到',
+  deprecatedKeys: [1],
   groups: [
-    {
-      key: 1,
-      name: '开屏广告',
-      quickFind: true,
-      activityIds:
-        'com.example.advertisement_business.advertisement.AdvertisementActivity',
-      rules: [
-        {
-          matches: ['[id="com.able.wisdomtree:id/tv_skip"]'],
-          snapshotUrls: 'https://i.gkd.li/import/12838048',
-        },
-      ],
-    },
     {
       enable: false,
       key: 2,
@@ -39,10 +27,14 @@ export default defineAppConfig({
       name: '升级提醒',
       desc: '自动点击忽略。',
       quickFind: true,
-      activityIds:
-        'com.example.advertisement_business.advertisement.AdvertisementActivity',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: '[text="更新"] -n [text="忽略"]',
-      snapshotUrls: 'https://i.gkd.li/import/13458796',
+      snapshotUrls: [
+        'https://i.gkd.li/import/13458796',
+        'https://i.gkd.li/import/13797285',
+      ],
     },
   ],
 });

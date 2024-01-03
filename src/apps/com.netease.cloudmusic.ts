@@ -5,16 +5,6 @@ export default defineAppConfig({
   name: '网易云音乐',
   groups: [
     {
-      key: 0,
-      name: '开屏广告',
-      quickFind: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: '[id="com.netease.cloudmusic:id/skipBtn"]',
-      snapshotUrls: ['https://i.gkd.li/import/12700920'],
-    },
-    {
       enable: false,
       key: 1,
       name: '卡片式广告',
@@ -214,6 +204,50 @@ export default defineAppConfig({
           name: '巨幅卡片式广告',
           matches: '[text^="跳过广告"][text.length<=10]',
           snapshotUrls: 'https://i.gkd.li/import/13527105',
+        },
+      ],
+    },
+    {
+      key: 8,
+      name: '发现-顶部视频广告',
+      desc: '自动点击跳过。',
+      quickFind: true,
+      rules: [
+        {
+          activityIds: 'com.netease.cloudmusic.activity.MainActivity',
+          matches: '[id="com.netease.cloudmusic:id/skipBannerAd"]',
+          snapshotUrls: 'https://i.gkd.li/import/13768367',
+        },
+      ],
+    },
+    {
+      key: 9,
+      name: '免费听弹窗',
+      actionMaximum: 1,
+      resetMatch: 'app',
+      activityIds: 'com.netease.cloudmusic.activity.MainActivity',
+      matchTime: 10000,
+      rules: '@ImageView + ViewGroup > [text="VIP歌曲免费听30分钟"]',
+      snapshotUrls: 'https://i.gkd.li/import/13804534',
+    },
+    {
+      key: 10,
+      name: '功能升级弹窗',
+      rules: [
+        {
+          key: 0,
+          name: '【我的】升级-下次再说',
+          activityIds: 'com.netease.cloudmusic.activity.MainActivity',
+          matches: '[text="下次再说"] < ViewGroup',
+          snapshotUrls: 'https://i.gkd.li/import/13804541',
+        },
+        {
+          key: 1,
+          name: '【社区广场】升级-点击右上角x',
+          activityIds:
+            'com.netease.cloudmusic.music.biz.rn.activity.LayerReactNativeActivity',
+          matches: '[text="社区广场全新升级"] + ViewGroup > ImageView',
+          snapshotUrls: 'https://i.gkd.li/import/13804544',
         },
       ],
     },

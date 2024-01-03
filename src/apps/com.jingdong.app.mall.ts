@@ -5,25 +5,6 @@ export default defineAppConfig({
   name: '京东',
   groups: [
     {
-      key: 0,
-      name: '开屏广告',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      quickFind: true,
-      rules: [
-        {
-          key: 0,
-          matches: '[text="跳过"]',
-          snapshotUrls: [
-            'https://i.gkd.li/import/12668289',
-            'https://i.gkd.li/import/12519430',
-            'https://i.gkd.li/import/13255802',
-          ],
-        },
-      ],
-    },
-    {
       enable: false,
       key: 1,
       name: '购物车界面-砸金蛋',
@@ -73,12 +54,17 @@ export default defineAppConfig({
       enable: false,
       key: 4,
       name: '消息-打开通知',
-      activityIds:
+      activityIds: [
         'com.jd.lib.message.messagecenter.view.activity.MessageCenterMainActivityNew',
+        'com.jd.lib.ordercenter.mygoodsorderlist.view.activity.MyOrderListActivity',
+      ],
       rules: [
         {
           matches: 'TextView[text="开启消息通知"] +n ImageView[clickable=true]',
-          snapshotUrls: 'https://i.gkd.li/import/12839864',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12839864', //com.jd.lib.message.messagecenter.view.activity.MessageCenterMainActivityNew
+            'https://i.gkd.li/import/13772299', //com.jd.lib.ordercenter.mygoodsorderlist.view.activity.MyOrderListActivity
+          ],
         },
         {
           matches:
@@ -181,7 +167,7 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.jd.lib.cart.ShoppingCartNewActivity',
-          matches: '@ImageView - ViewGroup >2 TextView[text=\'查看订单\']',
+          matches: '@ImageView - ViewGroup >2 TextView[text="查看订单"]',
           snapshotUrls: 'https://i.gkd.li/import/13446362',
         },
       ],

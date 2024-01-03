@@ -6,21 +6,6 @@ export default defineAppConfig({
   deprecatedKeys: [5, 19],
   groups: [
     {
-      key: 0,
-      name: '开屏广告',
-      quickFind: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: 'FrameLayout[id=null] > TextView[text="跳过"][id=null]',
-      snapshotUrls: [
-        'https://i.gkd.li/import/12700227',
-        'https://i.gkd.li/import/12700122',
-        'https://i.gkd.li/import/12700541',
-        'https://i.gkd.li/import/12910953',
-      ],
-    },
-    {
       key: 1,
       name: '青少年模式弹窗',
       actionMaximum: 1,
@@ -34,10 +19,12 @@ export default defineAppConfig({
       name: '更新弹窗',
       actionMaximum: 1,
       resetMatch: 'app',
-      quickFind: true,
       rules:
-        '@[text="暂不升级"] - LinearLayout > FrameLayout > [text="立即升级"]',
-      snapshotUrls: 'https://i.gkd.li/import/12700486',
+        '[text^="有新版本"] + FrameLayout + LinearLayout + [text="暂不升级"]',
+      snapshotUrls: [
+        'https://i.gkd.li/import/12700486',
+        'https://i.gkd.li/import/13799951',
+      ],
     },
     {
       key: 3,

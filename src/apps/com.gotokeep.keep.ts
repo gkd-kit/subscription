@@ -5,24 +5,6 @@ export default defineAppConfig({
   name: 'Keep',
   groups: [
     {
-      key: 0,
-      name: '开屏广告',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      quickFind: true,
-      rules: [
-        {
-          key: 0,
-          matches: '[text*="跳过"][text.length<=10]',
-          snapshotUrls: [
-            'https://i.gkd.li/import/12706108',
-            'https://i.gkd.li/import/13635599',
-          ],
-        },
-      ],
-    },
-    {
       key: 1,
       name: '青少年模式弹窗',
       actionMaximum: 1,
@@ -60,10 +42,24 @@ export default defineAppConfig({
     {
       key: 4,
       name: '运动购页面-广告弹窗',
-      activityIds:
-        'com.gotokeep.keep.refactor.business.main.activity.MainActivity',
-      rules: 'ImageView + LinearLayout > ImageView[id=null][clickable=true]',
-      snapshotUrls: 'https://i.gkd.li/import/12706111',
+      rules: [
+        {
+          key: 0,
+          activityIds:
+            'com.gotokeep.keep.refactor.business.main.activity.MainActivity',
+          matches:
+            'ImageView + LinearLayout > ImageView[id=null][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/import/12706111',
+        },
+        {
+          key: 1,
+          activityIds:
+            'com.gotokeep.keep.refactor.business.main.activity.MainActivity',
+          matches:
+            '[id="com.gotokeep.keep:id/contentContainer"] + [id="com.gotokeep.keep:id/closeImageView"]',
+          snapshotUrls: 'https://i.gkd.li/import/13766358',
+        },
+      ],
     },
     {
       key: 5,

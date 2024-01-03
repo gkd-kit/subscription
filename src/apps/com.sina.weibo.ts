@@ -6,19 +6,6 @@ export default defineAppConfig({
   deprecatedKeys: [12],
   groups: [
     {
-      key: 0,
-      name: '开屏广告',
-      quickFind: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: '[text*="跳过"][text.length<=10]',
-      snapshotUrls: [
-        'https://i.gkd.li/import/12782355',
-        'https://i.gkd.li/import/13194049',
-      ],
-    },
-    {
       key: 3,
       name: '兴趣领域推荐',
       desc: '出现在长久未登录的账户再次登录时',
@@ -48,25 +35,34 @@ export default defineAppConfig({
       name: '博文内容区与评论区中间卡片式广告',
       desc: '点击右上角x',
       quickFind: true,
-      activityIds: 'com.sina.weibo.feed.DetailWeiboActivity',
       rules: [
         {
           key: 0,
+          activityIds: 'com.sina.weibo.feed.DetailWeiboActivity',
           matches:
             '[id="com.sina.weibo:id/left_img_container"] + LinearLayout >2 [id="com.sina.weibo:id/close"][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/12673043',
         },
         {
           key: 1,
+          activityIds: 'com.sina.weibo.feed.DetailWeiboActivity',
           matches:
             '[id="com.sina.weibo:id/left_video_container"] + LinearLayout >2 [id="com.sina.weibo:id/close"][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13635551',
         },
         {
           key: 2,
+          activityIds: 'com.sina.weibo.feed.DetailWeiboActivity',
           matches:
             '[id="com.sina.weibo:id/corner_marker_view"] >2 [id="com.sina.weibo:id/right_top_tag"]',
           snapshotUrls: 'https://i.gkd.li/import/12673051',
+        },
+        {
+          key: 3,
+          activityIds: 'com.sina.weibo.feed.DetailWeiboActivity',
+          matches:
+            '[id="com.sina.weibo:id/tvTrendsTitle"] + [id="com.sina.weibo:id/iv_ad_x"]',
+          snapshotUrls: 'https://i.gkd.li/import/13787207',
         },
       ],
     },

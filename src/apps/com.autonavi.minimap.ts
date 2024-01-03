@@ -3,20 +3,8 @@ import { defineAppConfig } from '../types';
 export default defineAppConfig({
   id: 'com.autonavi.minimap',
   name: '高德地图',
+  deprecatedKeys: [0],
   groups: [
-    {
-      key: 0,
-      name: '开屏广告',
-      quickFind: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: '@LinearLayout > [text^="跳过"][text.length<=10]',
-      snapshotUrls: [
-        'https://i.gkd.li/import/12667556',
-        'https://i.gkd.li/import/12750045',
-      ],
-    },
     {
       key: 1,
       name: '更新弹窗',
@@ -61,13 +49,17 @@ export default defineAppConfig({
       enable: false,
       key: 11,
       name: '首页-签到卡片',
+      desc: '点击【x】',
+      actionMaximum: 1,
+      resetMatch: 'app',
       activityIds: 'com.autonavi.map.activity.NewMapActivity',
       rules:
-        '@ImageView[visibleToUser=true] < ViewGroup -(2) ViewGroup > ViewGroup > View[text*="签到"||text*="成长值"]',
+        'ImageView[visibleToUser=true][width<90][height<90] < @ViewGroup -(2) ViewGroup > ViewGroup > View[text*="签到"||text*="成长值"]',
       snapshotUrls: [
         'https://i.gkd.li/import/12642842',
         'https://i.gkd.li/import/12642845',
         'https://i.gkd.li/import/12818770', // 限定 ImageView[visibleToUser=true]，防止控件不可见时触发规则
+        'https://i.gkd.li/import/13764540', // 限定 ImageView[width<90][height<90]，避免在此误触
       ],
     },
     {

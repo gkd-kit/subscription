@@ -6,16 +6,6 @@ export default defineAppConfig({
   deprecatedKeys: [5, 6],
   groups: [
     {
-      key: 0,
-      name: '开屏广告',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      quickFind: true,
-      rules: 'TextView[id="com.sankuai.meituan:id/close_btn"][text^="跳过"]',
-      snapshotUrls: 'https://i.gkd.li/import/12749811',
-    },
-    {
       key: 1,
       name: '更新弹窗',
       matchTime: 10000,
@@ -170,6 +160,15 @@ export default defineAppConfig({
           snapshotUrls: 'https://i.gkd.li/import/13695703',
         },
       ],
+    },
+    {
+      key: 10,
+      name: '新人返场特惠',
+      desc: '点击右上角返回',
+      activityIds: 'com.meituan.android.base.knb.KNBWebViewActivity',
+      matchTime: 10000,
+      rules: '[id="shareNav"] > [text=""]',
+      snapshotUrls: 'https://i.gkd.li/import/13800691',
     },
   ],
 });

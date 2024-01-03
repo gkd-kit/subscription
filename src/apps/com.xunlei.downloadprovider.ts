@@ -6,16 +6,6 @@ export default defineAppConfig({
   deprecatedKeys: [11],
   groups: [
     {
-      key: 0,
-      name: '开屏广告',
-      quickFind: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: '[text^="跳过"][text.length<=10]',
-      snapshotUrls: 'https://i.gkd.li/import/12707693',
-    },
-    {
       key: 1,
       name: '视频详情页广告',
       rules: [
@@ -98,14 +88,17 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          activityIds: 'com.xunlei.downloadprovider.frame.MainTabActivity',
-
+          activityIds: [
+            'com.xunlei.downloadprovider.frame.MainTabActivity',
+            'com.xunlei.downloadprovider.launch.LaunchActivity',
+          ],
           matches: '@[text="关闭"] +n * >n [text*="广告"]',
           snapshotUrls: [
             'https://i.gkd.li/import/12868648',
             'https://i.gkd.li/import/12879372',
             'https://i.gkd.li/import/12882366',
             'https://i.gkd.li/import/12892871',
+            'https://i.gkd.li/import/13799878',
           ],
         },
 

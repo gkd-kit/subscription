@@ -5,13 +5,6 @@ export default defineAppConfig({
   name: '中国移动',
   groups: [
     {
-      key: 0,
-      name: '开屏广告',
-      activityIds: 'com.mc10086.cmcc.view.tabs.AppTabFragment',
-      rules:
-        '[id=`com.greenpoint.android.mc10086.activity:id/video_time_skip`]',
-    },
-    {
       key: 1,
       name: '关闭更新弹窗',
       activityIds: 'com.mc10086.cmcc.view.tabs.AppTabFragment',
@@ -36,7 +29,6 @@ export default defineAppConfig({
       name: '请求推送通知弹窗',
       desc: '请求推送通知弹窗，点击取消',
       activityIds: 'com.mc10086.cmcc.base.StartPageActivity',
-
       rules: [
         {
           matches: '[text*="开启推送通知"] +(2) LinearLayout > [text="取消"]',
@@ -44,6 +36,11 @@ export default defineAppConfig({
             'https://i.gkd.li/import/12662213',
             'https://i.gkd.li/import/13327880',
           ],
+        },
+        {
+          quickFind: true,
+          matches: '[text="授权提醒"] +3 [text="拒绝"]',
+          snapshotUrls: ['https://i.gkd.li/import/13775652'],
         },
       ],
     },
@@ -55,8 +52,11 @@ export default defineAppConfig({
       rules: [
         {
           matches:
-            '[text*="获取您的剪切板信息"] < LinearLayout +(2) LinearLayout >(2) [text="不允许"]',
-          snapshotUrls: ['https://i.gkd.li/import/12662251'],
+            '[text*="获取您的"] < LinearLayout +(2) LinearLayout >(2) [text="不允许"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12662251',
+            'https://i.gkd.li/import/13775651',
+          ],
         },
       ],
     },

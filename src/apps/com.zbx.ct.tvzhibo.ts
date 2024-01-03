@@ -9,10 +9,19 @@ export default defineAppConfig({
       name: '弹窗广告',
       rules: [
         {
+          key: 0,
+          name: '字节SDK',
           activityIds:
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
           matches: '@Image[text.length=0] < View -n [text="反馈"]',
           snapshotUrls: 'https://i.gkd.li/import/13739951',
+        },
+        {
+          key: 1,
+          name: '腾讯SDK',
+          activityIds: 'com.tvmain.mvp.view.activity.TvMainActivity',
+          matches: '@ImageView < FrameLayout <n FrameLayout + TextView',
+          snapshotUrls: 'https://i.gkd.li/import/13766516',
         },
       ],
     },
