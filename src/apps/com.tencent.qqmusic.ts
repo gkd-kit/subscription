@@ -54,5 +54,30 @@ export default defineAppConfig({
       rules: '[text="流量够用"]',
       snapshotUrls: 'https://i.gkd.li/import/13197868',
     },
+    {
+      key: 5,
+      name: '看广告免费听歌弹窗',
+      desc: '点击关闭',
+      activityIds: 'com.tencent.qqmusiccommon.hybrid.HybridViewActivity',
+      rules: [
+        {
+          matches: '[desc="看广告，免费听歌弹窗"] + [desc="关闭按钮"]',
+          snapshotUrls: 'https://i.gkd.li/import/13806773',
+        },
+      ],
+    },
+    {
+      key: 6,
+      name: '豪华绿钻弹窗',
+      desc: '点击关闭',
+      activityIds: 'com.tencent.qqmusic.activity.AppStarterActivity',
+      rules: [
+        {
+          matches:
+            'FrameLayout[id="android:id/content"] >4 ViewGroup[clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/import/13806782',
+        },
+      ],
+    },
   ],
 });
