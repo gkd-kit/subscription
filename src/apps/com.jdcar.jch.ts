@@ -18,17 +18,18 @@ export default defineAppConfig({
       ],
     },
     {
-        key: 2,
-        name: '开屏弹窗',
-        desc: '点击x',
-        quickFind: true,
-        rules: [
-          {
-            activityIds: 'com.jingdong.app.mall.MainFrameActivity',
-            matches: 'FrameLayout[id="android:id/content"] >2 ImageView[id="com.jdcar.jch:id/img_close"]',
-            snapshotUrls: 'https://i.gkd.li/import/13815108',
-          },
-        ],
-      },
+      key: 2,
+      name: '开屏弹窗',
+      desc: '点击x',
+      quickFind: true,
+      rules: [
+        {
+          activityIds: 'com.jingdong.app.mall.MainFrameActivity',
+          matches:
+            'FrameLayout[id="android:id/content"] >2 ImageView[id="com.jdcar.jch:id/img_close"]',
+          snapshotUrls: 'https://i.gkd.li/import/13815108',
+        },
+      ],
+    },
   ],
 });
