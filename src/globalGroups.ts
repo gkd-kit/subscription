@@ -14,6 +14,9 @@ const diabledAppIds = [
   'com.bbk.launcher2.Launcher',
   'com.huawei.android.launcher.unihome.UniHomeLauncher',
 
+  //电池设置
+  'com.iqoo.powersaving',
+
   // 在一些常见的应用中禁用
   'com.tencent.mm',
   'li.songe.gkd',
