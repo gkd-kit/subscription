@@ -15,6 +15,7 @@ export default defineAppConfig({
         'com.coolapk.market.view.search.',
         'com.coolapk.market.view.feed.',
         'com.coolapk.market.view.splash.SplashActivity',
+        'com.coolapk.market.view.splash.FullScreenAdActivity'
       ],
       rules: [
         {
@@ -44,6 +45,12 @@ export default defineAppConfig({
           matches:
             'ImageView[id="com.coolapk.market:id/logo_view"] <<2 FrameLayout -2 FrameLayout View[clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13826359',
+        },
+        {
+          key: 3,
+          matches: 
+            '[text^="扭动手机"] <<9 FrameLayout +2 View[clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/import/13827036',
         },
       ],
     },
