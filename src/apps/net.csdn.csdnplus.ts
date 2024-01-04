@@ -86,7 +86,7 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'net.csdn.csdnplus.activity.SplashActivity',
-          matches: 
+          matches:
             '[text^="点击跳转"] <<10 FrameLayout +2 View[clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13826577',
         },
