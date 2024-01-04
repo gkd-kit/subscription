@@ -38,5 +38,19 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 7,
+      quickFind: true,
+      name: '开屏广告',
+      desc: '点击跳过',
+      rules: [
+        {
+          activityIds: 'com.xpx365.projphoto.SplashActivity',
+          matches: 
+            '@View[clickable=true] - FrameLayout View[text^="摇一摇"]',
+          snapshotUrls: 'https://i.gkd.li/import/13827755',
+        },
+      ],
+    },
   ],
 });
