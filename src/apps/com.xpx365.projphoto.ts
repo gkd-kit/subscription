@@ -5,6 +5,24 @@ export default defineAppConfig({
   name: '工程相机',
   groups: [
     {
+      key: 0,
+      name: '开屏广告',
+      quickFind: true,
+      actionMaximum: 1,
+      matchTime: 10000,
+      resetMatch: 'app',
+      actionCdKey: 0,
+      actionMaximumKey: 0,
+      rules: [
+        {
+          key: 0,
+          matches:
+            '@View <2 FrameLayout <2 FrameLayout < [vid="splash_container"]',
+          snapshotUrls: 'https://i.gkd.li/import/13827755',
+        },
+      ],
+    },
+    {
       key: 6,
       name: '广告弹窗',
       matchTime: 10000,
@@ -35,19 +53,6 @@ export default defineAppConfig({
           matches:
             '[id="com.kwad.dy.sdk:id/ksad_tk_view"] @ViewGroup[clickable=true] > TextView[text="跳过"]',
           snapshotUrls: 'https://i.gkd.li/import/13695668',
-        },
-      ],
-    },
-    {
-      key: 7,
-      quickFind: true,
-      name: '开屏广告',
-      desc: '点击跳过',
-      rules: [
-        {
-          activityIds: 'com.xpx365.projphoto.SplashActivity',
-          matches: '@View[clickable=true] - FrameLayout View[text^="摇一摇"]',
-          snapshotUrls: 'https://i.gkd.li/import/13827755',
         },
       ],
     },
