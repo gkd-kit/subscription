@@ -41,7 +41,8 @@ export default defineAppConfig({
         },
         {
           key: 2,
-          matches: 'ImageView[id="com.coolapk.market:id/logo_view"] <<2 FrameLayout -2 FrameLayout View[clickable=true]',
+          matches:
+            'ImageView[id="com.coolapk.market:id/logo_view"] <<2 FrameLayout -2 FrameLayout View[clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13826359',
         },
       ],
