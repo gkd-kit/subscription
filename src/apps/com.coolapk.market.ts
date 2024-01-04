@@ -14,6 +14,8 @@ export default defineAppConfig({
       excludeActivityIds: [
         'com.coolapk.market.view.search.',
         'com.coolapk.market.view.feed.',
+        'com.coolapk.market.view.splash.FullScreenAdActivity',
+        'com.coolapk.market.view.splash.SplashActivity'
       ],
       rules: [
         {
@@ -36,6 +38,16 @@ export default defineAppConfig({
             'https://i.gkd.li/import/13247733', // 误触
             'https://i.gkd.li/import/13247782', // 可能误触
             'https://i.gkd.li/import/13296816', // snapshot of excludeMatches
+          ],
+        },
+        {
+          key: 2,
+          quickFind: true,
+          matches: 
+            '@View[clickable=true] <(2,3) FrameLayout <2 FrameLayout <<n FrameLayout[id="com.coolapk.market:id/ad_container"]',
+          snapshotUrls: [
+              'https://i.gkd.li/import/13826359',
+              'https://i.gkd.li/import/13827095',
           ],
         },
       ],
