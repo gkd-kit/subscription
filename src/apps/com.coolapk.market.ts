@@ -14,6 +14,7 @@ export default defineAppConfig({
       excludeActivityIds: [
         'com.coolapk.market.view.search.',
         'com.coolapk.market.view.feed.',
+        'com.coolapk.market.view.splash.SplashActivity',
       ],
       rules: [
         {
@@ -37,6 +38,11 @@ export default defineAppConfig({
             'https://i.gkd.li/import/13247782', // 可能误触
             'https://i.gkd.li/import/13296816', // snapshot of excludeMatches
           ],
+        },
+        {
+          key: 2,
+          matches: 'ImageView[id="com.coolapk.market:id/logo_view"] <<2 FrameLayout -2 FrameLayout View[clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/import/13826359',
         },
       ],
     },
