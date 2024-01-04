@@ -48,8 +48,7 @@ export default defineAppConfig({
         },
         {
           key: 3,
-          matches: 
-            '[text^="扭动手机"] <<9 FrameLayout +2 View[clickable=true]',
+          matches: '[text^="扭动手机"] <<9 FrameLayout +2 View[clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13827036',
         },
       ],
