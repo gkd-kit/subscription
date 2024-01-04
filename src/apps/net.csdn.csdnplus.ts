@@ -79,5 +79,17 @@ export default defineAppConfig({
         snapshotUrls: ['https://i.gkd.li/import/12673638'],
       },
     },
+    {
+      key: 11,
+      name: '开屏广告',
+      desc: '点击跳过',
+      rules: [
+        {
+          activityIds: 'net.csdn.csdnplus.activity.SplashActivity',
+          matches: '[text^="点击跳转"] <<10 FrameLayout +2 View[clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/import/13826577',
+        },
+      ],
+    },
   ],
 });
