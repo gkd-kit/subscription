@@ -141,8 +141,7 @@ export default defineAppConfig({
           key: 3,
           name: '阅读页面广告弹窗-点击反馈',
           activityIds: 'com.dragon.read.reader.ui.ReaderActivity',
-          matches: 
-            '[text="看视频免广告"] - [text="反馈"]',
+          matches: '[text="看视频免广告"] - [text="反馈"]',
           snapshotUrls: 'https://i.gkd.li/import/13816453',
         },
         {
