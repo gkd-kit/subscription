@@ -197,7 +197,8 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.ss.android.article.news.activity.MainActivity',
-          matches: '@FlattenUIImage[clickable=true] <n FrameLayout <<2 FrameLayout - LinearLayout [text="首页"]',
+          matches:
+            '@FlattenUIImage[clickable=true] <n FrameLayout <<2 FrameLayout - LinearLayout [text="首页"]',
           snapshotUrls: 'https://i.gkd.li/import/13828331',
         },
       ],
