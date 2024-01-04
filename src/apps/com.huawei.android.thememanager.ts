@@ -21,6 +21,11 @@ export default defineAppConfig({
             'https://i.gkd.li/import/13762181',
           ],
         },
+        {
+          activityIds: 'com.huawei.android.thememanager.mvp.view.activity.onlinebase.PageActivity',
+          matches: '[id$="hiad_skip_text"]',
+          snapshotUrls: 'https://i.gkd.li/import/13828867',
+        },
       ],
     },
     {
