@@ -11,16 +11,18 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
+      actionCdKey: 0,
+      actionMaximumKey: 0,
       excludeActivityIds: [
-        'com.coolapk.market.view.search.',
-        'com.coolapk.market.view.feed.',
-        'com.coolapk.market.view.splash.FullScreenAdActivity',
-        'com.coolapk.market.view.splash.SplashActivity',
+        'com.coolapk.market.view.search.', // 在搜索页面禁用
+        'com.coolapk.market.view.feed.', // 在动态页面禁用
       ],
       rules: [
         {
+          quickFind: true,
           key: 0,
-          matches: '[id$="tt_splash_skip_btn"]',
+          matches:
+            '[id$="tt_splash_skip_btn"] <<n [id="com.coolapk.market:id/ad_container"]',
           snapshotUrls: [
             'https://i.gkd.li/import/12503773',
             'https://i.gkd.li/import/13247610',
