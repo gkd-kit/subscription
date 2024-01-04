@@ -5,13 +5,29 @@ export default defineAppConfig({
   name: '晓晓优选',
   groups: [
     {
-      key: 1,
+      key: 0,
       name: '开屏广告',
-      desc: '点击跳过',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      quickFind: true,
+      actionCdKey: 0,
+      actionMaximumKey: 0,
       rules: [
         {
-          activityIds: 'moc.nauxuoyoaixoaix.www.ui.activity.SplashActivity',
-          matches: '[text^="扭动手机"] <<9 FrameLayout +2 View[clickable=true]',
+          key: 0,
+          matches: '[id$="tt_splash_skip_btn"] <<n [vid="adsFl"]',
+          snapshotUrls: 'https://i.gkd.li/import/13476862',
+        },
+        {
+          key: 1,
+          matches: ['[vid="adsFl"]', '[text^="跳过"][text.length<=10]'],
+          snapshotUrls: 'https://i.gkd.li/import/13625367',
+        },
+        {
+          key: 2,
+          matches:
+            '@View <3 FrameLayout <2 FrameLayout < FrameLayout < FrameLayout < [vid="adsFl"]',
           snapshotUrls: 'https://i.gkd.li/import/13820450',
         },
       ],
