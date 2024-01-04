@@ -46,8 +46,7 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.xpx365.projphoto.SplashActivity',
-          matches: 
-            '@View[clickable=true] - FrameLayout View[text^="摇一摇"]',
+          matches: '@View[clickable=true] - FrameLayout View[text^="摇一摇"]',
           snapshotUrls: 'https://i.gkd.li/import/13827755',
         },
       ],
