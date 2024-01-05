@@ -5,6 +5,15 @@ export default defineAppConfig({
   name: 'AppShare',
   groups: [
     {
+      key: 0,
+      name: '开屏广告',
+      actionMaximum: 1,
+      matchTime: 10000,
+      resetMatch: 'app',
+      rules: '[vid="tp_splash_container_id"] >n FrameLayout[childCount=4] > View',
+      snapshotUrls: 'https://i.gkd.li/import/13842826',
+    },
+    {
       key: 1,
       name: '卡片式广告',
       rules: [
