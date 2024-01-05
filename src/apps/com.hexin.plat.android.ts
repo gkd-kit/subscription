@@ -16,8 +16,9 @@ export default defineAppConfig({
           matches:
             '[id="com.hexin.plat.android:id/ad_image"] + [id="com.hexin.plat.android:id/skip_tv"]',
           snapshotUrls: [
-            'https://gkd-kit.gitee.io/import/12662631',
-            'https://gkd-kit.gitee.io/import/12662620',
+            'https://i.gkd.li/import/12662631',
+            'https://i.gkd.li/import/12662620',
+            'https://i.gkd.li/import/13832276',
           ],
         },
       ],
