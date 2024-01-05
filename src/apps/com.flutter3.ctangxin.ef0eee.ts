@@ -1,7 +1,7 @@
 import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
-  id: 'com.flutter3.ctangxin.vf0egg',
+  id: 'com.flutter3.ctangxin.ef0eee', // 注意 appId 有随机后缀, 需修改为你自己的 appId
   name: '糖心Vlog',
   groups: [
     {
@@ -22,14 +22,15 @@ export default defineAppConfig({
     },
     {
       key: 1,
-      name: '广告弹窗',
-
+      name: '广告弹窗', // 目前已叠加了三层广告
+      matchDelay: 6500, // 待无法跳过的5s开屏广告过后，能够主动执行匹配。 数值过小将导致低性能手机开屏广告没结束就触发无效匹配
       matchTime: 10000,
-      actionMaximum: 1,
+      actionCd: 100,
       resetMatch: 'app',
       activityIds: ['com.example.flutter3_frame.MainActivity'],
       rules: [
         {
+          action: 'back',
           matches:
             'FrameLayout > View > View > View[index=0] > View > ImageView[childCount=1] + View[clickable=true && desc=null]',
           snapshotUrls: 'https://i.gkd.li/import/12836891',
@@ -39,13 +40,13 @@ export default defineAppConfig({
     {
       key: 2,
       name: '公告弹窗',
-
+      matchDelay: 8000, // 兜底方案，避免启动过慢，导致"广告弹窗" 的延迟匹配无效
       matchTime: 10000,
-      actionMaximum: 1,
       resetMatch: 'app',
       activityIds: ['com.example.flutter3_frame.MainActivity'],
       rules: [
         {
+          action: 'back',
           matches: '@[desc="取消"][clickable=true] + [desc="确定"]',
           snapshotUrls: 'https://i.gkd.li/import/12836854',
         },
