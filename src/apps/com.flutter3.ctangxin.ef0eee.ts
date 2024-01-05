@@ -1,7 +1,7 @@
 import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
-  id: 'com.flutter3.ctangxin.vf0egg', // 注意 appId 有随机后缀, 需修改为你自己的 appId
+  id: 'com.flutter3.ctangxin.ef0eee', // 注意 appId 有随机后缀, 需修改为你自己的 appId
   name: '糖心Vlog',
   groups: [
     {
@@ -27,9 +27,9 @@ export default defineAppConfig({
       matchTime: 10000,
       actionCd: 100,
       resetMatch: 'app',
-      activityIds: ['com.example.flutter3_frame.MainActivity'],
       rules: [
         {
+          action: 'back',
           matches:
             'FrameLayout > View > View > View[index=0] > View > ImageView[childCount=1] + View[clickable=true && desc=null]',
           snapshotUrls: 'https://i.gkd.li/import/12836891',
@@ -42,9 +42,9 @@ export default defineAppConfig({
       matchDelay: 7500,
       matchTime: 10000,
       resetMatch: 'app',
-      activityIds: ['com.example.flutter3_frame.MainActivity'],
       rules: [
         {
+          action: 'back',
           matches: '@[desc="取消"][clickable=true] + [desc="确定"]',
           snapshotUrls: 'https://i.gkd.li/import/12836854',
         },
