@@ -27,6 +27,7 @@ export default defineAppConfig({
       matchTime: 10000,
       actionCd: 100,
       resetMatch: 'app',
+      activityIds: ['com.example.flutter3_frame.MainActivity'],
       rules: [
         {
           action: 'back',
@@ -42,6 +43,7 @@ export default defineAppConfig({
       matchDelay: 7500,
       matchTime: 10000,
       resetMatch: 'app',
+      activityIds: ['com.example.flutter3_frame.MainActivity'],
       rules: [
         {
           action: 'back',
