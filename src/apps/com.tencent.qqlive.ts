@@ -201,7 +201,7 @@ export default defineAppConfig({
       ],
     },
     {
-      key: 5,
+      key: 6,
       name: '首页-广告弹窗',
       resetMatch: 'app',
       actionMaximum: 1,
