@@ -23,7 +23,7 @@ export default defineAppConfig({
     {
       key: 1,
       name: '广告弹窗',
-      matchDelay: 7500,
+      matchDelay: 6000,
       matchTime: 10000,
       actionCd: 100,
       resetMatch: 'app',
@@ -40,7 +40,7 @@ export default defineAppConfig({
     {
       key: 2,
       name: '公告弹窗',
-      matchDelay: 7500,
+      matchDelay: 6000,
       matchTime: 10000,
       resetMatch: 'app',
       activityIds: ['com.example.flutter3_frame.MainActivity'],
