@@ -86,7 +86,8 @@ export default defineAppConfig({
       name: '新人教学弹窗',
       desc: '点击跳过',
       activityIds: ['com.alipay.mobile.nebulacore.ui.H5Activity'],
-      rules: '@View[text="跳过"] <2 View <2 View <<n FrameLayout[id="com.jingyao.easybike:id/h5_pc_container"]',
+      rules:
+        '@View[text="跳过"] <2 View <2 View <<n FrameLayout[id="com.jingyao.easybike:id/h5_pc_container"]',
       snapshotUrls: ['https://i.gkd.li/import/13837543'],
     },
   ],
