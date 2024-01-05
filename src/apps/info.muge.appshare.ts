@@ -10,7 +10,8 @@ export default defineAppConfig({
       actionMaximum: 1,
       matchTime: 10000,
       resetMatch: 'app',
-      rules: '[vid="tp_splash_container_id"] >n FrameLayout[childCount=4] > View',
+      rules:
+        '[vid="tp_splash_container_id"] >n FrameLayout[childCount=4] > View',
       snapshotUrls: 'https://i.gkd.li/import/13842826',
     },
     {
