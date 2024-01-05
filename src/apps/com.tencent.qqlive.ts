@@ -201,6 +201,15 @@ export default defineAppConfig({
       ],
     },
     {
+      key: 5,
+      name: '首页-广告弹窗',
+      resetMatch: 'app',
+      actionMaximum: 1,
+      activityIds: 'com.tencent.qqlive.redpacket.rain.OpenRedPacketActivity',
+      rules: 'ImageView[id="com.tencent.qqlive:id/arg"][index=0]',
+      snapshotUrls: 'https://i.gkd.li/import/13842643',
+    },
+    {
       enable: false,
       key: 20,
       name: '请求通知权限弹窗',
