@@ -22,8 +22,8 @@ export default defineAppConfig({
     },
     {
       key: 1,
-      name: '广告弹窗',
-      matchDelay: 6000, // 待无法跳过的5s开屏广告过后，能够主动执行匹配
+      name: '广告弹窗', // 目前已叠加了三层广告
+      matchDelay: 6500, // 待无法跳过的5s开屏广告过后，能够主动执行匹配。 数值过小将导致低性能手机开屏广告没结束就触发无效匹配
       matchTime: 10000,
       actionCd: 100,
       resetMatch: 'app',
@@ -40,7 +40,7 @@ export default defineAppConfig({
     {
       key: 2,
       name: '公告弹窗',
-      matchDelay: 6000,
+      matchDelay: 8000, // 兜底方案，避免启动过慢，导致"广告弹窗" 的延迟匹配无效
       matchTime: 10000,
       resetMatch: 'app',
       activityIds: ['com.example.flutter3_frame.MainActivity'],
