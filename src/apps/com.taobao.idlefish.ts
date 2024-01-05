@@ -20,5 +20,18 @@ export default defineAppConfig({
         '@Button[text="取消"] <<n FrameLayout >n TextView[text*="手机信息"]',
       snapshotUrls: 'https://i.gkd.li/import/13620277',
     },
+    {
+      key: 3,
+      quickFind: true,
+      name: '版本更新弹窗',
+      desc: '点击暂不升级',
+      rules: [
+        {
+          activityIds: 'com.taobao.idlefish.maincontainer.activity.MainActivity',
+          matches: '[id="com.taobao.idlefish:id/left"][text="暂不升级"]',
+          snapshotUrls: 'https://i.gkd.li/import/13832272',
+        },
+      ],
+    },
   ],
 });
