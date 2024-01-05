@@ -8,8 +8,11 @@ export default defineAppConfig({
       key: 1,
       name: '弹窗广告',
       activityIds: 'com.aster.comic.app.view.MainActivity',
-      rules: '[id="android:id/content"] >n FrameLayout[index=1] > ImageView',
-      snapshotUrls: 'https://i.gkd.li/import/13830354',
+      rules: '[id="android:id/content"] >n FrameLayout[index=1] > ImageView[index=0]',
+      snapshotUrls: [
+        'https://i.gkd.li/import/13830354',
+        'https://i.gkd.li/import/13842716', //限定ImageView[index=0]防止误触
+      ],
     },
   ],
 });
