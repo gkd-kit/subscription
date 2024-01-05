@@ -74,7 +74,8 @@ export default defineAppConfig({
       name: '首页-今日手气红包',
       desc: '点击右上角X',
       quickFind: true,
-      activityIds: 'com.cainiao.wireless.homepage.view.activity.HomePageActivity',
+      activityIds:
+        'com.cainiao.wireless.homepage.view.activity.HomePageActivity',
       rules: '[vid="dialog_full_image_close"]',
       snapshotUrls: 'https://i.gkd.li/import/13842492',
     },
