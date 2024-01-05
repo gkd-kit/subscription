@@ -2,17 +2,20 @@ import apps from './rawApps';
 import type { RawGlobalGroup } from './types';
 
 const diabledAppIds = [
-  'com.android.systemui',
-  'com.miui.aod',
+  'com.android.systemui', // 通知栏界面
+  'com.android.settings', // 系统设置
 
-  // 在桌面禁用
-  'com.miui.home',
-  'com.android.launcher.Launcher',
-  'com.bbk.launcher2.Launcher',
-  'com.huawei.android.launcher.unihome.UniHomeLauncher',
+  'com.miui.aod', // miui 锁屏界面
+  'miui.systemui.plugin', // miui 状态栏界面
 
   // 在一些常见的应用中禁用
-  'com.tencent.mm',
+  'com.tencent.mm', // 微信
+  'li.songe.gkd',
+
+  // https://github.com/gkd-kit/gkd/issues/451
+  'mark.via',
+  'com.mycompany.app.soulbrowser',
+  'com.mmbox.xbrowser',
 ];
 
 // 如果应用规则已有开屏广告一类的规则, 则在全局规则禁用此应用
