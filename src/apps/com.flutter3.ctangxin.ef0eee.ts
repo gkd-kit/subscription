@@ -23,7 +23,7 @@ export default defineAppConfig({
     {
       key: 1,
       name: '广告弹窗',
-      matchDelay: 6000,
+      matchDelay: 6000, // 待无法跳过的5s开屏广告过后，能够主动执行匹配
       matchTime: 10000,
       actionCd: 100,
       resetMatch: 'app',
