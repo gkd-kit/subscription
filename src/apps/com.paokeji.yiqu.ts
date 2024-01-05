@@ -17,7 +17,8 @@ export default defineAppConfig({
           key: 0,
           name: '腾讯SDK',
           actionDelay: 300, //防误触
-          matches: '[id="android:id/content"] >(-n+4) FrameLayout > FrameLayout[childCount=1] > ImageView[index=0]',
+          matches:
+            '[id="android:id/content"] >(-n+4) FrameLayout > FrameLayout[childCount=1] > ImageView[index=0]',
           snapshotUrls: [
             'https://i.gkd.li/import/13830354',
             'https://i.gkd.li/import/13842716',
@@ -27,7 +28,8 @@ export default defineAppConfig({
         {
           key: 1,
           name: '未知SDK',
-          matches: 'FrameLayout[desc^="root"] > FrameLayout + FrameLayout[desc^="webview"] > View',
+          matches:
+            'FrameLayout[desc^="root"] > FrameLayout + FrameLayout[desc^="webview"] > View',
           snapshotUrls: [
             'https://i.gkd.li/import/13839432',
             'https://i.gkd.li/import/13839519',
@@ -37,7 +39,8 @@ export default defineAppConfig({
           key: 2,
           name: '字节SDK',
           actionDelay: 350, //防误触
-          matches: '@Image[text.length=0] < View + View +(6-n) View >(4-n) TextView[ text*="广告" && text.length<=10]',
+          matches:
+            '@Image[text.length=0] < View + View +(6-n) View >(4-n) TextView[ text*="广告" && text.length<=10]',
           snapshotUrls: [
             'https://i.gkd.li/import/13809737',
             'https://i.gkd.li/import/13809578',
