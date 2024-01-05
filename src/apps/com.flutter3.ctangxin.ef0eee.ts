@@ -1,7 +1,7 @@
 import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
-  id: 'com.flutter3.ctangxin.vf0egg',
+  id: 'com.flutter3.ctangxin.vf0egg', // 注意 appId 有随机后缀, 需修改为你自己的 appId
   name: '糖心Vlog',
   groups: [
     {
@@ -23,9 +23,9 @@ export default defineAppConfig({
     {
       key: 1,
       name: '广告弹窗',
-
+      matchDelay: 7500,
       matchTime: 10000,
-      actionMaximum: 1,
+      actionCd: 100,
       resetMatch: 'app',
       activityIds: ['com.example.flutter3_frame.MainActivity'],
       rules: [
@@ -39,9 +39,8 @@ export default defineAppConfig({
     {
       key: 2,
       name: '公告弹窗',
-
+      matchDelay: 7500,
       matchTime: 10000,
-      actionMaximum: 1,
       resetMatch: 'app',
       activityIds: ['com.example.flutter3_frame.MainActivity'],
       rules: [
