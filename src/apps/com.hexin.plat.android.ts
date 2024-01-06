@@ -5,6 +5,24 @@ export default defineAppConfig({
   name: '同花顺',
   groups: [
     {
+      key: 0,
+      name: '开屏广告',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          matches:
+            '[id="com.hexin.plat.android:id/ad_image"] + [id="com.hexin.plat.android:id/skip_tv"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12662631',
+            'https://i.gkd.li/import/12662620',
+            'https://i.gkd.li/import/13832276',
+          ],
+        },
+      ],
+    },
+    {
       key: 1,
       name: '信息流广告',
       desc: '信息流广告-点击x按钮-点击内容质量差',
