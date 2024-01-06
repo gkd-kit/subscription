@@ -16,9 +16,9 @@ export default defineAppConfig({
         {
           key: 0,
           name: '腾讯SDK',
-          actionDelay: 300, //防误触
+          actionDelay: 350, //防误触
           matches:
-            '[id="android:id/content"] >(-n+4) FrameLayout > FrameLayout[childCount=1] > ImageView[index=0]',
+            '[id="android:id/content"] >(-n+4) FrameLayout > FrameLayout[childCount=1] > ImageView[index=0 && id!=null]',
           snapshotUrls: [
             'https://i.gkd.li/import/13830354',
             'https://i.gkd.li/import/13842716',
