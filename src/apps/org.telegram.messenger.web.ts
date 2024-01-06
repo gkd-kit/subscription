@@ -12,10 +12,7 @@ export default defineAppConfig({
       actionMaximum: 1,
       rules: [
         {
-          matches: [
-            '[text="更新 Telegram"]',
-            '[text="请稍后提醒我"] - View',
-          ],
+          matches: ['[text="更新 Telegram"]', '[text="请稍后提醒我"] - View'],
         },
       ],
       snapshotUrls: 'https://i.gkd.li/import/13847837',
