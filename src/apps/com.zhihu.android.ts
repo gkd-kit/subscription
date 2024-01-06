@@ -55,12 +55,38 @@ export default defineAppConfig({
       key: 5,
       name: '推荐页广告卡片',
       desc: '赚稿费广告卡片,盐选推荐广告,知乎学课堂,汽车广告',
-      activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
       rules: [
-        '[id="com.zhihu.android:id/content"] >2 TextView[text="不感兴趣"][id="com.zhihu.android:id/title"]', // 1686989681860
-        'TextView[text=`内容质量差`][id=`com.zhihu.android:id/tv_content`]',
-        '@ImageView[id=`com.zhihu.android:id/menu`] < FrameLayout - * > TextView[text^=`广告`]', // 1687913210243 1686989714786
-        '@ImageView[id=null][clickable=true] -n TextView[text*=`广告`][index=0]', // 1687418944396 1686924015259
+        {
+          key: 0,
+          activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
+          matches:
+            '[id="com.zhihu.android:id/content"] >2 TextView[text="不感兴趣"][id="com.zhihu.android:id/title"]',
+        },
+        {
+          key: 1,
+          activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
+          matches:
+            'TextView[text=`内容质量差`][id=`com.zhihu.android:id/tv_content`]',
+        },
+        {
+          key: 2,
+          activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
+          matches:
+            '@ImageView[id=`com.zhihu.android:id/menu`] < FrameLayout - * > TextView[text^=`广告`]',
+        },
+        {
+          key: 3,
+          activityIds: 'com.zhihu.android.app.ui.activity.MainActivity',
+          matches:
+            '@ImageView[id=null][clickable=true] -n TextView[text*=`广告`][index=0]',
+        },
+        {
+          key: 4,
+          activityIds: 'com.zhihu.android.ContentActivity',
+          quickFind: true,
+          matches: '@ImageView[clickable=true] -3 * > [text="广告"]',
+          snapshotUrls: 'https://i.gkd.li/import/13849442',
+        },
       ],
     },
     {
