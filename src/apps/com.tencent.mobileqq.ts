@@ -88,10 +88,16 @@ export default defineAppConfig({
         {
           preKeys: 0,
           key: 2,
-          activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
+          activityIds: [
+            'com.tencent.mobileqq.activity.SplashActivity',
+            'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
+          ],
           quickFind: true,
           matches: '@[clickable=true] > * > ImageView + [text="隐藏此条动态"]',
-          snapshotUrls: 'https://i.gkd.li/import/13761147',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13761147',
+            'https://i.gkd.li/import/13849730',
+          ],
         },
         {
           key: 3,
