@@ -113,7 +113,8 @@ export default defineAppConfig({
         {
           key: 0,
           activityIds: 'net.csdn.csdnplus.mvvm.ui.activity.BlogDetailActivity',
-          matches: '@ImageView[clickable=true] <<2 ViewGroup <<2 ViewGroup - FrameLayout <<6 FrameLayout[id="net.csdn.csdnplus:id/fl_template_container"][visibleToUser=true]',
+          matches:
+            '@ImageView[clickable=true] <<2 ViewGroup <<2 ViewGroup - FrameLayout <<6 FrameLayout[id="net.csdn.csdnplus:id/fl_template_container"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/import/13830821',
         },
         {
