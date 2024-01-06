@@ -128,7 +128,8 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.unionpay.cordova.UPActivityCordovaWeb',
-          matches: '[id="com.unionpay:id/view_content_container"] View[text="关闭按钮"][clickable=true]',
+          matches:
+            '[id="com.unionpay:id/view_content_container"] View[text="关闭按钮"][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13848688',
         },
       ],
