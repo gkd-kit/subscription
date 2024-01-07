@@ -243,12 +243,24 @@ export default defineAppConfig({
     },
     {
       key: 17,
-      name: '评论区-信息流广告',
-      desc: '点击【x】',
-      activityIds: 'com.sina.weibo.feed.DetailWeiboActivity',
       quickFind: true,
-      rules: '[text="广告"] + [id="com.sina.weibo:id/iv_close_icon"]',
-      snapshotUrls: 'https://i.gkd.li/import/13632175',
+      name: '评论区-信息流广告',
+      desc: '点击X-点击不感兴趣',
+      rules: [
+        {
+          key: 0,
+          activityIds: 'com.sina.weibo.feed.DetailWeiboActivity',
+          matches: '[text="广告"] + [id="com.sina.weibo:id/iv_close_icon"]',
+          snapshotUrls: 'https://i.gkd.li/import/13852321',
+        },
+        {
+          preKeys: 0,
+          key: 1,
+          activityIds: 'com.sina.weibo.feed.DetailWeiboActivity',
+          matches: '[text="不感兴趣"][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/import/13852322',
+        },
+      ],
     },
     {
       key: 18,
