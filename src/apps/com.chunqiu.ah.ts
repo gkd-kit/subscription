@@ -87,21 +87,31 @@ export default defineAppConfig({
         {
           activityIds: 'com.androlua.LuaActivity',
           matches:
-            '@ImageView[visibleToUser=true] < * <2 * <<n [id="android:id/content"]',
+            '@ImageView[visibleToUser=true] < * +3 * > [text="查看详情"]',
           snapshotUrls: 'https://i.gkd.li/import/13852448',
         },
       ],
     },
     {
       key: 6,
-      name: '播放界面底部广告',
+      name: '播放界面广告',
       desc: '点击X',
       rules: [
         {
           activityIds: 'com.androlua.LuaActivity',
           matches:
-            '[id="com.chunqiu.ah:id/ksad_container"] >8 View[id="logoBox"] > TextView[clickable=true]',
+            '[id="com.chunqiu.ah:id/ksad_container"] >n View[id="logoBox"] > TextView[clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13852535',
+        },
+        {
+          activityIds: 'com.androlua.LuaActivity',
+          matches:
+            '[id="android:id/content"] FrameLayout[childCount<=5] > FrameLayout[childCount=1] > ImageView[visibleToUser=true][index=0]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13852695',
+            'https://i.gkd.li/import/13852670',
+            'https://i.gkd.li/import/13852669',
+          ]
         },
       ],
     },
