@@ -189,6 +189,7 @@ export default defineAppConfig({
       activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
       rules: [
         {
+          key: 0,
           matches: [
             'TextView[text="正在直播"]',
             '@ImageView[desc="返回"] <4 ViewGroup <<3 FrameLayout[id="android:id/content"]',
@@ -196,11 +197,20 @@ export default defineAppConfig({
           snapshotUrls: 'https://i.gkd.li/import/13446291',
         },
         {
+          actionMaximumKey: 0,
           matches: [
             'TextView[text="查看更多低价商品"]',
             '@ImageView[desc="返回"] <4 ViewGroup <<3 FrameLayout[id="android:id/content"]',
           ],
           snapshotUrls: 'https://i.gkd.li/import/13791119',
+        },
+        {
+          actionMaximumKey: 0,
+          matches: [
+            'TextView[text^="必得"] < FrameLayout - FrameLayout > TextView[text="下单"]',
+            '@ImageView[desc="返回"] <4 ViewGroup <<3 FrameLayout[id="android:id/content"]',
+          ],
+          snapshotUrls: 'https://i.gkd.li/import/13852257',
         },
       ],
     },
