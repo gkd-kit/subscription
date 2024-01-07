@@ -59,7 +59,8 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.androlua.LuaActivity',
-          matches: '[id="com.chunqiu.ah:id/buttonPanel"] [text="我已知晓"][id="android:id/button2"]',
+          matches:
+            '[id="com.chunqiu.ah:id/buttonPanel"] [text="我已知晓"][id="android:id/button2"]',
           snapshotUrls: 'https://i.gkd.li/import/13852430',
         },
       ],
@@ -85,7 +86,8 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.androlua.LuaActivity',
-          matches: '@ImageView[visibleToUser=true] < * <2 * <<n [id="android:id/content"]',
+          matches:
+            '@ImageView[visibleToUser=true] < * <2 * <<n [id="android:id/content"]',
           snapshotUrls: 'https://i.gkd.li/import/13852448',
         },
       ],
@@ -97,7 +99,8 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.androlua.LuaActivity',
-          matches: '[id="com.chunqiu.ah:id/ksad_container"] >8 View[id="logoBox"] > TextView[clickable=true]',
+          matches:
+            '[id="com.chunqiu.ah:id/ksad_container"] >8 View[id="logoBox"] > TextView[clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13852535',
         },
       ],
