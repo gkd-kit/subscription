@@ -98,12 +98,14 @@ export default defineAppConfig({
       desc: '点击X',
       rules: [
         {
+          key: 0,
           activityIds: 'com.androlua.LuaActivity',
           matches:
             '[id="com.chunqiu.ah:id/ksad_container"] >n View[id="logoBox"] > TextView[clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13852535',
         },
         {
+          key: 1,
           activityIds: 'com.androlua.LuaActivity',
           matches:
             '[id="android:id/content"] FrameLayout[childCount<=5] > FrameLayout[childCount=1] > ImageView[visibleToUser=true][index=0]',
