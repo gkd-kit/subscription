@@ -53,12 +53,13 @@ export default defineAppConfig({
           name: '穿山甲SDK',
           matches: [
             '[id="com.byted.pangle.m:id/tt_reward_full_count_down_after"]',
+            '[text="反馈"] < View + View',
             '[text*="跳过" && text.length<=6] <2 @View -(3-n) View < View',
           ],
           snapshotUrls: [
-            'https://i.gkd.li/import/13830798',
-            'https://i.gkd.li/import/13810767',
-            'https://i.gkd.li/import/13829749', //规则2
+            'https://i.gkd.li/import/13830798', //规则2
+            'https://i.gkd.li/import/13810767', //规则1
+            'https://i.gkd.li/import/13829749', //规则3
           ],
         },
         {
