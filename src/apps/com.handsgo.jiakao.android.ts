@@ -55,7 +55,8 @@ export default defineAppConfig({
           name: '摇一摇广告',
           quickFind: true,
           activityIds: 'com.handsgo.jiakao.android.main.activity.MainActivity',
-          matches: '[id="com.handsgo.jiakao.android:id/topCloseLayout"] > [id="com.handsgo.jiakao.android:id/close"]',
+          matches:
+            '[id="com.handsgo.jiakao.android:id/topCloseLayout"] > [id="com.handsgo.jiakao.android:id/close"]',
           snapshotUrls: 'https://i.gkd.li/import/13855635',
         },
       ],
@@ -66,8 +67,10 @@ export default defineAppConfig({
       quickFind: true,
       rules: [
         {
-          activityIds: 'com.handsgo.jiakao.android.practice_refactor.activity.PracticeActivity',
-          matches: '[id="com.handsgo.jiakao.android:id/adsdk__ids_ad_third_bind_area"] > * > * > [id="com.handsgo.jiakao.android:id/adsdk__ids_component_close"]',
+          activityIds:
+            'com.handsgo.jiakao.android.practice_refactor.activity.PracticeActivity',
+          matches:
+            '[id="com.handsgo.jiakao.android:id/adsdk__ids_ad_third_bind_area"] > * > * > [id="com.handsgo.jiakao.android:id/adsdk__ids_component_close"]',
           snapshotUrls: 'https://i.gkd.li/import/13848864',
         },
       ],
@@ -82,7 +85,8 @@ export default defineAppConfig({
             'com.handsgo.jiakao.android.main.activity.MainActivity',
             'com.handsgo.jiakao.android.practice_refactor.activity.PracticeActivity',
           ],
-          matches: '[id="com.handsgo.jiakao.android:id/topRightContainer"] > [id="com.handsgo.jiakao.android:id/adsdk__ids_component_close"][visibleToUser=true]',
+          matches:
+            '[id="com.handsgo.jiakao.android:id/topRightContainer"] > [id="com.handsgo.jiakao.android:id/adsdk__ids_component_close"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/import/13855690',
             'https://i.gkd.li/import/13853240',
