@@ -12,13 +12,14 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: 'TextView[text^="跳过"][text.length<=10]',
+      rules: 'ImageView +(1,2) TextView[text^="跳过"][text.length<=10]',
       excludeActivityIds: ['com.tencent.mobileqq.activity.ChatActivity'],
       snapshotUrls: [
         'https://i.gkd.li/import/13062244',
         'https://i.gkd.li/import/13093155',
         'https://i.gkd.li/import/13207731',
         'https://i.gkd.li/import/13217807', // 避免在聊天界面误触
+        'https://i.gkd.li/import/13856647', //误触
       ],
     },
     {
