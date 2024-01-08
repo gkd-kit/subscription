@@ -27,9 +27,9 @@ export default defineAppConfig({
         },
         {
           key: 1,
-          name: '未知SDK',
+          name: '字节SDK',
           matches:
-            'View +2 FrameLayout > FrameLayout[childCount=7] > FrameLayout + FrameLayout > View',
+            'FrameLayout[desc*="close"] > View',
           snapshotUrls: [
             'https://i.gkd.li/import/13839432',
             'https://i.gkd.li/import/13839519',
@@ -37,42 +37,35 @@ export default defineAppConfig({
         },
         {
           key: 2,
-          name: '字节SDK',
-          actionDelay: 350, //防误触
-          matches:
-            '@Image[text.length=0] < View + View +(6-n) View >(4-n) TextView[ text*="广告" && text.length<=10]',
-          snapshotUrls: [
-            'https://i.gkd.li/import/13809737',
-            'https://i.gkd.li/import/13809578',
-            'https://i.gkd.li/import/13809565',
-            'https://i.gkd.li/import/13810150',
-          ],
-        },
-        {
-          key: 3,
           name: '穿山甲SDK',
+          actionDelay: 350, //防误触
           matches: [
             '[id="com.byted.pangle.m:id/tt_reward_full_count_down_after"]',
-            '[text="反馈"] < View + View',
+            '[text="反馈"] <<n View + View[childCount=1]',
             '[text*="跳过" && text.length<=6] <2 @View -(3-n) View < View',
+            '[text="反馈"] -n @View[index<=1] > Image[text.length=0]',
+            '[text="反馈"] <<n View - View[childCount=1]',
           ],
           snapshotUrls: [
             'https://i.gkd.li/import/13830798', //规则2
             'https://i.gkd.li/import/13810767', //规则1
             'https://i.gkd.li/import/13829749', //规则3
+            'https://i.gkd.li/import/13809737', //规则4 index=0
+            'https://i.gkd.li/import/13809578', //规则4 index=1
+            'https://i.gkd.li/import/13810150', //规则5
           ],
         },
         {
-          key: 4,
+          key: 3,
           name: '快手SDK',
           matches: [
-            'ViewGroup > ImageView[visibleToUser=true] +(5-n) ViewGroup > @ViewGroup[clickable=true && visibleToUser=true] > ImageView',
-            'LinearLayout[id!=null && childCount=2] > @LinearLayout[id!=null] > LinearLayout > ImageView',
+            '[text*="跳过"] <n *[clickable=true]',
+            '[vid="ksad_auto_close_btn"]',
+            '[vid="ksad_video_container"] < * >n ViewGroup[index=1] >n @ViewGroup[clickable=true] > ImageView'
           ],
           snapshotUrls: [
-            'https://i.gkd.li/import/13809478',
-            'https://i.gkd.li/import/13809629',
-            'https://i.gkd.li/import/13829312',
+            'https://i.gkd.li/import/13809629', //规则1
+            'https://i.gkd.li/import/13829312', //规则3
             'https://i.gkd.li/import/13837855', //规则2
           ],
         },
