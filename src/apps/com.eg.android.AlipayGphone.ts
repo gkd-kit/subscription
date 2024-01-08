@@ -39,6 +39,10 @@ export default defineAppConfig({
             '[text="花呗服务未升级，将影响后续使用"] <<n FrameLayout @FrameLayout[clickable=true] [text="暂不升级，继续付款"]',
           snapshotUrls: 'https://i.gkd.li/import/13631362',
         },
+        {
+          matches: '[id="com.alipay.android.app:id/flybird_userinfo"] + * >8 FrameLayout[clickable=true][index=1]',
+          snapshotUrls: 'https://i.gkd.li/import/13857535',
+        },
       ],
     },
     {
