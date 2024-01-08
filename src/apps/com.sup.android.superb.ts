@@ -33,5 +33,17 @@ export default defineAppConfig({
         'FrameLayout > RelativeLayout > @ImageView[clickable=true] + ImageView',
       snapshotUrls: 'https://i.gkd.li/import/13624220',
     },
+    {
+      key: 7,
+      quickFind: true,
+      name: '更新提示',
+      desc: '点击我再想想',
+      rules: [
+        {
+          matches: '[id="com.sup.android.superb:id/q6"] > [id="com.sup.android.superb:id/rl"]',
+          snapshotUrls: 'https://i.gkd.li/import/13858490',
+        },
+      ],
+    },
   ],
 });
