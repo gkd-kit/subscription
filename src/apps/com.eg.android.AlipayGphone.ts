@@ -40,7 +40,8 @@ export default defineAppConfig({
           snapshotUrls: 'https://i.gkd.li/import/13631362',
         },
         {
-          matches: '[id="com.alipay.android.app:id/flybird_userinfo"] + * >8 FrameLayout[clickable=true][index=1]',
+          matches:
+            '[id="com.alipay.android.app:id/flybird_userinfo"] + * >8 FrameLayout[clickable=true][index=1]',
           snapshotUrls: 'https://i.gkd.li/import/13857535',
         },
       ],
