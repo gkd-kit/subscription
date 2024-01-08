@@ -28,8 +28,7 @@ export default defineAppConfig({
         {
           key: 1,
           name: '字节SDK',
-          matches:
-            'FrameLayout[desc*="close"] > View',
+          matches: 'FrameLayout[desc*="close"] > View',
           snapshotUrls: [
             'https://i.gkd.li/import/13839432',
             'https://i.gkd.li/import/13839519',
@@ -61,7 +60,7 @@ export default defineAppConfig({
           matches: [
             '[text*="跳过"] <n *[clickable=true]',
             '[vid="ksad_auto_close_btn"]',
-            '[vid="ksad_video_container"] < * >n ViewGroup[index=1] >n @ViewGroup[clickable=true] > ImageView'
+            '[vid="ksad_video_container"] < * >n ViewGroup[index=1] >n @ViewGroup[clickable=true] > ImageView',
           ],
           snapshotUrls: [
             'https://i.gkd.li/import/13809629', //规则1
