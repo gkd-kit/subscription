@@ -7,8 +7,10 @@ export default defineAppConfig({
     {
       name: '开屏广告',
       key: 1,
+      quickFind: true,
       rules: [
         {
+          action: 'clickNode',
           matches: ['View'],
           activityIds: [
             'com.nowcoder.app.florida.modules.splash.view.SplashActivity',
