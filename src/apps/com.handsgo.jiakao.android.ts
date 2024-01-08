@@ -50,10 +50,48 @@ export default defineAppConfig({
             '[id="com.handsgo.jiakao.android:id/adsdk__ids_cta_layout"] - * > [id="com.handsgo.jiakao.android:id/close"]',
           snapshotUrls: 'https://i.gkd.li/import/13523033',
         },
+        {
+          key: 2,
+          name: '摇一摇广告',
+          quickFind: true,
+          activityIds: 'com.handsgo.jiakao.android.main.activity.MainActivity',
+          matches: '[id="com.handsgo.jiakao.android:id/topCloseLayout"] > [id="com.handsgo.jiakao.android:id/close"]',
+          snapshotUrls: 'https://i.gkd.li/import/13855635',
+        },
       ],
     },
     {
       key: 3,
+      name: '评论区广告',
+      quickFind: true,
+      rules: [
+        {
+          activityIds: 'com.handsgo.jiakao.android.practice_refactor.activity.PracticeActivity',
+          matches: '[id="com.handsgo.jiakao.android:id/adsdk__ids_ad_third_bind_area"] > * > * > [id="com.handsgo.jiakao.android:id/adsdk__ids_component_close"]',
+          snapshotUrls: 'https://i.gkd.li/import/13848864',
+        },
+      ],
+    },
+    {
+      key: 4,
+      name: '横幅广告',
+      rules: [
+        {
+          quickFind: true,
+          activityIds: [
+            'com.handsgo.jiakao.android.main.activity.MainActivity',
+            'com.handsgo.jiakao.android.practice_refactor.activity.PracticeActivity',
+          ],
+          matches: '[id="com.handsgo.jiakao.android:id/topRightContainer"] > [id="com.handsgo.jiakao.android:id/adsdk__ids_component_close"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13855690',
+            'https://i.gkd.li/import/13853240',
+          ],
+        },
+      ],
+    },
+    {
+      key: 5,
       name: '请求开启通知权限弹窗',
       activityIds: [],
       quickFind: true,
