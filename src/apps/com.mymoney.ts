@@ -15,7 +15,8 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.mymoney.biz.splash.SplashScreenActivity',
-          matches: '@View[clickable=true] <3 * <2 * < FrameLayout[id="com.mymoney:id/external_ad_content"]',
+          matches:
+            '@View[clickable=true] <3 * <2 * < FrameLayout[id="com.mymoney:id/external_ad_content"]',
           snapshotUrls: 'https://i.gkd.li/import/13855760',
         },
       ],
