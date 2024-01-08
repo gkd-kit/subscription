@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '弹窗广告',
+      name: '局部广告',
       activityIds: [
         'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Activity_T',
         'com.aster.comic.app.view.MainActivity',
@@ -29,7 +29,7 @@ export default defineAppConfig({
           key: 1,
           name: '未知SDK',
           matches:
-            'FrameLayout[desc^="root"] > FrameLayout + FrameLayout[desc^="webview"] > View',
+            'View +2 FrameLayout > FrameLayout[childCount=7] > FrameLayout + FrameLayout > View',
           snapshotUrls: [
             'https://i.gkd.li/import/13839432',
             'https://i.gkd.li/import/13839519',
@@ -52,14 +52,13 @@ export default defineAppConfig({
           key: 3,
           name: '穿山甲SDK',
           matches: [
-            '[text="反馈"] < View + View > Image',
-            'LinearLayout[id!=null && childCount=2] > @LinearLayout[id!=null] > LinearLayout > ImageView',
+            '[id="com.byted.pangle.m:id/tt_reward_full_count_down_after"]',
             '[text*="跳过" && text.length<=6] <2 @View -(3-n) View < View',
           ],
           snapshotUrls: [
             'https://i.gkd.li/import/13830798',
-            'https://i.gkd.li/import/13810767', //规则2
-            'https://i.gkd.li/import/13829749', //规则3
+            'https://i.gkd.li/import/13810767',
+            'https://i.gkd.li/import/13829749', //规则2
           ],
         },
         {
