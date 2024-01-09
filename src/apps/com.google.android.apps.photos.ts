@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 0,
-      name: '取消更新',
+      name: '更新提示-取消更新',
       desc: '点击[以后再说]',
       activityIds: [
         'com.google.android.apps.photos.update.treatment.UpdateAppTreatmentPromoPageActivity',
@@ -23,7 +23,7 @@ export default defineAppConfig({
     {
       key: 1,
       quickFind: true,
-      name: '优惠提示',
+      name: '全屏广告-优惠提示',
       desc: '点击X',
       rules: [
         {
