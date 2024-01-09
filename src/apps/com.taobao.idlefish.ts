@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '请求开启通知权限弹窗',
+      name: '通知提示-请求开启通知权限弹窗',
       activityIds:
         'com.idlefish.flutterbridge.flutterboost.boost.FishFlutterBoostTransparencyActivity',
       rules: '[desc^="开启系统通知"] > ImageView[clickable=true][desc=null]',
@@ -23,7 +23,7 @@ export default defineAppConfig({
     {
       key: 3,
       quickFind: true,
-      name: '版本更新弹窗',
+      name: '更新提示-版本更新弹窗',
       desc: '点击暂不升级',
       rules: [
         {
