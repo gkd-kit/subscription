@@ -96,7 +96,7 @@ export default defineAppConfig({
     {
       enable: false,
       key: 3,
-      name: '看视频解锁任意读弹窗',
+      name: '定位提示',
       desc: '自动点击【我拒绝】',
       activityIds: 'com.aster.comic.app.view.reader.ReaderActivity',
       rules:
