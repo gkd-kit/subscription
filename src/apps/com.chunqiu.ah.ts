@@ -27,7 +27,7 @@ export default defineAppConfig({
     },
     {
       key: 1,
-      name: '弹窗广告',
+      name: '全屏广告-弹窗广告',
       quickFind: true,
       activityIds: 'com.androlua.LuaActivity',
       rules: [
@@ -39,7 +39,7 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      name: '卡片式广告',
+      name: '局部广告-卡片式广告',
       rules: [
         {
           key: 0,
@@ -54,7 +54,7 @@ export default defineAppConfig({
     {
       key: 3,
       quickFind: true,
-      name: '首页推广',
+      name: '全屏广告-首页推广',
       desc: '点击我已知晓',
       rules: [
         {
@@ -68,7 +68,7 @@ export default defineAppConfig({
     {
       key: 4,
       quickFind: true,
-      name: '公告',
+      name: '全屏广告-公告',
       desc: '点击不再提示',
       rules: [
         {
@@ -81,7 +81,7 @@ export default defineAppConfig({
     {
       key: 5,
       quickFind: true,
-      name: '广告弹窗',
+      name: '全屏广告-首页广告弹窗',
       desc: '点击X',
       rules: [
         {
@@ -94,7 +94,7 @@ export default defineAppConfig({
     },
     {
       key: 6,
-      name: '播放界面广告',
+      name: '局部广告-播放界面广告',
       desc: '点击X',
       rules: [
         {
