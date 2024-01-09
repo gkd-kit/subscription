@@ -107,7 +107,7 @@ export default defineAppConfig({
     {
       key: 11,
       quickFind: true,
-      name: 'CSDN底部广告',
+      name: '分段广告-底部广告',
       desc: '点击X-点击不感兴趣',
       rules: [
         {
