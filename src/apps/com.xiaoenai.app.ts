@@ -20,7 +20,7 @@ export default defineAppConfig({
     },
     {
       key: 6,
-      name: '广告弹窗',
+      name: '全屏广告',
       matchTime: 15000,
       actionMaximum: 1,
       resetMatch: 'app',
