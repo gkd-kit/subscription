@@ -7,7 +7,7 @@ export default defineAppConfig({
     {
       key: 1,
       quickFind: true,
-      name: '视频播放页广告',
+      name: '分段广告',
       desc: '点击X-点击不感兴趣',
       rules: [
         {
