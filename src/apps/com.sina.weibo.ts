@@ -244,7 +244,7 @@ export default defineAppConfig({
     {
       key: 17,
       quickFind: true,
-      name: '评论区-信息流广告',
+      name: '分段广告-评论区信息流广告',
       desc: '点击X-点击不感兴趣',
       rules: [
         {
