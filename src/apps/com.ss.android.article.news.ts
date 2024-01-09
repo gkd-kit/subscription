@@ -192,7 +192,7 @@ export default defineAppConfig({
     {
       key: 15,
       quickFind: true,
-      name: '底部热榜弹窗',
+      name: '局部广告-底部热榜弹窗',
       desc: '点击X',
       rules: [
         {
