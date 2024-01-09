@@ -254,7 +254,7 @@ export default defineAppConfig({
     {
       key: 11,
       quickFind: true,
-      name: '播放页面赞赏好音乐弹窗',
+      name: '全屏广告-播放页赞赏好音乐弹窗',
       desc: '点击X',
       rules: [
         {
