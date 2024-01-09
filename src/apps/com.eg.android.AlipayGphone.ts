@@ -7,7 +7,7 @@ export default defineAppConfig({
     {
       enable: false,
       key: 0,
-      name: '关闭花呗升级弹窗',
+      name: '更新提示-关闭花呗升级弹窗',
       actionMaximum: 1,
       resetMatch: 'app',
       activityIds: [
