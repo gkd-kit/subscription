@@ -93,15 +93,5 @@ export default defineAppConfig({
         },
       ],
     },
-    {
-      enable: false,
-      key: 3,
-      name: '定位提示',
-      desc: '自动点击【我拒绝】',
-      activityIds: 'com.aster.comic.app.view.reader.ReaderActivity',
-      rules:
-        '[text="看视频解锁任意读"] < LinearLayout +n LinearLayout > [id="com.paokeji.yiqu:id/btnReject"][text*="拒绝"]',
-      snapshotUrls: 'https://i.gkd.li/import/13348635',
-    },
   ],
 });
