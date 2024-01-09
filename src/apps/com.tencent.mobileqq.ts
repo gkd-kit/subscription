@@ -12,8 +12,11 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: 'ImageView +(1,2) TextView[text^="跳过"][text.length<=10]',
       excludeActivityIds: ['com.tencent.mobileqq.activity.ChatActivity'],
+      rules: {
+        excludeMatches: '[vid="chat_item_content_layout"]', // 在聊天界面禁用
+        matches: 'TextView[text^="跳过"][text.length<=10]',
+      },
       snapshotUrls: [
         'https://i.gkd.li/import/13062244',
         'https://i.gkd.li/import/13093155',
