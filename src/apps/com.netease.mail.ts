@@ -67,7 +67,8 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: 'TextView[text="恭喜您获得以下成就"] - TextView[text=""][clickable=true]',
+      rules:
+        'TextView[text="恭喜您获得以下成就"] - TextView[text=""][clickable=true]',
       snapshotUrls: 'https://i.gkd.li/import/13876817',
     },
   ],
