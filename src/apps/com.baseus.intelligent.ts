@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '定位请求',
+      name: '定位提示-定位请求',
       desc: '点击取消-点击取消',
       rules: [
         {
