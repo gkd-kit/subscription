@@ -5,19 +5,34 @@ export default defineAppConfig({
   name: '小恩爱',
   groups: [
     {
-      key: 6,
-      name: '广告弹窗',
+      key: 0,
+      name: '开屏广告',
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds:
-        'com.xiaoenai.app.presentation.home.view.activity.HomeActivity',
+      rules: [
+        {
+          matches:
+            'FrameLayout[childCount=2] > FrameLayout[childCount=4] > View',
+          snapshotUrls: 'https://i.gkd.li/import/13867880',
+        },
+      ],
+    },
+    {
+      key: 6,
+      name: '广告弹窗',
+      matchTime: 15000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
           name: '腾讯广告SDK',
           matches:
             'FrameLayout[childCount>1] > FrameLayout[childCount=1] > ImageView[width<90][height<90]',
-          snapshotUrls: 'https://i.gkd.li/import/13728018',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13728018',
+            'https://i.gkd.li/import/13867878',
+          ],
         },
       ],
     },
