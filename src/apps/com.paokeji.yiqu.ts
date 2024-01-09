@@ -24,7 +24,7 @@ export default defineAppConfig({
       rules: [
         {
           key: 1,
-          name: '腾讯广告-1',
+          name: '腾讯广告1',
           activityIds: 'com.aster.comic.app.view.MainActivity',
           matches:
             'ImageView - FrameLayout > FrameLayout[childCount=1] > ImageView[childCount=0]',
@@ -36,7 +36,7 @@ export default defineAppConfig({
         },
         {
           key: 2,
-          name: '腾讯广告-2',
+          name: '腾讯广告2',
           activityIds:
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Activity_T',
           matches:
@@ -45,7 +45,7 @@ export default defineAppConfig({
         },
         {
           key: 3,
-          name: '腾讯广告-3',
+          name: '腾讯广告3',
           activityIds: 'com.aster.comic.app.view.MainActivity',
           matches:
             'ImageView - LinearLayout - FrameLayout > FrameLayout[childCount=1] > ImageView[childCount=0]',
@@ -53,7 +53,7 @@ export default defineAppConfig({
         },
         {
           key: 4,
-          name: '字节广告-1',
+          name: '字节广告1',
           activityIds: 'com.aster.comic.app.view.MainActivity',
           matches: [
             '[desc^="logo-union"] > [desc^="logoad"] > [text="广告"]',
@@ -63,7 +63,7 @@ export default defineAppConfig({
         },
         {
           key: 5,
-          name: '字节广告-2',
+          name: '字节广告2',
           activityIds:
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
           matches:
