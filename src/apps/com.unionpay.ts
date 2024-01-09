@@ -123,7 +123,7 @@ export default defineAppConfig({
     {
       key: 15,
       quickFind: true,
-      name: '扫码成功-领取优惠弹窗',
+      name: '全屏广告-领取优惠弹窗',
       desc: '点击X',
       rules: [
         {
