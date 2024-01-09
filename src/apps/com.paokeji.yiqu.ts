@@ -20,7 +20,7 @@ export default defineAppConfig({
     },
     {
       key: 1,
-      name: '分段广告',
+      name: '全屏广告',
       rules: [
         {
           key: 1,
@@ -37,29 +37,29 @@ export default defineAppConfig({
         {
           key: 2,
           name: '腾讯广告2',
-          activityIds:
-            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Activity_T',
-          matches:
-            'ImageView < FrameLayout + FrameLayout > FrameLayout[childCount=1] > ImageView[childCount=0]',
-          snapshotUrls: 'https://i.gkd.li/import/13029880',
-        },
-        {
-          key: 3,
-          name: '腾讯广告3',
           activityIds: 'com.aster.comic.app.view.MainActivity',
           matches:
             'ImageView - LinearLayout - FrameLayout > FrameLayout[childCount=1] > ImageView[childCount=0]',
           snapshotUrls: 'https://i.gkd.li/import/12872249',
         },
         {
-          key: 4,
-          name: '字节广告1',
+          key: 3,
+          name: '腾讯广告3',
           activityIds: 'com.aster.comic.app.view.MainActivity',
           matches: [
             '[desc^="logo-union"] > [desc^="logoad"] > [text="广告"]',
             '[desc^="webview-close"] > View',
           ],
           snapshotUrls: 'https://i.gkd.li/import/12903062',
+        },
+        {
+          key: 4,
+          name: '字节广告1',
+          activityIds:
+            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Activity_T',
+          matches:
+            'ImageView < FrameLayout + FrameLayout > FrameLayout[childCount=1] > ImageView[childCount=0]',
+          snapshotUrls: 'https://i.gkd.li/import/13029880',
         },
         {
           key: 5,
@@ -74,15 +74,9 @@ export default defineAppConfig({
             'https://i.gkd.li/import/13871724'
           ],
         },
-      ],
-    },
-    {
-      key: 2,
-      name: '分段广告',
-      rules: [
         {
-          key: 1,
-          name: '字节广告',
+          key: 6,
+          name: '字节广告3',
           activityIds:
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
           matches: [
