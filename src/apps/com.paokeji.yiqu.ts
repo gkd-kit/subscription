@@ -78,7 +78,7 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      name: '视频广告',
+      name: '分段广告',
       rules: [
         {
           key: 1,
