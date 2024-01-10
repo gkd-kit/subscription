@@ -7,6 +7,10 @@ export default defineAppConfig({
     {
       key: 1,
       name: '开屏摇一摇广告',
+      quickFind: true,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      enable: true,
       activityIds: ['com.pandabus.yinchuan.ui.activity.GuideActivity'],
       rules: [
         {
