@@ -20,7 +20,8 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.cubic.autohome.MainActivity',
-          matches: '@ImageView[visibleToUser=true] < * <2 * - [id="android:id/tabhost"]',
+          matches:
+            '@ImageView[visibleToUser=true] < * <2 * - [id="android:id/tabhost"]',
           snapshotUrls: 'https://i.gkd.li/import/13885414',
         },
       ],
