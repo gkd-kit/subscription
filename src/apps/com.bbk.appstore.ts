@@ -17,19 +17,23 @@ export default defineAppConfig({
       ],
       rules: [
         {
+          key: 0,
           activityIds: 'com.bbk.appstore.upgrade.UpgradeNecessaryActivity',
           matches: '[id="com.bbk.appstore:id/upgrade_necessary_btn_high_new"]',
           snapshotUrls: 'https://i.gkd.li/import/13198101',
         },
         {
+          actionMaximumKey: 0,
           activityIds: 'com.bbk.appstore.ui.AppStoreTabActivity',
-          matches: '[id="com.bbk.appstore:id/common_dialog_netgtive_btn"]',
-          snapshotUrls: 'https://i.gkd.li/import/13198234',
-        },
-        {
-          activityIds: 'com.bbk.appstore.ui.AppStoreTabActivity',
-          matches: '[id="com.bbk.appstore:id/quit_button"][text="取消"]',
-          snapshotUrls: 'https://i.gkd.li/import/13246971',
+          matches: [
+            '[text*="通知"]',
+            '[text="取消"]',
+          ],
+          snapshotUrls: [
+            'https://i.gkd.li/import/13198234',
+            'https://i.gkd.li/import/13246971',
+            'https://i.gkd.li/import/13884356',
+          ],
         },
       ],
     },
