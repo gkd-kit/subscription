@@ -25,10 +25,7 @@ export default defineAppConfig({
         {
           actionMaximumKey: 0,
           activityIds: 'com.bbk.appstore.ui.AppStoreTabActivity',
-          matches: [
-            '[text*="通知"]',
-            '[text="取消"]',
-          ],
+          matches: ['[text*="通知"]', '[text="取消"]'],
           snapshotUrls: [
             'https://i.gkd.li/import/13198234',
             'https://i.gkd.li/import/13246971',
