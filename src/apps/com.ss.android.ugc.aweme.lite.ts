@@ -61,7 +61,8 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
-          matches: '[id="com.ss.android.ugc.aweme.lite:id/gl7"] > [id="com.ss.android.ugc.aweme.lite:id/h5q"]',
+          matches:
+            '[id="com.ss.android.ugc.aweme.lite:id/gl7"] > [id="com.ss.android.ugc.aweme.lite:id/h5q"]',
           snapshotUrls: 'https://i.gkd.li/import/13888485',
         },
       ],
