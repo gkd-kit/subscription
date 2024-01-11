@@ -17,8 +17,10 @@ export default defineAppConfig({
       key: 11,
       name: '请求定位权限弹窗',
       quickFind: true,
-      activityIds:
+      activityIds: [
         'cmb.pb.app.h5container.webviewcontainer.PBWebContainerActivity',
+        'cmb.pb.app.search.PBSearchWebActivity',
+      ], 
       rules:
         '@[id="cmb.pb:id/ivDelete"][desc="关闭"] - FrameLayout > [id="cmb.pb:id/tvDescription"][text*="获取您的位置"]',
       snapshotUrls: [
