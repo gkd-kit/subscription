@@ -15,7 +15,7 @@ export default defineAppConfig({
     },
     {
       key: 11,
-      name: '请求定位权限弹窗',
+      name: '定位提示-请求定位权限弹窗',
       quickFind: true,
       activityIds: [
         'cmb.pb.app.h5container.webviewcontainer.PBWebContainerActivity',
