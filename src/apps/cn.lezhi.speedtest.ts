@@ -19,7 +19,6 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'cn.lezhi.speedtest.welcome.WelcomeActivity',
       rules:
         '[id="cn.lezhi.speedtest:id/fl_splash_container"] >3 * +2 View[clickable=true]',
       snapshotUrls: 'https://i.gkd.li/import/13885906',
