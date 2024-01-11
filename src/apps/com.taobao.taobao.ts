@@ -213,7 +213,8 @@ export default defineAppConfig({
         {
           key: 2,
           activityIds: 'com.alipay.android.msp.ui.views.MspContainerActivity',
-          matches: '[id="com.taobao.taobao:id/flybird_userinfo"] + * [text="暂不升级，继续付款"]',
+          matches:
+            '[id="com.taobao.taobao:id/flybird_userinfo"] + * [text="暂不升级，继续付款"]',
           snapshotUrls: 'https://i.gkd.li/import/13898735',
         },
       ],
