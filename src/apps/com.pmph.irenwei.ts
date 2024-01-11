@@ -12,7 +12,8 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.pmph.main.ad.AdActivity',
-          matches: '[id="com.pmph.irenwei:id/action_bar_root"] [id="com.pmph.irenwei:id/iv_close"]',
+          matches:
+            '[id="com.pmph.irenwei:id/action_bar_root"] [id="com.pmph.irenwei:id/iv_close"]',
           snapshotUrls: 'https://i.gkd.li/import/13897421',
         },
       ],
