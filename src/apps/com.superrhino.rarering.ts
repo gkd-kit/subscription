@@ -14,7 +14,6 @@ export default defineAppConfig({
       desc: '点击跳过',
       rules: [
         {
-          activityIds: 'com.superrhino.rare.LaunchActivity',
           matches:
             '@View[clickable=true] <3 * <2 * < FrameLayout[id="com.superrhino.rarering:id/fl_container"]',
           snapshotUrls: 'https://i.gkd.li/import/13853858',
