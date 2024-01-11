@@ -11,7 +11,6 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'com.delicloud.app.smartoffice.mvp.ui.JiGuangSpalshActivity',
       rules:
         '@View[clickable=true] <2 FrameLayout <2 FrameLayout <<2 FrameLayout[id="com.delicloud.app.smartoffice:id/splash_container"]',
       snapshotUrls: ['https://i.gkd.li/import/13840775'],
