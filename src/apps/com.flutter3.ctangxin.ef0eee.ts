@@ -47,7 +47,7 @@ export default defineAppConfig({
       rules: [
         {
           action: 'back',
-          matches: '@[desc="取消"][clickable=true] + [desc="确定"]',
+          matches: '[desc="公告"] +2 [desc="取消"][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/12836854',
         },
       ],
