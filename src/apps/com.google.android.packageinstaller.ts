@@ -5,7 +5,7 @@ export default defineAppConfig({
   name: '原生软件包安装程序（Google）',
   groups: [
     {
-      enable: false
+      enable: false,
       key: 1,
       name: '功能类-自动安装应用',
       activityIds: ['com.android.packageinstaller.PackageInstallerActivity', 'com.android.packageinstaller.DeleteStagedFileOnResult'],
@@ -24,7 +24,7 @@ export default defineAppConfig({
       ],
     },
     {
-      enable: false
+      enable: false,
       key: 2,
       name: '功能类-自动更新应用',
       activityIds: ['com.android.packageinstaller.PackageInstallerActivity', 'com.android.packageinstaller.DeleteStagedFileOnResult'],
@@ -43,7 +43,7 @@ export default defineAppConfig({
       ],
     },
     {
-      enable: false
+      enable: false,
       key: 3,
       name: '功能类-自动取消安装应用',
       activityIds: ['com.android.packageinstaller.PackageInstallerActivity', 'com.android.packageinstaller.DeleteStagedFileOnResult'],
