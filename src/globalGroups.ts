@@ -47,6 +47,17 @@ const globalGroups: RawGlobalGroup[] = [
         matches:
           '[childCount=0][visibleToUser=true][(text.length<10&&(text*="跳过"||text*="跳過"||text*="skip"||text*="Skip")) || id$="tt_splash_skip_btn" || vid*="skip" || vid*="Skip" || (vid*="count" && vid*="down" && vid!*="download") || desc*="跳过" || desc*="skip"]',
       },
+      {
+        key: 2,
+        name: '字节穿山甲广告SDK',
+        matches:
+          'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true] + TextView',
+        snapshotUrls: [
+          'https://i.gkd.li/import/13855760',
+          'https://i.gkd.li/import/13840775',
+          'https://i.gkd.li/import/13855443',
+        ],
+      },
     ],
     apps: diabledAppIds.map((id) => ({ id, enable: false })),
   },
