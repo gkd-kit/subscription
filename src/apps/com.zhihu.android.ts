@@ -209,5 +209,17 @@ export default defineAppConfig({
         'https://i.gkd.li/import/12707687', // 使用 [visibleToUser=true] 进行限定，防止在控件不可见时提前触发规则
       ],
     },
+    {
+      key: 102,
+      name: '热榜-自动展开更多',
+      actionDelay: 1000,
+      activityIds: ['com.zhihu.android.app.ui.activity.MainActivity'],
+      rules: [
+        {
+          matches: ['[id="com.zhihu.android:id/load_more_text"]'],
+          snapshotUrls: ['https://i.gkd.li/import/13816175'],
+        },
+      ],
+    },
   ],
 });
