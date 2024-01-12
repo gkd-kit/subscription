@@ -122,8 +122,10 @@ export default defineAppConfig({
       desc: '点击X',
       rules: [
         {
-          activityIds: 'com.qidian.QDReader.ui.activity.hongbao_square.NewHongBaoSquareActivity',
-          matches: '[id="com.qidian.QDReader:id/rootView"] > [id="com.qidian.QDReader:id/btnHongbaoClose"]',
+          activityIds:
+            'com.qidian.QDReader.ui.activity.hongbao_square.NewHongBaoSquareActivity',
+          matches:
+            '[id="com.qidian.QDReader:id/rootView"] > [id="com.qidian.QDReader:id/btnHongbaoClose"]',
           snapshotUrls: 'https://i.gkd.li/import/13918466',
         },
       ],
