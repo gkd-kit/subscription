@@ -22,5 +22,20 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 2,
+      name: '开屏广告',
+      quickFind: true,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      activityIds:
+        'com.heytap.cdo.client.cards.page.main.maintab.MainTabActivity',
+      rules: [
+        {
+          matches: '[text="跳过"]',
+          snapshotUrls: 'https://i.gkd.li/import/13919483',
+        },
+      ],
+    },
   ],
 });
