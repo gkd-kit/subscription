@@ -1,4 +1,6 @@
-{
+import { defineAppConfig } from '../types';
+
+export default defineAppConfig({
   id: 'com.google.android.packageinstaller',
   name: '原生软件包安装程序（Google）',
   groups: [
@@ -64,4 +66,4 @@
       ],
     },
   ],
-}
+});
