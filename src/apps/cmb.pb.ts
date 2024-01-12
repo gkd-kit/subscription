@@ -26,6 +26,7 @@ export default defineAppConfig({
       snapshotUrls: [
         'https://i.gkd.li/import/12706029',
         'https://i.gkd.li/import/13248893',
+        'https://i.gkd.li/import/13897345',
       ],
     },
   ],
