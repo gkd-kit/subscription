@@ -14,7 +14,8 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
-          matches: '@View[index=0][clickable=true] <<n [id="android:id/content"]',
+          matches:
+            '@View[index=0][clickable=true] <<n [id="android:id/content"]',
           snapshotUrls: 'https://i.gkd.li/import/13914788',
         },
       ],
