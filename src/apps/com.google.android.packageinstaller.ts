@@ -8,7 +8,10 @@ export default defineAppConfig({
       enable: false,
       key: 1,
       name: '功能类-自动安装应用',
-      activityIds: ['com.android.packageinstaller.PackageInstallerActivity', 'com.android.packageinstaller.DeleteStagedFileOnResult'],
+      activityIds: [
+        'com.android.packageinstaller.PackageInstallerActivity',
+        'com.android.packageinstaller.DeleteStagedFileOnResult',
+      ],
       rules: [
         {
           matches: '[text="安装"]',
@@ -27,7 +30,10 @@ export default defineAppConfig({
       enable: false,
       key: 2,
       name: '功能类-自动更新应用',
-      activityIds: ['com.android.packageinstaller.PackageInstallerActivity', 'com.android.packageinstaller.DeleteStagedFileOnResult'],
+      activityIds: [
+        'com.android.packageinstaller.PackageInstallerActivity',
+        'com.android.packageinstaller.DeleteStagedFileOnResult',
+      ],
       rules: [
         {
           matches: '[text="更新"]',
@@ -46,7 +52,10 @@ export default defineAppConfig({
       enable: false,
       key: 3,
       name: '功能类-自动取消安装应用',
-      activityIds: ['com.android.packageinstaller.PackageInstallerActivity', 'com.android.packageinstaller.DeleteStagedFileOnResult'],
+      activityIds: [
+        'com.android.packageinstaller.PackageInstallerActivity',
+        'com.android.packageinstaller.DeleteStagedFileOnResult',
+      ],
       rules: [
         {
           matches: '[text="取消"]',
