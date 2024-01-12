@@ -162,8 +162,10 @@ export default defineAppConfig({
       desc: '点击X',
       rules: [
         {
-          activityIds: 'com.alipay.mobile.nebulax.integration.mpaas.activity.NebulaActivity$Main',
-          matches: '[text="同意协议并刷脸验证"] < * -4 * >2 Image[visibleToUser=true]',
+          activityIds:
+            'com.alipay.mobile.nebulax.integration.mpaas.activity.NebulaActivity$Main',
+          matches:
+            '[text="同意协议并刷脸验证"] < * -4 * >2 Image[visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/import/13915022',
         },
       ],
