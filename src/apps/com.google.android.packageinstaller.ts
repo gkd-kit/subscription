@@ -12,7 +12,10 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          activityIds: ['com.android.packageinstaller.PackageInstallerActivity', 'com.android.packageinstaller.DeleteStagedFileOnResult'],
+          activityIds: [
+            'com.android.packageinstaller.PackageInstallerActivity',
+            'com.android.packageinstaller.DeleteStagedFileOnResult',
+          ],
           matches: '[text="安装"]',
           snapshotUrls: [
             'https://i.gkd.li/import/13914644',
@@ -36,7 +39,10 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          activityIds: ['com.android.packageinstaller.PackageInstallerActivity', 'com.android.packageinstaller.DeleteStagedFileOnResult'],
+          activityIds: [
+            'com.android.packageinstaller.PackageInstallerActivity',
+            'com.android.packageinstaller.DeleteStagedFileOnResult',
+          ],
           matches: '[text="更新"]',
           snapshotUrls: [
             'https://i.gkd.li/import/13914644',
@@ -57,7 +63,10 @@ export default defineAppConfig({
       key: 3,
       quickFind: true,
       name: '功能类-自动取消安装应用',
-      activityIds: ['com.android.packageinstaller.PackageInstallerActivity', 'com.android.packageinstaller.DeleteStagedFileOnResult'],
+      activityIds: [
+        'com.android.packageinstaller.PackageInstallerActivity',
+        'com.android.packageinstaller.DeleteStagedFileOnResult',
+      ],
       rules: [
         {
           matches: '[text="取消"]',
