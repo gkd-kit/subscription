@@ -211,7 +211,7 @@ export default defineAppConfig({
     },
     {
       key: 102,
-      name: '热榜-自动展开更多',
+      name: '首页-热榜自动展开更多',
       actionDelay: 1000,
       activityIds: ['com.zhihu.android.app.ui.activity.MainActivity'],
       rules: [
