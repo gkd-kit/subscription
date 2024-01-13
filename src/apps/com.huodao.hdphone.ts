@@ -11,7 +11,8 @@ export default defineAppConfig({
       desc: '点击X',
       rules: [
         {
-          matches: '[id="android:id/content"] >2 [id="com.huodao.hdphone:id/dialog_close"]',
+          matches:
+            '[id="android:id/content"] >2 [id="com.huodao.hdphone:id/dialog_close"]',
           snapshotUrls: 'https://i.gkd.li/import/13927567',
         },
       ],
