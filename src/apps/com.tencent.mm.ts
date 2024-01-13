@@ -450,9 +450,7 @@ export default defineAppConfig({
       rules: {
         matches: '@Image -n * > View[text="可横向滚动"]',
         action: 'clickCenter',
-        snapshotUrls: [
-          'https://i.gkd.li/import/13298294',
-        ],
+        snapshotUrls: ['https://i.gkd.li/import/13298294'],
       },
     },
     {
