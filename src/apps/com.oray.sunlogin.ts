@@ -46,8 +46,7 @@ export default defineAppConfig({
       key: 3,
       name: '功能类-退出app提示',
       quickFind: true,
-      rules:
-        '[text="是否确认退出向日葵？"] + LinearLayout > [vid="button_ok"]',
+      rules: '[text="是否确认退出向日葵？"] + LinearLayout > [vid="button_ok"]',
       snapshotUrls: 'https://i.gkd.li/import/13927148',
     },
   ],
