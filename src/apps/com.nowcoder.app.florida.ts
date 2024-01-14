@@ -5,16 +5,17 @@ export default defineAppConfig({
   name: '牛客',
   groups: [
     {
+      key: 0,
       name: '开屏广告',
-      key: 1,
-      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      actionCdKey: 0,
+      actionMaximumKey: 0,
       rules: [
         {
-          action: 'clickNode',
-          matches: ['View'],
-          activityIds: [
-            'com.nowcoder.app.florida.modules.splash.view.SplashActivity',
-          ],
+          key: 0,
+          matches: '@View <2 FrameLayout[childCount=3] <2 FrameLayout[childCount=2] < FrameLayout[childCount=1] < [vid="fl_splash_container"]',
           snapshotUrls: 'https://i.gkd.li/import/13855443',
         },
       ],
