@@ -151,7 +151,8 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'me.ele.message.ui.PushMessageGuideActivity',
-          matches: '@View[visibleToUser=true] < * <2 [id="me.ele:id/frame_bottom_bg"]',
+          matches:
+            '@View[visibleToUser=true] < * <2 [id="me.ele:id/frame_bottom_bg"]',
           snapshotUrls: 'https://i.gkd.li/import/13931205',
         },
       ],
