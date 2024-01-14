@@ -14,7 +14,8 @@ export default defineAppConfig({
       rules: [
         {
           name: '字节SDK',
-          matches: '@[id="com.byted.pangle:id/tt_splash_skip_btn"] <<n [id="cn.lezhi.speedtest:id/fl_splash_container"]',
+          matches:
+            '@[id="com.byted.pangle:id/tt_splash_skip_btn"] <<n [id="cn.lezhi.speedtest:id/fl_splash_container"]',
           snapshotUrls: 'https://i.gkd.li/import/13544242',
         },
         {
@@ -24,7 +25,8 @@ export default defineAppConfig({
         },
         {
           name: '腾讯SDK',
-          matches: '@View <3 FrameLayout[childCount=4] <2 FrameLayout[childCount=2] < [vid="fl_splash_container"]',
+          matches:
+            '@View <3 FrameLayout[childCount=4] <2 FrameLayout[childCount=2] < [vid="fl_splash_container"]',
           snapshotUrls: 'https://i.gkd.li/import/13885906',
         },
       ],
