@@ -14,7 +14,8 @@ export default defineAppConfig({
         {
           key: 0,
           name: '自定义规则[字节广告SDK]',
-          matches: 'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true] + TextView',
+          matches:
+            'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true] + TextView',
           snapshotUrls: 'https://i.gkd.li/import/13927561',
         },
         {
