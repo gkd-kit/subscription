@@ -107,7 +107,7 @@ export default defineAppConfig({
     },
     {
       key: 5,
-      name: '广告弹窗',
+      name: '分段广告',
       quickFind: true,
       rules: [
         {
@@ -136,6 +136,21 @@ export default defineAppConfig({
           matches:
             '[id="com.dragon.read:id/readFlowNonRoundEntranceLayout"] [id="com.dragon.read:id/relativeRight"]',
           snapshotUrls: 'https://i.gkd.li/import/13674556',
+        },
+        {
+          key: 3,
+          name: '阅读页面广告弹窗-点击反馈',
+          activityIds: 'com.dragon.read.reader.ui.ReaderActivity',
+          matches: '[text="看视频免广告"] - [text="反馈"]',
+          snapshotUrls: 'https://i.gkd.li/import/13816453',
+        },
+        {
+          preKeys: 3,
+          key: 4,
+          name: '阅读页面广告弹窗-点击不感兴趣',
+          activityIds: 'com.dragon.read.reader.ui.ReaderActivity',
+          matches: '[text="举报"] <2 ViewGroup - ViewGroup[clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/import/13816454',
         },
       ],
     },
