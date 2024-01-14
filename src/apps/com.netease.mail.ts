@@ -8,26 +8,29 @@ export default defineAppConfig({
       key: 0,
       name: '开屏广告',
       matchTime: 10000,
-      actionMaximum: 2,
+      actionMaximum: 1,
       resetMatch: 'app',
       actionCdKey: 0,
       actionMaximumKey: 0,
       rules: [
         {
           key: 0,
-          name: '开屏-1',
           quickFind: true,
-          matches: '[text*="跳过"][text.length<10][visibleToUser=true]',
-          excludeMatches: '[vid="ad_skip"][text="跳过"][clickable=false]',
-          snapshotUrls: 'https://i.gkd.li/import/13874492', // v7.18.1版本中开屏有个隐藏无效跳过按钮需排除，说不定以后网易会删掉
+          matches: '[text*="跳过"][text.length<=10]',
+          excludeMatches: '[id="com.netease.mail:id/ad_skip"][clickable=false]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12893573',
+            'https://i.gkd.li/import/12923776',
+            'https://i.gkd.li/import/13195662',
+            'https://i.gkd.li/import/12818335',
+            'https://i.gkd.li/import/13206298', // 使用 excludeMatches 防止提前触发规则
+            'https://i.gkd.li/import/13207736', // TODO 一整块图片，无法跳过
+          ],
         },
         {
-          key: -1,
-          name: '开屏-2',
-          matches:
-            '[childCount=0][visibleToUser=true][(text.length<10&&(text*="跳过"||text*="跳過"||text*="skip"||text*="Skip")) || id$="tt_splash_skip_btn" || vid*="skip" || vid*="Skip" || (vid*="count" && vid*="down" && vid!*="download") || desc*="跳过" || desc*="skip"]',
-          excludeMatches: '[vid="ad_skip"][text="跳过"][clickable=false]',
-          snapshotUrls: 'https://i.gkd.li/import/13874492', // v7.18.1版本中开屏有个隐藏无效跳过按钮需排除，说不定以后网易会删掉
+          key: 1,
+          matches: '[id$="tt_splash_skip_btn"]',
+          snapshotUrls: 'https://i.gkd.li/import/12999739',
         },
       ],
     },
