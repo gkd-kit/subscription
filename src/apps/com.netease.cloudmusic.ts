@@ -7,7 +7,7 @@ export default defineAppConfig({
     {
       enable: false,
       key: 1,
-      name: '卡片式广告',
+      name: '分段广告',
       desc: '有二次确认弹窗',
       quickFind: true,
       // matchDelay: 3000, 我又想不起来为什么要有这个了
@@ -21,29 +21,27 @@ export default defineAppConfig({
             'com.netease.cloudmusic.music.biz.comment.activity.ReplyCommentActivity2',
             'com.netease.cloudmusic.music.biz.search.activity.SearchActivity',
           ],
-          matches: '[id="com.netease.cloudmusic:id/adTagView"]',
+          matches: [
+            '[id="com.netease.cloudmusic:id/adTagView"]',
+            '[vid="adTagClose"]',
+          ],
           snapshotUrls: [
             'https://i.gkd.li/import/12829944',
             'https://i.gkd.li/import/12723229',
             'https://i.gkd.li/import/12829938',
             'https://i.gkd.li/import/12829964',
             'https://i.gkd.li/import/12829953',
+            'https://i.gkd.li/import/13859634', //vid="adTagClose"
           ],
         },
         {
-          preKeys: 0,
-          activityIds: [
-            'com.netease.cloudmusic.module.ad.feedback.AdFeedbackBottomSheet',
-            'com.netease.cloudmusic.music.biz.search.activity.SearchActivity',
-          ],
-          matches: '[text="直接关闭"]',
-          snapshotUrls: [
-            'https://i.gkd.li/import/12829967',
-            'https://i.gkd.li/import/13627047', //activityIds: 'com.netease.cloudmusic.music.biz.search.activity.SearchActivity',
-          ],
+          key: 1,
+          activityIds: 'com.netease.cloudmusic.activity.MainActivity',
+          matches: '[vid="tag_ad_banner"]',
+          snapshotUrls: 'https://i.gkd.li/import/13927753',
         },
         {
-          key: 3,
+          key: 2,
           name: '信息流广告-评论区内容推荐', // 考虑位置是否移出
           activityIds:
             'com.netease.cloudmusic.music.biz.comment.activity.CommentActivity',
@@ -55,7 +53,23 @@ export default defineAppConfig({
           ],
         },
         {
-          preKeys: 3,
+          preKeys: [0, 1],
+          key: 90,
+          activityIds: [
+            'com.netease.cloudmusic.module.ad.feedback.AdFeedbackBottomSheet',
+            'com.netease.cloudmusic.music.biz.search.activity.SearchActivity',
+            'com.netease.cloudmusic.activity.MainActivity',
+          ],
+          matches: '[text="直接关闭"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12829967',
+            'https://i.gkd.li/import/13627047', //activityIds: 'com.netease.cloudmusic.music.biz.search.activity.SearchActivity',
+            'https://i.gkd.li/import/13859635', //activityIds: 'com.netease.cloudmusic.activity.MainActivity'
+          ],
+        },
+        {
+          preKeys: 2,
+          key: 91,
           activityIds:
             'com.netease.cloudmusic.music.biz.comment.activity.CommentActivity',
           matches:
@@ -248,6 +262,19 @@ export default defineAppConfig({
             'com.netease.cloudmusic.music.biz.rn.activity.LayerReactNativeActivity',
           matches: '[text="社区广场全新升级"] + ViewGroup > ImageView',
           snapshotUrls: 'https://i.gkd.li/import/13804544',
+        },
+      ],
+    },
+    {
+      key: 11,
+      quickFind: true,
+      name: '全屏广告-播放页赞赏好音乐弹窗',
+      desc: '点击X',
+      rules: [
+        {
+          activityIds: 'com.netease.cloudmusic.activity.PlayerActivity',
+          matches: '@ImageView[clickable=true] +3 * > [text="立即支持"]',
+          snapshotUrls: 'https://i.gkd.li/import/13848913',
         },
       ],
     },
