@@ -25,7 +25,8 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.excelliance.kxqp.ui.MainActivity',
-          matches: '@ImageView[visibleToUser=true] <<5 [id="android:id/content"]',
+          matches:
+            '@ImageView[visibleToUser=true] <<5 [id="android:id/content"]',
           snapshotUrls: 'https://i.gkd.li/import/13930990',
         },
       ],
