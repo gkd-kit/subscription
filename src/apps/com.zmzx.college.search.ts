@@ -164,6 +164,7 @@ export default defineAppConfig({
     {
       key: 10,
       name: '局部广告-教材内底部广告',
+      quickFind: true,
       activityIds: [
         'com.zmzx.college.search.activity.booksearch.result.activity.AnswerBrowseActivity',
       ],
