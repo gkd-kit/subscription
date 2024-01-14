@@ -202,11 +202,11 @@ export default defineAppConfig({
     },
     {
       key: 6,
-      name: '首页-广告弹窗',
+      name: '全屏广告-首页-广告弹窗',
       resetMatch: 'app',
       actionMaximum: 1,
       activityIds: 'com.tencent.qqlive.redpacket.rain.OpenRedPacketActivity',
-      rules: 'ImageView[id="com.tencent.qqlive:id/arg"][index=0]',
+      rules: 'ViewGroup > ImageView[id="com.tencent.qqlive:id/arg"][index=0][clickable=true]',
       snapshotUrls: 'https://i.gkd.li/import/13842643',
     },
     {
