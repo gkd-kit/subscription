@@ -15,7 +15,7 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          matches: 
+          matches:
             '@View <2 FrameLayout[childCount=3] <2 FrameLayout[childCount=2] < FrameLayout[childCount=1] < [vid="fl_splash_container"]',
           snapshotUrls: 'https://i.gkd.li/import/13855443',
         },
