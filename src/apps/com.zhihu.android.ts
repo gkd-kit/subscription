@@ -53,7 +53,7 @@ export default defineAppConfig({
     },
     {
       key: 5,
-      name: '推荐页广告卡片',
+      name: '分段广告-推荐页广告卡片',
       desc: '赚稿费广告卡片,盐选推荐广告,知乎学课堂,汽车广告',
       rules: [
         {
@@ -84,7 +84,7 @@ export default defineAppConfig({
     },
     {
       key: 6,
-      name: '问题-回答列表-卡片广告',
+      name: '分段广告-问题-回答列表-卡片广告',
       rules: [
         {
           key: 0,
