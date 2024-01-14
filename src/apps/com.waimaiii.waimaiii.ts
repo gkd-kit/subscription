@@ -32,7 +32,8 @@ export default defineAppConfig({
         },
         {
           key: 3,
-          matches: '[id="android:id/content"] >9 FrameLayout + View[clickable=true]',
+          matches:
+            '[id="android:id/content"] >9 FrameLayout + View[clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13930573',
         },
       ],
