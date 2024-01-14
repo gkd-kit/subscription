@@ -72,13 +72,12 @@ export default defineAppConfig({
     },
     {
       key: 11,
-      quickFind: true,
       name: '全屏广告-首页广告弹窗',
       desc: '点击X',
       rules: [
         {
           activityIds: 'com.sigmob.sdk.base.common.TransparentAdActivity',
-          matches: '[id="android:id/content"] [id="close_btn"][clickable=true]',
+          matches: '[id="close_btn"][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13887500',
         },
       ],
