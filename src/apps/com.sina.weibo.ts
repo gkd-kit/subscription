@@ -280,7 +280,8 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.sina.weibo.photoalbum.imageviewer.ImageViewer',
-          matches: '@[id="com.sina.weibo:id/shader"] <2 * <<3 *[index=1] <2 * < [id="com.sina.weibo:id/sv_scroll_content"][index=1]',
+          matches:
+            '@[id="com.sina.weibo:id/shader"] <2 * <<3 *[index=1] <2 * < [id="com.sina.weibo:id/sv_scroll_content"][index=1]',
           snapshotUrls: 'https://i.gkd.li/import/13929119',
         },
       ],
