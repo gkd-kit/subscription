@@ -7,30 +7,26 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      actionMaximum: 2,
       matchTime: 10000,
+      actionMaximum: 1,
       resetMatch: 'app',
       actionCdKey: 0,
       actionMaximumKey: 0,
+      quickFind: true,
       rules: [
         {
           key: 0,
-          name: '自定义规则[字节广告SDK]',
           matches:
-            'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true] + TextView',
-          snapshotUrls: 'https://i.gkd.li/import/13927561',
+            '[text*="跳过"][text.length<=10]',
+          snapshotUrls: 'https://i.gkd.li/import/12712742',
         },
         {
-          key: 1,
-          name: '全局默认规则1',
-          quickFind: true,
-          matches: '[text*="跳过"][text.length<10][visibleToUser=true]',
-        },
-        {
-          key: 2,
-          name: '全局默认规则2',
-          matches:
-            '[childCount=0][visibleToUser=true][(text.length<10&&(text*="跳过"||text*="跳過"||text*="skip"||text*="Skip")) || id$="tt_splash_skip_btn" || vid*="skip" || vid*="Skip" || (vid*="count" && vid*="down" && vid!*="download") || desc*="跳过" || desc*="skip"]',
+          matches: '@View <2 * <2 * < [id="com.firebear.androil:id/adContainerLay"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13088169',
+            'https://i.gkd.li/import/12855707',
+            'https://i.gkd.li/import/13927561'
+          ],
         },
       ],
     },
