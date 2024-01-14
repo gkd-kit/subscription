@@ -27,7 +27,8 @@ export default defineAppConfig({
         },
         {
           key: 2,
-          matches: '@View <2 FrameLayout[childCount=3] <2 FrameLayout[childCount=2] < [vid="containerV"]',
+          matches:
+            '@View <2 FrameLayout[childCount=3] <2 FrameLayout[childCount=2] < [vid="containerV"]',
           snapshotUrls: 'https://i.gkd.li/import/13857307',
         },
       ],
