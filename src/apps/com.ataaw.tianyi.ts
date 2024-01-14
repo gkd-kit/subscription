@@ -11,7 +11,7 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: '[vid="version"] <<n LinearLayout [vid="ignore"]',
+      rules: ['[vid="version"]', '[vid="ignore"]'],
       snapshotUrls: 'https://i.gkd.li/import/13867468',
     },
   ],
