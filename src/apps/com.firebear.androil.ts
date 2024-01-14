@@ -16,16 +16,16 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          matches:
-            '[text*="跳过"][text.length<=10]',
+          matches: '[text*="跳过"][text.length<=10]',
           snapshotUrls: 'https://i.gkd.li/import/12712742',
         },
         {
-          matches: '@View <2 * <2 * < [id="com.firebear.androil:id/adContainerLay"]',
+          matches:
+            '@View <2 * <2 * < [id="com.firebear.androil:id/adContainerLay"]',
           snapshotUrls: [
             'https://i.gkd.li/import/13088169',
             'https://i.gkd.li/import/12855707',
-            'https://i.gkd.li/import/13927561'
+            'https://i.gkd.li/import/13927561',
           ],
         },
       ],
