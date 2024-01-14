@@ -113,7 +113,7 @@ export default defineAppConfig({
     {
       enable: false,
       key: 5,
-      name: '多多买菜抽奖弹窗',
+      name: '全屏广告-多多买菜抽奖弹窗',
       activityIds: ['com.xunmeng.pinduoduo.activity.NewPageActivity'],
       rules: [
         'View[childCount=1] > Button[id=null][text="关闭弹窗"][clickable=true]',
@@ -203,6 +203,31 @@ export default defineAppConfig({
             '@ImageView[desc="返回"] <4 ViewGroup <<3 FrameLayout[id="android:id/content"]',
           ],
           snapshotUrls: 'https://i.gkd.li/import/13791119',
+        },
+      ],
+    },
+    {
+      key: 11,
+      name: '功能类-自动点击原图',
+      activityIds:
+        'com.xunmeng.pinduoduo.app_album.album.MultiImageSelectorActivity',
+      quickFind: true,
+      rules: '@[text="原图"][checked=false] + [text="发送"]',
+      snapshotUrls: [
+        'https://i.gkd.li/import/13925378', // checked=false
+        'https://i.gkd.li/import/13925380', // checked=true
+      ],
+    },
+    {
+      key: 12,
+      quickFind: true,
+      name: '全屏广告-下单成功邀请好友弹窗',
+      desc: '点击X',
+      rules: [
+        {
+          activityIds: 'com.xunmeng.pinduoduo.activity.NewPageMaskActivity',
+          matches: '[id="com.xunmeng.pinduoduo:id/pdd"] >7 [text="关闭弹窗"]',
+          snapshotUrls: 'https://i.gkd.li/import/13927594',
         },
       ],
     },
