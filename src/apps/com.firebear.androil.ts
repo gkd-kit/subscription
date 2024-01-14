@@ -7,9 +7,11 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      matchTime: 10000,
       actionMaximum: 2,
+      matchTime: 10000,
       resetMatch: 'app',
+      actionCdKey: 0,
+      actionMaximumKey: 0,
       rules: [
         {
           key: 0,
