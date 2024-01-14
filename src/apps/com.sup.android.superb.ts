@@ -40,8 +40,7 @@ export default defineAppConfig({
       desc: '点击我再想想',
       rules: [
         {
-          matches:
-            '[text="发现新版本"] +2 * > [text="我再想想"]',
+          matches: '[text="发现新版本"] +2 * > [text="我再想想"]',
           snapshotUrls: 'https://i.gkd.li/import/13858490',
         },
       ],
