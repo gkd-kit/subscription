@@ -7,11 +7,30 @@ export default defineAppConfig({
     {
       key: 0,
       name: '开屏广告',
-      resetMatch: 'app',
       matchTime: 10000,
       actionMaximum: 1,
-      rules: '[vid="splashV"] >n View[clickable=true]',
-      snapshotUrls: 'https://i.gkd.li/import/13857307',
+      resetMatch: 'app',
+      quickFind: true,
+      rules: [
+        {
+          key: 0,
+          matches: '@[id$="tt_splash_skip_btn"] <<n [vid="containerV"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13378853',
+            'https://i.gkd.li/import/13546165',
+          ],
+        },
+        {
+          key: 1,
+          matches: '[text="跳过"]',
+          snapshotUrls: 'https://i.gkd.li/import/13538207',
+        },
+        {
+          key: 2,
+          matches: '@View <2 FrameLayout[childCount=3] <2 FrameLayout[childCount=2] < [vid="containerV"]',
+          snapshotUrls: 'https://i.gkd.li/import/13857307',
+        },
+      ],
     },
     {
       key: 6,
