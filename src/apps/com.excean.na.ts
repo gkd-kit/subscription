@@ -17,5 +17,18 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 2,
+      quickFind: true,
+      name: '全屏广告-首页弹窗广告',
+      desc: '点击X',
+      rules: [
+        {
+          activityIds: 'com.excelliance.kxqp.ui.MainActivity',
+          matches: '@ImageView[visibleToUser=true] <<5 [id="android:id/content"]',
+          snapshotUrls: 'https://i.gkd.li/import/13930990',
+        },
+      ],
+    },
   ],
 });
