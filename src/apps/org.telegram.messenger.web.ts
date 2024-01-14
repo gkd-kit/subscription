@@ -9,6 +9,7 @@ export default defineAppConfig({
       name: '更新弹窗',
       matchTime: 10000,
       resetMatch: 'app',
+      quickFind: true,
       actionMaximum: 1,
       rules: [
         {
