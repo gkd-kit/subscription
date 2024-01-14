@@ -280,8 +280,7 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.sina.weibo.photoalbum.imageviewer.ImageViewer',
-          matches:
-            '@LinearLayout >3 [vid="tv_dialog_item"][text^="原图"]',
+          matches: '@LinearLayout >3 [vid="tv_dialog_item"][text^="原图"]',
           snapshotUrls: 'https://i.gkd.li/import/13929119',
         },
       ],
