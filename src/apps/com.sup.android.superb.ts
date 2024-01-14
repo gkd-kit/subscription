@@ -41,7 +41,7 @@ export default defineAppConfig({
       rules: [
         {
           matches:
-            '[id="com.sup.android.superb:id/q6"] > [id="com.sup.android.superb:id/rl"]',
+            '[text="发现新版本"] +2 * > [text="我再想想"]',
           snapshotUrls: 'https://i.gkd.li/import/13858490',
         },
       ],
