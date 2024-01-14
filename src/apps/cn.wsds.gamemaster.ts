@@ -13,7 +13,8 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
-          matches: 'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true] + TextView',
+          matches:
+            'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true] + TextView',
           snapshotUrls: 'https://i.gkd.li/import/13930391',
         },
       ],
@@ -26,7 +27,8 @@ export default defineAppConfig({
         {
           key: 0,
           activityIds: 'cn.wsds.gamemaster.ui.gamedetails.ActivityGameDetails',
-          matches: '[id="cn.wsds.gamemaster:id/feed_ad"] [text="立即下载"] + ImageView[clickable=true]',
+          matches:
+            '[id="cn.wsds.gamemaster:id/feed_ad"] [text="立即下载"] + ImageView[clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13930398',
         },
         {
