@@ -10,10 +10,15 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
+      quickFind: true,
       rules: [
         {
+          matches: '[text*="跳过"][text.length<=10]',
+          snapshotUrls: 'https://i.gkd.li/import/13727905',
+        },
+        {
           matches:
-            'FrameLayout[childCount=2] > FrameLayout[childCount=4] > View',
+            '@View <3 FrameLayout[childCount=4] <2 FrameLayout[childCount=2] < [vid="ad_view"]',
           snapshotUrls: 'https://i.gkd.li/import/13867880',
         },
       ],
