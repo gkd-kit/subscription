@@ -207,7 +207,7 @@ export default defineAppConfig({
       actionMaximum: 1,
       activityIds: 'com.tencent.qqlive.redpacket.rain.OpenRedPacketActivity',
       rules:
-        'ViewGroup > ImageView[id="com.tencent.qqlive:id/arg"][index=0][clickable=true]',
+        '@ImageView[clickable=true] < ViewGroup[childCount=5] < [id="android:id/content"]',
       snapshotUrls: 'https://i.gkd.li/import/13842643',
     },
     {
