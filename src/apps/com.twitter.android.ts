@@ -161,7 +161,8 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.twitter.app.main.MainActivity',
-          matches: '[id="com.twitter.android:id/secondary_button"] [text="Not now"]',
+          matches:
+            '[id="com.twitter.android:id/secondary_button"] [text="Not now"]',
           snapshotUrls: 'https://i.gkd.li/import/13930126',
         },
       ],
