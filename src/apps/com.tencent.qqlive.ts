@@ -205,6 +205,7 @@ export default defineAppConfig({
       name: '全屏广告-首页-广告弹窗',
       resetMatch: 'app',
       actionMaximum: 1,
+      quickFind: true,
       activityIds: 'com.tencent.qqlive.redpacket.rain.OpenRedPacketActivity',
       rules:
         '@ImageView[clickable=true] < ViewGroup[childCount=5] < [id="android:id/content"]',
