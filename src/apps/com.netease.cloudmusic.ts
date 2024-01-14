@@ -53,7 +53,7 @@ export default defineAppConfig({
           ],
         },
         {
-          preKeys: 0,
+          preKeys: [0, 1],
           key: 90,
           activityIds: [
             'com.netease.cloudmusic.module.ad.feedback.AdFeedbackBottomSheet',
@@ -68,15 +68,8 @@ export default defineAppConfig({
           ],
         },
         {
-          preKeys: 1,
-          key: 91,
-          activityIds: 'com.netease.cloudmusic.activity.MainActivity',
-          matches: '[vid="closeBtn"]',
-          snapshotUrls: 'https://i.gkd.li/import/13927752',
-        },
-        {
           preKeys: 2,
-          key: 92,
+          key: 91,
           activityIds:
             'com.netease.cloudmusic.music.biz.comment.activity.CommentActivity',
           matches:
