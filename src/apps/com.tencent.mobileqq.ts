@@ -74,11 +74,16 @@ export default defineAppConfig({
         {
           preKeys: 0,
           key: 1,
-          activityIds:
+          activityIds: [
             'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
+            'com.tencent.mobileqq.activity.SplashActivity',
+          ],
           quickFind: true,
           matches: '@[clickable=true] > ImageView + [text="关闭此条广告"]',
-          snapshotUrls: 'https://i.gkd.li/import/12840889',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12840889',
+            'https://i.gkd.li/import/13831867', //activityId: 'com.tencent.mobileqq.activity.SplashActivity'
+          ],
         },
         {
           preKeys: 0,
@@ -357,10 +362,14 @@ export default defineAppConfig({
       key: 18,
       name: '消息页面-顶部更新提示',
       activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
-      rules: 'TextView[text="发现QQ版本更新"] + ImageView[clickable=true]', //修正desc值为null时无法点击问题
+      rules: [
+        'TextView[text="发现QQ版本更新"] + ImageView[clickable=true]', //修正desc值为null时无法点击问题
+        'TextView[text="发现QQ版本更新"] -2 ImageView[clickable=true]',
+      ],
       snapshotUrls: [
         'https://i.gkd.li/import/13188722',
         'https://i.gkd.li/import/13255493', //desc值为null快照
+        'https://i.gkd.li/import/13843140', //关系选择器为-2快照
       ],
     },
     {

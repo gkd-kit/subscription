@@ -22,17 +22,14 @@ export default defineAppConfig({
     },
     {
       key: 3,
+      name: '版本更新',
       quickFind: true,
-      name: '更新提示-版本更新弹窗',
-      desc: '点击暂不升级',
-      rules: [
-        {
-          activityIds:
-            'com.taobao.idlefish.maincontainer.activity.MainActivity',
-          matches: '[id="com.taobao.idlefish:id/left"][text="暂不升级"]',
-          snapshotUrls: 'https://i.gkd.li/import/13832272',
-        },
-      ],
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      activityIds: 'com.taobao.idlefish.maincontainer.activity.MainActivity',
+      rules: '[text="立即升级"] -2 [text="暂不升级"]',
+      snapshotUrls: 'https://i.gkd.li/import/13832272',
     },
   ],
 });
