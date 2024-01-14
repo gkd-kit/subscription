@@ -273,5 +273,17 @@ export default defineAppConfig({
       rules: '@[text="不了，谢谢"] +4 [text="喜欢，给好评"]',
       snapshotUrls: 'https://i.gkd.li/import/13620220',
     },
+    {
+      key: 19,
+      quickFind: true,
+      name: '功能类-自动点击查看原图',
+      rules: [
+        {
+          activityIds: 'com.sina.weibo.photoalbum.imageviewer.ImageViewer',
+          matches: '@[id="com.sina.weibo:id/shader"] <2 * <<3 *[index=1] <2 * < [id="com.sina.weibo:id/sv_scroll_content"][index=1]',
+          snapshotUrls: 'https://i.gkd.li/import/13929119',
+        },
+      ],
+    },
   ],
 });
