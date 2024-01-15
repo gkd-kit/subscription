@@ -49,7 +49,7 @@ export default defineAppConfig({
           matches: [
             '[id="info.muge.appshare:id/adContainer"] >n FrameLayout > ImageView - FrameLayout[childCount=1] > ImageView[childCount=0]',
             '[id="info.muge.appshare:id/adContainer"] >n FrameLayout[desc*="dislike"]', //新规则
-            '[id="info.muge.appshare:id/adContainer"] >5 FrameLayout > ImageView[visibleToUser=true]',//https://i.gkd.li/import/13937744
+            '[id="info.muge.appshare:id/adContainer"] >5 FrameLayout > ImageView[visibleToUser=true]', //https://i.gkd.li/import/13937744
           ],
           snapshotUrls: [
             'https://i.gkd.li/import/13761259',
