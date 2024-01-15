@@ -40,7 +40,7 @@ export default defineAppConfig({
     },
     {
       key: 1,
-      name: '卡片式广告',
+      name: '局部广告-卡片式广告',
       rules: [
         {
           key: 0,
@@ -49,11 +49,13 @@ export default defineAppConfig({
           matches: [
             '[id="info.muge.appshare:id/adContainer"] >n FrameLayout > ImageView - FrameLayout[childCount=1] > ImageView[childCount=0]',
             '[id="info.muge.appshare:id/adContainer"] >n FrameLayout[desc*="dislike"]', //新规则
+            '[id="info.muge.appshare:id/adContainer"] >5 FrameLayout > ImageView[visibleToUser=true]',//https://i.gkd.li/import/13937744
           ],
           snapshotUrls: [
             'https://i.gkd.li/import/13761259',
             'https://i.gkd.li/import/13712716',
             'https://i.gkd.li/import/13758909', //新规则
+            'https://i.gkd.li/import/13937744',
           ],
         },
       ],
