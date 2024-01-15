@@ -185,7 +185,7 @@ export default defineAppConfig({
     {
       enable: false,
       key: 10,
-      name: '多多视频-划到广告自动跳过',
+      name: '局部广告-多多视频划到广告自动跳过',
       desc: '点击返回自动刷新，从而跳过广告',
       quickFind: true,
       activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
