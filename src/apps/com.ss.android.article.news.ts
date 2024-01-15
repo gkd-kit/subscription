@@ -203,5 +203,29 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 16,
+      name: '局部广告-评论区广告',
+      desc: '点击X',
+      rules: [
+        {
+          name: '评论广告',
+          activityIds: 'com.bytedance.ugc.UgcDetailInfoActivity',
+          matches:
+            '[text="点击查看"] < LinearLayout +n FrameLayout > [desc="举报"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13915287',
+            'https://i.gkd.li/import/13817019',
+          ],
+        },
+        {
+          name: '活动横幅广告',
+          activityIds: 'com.bytedance.ugc.UgcDetailInfoActivity',
+          matches:
+            'TextView[text.length>0] < LinearLayout - ImageView +n ImageView',
+          snapshotUrls: ['https://i.gkd.li/import/13825373'],
+        },
+      ],
+    },
   ],
 });
