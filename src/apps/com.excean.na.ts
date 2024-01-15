@@ -19,15 +19,18 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      quickFind: true,
       name: '全屏广告-首页弹窗广告',
       desc: '点击X',
       rules: [
         {
+          name: '腾讯广告SDK',
           activityIds: 'com.excelliance.kxqp.ui.MainActivity',
           matches:
-            '@ImageView[visibleToUser=true] <<5 [id="android:id/content"]',
-          snapshotUrls: 'https://i.gkd.li/import/13930990',
+            'FrameLayout[childCount>1] > FrameLayout[childCount=1] > ImageView[width<90][height<90]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13930990',
+            'https://i.gkd.li/import/13932190',
+          ],
         },
       ],
     },
