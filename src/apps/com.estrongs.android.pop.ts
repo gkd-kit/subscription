@@ -19,6 +19,12 @@ export default defineAppConfig({
             'TextView[text!=null] < FrameLayout - ImageView - FrameLayout > ImageView',
           snapshotUrls: 'https://i.gkd.li/import/12509669',
         },
+        {
+          activityIds: 'com.estrongs.android.pop.view.FileExplorerActivity',
+          matches:
+            '[id="com.estrongs.android.pop:id/interact_ad_root"] >n [id="com.estrongs.android.pop:id/iv_close"]',
+          snapshotUrls: 'https://i.gkd.li/import/13936617',
+        },
       ],
     },
     {
