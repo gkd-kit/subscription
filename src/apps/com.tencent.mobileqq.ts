@@ -12,13 +12,21 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      rules: 'TextView[text^="跳过"][text.length<=10]',
-      excludeActivityIds: ['com.tencent.mobileqq.activity.ChatActivity'],
+      excludeActivityIds: [
+        'com.tencent.mobileqq.activity.ChatActivity', // 在聊天界面禁用
+        'com.tencent.mobileqq.search.activity.UniteSearchActivity', // 在搜索页面禁用
+      ],
+      rules: {
+        excludeMatches: '[vid="chat_item_content_layout"]', // 在聊天界面禁用
+        matches: 'TextView[text^="跳过"][text.length<=10][vid!="title"]',
+      },
       snapshotUrls: [
         'https://i.gkd.li/import/13062244',
         'https://i.gkd.li/import/13093155',
         'https://i.gkd.li/import/13207731',
         'https://i.gkd.li/import/13217807', // 避免在聊天界面误触
+        'https://i.gkd.li/import/13856647', // 误触
+        'https://i.gkd.li/import/13868177', // 误触
       ],
     },
     {
@@ -57,7 +65,7 @@ export default defineAppConfig({
     {
       enable: false,
       key: 2,
-      name: '好友动态-广告卡片',
+      name: '分段广告-好友动态-广告卡片',
       rules: [
         {
           key: 0,
@@ -74,19 +82,30 @@ export default defineAppConfig({
         {
           preKeys: 0,
           key: 1,
-          activityIds:
+          activityIds: [
             'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
+            'com.tencent.mobileqq.activity.SplashActivity',
+          ],
           quickFind: true,
           matches: '@[clickable=true] > ImageView + [text="关闭此条广告"]',
-          snapshotUrls: 'https://i.gkd.li/import/12840889',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12840889',
+            'https://i.gkd.li/import/13831867', //activityId: 'com.tencent.mobileqq.activity.SplashActivity'
+          ],
         },
         {
           preKeys: 0,
           key: 2,
-          activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
+          activityIds: [
+            'com.tencent.mobileqq.activity.SplashActivity',
+            'com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity',
+          ],
           quickFind: true,
           matches: '@[clickable=true] > * > ImageView + [text="隐藏此条动态"]',
-          snapshotUrls: 'https://i.gkd.li/import/13761147',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13761147',
+            'https://i.gkd.li/import/13849730',
+          ],
         },
         {
           key: 3,
@@ -355,12 +374,26 @@ export default defineAppConfig({
     {
       enable: false,
       key: 18,
-      name: '消息页面-顶部更新提示',
-      activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
-      rules: 'TextView[text="发现QQ版本更新"] + ImageView[clickable=true]', //修正desc值为null时无法点击问题
-      snapshotUrls: [
-        'https://i.gkd.li/import/13188722',
-        'https://i.gkd.li/import/13255493', //desc值为null快照
+      name: '更新提示-消息页面-顶部',
+      rules: [
+        {
+          key: 0,
+          activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
+          quickFind: true,
+          matches: '[id="com.tencent.mobileqq:id/iyx"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13188722',
+            'https://i.gkd.li/import/13255493', //desc值为null快照
+            'https://i.gkd.li/import/13843140', //关系选择器为-2快照
+          ],
+        },
+        {
+          key: 1,
+          activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
+          matches:
+            '[text="发现QQ版本更新"] + [text="点击下载"] + ImageView[clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/import/13931212',
+        },
       ],
     },
     {
