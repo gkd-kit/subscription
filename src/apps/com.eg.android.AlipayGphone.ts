@@ -152,7 +152,7 @@ export default defineAppConfig({
       ],
     },
     {
-      key: 11,
+      key: 12,
       name: '局部广告',
       desc: '拼多多_先买后付广告',
       rules: [
