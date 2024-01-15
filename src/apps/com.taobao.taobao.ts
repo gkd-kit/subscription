@@ -158,7 +158,7 @@ export default defineAppConfig({
     {
       enable: false,
       key: 14,
-      name: '将小组件添加到手机桌面',
+      name: '局部广告-将小组件添加到手机桌面',
       desc: '点击取消',
       activityIds: 'com.alibaba.triver.container.TriverMainActivity',
       rules: [
