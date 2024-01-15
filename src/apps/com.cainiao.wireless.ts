@@ -74,10 +74,14 @@ export default defineAppConfig({
       name: '全屏广告-今日手气红包',
       desc: '点击右上角X',
       quickFind: true,
-      activityIds:
-        'com.cainiao.wireless.homepage.view.activity.HomePageActivity',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: '[vid="dialog_full_image_close"]',
-      snapshotUrls: 'https://i.gkd.li/import/13842492',
+      snapshotUrls: [
+        'https://i.gkd.li/import/13842492',
+        'https://i.gkd.li/import/13936362',
+      ],
     },
   ],
 });
