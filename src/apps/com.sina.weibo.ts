@@ -285,5 +285,18 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 20,
+      enable: false,
+      name: '通知提示-首赞弹窗',
+      desc: '点击【领取奖励】',
+      quickFind: false,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      activityIds: 'com.sina.weibo.feed.MPDialogActivity',
+      rules:
+        '@WebView[text="Wbox"]  >5  Button[text="领取奖励"]',
+      snapshotUrls: 'https://i.gkd.li/import/13837867',
+    },
   ],
 });
