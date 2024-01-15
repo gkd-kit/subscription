@@ -33,7 +33,7 @@ export default defineAppConfig({
     },
     {
       key: 1,
-      name: '首页通知',
+      name: '功能类-首页通知公告',
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
@@ -47,7 +47,7 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      name: '弹窗广告',
+      name: '全屏广告-弹窗广告',
       actionDelay: 300,
       rules: [
         {
@@ -94,36 +94,24 @@ export default defineAppConfig({
         },
         {
           key: 3,
-          name: '腾讯广告-1',
+          name: '腾讯广告SDK',
           activityIds: [
             'com.ksf.yyx.MainActivity',
             'com.android.internal.app.ResolverActivity',
+            'com.cyl.musiccy.ou.MainActivity',
           ],
           matches:
-            'ImageView <n FrameLayout > FrameLayout[index=1] > FrameLayout[index=2] > ImageView',
+            'FrameLayout[childCount>1] > FrameLayout[childCount=1] > ImageView[width<90][height<90]',
           snapshotUrls: [
             'https://i.gkd.li/import/12775921',
             'https://i.gkd.li/import/12776903',
             'https://i.gkd.li/import/12789928',
             'https://i.gkd.li/import/13215476',
             'https://i.gkd.li/import/13071595',
+            'https://i.gkd.li/import/13063249',
+            'https://i.gkd.li/import/13422363',
+            'https://i.gkd.li/import/13936028',
           ],
-        },
-        {
-          key: 4,
-          name: '腾讯广告-2',
-          activityIds: 'com.cyl.musiccy.ou.MainActivity',
-          matches:
-            'ImageView <n FrameLayout - FrameLayout > FrameLayout[index=1] > ImageView',
-          snapshotUrls: 'https://i.gkd.li/import/13063249',
-        },
-        {
-          key: 5,
-          name: '腾讯广告-3',
-          activityIds: 'com.cyl.musiccy.ou.MainActivity',
-          matches:
-            'ImageView <n FrameLayout > FrameLayout[index=0] > FrameLayout FrameLayout > ImageView',
-          snapshotUrls: 'https://i.gkd.li/import/13422363',
         },
       ],
     },
