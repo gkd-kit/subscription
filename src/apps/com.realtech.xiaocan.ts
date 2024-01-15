@@ -29,7 +29,7 @@ export default defineAppConfig({
         {
           key: 3,
           matches:
-            '[id="com.realtech.xiaocan:id/splash_ad_container"] >n FrameLayout[childCount<=4] > FrameLayout +n @View[clickable=true] + TextView',
+            '[id="com.realtech.xiaocan:id/splash_ad_container"] >5 View[visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/import/13694858',
             'https://i.gkd.li/import/13794403',
