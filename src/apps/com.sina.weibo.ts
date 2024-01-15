@@ -294,8 +294,7 @@ export default defineAppConfig({
       actionMaximum: 1,
       resetMatch: 'app',
       activityIds: 'com.sina.weibo.feed.MPDialogActivity',
-      rules:
-        '@WebView[text="Wbox"]  >5  Button[text="领取奖励"]',
+      rules: '@WebView[text="Wbox"]  >5  Button[text="领取奖励"]',
       snapshotUrls: 'https://i.gkd.li/import/13837867',
     },
   ],
