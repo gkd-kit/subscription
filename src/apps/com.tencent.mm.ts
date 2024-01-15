@@ -514,5 +514,36 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 20,
+      quickFind: true,
+      action: 'clickCenter',
+      name: '分段广告-小程序坐着火车去旅行-底部视频广告',
+      desc: '微信小程序-坐着火车去旅行-列车时间详细信息页面底部视频广告',
+      rules: [
+        {
+          key: 7,
+          actionCd:5000,//避免短时间内二次点击，取消Cd可能会导致无法点击内容太差
+          activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
+          matches: 'Image[text="feedback_icon"] < View - TextView',
+          exampleUrls: 'https://m.gkd.li/127810985/ba800a96-a1c3-4447-ae78-cc8fcb5121f2',
+          snapshotUrls: 'https://i.gkd.li/import/13940684',//点击广告
+        },
+        {
+          key: 8,
+          activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
+          matches: 'Image[text="feedback_icon"] < View - TextView < View +2 View > TextView[text.length=4]',
+          exampleUrls: 'https://m.gkd.li/127810985/6178ec25-aef7-4693-8a5d-d4b4b453420e',
+          snapshotUrls: 'https://i.gkd.li/import/13940703',//点击不感兴趣
+        },
+        {
+          key: 9,
+          activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
+          matches: 'Image[text="feedback_icon"] < View - TextView < View +2 View > TextView[text.length=4][index=2]',
+          exampleUrls: 'https://m.gkd.li/127810985/cd893d05-af17-4fde-a96c-603b666a08b0',
+          snapshotUrls: 'https://i.gkd.li/import/13940841',//点击内容太差
+        },
+      ],
+    },
   ],
 });
