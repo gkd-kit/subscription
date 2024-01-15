@@ -151,5 +151,17 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 11,
+      name: '局部广告',
+      desc: '拼多多_先买后付广告',
+      rules: [
+        {
+          matches:
+            '[text="拼多多 推荐你"] <n FrameLayout +2 FrameLayout > [text="关闭"]',
+          snapshotUrls: 'https://i.gkd.li/import/13832300',
+        },
+      ],
+    },
   ],
 });
