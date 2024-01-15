@@ -152,6 +152,20 @@ export default defineAppConfig({
       ],
     },
     {
+      key: 11,
+      name: '全屏广告-借呗消费信贷协议',
+      desc: '点击X',
+      rules: [
+        {
+          activityIds:
+            'com.alipay.mobile.nebulax.integration.mpaas.activity.NebulaActivity$Main',
+          matches:
+            '[text="同意协议并刷脸验证"] < * -4 * >2 Image[visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/import/13915022',
+        },
+      ],
+    },
+    {
       key: 12,
       name: '局部广告',
       desc: '拼多多_先买后付广告',
