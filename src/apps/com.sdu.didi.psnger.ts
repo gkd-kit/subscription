@@ -24,8 +24,7 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.didi.sdk.app.MainActivity',
-          matches:
-            'ImageView[id="com.sdu.didi.psnger:id/popClose"]',
+          matches: 'ImageView[id="com.sdu.didi.psnger:id/popClose"]',
           snapshotUrls: 'https://i.gkd.li/import/13947142',
         },
       ],
