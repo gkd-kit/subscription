@@ -10,7 +10,7 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          name: '字节广告SDK',
+          name: '腾讯广告SDK',
           activityIds: [
             'dev.xesam.chelaile.app.module.func.SplashActivity',
             'dev.xesam.chelaile.app.module.PanelHostActivity',
@@ -46,7 +46,7 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          name: '字节广告SDK',
+          name: '腾讯广告SDK',
           activityIds:
             'dev.xesam.chelaile.app.module.line.gray.LineDetailActivity',
           matches:
