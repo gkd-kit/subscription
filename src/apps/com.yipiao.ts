@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '更新升级弹窗',
+      name: '更新提示-内测升级',
       desc: '点击弹窗下方x',
       rules: [
         {
@@ -18,7 +18,7 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      name: '添加桌面小组件横幅',
+      name: '局部广告-添加桌面小组件',
       desc: '点击横幅右上角x',
       rules: [
         {
@@ -30,7 +30,7 @@ export default defineAppConfig({
     },
     {
       key: 3,
-      name: '广告横幅',
+      name: '局部广告-代金券',
       desc: '点击横幅右上角x',
       rules: [
         {
