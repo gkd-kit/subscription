@@ -35,7 +35,7 @@ export default defineAppConfig({
             '[id="com.ygkj.chelaile.standard:id/cll_line_single_ad_close"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/import/13625374',
-            'https://i.gkd.li/import/13947849,
+            'https://i.gkd.li/import/13947849',
           ],
         },
       ],
