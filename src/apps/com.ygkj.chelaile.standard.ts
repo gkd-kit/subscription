@@ -47,7 +47,8 @@ export default defineAppConfig({
         {
           key: 0,
           name: '字节广告SDK',
-          activityIds: 'dev.xesam.chelaile.app.module.line.gray.LineDetailActivity',
+          activityIds:
+            'dev.xesam.chelaile.app.module.line.gray.LineDetailActivity',
           matches:
             'ImageView[id^="com.ygkj.chelaile.standard:id/cll_all_pic_close"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/import/13947871',
