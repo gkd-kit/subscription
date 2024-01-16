@@ -16,5 +16,19 @@ export default defineAppConfig({
         '[text*="关闭"][id="com.mfcloudcalculate.networkdisk:id/tv_ad_free_colse"]',
       snapshotUrls: 'https://i.gkd.li/import/13546173',
     },
+    {
+      key: 2,
+      name: '开屏广告',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      quickFind: true,
+      rules: [
+        {
+          matches: '[id="com.byted.pangle:id/tt_splash_view"] > [id="com.byted.pangle:id/tt_splash_skip_btn"]',
+          snapshotUrls: 'https://i.gkd.li/import/13945127',
+        },
+      ],
+    },
   ],
 });
