@@ -238,5 +238,18 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 13,
+      name: '全屏广告-金币翻倍特权弹窗',
+      desc: '点击X',
+      rules: [
+        {
+          activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
+          matches:
+            '[id="com.xunmeng.pinduoduo:id/pdd"] ViewGroup[childCount=4] > ImageView[clickable=true][desc=null]',
+          snapshotUrls: 'https://i.gkd.li/import/13944165',
+        },
+      ],
+    },
   ],
 });
