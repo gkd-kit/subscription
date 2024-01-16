@@ -515,7 +515,7 @@ export default defineAppConfig({
       ],
     },
     {
-      key: 20,
+      key: 22,
       quickFind: true,
       name: '分段广告-小程序坐着火车去旅行-底部视频广告',
       desc: '微信小程序-坐着火车去旅行-列车时间详细信息页面底部视频广告',
