@@ -134,9 +134,9 @@ export default defineAppConfig({
       ],
     },
     {
-      key: 8,
+      key: 9,
       quickFind: true,
-      name: '全屏广告',
+      name: '全屏广告-今日专属推荐弹窗',
       desc: '点击X',
       rules: [
         {
