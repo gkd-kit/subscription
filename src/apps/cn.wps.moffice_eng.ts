@@ -134,7 +134,8 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'cn.wps.moffice.main.local.HomeRootActivity',
-          matches: '[id="cn.wps.moffice_eng:id/push_tips_ptr_super_webview"] >6 TextView[index=2]',
+          matches:
+            '[id="cn.wps.moffice_eng:id/push_tips_ptr_super_webview"] >6 TextView[index=2]',
           snapshotUrls: 'https://i.gkd.li/import/13945835',
         },
       ],
