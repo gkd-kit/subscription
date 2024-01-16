@@ -98,7 +98,10 @@ export default defineAppConfig({
       key: 20,
       name: '分段广告-朋友圈广告[繁体]',
       desc: '点击广告卡片右上角[廣告],出现菜单点击[關閉此廣告],确认关闭',
-      activityIds: 'com.tencent.mm.plugin.sns.ui.SnsTimeLineUI',
+      activityIds: [
+        'com.tencent.mm.plugin.sns.ui.SnsTimeLineUI',
+        'com.tencent.mm.plugin.sns.ui.improve.ImproveSnsTimelineUI',
+      ],
       quickFind: true,
       rules: [
         {
