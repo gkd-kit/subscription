@@ -534,7 +534,7 @@ export default defineAppConfig({
         {
           key: 8,
           activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
-          matches:[
+          matches: [
             'RelativeLayout[childCount=1][clickable=true] > [text="★坐着火车去旅行★"]',
             'Image[text="feedback_icon"] < View - TextView < View +2 View > TextView[index=1]',
           ],
@@ -545,7 +545,7 @@ export default defineAppConfig({
         {
           key: 9,
           activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
-          matches:[
+          matches: [
             'RelativeLayout[childCount=1][clickable=true] > [text="★坐着火车去旅行★"]',
             'Image[text="feedback_icon"] < View - TextView < View +2 View > TextView[text.length=4][index=2]',
           ],
@@ -566,18 +566,18 @@ export default defineAppConfig({
           key: 5,
           activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
           matches: [
-		'RelativeLayout[childCount=1][clickable=true] > [text="★中转查询器★"]',
-		'Image < View[childCount=3] > View > View[childCount=2] > TextView[index=0]',
-		],
-          snapshotUrls: 'https://i.gkd.li/import/13946834', //中转查询器下方视频广告，点击广告，	
+            'RelativeLayout[childCount=1][clickable=true] > [text="★中转查询器★"]',
+            'Image < View[childCount=3] > View > View[childCount=2] > TextView[index=0]',
+          ],
+          snapshotUrls: 'https://i.gkd.li/import/13946834', //中转查询器下方视频广告，点击广告，
         },
-		{
+        {
           key: 6,
           activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
           matches: [
-			'RelativeLayout[childCount=1][clickable=true] > [text="★中转查询器★"]',
-			'Image < View[childCount=3] > View > View[childCount=3] > View[index=2] > TextView',
-		],
+            'RelativeLayout[childCount=1][clickable=true] > [text="★中转查询器★"]',
+            'Image < View[childCount=3] > View > View[childCount=3] > View[index=2] > TextView',
+          ],
           snapshotUrls: 'https://i.gkd.li/import/13946850', //点击影响操作直接关闭广告
         },
       ],
