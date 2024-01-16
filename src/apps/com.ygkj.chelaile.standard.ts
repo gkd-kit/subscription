@@ -13,7 +13,7 @@ export default defineAppConfig({
           activityIds: [
             'dev.xesam.chelaile.app.module.func.SplashActivity',
             'dev.xesam.chelaile.app.module.PanelHostActivity',
-            'dev.xesam.chelaile.app.module.line.gray.LineDetailActivity',//https://i.gkd.li/import/13947845
+            'dev.xesam.chelaile.app.module.line.gray.LineDetailActivity', //https://i.gkd.li/import/13947845
           ],
           matches:
             'ImageView[id^="com.ygkj.chelaile.standard:id/cll_all_pic_close"][visibleToUser=true]',
@@ -28,7 +28,7 @@ export default defineAppConfig({
           key: 1,
           activityIds: [
             'dev.xesam.chelaile.app.module.PanelHostActivity',
-            'dev.xesam.chelaile.app.module.line.TimeTableActivity',//https://i.gkd.li/import/13947849
+            'dev.xesam.chelaile.app.module.line.TimeTableActivity', //https://i.gkd.li/import/13947849
           ],
           matches:
             '[id="com.ygkj.chelaile.standard:id/cll_line_single_ad_close"][visibleToUser=true]',
@@ -45,7 +45,8 @@ export default defineAppConfig({
       desc: '点击X',
       rules: [
         {
-          activityIds: 'dev.xesam.chelaile.app.module.line.gray.LineDetailActivity',
+          activityIds:
+            'dev.xesam.chelaile.app.module.line.gray.LineDetailActivity',
           matches:
             '[id="android:id/content"] >5 ImageView[visibleToUser=true][index=0]',
           snapshotUrls: 'https://i.gkd.li/import/13947871',
