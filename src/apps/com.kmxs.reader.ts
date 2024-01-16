@@ -140,8 +140,7 @@ export default defineAppConfig({
       desc: '点击X',
       rules: [
         {
-          matches:
-            '[id="com.kmxs.reader:id/close"]',
+          matches: '[id="com.kmxs.reader:id/close"]',
           snapshotUrls: 'https://i.gkd.li/import/13941276',
         },
       ],
