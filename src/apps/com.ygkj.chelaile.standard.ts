@@ -50,7 +50,7 @@ export default defineAppConfig({
           activityIds:
             'dev.xesam.chelaile.app.module.line.gray.LineDetailActivity',
           matches:
-            'ImageView[id^="com.ygkj.chelaile.standard:id/cll_all_pic_close"][visibleToUser=true]',
+            'FrameLayout[childCount>1] > FrameLayout[childCount=1] > ImageView[width<90][height<90]',
           snapshotUrls: 'https://i.gkd.li/import/13947871',
         },
       ],
