@@ -133,5 +133,18 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 8,
+      quickFind: true,
+      name: '全屏广告',
+      desc: '点击X',
+      rules: [
+        {
+          matches:
+            '[id="com.kmxs.reader:id/close"]',
+          snapshotUrls: 'https://i.gkd.li/import/13941276',
+        },
+      ],
+    },
   ],
 });
