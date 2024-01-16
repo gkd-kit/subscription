@@ -67,15 +67,17 @@ export default defineAppConfig({
         {
           key: 0,
           activityIds: 'info.muge.appshare.view.app.detail.AppDetailActivity',
-          matches: '[id="info.muge.appshare:id/adContainer"] >5 LinearLayout + FrameLayout > ImageView[visibleToUser=true]',
+          matches:
+            '[id="info.muge.appshare:id/adContainer"] >5 LinearLayout + FrameLayout > ImageView[visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/import/13937744',
         },
         {
           key: 1,
           activityIds: 'info.muge.appshare.view.app.detail.AppDetailActivity',
-          matches: '[id="info.muge.appshare:id/adContainer"] FrameLayout > ImageView - FrameLayout[childCount=1]',
+          matches:
+            '[id="info.muge.appshare:id/adContainer"] FrameLayout > ImageView - FrameLayout[childCount=1]',
           snapshotUrls: 'https://i.gkd.li/import/13944807',
-        },     
+        },
       ],
     },
     {
@@ -86,7 +88,8 @@ export default defineAppConfig({
         {
           key: 0,
           activityIds: 'info.muge.appshare.view.app.detail.AppDetailActivity',
-          matches: '[id="info.muge.appshare:id/adContainer"] FrameLayout[desc*="dislike"]',
+          matches:
+            '[id="info.muge.appshare:id/adContainer"] FrameLayout[desc*="dislike"]',
           snapshotUrls: 'https://i.gkd.li/import/13758909',
         },
         {
