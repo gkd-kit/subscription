@@ -84,7 +84,7 @@ export default defineAppConfig({
     },
     {
       key: 4,
-      name: '红包弹窗',
+      name: '全屏广告-红包弹窗',
       rules: [
         {
           key: 0,
@@ -107,6 +107,13 @@ export default defineAppConfig({
           matches:
             '[text="百亿补贴"] > View > View > @View[clickable=true] +n [text^="立即领取"]',
           snapshotUrls: 'https://i.gkd.li/import/13669963',
+        },
+        {
+          key: 3,
+          activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
+          matches:
+            '[id="com.xunmeng.pinduoduo:id/pdd"] View[childCount=3][clickable=false] > Image[index=0]',
+          snapshotUrls: 'https://i.gkd.li/import/13944160',
         },
       ],
     },
