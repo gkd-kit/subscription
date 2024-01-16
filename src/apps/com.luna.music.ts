@@ -74,7 +74,8 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          matches: '[id="com.luna.music:id/exciting_video_fragment_container"] >4 [text="领取成功，关闭，按钮"]',
+          matches:
+            '[id="com.luna.music:id/exciting_video_fragment_container"] >4 [text="领取成功，关闭，按钮"]',
           snapshotUrls: 'https://i.gkd.li/import/13945430',
         },
         {
