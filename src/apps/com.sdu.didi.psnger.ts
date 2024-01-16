@@ -19,7 +19,7 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      name: '首页广告',
+      name: '全屏广告-优惠券',
       desc: '点击广告卡片下方x',
       rules: [
         {
