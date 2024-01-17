@@ -24,7 +24,8 @@ export default defineAppConfig({
         {
           key: 1,
           quickFind: true,
-          matches: '@ImageView[clickable=true] + ViewGroup > [text="跳过"][text.length<=5]',
+          matches:
+            '@ImageView[clickable=true] + ViewGroup > [text="跳过"][text.length<=5]',
           snapshotUrls: 'https://i.gkd.li/import/13964236',
         },
       ],
