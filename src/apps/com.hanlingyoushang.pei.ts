@@ -14,7 +14,8 @@ export default defineAppConfig({
           snapshotUrls: 'https://i.gkd.li/import/13950839',
         },
         {
-          matches: '@FrameLayout -1 ImageView[name="android.widget.ImageView"]',
+          matches:
+            'FrameLayout[id="android:id/content"] >5 @ImageView[name="android.widget.ImageView"]',
           snapshotUrls: 'https://i.gkd.li/import/13952257',
         },
       ],
