@@ -39,7 +39,7 @@ export default defineAppConfig({
           matches: '[text="不感兴趣"][clickable=true]',
           snapshotUrls: [
             'https://i.gkd.li/import/12711589',
-            'https://i.gkd.li/import/13959613',//v7.8.0样式
+            'https://i.gkd.li/import/13959613', //v7.8.0样式
           ],
         },
       ],
