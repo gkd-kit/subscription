@@ -2,11 +2,11 @@ import { defineAppConfig } from '../types';
 
 export default defineAppConfig({
   id: 'com.android.packageinstaller',
-  name: 'vivo 软件包安装程序',
+  name: '软件包安装程序',
   groups: [
     {
       key: 1,
-      name: '自动安装应用',
+      name: '功能类-自动安装应用',
       quickFind: true,
       rules: [
         {
@@ -27,8 +27,11 @@ export default defineAppConfig({
           preKeys: 0,
           activityIds: 'com.android.packageinstaller.NewInstallInstalling',
           matches:
-            '[id="com.android.packageinstaller:id/done_button"][text="完成"][clickable=true]',
-          snapshotUrls: 'https://i.gkd.li/import/13766420',
+            '[id="com.android.packageinstaller:id/done_button"][clickable=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13766420',
+            'https://i.gkd.li/import/13962438', //text=null
+          ],
         },
       ],
     },
