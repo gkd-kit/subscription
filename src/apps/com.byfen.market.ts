@@ -33,7 +33,8 @@ export default defineAppConfig({
     {
       key: 2,
       name: '分段广告-下载管理页广告卡片',
-      activityIds: 'com.byfen.market.ui.activity.personalcenter.DownloadManagerActivity',
+      activityIds:
+        'com.byfen.market.ui.activity.personalcenter.DownloadManagerActivity',
       rules: [
         {
           key: 0,
