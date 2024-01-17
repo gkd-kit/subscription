@@ -260,6 +260,13 @@ export default defineAppConfig({
           matches: '[text="不感兴趣"][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13852322',
         },
+        {
+          preKeys: 0,
+          key: 2,
+          activityIds: 'com.sina.weibo.feed.DetailWeiboActivity',
+          matches: '[text="不想看到此类内容"]',
+          snapshotUrls: 'https://i.gkd.li/import/13958782',
+        },
       ],
     },
     {
