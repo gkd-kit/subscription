@@ -19,6 +19,7 @@ export default defineAppConfig({
       quickFind: true,
       name: '通知提示-关闭开启消息通知弹窗',
       actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
           activityIds: 'com.vmall.client.messageCenter.fragment.MessageCenterActivity',
