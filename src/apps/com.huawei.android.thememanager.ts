@@ -161,15 +161,15 @@ export default defineAppConfig({
     {
       key: 9,
       name: '权限提示-请求通知权限',
-      activityIds:[
+      activityIds: [
         'com.huawei.android.thememanager.base.widget.ActivatePushDialog',
         'com.huawei.android.thememanager.HwThemeManagerActivity',
-        ],
+      ],
       rules: '@[text="取消"] < * - * >n [text="开启消息通知"]',
       snapshotUrls: [
         'https://i.gkd.li/import/12918192',
         'https://i.gkd.li/import/13959469',
-        ],
+      ],
     },
   ],
 });
