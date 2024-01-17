@@ -74,8 +74,7 @@ export default defineAppConfig({
         {
           key: 0,
           name: '点击右上角[更多]图标按钮',
-          matches:
-            'ImageView[clickable=true][desc="更多"]',
+          matches: 'ImageView[clickable=true][desc="更多"]',
           snapshotUrls: [
             'https://i.gkd.li/import/12679280',
             'https://i.gkd.li/import/12733282',
