@@ -138,6 +138,7 @@ export default defineAppConfig({
       activityIds: [
         'com.taobao.android.detail.wrapper.activity.DetailActivity',
         'com.taobao.android.order.bundle.TBOrderListActivity',
+        'com.taobao.search.sf.MainSearchResultActivity',
       ],
       rules: '[id="com.taobao.taobao:id/update_imageview_cancel_v2"]',
       snapshotUrls: [
