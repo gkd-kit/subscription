@@ -9,7 +9,7 @@ export default defineAppConfig({
       name: '全屏广告-广告弹窗',
       rules: [
         {
-          key: 0, 
+          key: 0,
           activityIds: 'top.cycdm.cycapp.MainActivity',
           matches:
             '[id="net.duohuo.cyc:id/ksad_tk_view"] >4 ViewGroup[index=1] >3 ViewGroup[index=0][childCount=1]',
