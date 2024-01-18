@@ -251,5 +251,17 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 14,
+      name: '全屏广告-红包助手打款弹窗',
+      rules: [
+        {
+          activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
+          matches:
+            '[id="com.xunmeng.pinduoduo:id/pdd"][childCount=1] >4 ImageView[id=null]',
+          snapshotUrls: 'https://i.gkd.li/import/13972251',
+        },
+      ],
+    },
   ],
 });
