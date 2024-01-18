@@ -211,7 +211,8 @@ export default defineAppConfig({
       quickFind: true,
       actionMaximum: 1,
       resetMatch: 'app',
-      activityIds: 'com.ss.android.ugc.aweme.search.activity.SearchResultActivity',
+      activityIds:
+        'com.ss.android.ugc.aweme.search.activity.SearchResultActivity',
       rules: [
         {
           name: '弹窗',
@@ -222,8 +223,8 @@ export default defineAppConfig({
           name: '顶部横条',
           matches: '@ImageView[clickable=true] - [text^="开启定位"]',
           snapshotUrls: 'https://i.gkd.li/import/13974007',
-        }
-      ]
-    }
+        },
+      ],
+    },
   ],
 });
