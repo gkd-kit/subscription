@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 0,
-      name: '青少年模式弹窗',
+      name: '青少年模式',
       activityIds: 'com.yxcorp.gifshow.HomeActivity',
       rules: [
         {
@@ -23,7 +23,7 @@ export default defineAppConfig({
     {
       enable: false,
       key: 10,
-      name: '首页-红包弹窗',
+      name: '全屏广告-首页-红包弹窗',
       desc: '自动点击x按钮',
       activityIds: 'com.yxcorp.gifshow.HomeActivity',
       rules: [
@@ -47,7 +47,7 @@ export default defineAppConfig({
     {
       enable: false,
       key: 11,
-      name: '首页-左侧红包悬浮控件',
+      name: '功能类-首页-左侧红包悬浮控件',
       desc: '自动点击x按钮',
       activityIds: 'com.yxcorp.gifshow.HomeActivity',
       rules: [
@@ -64,13 +64,29 @@ export default defineAppConfig({
     {
       enable: false,
       key: 12,
-      name: '你可能感兴趣的人',
+      name: '功能类-你可能感兴趣的人',
       desc: '自动点击【关闭】',
       activityIds: 'com.yxcorp.gifshow.HomeActivity',
-      rules: '[id="com.smile.gifmaker:id/close_pymk"]',
-      snapshotUrls: [
-        'https://i.gkd.li/import/12708620',
-        'https://i.gkd.li/import/12708707',
+      rules: [
+        {
+          key: 0,
+          actionCdKey: 0,
+          matches: '[id="com.smile.gifmaker:id/close_pymk"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12708620',
+            'https://i.gkd.li/import/12708707',
+          ],
+        },
+        {
+          key: 1,
+          actionCdKey: 0,
+          quickFind: true,
+          matches: [
+            '[text="你可能感兴趣的人"][vid="label"]',
+            '[text="隐藏"][vid="more"]',
+          ],
+          snapshotUrls: 'https://i.gkd.li/import/13977295',
+        },
       ],
     },
   ],
