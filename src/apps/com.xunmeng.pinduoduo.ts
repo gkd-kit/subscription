@@ -263,5 +263,31 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 15,
+      name: '全屏广告-多多视频-上滑看视频得现金弹窗',
+      desc: '点击关闭',
+      quickFind: true,
+      rules: [
+        {
+          activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
+          matches: '[text="上滑看视频得现金"] - [text="webp"]',
+          snapshotUrls: 'https://i.gkd.li/import/13809053',
+        },
+      ],
+    },
+    {
+      key: 16,
+      name: '青少年模式',
+      desc: '点击我知道了',
+      quickFind: true,
+      rules: [
+        {
+          activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
+          matches: '[text="青少年模式"] < FrameLayout +5 ViewGroup [text="我知道了"]',
+          snapshotUrls: 'https://i.gkd.li/import/13809053',
+        },
+      ],
+    },
   ],
 });
