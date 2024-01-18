@@ -7,7 +7,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '更新弹窗',
+      name: '更新提示',
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
@@ -27,7 +27,7 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      name: '广告弹窗',
+      name: '全屏广告-折扣/红包弹窗',
       rules: [
         {
           key: 0,
@@ -74,7 +74,7 @@ export default defineAppConfig({
     },
     {
       key: 3,
-      name: '订单调查弹窗',
+      name: '功能类-订单调查弹窗',
       matchTime: 10000,
       actionMaximum: 1,
       quickFind: true,
@@ -98,7 +98,7 @@ export default defineAppConfig({
     },
     {
       key: 4,
-      name: '首页右侧抽奖小广告',
+      name: '局部广告-首页右侧抽奖小广告',
       activityIds: [
         'com.meituan.android.pt.homepage.activity.MainActivity',
         'com.miui.home.launcher.Launcher',
@@ -112,7 +112,7 @@ export default defineAppConfig({
     {
       enable: false,
       key: 7,
-      name: '请求定位弹窗',
+      name: '定位提示',
       desc: '首页/外卖界面-【打开位置开关弹窗】-点击右侧x关闭',
       activityIds: [
         'com.meituan.android.pt.homepage.activity.MainActivity',
@@ -131,8 +131,7 @@ export default defineAppConfig({
     {
       enable: false,
       key: 8,
-      name: '请求开启通知权限弹窗',
-      desc: '点击跳过',
+      name: '通知提示',
       quickFind: true,
       actionMaximum: 1,
       rules: [
@@ -146,8 +145,7 @@ export default defineAppConfig({
     },
     {
       key: 9,
-      name: '订单完成后的红包弹窗',
-      desc: '直接关闭整个模块',
+      name: '全屏广告-订单完成后的红包弹窗',
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
@@ -156,14 +154,14 @@ export default defineAppConfig({
           action: 'back',
           activityIds:
             'com.sankuai.waimai.bussiness.order.detail.WMOrderDetailActivity',
-          matches: '[id="com.sankuai.meituan:id/module_container"]',
+          matches: 'FrameLayout[clickable=true] > [text="开心收下"]',
           snapshotUrls: 'https://i.gkd.li/import/13695703',
         },
       ],
     },
     {
       key: 10,
-      name: '新人返场特惠',
+      name: '功能类-新人返场特惠',
       desc: '点击右上角返回',
       activityIds: 'com.meituan.android.base.knb.KNBWebViewActivity',
       matchTime: 10000,
