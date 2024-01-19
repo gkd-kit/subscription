@@ -7,16 +7,16 @@ export default defineAppConfig({
     {
       key: 1,
       name: '开屏广告',
-      desc: '点击跳过',
-      quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       rules: [
         {
-          matches:
-            '@View[clickable=true][index=2] -2 * < FrameLayout[childCount=4] <<n [vid="flCSJAdContainer"]',
-          snapshotUrls: 'https://i.gkd.li/import/13988957',
+          matches: 'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true] + TextView',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13988957',
+            'https://i.gkd.li/import/13989178',
+          ],
         },
       ],
     },
