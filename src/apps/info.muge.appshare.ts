@@ -89,7 +89,7 @@ export default defineAppConfig({
           key: 0,
           activityIds: 'info.muge.appshare.view.app.detail.AppDetailActivity',
           matches:
-            '[id="info.muge.appshare:id/adContainer"] FrameLayout[desc*="dislike"]',
+            '[id="info.muge.appshare:id/adContainer"] >6 FrameLayout[visibleToUser=true][index=2][desc!=null]',
           snapshotUrls: 'https://i.gkd.li/import/13758909',
         },
         {
