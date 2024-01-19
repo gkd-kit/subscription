@@ -32,7 +32,8 @@ export default defineAppConfig({
       resetMatch: 'app',
       activityIds: 'com.blued.android.core.ui.TransparentActivity',
       rules: '[vid="blued_ad_layout"] +n [vid="img_close"]',
-      exampleUrls: 'https://m.gkd.li/101449500/2a5e9e45-09c5-4b72-a6af-4d284c6532a2',
+      exampleUrls:
+        'https://m.gkd.li/101449500/2a5e9e45-09c5-4b72-a6af-4d284c6532a2',
       snapshotUrls: 'https://i.gkd.li/import/13989423',
     },
   ],
