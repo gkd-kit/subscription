@@ -179,8 +179,7 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.ss.android.article.news.activity.MainActivity',
-          matches:
-            'FrameLayout[childCount=8] > FlattenUIImage[index=7]',
+          matches: 'FrameLayout[childCount=8] > FlattenUIImage[index=7]',
           snapshotUrls: 'https://i.gkd.li/import/13828331',
         },
       ],
