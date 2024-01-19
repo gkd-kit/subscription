@@ -180,7 +180,7 @@ export default defineAppConfig({
         {
           activityIds: 'com.ss.android.article.news.activity.MainActivity',
           matches:
-            '@FlattenUIImage[clickable=true] <n FrameLayout <<2 FrameLayout - LinearLayout [text="首页"]',
+            'FrameLayout[childCount=8] > FlattenUIImage[index=7]',
           snapshotUrls: 'https://i.gkd.li/import/13828331',
         },
       ],
