@@ -8,13 +8,21 @@ export default defineAppConfig({
       key: 1,
       quickFind: true,
       enable: false,
-      name: '首页广告提示',
+      name: '通知提示-首页',
       rules: [
         {
           name: '首页我知道了',
           matches: 'View[desc="我知道了"]',
           snapshotUrls: 'https://i.gkd.li/import/13950839',
         },
+      ],
+    },
+    {
+      key: 2,
+      quickFind: true,
+      enable: false,
+      name: '局部广告-首页',
+      rules: [
         {
           name: '广告右上角x',
           matches:
