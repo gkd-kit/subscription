@@ -10,7 +10,8 @@ export default defineAppConfig({
       rules: [
         {
           key: 1,
-          activityIds: 'com.tencent.qqmusic.business.playernew.view.NewPlayerActivity',
+          activityIds:
+            'com.tencent.qqmusic.business.playernew.view.NewPlayerActivity',
           matches: '[text^="广告"] + [text="跳过"][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/13985169', // 播放界面
         },
