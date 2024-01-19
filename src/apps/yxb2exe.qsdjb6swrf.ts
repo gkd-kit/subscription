@@ -14,7 +14,8 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.yxmaadddf21.yxmaadddf21.MainActivity',
-          matches: '@Button[text="OK"] <<11 [id="android:id/parentPanel"] >4 [text^="获取文件存储权限失败"]',
+          matches:
+            '@Button[text="OK"] <<11 [id="android:id/parentPanel"] >4 [text^="获取文件存储权限失败"]',
           snapshotUrls: 'https://i.gkd.li/import/13990914',
         },
       ],
@@ -28,7 +29,8 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.yxmaadddf21.yxmaadddf21.MainActivity',
-          matches: '@[text="我知道了"] <2 ViewGroup - [text="银杏官网: yyxxok.com"]',
+          matches:
+            '@[text="我知道了"] <2 ViewGroup - [text="银杏官网: yyxxok.com"]',
           snapshotUrls: 'https://i.gkd.li/import/13990959',
         },
       ],
