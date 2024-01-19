@@ -14,7 +14,8 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
-          matches: '@View[clickable=true][index=2] -2 * < FrameLayout[childCount=4] <<n [vid="flCSJAdContainer"]',
+          matches:
+            '@View[clickable=true][index=2] -2 * < FrameLayout[childCount=4] <<n [vid="flCSJAdContainer"]',
           snapshotUrls: 'https://i.gkd.li/import/13988957',
         },
       ],
