@@ -42,7 +42,8 @@ export default defineAppConfig({
       desc: '点击X',
       rules: [
         {
-          activityIds: 'com.huawei.browser.customtab.EmuiBrowserCustomTabActivity',
+          activityIds:
+            'com.huawei.browser.customtab.EmuiBrowserCustomTabActivity',
           matches:
             'View[id="root"] > View[index=1] > View[id="logo-close-btn"]',
           snapshotUrls: 'https://i.gkd.li/import/13997759',
