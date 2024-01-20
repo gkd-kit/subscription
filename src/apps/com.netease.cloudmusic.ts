@@ -141,10 +141,11 @@ export default defineAppConfig({
           activityIds:
             'com.netease.cloudmusic.music.biz.rn.activity.MainProcessLayerReactNativeActivity',
           matches:
-            'ImageView < @ViewGroup[clickable=true] <2 ViewGroup < ViewGroup + ScrollView [text="会员套餐"]',
+            'ImageView <<n @ViewGroup[clickable=true] <2 ViewGroup < ViewGroup + ScrollView [text="会员套餐"]',
           snapshotUrls: [
             'https://i.gkd.li/import/13189055',
             'https://i.gkd.li/import/13260416',
+            'https://i.gkd.li/import/13996787',
           ],
         },
         {
