@@ -130,7 +130,7 @@ export default defineAppConfig({
     {
       enable: false,
       key: 5,
-      name: 'VIP 弹窗',
+      name: '全屏广告-VIP弹窗',
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
