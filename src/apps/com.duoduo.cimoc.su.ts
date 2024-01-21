@@ -38,7 +38,7 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.duoduo.cimoc.su.MainActivity',
-          matches: 
+          matches:
             'FrameLayout[childCount=4] > FrameLayout > ImageView[visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/import/13999284',
