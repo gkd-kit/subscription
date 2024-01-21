@@ -80,5 +80,23 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      name: '播放暂停界面广告',
+      key: 4,
+      id: 'com.hunantv.imgo.activity',
+      activityIds: 'com.mgtv.ui.videoplay.MGVideoPlayActivity',
+      rules: [
+        {
+          key: 0,
+          matches: '[id="com.hunantv.imgo.activity:id/close_ad"]',
+          snapshotUrls: 'https://i.gkd.li/import/14001838'
+        },
+        {
+          key: 1,
+          matches: '[id="com.hunantv.imgo.activity:id/closeAdIcon"]',
+          snapshotUrls: 'https://i.gkd.li/import/14001714'
+        }
+      ]
+    }
   ],
 });
