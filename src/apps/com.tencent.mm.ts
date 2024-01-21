@@ -517,5 +517,19 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 20,
+      name: '全屏广告-小程序-同程旅行',
+      desc: '首页弹窗广告',
+      quickFind: true,
+      rules: [
+        {
+          activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI00',
+          matches:
+            '@Image[visibleToUser=true] <2 View[childCount=2] -2 [text="广告"]',
+          snapshotUrls: 'https://i.gkd.li/import/13999900',
+        },
+      ],
+    },
   ],
 });
