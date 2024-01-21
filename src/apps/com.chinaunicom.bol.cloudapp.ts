@@ -11,7 +11,7 @@ export default defineAppConfig({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
-      desc: '[ChangeMe]本规则由GKD网页端审查工具生成',
+      desc: '点击取消',
       rules: [
         {
           matches: '@[text="取消"] < * + * > [text="立即下载"]',
