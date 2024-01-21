@@ -41,7 +41,7 @@ export default defineAppConfig({
         },
         {
           matches:
-            '[id="com.alipay.android.app:id/flybird_userinfo"] + * >8 FrameLayout[clickable=true][index=1]',
+            '[text="同意协议并确认交易"] < * <2 FrameLayout[childCount=2] + FrameLayout [text="暂不升级，继续付款"]',
           snapshotUrls: 'https://i.gkd.li/import/13857535',
         },
       ],
