@@ -518,7 +518,7 @@ export default defineAppConfig({
       ],
     },
     {
-      key: 20,
+      key: 21,
       name: '全屏广告-小程序-同程旅行',
       desc: '首页弹窗广告',
       quickFind: true,
