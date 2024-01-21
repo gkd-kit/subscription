@@ -207,7 +207,7 @@ export default defineAppConfig({
         {
           key: 5,
           name: '居中广告',
-          matches: 
+          matches:
             'RelativeLayout[childCount=2] < LinearLayout <2 FrameLayout[childCount=2] < LinearLayout + ImageView[clickable=true]',
           snapshotUrls: 'https://i.gkd.li/import/14001277',
         },
