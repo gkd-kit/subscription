@@ -14,7 +14,8 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
-          activityIds: 'com.picc.aasipods.module.versionupdate.controller.VersionUpdateActivity',
+          activityIds:
+            'com.picc.aasipods.module.versionupdate.controller.VersionUpdateActivity',
           matches: '[id="com.cloudpower.netsale.activity:id/tvw_cancel"]',
           snapshotUrls: 'https://i.gkd.li/import/14005533',
         },
