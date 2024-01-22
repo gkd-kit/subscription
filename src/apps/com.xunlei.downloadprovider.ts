@@ -7,7 +7,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '视频详情页广告',
+      name: '分段广告-视频详情页广告',
       rules: [
         {
           key: 0,
@@ -59,7 +59,7 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      name: '视频详情-直播推荐',
+      name: '分段广告-视频详情页直播推荐',
       desc: '自动点击【减少推荐】',
       quickFind: true,
       rules: [
@@ -89,7 +89,7 @@ export default defineAppConfig({
     {
       enable: false,
       key: 3,
-      name: '应用内广告弹窗',
+      name: '全屏广告-应用内广告弹窗',
       desc: '⚠ 此规则容易误触，因此默认关闭。',
       rules: [
         {
@@ -202,7 +202,7 @@ export default defineAppConfig({
     {
       enable: false,
       key: 4,
-      name: '【下载页】广告卡片',
+      name: '分段广告-【下载页】广告卡片',
       desc: '需选二次弹窗关闭原因',
       quickFind: true,
       rules: [
@@ -245,7 +245,7 @@ export default defineAppConfig({
     },
     {
       key: 5,
-      name: '搜索页面-顶部banner广告',
+      name: '局部广告-搜索页面顶部广告',
       quickFind: true,
       activityIds:
         'com.xunlei.downloadprovider.search.ui.search.SearchOperateActivity',
@@ -254,7 +254,7 @@ export default defineAppConfig({
     },
     {
       key: 6,
-      name: '更新弹窗',
+      name: '更新提示',
       quickFind: true,
       activityIds: 'com.xunlei.upgrade.XUpgradeActivity',
       rules: '[id="com.xunlei.downloadprovider:id/x_upgrade_cancel"]',
@@ -262,7 +262,7 @@ export default defineAppConfig({
     },
     {
       key: 10,
-      name: '会员续费广告',
+      name: '全屏广告-会员续费广告',
       quickFind: true,
       rules: [
         {
