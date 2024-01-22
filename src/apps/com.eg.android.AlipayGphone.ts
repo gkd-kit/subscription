@@ -170,5 +170,18 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 12,
+      name: '功能类-支付后自动点击完成',
+      quickFind: true,
+      rules: [
+        {
+          activityIds: 'com.alipay.android.msp.ui.views.MspContainerActivity',
+          matches:
+            '[id="com.alipay.android.app:id/rl_nav_bar"] > [id="com.alipay.android.app:id/nav_right_textview"]',
+          snapshotUrls: 'https://i.gkd.li/import/14008852',
+        },
+      ],
+    },
   ],
 });
