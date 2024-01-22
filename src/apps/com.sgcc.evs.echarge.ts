@@ -11,9 +11,15 @@ export default defineAppConfig({
       desc: '点击X',
       rules: [
         {
-          activityIds: 'com.evs.echarge.dev.ui.advertisement.SplashActivity',
+          activityIds: [
+            'com.evs.echarge.dev.ui.advertisement.SplashActivity',
+            'com.evs.echarge.dev.ui.MainActivity',
+          ],
           matches: '[id="com.sgcc.evs.echarge:id/iv_close"]',
-          snapshotUrls: 'https://i.gkd.li/import/13958838',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13958838', //com.evs.echarge.dev.ui.advertisement.SplashActivity
+            'https://i.gkd.li/import/14005508', //com.evs.echarge.dev.ui.MainActivity
+          ],
         },
       ],
     },
