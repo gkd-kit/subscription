@@ -238,6 +238,7 @@ export default defineAppConfig({
       desc: '⚠ 此规则有概率误触。自动点击关闭按钮，必须同时启用【订阅号文章广告反馈】规则',
       activityIds: [
         'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebView', //调整为TmplWebView, 同时兼容多种ID
+        'com.tencent.mm.plugin.webview.ui.tools.fts.MMSosWebViewUI',
       ],
       rules: [
         {
@@ -252,6 +253,7 @@ export default defineAppConfig({
             'https://i.gkd.li/import/12646837', // 事件完成后，反馈按钮仍然存在，使用 View[childCount=1] 进行限定，防止频繁触发规则
             'https://i.gkd.li/import/12678937', // 文章未浏览至页面底部，广告反馈按钮不可见，使用 [visibleToUser=true] 进行限定，防止打开文章就频繁触发规则
             'https://i.gkd.li/import/12714427', // 优化规则，使用 View[id="ad_container"] 作为特征节点
+            'https://i.gkd.li/import/14006180', // com.tencent.mm.plugin.webview.ui.tools.fts.MMSosWebViewUI
           ],
         },
         {
@@ -294,8 +296,11 @@ export default defineAppConfig({
       key: 8,
       name: '分段广告-订阅号文章广告反馈',
       desc: '⚠ 此规则有概率误触。自动点击反馈理由，配合【订阅号文章广告】规则使用',
-      activityIds:
+      activityIds: [
         'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebView', //调整为TmplWebView, 同时兼容多种ID
+        'com.tencent.mm.plugin.webview.ui.tools.fts.MMSosWebViewUI',
+      ],
+        
       rules: [
         {
           key: 1,
@@ -307,6 +312,7 @@ export default defineAppConfig({
             'https://i.gkd.li/import/12642234',
             'https://i.gkd.li/import/12722301',
             'https://i.gkd.li/import/12722331', // 使用 [id="feedbackTagContainer"][visibleToUser=true] 进行限定，防止反馈界面未出现就触发规则
+            'https://i.gkd.li/import/14006203', // com.tencent.mm.plugin.webview.ui.tools.fts.MMSosWebViewUI
           ],
           action: 'clickCenter', // 使用 clickCenter 事件点击，期望在快照 https://i.gkd.li/import/12745280 中成功点击 [与我无关]
         },
@@ -315,7 +321,10 @@ export default defineAppConfig({
           // preKeys: [2], 取消 preKeys 提高点击成功率
           name: '点击与我无关',
           matches: 'View > [id^="menu"] > [id="isdismatch"][text="与我无关"]',
-          snapshotUrls: ['https://i.gkd.li/import/12642238'],
+          snapshotUrls: [
+            'https://i.gkd.li/import/12642238',
+            'https://i.gkd.li/import/14006206', // com.tencent.mm.plugin.webview.ui.tools.fts.MMSosWebViewUI
+          ],
         },
         {
           key: 3,
