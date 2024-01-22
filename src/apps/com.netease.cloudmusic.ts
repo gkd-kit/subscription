@@ -59,6 +59,7 @@ export default defineAppConfig({
             'com.netease.cloudmusic.module.ad.feedback.AdFeedbackBottomSheet',
             'com.netease.cloudmusic.music.biz.search.activity.SearchActivity',
             'com.netease.cloudmusic.activity.MainActivity',
+            'com.netease.cloudmusic.music.biz.comment.activity.CommentActivity',
           ],
           matches: '[text="直接关闭"]',
           snapshotUrls: [
