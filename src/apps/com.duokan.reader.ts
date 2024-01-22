@@ -71,7 +71,7 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.duokan.reader.DkMainActivity',
-          matches: 
+          matches:
             '[id="com.duokan.reader:id/general__common_dialog_view__button_frame"] >2 [text="以后再说"]',
           snapshotUrls: 'https://i.gkd.li/import/14007573',
         },
