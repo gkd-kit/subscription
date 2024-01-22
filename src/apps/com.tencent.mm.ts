@@ -300,7 +300,7 @@ export default defineAppConfig({
         'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebView', //调整为TmplWebView, 同时兼容多种ID
         'com.tencent.mm.plugin.webview.ui.tools.fts.MMSosWebViewUI',
       ],
-        
+
       rules: [
         {
           key: 1,
