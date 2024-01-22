@@ -74,9 +74,15 @@ export default defineAppConfig({
         {
           preKeys: [0],
           key: 1,
-          activityIds: 'com.xunlei.downloadprovider.download.center.newcenter',
+          activityIds: [
+            'com.xunlei.downloadprovider.download.center.newcenter',
+            'com.xunlei.downloadprovider.download.taskdetails.newui.DownloadDetailsActivity',
+          ],
           matches: '[id="com.xunlei.downloadprovider:id/close_ad"]',
-          snapshotUrls: 'https://i.gkd.li/import/12707710',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12707710',
+            'https://i.gkd.li/import/14005330',
+          ],
         },
       ],
     },
