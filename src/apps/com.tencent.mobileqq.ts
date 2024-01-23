@@ -424,7 +424,7 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          
+
           matches: '[id="com.tencent.mobileqq:id/nca"]',
           snapshotUrls: 'https://i.gkd.li/import/14019384',
         },
