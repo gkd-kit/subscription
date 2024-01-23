@@ -25,7 +25,6 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
-          activityIds: 'com.mfcloudcalculate.networkdisk.activity.SplashActivity',
           matches:
             'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true] + TextView',
           snapshotUrls: 'https://i.gkd.li/import/14018247',
