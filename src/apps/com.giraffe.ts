@@ -9,6 +9,7 @@ export default defineAppConfig({
       name: '更新提示',
       desc: '点击X',
       actionMaximum: 1,
+      matchTime: 10000,
       resetMatch: 'app',
       quickFind: true,
       rules: [
