@@ -115,7 +115,7 @@ export default defineAppConfig({
         },
         {
           key: 3,
-          preKeys: [0,1],
+          preKeys: [0, 1],
           name: '点击【不感兴趣】',
           actionCdKey: 2,
           quickFind: true,
@@ -243,8 +243,7 @@ export default defineAppConfig({
     {
       key: 14,
       name: '局部广告-有声书分类页面-信息流广告',
-      activityIds:
-        'com.ximalaya.ting.android.host.activity.SplashAdActivity',
+      activityIds: 'com.ximalaya.ting.android.host.activity.SplashAdActivity',
       rules: '[id="com.ximalaya.ting.android:id/main_iv_dislike"]',
       snapshotUrls: 'https://i.gkd.li/import/13334685',
     },
