@@ -86,8 +86,8 @@ export default defineAppConfig({
     },
     {
       key: 4,
-      name: '首页-推荐列表广告',
-      desc: '点击关闭-点击屏蔽',
+      name: '分段广告-首页推荐列表广告',
+      desc: '点击关闭-点击屏蔽/直接关闭',
       activityIds: [
         'com.ximalaya.ting.android.host.activity.MainActivity',
         'com.ximalaya.ting.android.adsdk.view.DislikeDialog.DislikeBottomDialog',
@@ -116,6 +116,13 @@ export default defineAppConfig({
             'https://i.gkd.li/import/13260487',
             'https://i.gkd.li/import/13275928', //没有id
           ],
+        },
+        {
+          preKeys: [0, 1],
+          name: '点击直接关闭',
+          matches:
+            '[id="com.ximalaya.ting.android:id/main_ad_close_container"] > [text="直接关闭"]',
+          snapshotUrls: 'https://i.gkd.li/import/14019909',
         },
       ],
     },
