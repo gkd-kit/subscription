@@ -412,5 +412,28 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 22,
+      name: '分段广告-QQ天气卡片广告',
+      desc: '点击关闭-点击关闭此条广告',
+      quickFind: true,
+      rules: [
+        {
+          key: 0,
+          activityIds:
+            'com.tencent.mobileqq.activity.QPublicFragmentActivity',
+          matches: '[id="com.tencent.mobileqq:id/nca"]',
+          snapshotUrls: 'https://i.gkd.li/import/14019384',
+        },
+        {
+          preKeys: 0,
+          key: 1,
+          activityIds:
+            'com.tencent.mobileqq.activity.QPublicFragmentActivity',
+          matches: '@LinearLayout[childCount=3] > [text="关闭此条广告"]',
+          snapshotUrls: 'https://i.gkd.li/import/14019401',
+        },
+      ],
+    },
   ],
 });
