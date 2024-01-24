@@ -76,7 +76,8 @@ export default defineAppConfig({
       quickFind: true,
       rules: [
         {
-          activityIds: 'com.cainiao.wireless.homepage.view.activity.HomePageActivity',
+          activityIds:
+            'com.cainiao.wireless.homepage.view.activity.HomePageActivity',
           matches: 'View[childCount=2][clickable=true] > [text="关闭"]',
           snapshotUrls: 'https://i.gkd.li/import/14033859',
         },
