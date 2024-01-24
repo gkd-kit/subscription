@@ -136,7 +136,7 @@ export default defineAppConfig({
     },
     {
       key: 10,
-      name: '小程序-12306',
+      name: '分段广告-小程序-12306',
       activityIds: 'com.alipay.mobile.nebulax.xriver.activity.XRiverActivity',
       rules: [
         {
@@ -180,6 +180,19 @@ export default defineAppConfig({
           matches:
             '[id="com.alipay.android.app:id/rl_nav_bar"] > [id="com.alipay.android.app:id/nav_right_textview"]',
           snapshotUrls: 'https://i.gkd.li/import/14008852',
+        },
+      ],
+    },
+    {
+      key: 13,
+      name: '全屏广告-领新年红包弹窗',
+      desc: '点击X',
+      rules: [
+        {
+          activityIds: 'com.eg.android.AlipayGphone.AlipayLogin',
+          matches:
+            'RelativeLayout[childCount=2][desc="全屏广告"] ImageView[desc="关闭"]',
+          snapshotUrls: 'https://i.gkd.li/import/14034152',
         },
       ],
     },
