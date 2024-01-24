@@ -11,7 +11,8 @@ export default defineAppConfig({
       quickFind: true,
       rules: [
         {
-          activityIds: 'com.lingan.seeyou.ui.activity.community.topicdetail.TopicDetailActivity',
+          activityIds:
+            'com.lingan.seeyou.ui.activity.community.topicdetail.TopicDetailActivity',
           matches: '[id="com.lingan.seeyou:id/v_close"]',
           snapshotUrls: 'https://i.gkd.li/import/14034770',
         },
