@@ -79,5 +79,19 @@ export default defineAppConfig({
       rules: '[vid="dialog_full_image_close"]',
       snapshotUrls: 'https://i.gkd.li/import/13842492',
     },
+    {
+      key: 8,
+      name: '全屏广告-发现页新装试用弹窗',
+      desc: '点击X',
+      quickFind: true,
+      rules: [
+        {
+          activityIds:
+            'com.cainiao.wireless.homepage.view.activity.HomePageActivity',
+          matches: 'View[childCount=2][clickable=true] > [text="关闭"]',
+          snapshotUrls: 'https://i.gkd.li/import/14033859',
+        },
+      ],
+    },
   ],
 });
