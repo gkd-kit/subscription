@@ -94,8 +94,12 @@ export default defineAppConfig({
       key: 9,
       name: '局部广告-广告卡片',
       quickFind: true,
+      activityIds: 'com.baidu.youavideo.home.view.HomeActivity',
       rules: '[vid="iv_close"][visibleToUser=true]',
-      snapshotUrls: 'https://i.gkd.li/import/13874124',
+      snapshotUrls: [
+        'https://i.gkd.li/import/13874124',
+        'https://i.gkd.li/import/14038825', //误触快照
+      ],
     },
   ],
 });
