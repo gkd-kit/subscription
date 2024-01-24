@@ -300,7 +300,8 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.sina.weibo.feed.MPDialogActivity',
-          matches: 'View[childCount=4] > [text="查看更多"] -3 Image[text="close"]',
+          matches:
+            'View[childCount=4] > [text="查看更多"] -3 Image[text="close"]',
           snapshotUrls: 'https://i.gkd.li/import/14033735',
         },
       ],
