@@ -292,5 +292,18 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 21,
+      name: '全屏广告-最热钻超弹窗',
+      desc: '点击X',
+      quickFind: true,
+      rules: [
+        {
+          activityIds: 'com.sina.weibo.feed.MPDialogActivity',
+          matches: 'View[childCount=4] > [text="查看更多"] -3 Image[text="close"]',
+          snapshotUrls: 'https://i.gkd.li/import/14033735',
+        },
+      ],
+    },
   ],
 });
