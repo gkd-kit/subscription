@@ -172,13 +172,23 @@ export default defineAppConfig({
     },
     {
       key: 11,
-      name: '全屏广告-视频页签到弹窗',
+      name: '全屏广告-视频页广告弹窗',
       desc: '点击X',
       rules: [
         {
+          key: 0,
+          name: '签到弹窗',
           activityIds: 'com.meituan.android.pt.homepage.activity.MainActivity',
           matches: 'ViewGroup[childCount=17] > ImageView[index=5]',
           snapshotUrls: 'https://i.gkd.li/import/14033982',
+        },
+        {
+          key: 1,
+          name: '看视频领现金弹窗',
+          activityIds: 'com.meituan.android.pt.homepage.activity.MainActivity',
+          matches:
+            '@ImageView[visibleToUser=true] - ViewGroup[childCount=3] [text="看视频继续领现金"]',
+          snapshotUrls: 'https://i.gkd.li/import/14034073',
         },
       ],
     },
