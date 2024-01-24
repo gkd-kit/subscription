@@ -46,7 +46,7 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      name: '升级弹窗',
+      name: '更新提示',
       quickFind: true,
       actionMaximum: 1,
       resetMatch: 'app',
@@ -60,7 +60,7 @@ export default defineAppConfig({
     },
     {
       key: 3,
-      name: '右下角悬浮窗',
+      name: '局部广告-右下角悬浮窗',
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
@@ -80,7 +80,7 @@ export default defineAppConfig({
     },
     {
       key: 4,
-      name: '文章底部卡片式广告',
+      name: '局部广告-文章底部卡片式广告',
       quickFind: true,
       activityIds:
         'com.ss.android.article.base.feature.detail2.view.NewDetailActivity',
@@ -90,7 +90,7 @@ export default defineAppConfig({
     },
     {
       key: 5,
-      name: '评论区信息流广告',
+      name: '局部广告-评论区信息流广告',
       desc: '像正常内容的广告',
       quickFind: true,
       activityIds: [
@@ -108,7 +108,7 @@ export default defineAppConfig({
     },
     {
       key: 6,
-      name: '请求推送通知弹窗',
+      name: '通知提示',
       quickFind: true,
       actionMaximum: 1,
       resetMatch: 'app',
@@ -121,12 +121,25 @@ export default defineAppConfig({
     },
     {
       key: 7,
-      name: '选车页卡片广告',
+      name: '局部广告-选车页卡片广告',
       quickFind: true,
       activityIds: 'com.ss.android.auto.activity.ConcernDetailActivity',
       rules:
         'TextView[text.length=1][id=null][clickable=false] < @FrameLayout[clickable=true][id!=null] -2 [text="广告"]',
       snapshotUrls: 'https://i.gkd.li/import/13686928',
+    },
+    {
+      key: 8,
+      name: '局部广告-车型页面右下角直播悬浮窗',
+      desc: '点击X',
+      quickFind: true,
+      rules: [
+        {
+          activityIds: 'com.ss.android.auto.activity.ConcernDetailActivity',
+          matches: 'FrameLayout[childCount=8] > TextView[text=""]',
+          snapshotUrls: 'https://i.gkd.li/import/14034740',
+        },
+      ],
     },
   ],
 });
