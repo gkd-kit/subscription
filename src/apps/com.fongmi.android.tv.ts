@@ -14,7 +14,7 @@ export default defineAppConfig({
       rules: [
         {
           activityIds: 'com.fongmi.android.tv.ui.activity.MainActivity',
-          matches: 
+          matches:
             '[id="com.fongmi.android.tv:id/buttonPanel"] >2 [text="取消"]',
           snapshotUrls: 'https://i.gkd.li/import/14035154',
         },
