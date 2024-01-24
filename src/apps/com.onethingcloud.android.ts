@@ -10,7 +10,10 @@ export default defineAppConfig({
       activityIds: 'com.onethingcloud.android.MainActivity',
       rules:
         'FrameLayout >6 View[childCount=2] >2 View[childCount=3] > ImageView[index=2][clickable=true]',
-      snapshotUrls: 'https://i.gkd.li/import/12841171',
+      snapshotUrls: [
+        'https://i.gkd.li/import/12841171',
+        'https://i.gkd.li/import/14035418', // 误触快照
+      ],
     },
   ],
 });
