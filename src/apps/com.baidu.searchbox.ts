@@ -21,6 +21,11 @@ export default defineAppConfig({
             '[id="android:id/content"] >2 LinearLayout[childCount=2] > ImageView[index=1]',
           snapshotUrls: 'https://i.gkd.li/import/13988536',
         },
+        {
+          activityIds: 'com.baidu.searchbox.MainActivity',
+          matches: 'ViewGroup[childCount=7] > ImageView[index=1]',
+          snapshotUrls: 'https://i.gkd.li/import/14034223',
+        },
       ],
     },
   ],
