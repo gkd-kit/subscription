@@ -29,7 +29,7 @@ export default defineAppConfig({
     },
     {
       key: 3,
-      name: '视频播放时的弹窗广告',
+      name: '全屏广告-视频播放时的弹窗广告',
       rules: [
         {
           key: 0,
@@ -37,6 +37,17 @@ export default defineAppConfig({
           matches: '@[vid="close_rl"][clickable=true] > [vid="close_iv"]',
           snapshotUrls: 'https://i.gkd.li/import/13800123',
         },
+      ],
+    },
+    {
+      key: 4,
+      name: '全屏广告-视频播放时的全屏广告',
+      quickFind: true,
+      activityIds: 'com.babycloud.hanju.ui.activity.HanjuSeriesActivity',
+      rules: '[vid*="skip_rl"]',
+      snapshotUrls: [
+        'https://i.gkd.li/import/14048532', //vid="only_skip_rl"
+        'https://i.gkd.li/import/14048302', //vid="skip_rl"
       ],
     },
   ],
