@@ -7,7 +7,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '更新弹窗',
+      name: '更新提示',
       actionMaximum: 1,
       resetMatch: 'app',
       quickFind: true,
@@ -22,6 +22,7 @@ export default defineAppConfig({
         {
           key: 2,
           name: '更新弹窗-2',
+          actionCdKey: 1,
           matches: '@[text="取消"] + * + [text="去下载"]',
           snapshotUrls: 'https://i.gkd.li/import/13379426',
         },
@@ -30,7 +31,7 @@ export default defineAppConfig({
     {
       enable: false,
       key: 4,
-      name: '截屏分享',
+      name: '功能类-截屏分享',
       desc: '关闭截屏时app弹出的分享弹窗',
       activityIds: 'com.autonavi.map.activity.NewMapActivity',
       rules:
@@ -39,7 +40,7 @@ export default defineAppConfig({
     },
     {
       key: 10,
-      name: '首页-地图页面上方消息提醒',
+      name: '功能类-首页-地图页面上方消息提醒',
       activityIds: 'com.autonavi.map.activity.NewMapActivity',
       rules:
         'RelativeLayout[desc="弹窗"] > [id="com.autonavi.minimap:id/msgbox_popup_clear"]',
@@ -48,7 +49,7 @@ export default defineAppConfig({
     {
       enable: false,
       key: 11,
-      name: '首页-签到卡片',
+      name: '功能类-首页-签到卡片',
       desc: '点击【x】',
       actionMaximum: 1,
       resetMatch: 'app',
@@ -65,11 +66,19 @@ export default defineAppConfig({
     {
       enable: false,
       key: 12,
-      name: '加油页面-优惠券弹窗',
+      name: '全屏广告-加油页面-优惠券弹窗',
       activityIds: 'com.autonavi.map.activity.NewMapActivity',
       rules:
         '@ImageView < [desc="关闭"][clickable=true] - ViewGroup > ViewGroup > ViewGroup > View[text="立即领取"]',
       snapshotUrls: ['https://i.gkd.li/import/12642857'],
+    },
+    {
+      key: 13,
+      name: '全屏广告-打车页-优惠券弹窗',
+      activityIds: 'com.autonavi.map.activity.NewMapActivity',
+      rules:
+        '[vid="mapBottomInteractiveView"] - FrameLayout >n ViewGroup[childCount=3] > ViewGroup > ImageView[clickable=true]',
+      snapshotUrls: 'https://i.gkd.li/import/13806882',
     },
   ],
 });
