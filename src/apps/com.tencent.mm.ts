@@ -540,5 +540,21 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 22,
+      name: '功能类-开启青少年模式后的每日验证',
+      desc: '点击"验证密码"',
+      quickFind: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          activityIds: 'com.tencent.mm.plugin.webview.ui.tools.MMWebViewUI',
+          matches: 'WebView[childCount=6] View[index=4] > [text="验证密码"]',
+          snapshotUrls: 'https://i.gkd.li/import/14050004',
+        },
+      ],
+    },
   ],
 });
