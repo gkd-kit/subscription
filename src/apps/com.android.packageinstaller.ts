@@ -12,8 +12,11 @@ export default defineAppConfig({
         {
           key: 0,
           activityIds: 'com.android.packageinstaller.PackageInstallerActivity',
-          matches: '@LinearLayout > [text="继续安装"]',
-          snapshotUrls: 'https://i.gkd.li/import/13206444',
+          matches: '[text="继续安装"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13206444',
+            'https://i.gkd.li/import/14046749',
+          ],
         },
         {
           key: 1,
