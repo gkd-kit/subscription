@@ -180,6 +180,15 @@ export default defineAppConfig({
             '[text*="搭配会员音效"] + @ViewGroup[childCount=1] > ImageView',
           snapshotUrls: 'https://i.gkd.li/import/13391498',
         },
+        {
+          key: 5,
+          name: '搭配高清臻音-VIP支付弹窗',
+          activityIds:
+            'com.netease.cloudmusic.music.biz.rn.activity.MainProcessLayerReactNativeActivity',
+          matches:
+            '@ImageView[index=4] +5 ViewGroup[childCount=4] [text*="确认协议并支付"]',
+          snapshotUrls: 'https://i.gkd.li/import/14045917',
+        },
       ],
     },
     {
@@ -224,9 +233,16 @@ export default defineAppConfig({
         },
         {
           key: 1,
-          name: '巨幅卡片式广告',
+          name: '巨幅卡片式广告1',
           matches: '[text^="跳过广告"][text.length<=10]',
           snapshotUrls: 'https://i.gkd.li/import/13527105',
+        },
+        {
+          key: 2,
+          name: '巨幅卡片式广告2',
+          matches:
+            '@TextView[index=2] <3 ViewGroup[childCount=3] <<n [id="com.netease.cloudmusic:id/container"]',
+          snapshotUrls: 'https://i.gkd.li/import/14045424',
         },
       ],
     },
