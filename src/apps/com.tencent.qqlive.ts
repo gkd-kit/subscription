@@ -22,6 +22,11 @@ export default defineAppConfig({
             'https://i.gkd.li/import/12910953',
           ],
         },
+        {
+          action: 'clickCenter',
+          matches: 'TextView[text*="跳过"][text.length<=10]',
+          snapshotUrls: 'https://i.gkd.li/import/14049316',
+        },
       ],
     },
     {
