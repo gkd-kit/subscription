@@ -267,7 +267,6 @@ export default defineAppConfig({
       key: 15,
       name: '全屏广告-多多视频-上滑看视频得现金弹窗',
       desc: '点击关闭',
-      quickFind: true,
       rules: [
         {
           activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
