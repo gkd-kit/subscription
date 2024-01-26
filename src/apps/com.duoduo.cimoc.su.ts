@@ -21,7 +21,6 @@ export default defineAppConfig({
       key: 2,
       name: '局部广告-"我的"页面卡片广告',
       desc: '点击X',
-      quickFind: true,
       rules: [
         {
           activityIds: 'com.duoduo.cimoc.su.MainActivity',
