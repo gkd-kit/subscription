@@ -101,5 +101,14 @@ export default defineAppConfig({
         'https://i.gkd.li/import/14038825', //误触快照
       ],
     },
+    {
+      key: 10,
+      name: '权限提示-忽略电池优化',
+      desc: '点击【取消】',
+      quickFind: true,
+      rules:
+        '[text*="电池优化权限"] < * +n [vid="bottom_two_button_layout"] >n [vid="cancel"]',
+      snapshotUrls: 'https://i.gkd.li/import/14065510',
+    },
   ],
 });
