@@ -115,9 +115,13 @@ export default defineAppConfig({
       activityIds: [
         'com.ss.android.auto.activity.SplashActivity',
         'com.ss.android.auto.policy.AutoPrivacyActivity',
+        'com.bytedance.im.auto.conversation.activity.ConversationListActivity', // https://i.gkd.li/import/14060897
       ],
-      rules: '@TextView[clickable=true] + [text^="打开推送通知"]',
-      snapshotUrls: 'https://i.gkd.li/import/12840664',
+      rules: '@TextView[clickable=true] + [text*="推送通知"]',
+      snapshotUrls: [
+        'https://i.gkd.li/import/12840664',
+        'https://i.gkd.li/import/14060897',
+      ],
     },
     {
       key: 7,
