@@ -37,7 +37,6 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      quickFind: true,
       name: '局部广告-卡片广告',
       desc: '点击X',
       rules: [
