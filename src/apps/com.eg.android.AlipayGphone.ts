@@ -199,5 +199,21 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 14,
+      name: '全屏广告-"下次支付用花呗"弹窗',
+      desc: '点击"30天不再提醒"',
+      rules: [
+        {
+          quickFind: true,
+          activityIds: 'com.alipay.android.msp.ui.views.MspContainerActivity',
+          matches:
+            '@[text$="不再提醒"] <<2 * <3 * - FrameLayout[childCount=3] [text="下次支付用花呗"]',
+          exampleUrls:
+            'https://m.gkd.li/57941037/8daecaeb-35f0-4f3a-8d5a-a19098a992d5',
+          snapshotUrls: 'https://i.gkd.li/import/14060628',
+        },
+      ],
+    },
   ],
 });
