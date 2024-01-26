@@ -66,7 +66,6 @@ export default defineAppConfig({
       key: 12,
       name: '功能类-你可能感兴趣的人',
       desc: '自动点击【关闭/隐藏】',
-      quickFind: true,
       activityIds: 'com.yxcorp.gifshow.HomeActivity',
       rules: [
         {
@@ -79,6 +78,7 @@ export default defineAppConfig({
         },
         {
           key: 1,
+          quickFind: true,
           matches: 'ViewGroup[childCount=3] > [text="隐藏"]',
           snapshotUrls: 'https://i.gkd.li/import/14001536',
         },
