@@ -47,7 +47,6 @@ export default defineAppConfig({
         // 该应用存在特殊开屏广告，被全局规则排除，以下为之前的开屏广告规则
         {
           key: 1,
-          quickFind: true,
           matches: '[id="com.wacai365:id/ksad_splash_circle_skip_view"]',
           snapshotUrls: 'https://i.gkd.li/import/13162861',
         },
