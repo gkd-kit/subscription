@@ -8,7 +8,6 @@ export default defineAppConfig({
       key: 1,
       name: '功能类-谷歌发送应用安全检查',
       desc: '点击不发送',
-      quickFind: true,
       rules: [
         {
           activityIds:
