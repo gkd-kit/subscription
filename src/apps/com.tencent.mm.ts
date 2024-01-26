@@ -530,7 +530,6 @@ export default defineAppConfig({
       key: 21,
       name: '全屏广告-小程序-同程旅行',
       desc: '首页弹窗广告',
-      quickFind: true,
       rules: [
         {
           activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI00',
