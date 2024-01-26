@@ -83,7 +83,6 @@ export default defineAppConfig({
       key: 8,
       name: '全屏广告-发现页新装试用弹窗',
       desc: '点击X',
-      quickFind: true,
       rules: [
         {
           activityIds:
