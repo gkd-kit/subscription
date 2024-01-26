@@ -69,10 +69,16 @@ export default defineAppConfig({
         {
           key: 2,
           name: '抽奖机会-弹窗广告',
-          activityIds: 'com.youdao.dict.activity.DictSplashActivity',
+          activityIds: [
+            'com.youdao.dict.activity.DictSplashActivity',
+            'com.youdao.dict.activity.DictHotBootSplashActivity',
+          ],
           quickFind: true,
           matches: '[vid="skip_bottom_view"]',
-          snapshotUrls: 'https://i.gkd.li/import/13931202',
+          snapshotUrls: [
+            'https://i.gkd.li/import/13931202',
+            'https://i.gkd.li/import/14064647',
+          ],
         },
       ],
     },
