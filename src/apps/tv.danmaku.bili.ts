@@ -184,6 +184,8 @@ export default defineAppConfig({
         {
           key: 0,
           name: '点击广告卡片右下角菜单按钮',
+          actionMaximum: 1,
+          resetMatch: 'activity',
           matches:
             '@[id="tv.danmaku.bili:id/more"] - LinearLayout >2 [id="tv.danmaku.bili:id/tag_text"]',
           snapshotUrls: [
