@@ -7,8 +7,8 @@ export default defineAppConfig({
     {
       enable: false,
       key: 1,
-      name: '分段广告',
-      desc: '有二次确认弹窗',
+      name: '分段广告-有二次确认弹窗',
+      desc: '⚠️该规则有概率误触',
       quickFind: true,
       // matchDelay: 3000, 我又想不起来为什么要有这个了
       rules: [
@@ -32,6 +32,7 @@ export default defineAppConfig({
             'https://i.gkd.li/import/12829964',
             'https://i.gkd.li/import/12829953',
             'https://i.gkd.li/import/13859634', //vid="adTagClose"
+            'https://i.gkd.li/import/14070500', // 误触快照，节点被遮罩时触发点击
           ],
         },
         {
