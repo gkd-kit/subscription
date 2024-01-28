@@ -515,7 +515,7 @@ export default defineAppConfig({
       ],
     },
     {
-      key: 20,
+      key: 21,
       name: '功能类-支付成功自动点击【完成】',
       desc: '点击【完成】',
       quickFind: true,
