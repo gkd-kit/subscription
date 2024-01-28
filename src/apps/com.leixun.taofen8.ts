@@ -12,8 +12,9 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
+          quickFind: true,
           matches:
-            '[id="com.leixun.taofen8:id/fl_advert_container"] View[clickable=true]',
+            '@View[clickable=true] <<n [id="com.leixun.taofen8:id/fl_advert_container"]',
           snapshotUrls: 'https://i.gkd.li/import/13937324',
         },
       ],
