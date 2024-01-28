@@ -59,7 +59,7 @@ export default defineAppConfig({
     },
     {
       key: 2,
-      name: '视频详情-直播推荐',
+      name: '分段广告-视频详情-直播推荐',
       desc: '自动点击【减少推荐】',
       quickFind: true,
       rules: [
@@ -74,9 +74,11 @@ export default defineAppConfig({
         {
           preKeys: [0],
           key: 1,
-          activityIds: 'com.xunlei.downloadprovider.download.center.newcenter',
           matches: '[id="com.xunlei.downloadprovider:id/close_ad"]',
-          snapshotUrls: 'https://i.gkd.li/import/12707710',
+          snapshotUrls: [
+            'https://i.gkd.li/import/12707710',
+            'https://i.gkd.li/import/14031920',
+          ],
         },
       ],
     },
