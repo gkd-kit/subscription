@@ -12,8 +12,9 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
+          quickFind: true,
           matches:
-            'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true] + TextView',
+            'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true] + TextView <<n [vid="splash_container"]',
           snapshotUrls: [
             'https://i.gkd.li/import/13840775',
             'https://i.gkd.li/import/13944086',
