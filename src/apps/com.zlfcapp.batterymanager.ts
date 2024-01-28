@@ -12,8 +12,9 @@ export default defineAppConfig({
       resetMatch: 'app',
       rules: [
         {
+          quickFind: true,
           matches:
-            '[id="com.zlfcapp.batterymanager:id/splash_container"] View[clickable=true]',
+            '@View[clickable=true] <<n [vid="splash_container"]',
           snapshotUrls: 'https://i.gkd.li/import/13960341',
         },
       ],
