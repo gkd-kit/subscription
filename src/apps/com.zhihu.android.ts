@@ -240,6 +240,14 @@ export default defineAppConfig({
       snapshotUrls: ['https://i.gkd.li/import/12707676'],
     },
     {
+      key: 13,
+      name: '全屏广告-发想法赢奖励弹窗',
+      desc: '点击右上角x',
+      activityIds: 'com.zhihu.android.topic.TopicActivity',
+      rules: '[vid="scene_container"] >n ViewGroup + ImageView',
+      snapshotUrls: 'https://i.gkd.li/import/14020339',
+    },
+    {
       enable: false,
       key: 101, // 不属于广告，序号往后排
       name: '问题回答-自动展开',
