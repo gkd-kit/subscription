@@ -18,5 +18,14 @@ export default defineAppConfig({
       ],
       snapshotUrls: 'https://i.gkd.li/import/13847837',
     },
+    {
+      key: 2,
+      name: '通知提示-同意消息通知',
+      desc: '点击【继续】',
+      quickFind: true,
+      activityIds: 'org.telegram.ui.LaunchActivity',
+      rules: '[text="打开通知"] +n [text="继续"]',
+      snapshotUrls: 'https://i.gkd.li/import/14048218',
+    },
   ],
 });
