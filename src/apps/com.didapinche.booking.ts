@@ -13,8 +13,7 @@ export default defineAppConfig({
       rules: [
         {
           quickFind: true,
-          matches:
-            '@View[clickable=true] <n * <2 * < [vid="flCSJAdContainer"]',
+          matches: '@View[clickable=true] <n * <2 * < [vid="flCSJAdContainer"]',
           snapshotUrls: [
             'https://i.gkd.li/import/13988957',
             'https://i.gkd.li/import/13989178',
