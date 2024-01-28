@@ -1,6 +1,10 @@
 # 萤石云视频
 
-存在 2 规则组 - [com.videogo](/src/apps/com.videogo.ts)
+存在 3 规则组 - [com.videogo](/src/apps/com.videogo.ts)
+
+## 开屏广告
+
+- [快照-0](https://i.gkd.li/import/14076262)
 
 ## 主页广告
 
