@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 0,
-      name: '首页右侧浮动广告',
+      name: '局部广告-首页右侧浮动广告',
       quickFind: true,
       activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
       rules: '[id="com.ximalaya.ting.android:id/main_ad_broadside_close_real"]',
@@ -14,7 +14,7 @@ export default defineAppConfig({
     },
     {
       key: 1,
-      name: '播放页面-播放控制区域的广告',
+      name: '局部广告-播放页面-播放控制区域的广告',
       quickFind: true,
       activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
       rules: [
@@ -31,23 +31,17 @@ export default defineAppConfig({
           matches: '[id="com.ximalaya.ting.android:id/host_game_close_tv"]',
           snapshotUrls: 'https://i.gkd.li/import/12927110',
         },
-        {
-          key: 2,
-          name: '体验会员广告',
-          matches: '[id="com.ximalaya.ting.android:id/main_iv_close"]',
-          exampleUrls:
-            'https://m.gkd.li/6328439/ea870e6f-07c9-4167-ab62-03e52838110b',
-          snapshotUrls: 'https://i.gkd.li/import/13546642',
-        },
       ],
     },
     {
       key: 2,
-      name: '播放页面-底部推荐列表-夹杂广告',
+      name: '分段广告-播放页面-底部推荐列表-夹杂广告',
       desc: '点击关闭-点击屏蔽',
       quickFind: true,
       rules: [
         {
+          key: 1,
+          preKeys: 0,
           activityIds: [
             'com.ximalaya.ting.android.main.dialog',
             'com.ximalaya.ting.android.host.activity.MainActivity',
@@ -59,6 +53,7 @@ export default defineAppConfig({
           ],
         },
         {
+          key: 0,
           activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
           matches:
             '@[id="com.ximalaya.ting.android:id/main_close_layout"][visibleToUser=true] > [id="com.ximalaya.ting.android:id/main_mark_text"][text="广告"]',
@@ -72,7 +67,7 @@ export default defineAppConfig({
     },
     {
       key: 3,
-      name: '播放页面-播放前广告',
+      name: '全屏广告-播放页面-播放前广告', //无法找到合适分类，暂且归为全屏广告
       quickFind: true,
       activityIds: [
         'com.ximalaya.ting.android.host.activity.MainActivity',
@@ -86,8 +81,8 @@ export default defineAppConfig({
     },
     {
       key: 4,
-      name: '首页-推荐列表广告',
-      desc: '点击关闭-点击屏蔽',
+      name: '分段广告-首页-推荐列表广告',
+      desc: '点击关闭-选择原因',
       activityIds: [
         'com.ximalaya.ting.android.host.activity.MainActivity',
         'com.ximalaya.ting.android.adsdk.view.DislikeDialog.DislikeBottomDialog',
@@ -106,6 +101,7 @@ export default defineAppConfig({
           snapshotUrls: 'https://i.gkd.li/import/12701374',
         },
         {
+          key: 2,
           preKeys: [0, 1],
           name: '点击关闭原因【屏蔽】',
           quickFind: true,
@@ -117,11 +113,20 @@ export default defineAppConfig({
             'https://i.gkd.li/import/13275928', //没有id
           ],
         },
+        {
+          key: 3,
+          preKeys: [0, 1],
+          name: '点击【不感兴趣】',
+          actionCdKey: 2,
+          quickFind: true,
+          matches: '[text="直接关闭"][text.length<=5]',
+          snapshotUrls: 'https://i.gkd.li/import/14019835',
+        },
       ],
     },
     {
       key: 5,
-      name: '关闭热播推荐广告',
+      name: '局部广告-关闭热播推荐广告',
       activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
       rules: [
         {
@@ -133,14 +138,14 @@ export default defineAppConfig({
     },
     {
       key: 6,
-      name: '关闭更新弹窗',
+      name: '更新提示',
       quickFind: true,
       rules: '[id="com.ximalaya.ting.android:id/host_tv_update_later"]',
       snapshotUrls: 'https://i.gkd.li/import/12506287',
     },
     {
       key: 7,
-      name: '关闭青少年模式弹窗',
+      name: '青少年模式',
       quickFind: true,
       activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
       snapshotUrls: 'https://i.gkd.li/import/12506209',
@@ -153,7 +158,7 @@ export default defineAppConfig({
     },
     {
       key: 8,
-      name: '评论区广告',
+      name: '局部广告-评论区广告',
       activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
       quickFind: true,
       rules:
@@ -163,7 +168,7 @@ export default defineAppConfig({
     {
       key: 9,
       enable: false,
-      name: '卡片式广告',
+      name: '分段广告-卡片式广告',
       quickFind: true,
       rules: [
         {
@@ -187,20 +192,12 @@ export default defineAppConfig({
             '[id="com.ximalaya.ting.android:id/xm_ad_main_ad_dislike_un_interest"]',
           snapshotUrls: 'https://i.gkd.li/import/13194839',
         },
-        {
-          key: 2,
-          name: '有声书分类页面-点击卡片右上角关闭按钮',
-          activityIds:
-            'com.ximalaya.ting.android.host.activity.SplashAdActivity',
-          matches: '[id="com.ximalaya.ting.android:id/main_iv_dislike"]',
-          snapshotUrls: 'https://i.gkd.li/import/13334685',
-        },
       ],
     },
     {
       enable: false,
       key: 10,
-      name: '首页-专辑订阅推荐弹窗',
+      name: '全屏广告-首页-专辑订阅推荐弹窗',
       quickFind: true,
       matchTime: 10000,
       actionMaximum: 1,
@@ -212,7 +209,7 @@ export default defineAppConfig({
     },
     {
       key: 11,
-      name: '弹窗广告',
+      name: '全屏广告-弹窗广告',
       quickFind: true,
       activityIds: 'com.ximalaya.ting.android.host.activity.MainActivity',
       rules:
@@ -221,7 +218,7 @@ export default defineAppConfig({
     },
     {
       key: 12,
-      name: '推送通知',
+      name: '通知提示',
       desc: '取消推送通知',
       rules: [
         {
@@ -234,6 +231,21 @@ export default defineAppConfig({
           snapshotUrls: 'https://i.gkd.li/import/13389145',
         },
       ],
+    },
+    {
+      key: 13,
+      name: '全屏广告-体验会员广告',
+      rules: '[id="com.ximalaya.ting.android:id/main_iv_close"]',
+      exampleUrls:
+        'https://m.gkd.li/6328439/ea870e6f-07c9-4167-ab62-03e52838110b',
+      snapshotUrls: 'https://i.gkd.li/import/13546642',
+    },
+    {
+      key: 14,
+      name: '局部广告-有声书分类页面-信息流广告',
+      activityIds: 'com.ximalaya.ting.android.host.activity.SplashAdActivity',
+      rules: '[id="com.ximalaya.ting.android:id/main_iv_dislike"]',
+      snapshotUrls: 'https://i.gkd.li/import/13334685',
     },
   ],
 });
