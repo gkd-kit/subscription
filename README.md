@@ -20,8 +20,6 @@ https://cdn.jsdelivr.net/gh/Adpro-Team/GKD_subscription@main/dist/Adpro_gkd.json
 
 ![img](https://contrib.rocks/image?repo=Adpro-Team/GKD_subscription&_v=1)
 
-以及 不在图中的所有 `默认订阅` 项目贡献者
-
 ## 感谢以下项目
 
 [gkd-kit/subscription](https://github.com/gkd-kit/subscription)
