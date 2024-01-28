@@ -436,5 +436,19 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 23,
+      name: '全屏广告-个人主页浮层广告',
+      rules: [
+        {
+          key: 0,
+          name: '个性装扮浮层广告',
+          activityIds:
+            'com.tencent.mobileqq.profilecard.activity.FriendProfileCardActivity',
+          matches: '[desc="关闭浮层"][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/import/14074727',
+        },
+      ],
+    },
   ],
 });
