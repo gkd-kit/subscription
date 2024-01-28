@@ -18,7 +18,7 @@ https://cdn.jsdelivr.net/gh/Adpro-Team/GKD_subscription@main/dist/Adpro_gkd.json
 
 ## 感谢以下开发者的贡献
 
-![img](https://contrib.rocks/image?repo=gkd-kit/Adpro-Team/GKD_subscription&_v=--VERSION--)
+![img](https://contrib.rocks/image?repo=Adpro-Team/GKD_subscription&_v=--VERSION--)
 
 ## 感谢以下项目
 
