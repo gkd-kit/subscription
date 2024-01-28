@@ -25,8 +25,9 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
+          quickFind: true,
           matches:
-            'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true] + TextView',
+            'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true] + TextView <<n [id="com.mfcloudcalculate.networkdisk:id/frame_ad_splash_container"]',
           snapshotUrls: 'https://i.gkd.li/import/14018247',
         },
         // 该应用存在特殊开屏广告，被全局规则排除，以下为之前的开屏广告规则
@@ -43,7 +44,7 @@ export default defineAppConfig({
         {
           key: 2,
           quickFind: true,
-          matches: '[id$="tt_splash_skip_btn"]',
+          matches: '[id$="tt_splash_skip_btn"] <<n [id="com.mfcloudcalculate.networkdisk:id/frame_ad_splash_container"]',
           snapshotUrls: [
             'https://i.gkd.li/import/13259303',
             'https://i.gkd.li/import/13695497',
