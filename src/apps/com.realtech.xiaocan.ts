@@ -24,7 +24,8 @@ export default defineAppConfig({
         {
           key: 2,
           quickFind: true,
-          matches: '@[id$="tt_splash_skip_btn"] <<n [id="com.realtech.xiaocan:id/splash_ad_container"]',
+          matches:
+            '@[id$="tt_splash_skip_btn"] <<n [id="com.realtech.xiaocan:id/splash_ad_container"]',
           snapshotUrls: 'https://i.gkd.li/import/12854728',
         },
         {
