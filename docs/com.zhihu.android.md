@@ -1,6 +1,6 @@
 # 知乎
 
-存在 13 规则组 - [com.zhihu.android](/src/apps/com.zhihu.android.ts)
+存在 14 规则组 - [com.zhihu.android](/src/apps/com.zhihu.android.ts)
 
 ## 开屏广告
 
@@ -70,6 +70,12 @@
 默认禁用
 
 - [快照-0](https://i.gkd.li/import/12707676)
+
+## 全屏广告-发想法赢奖励弹窗
+
+默认禁用 - 点击右上角x
+
+- [快照-0](https://i.gkd.li/import/14020339)
 
 ## 问题回答-自动展开
 
