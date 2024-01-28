@@ -41,8 +41,7 @@ export default defineAppConfig({
         {
           key: 0,
           quickFind: true,
-          matches:
-            'View[clickable=true] <2 * <2 * < [vid="flTTContainer"]',
+          matches: 'View[clickable=true] <2 * <2 * < [vid="flTTContainer"]',
           snapshotUrls: 'https://i.gkd.li/import/14021540',
         },
         {
