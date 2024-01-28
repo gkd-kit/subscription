@@ -107,53 +107,35 @@ export default defineAppConfig({
     },
     {
       key: 5,
-      name: '分段广告',
+      name: '分段广告-阅读过程广告',
       quickFind: true,
       rules: [
         {
           key: 0,
-          name: '阅读页面广告弹窗-点击反馈按钮',
+          name: '阅读页面广告-点击反馈按钮',
           activityIds: 'com.dragon.read.reader.ui.ReaderActivity',
           // 有反馈原规则'[text="反馈"][clickable=true]'不触发删除[clickable=true]才能点击；有反馈原规则点击屏外节点，导致无法执行下一步，遂添加[visibleToUser=true]
-          matches: '[text="反馈"][visibleToUser=true]',
+          matches: [
+            '[text="反馈"][clickable=true][visibleToUser=true]',
+            '[text="看视频免广告"] - [text="反馈"]',
+          ],
           snapshotUrls: [
             'https://i.gkd.li/import/13520160',
             'https://i.gkd.li/import/13843155',
+            'https://i.gkd.li/import/13816453', //规则2
           ],
         },
         {
           preKeys: 0,
           key: 1,
-          name: '阅读页面广告弹窗-点击不感兴趣',
+          name: '阅读页面广告-点击不感兴趣',
           activityIds: 'com.dragon.read.reader.ui.ReaderActivity',
           matches: '@ViewGroup[clickable=true] > [text="不感兴趣"]',
           snapshotUrls: [
             'https://i.gkd.li/import/13520219',
             'https://i.gkd.li/import/13674550',
+            'https://i.gkd.li/import/13816454',
           ],
-        },
-        {
-          key: 2,
-          name: '阅读页面广告弹窗-点击下一页',
-          activityIds: 'com.dragon.read.reader.ui.ReaderActivity',
-          matches:
-            '[id="com.dragon.read:id/readFlowNonRoundEntranceLayout"] [id="com.dragon.read:id/relativeRight"]',
-          snapshotUrls: 'https://i.gkd.li/import/13674556',
-        },
-        {
-          key: 3,
-          name: '阅读页面广告弹窗-点击反馈',
-          activityIds: 'com.dragon.read.reader.ui.ReaderActivity',
-          matches: '[text="看视频免广告"] - [text="反馈"]',
-          snapshotUrls: 'https://i.gkd.li/import/13816453',
-        },
-        {
-          preKeys: 3,
-          key: 4,
-          name: '阅读页面广告弹窗-点击不感兴趣',
-          activityIds: 'com.dragon.read.reader.ui.ReaderActivity',
-          matches: '[text="举报"] <2 ViewGroup - ViewGroup[clickable=true]',
-          snapshotUrls: 'https://i.gkd.li/import/13816454',
         },
       ],
     },
@@ -183,6 +165,14 @@ export default defineAppConfig({
       activityIds: 'com.dragon.read.pages.main.MainFragmentActivity',
       rules: '[vid="container"] > ImageView',
       snapshotUrls: 'https://i.gkd.li/import/14031943',
+    },
+    {
+      key: 14,
+      name: '功能类-阅读页面广告-点击下一页',
+      activityIds: 'com.dragon.read.reader.ui.ReaderActivity',
+      rules:
+        '[id="com.dragon.read:id/readFlowNonRoundEntranceLayout"] [id="com.dragon.read:id/relativeRight"]',
+      snapshotUrls: 'https://i.gkd.li/import/13674556',
     },
   ],
 });
