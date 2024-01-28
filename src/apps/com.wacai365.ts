@@ -40,23 +40,10 @@ export default defineAppConfig({
       rules: [
         {
           key: 0,
+          quickFind: true,
           matches:
-            'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true] + TextView',
+            'View[clickable=true] <2 * <2 * < [vid="flTTContainer"]',
           snapshotUrls: 'https://i.gkd.li/import/14021540',
-        },
-        // 该应用存在特殊开屏广告，被全局规则排除，以下为之前的开屏广告规则
-        {
-          key: 1,
-          matches: '[id="com.wacai365:id/ksad_splash_circle_skip_view"]',
-          snapshotUrls: 'https://i.gkd.li/import/13162861',
-        },
-        {
-          key: 2,
-          matches: '[id$="id/tt_splash_skip_btn"]',
-          snapshotUrls: [
-            'https://i.gkd.li/import/13177538',
-            'https://i.gkd.li/import/13194893',
-          ],
         },
         {
           key: 3,
