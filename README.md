@@ -8,7 +8,7 @@
 https://s.gkd.li/
 ```
 
-当前版本: v185
+当前版本: v186
 
 当前订阅文件已适配 610 个 APP, 共有 1371 规则组
 
@@ -18,4 +18,4 @@ https://s.gkd.li/
 
 ## 感谢以下开发者的贡献
 
-![img](https://contrib.rocks/image?repo=gkd-kit/subscription&_v=185)
+![img](https://contrib.rocks/image?repo=gkd-kit/subscription&_v=186)
