@@ -44,7 +44,8 @@ export default defineAppConfig({
         {
           key: 2,
           quickFind: true,
-          matches: '[id$="tt_splash_skip_btn"] <<n [id="com.mfcloudcalculate.networkdisk:id/frame_ad_splash_container"]',
+          matches:
+            '[id$="tt_splash_skip_btn"] <<n [id="com.mfcloudcalculate.networkdisk:id/frame_ad_splash_container"]',
           snapshotUrls: [
             'https://i.gkd.li/import/13259303',
             'https://i.gkd.li/import/13695497',
