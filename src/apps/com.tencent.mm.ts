@@ -520,7 +520,8 @@ export default defineAppConfig({
       desc: '点击【完成】',
       quickFind: true,
       activityIds: 'com.tencent.mm.framework.app.UIPageFragmentActivity',
-      rules: '[desc="支付成功"] < ViewGroup + ViewGroup >n [vid="kinda_button_impl_wrapper"][desc="完成"]',
+      rules:
+        '[desc="支付成功"] < ViewGroup + ViewGroup >n [vid="kinda_button_impl_wrapper"][desc="完成"]',
       snapshotUrls: 'https://i.gkd.li/import/14076149',
     },
   ],
