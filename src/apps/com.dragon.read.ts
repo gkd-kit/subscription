@@ -130,11 +130,15 @@ export default defineAppConfig({
           key: 1,
           name: '阅读页面广告-点击不感兴趣',
           activityIds: 'com.dragon.read.reader.ui.ReaderActivity',
-          matches: '@ViewGroup[clickable=true] > [text="不感兴趣"]',
+          matches: [
+            '@ViewGroup[clickable=true] > [text="不感兴趣"]',
+            '[text="不感兴趣"][clickable=true]',
+          ],
           snapshotUrls: [
             'https://i.gkd.li/import/13520219',
             'https://i.gkd.li/import/13674550',
             'https://i.gkd.li/import/13816454',
+            'https://i.gkd.li/import/14093128', //[text="不感兴趣"][clickable=true]
           ],
         },
       ],
