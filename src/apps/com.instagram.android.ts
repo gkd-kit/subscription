@@ -7,7 +7,7 @@ export default defineAppConfig({
     {
       key: 1,
       enable: false,
-      name: '信息流广告',
+      name: '分段广告-信息流广告',
       desc: '但是步骤较多, 影响app使用',
       quickFind: true,
       activityIds: 'com.instagram.mainactivity.InstagramMainActivity',
@@ -46,6 +46,15 @@ export default defineAppConfig({
           snapshotUrls: 'https://i.gkd.li/import/12829492',
         },
       ],
+    },
+    {
+      key: 2,
+      name: '功能类-自动点击【查看翻译】',
+      desc: '仅支持评论页',
+      quickFind: true,
+      activityIds: 'com.instagram.mainactivity.InstagramMainActivity',
+      rules: '[text="查看翻译"]',
+      snapshotUrls: 'https://i.gkd.li/import/14093211',
     },
   ],
 });
