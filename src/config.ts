@@ -10,9 +10,9 @@ const subsConfig: RawSubscription = {
   author: 'Adpro - AdproTeam',
   supportUri: 'https://github.com/Adpro-Team/subscription/issue',
   updateUrl:
-    'https://cdn.jsdelivr.net/gh/Adpro-Team/GKD_subscription@main/dist/Adpro_gkd.json5',
+    'https://fastly.jsdelivr.net/gh/Adpro-Team/GKD_subscription@main/dist/Adpro_gkd.json5',
   checkUpdateUrl:
-    'https://cdn.jsdelivr.net/gh/Adpro-Team/GKD_subscription@main/dist/Adpro_gkd.version.json',
+    'https://fastly.jsdelivr.net/gh/Adpro-Team/GKD_subscription@main/dist/Adpro_gkd.version.json',
   globalGroups,
   categories,
   apps,
