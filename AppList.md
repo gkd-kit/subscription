@@ -544,6 +544,7 @@
 | 迅雷                   | [com.xunlei.downloadprovider](/docs/com.xunlei.downloadprovider.md)                                                                                               | 7      |
 | 迅游手游加速器         | [cn.wsds.gamemaster](/docs/cn.wsds.gamemaster.md)                                                                                                                 | 2      |
 | 央视体育               | [com.cctv.cctv5ultimate](/docs/com.cctv.cctv5ultimate.md)                                                                                                         | 1      |
+| 一个                   | [com.hihanhan.one.rt45](/docs/com.hihanhan.one.rt45.md)                                                                                                           | 1      |
 | 易捷加油               | [cn.com.hkgt.gasapp](/docs/cn.com.hkgt.gasapp.md)                                                                                                                 | 1      |
 | 医考帮                 | [com.yikaobang.yixue](/docs/com.yikaobang.yixue.md)                                                                                                               | 1      |
 | 一刻相册               | [com.baidu.youavideo](/docs/com.baidu.youavideo.md)                                                                                                               | 9      |
