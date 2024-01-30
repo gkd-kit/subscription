@@ -4,4 +4,4 @@
 
 ## 开屏广告
 
-- [快照-0](https://i.gkd.li/import/13379457)
+- [快照-0](https://i.gkd.li/import/14095278)

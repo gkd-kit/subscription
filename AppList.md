@@ -11,13 +11,14 @@
 | CSDN                   | [net.csdn.csdnplus](/docs/net.csdn.csdnplus.md)                                                                                                                   | 6      |
 | CTM Buddy              | [com.ctm](/docs/com.ctm.md)                                                                                                                                       | 2      |
 | Cellular-Z             | [make.more.r2d2.cellular_z](/docs/make.more.r2d2.cellular_z.md)                                                                                                   | 2      |
+| Cimoc                  | [com.cimoc.haleydu](/docs/com.cimoc.haleydu.md)                                                                                                                   | 1      |
 | ECOVACS HOME           | [com.eco.global.app](/docs/com.eco.global.app.md)                                                                                                                 | 1      |
 | EMobile7               | [com.weaver.emobile7](/docs/com.weaver.emobile7.md)                                                                                                               | 1      |
 | Edge                   | [com.microsoft.emmx](/docs/com.microsoft.emmx.md)                                                                                                                 | 1      |
 | Gmail                  | [com.google.android.gm](/docs/com.google.android.gm.md)                                                                                                           | 1      |
 | Gspace                 | [com.gspace.android](/docs/com.gspace.android.md)                                                                                                                 | 2      |
 | HMS Core               | [com.huawei.hwid](/docs/com.huawei.hwid.md)                                                                                                                       | 1      |
-| Instagram              | [com.instagram.android](/docs/com.instagram.android.md)                                                                                                           | 1      |
+| Instagram              | [com.instagram.android](/docs/com.instagram.android.md)                                                                                                           | 2      |
 | JavDB                  | [xxx.pornhub.fuck](/docs/xxx.pornhub.fuck.md)                                                                                                                     | 1      |
 | Keep                   | [com.gotokeep.keep](/docs/com.gotokeep.keep.md)                                                                                                                   | 5      |
 | LIBVIO                 | [lab.vie.two](/docs/lab.vie.two.md)                                                                                                                               | 1      |
@@ -453,6 +454,7 @@
 | 网心云                 | [com.onethingcloud.android](/docs/com.onethingcloud.android.md)                                                                                                   | 1      |
 | 网易大神               | [com.netease.gl](/docs/com.netease.gl.md)                                                                                                                         | 3      |
 | 网易将军令             | [com.netease.mkey](/docs/com.netease.mkey.md)                                                                                                                     | 1      |
+| 网易蜗牛读书           | [com.netease.snailread](/docs/com.netease.snailread.md)                                                                                                           | 1      |
 | 网易新闻               | [com.netease.newsreader.activity](/docs/com.netease.newsreader.activity.md)                                                                                       | 4      |
 | 网易严选               | [com.netease.yanxuan](/docs/com.netease.yanxuan.md)                                                                                                               | 1      |
 | 网易有道词典           | [com.youdao.dict](/docs/com.youdao.dict.md)                                                                                                                       | 6      |
