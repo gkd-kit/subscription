@@ -76,11 +76,12 @@ export default defineAppConfig({
           key: 0,
           action: 'clickCenter',
           matches:
-            '[id="com.luna.music:id/exciting_video_fragment_container"] >4 [text="领取成功，关闭，按钮"]',
+            '[id="com.luna.music:id/exciting_video_fragment_container"] >3 FrameLayout[childCount<20] > [text="领取成功，关闭，按钮"]',
           snapshotUrls: 'https://i.gkd.li/import/13945430',
         },
         {
           preKeys: 0,
+          key: 1,
           matches: '[text="坚持退出"]',
           snapshotUrls: 'https://i.gkd.li/import/13945459',
         },
