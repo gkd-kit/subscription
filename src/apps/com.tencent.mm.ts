@@ -459,6 +459,16 @@ export default defineAppConfig({
       snapshotUrls: 'https://i.gkd.li/import/14111866',
     },
     {
+      key: 24,
+      name: '全屏广告-小程序-粤省事-投资弹窗',
+      activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
+      rules:
+        'WebView >n View[childCount=2] + View > View[childCount=2] > TextView + TextView[id=null][visibleToUser=true]',
+      exampleUrls:
+        'https://m.gkd.li/101449500/4e808d65-d8f7-4140-a03f-e840bf1c374d',
+      snapshotUrls: 'https://i.gkd.li/import/14113750',
+    },
+    {
       key: 17,
       name: '青少年模式',
       quickFind: true,
