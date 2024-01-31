@@ -1,6 +1,6 @@
 # 支付宝
 
-存在 7 规则组 - [com.eg.android.AlipayGphone](/src/apps/com.eg.android.AlipayGphone.ts)
+存在 9 规则组 - [com.eg.android.AlipayGphone](/src/apps/com.eg.android.AlipayGphone.ts)
 
 ## 更新提示-关闭花呗升级弹窗
 
@@ -53,3 +53,15 @@
 默认禁用 - 点击X
 
 - [快照-0](https://i.gkd.li/import/13915022)
+
+## 全屏广告-2023资产报告
+
+默认禁用
+
+- [快照-0](https://i.gkd.li/import/14112225)
+
+## 全屏广告-小程序-哈啰-专属额度到账弹窗
+
+默认禁用
+
+- [快照-0](https://i.gkd.li/import/14112224)
