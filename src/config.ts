@@ -8,7 +8,7 @@ const subsConfig: RawSubscription = {
   version: 0,
   name: 'Adpro的GKD订阅',
   author: 'Adpro - AdproTeam',
-  supportUri: 'https://github.com/Adpro-Team/subscription/issue',
+  supportUri: 'https://github.com/Adpro-Team/GKD_subscription/issue',
   updateUrl:
     'https://fastly.jsdelivr.net/gh/Adpro-Team/GKD_subscription@main/dist/Adpro_gkd.json5',
   checkUpdateUrl:
