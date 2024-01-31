@@ -385,6 +385,7 @@ export default defineAppConfig({
           activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
           matches:
             '[text!="" || text!=null] <<n FrameLayout[childCount<=5] > FrameLayout[childCount>=3 && childCount<=6] + FrameLayout[childCount=2] > TextView + FrameLayout > @FrameLayout[childCount=1] > ImageView',
+          exampleUrls: 'https://m.gkd.li/101449500/1c7e1778-c5a2-426b-8beb-1b76893b6397',
           snapshotUrls: [
             'https://i.gkd.li/import/14111422',
             'https://i.gkd.li/import/14111432',
@@ -447,6 +448,13 @@ export default defineAppConfig({
         action: 'clickCenter',
         snapshotUrls: ['https://i.gkd.li/import/13298294'],
       },
+    },
+    {
+      key: 23,
+      name: '全屏广告-小程序-中国电信-抽奖赢好礼弹窗',
+      activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
+      rules: '[id="launchAppView"] +n View[childCount=3] > @Image + Image + Image',
+      snapshotUrls: 'https://i.gkd.li/import/14111866',
     },
     {
       key: 17,
