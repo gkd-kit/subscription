@@ -383,7 +383,7 @@ export default defineAppConfig({
         {
           key: 0,
           activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
-          matches: 
+          matches:
             '[text!="" || text!=null] <<n FrameLayout[childCount<=5] > FrameLayout[childCount>=3 && childCount<=6] + FrameLayout[childCount=2] > TextView + FrameLayout > @FrameLayout[childCount=1] > ImageView',
           snapshotUrls: [
             'https://i.gkd.li/import/14111422',
