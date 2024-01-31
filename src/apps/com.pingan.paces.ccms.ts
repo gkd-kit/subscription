@@ -9,7 +9,7 @@ export default defineAppConfig({
       name: '全屏广告-首页-权益/抽奖弹窗',
       quickFind: true,
       activityIds: 'com.pingan.launcher.activity.LauncherActivity',
-      rules: 
+      rules:
         '[text!="" || text!=null] < [vid="alertHeader"] < [vid="allViewstub"] + [vid="horizontalBottomIcon"] >2 [vid="bottom_close_image"]',
       snapshotUrls: [
         'https://i.gkd.li/import/14107110',
