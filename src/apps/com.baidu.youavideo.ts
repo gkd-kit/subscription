@@ -110,5 +110,22 @@ export default defineAppConfig({
         '[text*="电池优化权限"] < * +n [vid="bottom_two_button_layout"] >n [vid="cancel"]',
       snapshotUrls: 'https://i.gkd.li/import/14065510',
     },
+    {
+      key: 11,
+      name: '全屏广告',
+      rules: [
+        {
+          key: 0,
+          quickFind: true,
+          activityIds:
+            'com.baidu.youavideo.preview.ui.album.AlbumPreviewActivity',
+          matches: '[text="广告"] -n [vid="iv_close"]',
+          snapshotUrls: [
+            'https://i.gkd.li/import/14107272',
+            'https://i.gkd.li/import/14038825', //[vid="iv_close"]在该页面误触
+          ],
+        },
+      ],
+    },
   ],
 });
