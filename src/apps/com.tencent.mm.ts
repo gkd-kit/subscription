@@ -3,6 +3,7 @@ import { defineAppConfig } from '../types';
 export default defineAppConfig({
   id: 'com.tencent.mm',
   name: '微信',
+  deprecatedKeys: [13],
   groups: [
     {
       enable: false,
@@ -375,26 +376,20 @@ export default defineAppConfig({
       snapshotUrls: 'https://i.gkd.li/import/12793745',
     },
     {
-      enable: false,
-      key: 13,
-      name: '全屏广告-提瓦特助手小程序-弹窗广告',
-      activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
+      key: 22,
+      name: '全屏广告-小程序-弹窗广告',
+      desc: '点击右上角x',
       rules: [
         {
           key: 0,
-          matches: [
-            'RelativeLayout[childCount=1][clickable=true] > [text="提瓦特小助手"]',
-            'FrameLayout[childCount=5] + FrameLayout[childCount=2] >2 FrameLayout[childCount=1]',
+          activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
+          matches: 
+            '[text!="" || text!=null] <<n FrameLayout[childCount<=5] > FrameLayout[childCount>=3 && childCount<=6] + FrameLayout[childCount=2] > TextView + FrameLayout > @FrameLayout[childCount=1] > ImageView',
+          snapshotUrls: [
+            'https://i.gkd.li/import/14111422',
+            'https://i.gkd.li/import/14111432',
+            'https://i.gkd.li/import/13459614',
           ],
-          snapshotUrls: 'https://i.gkd.li/import/12926021',
-        },
-        {
-          key: 1,
-          matches: [
-            'FrameLayout > FrameLayout > FrameLayout > TextView[text="广告"]',
-            'FrameLayout[childCount=6] + FrameLayout[childCount=2] > FrameLayout > FrameLayout > ImageView',
-          ],
-          snapshotUrls: 'https://i.gkd.li/import/13459614',
         },
       ],
     },
