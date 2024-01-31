@@ -8,6 +8,8 @@ export default defineAppConfig({
       key: 1,
       name: '全屏广告-首页-权益/抽奖弹窗',
       quickFind: true,
+      resetMatch: 'app',
+      actionMaximum: 1,
       activityIds: 'com.pingan.launcher.activity.LauncherActivity',
       rules:
         '[text!="" || text!=null] < [vid="alertHeader"] < [vid="allViewstub"] + [vid="horizontalBottomIcon"] >2 [vid="bottom_close_image"]',
