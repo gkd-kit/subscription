@@ -1,7 +1,7 @@
 {
   "name": "@adpro-team/subscription",
   "type": "module",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "main": "./dist/Adpro_gkd.json5",
   "unpkg": "./dist/Adpro_gkd.json5",
   "jsdelivr": "./dist/Adpro_gkd.json5",
