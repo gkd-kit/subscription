@@ -7,7 +7,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '卡片式广告',
+      name: '分段广告-卡片式广告',
       rules: [
         {
           key: 0,
@@ -72,7 +72,7 @@ export default defineAppConfig({
     },
     {
       key: 4,
-      name: 'VIP-弹窗',
+      name: '全屏广告-VIP弹窗',
       activityIds: 'com.youdao.dict.vip.activity.RecallSevenDayVipActivity',
       rules: '@ImageView[id="com.youdao.dict:id/iv_close"]',
       quickFind: true,
@@ -80,7 +80,7 @@ export default defineAppConfig({
     },
     {
       key: 5,
-      name: '评价弹窗',
+      name: '评价提示',
       activityIds: 'com.youdao.dict.activity.MainActivity',
       quickFind: true,
       resetMatch: 'app',
@@ -91,13 +91,20 @@ export default defineAppConfig({
     },
     {
       key: 6,
-      name: '更新弹窗',
+      name: '更新提示',
       quickFind: true,
       actionMaximum: 1,
       resetMatch: 'app',
       rules:
         '[id="com.youdao.dict:id/tv_version"] + [id="com.youdao.dict:id/iv_close"]',
       snapshotUrls: 'https://i.gkd.li/import/13627912',
+    },
+    {
+      key: 7,
+      name: '局部广告-首页-视频广告',
+      quickFind: true,
+      rules: '[vid="home_ad_close"]',
+      snapshotUrls: 'https://i.gkd.li/import/14037717',
     },
   ],
 });

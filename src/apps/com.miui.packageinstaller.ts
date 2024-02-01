@@ -7,7 +7,7 @@ export default defineAppConfig({
     {
       enable: false,
       key: 9,
-      name: '自动第三方安装应用',
+      name: '功能类-自动第三方安装应用',
       desc: '自动允许第三方应用调用安装，安装应用',
       rules: [
         {
@@ -34,7 +34,7 @@ export default defineAppConfig({
     {
       enable: false,
       key: 10,
-      name: '自动安装应用',
+      name: '功能类-miui-自动安装应用',
       desc: '启用后安装高风险应用将自动完成，请自行评估风险决定是否启用',
       rules: [
         // 正常安装
@@ -124,7 +124,7 @@ export default defineAppConfig({
     {
       enable: false,
       key: 11,
-      name: '自动更新应用',
+      name: '功能类-miui-自动更新应用',
       rules: [
         // 正常更新
         {
@@ -183,6 +183,24 @@ export default defineAppConfig({
             'https://i.gkd.li/import/13255733',
           ],
         },
+      ],
+    },
+    {
+      key: 12,
+      name: '功能类-澎湃-自动安装/更新',
+      desc: '不完整，缺失自动点击完成部分。启用后安装高风险应用将自动完成，请自行评估风险决定是否启用',
+      activityIds: 'com.miui.packageInstaller.ui.InstallPrepareAlertActivity',
+      rules: [
+        {
+          key: 0,
+          name: '点击【继续更新】/【继续】',
+          matches: '[text*="继续"] < LinearLayout < FrameLayout',
+          snapshotUrls: [
+            'https://i.gkd.li/import/14083552', //继续更新,
+            'https://i.gkd.li/import/14083554', //继续
+          ],
+        },
+        //完成快照缺失，无法编写
       ],
     },
   ],

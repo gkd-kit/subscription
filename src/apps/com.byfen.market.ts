@@ -30,5 +30,27 @@ export default defineAppConfig({
       rules: '[id="com.byfen.market:id/idIvClose"]',
       snapshotUrls: 'https://i.gkd.li/import/13801613',
     },
+    {
+      key: 2,
+      name: '分段广告-下载管理页广告卡片',
+      activityIds:
+        'com.byfen.market.ui.activity.personalcenter.DownloadManagerActivity',
+      rules: [
+        {
+          key: 0,
+          name: '穿山甲SDK-点击【反馈】',
+          matches: '[id="com.byfen.market:id/idAd"] >n [text="反馈"]',
+          snapshotUrls: 'https://i.gkd.li/import/13771711',
+        },
+        {
+          key: 1,
+          preKeys: 0,
+          name: '穿山甲SDK-点击【不感兴趣】',
+          quickFind: true,
+          matches: '@LinearLayout > [text="不感兴趣"]',
+          snapshotUrls: 'https://i.gkd.li/import/13771773',
+        },
+      ],
+    },
   ],
 });

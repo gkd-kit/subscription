@@ -3,6 +3,7 @@ import { defineAppConfig } from '../types';
 export default defineAppConfig({
   id: 'com.tencent.mm',
   name: '微信',
+  deprecatedKeys: [13],
   groups: [
     {
       enable: false,
@@ -375,26 +376,22 @@ export default defineAppConfig({
       snapshotUrls: 'https://i.gkd.li/import/12793745',
     },
     {
-      enable: false,
-      key: 13,
-      name: '全屏广告-提瓦特助手小程序-弹窗广告',
-      activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
+      key: 22,
+      name: '全屏广告-小程序-弹窗广告',
+      desc: '点击右上角x',
       rules: [
         {
           key: 0,
-          matches: [
-            'RelativeLayout[childCount=1][clickable=true] > [text="提瓦特小助手"]',
-            'FrameLayout[childCount=5] + FrameLayout[childCount=2] >2 FrameLayout[childCount=1]',
+          activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
+          matches:
+            '[text!="" || text!=null] <<n FrameLayout[childCount<=5] > FrameLayout[childCount>=3 && childCount<=6] + FrameLayout[childCount=2] > TextView + FrameLayout > @FrameLayout[childCount=1] > ImageView',
+          exampleUrls:
+            'https://m.gkd.li/101449500/1c7e1778-c5a2-426b-8beb-1b76893b6397',
+          snapshotUrls: [
+            'https://i.gkd.li/import/14111422',
+            'https://i.gkd.li/import/14111432',
+            'https://i.gkd.li/import/13459614',
           ],
-          snapshotUrls: 'https://i.gkd.li/import/12926021',
-        },
-        {
-          key: 1,
-          matches: [
-            'FrameLayout > FrameLayout > FrameLayout > TextView[text="广告"]',
-            'FrameLayout[childCount=6] + FrameLayout[childCount=2] > FrameLayout > FrameLayout > ImageView',
-          ],
-          snapshotUrls: 'https://i.gkd.li/import/13459614',
         },
       ],
     },
@@ -452,6 +449,24 @@ export default defineAppConfig({
         action: 'clickCenter',
         snapshotUrls: ['https://i.gkd.li/import/13298294'],
       },
+    },
+    {
+      key: 23,
+      name: '全屏广告-小程序-中国电信-抽奖赢好礼弹窗',
+      activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
+      rules:
+        '[id="launchAppView"] +n View[childCount=3] > @Image + Image + Image',
+      snapshotUrls: 'https://i.gkd.li/import/14111866',
+    },
+    {
+      key: 24,
+      name: '全屏广告-小程序-粤省事-投资弹窗',
+      activityIds: 'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
+      rules:
+        'WebView >n View[childCount=2] + View > View[childCount=2] > TextView + TextView[id=null][visibleToUser=true]',
+      exampleUrls:
+        'https://m.gkd.li/101449500/4e808d65-d8f7-4140-a03f-e840bf1c374d',
+      snapshotUrls: 'https://i.gkd.li/import/14113750',
     },
     {
       key: 17,
@@ -513,6 +528,16 @@ export default defineAppConfig({
           snapshotUrls: 'https://i.gkd.li/import/13790949',
         },
       ],
+    },
+    {
+      key: 21,
+      name: '功能类-支付成功自动点击【完成】',
+      desc: '点击【完成】',
+      quickFind: true,
+      activityIds: 'com.tencent.mm.framework.app.UIPageFragmentActivity',
+      rules:
+        '[desc="支付成功"] < ViewGroup + ViewGroup >n [vid="kinda_button_impl_wrapper"][desc="完成"]',
+      snapshotUrls: 'https://i.gkd.li/import/14076149',
     },
   ],
 });

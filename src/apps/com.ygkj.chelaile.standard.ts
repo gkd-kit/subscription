@@ -6,13 +6,14 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '卡片式广告',
+      name: '局部广告-卡片式广告',
       rules: [
         {
           key: 0,
           activityIds: [
             'dev.xesam.chelaile.app.module.func.SplashActivity',
             'dev.xesam.chelaile.app.module.PanelHostActivity',
+            'dev.xesam.chelaile.app.module.line.gray.LineDetailActivity',
           ],
           matches:
             'ImageView[id^="com.ygkj.chelaile.standard:id/cll_all_pic_close"][visibleToUser=true]',
@@ -20,6 +21,7 @@ export default defineAppConfig({
             'https://i.gkd.li/import/13062991',
             'https://i.gkd.li/import/13062984',
             'https://i.gkd.li/import/13464325',
+            'https://i.gkd.li/import/14065904', //activityId: dev.xesam.chelaile.app.module.line.gray.LineDetailActivity
           ],
         },
         {

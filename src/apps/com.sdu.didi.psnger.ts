@@ -6,7 +6,7 @@ export default defineAppConfig({
   groups: [
     {
       key: 1,
-      name: '打车页面广告',
+      name: '局部广告-打车页面广告',
       desc: '点击广告卡片左上角x',
       rules: [
         {
@@ -16,6 +16,14 @@ export default defineAppConfig({
           snapshotUrls: 'https://i.gkd.li/import/13760846',
         },
       ],
+    },
+    {
+      key: 2,
+      name: '全屏广告-打车页面-优惠券',
+      quickFind: true,
+      activityIds: 'com.didi.sdk.app.launch.splash.SplashActivity',
+      rules: '[vid="popClose"][desc="关闭弹窗"]',
+      snapshotUrls: 'https://i.gkd.li/import/14047551',
     },
   ],
 });

@@ -4,15 +4,15 @@ import apps from './rawApps';
 import type { RawSubscription } from './types';
 
 const subsConfig: RawSubscription = {
-  id: 0,
+  id: 825,
   version: 0,
-  name: '默认订阅',
-  author: 'lisonge',
-  supportUri: 'https://github.com/gkd-kit/subscription',
+  name: 'Adpro的GKD订阅',
+  author: 'Adpro - AdproTeam',
+  supportUri: 'https://github.com/Adpro-Team/GKD_subscription/issues',
   updateUrl:
-    'https://registry.npmmirror.com/@gkd-kit/subscription/latest/files',
+    'https://fastly.jsdelivr.net/gh/Adpro-Team/GKD_subscription@main/dist/Adpro_gkd.json5',
   checkUpdateUrl:
-    'https://registry.npmmirror.com/@gkd-kit/subscription/latest/files/dist/gkd.version.json',
+    'https://fastly.jsdelivr.net/gh/Adpro-Team/GKD_subscription@main/dist/Adpro_gkd.version.json',
   globalGroups,
   categories,
   apps,

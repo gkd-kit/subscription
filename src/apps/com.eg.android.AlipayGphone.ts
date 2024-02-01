@@ -170,5 +170,21 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 12,
+      name: '全屏广告-2023资产报告',
+      activityIds:
+        'com.alipay.mobile.nebulax.integration.mpaas.activity.NebulaActivity',
+      rules: '[desc="全屏广告"] >2 [desc="关闭"]',
+      snapshotUrls: 'https://i.gkd.li/import/14112225',
+    },
+    {
+      key: 13,
+      name: '全屏广告-小程序-哈啰-专属额度到账弹窗',
+      activityIds: 'com.alipay.mobile.nebulax.xriver.activity.XRiverActivity',
+      rules:
+        '[id="com.alipay.mobile.nebula:id/h5_pc_container"] >n View[childCount=1] > View[childCount=2] > View + Image',
+      snapshotUrls: 'https://i.gkd.li/import/14112224',
+    },
   ],
 });

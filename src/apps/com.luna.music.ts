@@ -66,5 +66,26 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 8,
+      name: '功能类-看广告获取听歌时长',
+      desc: '点击领取成功-点击坚持退出',
+      quickFind: true,
+      rules: [
+        {
+          key: 0,
+          action: 'clickCenter',
+          matches:
+            '[id="com.luna.music:id/exciting_video_fragment_container"] >3 FrameLayout[childCount<20] > [text="领取成功，关闭，按钮"]',
+          snapshotUrls: 'https://i.gkd.li/import/13945430',
+        },
+        {
+          preKeys: 0,
+          key: 1,
+          matches: '[text="坚持退出"]',
+          snapshotUrls: 'https://i.gkd.li/import/13945459',
+        },
+      ],
+    },
   ],
 });
