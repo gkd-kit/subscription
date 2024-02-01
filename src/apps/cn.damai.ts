@@ -26,5 +26,14 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 2,
+      name: '通知提示-通知权限使用说明',
+      desc: '自动点击“不开启”',
+      quickFind: true,
+      activityIds: 'cn.damai.homepage.MainActivity',
+      rules: '[id="cn.damai:id/damai_theme_dialog_cancel_btn"]',
+      snapshotUrls: 'https://i.gkd.li/import/13985393',
+    },
   ],
 });
