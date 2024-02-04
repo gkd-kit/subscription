@@ -6,7 +6,7 @@ type RawCommonProps = {
    *
    * 当前规则的冷却时间, 或者执行 action 最小间隔
    *
-   * 默认值: 1000
+   * @default 1000
    */
   actionCd?: number;
 
@@ -83,9 +83,9 @@ type RawCommonProps = {
   actionMaximum?: number;
 
   /**
-   * 默认值: `activity`
-   *
    * 当规则因为 matchTime/actionMaximum 而休眠时, 如何唤醒此规则
+   *
+   * @default 'activity'
    *
    * @example
    * 'activity'
@@ -116,6 +116,18 @@ type RawCommonProps = {
    * 如果你对这个 key 的 rule 设置 actionMaximum=1, 那么当这个 rule 和 本 rule 触发任意一个时, 两个 rule 都将进入休眠
    */
   actionMaximumKey?: number;
+
+  /**
+   * 规则参与匹配的顺序, 数字越小越先匹配
+   *
+   * 如果两个规则 order 相同, 按照 groups 中的数组顺序匹配, app 类型规则顺序优先于 global 类型规则
+   *
+   * 属于不同订阅的规则按照订阅列表中顺序匹配, 长按订阅卡片可以拖动排序
+   *
+   * @default 0
+   *
+   */
+  order?: number;
 
   /**
    * 当前 规则/规则组 的快照链接, 增强订阅可维护性
@@ -158,12 +170,13 @@ type RawRuleProps = RawCommonProps & {
    * @example
    * `click`
    * // 为默认值, 如果目标节点是 clickable 的, 则使用 `clickNode`, 反之使用 `clickCenter`
+   * // 并且当 `clickNode` 事件没有被应用接收时, 则使用 `clickCenter`
    *
    * @example
    * `clickNode`
    * // 向系统发起一个点击无障碍节点事件. 即使节点在屏幕外部/或者被其它节点遮挡,也依然能够正确触发点击目标节点
    * // 但是如果目标节点不是 clickable 的, 目标 APP 通常不响应这个点击事件, 也就是点击无效果
-   * // 在极少数情况下, 即使节点是 clickable 的, APP 也不会响应节点点击事件, 此时需要手动设置 `clickCenter`
+   * // 在极少数情况下, 即使节点是 clickable 的, APP 显示接收但是不响应节点点击事件, 此时需要手动设置 `clickCenter`
    *
    * @example
    * `clickCenter`
@@ -178,6 +191,7 @@ type RawRuleProps = RawCommonProps & {
    * @example
    * `longClick`
    * // 如果目标节点是 longClickable 的, 则使用 `longClickNode`, 反之使用 `longClickCenter`
+   * // 并且当 `longClickNode` 事件没有被应用接收时, 则使用 `longClickCenter`
    *
    * @example
    * `longClickNode`
@@ -229,6 +243,18 @@ type RawGroupProps = RawCommonProps & {
    */
   enable?: boolean;
 
+  /**
+   * 其它 group 的 key, 允许将目标组的所有 rule 添加到当前组的作用域
+   *
+   * 假设 group1{key=1} 有一个 rule1{key=11}, group2{key=2} 有 rule2{key=22}, rule3{key=23}
+   *
+   * 如果 group1 的 scopeKeys=[2] 并且 group2 没有被禁用, 那么 rule1 的 preKeys/actionCdKey/actionMaximumKey 可以是 11/22/23
+   *
+   * 如果存在相同 key 的 rule, 优先使用本组的 rule, 其次按 scopeKeys 的顺序查找其它组的 rule
+   *
+   */
+  scopeKeys?: IArray<number>;
+
   // rules: RawRuleProps[];
 };
 
@@ -279,6 +305,13 @@ type RawGlobalRuleProps = {
    */
   matchLauncher?: boolean;
 
+  /**
+   * 默认值: `false`
+   *
+   * 是否匹配系统应用, 仅全局规则可用
+   */
+  matchSystemApp?: boolean;
+
   apps?: RawGlobalApp[];
 };
 
@@ -286,7 +319,7 @@ type RawGlobalRule = RawRuleProps & RawGlobalRuleProps;
 
 export type RawGlobalGroup = RawGroupProps &
   RawGlobalRuleProps & {
-    apps: RawGlobalApp[];
+    apps?: RawGlobalApp[];
     rules: RawGlobalRule[];
   };
 // --全局规则相关-->
