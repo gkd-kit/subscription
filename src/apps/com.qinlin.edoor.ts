@@ -13,8 +13,9 @@ export default defineAppConfig({
           matches: [
             '[id="com.qinlin.edoor:id/reaper_ad_source_layout"]',
             '[id="com.qinlin.edoor:id/close"]',
+            '[id="com.qinlin.edoor:id/close_m_image_left_text_right_no_compliance"]'
           ],
-          snapshotUrls: 'https://i.gkd.li/import/12707733',
+          snapshotUrls: 'https://i.gkd.li/import/13927366',
         },
       ],
     },
