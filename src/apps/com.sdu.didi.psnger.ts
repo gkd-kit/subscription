@@ -17,5 +17,17 @@ export default defineAppConfig({
         },
       ],
     },
+    {
+      key: 2,
+      name: '全屏广告-优惠券',
+      desc: '点击广告卡片下方x',
+      rules: [
+        {
+          activityIds: 'com.didi.sdk.app.MainActivity',
+          matches: 'ImageView[id="com.sdu.didi.psnger:id/popClose"]',
+          snapshotUrls: 'https://i.gkd.li/import/13947142',
+        },
+      ],
+    },
   ],
 });
